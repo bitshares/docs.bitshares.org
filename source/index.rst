@@ -6,55 +6,56 @@
 Welcome to the Graphene API documentation
 =========================================
 
-This page serves as a comprehensive reference for the Graphene API. Since
-BitShares 2.0 is the first blockchain that makes use of the Graphene technology,
-this documentation is mostly compatible with BitShares 2.0 as well.
-
-Interfacing with Graphene
--------------------------
-
+Migration
+---------
 .. toctree::
    :maxdepth: 1
 
-   api_access
-   rpc
-   websocket
+   migration/index
 
-Cli Wallet API
---------------
-
-This chapter introduces the calls available to a running CLI wallet. If you
-have not set up your CLI wallet yet please visit our other documentation pages
-aswell.
-
-
+Installation
+------------
 .. toctree::
    :maxdepth: 1
 
-   cli_wallet
+   installation/index
 
-Full Node APIs
---------------
-
+Integration
+-----------
 .. toctree::
    :maxdepth: 1
 
-   fullnode_apis
-   login_api
-   database_api
-   history_api
-   network_broadcast_api
-   network_node_api
+   integration/index
 
-Namespaces
+Blockchain
 ----------
+.. toctree::
+   :maxdepth: 1
+
+   blockchain/index
+
+Applications
+------------
+.. toctree::
+   :maxdepth: 1
+
+   apps/index
+
+Testnet
+------------
+.. toctree::
+   :maxdepth: 1
+
+   testnet/index
+
+API
+---
 
 .. toctree::
    :maxdepth: 1
 
-   namespace_chain
-   namespace_app
-   namespace_wallet
+   api/index
+
 
 Indices and tables
 ==================
