@@ -16,9 +16,9 @@ Interfacing with Graphene
 .. toctree::
    :maxdepth: 1
 
-   api/api_access
-   rpc
-   websocket
+   ../docs/api_access
+   ../docs/rpc
+   ../docs/websocket
 
 Cli Wallet API
 --------------
@@ -31,7 +31,7 @@ aswell.
 .. toctree::
    :maxdepth: 1
 
-   cli_wallet
+   ../docs/cli_wallet
 
 Full Node APIs
 --------------
@@ -39,12 +39,12 @@ Full Node APIs
 .. toctree::
    :maxdepth: 1
 
-   fullnode_apis
-   login_api
-   database_api
-   history_api
-   network_broadcast_api
-   network_node_api
+   ../docs/fullnode_apis
+   ../docs/login_api
+   ../docs/database_api
+   ../docs/history_api
+   ../docs/network_broadcast_api
+   ../docs/network_node_api
 
 Namespaces
 ----------
@@ -52,6 +52,6 @@ Namespaces
 .. toctree::
    :maxdepth: 1
 
-   namespace_chain
-   namespace_app
-   namespace_wallet
+   ../docs/namespace_chain
+   ../docs/namespace_app
+   ../docs/namespace_wallet

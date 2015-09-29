@@ -4,7 +4,8 @@ Build Process
 Dependencies
 ------------
 
-The following dependencies were necessary for a clean install of Ubuntu 14.04 LTS:
+The following dependencies were necessary for a clean install of Ubuntu 14.04
+LTS:::
 
     sudo apt-get install gcc-4.9 g++-4.9 cmake make \
                          libbz2-dev libdb++-dev libdb-dev \
@@ -17,7 +18,7 @@ Boost 1.57
 The Boost which ships with Ubuntu 15.04 is too old.  You need to download the
 Boost tarball for Boost 1.57.0 (Note, 1.58.0 requires C++14 and will not build
 on Ubuntu LTS; this requirement was an accident, see [this mailing list
-post](http://boost.2283326.n4.nabble.com/1-58-1-bugfix-release-necessary-td4674686.html)).
+post](http://boost.2283326.n4.nabble.com/1-58-1-bugfix-release-necessary-td4674686.html)).::
 
     BOOST_ROOT=$HOME/opt/boost_1_57_0
     sudo apt-get update
@@ -36,14 +37,14 @@ QT 5.5
 ----------
 
 Qt 5.5 is a dependency if you wish to build `light_client`.  Building it from
-source requires the following dependencies on Ubuntu LTS:
+source requires the following dependencies on Ubuntu LTS:::
 
     sudo apt-get install libxcb1 libxcb1-dev libx11-xcb1 libx11-xcb-dev \
                          libxcb-keysyms1 libxcb-keysyms1-dev libxcb-image0 libxcb-image0-dev \
                          libxcb-shm0 libxcb-shm0-dev libxcb-icccm4 libxcb-icccm4-dev libxcb-sync1 \
                          libxcb-sync-dev
 
-Qt 5.5 can be built as follows:
+Qt 5.5 can be built as follows:::
 
     QT_ROOT=$HOME/opt/qt5.5.0
 
@@ -57,13 +58,13 @@ Qt 5.5 can be built as follows:
     make install
 
 Next we need to tell `cmake` where to find them.  If you have ever run CMake in
-this tree before, we must first delete some leftovers:
+this tree before, we must first delete some leftovers:::
 
     make clean
     rm -f CMakeCache.txt
     find . -name CMakeFiles | xargs rm -Rf
 
-To actually run `cmake` we now need the following parameters:
+To actually run `cmake` we now need the following parameters:::
 
     cmake -DCMAKE_PREFIX_PATH="$QT_ROOT" \
           -DCMAKE_MODULE_PATH="$QT_ROOT/lib/cmake/Qt5Core" \
@@ -76,12 +77,12 @@ Building BitShares/Graphene
 ---------------------------
 
 The sources are located at [github](http://github.com) and can be downloaded
-with `git`.
+with `git`.::
 
     git clone https://github.com/ FIXME
 
 Since the repository makes use of so called *submodules* which are repositories
-on their own, we need to refresh those.
+on their own, we need to refresh those.::
 
     git submodule update --init --recursive
 
@@ -95,6 +96,6 @@ Distribution Specific Settings
 * **Ubuntu 15.04**:
   Ubuntu 15.04 uses gcc 5, which has the c++11 ABI as default, but the boost
   libraries were compiled with the cxx11 ABI (this is an issue in many distros).
-  If you get build failures due to abi incompatibilities, just use gcc 4.9
+  If you get build failures due to abi incompatibilities, just use gcc 4.9::
 
       CC=gcc-4.9 CXX=g++-4.9 cmake .

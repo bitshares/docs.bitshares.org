@@ -1,7 +1,4 @@
 Installation
 ============
 
-.. toctree::
-   :maxdepth: 2
-
-.. include:: Build.rst
+.. include:: ../docs/Build.rst

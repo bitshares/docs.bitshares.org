@@ -3,59 +3,69 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to the Graphene API documentation
+Welcome to the Graphene Documentation
 =========================================
 
-Migration
----------
+:doc:`migration/index`
+----------------------
 .. toctree::
    :maxdepth: 1
 
-   migration/index
+   ../docs/what-is-bitshares-graphene
+   ../docs/what-is-new
+   ../docs/what-changed
+   ../docs/blockchain-transition
+   ../docs/howto-exporting-wallet
+   ../docs/howto-importing-wallet
+   ../docs/howto-importing-wallet-remarks
+   ../docs/howto-secure-your-funds
 
-Installation
-------------
+:doc:`installation/index`
+-------------------------
 .. toctree::
    :maxdepth: 1
 
-   installation/index
+   ../docs/Build
 
-Integration
------------
+:doc:`blockchain/index`
+-----------------------
 .. toctree::
    :maxdepth: 1
 
-   integration/index
+   ../docs/Objects
 
-Blockchain
-----------
+:doc:`apps/index`
+-----------------
 .. toctree::
    :maxdepth: 1
 
-   blockchain/index
+   ../docs/Apps-CliWallet
+   ../docs/Apps-WebWallet
+   ../docs/Apps-Witness
 
-Applications
-------------
+:doc:`integration/index`
+------------------------
 .. toctree::
    :maxdepth: 1
 
-   apps/index
+   ../docs/Integration-Interfacing
+   ../docs/Integration-NetworkSetup
+   ../docs/Integration-NodeJS
+   ../docs/Integration-Overview
+   ../docs/Integration-Python
+   ../docs/Integration-SupportingFeatures
+   ../docs/Integration-Whitelist
 
-Testnet
-------------
+:doc:`testnet/index`
+--------------------
 .. toctree::
    :maxdepth: 1
 
-   testnet/index
+   ../docs/Testnet-Private
+   ../docs/Testnet-Public
 
-API
----
-
-.. toctree::
-   :maxdepth: 1
-
-   api/index
-
+:doc:`api/index`
+----------------
 
 Indices and tables
 ==================

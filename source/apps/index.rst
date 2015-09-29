@@ -1,9 +1,6 @@
 Applications
 ============
 
-.. toctree::
-   :maxdepth: 2
-
-.. include:: Apps-CliWallet.rst
-.. include:: Apps-WebWallet.rst
-.. include:: Apps-Witness.rst
+.. include:: ../docs/Apps-CliWallet.rst
+.. include:: ../docs/Apps-WebWallet.rst
+.. include:: ../docs/Apps-Witness.rst

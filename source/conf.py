@@ -287,8 +287,8 @@ texinfo_documents = [
 #texinfo_no_detailmenu = False
 
 # Breathe configuration
-extensions.append( "breathe" )
-breathe_projects = {
-          "graphene": "../../graphene/doxygen/xml/",
-         }
-breathe_default_project = "graphene"
+#extensions.append( "breathe" )
+#breathe_projects = {
+#          "graphene": "../../graphene/doxygen/xml/",
+#         }
+#breathe_default_project = "graphene"

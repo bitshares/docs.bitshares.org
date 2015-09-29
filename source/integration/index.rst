@@ -1,13 +1,10 @@
 Integration
 ============
 
-.. toctree::
-   :maxdepth: 2
-
-.. include:: Integration-Interfacing.rst
-.. include:: Integration-NetworkSetup.rst
-.. include:: Integration-NodeJS.rst
-.. include:: Integration-Overview.rst
-.. include:: Integration-Python.rst
-.. include:: Integration-SupportingFeatures.rst
-.. include:: Integration-Whitelist.rst
+.. include:: ../docs/Integration-Interfacing.rst
+.. include:: ../docs/Integration-NetworkSetup.rst
+.. include:: ../docs/Integration-NodeJS.rst
+.. include:: ../docs/Integration-Overview.rst
+.. include:: ../docs/Integration-Python.rst
+.. include:: ../docs/Integration-SupportingFeatures.rst
+.. include:: ../docs/Integration-Whitelist.rst

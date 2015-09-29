@@ -13,11 +13,11 @@ Objects
 -------
 
 On the BitShares blockchains there are no addresses, but objects identified by a
-unique *id*, an *type* and a *space* in the form:
+unique *id*, an *type* and a *space* in the form:::
 
     space.type.id
 
-Some examples:
+Some examples:::
 
     1.2.15   # protocol space / account / id: 15
     1.6.105  # protocol space / witness / id: 105
@@ -35,7 +35,7 @@ Accounts
 The BitShares blockchain users are requires to register each account with a
 unique username and a public key on the blockchain. The blockchain assigns an
 incremental user *id* and offers to resolve the name-to-id pair. For instance
-`1.2.15`:
+`1.2.15`:::
 
     2.6.80    # implementation space / account-balance / id: 80
     2.7.80    # implementation space / account-statistics / id: 80
