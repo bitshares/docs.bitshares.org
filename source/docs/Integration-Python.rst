@@ -4,7 +4,7 @@ Python Example
 Installation
 ------------
 
-A graphene Python library can be installed by issuing:
+A graphene Python library can be installed by issuing:::
 
     git clone http://github.com/xeroc/python-graphenelib
     cd python-graphenelib
@@ -24,7 +24,7 @@ following example script in more details:
 We first prepare our variables and import all required modules
 
 Define the `accountID` and the `memo_wif_key` in `examples/monitor.py`.
-The accountID can be obtained from the GUI wallet, or by issuing:
+The accountID can be obtained from the GUI wallet, or by issuing:::
 
     get_account <accountname>
 
@@ -32,7 +32,7 @@ If the script exists abnormally, you can continue operations by setting
 `last_op` to the last operation id that you have captured before the
 abnormal exit.
 
-**Note**: The current implementation has a maxium history size of 100
+.. note:: The current implementation has a maxium history size of 100
 	  transaction. If you have missed more than 100 transaction with the
 	  current implementation, manual fixing is required.
 
@@ -40,11 +40,11 @@ Furthermore, in Graphene, memos are usually encrypted using a distinct memo
 key. That way, exposing the memo private key will only expose transaction memos
 (for that key) and not compromise any funds. It is thus safe to store the memo
 private key in 3rd party services and scripts. The memo public key can be
-obtained from the account settings or via command line:
+obtained from the account settings or via command line:::
 
     get_account <myaccount>
 
-in the cli wallet. The corresponding private key can be obtain from:
+in the cli wallet. The corresponding private key can be obtain from:::
 
     dump_private_keys
 
@@ -53,6 +53,6 @@ Note that the latter command exposes all private keys in clear-text wif.
 Running
 -------
 
-The monitoring script can be executed via
+The monitoring script can be executed via::
 
     python3 monitor.py

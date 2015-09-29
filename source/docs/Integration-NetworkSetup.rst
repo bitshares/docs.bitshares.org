@@ -65,7 +65,7 @@ delayed full node to.
 
     ./programs/witness_node/witness_node --rpc-endpoint="192.168.0.100:8090"
 
-**NOTE**: A *witness* node is identical to a full node if no authorized
+.. note:: A *witness* node is identical to a full node if no authorized
           block-signing private key is provided.
 
 Delayed Full Node
@@ -88,7 +88,7 @@ We could now connect via RPC:
 * `192.168.0.100:8090` : The trusted full node exposed to the internet
 * `192.168.0.101:8090` : The delayed full node not exposed to the internet
 
-**Note**: For security reasons, an exchange should only interface with the delayed
+.. note:: For security reasons, an exchange should only interface with the delayed
           full node.
 
 For obvious reasons, the trusted full node is should be running before

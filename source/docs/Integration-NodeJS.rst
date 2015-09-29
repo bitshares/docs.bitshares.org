@@ -26,7 +26,7 @@ If the script exists abnormally, you can continue operations by setting
 `last_op` to the last operation id that you have captured before the
 abnormal exit.
 
-**Note**: The current implementation has a maxium history size of 100
+.. note:: The current implementation has a maxium history size of 100
 	  transaction. If you have missed more than 100 transaction with the
 	  current implementation, manual fixing is required.
 
@@ -38,7 +38,7 @@ The settings are located in `config.js` and take
  * the last operation that has been logged successfully in your backed in case
    of ungraceful shutdown
 
-**Note**: The last operation will show a maximum of 100 most recent
+.. note:: The last operation will show a maximum of 100 most recent
 	  transactions. If more have been missed due to a down-time. Manual
           intervention is necessary.
 

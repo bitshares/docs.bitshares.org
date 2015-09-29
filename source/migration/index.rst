@@ -8,4 +8,3 @@ Migrating from BitShares 1.0 to BitShares 2.0
 .. include:: ../docs/howto-exporting-wallet.rst
 .. include:: ../docs/howto-importing-wallet.rst
 .. include:: ../docs/howto-importing-wallet-remarks.rst
-.. include:: ../docs/howto-secure-your-funds.rst
