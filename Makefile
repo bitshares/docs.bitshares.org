@@ -190,3 +190,10 @@ pseudoxml:
 	$(SPHINXBUILD) -b pseudoxml $(ALLSPHINXOPTS) $(BUILDDIR)/pseudoxml
 	@echo
 	@echo "Build finished. The pseudo-XML files are in $(BUILDDIR)/pseudoxml."
+
+
+
+deploy:
+	@echo
+	@rsync -avP build/html/ org:/srv/http/xeroc.org/tmp.xeroc.org/htdocs/.bts/docs
+	@echo "Deploy finished"
