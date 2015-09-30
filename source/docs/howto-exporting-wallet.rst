@@ -8,13 +8,20 @@ We offer several options to export your account names and funds from BitShares 1
   export your current wallet. 
   .. note:: Version 0.9.3**c** is required for this step. Otherewise the backup will have the old, incompatible format!
 
-  <img src="support/export-menu-bar.png" alt="Export compatible keys from Menu bar" style="width: 550px;"/>
-  :
-* **Exporting Brainkey** (wallet.bitshares.org only)
-  The keys of the [web wallet](http://wallet.bitshares.org) can be
-  exported simply by copying the brainkey provided as backup option. It can
-  be obtained from the web wallet's preferences: (`Account List->Advanced Settings->Wallet->Recovery Key`)
-  <img src="support/export-brainkey.png" alt="Export Brainkey" style="width: 550px;"/>
+.. image:: ../_static/export-menu-bar.png
+        :alt: Export compatible keys from Menu bar
+        :width: 550px
+        :align: center
+
+* **Exporting Brainkey** (wallet.bitshares.org only) The keys of the `web
+  wallet`_ can be exported simply by copying the brainkey provided as backup
+  option. It can be obtained from the web wallet's preferences: 
+  (`Account List->Advanced Settings->Wallet->Recovery Key`) 
+
+.. image:: ../_static/export-brainkey.png
+        :alt: Export Brainkey
+        :width: 550px
+        :align: center
 
 * **Manual Exporting**:
   Use the Console in you BitShares 1.0 client 
@@ -27,3 +34,5 @@ We offer several options to export your account names and funds from BitShares 1
   with `OK` even though the exporting has not yet been completed.
 
   .. note:: Version 0.9.3**c** is required for this step. Otherewise the backup will have the old, incompatible format!
+
+.. _web wallet: http://wallet.bitshares.org

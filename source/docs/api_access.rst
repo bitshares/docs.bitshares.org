@@ -57,10 +57,11 @@ identifier will always be `2`.
 
 Since the `network_node` API requires login, it is only accessible over the
 websocket RPC.  Our `doxygen` documentation contains the most up-to-date
-information about API's for the [witness
-node](https://bitshares.org/doxygen/namespacegraphene_1_1app.html) and the
-[wallet](https://bitshares.org/doxygen/classgraphene_1_1wallet_1_1wallet__api.html).
-If you want information which is not available from an API, it might be
-available from the
-[database](https://bitshares.org/doxygen/classgraphene_1_1chain_1_1database.html);
-it is fairly simple to write API methods to expose database methods.
+information about API's for the `witness node`_ and the `wallet`_.  If you want
+information which is not available from an API, it might be available from the
+`database`_; it is fairly simple to write API methods to expose database
+methods.
+
+.. _witness node: https://bitshares.org/doxygen/namespacegraphene_1_1app.html
+.. _wallet: https://bitshares.org/doxygen/classgraphene_1_1wallet_1_1wallet__api.html
+.. _database: https://bitshares.org/doxygen/classgraphene_1_1chain_1_1database.html

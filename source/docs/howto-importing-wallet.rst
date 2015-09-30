@@ -11,10 +11,12 @@ different ways:
   multiple accounts.
 
 * **Import Brainkey** (wallet.bitshares.org users only):
-  Funds stored in the [web wallet](http://wallet.bitshares.org) can be
+  Funds stored in the `web wallet`_ can be
   imported by providing the brainkey provided as backup option. It can be
   obtained from the web wallet's preferences.
 
 * **Manual Import**:
   Alternatively, you can import your account names and claim your funds
   manually 
+
+.. _web wallet: http://wallet.bitshares.org

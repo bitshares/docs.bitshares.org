@@ -6,17 +6,19 @@ What has Changed?
   bitAssets to its underlay. BitAssets like the bitUSD in BitShares 2.0 will
   always trade for *at least* the value of its underlying asset, i.e. $1.
   We have summarized the economical analysis and incentives for market
-  participants on
-  [bitshares.org](https://bitshares.org/technology/price-stable-cryptocurrencies/)
+  participants for `bitAssets 2.0`_
+ 
+.. _bitAssets 2.0: https://bitshares.org/technology/price-stable-cryptocurrencies/
 
 * **Faster Blocks**:
   Initially, the BitShares 2.0 blockchain will come with 3 seconds block
   interval with the option to reduce down to 1 second if shareholders agree.
 
 * **Industrial Performance**:
-  BitShares 2.0 can support massive load and works well beyond 100k
-  transactions per second. How this is achieved can be read in details on
-  [bitshares.org](https://bitshares.org/technology/industrial-performance-and-scalability/)
+  BitShares 2.0 can support massive load and works well beyond 100k transactions
+  per second. Find out how we achieve `industrial performance and scalability`_.
+
+.. _industrial performance and scalability: https://bitshares.org/technology/industrial-performance-and-scalability/
 
 * **New Reactive UI**:
   Since some customers of BitShares 1.0 complained about the slow user
@@ -30,10 +32,11 @@ What has Changed?
 * **Accounts must be registered**:
   In BitShares 2.0 we have separated *authorities* from transaction partners.
   Hence, if Alice wants to send funds to Bob, it may be required that only
-  Celine signs for that transaction. Also, BitShares 2.0 has a [referral
-  program](https://bitshares.org/technology/recurring-and-scheduled-payments/).
+  Celine signs for that transaction. Also, BitShares 2.0 has `a referral program`_.
   Both features combined make it necessary that participants *register* an
   account on the blockchain.
+
+.. _a referral program: https://bitshares.org/technology/recurring-and-scheduled-payments/
 
 * **Explicit Privacy**:
   The *TITAN* technology in BitShares 2.0 slowed down blockchain processing

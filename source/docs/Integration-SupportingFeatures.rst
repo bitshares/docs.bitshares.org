@@ -25,10 +25,10 @@ Whitelists and Blacklists
 
 Some 3rd party service providers may want to only do business with customers
 that fulfill certain criteria, e.g. verified their identity for KYC/AML. Those
-services can use so called `whitelists` that will prevent unauthorized network
-participants to interact with you. For instance, only those people that have
-verified with your own platform and have an account there can send funds
-to your service.
+services can use so called `whitelists` (or, alternatively, `blacklists`) that
+will prevent unauthorized network participants to interact with you. For
+instance, only those people that have verified with your own platform and have
+an account there can send funds to your service.
 
 In BitShares 2.0, account names and also user-issued assets have their
 individual whitelists. Hence, if you issue an IOU on the blockchain, you can

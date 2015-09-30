@@ -27,7 +27,7 @@ Some examples:::
     2.3.8    # implementation space / asset . id: 8
 
 A programmatic description of all fields can be found in the
-[sources](https://github.com/cryptonomex/graphene/blob/master/libraries/chain/include/graphene/chain/protocol/types.hpp).
+`sources`_.
 
 Accounts
 --------
@@ -42,3 +42,5 @@ incremental user *id* and offers to resolve the name-to-id pair. For instance
     2.10.80   # implementation space / account-transactions / id: 80
     2.8.80    # implementation space / transactions / id: 80
     2.9.80    # implementation space / block-summary / id: 80
+
+.. _sources: https://github.com/cryptonomex/graphene/blob/master/libraries/chain/include/graphene/chain/protocol/types.hpp

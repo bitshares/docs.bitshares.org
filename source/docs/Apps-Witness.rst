@@ -24,7 +24,7 @@ Configuration
 -------------
 
 The configuration file `config.ini` in `mydata` is commented and contains the
-following essential settings:
+following essential settings:::
 
     # Endpoint for P2P node to listen on
     # p2p-endpoint = 

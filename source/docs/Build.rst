@@ -17,8 +17,8 @@ Boost 1.57
 
 The Boost which ships with Ubuntu 15.04 is too old.  You need to download the
 Boost tarball for Boost 1.57.0 (Note, 1.58.0 requires C++14 and will not build
-on Ubuntu LTS; this requirement was an accident, see [this mailing list
-post](http://boost.2283326.n4.nabble.com/1-58-1-bugfix-release-necessary-td4674686.html)).::
+on Ubuntu LTS; this requirement was an accident, see `this mailing list post`_).::
+
 
     BOOST_ROOT=$HOME/opt/boost_1_57_0
     sudo apt-get update
@@ -76,7 +76,7 @@ To actually run `cmake` we now need the following parameters:::
 Building BitShares/Graphene
 ---------------------------
 
-The sources are located at [github](http://github.com) and can be downloaded
+The sources are located at `github`_ and can be downloaded
 with `git`.::
 
     git clone https://github.com/ FIXME
@@ -99,3 +99,6 @@ Distribution Specific Settings
   If you get build failures due to abi incompatibilities, just use gcc 4.9::
 
       CC=gcc-4.9 CXX=g++-4.9 cmake .
+
+.. _github: http://github.com
+.. _this mailing list post: http://boost.2283326.n4.nabble.com/1-58-1-bugfix-release-necessary-td4674686.html

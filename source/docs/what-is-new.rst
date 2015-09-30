@@ -10,15 +10,18 @@ What is New in BitShares 2.0
   BitShares 2.0 allows customers and participants a flexible and dynamic
   access to its funds or account handle. A so called *Authority* can consist of
   a flat hierarchy similar to *multi-signature* in Bitcoin, but could also
-  support tree hierarchies never to be seen before. Read more about this on 
-  [bitshares.org](https://bitshares.org/technology/dynamic-account-permissions/)
+  support tree hierarchies never to be seen before. Read more about this about
+  `dynamic account permissions`_.
+
+.. _dynamic account permissions: https://bitshares.org/technology/dynamic-account-permissions/
 
 * **Transferable Account Names**:
   Since Control over Funds is separated from the control over an account, we
   can have transferable account names that are registered on the blockchain.  
   Named accounts allows for much easier transfers because no cryptic strings
-  needs to be handed out. Read more about this feature on
-  [bitshares.org](https://bitshares.org/technology/transferable-named-accounts/)
+  needs to be handed out. Read more about `transferable named accounts`_.
+
+.. _transferable named accounts: https://bitshares.org/technology/transferable-named-accounts/
 
 * **On-Chain Proposed Transactions**:
   In traditional crypto currencies, a multi-signature transaction has to be
@@ -42,13 +45,17 @@ What is New in BitShares 2.0
   Hence we took our chance and implemented a blockchain based referral program.
   From every transaction fee, paid by a customer you referred, you will get a
   fraction. Of course, this fraction can be tuned by shareholders! Read more
-  about this program on [bitshares.org](https://bitshares.org/referral-program/)
+  about the `referral program`_.
+
+.. _referral program: https://bitshares.org/referral-program/
 
 * **Recurring & Scheduled Payments**:
   We wanted to offer a way to have our rent payed automatically. So we
   implemented it in the blockchain. In BitShares 2.0, participants are capable
   of allowing others to withdraw funds from your account. Of course, you can
-  define a daily/weekly or monthly limit. Read more on
-  [bitshares.org](https://bitshares.org/technology/recurring-and-scheduled-payments/)
+  define a daily/weekly or monthly limit. Read more about `recurring and
+  scheduled payments`_.
+
+.. _recurring and scheduled payments: https://bitshares.org/technology/recurring-and-scheduled-payments/
 
 * **Additional _Privatized_ BitAssets**:

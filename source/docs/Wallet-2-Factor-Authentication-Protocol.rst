@@ -35,5 +35,5 @@ The most basic 2-factor API assumes the provider.
 
 
 
-reates an account with `secondfactor.org`
+Creates an account with `secondfactor.org`
 

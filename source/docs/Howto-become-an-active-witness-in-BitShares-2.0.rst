@@ -13,7 +13,7 @@ create, configure and run a witness node.
 ### Extracting an account from BitShares 0.9
 To create a new account, you will need to start with an existing account with
 some of the BTS asset that will pay the transaction fee registering your new
-witness. Get your `<wif>` key from BitShares 0.9 via
+witness. Get your `<wif>` key from BitShares 0.9 via::
 
     BitShares0.9: >>> wallet_dump_account_private_key <accountname> "owner_key"
     "5....."  # the <owner wif key>
@@ -31,7 +31,7 @@ BTS into the BitShares 2.0 client later.
 
 #### Manually extracting private keys (most secure way)
 We can extract the required private keys that hold funds this way. First we get
-all balance ids from an account via:
+all balance ids from an account via:::
 
     BitShares0.9: >>> wallet_account_balance_ids <accountname>
     [[
@@ -43,7 +43,7 @@ all balance ids from an account via:
       ]
     ]
 
-Each of these balances can be investigated via:
+Each of these balances can be investigated via:::
 
     BitShares0.9: >>> blockchain_get_balance BTSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
     ....
@@ -55,7 +55,7 @@ Each of these balances can be investigated via:
       ...
 
 The required part (the owner of the balance) is denoted as `owner`.
-Pick one or more address for BTS balances and dump the corresponding private key(s) with:
+Pick one or more address for BTS balances and dump the corresponding private key(s) with:::
 
     BitShares0.9: >>> wallet_dump_private_key BTSOOOOOOOOOOOOOOOOOOOOOOOOOOOOOWNER
     "5......." # the <balance wif key>
@@ -69,11 +69,10 @@ The following paragraphs will give an alternative (easier) way to dump the
 relevant private keys using a python script. If you are comfortable with the
 description above, you can safely skip the subsequent paragraph.
 
-A Python script located at
-[github](https://github.com/xeroc/bitshares-pytools/blob/master/tools/getbalancekeys.py)
+A Python script located at `github`_
 may help you to retrieve private keys for your balances.
 You need to modify the first few lines of the script in order to get a
-connection to your BitShares daemon.
+connection to your BitShares daemon.::
 
     $ edit getbalancekeys.py
         [...]
@@ -88,7 +87,7 @@ just now. Instead, read about [RPC and the
 API](http://wiki.bitshares.org/index.php/BitShares/API) of BitShares.
 If you set up everything correctly, you may just run the python script and get
 the private keys associated to a given account name and the correspoinding
-balance:
+balance:::
 
     $ python getbalancekeys.py
     accountA   5xxxxxxxxxxxxxxxxxxxxxxxxxx<owner wif key>           2750.00000 BTS        
@@ -132,19 +131,20 @@ for the real network later. The genesis block can be downloaded (here)[https://d
 
 ### Run the witness as a node in the network
 We first run the witness node without block production and connect it to the P2P
-network with the following command:
+network with the following command:::
 
     $ programs/witness_node/witness_node -s 104.200.28.117:61705 --rpc-endpoint 127.0.0.1:8090 --genesis-json aug-14-test-genesis.json
 
 The address `104.200.28.117` is one of the public seed nodes.
 
 ### Creating a wallet
-We now open up the cli_wallet and connect to our plain and stupid witness node:
+We now open up the cli_wallet and connect to our plain and stupid witness
+node:::
 
     $ programs/cli_wallet/cli_wallet -s ws://127.0.0.1:8090
 
 First thing to do is setting up a password for the newly created wallet prior to
-importing any private keys:
+importing any private keys:::
 
     new >>> set_password <password>
     null
@@ -156,7 +156,7 @@ Wallet creation is now done.
 
 ### Basic Account Management
 We can import the account name (owner key) and the balance containing keys into
-BitShares 2.0:
+BitShares 2.0:::
 
     unlocked >>> import_key <accountname> <owner wif key>
     true
@@ -179,7 +179,7 @@ In case your account's owner key is different from its active key, make sure you
 
 Since only lifetime members can become witnesses, you must first upgrade to a
 lifetime member. This step costs the lifetime-upgrade fee which will eventually
-cost about $100
+cost about $100::
 
     unlocked >>> upgrade_account <accountname> true
     [a transaction in json format]
@@ -196,7 +196,7 @@ votes are only tallied once per day at the maintenance interval.
 voted in.  
 
 Before we get started, we can see the current list of witnesses voted in, which
-will simply be the ten default witnesses:
+will simply be the ten default witnesses:::
 
     unlocked >>> get_global_properties
     ...
@@ -239,7 +239,7 @@ will simply be the ten default witnesses:
 
 Our witness is registered, but it can't produce blocks because nobody has voted
 it in.  You can see the current list of active witnesses with
-`get_global_properties`:
+`get_global_properties`:::
 
     unlocked >>> get_global_properties
     {
@@ -257,7 +257,7 @@ it in.  You can see the current list of active witnesses with
       ...
 
 Now, we should vote our witness in.  Vote all of the shares in both
-`<accountname>` and `nathan` in favor of your new witness.
+`<accountname>` and `nathan` in favor of your new witness.::
 
     unlocked >>> vote_for_witness <accountname> <accountname> true true
     [a transaction in json format]
@@ -274,7 +274,7 @@ Once we have that, run `dump_private_keys` which lists the public-key
 private-key pairs to find the private key.
 
 Warning: `dump_private_keys` will display your keys unencrypted on the
-terminal, don't do this with someone looking over your shoulder.
+terminal, don't do this with someone looking over your shoulder.::
 
     unlocked >>> get_witness <accountname>
     {
@@ -285,7 +285,7 @@ terminal, don't do this with someone looking over your shoulder.
     }
 
 The `id` and the `signing_key` are the two important parameters, here. Let's get
-the private key for that signing key with:
+the private key for that signing key with:::
 
     unlocked >>> dump_private_keys
     [[
@@ -298,11 +298,11 @@ the private key for that signing key with:
 
 Now we need to start the witness, so shut down the wallet (ctrl-d),  and shut
 down the witness (ctrl-c).  Re-launch the witness, now mentioning the new
-witness 1.6.10 and its keypair:
+witness 1.6.10 and its keypair:::
 
     ./witness_node --rpc-endpoint=127.0.0.1:8090 --witness-id '"1.6.10"' --private-key '["GPH7vQ7GmRSJfDHxKdBmWMeDMFENpmHWKn99J457BNApiX1T5TNM8", "5JGi7DM7J8fSTizZ4D9roNgd8dUc5pirUe9taxYCUUsnvQ4zCaQ"]' --genesis-json aug-14-test-genesis.json -s 104.200.28.117:61705
 
-Alternatively, you can also add this line into yout config.ini:
+Alternatively, you can also add this line into yout config.ini:::
 
     witness-id = "1.6.10"
     private-key = ["GPH7vQ7GmRSJfDHxKdBmWMeDMFENpmHWKn99J457BNApiX1T5TNM8","5JGi7DM7J8fSTizZ4D9roNgd8dUc5pirUe9taxYCUUsnvQ4zCaQ"]
@@ -310,7 +310,9 @@ Alternatively, you can also add this line into yout config.ini:
 Note: Make sure to use YOUR public/private keys instead of the once given above!
 
 If you monitor the output of the `witness_node`, you should see it generate 
-blocks signed by your witness:
+blocks signed by your witness:::
 
     Witness 1.6.10 production slot has arrived; generating a block now...
     Generated block #367 with timestamp 2015-07-05T20:46:30 at time 2015-07-05T20:46:30
+
+.. _github: https://github.com/xeroc/bitshares-pytools/blob/master/tools/getbalancekeys.py

@@ -108,3 +108,11 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+.. comments
+   ReStructure Syntax can be found here:
+   openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html
+   http://docutils.sourceforge.net/rst.html
+   Sphinx Specific ReStructure:
+   http://sphinx-doc.org/rest.html
+   
