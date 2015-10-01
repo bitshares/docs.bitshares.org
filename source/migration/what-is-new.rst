@@ -58,4 +58,10 @@ What is New in BitShares 2.0
 
 .. _recurring and scheduled payments: https://bitshares.org/technology/recurring-and-scheduled-payments/
 
-* **Additional _Privatized_ BitAssets**:
+* **Additional Privatized BitAssets**:
+  In contrast to Market Pegged Assets (also known as BitAssets) that have a
+  price feed published by witnesses that have approval of shareholders, a
+  *privatized* bitasset allows to create market pegged assets that have an
+  individual set of price feed publishers that do not need shareholders'
+  approval. Hence, everyone can create a privatized bitAsset to track an
+  individual value, such as indices, or binary predictions.

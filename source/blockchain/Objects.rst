@@ -1,5 +1,5 @@
-Graphene Blockchain Objects
-===========================
+Objects and IDs
+===============
 
 In contrast to most cryptocurrency wallets, the BitShares 2.0 has a different
 model to represent the blockchain, its transactions and accounts. This chapter
@@ -26,8 +26,7 @@ Some examples:::
     2.1.0    # implementation space / dynamic global properties
     2.3.8    # implementation space / asset . id: 8
 
-A programmatic description of all fields can be found in the
-`sources`_.
+A programmatic description of all fields can be found below.
 
 Accounts
 --------
@@ -43,4 +42,16 @@ incremental user *id* and offers to resolve the name-to-id pair. For instance
     2.8.80    # implementation space / transactions / id: 80
     2.9.80    # implementation space / block-summary / id: 80
 
-.. _sources: https://github.com/cryptonomex/graphene/blob/master/libraries/chain/include/graphene/chain/protocol/types.hpp
+Object Types: 1.*.*
+--------------------
+
+First entry in the enumeration becomes `1.0.*`, second becomes `1.1.*`, etc..
+
+.. doxygenenum:: graphene::chain::object_type
+
+Implementation Object Types: 2.*.*
+----------------------------------
+
+First entry in the enumeration becomes `2.0.*`, second becomes `2.1.*`, etc..
+
+.. doxygenenum:: graphene::chain::impl_object_type

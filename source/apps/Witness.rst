@@ -1,13 +1,13 @@
-Witness
-=======
+Full Node
+=========
 
 Overview
 --------
 
-A witness node represents a full node in the network that verifies all
-transactions and blocks against its local state. Hence, we recommend all
-service providers to run an maintain their own witness nodes for reliability
-and security reasons.
+A full node (a.k.a. *non-block producing* witness node) represents a node in the
+network that verifies all transactions and blocks against its local state.
+Hence, we recommend all service providers to run an maintain their own full
+nodes for reliability and security reasons.
 
 It takes a `--data-dir` parameter to define a working and data directory to
 store the configuration, blockchain and local databases. Those will be
@@ -16,7 +16,7 @@ automatically created with default settings if they don't exist locally set.
 Launching a witness node
 ------------------------
 
-The witness is launched according to:
+The witness is launched according to:::
 
     ./programs/witness_node/witness_node --data-dir="mydata"
 

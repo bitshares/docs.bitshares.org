@@ -1,4 +1,8 @@
 Installation
 ============
 
-.. include:: ../docs/Build.rst
+.. toctree::
+   Download
+   Sources
+   Build
+   Upgrades

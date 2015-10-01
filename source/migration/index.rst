@@ -1,10 +1,17 @@
 Migrating from BitShares 1.0 to BitShares 2.0
 =============================================
 
-.. include:: ../docs/what-is-bitshares-graphene.rst
-.. include:: ../docs/what-is-new.rst
-.. include:: ../docs/what-changed.rst
-.. include:: ../docs/blockchain-transition.rst
-.. include:: ../docs/howto-exporting-wallet.rst
-.. include:: ../docs/howto-importing-wallet.rst
-.. include:: ../docs/howto-importing-wallet-remarks.rst
+BitShares 2.0 is a Financial Smart Contracts platform that is based on the
+`Graphene`_ technology built by `Cryptonomex`_ . You can see Graphene as a
+toolkit for real-time blockchains.
+
+.. _Cryptonomex: http://cryptonomex.com
+.. _Graphene: https://github.com/cryptonomex/graphene
+
+.. toctree::
+   what-is-new
+   what-changed
+   blockchain-transition
+   howto-exporting-wallet
+   howto-importing-wallet
+   howto-importing-wallet-remarks

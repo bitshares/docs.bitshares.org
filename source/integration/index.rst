@@ -1,10 +1,31 @@
-Integration
-============
+Integrating the BitShares Network
+=================================
 
-.. include:: ../docs/Integration-Interfacing.rst
-.. include:: ../docs/Integration-NetworkSetup.rst
-.. include:: ../docs/Integration-NodeJS.rst
-.. include:: ../docs/Integration-Overview.rst
-.. include:: ../docs/Integration-Python.rst
-.. include:: ../docs/Integration-SupportingFeatures.rst
-.. include:: ../docs/Integration-Whitelist.rst
+Banks, exchanges and merchants are integrating BitShares already to power
+instant cross-border remittance, corporate payments, and decentralized trading.
+This page serves as a technical documentation for integrating BitShares and
+profiting from
+
+* its blockchain technology,
+* its user base,
+* its network effect, and
+* its existing ecosystem.
+
+We here illustrate the steps necessary to securely operate as
+
+* merchant,
+* exchange, or
+* fiat-gateway.
+
+-------------------
+
+.. toctree::
+
+   Overview
+   SupportingFeatures
+   Interfacing
+   NetworkSetup
+   NodeJS
+   Python
+   Whitelist
+   SecuringFunds

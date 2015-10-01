@@ -1,14 +1,11 @@
-Integrating the BitShares Network
-=================================
-
 Overview
---------
+========
 
-As a 3rd party service provider, you have several opportunities to interconnect
-with the BitShares ecosystem and share its network effect:
+We here illustrate the steps necessary to securely operate as
 
-* Merchant
-* Fiat-Gateway
+* merchant,
+* exchange, or
+* fiat-gateway.
 
 Merchants
 ---------
@@ -27,6 +24,6 @@ For instance:
 
  1. A customer requests 100 bitUSD from a gateway
  2. The gateway sends an invoice with bank account details
- 3. When the funds arrive at the gateway a percentag is taken as a fee and the
+ 3. When the funds arrive at the gateway a percentage is taken as a fee and the
     rest is transfered as bitUSD directly into the BitShares wallet of the
     customer.

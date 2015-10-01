@@ -5,15 +5,22 @@ This page serves as a comprehensive reference for the Graphene API. Since
 BitShares 2.0 is the first blockchain that makes use of the Graphene technology,
 this documentation is mostly compatible with BitShares 2.0 as well.
 
+.. note:: All API calls are formated in JSON and return JSON only.
+
 Interfacing with Graphene
 -------------------------
+
+.. note:: The set of available calls depends on whether you connect to a full
+          node (``witness_node``) or a CLI wallet (``cli_wallet``). Both support
+          RPC-JSON. The full node also supports the websocket protocol with
+          notifications.
 
 .. toctree::
    :maxdepth: 1
 
-   ../docs/api_access
-   ../docs/rpc
-   ../docs/websocket
+   access
+   rpc
+   websocket
 
 Cli Wallet API
 --------------
@@ -26,7 +33,7 @@ aswell.
 .. toctree::
    :maxdepth: 1
 
-   ../docs/cli_wallet
+   cli_wallet
 
 Full Node APIs
 --------------
@@ -34,12 +41,12 @@ Full Node APIs
 .. toctree::
    :maxdepth: 1
 
-   ../docs/fullnode_apis
-   ../docs/login_api
-   ../docs/database_api
-   ../docs/history_api
-   ../docs/network_broadcast_api
-   ../docs/network_node_api
+   fullnode
+   login
+   database
+   history
+   network_broadcast
+   network_node
 
 Namespaces
 ----------
@@ -47,6 +54,6 @@ Namespaces
 .. toctree::
    :maxdepth: 1
 
-   ../docs/namespace_chain
-   ../docs/namespace_app
-   ../docs/namespace_wallet
+   ../namespaces/chain
+   ../namespaces/app
+   ../namespaces/wallet

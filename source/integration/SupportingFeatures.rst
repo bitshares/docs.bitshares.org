@@ -1,7 +1,8 @@
 Supporting Features
 ===================
 
-BitShares 2.0 offers some features that will make your integration esier.
+BitShares 2.0 offers some features that will make your integration easier and
+more secure:
 
 User Issued Assets
 ------------------

@@ -1,5 +1,5 @@
-Network and Client Configuration
-================================
+Secure Network and Client Configuration
+=======================================
 
 Similar to other crypto currencies, it is recommended to wait for several
 confirmations of a transcation. Even though the consensus scheme of Graphene is
@@ -20,9 +20,9 @@ blocks that the delayed full node will be behind the real blockchain.
 Overview of the Setup
 ---------------------
 
-In the following, we will setup and use the following network:
+In the following, we will setup and use the following network:::
 
-    P2P network <-> Trusted Full Node <-> Delayed Full Node <-> API
+    P2P network   <->   Trusted Full Node   <->   Delayed Full Node   <->   API
 
 * **P2P network**:
   The BitShares client uses a peer-to-peer network to connect and broadcasts
@@ -61,7 +61,7 @@ Trusted Full Node
 
 For the trusted full node, the default settings can be used.  For later, we
 will need to open the RPC port and listen to an IP address to connect the
-delayed full node to.
+delayed full node to.::
 
     ./programs/witness_node/witness_node --rpc-endpoint="192.168.0.100:8090"
 
@@ -77,7 +77,7 @@ also need to open the RPC/Websocket port (to the local network!) so that we can
 interface using RPC-JSON calls.
 
 For our example and for 10 blocks delaye (i.e. 30 seconds for 3 second block
-intervals), we need:
+intervals), we need:::
 
     ./programs/delayed_node/delayed_node --trusted-node="192.168.0.100:8090" \
                                          --delay-block-count=10 \
