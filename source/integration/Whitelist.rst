@@ -1,6 +1,24 @@
 Using White- and Black-lists
 ============================
 
+White- Black-Lists exist for assets and for (lifetime member) accounts. While
+the latter can only be used to cast an opinion about another account, lists for
+assets serve a very practical need.
+
+The issuer of an asset can define how is able to hold (and thus trade) an asset
+and how is not.
+
+Examples
+--------
+
+Let's assume user `alice` wants to own `G.USD` which is restricted by a
+whitelists. Whenever someone tries to send `G.USD` to `alice`, the blockchain
+will reject the transaction as invalid. Only after being added to the assets's
+whitelist by the issuer authority, alice will be able to hold `G.USD`.
+
+.. note:: By removing a user from the whitelist, funds can effectively be
+   frozen.
+
 Definition
 ----------
 White- and Black-listing of assets and or accounts works with the following API
@@ -11,22 +29,3 @@ call:
 It expects a `new_listing_status` to from
 
 .. doxygenenum:: account_listing
-
-Examples
---------
-
-Let's assume user `alice` wants to trade bitUSD with user `bobeway` who is a
-gateway. `bobeway` can restrict transfers to himself to only those users that
-have been verified properly according to some rules. `bobeway` can whitelist
-`alice` via:::
-
-    whitelist_account bobeway alice white_listed true
-
-In contrast, customer `eve` skrew up her reputation and `bebeway` decides to not
-continue his relation with her. He can remove eve by:::
-
-    whitelist_account bobeway eve no_listing true
-
-or even blacklist here via:::
-
-    whitelist_account bobeway eve black_listed true
