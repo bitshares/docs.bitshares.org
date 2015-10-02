@@ -1,8 +1,9 @@
+**************************
 Setting up private testnet
-==========================
+**************************
 
 Genesis creation
-----------------
+################
 
 First, we'll create a `genesis.json` file named `my-genesis.json`:::
 
@@ -12,7 +13,7 @@ First, we'll create a `genesis.json` file named `my-genesis.json`:::
 The `genesis.json` is the initial state of the network.
 
 Genesis editing
----------------
+***************
 
 If you want to customize the network's initial state, edit `my-genesis.json`.
 This allows you to control things such as:
@@ -32,7 +33,7 @@ quickly create a new chain against any genesis file, by replacing the
 witnesses' block production keys.
 
 Embedding genesis (optional)
-----------------------------
+****************************
 
 Once you have `genesis.json`, you may set a `cmake` variable like so:::
 
@@ -67,7 +68,7 @@ consumers of pre-compiled binaries, in exchange for slight, optional
 complication of the process for producing binaries.
 
 Creating data directory
------------------------
+#######################
 
 We will a new data directory for our witness as follows:::
 
@@ -89,7 +90,7 @@ The reason for running the witness node:  It tells us the chain ID,
 and it initializes the `data/my-blockprod` directory.
 
 Starting block production
--------------------------
+#########################
 
 Open `data/my-blockprod/config.ini` in your favorite text editor,
 and set the following settings, uncommenting them if necessary:::
@@ -135,7 +136,7 @@ network, or which get blockchain state from an existing data directory,
 need not have the `--enable-stale-production` flag.
 
 Obtaining the chain ID
-----------------------
+######################
 
 Each wallet is specifically associated with a single chain, specified
 by its chain ID.  This is to protect the user from e.g. unintentionally
@@ -150,7 +151,7 @@ obtained by using the API to query a running witness node with the
 This `curl` command will return a short JSON object including the `chain_id`.
 
 Creating a wallet
------------------
+#################
 
 In order to create a wallet, you must specify a chain ID and server.
 With the witness node's default access control settings, a blank
@@ -170,7 +171,7 @@ to encrypt the private keys in the wallet.  We will use the word
     set_password supersecret
 
 Gaining access to stake
------------------------
+#######################
 
 In Graphene, balances are contained in accounts.  To claim an account
 that exists in the Graphene genesis, use the `import_key` command:::
@@ -184,7 +185,7 @@ claimed, with no fee, using the `import_balance` command.::
     import_balance nathan ["5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3"] true
 
 Creating accounts
------------------
+#################
 
 Creating an account requires lifetime member (LTM) status.  To upgrade
 to LTM, use the `upgrade_account` command:::
@@ -209,7 +210,7 @@ to the block signing key:::
     get_private_key GPH6viEhYCQr8xKP3Vj8wfHh6WfZeJK7H9uhLPDYWLGCRSj5kHQZM
 
 Creating committee members
---------------------------
+##########################
 
 ::
     create_account_with_brain_key com0 com0 nathan nathan true

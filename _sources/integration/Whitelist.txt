@@ -1,5 +1,6 @@
+****************************
 Using White- and Black-lists
-============================
+****************************
 
 White- Black-Lists exist for assets and for (lifetime member) accounts. While
 the latter can only be used to cast an opinion about another account, lists for
@@ -9,7 +10,7 @@ The issuer of an asset can define how is able to hold (and thus trade) an asset
 and how is not.
 
 Examples
---------
+########
 
 Let's assume user `alice` wants to own `G.USD` which is restricted by a
 whitelists. Whenever someone tries to send `G.USD` to `alice`, the blockchain
@@ -20,7 +21,7 @@ whitelist by the issuer authority, alice will be able to hold `G.USD`.
    frozen.
 
 Definition
-----------
+##########
 White- and Black-listing of assets and or accounts works with the following API
 call:
 

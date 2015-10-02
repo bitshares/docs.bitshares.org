@@ -1,5 +1,6 @@
+*********************************
 Integrating the BitShares Network
-=================================
+*********************************
 
 Banks, exchanges and merchants are integrating BitShares already to power
 instant cross-border remittance, corporate payments, and decentralized trading.
@@ -17,8 +18,8 @@ We here illustrate the steps necessary to securely operate as a
 * exchange, or
 * fiat-gateway.
 
--------------------
-
+Outline
+#######
 .. toctree::
 
    Overview

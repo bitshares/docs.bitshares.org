@@ -1,5 +1,6 @@
+*******
 Sources
-=======
+*******
 
 The sources are located at `github`_ and can be downloaded
 with `git`.::

@@ -1,5 +1,6 @@
+*****************
 Delayed Full Node
-=========================
+*****************
 
 The delayed full node node will provide us with a delayed and several times
 confirmed and verified blockchain. Even though DPOS is more resistant against

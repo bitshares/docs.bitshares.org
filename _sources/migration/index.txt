@@ -1,5 +1,6 @@
+*********************************************
 Migrating from BitShares 1.0 to BitShares 2.0
-=============================================
+*********************************************
 
 BitShares 2.0 is a Financial Smart Contracts platform that is based on the
 `Graphene`_ technology built by `Cryptonomex`_ . You can see Graphene as a

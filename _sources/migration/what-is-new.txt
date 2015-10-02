@@ -1,5 +1,6 @@
+****************************
 What is New in BitShares 2.0
-============================
+****************************
 
 * **Votable Network Parameters**: 
   BitShares 2.0 will allow its shareholders to fine-tune any parameter

@@ -1,8 +1,9 @@
+*********
 Full Node
-=========
+*********
 
 Overview
---------
+########
 
 A full node (a.k.a. *non-block producing* witness node) represents a node in the
 network that verifies all transactions and blocks against its local state.
@@ -14,14 +15,14 @@ store the configuration, blockchain and local databases. Those will be
 automatically created with default settings if they don't exist locally set.
 
 Launching a witness node
-------------------------
+########################
 
 The witness is launched according to:::
 
     ./programs/witness_node/witness_node --data-dir="mydata"
 
 Configuration
--------------
+#############
 
 The configuration file `config.ini` in `mydata` is commented and contains the
 following essential settings:::
@@ -78,7 +79,7 @@ following essential settings:::
     # history-per-size = 1000
 
 Enabling Remote Procedure Calls (RPC)
--------------------------------------
+#####################################
 
 In order to allow RPC calls for blockchain operations you need to modify the
 following entry in the configuration file:
@@ -91,7 +92,7 @@ witness) no private keys are involved, it is safe to expose your witness to the
 internet.
 
 Restarting the witness node
----------------------------
+###########################
 
 When restarting the witness node, it may be required to append the
 `--replay-blockchain` parameter to regenerate the local (in-memory) blockchain

@@ -95,9 +95,11 @@
       <h3>Table Of Contents</h3>
       <ul>
 <li><a class="reference internal" href="#">Setting up private testnet</a><ul>
-<li><a class="reference internal" href="#genesis-creation">Genesis creation</a></li>
+<li><a class="reference internal" href="#genesis-creation">Genesis creation</a><ul>
 <li><a class="reference internal" href="#genesis-editing">Genesis editing</a></li>
 <li><a class="reference internal" href="#embedding-genesis-optional">Embedding genesis (optional)</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#creating-data-directory">Creating data directory</a></li>
 <li><a class="reference internal" href="#starting-block-production">Starting block production</a></li>
 <li><a class="reference internal" href="#obtaining-the-chain-id">Obtaining the chain ID</a></li>
@@ -130,9 +132,8 @@ programs/witness_node/witness_node --create-genesis-json genesis/my-genesis.json
 </pre></div>
 </div>
 <p>The <cite>genesis.json</cite> is the initial state of the network.</p>
-</div>
 <div class="section" id="genesis-editing">
-<h2>Genesis editing<a class="headerlink" href="#genesis-editing" title="Permalink to this headline">¶</a></h2>
+<h3>Genesis editing<a class="headerlink" href="#genesis-editing" title="Permalink to this headline">¶</a></h3>
 <p>If you want to customize the network&#8217;s initial state, edit <cite>my-genesis.json</cite>.
 This allows you to control things such as:</p>
 <ul class="simple">
@@ -150,7 +151,7 @@ quickly create a new chain against any genesis file, by replacing the
 witnesses&#8217; block production keys.</p>
 </div>
 <div class="section" id="embedding-genesis-optional">
-<h2>Embedding genesis (optional)<a class="headerlink" href="#embedding-genesis-optional" title="Permalink to this headline">¶</a></h2>
+<h3>Embedding genesis (optional)<a class="headerlink" href="#embedding-genesis-optional" title="Permalink to this headline">¶</a></h3>
 <p>Once you have <cite>genesis.json</cite>, you may set a <cite>cmake</cite> variable like so::</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">cmake</span> <span class="o">-</span><span class="n">DGRAPHENE_EGENESIS_JSON</span><span class="o">=</span><span class="s">&quot;$(pwd)/genesis/my-genesis.json&quot;</span>
 </pre></div>
@@ -165,7 +166,7 @@ cmake -DGRAPHENE_EGENESIS_JSON=&quot;$(pwd)/genesis/my-genesis.json&quot; .
 </pre></div>
 </div>
 <p>Deleting caches will reset all <cite>cmake</cite> variables, so if you have used
-instructions like <a class="reference internal" href="../installation/Build.html"><em>Build Process</em></a> which tells you to
+instructions like <a class="reference internal" href="../installation/Build.html"><em>Building from Sources</em></a> which tells you to
 set other <cite>cmake</cite> variables, you will have to add those variables
 to the <cite>cmake</cite> line above.</p>
 <p>Embedding the genesis copies the entire content of <cite>genesis.json</cite>
@@ -181,6 +182,7 @@ starting a new wallet.</li>
 <p>Embedded genesis is a feature designed to make life easier for
 consumers of pre-compiled binaries, in exchange for slight, optional
 complication of the process for producing binaries.</p>
+</div>
 </div>
 <div class="section" id="creating-data-directory">
 <h2>Creating data directory<a class="headerlink" href="#creating-data-directory" title="Permalink to this headline">¶</a></h2>

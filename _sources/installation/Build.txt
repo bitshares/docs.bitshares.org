@@ -1,8 +1,12 @@
-Build Process
-=============
+***************************
+Building from Sources
+***************************
 
 Dependencies
-------------
+#############
+
+Development Toolkit
+*******************
 
 The following dependencies were necessary for a clean install of Ubuntu 14.04
 LTS:::
@@ -13,7 +17,7 @@ LTS:::
                          autoconf libtool git
 
 Boost 1.57
-----------
+**********
 
 The Boost which ships with Ubuntu 15.04 is too old.  You need to download the
 Boost tarball for Boost 1.57.0 (Note, 1.58.0 requires C++14 and will not build
@@ -33,8 +37,10 @@ on Ubuntu LTS; this requirement was an accident, see `this mailing list post`_).
     ./bootstrap.sh "--prefix=$BOOST_ROOT"
     ./b2 install
 
+.. _this mailing list post: http://boost.2283326.n4.nabble.com/1-58-1-bugfix-release-necessary-td4674686.html
+
 QT 5.5
-----------
+**********
 
 Qt 5.5 is a dependency if you wish to build `light_client`.  Building it from
 source requires the following dependencies on Ubuntu LTS:::
@@ -74,31 +80,26 @@ To actually run `cmake` we now need the following parameters:::
     cd ..
 
 Building BitShares/Graphene
----------------------------
+###########################
 
-The sources are located at `github`_ and can be downloaded
-with `git`.::
+After downloading the graphene/bitshares sources according to :doc:`the download
+page <./Sources>`, we can run ``cmake`` for configuration and compile with
+``make``:::
 
-    git clone https://github.com/ FIXME
-
-Since the repository makes use of so called *submodules* which are repositories
-on their own, we need to refresh those.::
-
-    git submodule update --init --recursive
-
-    cd graphene
-    git submodule update --init --recursive
     cmake -DBOOST_ROOT="$BOOST_ROOT" -DCMAKE_BUILD_TYPE=Debug .
     make 
 
+Note that the environmental variable ``$BOOST_ROOT`` should point to your
+install directory of boost if you have installed it manually.
+
 Distribution Specific Settings
-------------------------------
-* **Ubuntu 15.04**:
+##############################
+
+Ubuntu 15.04
+************
+
   Ubuntu 15.04 uses gcc 5, which has the c++11 ABI as default, but the boost
   libraries were compiled with the cxx11 ABI (this is an issue in many distros).
   If you get build failures due to abi incompatibilities, just use gcc 4.9::
 
       CC=gcc-4.9 CXX=g++-4.9 cmake .
-
-.. _github: http://github.com
-.. _this mailing list post: http://boost.2283326.n4.nabble.com/1-58-1-bugfix-release-necessary-td4674686.html

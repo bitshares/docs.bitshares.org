@@ -1,5 +1,6 @@
+********
 Accounts
-========
+********
 
 BitShares 2.0 accounts have to be registered on the blockchain. Upon
 registration they are assigned an incrementing identifier (account id).

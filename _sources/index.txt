@@ -1,5 +1,6 @@
+*************************************
 Welcome to the Graphene Documentation
-=========================================
+*************************************
 
 Below, you can find the Graphene documentation. Since BitShares 2.0 is the
 first application of Graphene technology, you will be able to use almost
@@ -8,7 +9,7 @@ parts for convenience and for the sake of easy location of relevant
 information.
 
 Migration Guide from BitShares 1 to BitShares 2
-----------------------
+###############################################
 
 The migration tutorial is relevant only to those customers and investors that
 have participated in BitShares 1.0. We show improvements, new features and give
@@ -20,7 +21,7 @@ assistance for claiming your funds in BitShares 2.0.
    migration/index
 
 Installation Guide
--------------------------
+##################
 
 This section describes the installation procedure and the build process for
 those that want to compile from the source.
@@ -31,7 +32,7 @@ those that want to compile from the source.
    installation/index
 
 Applications
------------------
+############
 
 The Graphene toolkit comprises several tools that shall be briefly described in
 the following sections.
@@ -42,7 +43,7 @@ the following sections.
    apps/index
 
 Integrations Guide
-------------------------
+##################
 
 For integrating the BitShares network and profiting from its network effect, we
 here describe the technical possibilities and implementation aspects.
@@ -53,7 +54,7 @@ here describe the technical possibilities and implementation aspects.
    integration/index
 
 Blockchain Specifications
------------------------
+#########################
 
 The technical specifications of blockchain objects and their serialization is
 part of the following sections.
@@ -64,7 +65,7 @@ part of the following sections.
    blockchain/index
 
 Testnet Guide
---------------------
+#############
 
 For running comprehensive tests and evaluating algorithms cheaply, we offer to
 setup private or public testnets.
@@ -75,7 +76,7 @@ setup private or public testnets.
    testnet/index
 
 API
-----------------
+###
 
 The API for interfacing with either a full node or a CLI wallet are described
 in this comprehensive repository.
@@ -87,7 +88,7 @@ in this comprehensive repository.
    namespaces/index
 
 Indices and tables
-==================
+##################
 
 * :ref:`genindex`
 * :ref:`modindex`
@@ -99,4 +100,3 @@ Indices and tables
    http://docutils.sourceforge.net/rst.html
    Sphinx Specific ReStructure:
    http://sphinx-doc.org/rest.html
-   

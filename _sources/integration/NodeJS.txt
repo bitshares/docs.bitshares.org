@@ -1,11 +1,12 @@
+**************
 NodeJS Example
-==============
+**************
 
 This nodejs script monitors the balance history of an account in a
 graphene-based network such as BitShares 2.0.
 
 Installation
-------------
+############
 
 A NodeJS library to monitor incoming transactions can be downloaded from::
 
@@ -14,7 +15,7 @@ A NodeJS library to monitor incoming transactions can be downloaded from::
     npm install
 
 Configuration
--------------
+#############
 
 To make use of this library, we can instruct any full-node to send
 notifications for all incoming transactions for any account. Let's discuss the
@@ -62,7 +63,7 @@ in the cli wallet. The corresponding private key can be obtain from:::
 Note that the latter command exposes all private keys in clear-text wif.
 
 Running
---------
+#######
 
 The script can be executed simply by::
 

@@ -1,5 +1,6 @@
-APIs
-==============
+*********
+Full Node
+*********
 
 The graphene full node distinguishes sever different APIs for security reasons:
 
