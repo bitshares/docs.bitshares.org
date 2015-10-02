@@ -2,9 +2,9 @@ Welcome to the Graphene Documentation
 =========================================
 
 Below, you can find the Graphene documentation. Since BitShares 2.0 is the
-first application of the Graphene technology, you will be able to use almost
+first application of Graphene technology, you will be able to use almost
 everything in BitShares 2.0, too. We separated the documentation into smaller
-parts for convenience ans for the sake of easy location of relevant
+parts for convenience and for the sake of easy location of relevant
 information.
 
 Migration Guide from BitShares 1 to BitShares 2
