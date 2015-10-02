@@ -49,7 +49,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'Graphene/BitShares 2.0'
+project = 'Graphene/BitShares 2.0 Technical Documentation'
 copyright = '2015, Fabian Schuh'
 author = 'Fabian Schuh'
 

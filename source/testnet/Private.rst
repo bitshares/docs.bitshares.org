@@ -48,7 +48,7 @@ effect:::
     cmake -DGRAPHENE_EGENESIS_JSON="$(pwd)/genesis/my-genesis.json" .
 
 Deleting caches will reset all `cmake` variables, so if you have used
-instructions like :doc:`Build` which tells you to
+instructions like :doc:`../installation/Build` which tells you to
 set other `cmake` variables, you will have to add those variables
 to the `cmake` line above.
 
