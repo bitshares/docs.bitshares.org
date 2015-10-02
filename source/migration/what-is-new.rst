@@ -14,15 +14,11 @@ What is New in BitShares 2.0
   support tree hierarchies never to be seen before. Read more about this about
   `dynamic account permissions`_.
 
-.. _dynamic account permissions: https://bitshares.org/technology/dynamic-account-permissions/
-
 * **Transferable Account Names**:
   Since Control over Funds is separated from the control over an account, we
   can have transferable account names that are registered on the blockchain.  
   Named accounts allows for much easier transfers because no cryptic strings
   needs to be handed out. Read more about `transferable named accounts`_.
-
-.. _transferable named accounts: https://bitshares.org/technology/transferable-named-accounts/
 
 * **On-Chain Proposed Transactions**:
   In traditional crypto currencies, a multi-signature transaction has to be
@@ -48,16 +44,12 @@ What is New in BitShares 2.0
   fraction. Of course, this fraction can be tuned by shareholders! Read more
   about the `referral program`_.
 
-.. _referral program: https://bitshares.org/referral-program/
-
 * **Recurring & Scheduled Payments**:
   We wanted to offer a way to have our rent payed automatically. So we
   implemented it in the blockchain. In BitShares 2.0, participants are capable
   of allowing others to withdraw funds from your account. Of course, you can
   define a daily/weekly or monthly limit. Read more about `recurring and
   scheduled payments`_.
-
-.. _recurring and scheduled payments: https://bitshares.org/technology/recurring-and-scheduled-payments/
 
 * **Additional Privatized BitAssets**:
   In contrast to Market Pegged Assets (also known as BitAssets) that have a
@@ -66,3 +58,8 @@ What is New in BitShares 2.0
   individual set of price feed publishers that do not need shareholders'
   approval. Hence, everyone can create a privatized bitAsset to track an
   individual value, such as indices, or binary predictions.
+
+.. _dynamic account permissions: https://bitshares.org/technology/dynamic-account-permissions/
+.. _transferable named accounts: https://bitshares.org/technology/transferable-named-accounts/
+.. _referral program: https://bitshares.org/referral-program/
+.. _recurring and scheduled payments: https://bitshares.org/technology/recurring-and-scheduled-payments/
