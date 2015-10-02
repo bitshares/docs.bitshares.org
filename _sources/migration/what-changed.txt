@@ -8,8 +8,6 @@ What has Changed?
   always trade for *at least* the value of its underlying asset, i.e. $1.
   We have summarized the economical analysis and incentives for market
   participants for `bitAssets 2.0`_
- 
-.. _bitAssets 2.0: https://bitshares.org/technology/price-stable-cryptocurrencies/
 
 * **Faster Blocks**:
   Initially, the BitShares 2.0 blockchain will come with 3 seconds block
@@ -18,8 +16,6 @@ What has Changed?
 * **Industrial Performance**:
   BitShares 2.0 can support massive load and works well beyond 100k transactions
   per second. Find out how we achieve `industrial performance and scalability`_.
-
-.. _industrial performance and scalability: https://bitshares.org/technology/industrial-performance-and-scalability/
 
 * **New Reactive UI**:
   Since some customers of BitShares 1.0 complained about the slow user
@@ -36,8 +32,6 @@ What has Changed?
   Celine signs for that transaction. Also, BitShares 2.0 has `a referral program`_.
   Both features combined make it necessary that participants *register* an
   account on the blockchain.
-
-.. _a referral program: https://bitshares.org/technology/recurring-and-scheduled-payments/
 
 * **Explicit Privacy**:
   The *TITAN* technology in BitShares 2.0 slowed down blockchain processing
@@ -57,3 +51,7 @@ What has Changed?
   Since we have separated the business part from the block producing part, we
   now call block producers (formaly known as *delegates*) witnesses, while the
   additional payed position for workers is called budget item.
+
+.. _industrial performance and scalability: https://bitshares.org/technology/industrial-performance-and-scalability/
+.. _bitAssets 2.0: https://bitshares.org/technology/price-stable-cryptocurrencies/
+.. _a referral program: https://bitshares.org/technology/recurring-and-scheduled-payments/
