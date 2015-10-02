@@ -1,0 +1,167 @@
+
+
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Migration Remarks</title>
+
+    <!-- CSS -->
+    <link  href='../_static/main.css' rel='stylesheet'>
+    <link  href='../_static/style.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+    <!-- Sphinx search -->
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script src='../_static/script.js'></script>
+
+    <!-- title card -->
+    <link  href='../_static/title-card.css' rel='stylesheet'>
+    <script src='../_static/title-card.js'></script>
+    
+    <!-- Sphinx search -->
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Graphene/BitShares 2.0 Technical Documentation  documentation"
+          href="../_static/opensearch.xml"/>
+
+    <!-- Meta -->
+    <meta content="Graphene Documentation" property="og:site_name">
+    <meta content="Graphene Documentation" property="og:title">
+    <meta content="website" property="og:type">
+    <meta content="Graphene Documentation" name="description">
+    <meta content="Graphene Documentation" property="og:description">
+ </head>
+ <body class='no-literate'>
+
+ <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
+   <div class='in'>
+     <div class='headline'>
+       <h1>Graphene/BitShares 2.0 Technical Documentation</h1>
+       <p>Migration Remarks</p>
+       <p style="margin-top: 3em;"><img src="../_static/learn.svg" width="124" /><p>
+     </div>
+   </div>
+ </div>
+
+ <div class='header'>
+   <div class='left'>
+    
+        «&#160;&#160;<a href="howto-importing-wallet.html">Importing Your Wallet</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="../installation/index.html">Installation</a>&#160;&#160;»
+
+   </div>
+ </div>
+
+ <div class='content-root'>
+  <!-- menu bar -->
+  <div class='menubar'>
+   <div class='section'>
+    <img src="../_static/grphn-logo.svg" width="48" />
+       <!--<a class='big button' href='#' target='_blank'>Download</a>-->
+   </div>
+   <div class='menu section'>
+    <div id="toc">
+      <h3>Table Of Contents</h3>
+      <ul>
+<li><a class="reference internal" href="#">Migration Remarks</a><ul>
+<li><a class="reference internal" href="#recommended-preparations-optional">Recommended Preparations (Optional)</a></li>
+<li><a class="reference internal" href="#remarks-on-private-keys">Remarks on Private Keys</a></li>
+<li><a class="reference internal" href="#technical-explanation">Technical Explanation</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+   </div>
+   <div class='bottom section'>
+   <!--
+     <a href='https://github.com/cryptonomex/graphene'>View on GitHub</a><br>
+     <a href='https://github.com/cryptonomex/graphene/blob/master/README.md' target='_blank'>See .md source</a>
+   -->
+   </div>
+  </div>
+  <div class='content'>
+   
+  <div class="section" id="migration-remarks">
+<h1>Migration Remarks<a class="headerlink" href="#migration-remarks" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="recommended-preparations-optional">
+<h2>Recommended Preparations (Optional)<a class="headerlink" href="#recommended-preparations-optional" title="Permalink to this headline">¶</a></h2>
+<p>To ease your migration we recommend that everyone upgrade to BitShares 0.9.3c
+prior to the snapshot date and transfer 100% of every asset balance to
+yourself. This will consolidate your balances under a single account.</p>
+<p>If you missed this action, nothing will be lost. You will still be able to
+import all your account names and funds into BitShares 2.0 (see below).</p>
+</div>
+<div class="section" id="remarks-on-private-keys">
+<h2>Remarks on Private Keys<a class="headerlink" href="#remarks-on-private-keys" title="Permalink to this headline">¶</a></h2>
+<p>Depending on the users (trade) activity and investors behavior please also note
+the following:</p>
+<ul class="simple">
+<li><strong>TITAN Transactions</strong>:
+If there is a chance that you might have received a TITAN transaction
+(default transaction format) since you last opened your wallet, you are
+required to completely synchronize with the BitShares 1.0 blockchain to catch
+that transaction and generate the corresponding private key. After that, you
+can use the graphene-compatible wallet export function.</li>
+<li><strong>Market transactions</strong>:
+Each market order is associated a key that is derived when placing your
+order and is hence part of your wallet. Please note that for the transition
+to BitShares 2.0, all open orders (except short orders) will be closed and
+the funds returned to their owners.</li>
+<li><strong>Cold Storage Funds</strong>:
+You cold storage funds can be claimed by simply importing your cold private
+key into BitShares 2.0. This will result in a transaction that claims your
+funds and puts them into your account.</li>
+<li><strong>PTS/AGS donators</strong>:
+You can import your corresponding private keys into BitShares 2.0 directly to
+claim your funds. Note that, since the web wallet cannot parse your
+<cite>wallet.dat</cite> file, you may be required to manually dump your private keys.
+with a 3rd party tool. If you feel not comfortable with this, we recommend
+you import your <cite>wallet.dat</cite> file into the BitShares 1.0 client and export a
+graphene-compatible wallet file that can be imported in the BitShares 2.0 web
+wallet.</li>
+</ul>
+</div>
+<div class="section" id="technical-explanation">
+<h2>Technical Explanation<a class="headerlink" href="#technical-explanation" title="Permalink to this headline">¶</a></h2>
+<p>The BitShares 2.0 wallet architecture is vastly different than BitShares 1.0.
+In BitShares 1.0, each account consists of dozens or even thousands of keys,
+each of which is controlling a small portion of your balance and for TITAN
+users, none of the balances associated with your account use the same key as
+your account.  Under BitShares 2.0, all of these &#8220;balances&#8221; become unique
+accounts rather than a single logical account. The BitShares 2.0 wallet has
+an &#8220;import&#8221; interface that allows you to specify a set of private keys and
+the name of an account that you would like to receive all of the funds
+associated with those keys. Then it generates a transaction that spends the
+full balances from all accounts associated with those keys to your new
+unified BitShares 2.0 account. The BitShares 0.9.x wallet provides a utility
+to dump all private keys associated with a given account to make the
+migration process easy.</p>
+</div>
+</div>
+
+
+  </div>
+ </div>
+
+ <script>var HN=[];HN.factory=function(e){return function(){HN.push([e].concat(Array.prototype.slice.call(arguments,0)))};},HN.on=HN.factory("on"),HN.once=HN.factory("once"),HN.off=HN.factory("off"),HN.emit=HN.factory("emit"),HN.load=function(){var e="hn-button.js";if(document.getElementById(e))return;var t=document.createElement("script");t.id=e,t.src="//hn-button.herokuapp.com/hn-button.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)},HN.load();</script>
+ </body>
+</html>

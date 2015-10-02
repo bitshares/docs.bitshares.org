@@ -1,0 +1,699 @@
+
+
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Database API</title>
+
+    <!-- CSS -->
+    <link  href='../_static/main.css' rel='stylesheet'>
+    <link  href='../_static/style.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+    <!-- Sphinx search -->
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script src='../_static/script.js'></script>
+
+    <!-- title card -->
+    <link  href='../_static/title-card.css' rel='stylesheet'>
+    <script src='../_static/title-card.js'></script>
+    
+    <!-- Sphinx search -->
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Graphene/BitShares 2.0 Technical Documentation  documentation"
+          href="../_static/opensearch.xml"/>
+
+    <!-- Meta -->
+    <meta content="Graphene Documentation" property="og:site_name">
+    <meta content="Graphene Documentation" property="og:title">
+    <meta content="website" property="og:type">
+    <meta content="Graphene Documentation" name="description">
+    <meta content="Graphene Documentation" property="og:description">
+ </head>
+ <body class='no-literate'>
+
+ <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
+   <div class='in'>
+     <div class='headline'>
+       <h1>Graphene/BitShares 2.0 Technical Documentation</h1>
+       <p>Database API</p>
+       <p style="margin-top: 3em;"><img src="../_static/learn.svg" width="124" /><p>
+     </div>
+   </div>
+ </div>
+
+ <div class='header'>
+   <div class='left'>
+    
+        «&#160;&#160;<a href="login.html">Login API</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="history.html">Account History API</a>&#160;&#160;»
+
+   </div>
+ </div>
+
+ <div class='content-root'>
+  <!-- menu bar -->
+  <div class='menubar'>
+   <div class='section'>
+    <img src="../_static/grphn-logo.svg" width="48" />
+       <!--<a class='big button' href='#' target='_blank'>Download</a>-->
+   </div>
+   <div class='menu section'>
+    <div id="toc">
+      <h3>Table Of Contents</h3>
+      <ul>
+<li><a class="reference internal" href="#">Database API</a></li>
+</ul>
+
+    </div>
+   </div>
+   <div class='bottom section'>
+   <!--
+     <a href='https://github.com/cryptonomex/graphene'>View on GitHub</a><br>
+     <a href='https://github.com/cryptonomex/graphene/blob/master/README.md' target='_blank'>See .md source</a>
+   -->
+   </div>
+  </div>
+  <div class='content'>
+   
+  <div class="section" id="database-api">
+<h1>Database API<a class="headerlink" href="#database-api" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="_CPPv2N8graphene3app12database_apiE">
+<span id="graphene::app::database_api"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api"></span><em class="property">class </em><code class="descclassname">graphene::app::</code><code class="descname">database_api</code><a class="headerlink" href="#_CPPv2N8graphene3app12database_apiE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference internal" href="../namespaces/app.html#grapheneclassgraphene_1_1app_1_1database__api"><span>database_api</span></a> class implements the RPC API for the chain database. </p>
+<p>This API exposes accessors on the database which query state tracked by a blockchain validating node. This API is read-only; all modifications to the database must be performed via transactions. Transactions are broadcast via the <a class="reference internal" href="../namespaces/app.html#grapheneclassgraphene_1_1app_1_1network__broadcast__api"><span>network_broadcast_api</span></a>. </p>
+<div class="breathe-sectiondef container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api11get_objectsERK6vectorI14object_id_typeE">
+<span id="graphene::app::database_api::get_objects__vector:object_id_type:CR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a9c8289e00f460e8f90d7cb5ebf07bb65"></span>fc::variants <code class="descname">get_objects</code><span class="sig-paren">(</span><em class="property">const</em> vector&lt;object_id_type&gt; &amp;<em>ids</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api11get_objectsERK6vectorI14object_id_typeE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the objects corresponding to the provided IDs. </p>
+<p>
+If any of the provided IDs does not map to an object, a null variant is returned in its position. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The objects retrieved, in the order they are mentioned in ids</dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">ids</span></code> - <p>IDs of the objects to retrieve </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api24cancel_all_subscriptionsEv">
+<span id="graphene::app::database_api::cancel_all_subscriptions"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a0c3f545dec20b073131bbd7466940c6f"></span>void <code class="descname">cancel_all_subscriptions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene3app12database_api24cancel_all_subscriptionsEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stop receiving any notifications. </p>
+<p>This unsubscribes from all subscribed markets and objects. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api16get_block_headerE8uint32_t">
+<span id="graphene::app::database_api::get_block_header__uint32_t"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a0fa7707871c533c45ea117f486d337b9"></span>optional&lt;block_header&gt; <code class="descname">get_block_header</code><span class="sig-paren">(</span>uint32_t <em>block_num</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api16get_block_headerE8uint32_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve a block header. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>header of the referenced block, or null if no matching block was found </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">block_num</span></code> - <p>Height of the block whose header should be returned </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api9get_blockE8uint32_t">
+<span id="graphene::app::database_api::get_block__uint32_t"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1adc5ac3f3c890fac420e1fdd503096d49"></span>optional&lt;signed_block&gt; <code class="descname">get_block</code><span class="sig-paren">(</span>uint32_t <em>block_num</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api9get_blockE8uint32_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve a full, signed block. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>the referenced block, or null if no matching block was found </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">block_num</span></code> - <p>Height of the block to be returned </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api15get_transactionE8uint32_t8uint32_t">
+<span id="graphene::app::database_api::get_transaction__uint32_t.uint32_t"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1ae1d1fc757dc2f658466c258fb70dd84c"></span>processed_transaction <code class="descname">get_transaction</code><span class="sig-paren">(</span>uint32_t <em>block_num</em>, uint32_t <em>trx_in_block</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api15get_transactionE8uint32_t8uint32_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>used to fetch an individual transaction. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api20get_chain_propertiesEv">
+<span id="graphene::app::database_api::get_chain_properties"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a3107ef876b0edfa69a2ee0002df64374"></span>chain_property_object <code class="descname">get_chain_properties</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api20get_chain_propertiesEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the chain_property_object associated with the chain. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api21get_global_propertiesEv">
+<span id="graphene::app::database_api::get_global_properties"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a200f8bac63370387d4f94b5f60b4f93c"></span>global_property_object <code class="descname">get_global_properties</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api21get_global_propertiesEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the current global_property_object. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api10get_configEv">
+<span id="graphene::app::database_api::get_config"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a3ad8a24dc4052370754881e0b65d2ae1"></span>fc::variant_object <code class="descname">get_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api10get_configEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve compile-time constants. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api12get_chain_idEv">
+<span id="graphene::app::database_api::get_chain_id"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1aa3f24cfbd52e50bcf14a5fc59082476e"></span>chain_id_type <code class="descname">get_chain_id</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api12get_chain_idEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the chain ID. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api29get_dynamic_global_propertiesEv">
+<span id="graphene::app::database_api::get_dynamic_global_properties"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a3015a5e495116f40b31190c7df01329c"></span>dynamic_global_property_object <code class="descname">get_dynamic_global_properties</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api29get_dynamic_global_propertiesEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the current dynamic_global_property_object. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api12get_accountsERK6vectorI15account_id_typeE">
+<span id="graphene::app::database_api::get_accounts__vector:account_id_type:CR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a83a8dc22a2ccdba1c60e1e243d44777e"></span>vector&lt;optional&lt;account_object&gt;&gt; <code class="descname">get_accounts</code><span class="sig-paren">(</span><em class="property">const</em> vector&lt;account_id_type&gt; &amp;<em>account_ids</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api12get_accountsERK6vectorI15account_id_typeE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of accounts by ID. </p>
+<p>
+This function has semantics identical to <a class="reference internal" href="../namespaces/app.html#grapheneclassgraphene_1_1app_1_1database__api_1a9c8289e00f460e8f90d7cb5ebf07bb65"><span>get_objects</span></a> <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The accounts corresponding to the provided IDs</dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">account_ids</span></code> - <p>IDs of the accounts to retrieve </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api17get_full_accountsERK6vectorI6stringEb">
+<span id="graphene::app::database_api::get_full_accounts__vector:string:CR.b"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1ac5d0d7bb2911c2d7ad79e0e7fc92a45d"></span>std::map&lt;string, full_account&gt; <code class="descname">get_full_accounts</code><span class="sig-paren">(</span><em class="property">const</em> vector&lt;string&gt; &amp;<em>names_or_ids</em>, bool <em>subscribe</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene3app12database_api17get_full_accountsERK6vectorI6stringEb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fetch all objects relevant to the specified accounts and subscribe to updates. </p>
+<p>
+This function fetches all relevant objects for the given accounts, and subscribes to updates to the given accounts. If any of the strings in names_or_ids cannot be tied to an account, that input will be ignored. All other accounts will be retrieved and subscribed. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>Map of string from names_or_ids to the corresponding account</dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">callback</span></code> - <p>Function to call with updates </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">names_or_ids</span></code> - <p>Each item must be the name or ID of an account to retrieve </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api22get_account_referencesE15account_id_type">
+<span id="graphene::app::database_api::get_account_references__account_id_type"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1ac9771a973cf8668a4c2d9c50cdfcbd75"></span>vector&lt;account_id_type&gt; <code class="descname">get_account_references</code><span class="sig-paren">(</span>account_id_type <em>account_id</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api22get_account_referencesE15account_id_type" title="Permalink to this definition">¶</a></dt>
+<dd><p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>all accounts that referr to the key or account id in their owner or active authorities. </dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api20lookup_account_namesERK6vectorI6stringE">
+<span id="graphene::app::database_api::lookup_account_names__vector:string:CR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a4c551e660b4be463bd044db8e51058cf"></span>vector&lt;optional&lt;account_object&gt;&gt; <code class="descname">lookup_account_names</code><span class="sig-paren">(</span><em class="property">const</em> vector&lt;string&gt; &amp;<em>account_names</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api20lookup_account_namesERK6vectorI6stringE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of accounts by name. </p>
+<p>
+This function has semantics identical to <a class="reference internal" href="../namespaces/app.html#grapheneclassgraphene_1_1app_1_1database__api_1a9c8289e00f460e8f90d7cb5ebf07bb65"><span>get_objects</span></a> <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The accounts holding the provided names</dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">account_names</span></code> - <p>Names of the accounts to retrieve </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api15lookup_accountsERK6string8uint32_t">
+<span id="graphene::app::database_api::lookup_accounts__stringCR.uint32_t"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1aeee28c54e36c159c5066229165cf487a"></span>map&lt;string, account_id_type&gt; <code class="descname">lookup_accounts</code><span class="sig-paren">(</span><em class="property">const</em> string &amp;<em>lower_bound_name</em>, uint32_t <em>limit</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api15lookup_accountsERK6string8uint32_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get names and IDs for registered accounts. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>Map of account names to corresponding IDs </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">lower_bound_name</span></code> - <p>Lower bound of the first name to return </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">limit</span></code> - <p>Maximum number of results to return  must not exceed 1000 </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api20get_account_balancesE15account_id_typeRK8flat_setI13asset_id_typeE">
+<span id="graphene::app::database_api::get_account_balances__account_id_type.flat_set:asset_id_type:CR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a179dd46f9f554c325ab641829d570af6"></span>vector&lt;asset&gt; <code class="descname">get_account_balances</code><span class="sig-paren">(</span>account_id_type <em>id</em>, <em class="property">const</em> flat_set&lt;asset_id_type&gt; &amp;<em>assets</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api20get_account_balancesE15account_id_typeRK8flat_setI13asset_id_typeE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an account&#8217;s balances in various assets. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>Balances of the account </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">id</span></code> - <p>ID of the account to get balances for </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">assets</span></code> - <p>IDs of the assets to get balances of; if empty, get all assets account has a balance in </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api26get_named_account_balancesERKNSt6stringERK8flat_setI13asset_id_typeE">
+<span id="graphene::app::database_api::get_named_account_balances__ssCR.flat_set:asset_id_type:CR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a9c38663273a06754eb3517e3687e87ff"></span>vector&lt;asset&gt; <code class="descname">get_named_account_balances</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>name</em>, <em class="property">const</em> flat_set&lt;asset_id_type&gt; &amp;<em>assets</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api26get_named_account_balancesERKNSt6stringERK8flat_setI13asset_id_typeE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Semantically equivalent to <a class="reference internal" href="../namespaces/app.html#grapheneclassgraphene_1_1app_1_1database__api_1a179dd46f9f554c325ab641829d570af6"><span>get_account_balances</span></a>, but takes a name instead of an ID. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api19get_balance_objectsERK6vectorI7addressE">
+<span id="graphene::app::database_api::get_balance_objects__vector:address:CR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a13682ca0f6299a2015b1a40adecfea9c"></span>vector&lt;balance_object&gt; <code class="descname">get_balance_objects</code><span class="sig-paren">(</span><em class="property">const</em> vector&lt;address&gt; &amp;<em>addrs</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api19get_balance_objectsERK6vectorI7addressE" title="Permalink to this definition">¶</a></dt>
+<dd><p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>all unclaimed balance objects for a set of addresses </dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api17get_account_countEv">
+<span id="graphene::app::database_api::get_account_count"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1ae6cc0c16e9e0f2979c51c88d90fc08d3"></span>uint64_t <code class="descname">get_account_count</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api17get_account_countEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the total number of accounts registered with the blockchain. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api10get_assetsERK6vectorI13asset_id_typeE">
+<span id="graphene::app::database_api::get_assets__vector:asset_id_type:CR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1aa5249a8a747d0f13e3fbd9f075769eeb"></span>vector&lt;optional&lt;asset_object&gt;&gt; <code class="descname">get_assets</code><span class="sig-paren">(</span><em class="property">const</em> vector&lt;asset_id_type&gt; &amp;<em>asset_ids</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api10get_assetsERK6vectorI13asset_id_typeE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of assets by ID. </p>
+<p>
+This function has semantics identical to <a class="reference internal" href="../namespaces/app.html#grapheneclassgraphene_1_1app_1_1database__api_1a9c8289e00f460e8f90d7cb5ebf07bb65"><span>get_objects</span></a> <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The assets corresponding to the provided IDs</dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">asset_ids</span></code> - <p>IDs of the assets to retrieve </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api11list_assetsERK6string8uint32_t">
+<span id="graphene::app::database_api::list_assets__stringCR.uint32_t"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a79ff6d7d7609e67e4ea3dcb79d1d84c4"></span>vector&lt;asset_object&gt; <code class="descname">list_assets</code><span class="sig-paren">(</span><em class="property">const</em> string &amp;<em>lower_bound_symbol</em>, uint32_t <em>limit</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api11list_assetsERK6string8uint32_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get assets alphabetically by symbol name. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The assets found </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">lower_bound_symbol</span></code> - <p>Lower bound of symbol names to retrieve </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">limit</span></code> - <p>Maximum number of assets to fetch (must not exceed 100) </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api20lookup_asset_symbolsERK6vectorI6stringE">
+<span id="graphene::app::database_api::lookup_asset_symbols__vector:string:CR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a7d68ab26a4e26919a019adace916a4ed"></span>vector&lt;optional&lt;asset_object&gt;&gt; <code class="descname">lookup_asset_symbols</code><span class="sig-paren">(</span><em class="property">const</em> vector&lt;string&gt; &amp;<em>symbols_or_ids</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api20lookup_asset_symbolsERK6vectorI6stringE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of assets by symbol. </p>
+<p>
+This function has semantics identical to <a class="reference internal" href="../namespaces/app.html#grapheneclassgraphene_1_1app_1_1database__api_1a9c8289e00f460e8f90d7cb5ebf07bb65"><span>get_objects</span></a> <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The assets corresponding to the provided symbols or IDs</dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">asset_symbols</span></code> - <p>Symbols or stringified IDs of the assets to retrieve </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api16get_limit_ordersE13asset_id_type13asset_id_type8uint32_t">
+<span id="graphene::app::database_api::get_limit_orders__asset_id_type.asset_id_type.uint32_t"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1ae5b494b0fbc861bdc743f43a93fb6341"></span>vector&lt;limit_order_object&gt; <code class="descname">get_limit_orders</code><span class="sig-paren">(</span>asset_id_type <em>a</em>, asset_id_type <em>b</em>, uint32_t <em>limit</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api16get_limit_ordersE13asset_id_type13asset_id_type8uint32_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get limit orders in a given market. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The limit orders, ordered from least price to greatest </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">a</span></code> - <p>ID of asset being sold </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">b</span></code> - <p>ID of asset being purchased </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">limit</span></code> - <p>Maximum number of orders to retrieve </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api15get_call_ordersE13asset_id_type8uint32_t">
+<span id="graphene::app::database_api::get_call_orders__asset_id_type.uint32_t"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1ad624c96d23035865c8bf1011d73274fe"></span>vector&lt;call_order_object&gt; <code class="descname">get_call_orders</code><span class="sig-paren">(</span>asset_id_type <em>a</em>, uint32_t <em>limit</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api15get_call_ordersE13asset_id_type8uint32_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get call orders in a given asset. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The call orders, ordered from earliest to be called to latest </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">a</span></code> - <p>ID of asset being called </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">limit</span></code> - <p>Maximum number of orders to retrieve </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api17get_settle_ordersE13asset_id_type8uint32_t">
+<span id="graphene::app::database_api::get_settle_orders__asset_id_type.uint32_t"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a79d5cd5685029118f5b1f1d49906bc48"></span>vector&lt;force_settlement_object&gt; <code class="descname">get_settle_orders</code><span class="sig-paren">(</span>asset_id_type <em>a</em>, uint32_t <em>limit</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api17get_settle_ordersE13asset_id_type8uint32_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get forced settlement orders in a given asset. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The settle orders, ordered from earliest settlement date to latest </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">a</span></code> - <p>ID of asset being settled </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">limit</span></code> - <p>Maximum number of orders to retrieve </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api20get_margin_positionsERK15account_id_type">
+<span id="graphene::app::database_api::get_margin_positions__account_id_typeCR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a97398d7415b67accfa59e014ac794db0"></span>vector&lt;call_order_object&gt; <code class="descname">get_margin_positions</code><span class="sig-paren">(</span><em class="property">const</em> account_id_type &amp;<em>id</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api20get_margin_positionsERK15account_id_type" title="Permalink to this definition">¶</a></dt>
+<dd><p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>all open margin positions for a given account id. </dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api19subscribe_to_marketENSt8functionIFvRK7variantEEE13asset_id_type13asset_id_type">
+<span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1aabf9b981bb7a6207751a37320793ef9b"></span>void <code class="descname">subscribe_to_market</code><span class="sig-paren">(</span>std::function&lt;void<span class="sig-paren">(</span><em class="property">const</em> variant&amp;<span class="sig-paren">)</span>&gt; <em>callback</em>, asset_id_type <em>a</em>, asset_id_type <em>b</em>, <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene3app12database_api19subscribe_to_marketENSt8functionIFvRK7variantEEE13asset_id_type13asset_id_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Request notification when the active orders in the market between two assets changes. </p>
+<p>
+Callback will be passed a variant containing a vector&lt;pair&lt;operation, operation_result&gt;&gt;. The vector will contain, in order, the operations which changed the market, and their results. <dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">callback</span></code> - <p>Callback method which is called when the market changes </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">a</span></code> - <p>First asset ID </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">b</span></code> - <p>Second asset ID</p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api23unsubscribe_from_marketE13asset_id_type13asset_id_type">
+<span id="graphene::app::database_api::unsubscribe_from_market__asset_id_type.asset_id_type"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1ad5f8d5fc78a995588d47b7af4e945def"></span>void <code class="descname">unsubscribe_from_market</code><span class="sig-paren">(</span>asset_id_type <em>a</em>, asset_id_type <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene3app12database_api23unsubscribe_from_marketE13asset_id_type13asset_id_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unsubscribe from updates to a given market. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">a</span></code> - <p>First asset ID </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">b</span></code> - <p>Second asset ID </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api13get_witnessesERK6vectorI15witness_id_typeE">
+<span id="graphene::app::database_api::get_witnesses__vector:witness_id_type:CR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a76e3dbaac5fef15d0933ef2223adf4a0"></span>vector&lt;optional&lt;witness_object&gt;&gt; <code class="descname">get_witnesses</code><span class="sig-paren">(</span><em class="property">const</em> vector&lt;witness_id_type&gt; &amp;<em>witness_ids</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api13get_witnessesERK6vectorI15witness_id_typeE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of witnesses by ID. </p>
+<p>
+This function has semantics identical to <a class="reference internal" href="../namespaces/app.html#grapheneclassgraphene_1_1app_1_1database__api_1a9c8289e00f460e8f90d7cb5ebf07bb65"><span>get_objects</span></a> <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The witnesses corresponding to the provided IDs</dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">witness_ids</span></code> - <p>IDs of the witnesses to retrieve </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api22get_witness_by_accountE15account_id_type">
+<span id="graphene::app::database_api::get_witness_by_account__account_id_type"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a8998fc1b23d554b98a58074e63c33f24"></span>fc::optional&lt;witness_object&gt; <code class="descname">get_witness_by_account</code><span class="sig-paren">(</span>account_id_type <em>account</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api22get_witness_by_accountE15account_id_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the witness owned by a given account. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The witness object, or null if the account does not have a witness </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">account</span></code> - <p>The ID of the account whose witness should be retrieved </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api23lookup_witness_accountsERK6string8uint32_t">
+<span id="graphene::app::database_api::lookup_witness_accounts__stringCR.uint32_t"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a525c31ba5375695602476df1ad85a70a"></span>map&lt;string, witness_id_type&gt; <code class="descname">lookup_witness_accounts</code><span class="sig-paren">(</span><em class="property">const</em> string &amp;<em>lower_bound_name</em>, uint32_t <em>limit</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api23lookup_witness_accountsERK6string8uint32_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get names and IDs for registered witnesses. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>Map of witness names to corresponding IDs </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">lower_bound_name</span></code> - <p>Lower bound of the first name to return </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">limit</span></code> - <p>Maximum number of results to return  must not exceed 1000 </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api17get_witness_countEv">
+<span id="graphene::app::database_api::get_witness_count"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a06e31592f1ff825e88cf5b503b947efe"></span>uint64_t <code class="descname">get_witness_count</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api17get_witness_countEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the total number of witnesses registered with the blockchain. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api21get_committee_membersERK6vectorI24committee_member_id_typeE">
+<span id="graphene::app::database_api::get_committee_members__vector:committee_member_id_type:CR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1af4a83f64a29e62857aca6137be82264d"></span>vector&lt;optional&lt;committee_member_object&gt;&gt; <code class="descname">get_committee_members</code><span class="sig-paren">(</span><em class="property">const</em> vector&lt;committee_member_id_type&gt; &amp;<em>committee_member_ids</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api21get_committee_membersERK6vectorI24committee_member_id_typeE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of committee_members by ID. </p>
+<p>
+This function has semantics identical to <a class="reference internal" href="../namespaces/app.html#grapheneclassgraphene_1_1app_1_1database__api_1a9c8289e00f460e8f90d7cb5ebf07bb65"><span>get_objects</span></a> <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The committee_members corresponding to the provided IDs</dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">committee_member_ids</span></code> - <p>IDs of the committee_members to retrieve </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api31get_committee_member_by_accountE15account_id_type">
+<span id="graphene::app::database_api::get_committee_member_by_account__account_id_type"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a3176a26c3d82a0df32b47f95c990bc7f"></span>fc::optional&lt;committee_member_object&gt; <code class="descname">get_committee_member_by_account</code><span class="sig-paren">(</span>account_id_type <em>account</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api31get_committee_member_by_accountE15account_id_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the committee_member owned by a given account. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The committee_member object, or null if the account does not have a committee_member </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">account</span></code> - <p>The ID of the account whose committee_member should be retrieved </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api32lookup_committee_member_accountsERK6string8uint32_t">
+<span id="graphene::app::database_api::lookup_committee_member_accounts__stringCR.uint32_t"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a411ade239b3a2985b0ebb4eb259887df"></span>map&lt;string, committee_member_id_type&gt; <code class="descname">lookup_committee_member_accounts</code><span class="sig-paren">(</span><em class="property">const</em> string &amp;<em>lower_bound_name</em>, uint32_t <em>limit</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api32lookup_committee_member_accountsERK6string8uint32_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get names and IDs for registered committee_members. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>Map of committee_member names to corresponding IDs </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">lower_bound_name</span></code> - <p>Lower bound of the first name to return </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">limit</span></code> - <p>Maximum number of results to return  must not exceed 1000 </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api22get_workers_by_accountE15account_id_type">
+<span id="graphene::app::database_api::get_workers_by_account__account_id_type"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a7d04e83439f46ad8d95abc7ef5066180"></span>vector&lt;worker_object&gt; <code class="descname">get_workers_by_account</code><span class="sig-paren">(</span>account_id_type <em>account</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api22get_workers_by_accountE15account_id_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>WORKERS. </p>
+<p>Return the worker objects associated with this account. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api15lookup_vote_idsERK6vectorI12vote_id_typeE">
+<span id="graphene::app::database_api::lookup_vote_ids__vector:vote_id_type:CR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a41bfbd31cded1d53c6b038e488c042f4"></span>vector&lt;variant&gt; <code class="descname">lookup_vote_ids</code><span class="sig-paren">(</span><em class="property">const</em> vector&lt;vote_id_type&gt; &amp;<em>votes</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api15lookup_vote_idsERK6vectorI12vote_id_typeE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a set of votes, return the objects they are voting for. </p>
+<p>This will be a mixture of committee_member_object, witness_objects, and worker_objects</p>
+<p>The results will be in the same order as the votes. Null will be returned for any vote ids that are not found. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api19get_transaction_hexERK18signed_transaction">
+<span id="graphene::app::database_api::get_transaction_hex__signed_transactionCR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1abbfcf1fc1110f1ce3387bedffa07649e"></span>std::string <code class="descname">get_transaction_hex</code><span class="sig-paren">(</span><em class="property">const</em> signed_transaction &amp;<em>trx</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api19get_transaction_hexERK18signed_transaction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a hexdump of the serialized binary form of a transaction. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api23get_required_signaturesERK18signed_transactionRK8flat_setI15public_key_typeE">
+<span id="graphene::app::database_api::get_required_signatures__signed_transactionCR.flat_set:public_key_type:CR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a38363e647a3c859f7647478807e451a2"></span>set&lt;public_key_type&gt; <code class="descname">get_required_signatures</code><span class="sig-paren">(</span><em class="property">const</em> signed_transaction &amp;<em>trx</em>, <em class="property">const</em> flat_set&lt;public_key_type&gt; &amp;<em>available_keys</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api23get_required_signaturesERK18signed_transactionRK8flat_setI15public_key_typeE" title="Permalink to this definition">¶</a></dt>
+<dd><p>This API will take a partially signed transaction and a set of public keys that the owner has the ability to sign for and return the minimal subset of public keys that should add signatures to the transaction. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api24get_potential_signaturesERK18signed_transaction">
+<span id="graphene::app::database_api::get_potential_signatures__signed_transactionCR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1ad89f67e1257bfb6602acc4ddb3b5eb5b"></span>set&lt;public_key_type&gt; <code class="descname">get_potential_signatures</code><span class="sig-paren">(</span><em class="property">const</em> signed_transaction &amp;<em>trx</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api24get_potential_signaturesERK18signed_transaction" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method will return the set of all public keys that could possibly sign for a given transaction. This call can be used by wallets to filter their set of public keys to just the relevant subset prior to calling <a class="reference internal" href="../namespaces/app.html#grapheneclassgraphene_1_1app_1_1database__api_1a38363e647a3c859f7647478807e451a2"><span>get_required_signatures</span></a> to get the minimum subset. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api16verify_authorityERK18signed_transaction">
+<span id="graphene::app::database_api::verify_authority__signed_transactionCR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a2770c900fd1f2d74f7f24caebf69ca2f"></span>bool <code class="descname">verify_authority</code><span class="sig-paren">(</span><em class="property">const</em> signed_transaction &amp;<em>trx</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api16verify_authorityERK18signed_transaction" title="Permalink to this definition">¶</a></dt>
+<dd><p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>true of the trx has all of the required signatures, otherwise throws an exception </dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api24verify_account_authorityERK6stringRK8flat_setI15public_key_typeE">
+<span id="graphene::app::database_api::verify_account_authority__stringCR.flat_set:public_key_type:CR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1ab0600bea5a8fd1688af31b1a11f137d8"></span>bool <code class="descname">verify_account_authority</code><span class="sig-paren">(</span><em class="property">const</em> string &amp;<em>name_or_id</em>, <em class="property">const</em> flat_set&lt;public_key_type&gt; &amp;<em>signers</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api24verify_account_authorityERK6stringRK8flat_setI15public_key_typeE" title="Permalink to this definition">¶</a></dt>
+<dd><p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>true if the signers have enough authority to authorize an account </dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api20validate_transactionERK18signed_transaction">
+<span id="graphene::app::database_api::validate_transaction__signed_transactionCR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a37bcdb5f045280879aed6feb8690b008"></span>processed_transaction <code class="descname">validate_transaction</code><span class="sig-paren">(</span><em class="property">const</em> signed_transaction &amp;<em>trx</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api20validate_transactionERK18signed_transaction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validates a transaction against the current state without broadcasting it on the network. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api17get_required_feesERK6vectorI9operationE13asset_id_type">
+<span id="graphene::app::database_api::get_required_fees__vector:operation:CR.asset_id_type"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1aad843d0bf167aa4b26558b45d80fe2c0"></span>vector&lt;asset&gt; <code class="descname">get_required_fees</code><span class="sig-paren">(</span><em class="property">const</em> vector&lt;operation&gt; &amp;<em>ops</em>, asset_id_type <em>id</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api17get_required_feesERK6vectorI9operationE13asset_id_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>For each operation calculate the required fee in the specified asset type. If the asset type does not have a valid core_exchange_rate </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api25get_proposed_transactionsE15account_id_type">
+<span id="graphene::app::database_api::get_proposed_transactions__account_id_type"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a3ae593726e41668ce3415fcc3abfe822"></span>vector&lt;proposal_object&gt; <code class="descname">get_proposed_transactions</code><span class="sig-paren">(</span>account_id_type <em>id</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api25get_proposed_transactionsE15account_id_type" title="Permalink to this definition">¶</a></dt>
+<dd><p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>the set of proposed transactions relevant to the specified account id. </dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api20get_blinded_balancesERK8flat_setI15commitment_typeE">
+<span id="graphene::app::database_api::get_blinded_balances__flat_set:commitment_type:CR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a5688ac07f50dbae85b6c6925e619c5cf"></span>vector&lt;blinded_balance_object&gt; <code class="descname">get_blinded_balances</code><span class="sig-paren">(</span><em class="property">const</em> flat_set&lt;commitment_type&gt; &amp;<em>commitments</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api20get_blinded_balancesERK8flat_setI15commitment_typeE" title="Permalink to this definition">¶</a></dt>
+<dd><p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>the set of blinded balance objects by commitment ID </dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+  </div>
+ </div>
+
+ <script>var HN=[];HN.factory=function(e){return function(){HN.push([e].concat(Array.prototype.slice.call(arguments,0)))};},HN.on=HN.factory("on"),HN.once=HN.factory("once"),HN.off=HN.factory("off"),HN.emit=HN.factory("emit"),HN.load=function(){var e="hn-button.js";if(document.getElementById(e))return;var t=document.createElement("script");t.id=e,t.src="//hn-button.herokuapp.com/hn-button.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)},HN.load();</script>
+ </body>
+</html>

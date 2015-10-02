@@ -1,0 +1,140 @@
+
+
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Exporting Your Wallet</title>
+
+    <!-- CSS -->
+    <link  href='../_static/main.css' rel='stylesheet'>
+    <link  href='../_static/style.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+    <!-- Sphinx search -->
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script src='../_static/script.js'></script>
+
+    <!-- title card -->
+    <link  href='../_static/title-card.css' rel='stylesheet'>
+    <script src='../_static/title-card.js'></script>
+    
+    <!-- Sphinx search -->
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Graphene/BitShares 2.0 Technical Documentation  documentation"
+          href="../_static/opensearch.xml"/>
+
+    <!-- Meta -->
+    <meta content="Graphene Documentation" property="og:site_name">
+    <meta content="Graphene Documentation" property="og:title">
+    <meta content="website" property="og:type">
+    <meta content="Graphene Documentation" name="description">
+    <meta content="Graphene Documentation" property="og:description">
+ </head>
+ <body class='no-literate'>
+
+ <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
+   <div class='in'>
+     <div class='headline'>
+       <h1>Graphene/BitShares 2.0 Technical Documentation</h1>
+       <p>Exporting Your Wallet</p>
+       <p style="margin-top: 3em;"><img src="../_static/learn.svg" width="124" /><p>
+     </div>
+   </div>
+ </div>
+
+ <div class='header'>
+   <div class='left'>
+    
+        «&#160;&#160;<a href="blockchain-transition.html">Blockchain Upgrade</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="howto-importing-wallet.html">Importing Your Wallet</a>&#160;&#160;»
+
+   </div>
+ </div>
+
+ <div class='content-root'>
+  <!-- menu bar -->
+  <div class='menubar'>
+   <div class='section'>
+    <img src="../_static/grphn-logo.svg" width="48" />
+       <!--<a class='big button' href='#' target='_blank'>Download</a>-->
+   </div>
+   <div class='menu section'>
+    <div id="toc">
+      <h3>Table Of Contents</h3>
+      <ul>
+<li><a class="reference internal" href="#">Exporting Your Wallet</a></li>
+</ul>
+
+    </div>
+   </div>
+   <div class='bottom section'>
+   <!--
+     <a href='https://github.com/cryptonomex/graphene'>View on GitHub</a><br>
+     <a href='https://github.com/cryptonomex/graphene/blob/master/README.md' target='_blank'>See .md source</a>
+   -->
+   </div>
+  </div>
+  <div class='content'>
+   
+  <div class="section" id="exporting-your-wallet">
+<h1>Exporting Your Wallet<a class="headerlink" href="#exporting-your-wallet" title="Permalink to this headline">¶</a></h1>
+<p>We offer several options to export your account names and funds from BitShares 1.0:</p>
+<ul class="simple">
+<li><strong>Menu Bar Item</strong> (recommended):
+Since BitShares 0.9.3c, we have a Graphene compatible <em>Export Wallet</em>
+function that can be selected from the menu bar ands allows to easily
+export your current wallet.
+.. note:: Version 0.9.3**c** is required for this step. Otherewise the backup will have the old, incompatible format!</li>
+</ul>
+<a class="reference internal image-reference" href="../_images/export-menu-bar.png"><img alt="Export compatible keys from Menu bar" class="align-center" src="../_images/export-menu-bar.png" style="width: 550px;" /></a>
+<ul class="simple">
+<li><strong>Exporting Brainkey</strong> (wallet.bitshares.org only) The keys of the <a class="reference external" href="http://wallet.bitshares.org">web
+wallet</a> can be exported simply by copying the brainkey provided as backup
+option. It can be obtained from the web wallet&#8217;s preferences:
+(<cite>Account List-&gt;Advanced Settings-&gt;Wallet-&gt;Recovery Key</cite>)</li>
+</ul>
+<a class="reference internal image-reference" href="../_images/export-brainkey.png"><img alt="Export Brainkey" class="align-center" src="../_images/export-brainkey.png" style="width: 550px;" /></a>
+<ul>
+<li><p class="first"><strong>Manual Exporting</strong>:
+Use the Console in you BitShares 1.0 client
+(<cite>BitShares 1.0: Account List -&gt; Advanced Settings -&gt; Console</cite>) and type::</p>
+<div class="highlight-python"><div class="highlight"><pre>wallet_export_keys C:\WalletForImport.json
+</pre></div>
+</div>
+<p>The file <cite>WalletForImport.json</cite> will be created, which may, depending on
+the size of your wallet, take some time. Note, that the wallet will reply
+with <cite>OK</cite> even though the exporting has not yet been completed.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Version 0.9.3**c** is required for this step. Otherewise the backup will have the old, incompatible format!</p>
+</div>
+</li>
+</ul>
+</div>
+
+
+  </div>
+ </div>
+
+ <script>var HN=[];HN.factory=function(e){return function(){HN.push([e].concat(Array.prototype.slice.call(arguments,0)))};},HN.on=HN.factory("on"),HN.once=HN.factory("once"),HN.off=HN.factory("off"),HN.emit=HN.factory("emit"),HN.load=function(){var e="hn-button.js";if(document.getElementById(e))return;var t=document.createElement("script");t.id=e,t.src="//hn-button.herokuapp.com/hn-button.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)},HN.load();</script>
+ </body>
+</html>

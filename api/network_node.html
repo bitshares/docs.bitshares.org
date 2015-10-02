@@ -1,0 +1,138 @@
+
+
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Network Nodes API</title>
+
+    <!-- CSS -->
+    <link  href='../_static/main.css' rel='stylesheet'>
+    <link  href='../_static/style.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+    <!-- Sphinx search -->
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script src='../_static/script.js'></script>
+
+    <!-- title card -->
+    <link  href='../_static/title-card.css' rel='stylesheet'>
+    <script src='../_static/title-card.js'></script>
+    
+    <!-- Sphinx search -->
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Graphene/BitShares 2.0 Technical Documentation  documentation"
+          href="../_static/opensearch.xml"/>
+
+    <!-- Meta -->
+    <meta content="Graphene Documentation" property="og:site_name">
+    <meta content="Graphene Documentation" property="og:title">
+    <meta content="website" property="og:type">
+    <meta content="Graphene Documentation" name="description">
+    <meta content="Graphene Documentation" property="og:description">
+ </head>
+ <body class='no-literate'>
+
+ <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
+   <div class='in'>
+     <div class='headline'>
+       <h1>Graphene/BitShares 2.0 Technical Documentation</h1>
+       <p>Network Nodes API</p>
+       <p style="margin-top: 3em;"><img src="../_static/learn.svg" width="124" /><p>
+     </div>
+   </div>
+ </div>
+
+ <div class='header'>
+   <div class='left'>
+    
+        «&#160;&#160;<a href="network_broadcast.html">Network Broadcast API</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="../namespaces/chain.html">Graphene::Chain</a>&#160;&#160;»
+
+   </div>
+ </div>
+
+ <div class='content-root'>
+  <!-- menu bar -->
+  <div class='menubar'>
+   <div class='section'>
+    <img src="../_static/grphn-logo.svg" width="48" />
+       <!--<a class='big button' href='#' target='_blank'>Download</a>-->
+   </div>
+   <div class='menu section'>
+    <div id="toc">
+      <h3>Table Of Contents</h3>
+      <ul>
+<li><a class="reference internal" href="#">Network Nodes API</a></li>
+</ul>
+
+    </div>
+   </div>
+   <div class='bottom section'>
+   <!--
+     <a href='https://github.com/cryptonomex/graphene'>View on GitHub</a><br>
+     <a href='https://github.com/cryptonomex/graphene/blob/master/README.md' target='_blank'>See .md source</a>
+   -->
+   </div>
+  </div>
+  <div class='content'>
+   
+  <div class="section" id="network-nodes-api">
+<h1>Network Nodes API<a class="headerlink" href="#network-nodes-api" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="_CPPv2N8graphene3app16network_node_apiE">
+<span id="graphene::app::network_node_api"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1network__node__api"></span><em class="property">class </em><code class="descclassname">graphene::app::</code><code class="descname">network_node_api</code><a class="headerlink" href="#_CPPv2N8graphene3app16network_node_apiE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference internal" href="../namespaces/app.html#grapheneclassgraphene_1_1app_1_1network__node__api"><span>network_node_api</span></a> class allows maintenance of p2p connections. </p>
+<div class="breathe-sectiondef container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N8graphene3app16network_node_api8add_nodeERKN2fc2ip8endpointE">
+<span id="graphene::app::network_node_api::add_node__fc::ip::endpointCR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1network__node__api_1acb792c2b97e1775236b5001a94ddbaa0"></span>void <code class="descname">add_node</code><span class="sig-paren">(</span><em class="property">const</em> fc::ip::endpoint &amp;<em>ep</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene3app16network_node_api8add_nodeERKN2fc2ip8endpointE" title="Permalink to this definition">¶</a></dt>
+<dd><p>add_node Connect to a new peer </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">ep</span></code> - <p>The IP/Port of the peer to connect to </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app16network_node_api19get_connected_peersEv">
+<span id="graphene::app::network_node_api::get_connected_peers"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1network__node__api_1a3441fb8762c1b26a89af97838cee7aca"></span>std::vector&lt;net::peer_status&gt; <code class="descname">get_connected_peers</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app16network_node_api19get_connected_peersEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get status of all current connections to peers. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+  </div>
+ </div>
+
+ <script>var HN=[];HN.factory=function(e){return function(){HN.push([e].concat(Array.prototype.slice.call(arguments,0)))};},HN.on=HN.factory("on"),HN.once=HN.factory("once"),HN.off=HN.factory("off"),HN.emit=HN.factory("emit"),HN.load=function(){var e="hn-button.js";if(document.getElementById(e))return;var t=document.createElement("script");t.id=e,t.src="//hn-button.herokuapp.com/hn-button.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)},HN.load();</script>
+ </body>
+</html>

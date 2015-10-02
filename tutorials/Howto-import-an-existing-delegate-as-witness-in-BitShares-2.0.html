@@ -1,0 +1,160 @@
+
+
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>&lt;no title&gt;</title>
+
+    <!-- CSS -->
+    <link  href='../_static/main.css' rel='stylesheet'>
+    <link  href='../_static/style.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+    <!-- Sphinx search -->
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script src='../_static/script.js'></script>
+
+    <!-- title card -->
+    <link  href='../_static/title-card.css' rel='stylesheet'>
+    <script src='../_static/title-card.js'></script>
+    
+    <!-- Sphinx search -->
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Graphene/BitShares 2.0 Technical Documentation  documentation"
+          href="../_static/opensearch.xml"/>
+
+    <!-- Meta -->
+    <meta content="Graphene Documentation" property="og:site_name">
+    <meta content="Graphene Documentation" property="og:title">
+    <meta content="website" property="og:type">
+    <meta content="Graphene Documentation" name="description">
+    <meta content="Graphene Documentation" property="og:description">
+ </head>
+ <body class='no-literate'>
+
+ <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
+   <div class='in'>
+     <div class='headline'>
+       <h1>Graphene/BitShares 2.0 Technical Documentation</h1>
+       <p>&lt;no title&gt;</p>
+       <p style="margin-top: 3em;"><img src="../_static/learn.svg" width="124" /><p>
+     </div>
+   </div>
+ </div>
+
+ <div class='header'>
+   <div class='left'>
+    
+        <a class="uplink" href="../index.html">Contents</a>
+
+   </div>
+ </div>
+
+ <div class='content-root'>
+  <!-- menu bar -->
+  <div class='menubar'>
+   <div class='section'>
+    <img src="../_static/grphn-logo.svg" width="48" />
+       <!--<a class='big button' href='#' target='_blank'>Download</a>-->
+   </div>
+   <div class='menu section'>
+    <div id="toc">
+      <h3>Table Of Contents</h3>
+      <ul class="simple">
+</ul>
+
+    </div>
+   </div>
+   <div class='bottom section'>
+   <!--
+     <a href='https://github.com/cryptonomex/graphene'>View on GitHub</a><br>
+     <a href='https://github.com/cryptonomex/graphene/blob/master/README.md' target='_blank'>See .md source</a>
+   -->
+   </div>
+  </div>
+  <div class='content'>
+   
+  <p>## Preparations in BitShares 0.9 network</p>
+<p>We need to Extract the signing public and private key from BitShares 0.9.</p>
+<p>Let&#8217;s obtain the <cite>&lt;publickey&gt;</cite>::</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">get_account</span> <span class="o">&lt;</span><span class="n">delegatename</span><span class="o">&gt;</span>
+<span class="go">[...]</span>
+<span class="go">Block Signing Key: &lt;publickey&gt;</span>
+<span class="go">[...]</span>
+</pre></div>
+</div>
+<p><strong>Remark</strong>: Public keys in the BitShares network have the prefix <cite>BTS</cite>. Hence, in the case of the Graphene testnet you should replace <cite>BTS</cite> by <cite>GPH</cite>.</p>
+<p>and the corresponding <cite>&lt;wifkey&gt;</cite>::</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">wallet_dump_account_private_key</span> <span class="o">&lt;</span><span class="n">delegatename</span><span class="o">&gt;</span> <span class="n">signing_key</span>
+<span class="go">&quot;&lt;wifkey&gt;&quot;</span>
+</pre></div>
+</div>
+<p>## BitShares 2.0 network (or Graphene testnet)</p>
+<p>### Download the genesis block (only for testnet)</p>
+<p>For the testnet we need to download the proper genesis block. Eventually, the
+genesis block will be part of the client so that this step will not be required
+for the real network later. The genesis block can be downloaded (<a class="reference external" href="https://drive.google.com/open?id=0B_GVo0GoC_v_S3lPOWlUbFJFWTQ">here</a>).</p>
+<p>### Run the witness as a node in the network
+We first run the witness node without block production and connect it to the P2P
+network with the following command::</p>
+<div class="highlight-python"><div class="highlight"><pre>$ programs/witness_node/witness_node -s 104.200.28.117:61705 --rpc-endpoint 127.0.0.1:8090 --genesis-json aug-14-test-genesis.json
+</pre></div>
+</div>
+<p>The address <cite>104.200.28.117</cite> is one of the public seed nodes.</p>
+<p>### Retreiving witness_id
+We now open up the <cite>cli_wallet</cite> and connect to our plain and stupid witness node::</p>
+<div class="highlight-python"><div class="highlight"><pre>$ programs/cli_wallet/cli_wallet -s ws://127.0.0.1:8090
+</pre></div>
+</div>
+<p>The witness_id can be obtain from the blockchain::</p>
+<div class="highlight-python"><div class="highlight"><pre>locked &gt;&gt;&gt; get_witness &lt;delegatename&gt;
+</pre></div>
+</div>
+<p>where <cite>&lt;delegatename</cite> is the name of the account used as delegate in
+BitShares0.9. This delegate is a &#8220;witness&#8221; in BitShares 2.0.</p>
+<p>### Running a block producing witness</p>
+<p>Now we need to start the witness, so shut down the wallet (ctrl-d),  and shut
+down the witness (ctrl-c).  Re-launch the witness, now mentioning the new
+witness 1.6.10 and its keypair::</p>
+<div class="highlight-python"><div class="highlight"><pre>./witness_node --rpc-endpoint=127.0.0.1:8090 \
+               --witness-id &#39;&quot;&lt;witnessid&gt;&quot;&#39; \
+               --private-key &#39;[&quot;&lt;publickey&gt;&quot;, &quot;&lt;wifkey&gt;&quot;]&#39; \
+               --genesis-json aug-14-test-genesis.json \
+               -s 104.200.28.117:61705
+</pre></div>
+</div>
+<p>Alternatively, you can also add this line into yout config.ini::</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">witness</span><span class="o">-</span><span class="nb">id</span> <span class="o">=</span> <span class="s">&quot;&lt;witnessid&gt;&quot;</span>
+<span class="n">private</span><span class="o">-</span><span class="n">key</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;&lt;publickey&gt;&quot;</span><span class="p">,</span> <span class="s">&quot;&lt;wifkey&gt;&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>If you monitor the output of the <cite>witness_node</cite>, you should see it generate
+blocks signed by your witness::</p>
+<div class="highlight-python"><div class="highlight"><pre>Witness 1.6.10 production slot has arrived; generating a block now...
+Generated block #367 with timestamp 2015-07-05T20:46:30 at time 2015-07-05T20:46:30
+</pre></div>
+</div>
+
+
+  </div>
+ </div>
+
+ <script>var HN=[];HN.factory=function(e){return function(){HN.push([e].concat(Array.prototype.slice.call(arguments,0)))};},HN.on=HN.factory("on"),HN.once=HN.factory("once"),HN.off=HN.factory("off"),HN.emit=HN.factory("emit"),HN.load=function(){var e="hn-button.js";if(document.getElementById(e))return;var t=document.createElement("script");t.id=e,t.src="//hn-button.herokuapp.com/hn-button.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)},HN.load();</script>
+ </body>
+</html>

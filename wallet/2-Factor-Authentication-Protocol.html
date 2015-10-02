@@ -1,0 +1,119 @@
+
+
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>&lt;no title&gt;</title>
+
+    <!-- CSS -->
+    <link  href='../_static/main.css' rel='stylesheet'>
+    <link  href='../_static/style.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+    <!-- Sphinx search -->
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script src='../_static/script.js'></script>
+
+    <!-- title card -->
+    <link  href='../_static/title-card.css' rel='stylesheet'>
+    <script src='../_static/title-card.js'></script>
+    
+    <!-- Sphinx search -->
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Graphene/BitShares 2.0 Technical Documentation  documentation"
+          href="../_static/opensearch.xml"/>
+
+    <!-- Meta -->
+    <meta content="Graphene Documentation" property="og:site_name">
+    <meta content="Graphene Documentation" property="og:title">
+    <meta content="website" property="og:type">
+    <meta content="Graphene Documentation" name="description">
+    <meta content="Graphene Documentation" property="og:description">
+ </head>
+ <body class='no-literate'>
+
+ <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
+   <div class='in'>
+     <div class='headline'>
+       <h1>Graphene/BitShares 2.0 Technical Documentation</h1>
+       <p>&lt;no title&gt;</p>
+       <p style="margin-top: 3em;"><img src="../_static/learn.svg" width="124" /><p>
+     </div>
+   </div>
+ </div>
+
+ <div class='header'>
+   <div class='left'>
+    
+        <a class="uplink" href="../index.html">Contents</a>
+
+   </div>
+ </div>
+
+ <div class='content-root'>
+  <!-- menu bar -->
+  <div class='menubar'>
+   <div class='section'>
+    <img src="../_static/grphn-logo.svg" width="48" />
+       <!--<a class='big button' href='#' target='_blank'>Download</a>-->
+   </div>
+   <div class='menu section'>
+    <div id="toc">
+      <h3>Table Of Contents</h3>
+      <ul class="simple">
+</ul>
+
+    </div>
+   </div>
+   <div class='bottom section'>
+   <!--
+     <a href='https://github.com/cryptonomex/graphene'>View on GitHub</a><br>
+     <a href='https://github.com/cryptonomex/graphene/blob/master/README.md' target='_blank'>See .md source</a>
+   -->
+   </div>
+  </div>
+  <div class='content'>
+   
+  <p>## Two Factor Authentication Protocol</p>
+<p>Two factor authentication is critical for maximizing security and ease of use.  In the case of cryptocurrencies two-factor authentication means gathering multiple signatures on a transaction to authorize a transfer.  The process of gathering these signatures requires passing around a transaction digest to multiple parties who will automatically provide their signature after verifying your identity by some means.</p>
+<p>The purpose of this protocol is to define a standard way for 3rd parties to provide automatic 2-factor authentication services with any standard Graphene wallet.  Users of a Graphene wallet can easily add any number of 2-factor authentication (2FA) providers to their account and the Graphene wallet will use this protocol to gather the required signatures for the transaction.</p>
+<p>### User Accounts</p>
+<p>A user wishing to add one or more 2FA providers to their account will need to update their account permissions to require the authority of one key from the user <em>AND</em> the authority of a second account controlled by the 2FA provider.   The purpose of this protocol is to help automate the gathering of any additional signatures in a standardized manner.</p>
+<p>### 2FA Providers</p>
+<p>For the purpose of this document <cite>https://secondfactor.org</cite> will be the example service provider and <cite>alice</cite> will be the account name of the user seeking services from secondfactor.org.</p>
+<p>## Step 1 - User Registration</p>
+<p>The first thing a user must do is identify themselves with <cite>secondfactor.org</cite> by some means.  This may be as simple as verifying an email address, registering a phone number, or ordering a keyfob.</p>
+<p>## Step 2 - Create Graphene Account for secondfactor.org</p>
+<p>A Graphene account is how <cite>secondfactor.org</cite> authenticates itself with a Graphene blockchain. We will assume <cite>secondfactor.org</cite> has registered the Graphene account name <cite>sfactor</cite>.</p>
+<p>## Step 3 - Create a Dedicated Graphene Account for the alice/sfactor Combination</p>
+<p>When <cite>alice</cite> approaches <cite>sfactor</cite> and signs up for 2FA she needs to add a second signer on the account <cite>alice</cite>.   The goal is for <cite>sfactor</cite> to sign anything at the request of <cite>alice</cite> but to do this without compromising the <cite>sfactor</cite>.  To do this a new account must be registered on the blockchain that is effectively controlled by <cite>alice</cite> via <cite>sfactor</cite>.  We will call this new account <cite>sfactor.alice</cite>.   <cite>sfactor.alice</cite> will be configured so that it&#8217;s owner authority is <cite>sfactor</cite>, but it&#8217;s active authority is a unique public key assigned to the account by <cite>sfactor</cite>.    At any time <cite>sfactor</cite> may update the active authority of <cite>sfactor.alice</cite> using the owner permissions.</p>
+<p>## Step 4 - Add sfactor.alice as a required authority for alice</p>
+<p>Alice will have to update the active permissions of account <cite>alice</cite> to require both her key and the permission of <cite>alice.sfactor</cite> to approve any action on the part of <cite>alice</cite>.    She can either do this manually <em>or</em> <a class="reference external" href="https://secondfactor.org">https://secondfactor.org</a> can use the [Transaction Request Protocol](Transaction Request Protocol) to automatically ask <cite>alice</cite> to approve the change to her account.</p>
+<p>## Step 5 - Alice Requests an Action requiring 2FA</p>
+<p>After the <cite>alice</cite> account has been updated it will now require permission from <cite>alice.sfactor</cite> to authorize any action.
+The most basic 2-factor API assumes the provider.</p>
+<p>Creates an account with <cite>secondfactor.org</cite></p>
+
+
+  </div>
+ </div>
+
+ <script>var HN=[];HN.factory=function(e){return function(){HN.push([e].concat(Array.prototype.slice.call(arguments,0)))};},HN.on=HN.factory("on"),HN.once=HN.factory("once"),HN.off=HN.factory("off"),HN.emit=HN.factory("emit"),HN.load=function(){var e="hn-button.js";if(document.getElementById(e))return;var t=document.createElement("script");t.id=e,t.src="//hn-button.herokuapp.com/hn-button.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)},HN.load();</script>
+ </body>
+</html>
