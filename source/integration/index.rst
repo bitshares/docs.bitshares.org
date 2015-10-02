@@ -12,14 +12,9 @@ profiting from
 * its network effect, and
 * its existing ecosystem.
 
-We here illustrate the steps necessary to securely operate as a
+We here illustrate the steps necessary to securely operate as a merchant,
+exchange, or fiat-gateway.
 
-* merchant,
-* exchange, or
-* fiat-gateway.
-
-Outline
-#######
 .. toctree::
 
    Overview

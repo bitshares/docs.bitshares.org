@@ -10,7 +10,7 @@ We offer several options to export your account names and funds from BitShares 1
   export your current wallet. 
   .. note:: Version 0.9.3**c** is required for this step. Otherewise the backup will have the old, incompatible format!
 
-.. image:: ../_static/export-menu-bar.png
+.. image:: ../static/export-menu-bar.png
         :alt: Export compatible keys from Menu bar
         :width: 550px
         :align: center
@@ -20,7 +20,7 @@ We offer several options to export your account names and funds from BitShares 1
   option. It can be obtained from the web wallet's preferences: 
   (`Account List->Advanced Settings->Wallet->Recovery Key`) 
 
-.. image:: ../_static/export-brainkey.png
+.. image:: ../static/export-brainkey.png
         :alt: Export Brainkey
         :width: 550px
         :align: center
