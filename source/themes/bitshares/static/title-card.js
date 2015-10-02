@@ -1,21 +1,24 @@
 (function($) {
+  var $window = $(window);
+  var $document = $(document);
+  $(function() {
+    var $card = $('.title-card');
+    if (!$card.length) return;
 
-  $("#misc, #basic").remove();
+    var $header = $('.header');
+    var headerHeight = $header.length ? $header.outerHeight() : 0;
 
-  $("pre > code").each(function() {
-    var $code = $(this);
-    var m = $code.text().match(/<body class='([^']*)'/);
-    if (m) {
-      var $q = $("<blockquote><a href='#"+m[1]+"' class='button light'>Toggle</a></blockquote>");
-      $q.find('a').click(function() {
-	var klass = $(this).attr('href').substr(1);
-	$('body').toggleClass(klass);
-	if (klass === 'big-h3') $.anchorjump('#theme-options');
-	if (klass === 'large-brief') $.anchorjump('#flatdoc');
+    $window
+      .on('resize.title-card', function() {
+        var windowWidth = $window.width();
 
-      });
-      $code.after($q);
-    }
+        if (windowWidth < 480) {
+          $card.css('height', '');
+        } else {
+          var height = $window.height();
+          $card.css('height', height - headerHeight);
+        }
+      })
+      .trigger('resize.title-card');
   });
-
 })(jQuery);

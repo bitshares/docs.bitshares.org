@@ -49,7 +49,10 @@
 
     <!-- title card -->
     <link  href='{{ pathto( '_static/title-card.css',1 )}}' rel='stylesheet'>
+
+    {%- if url_root == './' %}
     <script src='{{ pathto( '_static/title-card.js',1 )}}'></script>
+    {% endif %}
     
     <!-- Sphinx search -->
     <link rel="search" type="application/opensearchdescription+xml"
@@ -77,12 +80,17 @@
  </head>
  <body class='no-literate'>
 
+
  <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
    <div class='in'>
      <div class='headline'>
+ {%- if url_root == './' %}
        <h1>{{ project }}</h1>
        <p>{{ title|striptags|e }}</p>
        <p style="margin-top: 3em;"><img src="{{ pathto( '_static/learn.svg', 1 )}}" width="124" /><p>
+ {% else %}
+       <h1>{{ title|striptags|e }}</h1>
+ {% endif %}
      </div>
    </div>
  </div>
