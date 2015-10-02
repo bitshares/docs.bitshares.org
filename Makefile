@@ -200,15 +200,8 @@ deploy: html
 	            --exclude ".nojekyll" \
 	            --exclude ".gitignore" \
 	         build/html/ .
+	@git add .
 	@git commit -am "deploy"
 	@git push origin gh-pages
-	@echo "Deploy finished"
-
-
-deploy: html
-	@echo
-	@git checkout gh-pages
-	@rsync --delete-after --exclude "CNAME" --exclude ".git" --exclude ".gitignore" build/html/ .
-	@git commit -am "deploy"
-	@git push origin gh-pages
-	@echo "Deploy finished"
+	@git checkout master
+	@echo "Deploy finished. Back at 'master'."
