@@ -194,7 +194,12 @@ pseudoxml:
 deploy: html
 	@echo
 	@git checkout gh-pages
-	@rsync -avP --delete-after --exclude "CNAME" --exclude ".git" --exclude ".gitignore" build/html/ .
+	@rsync -avP --delete-after\
+	            --exclude "CNAME" \
+	            --exclude ".git" \
+	            --exclude ".nojekyll" \
+	            --exclude ".gitignore" \
+	         build/html/ .
 	@git commit -am "deploy"
 	@git push origin gh-pages
 	@echo "Deploy finished"
