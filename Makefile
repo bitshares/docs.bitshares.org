@@ -197,3 +197,12 @@ deploy:
 	@echo
 	@rsync -avP build/html/ org:/srv/http/xeroc.org/tmp.xeroc.org/htdocs/.bts/docs
 	@echo "Deploy finished"
+
+
+deploy: html
+	@echo
+	@git checkout gh-pages
+	@rsync --delete-after --exclude "CNAME" --exclude ".git" --exclude ".gitignore" build/html/ .
+	@git commit -am "deploy"
+	@git push origin gh-pages
+	@echo "Deploy finished"
