@@ -1,5 +1,9 @@
-Upgrading from Sources
-======================
+**********************
+Upgrading
+**********************
+
+Recompiling from Sources
+########################
 
 For upgrading from source you only need to execute:::
 

@@ -1,11 +1,12 @@
+**************
 Python Example
-==============
+**************
 
 This python library assists interfacing with a graphene-based network such as
 BitShares 2.0.
 
 Installation
-------------
+############
 
 A graphene Python library can be installed by issuing:::
 
@@ -18,7 +19,7 @@ As you can see, this library requires Python3 and will **not** work properly
 with Python2.
 
 Configuration
--------------
+#############
 
 To make use of this library, we can instruct any full-node to send
 notifications for all incoming transactions for any account. Let's discuss the
@@ -54,7 +55,7 @@ in the cli wallet. The corresponding private key can be obtain from:::
 Note that the latter command exposes all private keys in clear-text wif.
 
 Running
--------
+#######
 
 The monitoring script can be executed via::
 

@@ -1,12 +1,13 @@
+**********************
 Remote Procedure Calls
-======================
+**********************
 
 We here assume that you have a full/cli wallet running at ``127.0.0.1:8090``.
 Please note that the set of available commands depends on application you
 connect to.
 
 Unrestricted Calls
-------------------
+##################
 
 Since API 0 is state-less it is accessible via regular JSON-RPC calls like:::
 
@@ -23,7 +24,7 @@ not require login or other session state:::
           and will only execute of the wallet is unlocked.
 
 Restricted Calls
-----------------
+################
 
 Calls that are restricted by default (``network_node_api``) or have been
 restricted by configuration are not accessible via RPC because a statefull

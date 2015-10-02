@@ -1,5 +1,6 @@
+***************************************
 Secure Network and Client Configuration
-=======================================
+***************************************
 
 Similar to other crypto currencies, it is recommended to wait for several
 confirmations of a transcation. Even though the consensus scheme of Graphene is
@@ -18,7 +19,7 @@ network that works as a proxy. The `delay-block-count` gives the number of
 blocks that the delayed full node will be behind the real blockchain.
 
 Overview of the Setup
----------------------
+#####################
 
 In the following, we will setup and use the following network:::
 
@@ -57,7 +58,7 @@ the following IPs:
 Let's go into more detail how to set these up.
 
 Trusted Full Node
------------------
+#################
 
 For the trusted full node, the default settings can be used.  For later, we
 will need to open the RPC port and listen to an IP address to connect the
@@ -69,7 +70,7 @@ delayed full node to.::
           block-signing private key is provided.
 
 Delayed Full Node
------------------
+#################
 
 The delayed full node will need the IP address and port of the p2p-endpoint
 from the trusted full node and the number of blocks that should be delayed.  We

@@ -1,5 +1,6 @@
+***************
 Objects and IDs
-===============
+***************
 
 In contrast to most cryptocurrency wallets, the BitShares 2.0 has a different
 model to represent the blockchain, its transactions and accounts. This chapter
@@ -10,7 +11,7 @@ deposits). Afterwards, we will show how exchange may monitor their accounts and
 credit incoming funds to their corresponding users.
 
 Objects
--------
+#######
 
 On the BitShares blockchains there are no addresses, but objects identified by a
 unique *id*, an *type* and a *space* in the form:::
@@ -29,7 +30,7 @@ Some examples:::
 A programmatic description of all fields can be found below.
 
 Accounts
---------
+########
 
 The BitShares blockchain users are requires to register each account with a
 unique username and a public key on the blockchain. The blockchain assigns an
@@ -43,14 +44,14 @@ incremental user *id* and offers to resolve the name-to-id pair. For instance
     2.9.80    # implementation space / block-summary / id: 80
 
 Object Types: 1.*.*
---------------------
+####################
 
 First entry in the enumeration becomes `1.0.*`, second becomes `1.1.*`, etc..
 
 .. doxygenenum:: graphene::chain::object_type
 
 Implementation Object Types: 2.*.*
-----------------------------------
+##################################
 
 First entry in the enumeration becomes `2.0.*`, second becomes `2.1.*`, etc..
 

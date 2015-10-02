@@ -1,11 +1,12 @@
+*************************
 Setting up public testnet
-=========================
+*************************
 
 This document is internal notes for the Graphene developers on how to
 start up a new public testnet.
 
 Updating previous testnet genesis
----------------------------------
+#################################
 
 Starting genesis file:::
 
@@ -21,7 +22,7 @@ Run following commands:::
     programs/genesis_util/genesis_update -g genesis/gnew1.json -o genesis/gnew2.json --dev-account-count=1000 --dev-balance-count=200 --dev-key-prefix "$PREFIX"
 
 Starting the network
---------------------
+####################
 
 Create data dir:::
 
@@ -38,7 +39,7 @@ NB you have to go into config.ini and move them around to the main section, it
 does not play nicely with appending because of sections.
 
 Witness node startup
---------------------
+####################
 
 We need to blow away the previous blockchain so we can rewrite the genesis
 timestamp:::
@@ -58,7 +59,7 @@ You should also copy-paste the printed chain ID since you will
 need it in the next step.
 
 Writing final genesis
----------------------
+#####################
 
 The genesis timestamp needs to be pasted into `genesis.json` file in the
 `initial_timestamp` field.  If you do not do this, nodes using the
@@ -67,7 +68,7 @@ genesis will have a different chain ID and be unable to connect.
 to overwrite the time in the file with a timestamp after startup.)
 
 Running the wallet
-------------------
+##################
 
 ::
 
@@ -81,7 +82,7 @@ Running the wallet
     import_balance devacct0 ["5KaUCUiwMCBmCvnj9n8z2vwcmaoAaLdgaRmnZ1bB2ZTLzJqRJmr"]
 
 Embedding genesis (optional)
-----------------------------
+############################
 
 See https://github.com/cryptonomex/graphene/wiki/egenesis for instructions
 embedding the new genesis file in binaries.

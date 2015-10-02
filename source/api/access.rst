@@ -1,5 +1,6 @@
+***********************
 API Access Restrictions
-=======================
+***********************
 
 In order to access the unrestricted API-0, we call make use of usual
 *stateless* RPC-calls. To access the restricted API-1 we are required to use
@@ -8,8 +9,8 @@ the websocket connection with callbacks to access API-1:
 * API-0: *state-less* querying
 * API-1: *authencitated* interaction
 
-Accessing restricted API-1
---------------------------
+Authorization Scheme
+####################
 
 You can restrict API's to particular users by specifying an ``apiaccess`` file in
 ``config.ini``.  Here is an example ``apiaccess`` file which allows user

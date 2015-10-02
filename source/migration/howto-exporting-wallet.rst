@@ -1,5 +1,7 @@
+*********************
 Exporting Your Wallet
-===================================
+*********************
+
 We offer several options to export your account names and funds from BitShares 1.0:
 
 * **Menu Bar Item** (recommended):

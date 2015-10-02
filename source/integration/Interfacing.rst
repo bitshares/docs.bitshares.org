@@ -1,5 +1,6 @@
+*****************************************
 Interfacing with the BitShares Ecosystem
-=========================================
+*****************************************
 
 To interface your existing platform with BitShares, you can make use of
 :doc:`../api/rpc` and :doc:`../api/websocket` to either a :doc:`full node

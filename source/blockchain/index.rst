@@ -1,8 +1,9 @@
+*************************
 Blockchain Specifications
-=========================
+*************************
 
 Blockchain Objects
-------------------
+##################
 
 .. toctree::
    
@@ -11,7 +12,7 @@ Blockchain Objects
    Assets
 
 Organizational Structure
-------------------------
+########################
 
 .. toctree::
 

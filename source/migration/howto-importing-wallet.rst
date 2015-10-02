@@ -1,5 +1,6 @@
+*********************
 Importing Your Wallet
-===================================
+*********************
 
 BitShares 2.0 has a **Wallet management Console.**. It can be access via
 `BitShares 2.0: Settings -> Wallets` and allows to import your wallet in

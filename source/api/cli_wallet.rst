@@ -1,5 +1,6 @@
+**********
 CLI Wallet
-==========
+**********
 
 .. note:: The ``cli_wallet`` requires a running full node to connect to because it does
           not offer P2P or blockchain capabilities.

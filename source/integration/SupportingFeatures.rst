@@ -1,11 +1,12 @@
+*******************
 Supporting Features
-===================
+*******************
 
 BitShares 2.0 offers some features that will make your integration easier and
 more secure:
 
 User Issued Assets
-------------------
+##################
 
 Any participant can create and issue new (user-issued) assets. The potential
 use cases for so called user-issued assets (UIA) are innumerable. On the one
@@ -22,7 +23,7 @@ discuss the tools and optional administrative rights given to the issuers of a
 given UIA and provide a subset of possible use-cases in more detail.
 
 Whitelists and Blacklists
--------------------------
+#########################
 
 Some 3rd party service providers may want to only do business with customers
 that fulfill certain criteria, e.g. verified their identity for KYC/AML. Those
@@ -36,7 +37,7 @@ individual whitelists. Hence, if you issue an IOU on the blockchain, you can
 define who can hold and trade your tokens, if you wish.
 
 Hierarchical Corporate Accounts
--------------------------------
+###############################
 
 BitShares designs permissions around people, rather than around cryptography,
 making it easy to use. Every account can be controlled by any weighted
