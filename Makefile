@@ -191,11 +191,12 @@ pseudoxml:
 	@echo
 	@echo "Build finished. The pseudo-XML files are in $(BUILDDIR)/pseudoxml."
 
-
-
-deploy:
+deploy: html
 	@echo
-	@rsync -avP build/html/ org:/srv/http/xeroc.org/tmp.xeroc.org/htdocs/.bts/docs
+	@git checkout gh-pages
+	@rsync -avP --delete-after --exclude "CNAME" --exclude ".git" --exclude ".gitignore" build/html/ .
+	@git commit -am "deploy"
+	@git push origin gh-pages
 	@echo "Deploy finished"
 
 
