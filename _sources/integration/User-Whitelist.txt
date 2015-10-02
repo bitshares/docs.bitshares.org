@@ -1,0 +1,53 @@
+**************************
+Account White-/Black-Lists
+**************************
+
+In order to be able to use white- and black-lists on your account, you are
+required to be a lifetime member (October '15). This requirement is defined by the
+shareholders and may change any time.
+
+While, in general, an account's white-/black-list serves no direct function
+besides casting an opinion, we can link this ability with an asset in such that
+an asset can have one (or multiple) list authorities. These authorities are
+accounts with black-/white-lists that are used to define the asset's lists
+instead.
+
+Use Case
+########
+
+A potiential use case could be to offer an independent KYC/AML service for
+exchanges that want to outsource identity verification. Let's assume an exchange
+``E`` outsources identity verification of German users to the german company
+``Gv`` and for US. citizens to company ``Uv``. Both verification companies can
+be defined as authorities for ``E``'s asset(s). Whenever a US citizen
+successfully verifies at ``Uv``, he gets added to ``Uv``'s account white-list
+and is automatically authorized to trade any asset that uses ``Uv`` for there
+verifications (including ``E``).
+
+.. _whitelist_accounts:
+
+Example
+#######
+
+A user can be added to ``<accountname>``'s white-list via ::
+
+    whitelist_accont <accountname> <white_account> white_listed true
+
+In contrast, a user can be removed from ``<accountname>``'s white-list via ::
+
+   whitelist_accont <accountname> <white_account> no_listing true
+
+... or put on the black-list:::
+
+   whitelist_accont <accountname> <white_account> black_listed true
+
+Definition
+##########
+
+White- and Black-listing of accounts work with the following API call:
+
+.. doxygenfunction:: graphene::wallet::wallet_api::whitelist_account()
+
+It expects a ``new_listing_status`` to from
+
+.. doxygenenum:: account_listing

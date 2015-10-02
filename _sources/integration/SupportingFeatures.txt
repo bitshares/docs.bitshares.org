@@ -25,16 +25,19 @@ given UIA and provide a subset of possible use-cases in more detail.
 Whitelists and Blacklists
 #########################
 
-Some 3rd party service providers may want to only do business with customers
-that fulfill certain criteria, e.g. verified their identity for KYC/AML. Those
-services can use so called `whitelists` (or, alternatively, `blacklists`) that
-will prevent unauthorized network participants to interact with you. For
-instance, only those people that have verified with your own platform and have
-an account there can send funds to your service.
+Some 3rd party service providers may want to select which customers are allowed
+to hold their assets , e.g. after verified their identity for KYC/AML. Those
+services can use so called `whitelists` (or, alternatively, `blacklists`) of
+their assets that will prevent unauthorized participants to use this particular
+asset.
 
-In BitShares 2.0, account names and also user-issued assets have their
-individual whitelists. Hence, if you issue an IOU on the blockchain, you can
-define who can hold and trade your tokens, if you wish.
+In BitShares 2.0, account names (life-time members only) and also user-issued
+assets have their individual whitelists. Hence, if you issue an IOU on the
+blockchain, you can define who can hold and trade your tokens, if you wish.
+
+User whitelists on contrast can be used by independent KYC/AML providers to
+state proper verification. An asset issuer may then use those providers to
+oursource identity verification completely.
 
 Hierarchical Corporate Accounts
 ###############################

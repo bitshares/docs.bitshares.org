@@ -33,7 +33,6 @@
 
     <!-- title card -->
     <link  href='../_static/title-card.css' rel='stylesheet'>
-    <script src='../_static/title-card.js'></script>
     
     <!-- Sphinx search -->
     <link rel="search" type="application/opensearchdescription+xml"
@@ -61,12 +60,12 @@
  </head>
  <body class='no-literate'>
 
+
  <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
    <div class='in'>
      <div class='headline'>
-       <h1>Graphene/BitShares 2.0 Technical Documentation</h1>
-       <p>Database API</p>
-       <p style="margin-top: 3em;"><img src="../_static/learn.svg" width="124" /><p>
+       <h1>Database API</h1>
+ 
      </div>
    </div>
  </div>
@@ -113,8 +112,8 @@
 <dl class="class">
 <dt id="_CPPv2N8graphene3app12database_apiE">
 <span id="graphene::app::database_api"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api"></span><em class="property">class </em><code class="descclassname">graphene::app::</code><code class="descname">database_api</code><a class="headerlink" href="#_CPPv2N8graphene3app12database_apiE" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <a class="reference internal" href="#grapheneclassgraphene_1_1app_1_1database__api"><span>database_api</span></a> class implements the RPC API for the chain database. </p>
-<p>This API exposes accessors on the database which query state tracked by a blockchain validating node. This API is read-only; all modifications to the database must be performed via transactions. Transactions are broadcast via the <a class="reference internal" href="network_broadcast.html#grapheneclassgraphene_1_1app_1_1network__broadcast__api"><span>network_broadcast_api</span></a>. </p>
+<dd><p>The <a class="reference internal" href="../namespaces/app.html#grapheneclassgraphene_1_1app_1_1database__api"><span>database_api</span></a> class implements the RPC API for the chain database. </p>
+<p>This API exposes accessors on the database which query state tracked by a blockchain validating node. This API is read-only; all modifications to the database must be performed via transactions. Transactions are broadcast via the <a class="reference internal" href="../namespaces/app.html#grapheneclassgraphene_1_1app_1_1network__broadcast__api"><span>network_broadcast_api</span></a>. </p>
 <div class="breathe-sectiondef container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
@@ -217,7 +216,7 @@ If any of the provided IDs does not map to an object, a null variant is returned
 <span id="graphene::app::database_api::get_accounts__vector:account_id_type:CR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a83a8dc22a2ccdba1c60e1e243d44777e"></span>vector&lt;optional&lt;account_object&gt;&gt; <code class="descname">get_accounts</code><span class="sig-paren">(</span><em class="property">const</em> vector&lt;account_id_type&gt; &amp;<em>account_ids</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api12get_accountsERK6vectorI15account_id_typeE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a list of accounts by ID. </p>
 <p>
-This function has semantics identical to <a class="reference internal" href="#grapheneclassgraphene_1_1app_1_1database__api_1a9c8289e00f460e8f90d7cb5ebf07bb65"><span>get_objects</span></a> <dl class="docutils">
+This function has semantics identical to <a class="reference internal" href="../namespaces/app.html#grapheneclassgraphene_1_1app_1_1database__api_1a9c8289e00f460e8f90d7cb5ebf07bb65"><span>get_objects</span></a> <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>The accounts corresponding to the provided IDs</dd>
 <dt><strong>Parameters</strong></dt>
@@ -265,7 +264,7 @@ This function fetches all relevant objects for the given accounts, and subscribe
 <span id="graphene::app::database_api::lookup_account_names__vector:string:CR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a4c551e660b4be463bd044db8e51058cf"></span>vector&lt;optional&lt;account_object&gt;&gt; <code class="descname">lookup_account_names</code><span class="sig-paren">(</span><em class="property">const</em> vector&lt;string&gt; &amp;<em>account_names</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api20lookup_account_namesERK6vectorI6stringE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a list of accounts by name. </p>
 <p>
-This function has semantics identical to <a class="reference internal" href="#grapheneclassgraphene_1_1app_1_1database__api_1a9c8289e00f460e8f90d7cb5ebf07bb65"><span>get_objects</span></a> <dl class="docutils">
+This function has semantics identical to <a class="reference internal" href="../namespaces/app.html#grapheneclassgraphene_1_1app_1_1database__api_1a9c8289e00f460e8f90d7cb5ebf07bb65"><span>get_objects</span></a> <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>The accounts holding the provided names</dd>
 <dt><strong>Parameters</strong></dt>
@@ -319,7 +318,7 @@ This function has semantics identical to <a class="reference internal" href="#gr
 <dl class="function">
 <dt id="_CPPv2N8graphene3app12database_api26get_named_account_balancesERKNSt6stringERK8flat_setI13asset_id_typeE">
 <span id="graphene::app::database_api::get_named_account_balances__ssCR.flat_set:asset_id_type:CR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a9c38663273a06754eb3517e3687e87ff"></span>vector&lt;asset&gt; <code class="descname">get_named_account_balances</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>name</em>, <em class="property">const</em> flat_set&lt;asset_id_type&gt; &amp;<em>assets</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api26get_named_account_balancesERKNSt6stringERK8flat_setI13asset_id_typeE" title="Permalink to this definition">¶</a></dt>
-<dd><p>Semantically equivalent to <a class="reference internal" href="#grapheneclassgraphene_1_1app_1_1database__api_1a179dd46f9f554c325ab641829d570af6"><span>get_account_balances</span></a>, but takes a name instead of an ID. </p>
+<dd><p>Semantically equivalent to <a class="reference internal" href="../namespaces/app.html#grapheneclassgraphene_1_1app_1_1database__api_1a179dd46f9f554c325ab641829d570af6"><span>get_account_balances</span></a>, but takes a name instead of an ID. </p>
 </dd></dl>
 
 <dl class="function">
@@ -343,7 +342,7 @@ This function has semantics identical to <a class="reference internal" href="#gr
 <span id="graphene::app::database_api::get_assets__vector:asset_id_type:CR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1aa5249a8a747d0f13e3fbd9f075769eeb"></span>vector&lt;optional&lt;asset_object&gt;&gt; <code class="descname">get_assets</code><span class="sig-paren">(</span><em class="property">const</em> vector&lt;asset_id_type&gt; &amp;<em>asset_ids</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api10get_assetsERK6vectorI13asset_id_typeE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a list of assets by ID. </p>
 <p>
-This function has semantics identical to <a class="reference internal" href="#grapheneclassgraphene_1_1app_1_1database__api_1a9c8289e00f460e8f90d7cb5ebf07bb65"><span>get_objects</span></a> <dl class="docutils">
+This function has semantics identical to <a class="reference internal" href="../namespaces/app.html#grapheneclassgraphene_1_1app_1_1database__api_1a9c8289e00f460e8f90d7cb5ebf07bb65"><span>get_objects</span></a> <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>The assets corresponding to the provided IDs</dd>
 <dt><strong>Parameters</strong></dt>
@@ -380,7 +379,7 @@ This function has semantics identical to <a class="reference internal" href="#gr
 <span id="graphene::app::database_api::lookup_asset_symbols__vector:string:CR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a7d68ab26a4e26919a019adace916a4ed"></span>vector&lt;optional&lt;asset_object&gt;&gt; <code class="descname">lookup_asset_symbols</code><span class="sig-paren">(</span><em class="property">const</em> vector&lt;string&gt; &amp;<em>symbols_or_ids</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api20lookup_asset_symbolsERK6vectorI6stringE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a list of assets by symbol. </p>
 <p>
-This function has semantics identical to <a class="reference internal" href="#grapheneclassgraphene_1_1app_1_1database__api_1a9c8289e00f460e8f90d7cb5ebf07bb65"><span>get_objects</span></a> <dl class="docutils">
+This function has semantics identical to <a class="reference internal" href="../namespaces/app.html#grapheneclassgraphene_1_1app_1_1database__api_1a9c8289e00f460e8f90d7cb5ebf07bb65"><span>get_objects</span></a> <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>The assets corresponding to the provided symbols or IDs</dd>
 <dt><strong>Parameters</strong></dt>
@@ -504,7 +503,7 @@ Callback will be passed a variant containing a vector&lt;pair&lt;operation, oper
 <span id="graphene::app::database_api::get_witnesses__vector:witness_id_type:CR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a76e3dbaac5fef15d0933ef2223adf4a0"></span>vector&lt;optional&lt;witness_object&gt;&gt; <code class="descname">get_witnesses</code><span class="sig-paren">(</span><em class="property">const</em> vector&lt;witness_id_type&gt; &amp;<em>witness_ids</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api13get_witnessesERK6vectorI15witness_id_typeE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a list of witnesses by ID. </p>
 <p>
-This function has semantics identical to <a class="reference internal" href="#grapheneclassgraphene_1_1app_1_1database__api_1a9c8289e00f460e8f90d7cb5ebf07bb65"><span>get_objects</span></a> <dl class="docutils">
+This function has semantics identical to <a class="reference internal" href="../namespaces/app.html#grapheneclassgraphene_1_1app_1_1database__api_1a9c8289e00f460e8f90d7cb5ebf07bb65"><span>get_objects</span></a> <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>The witnesses corresponding to the provided IDs</dd>
 <dt><strong>Parameters</strong></dt>
@@ -564,7 +563,7 @@ This function has semantics identical to <a class="reference internal" href="#gr
 <span id="graphene::app::database_api::get_committee_members__vector:committee_member_id_type:CR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1af4a83f64a29e62857aca6137be82264d"></span>vector&lt;optional&lt;committee_member_object&gt;&gt; <code class="descname">get_committee_members</code><span class="sig-paren">(</span><em class="property">const</em> vector&lt;committee_member_id_type&gt; &amp;<em>committee_member_ids</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api21get_committee_membersERK6vectorI24committee_member_id_typeE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a list of committee_members by ID. </p>
 <p>
-This function has semantics identical to <a class="reference internal" href="#grapheneclassgraphene_1_1app_1_1database__api_1a9c8289e00f460e8f90d7cb5ebf07bb65"><span>get_objects</span></a> <dl class="docutils">
+This function has semantics identical to <a class="reference internal" href="../namespaces/app.html#grapheneclassgraphene_1_1app_1_1database__api_1a9c8289e00f460e8f90d7cb5ebf07bb65"><span>get_objects</span></a> <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>The committee_members corresponding to the provided IDs</dd>
 <dt><strong>Parameters</strong></dt>
@@ -643,7 +642,7 @@ This function has semantics identical to <a class="reference internal" href="#gr
 <dl class="function">
 <dt id="_CPPv2N8graphene3app12database_api24get_potential_signaturesERK18signed_transaction">
 <span id="graphene::app::database_api::get_potential_signatures__signed_transactionCR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1ad89f67e1257bfb6602acc4ddb3b5eb5b"></span>set&lt;public_key_type&gt; <code class="descname">get_potential_signatures</code><span class="sig-paren">(</span><em class="property">const</em> signed_transaction &amp;<em>trx</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api24get_potential_signaturesERK18signed_transaction" title="Permalink to this definition">¶</a></dt>
-<dd><p>This method will return the set of all public keys that could possibly sign for a given transaction. This call can be used by wallets to filter their set of public keys to just the relevant subset prior to calling <a class="reference internal" href="#grapheneclassgraphene_1_1app_1_1database__api_1a38363e647a3c859f7647478807e451a2"><span>get_required_signatures</span></a> to get the minimum subset. </p>
+<dd><p>This method will return the set of all public keys that could possibly sign for a given transaction. This call can be used by wallets to filter their set of public keys to just the relevant subset prior to calling <a class="reference internal" href="../namespaces/app.html#grapheneclassgraphene_1_1app_1_1database__api_1a38363e647a3c859f7647478807e451a2"><span>get_required_signatures</span></a> to get the minimum subset. </p>
 </dd></dl>
 
 <dl class="function">
