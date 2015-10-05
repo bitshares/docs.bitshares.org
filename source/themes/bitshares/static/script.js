@@ -2,6 +2,21 @@
   var $window = $(window);
   var $document = $(document);
 
+ /*
+  * Scrollspy.
+  */
+
+  $(function() {
+    $("h2, h3").scrollagent(function(cid, pid, currentElement, previousElement) {
+      if (pid) {
+       $("[href='#"+pid+"']").removeClass('active');
+      }
+      if (cid) {
+       $("[href='#"+cid+"']").addClass('active');
+      }
+    });
+  });
+
   /*
    * Sidebar stick.
    */
