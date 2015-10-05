@@ -3,7 +3,7 @@ support-for-ie = true
 @import 'nib'
 
 // Fonts
-$body-font = Helvetica Neue, Open Sans, sans-serif
+$body-font = Roboto, sans-serif
 $mono-font = Menlo, monospace
 
 // Margins
@@ -16,7 +16,7 @@ $vmargin = 10px  // Margin between blocks
 $offwhite = #f3f6fb
 $grey = #9090aa
 $txt = #505050
-$accent = #3cc * 0.85
+$accent = #00A9E0 * 0.85
 $line = #e4e7ec * 0.98
 
 // Misc
@@ -69,7 +69,7 @@ html
 body, td, textarea, input
   font-family: $body-font
   line-height: 1.6
-  font-size: 13px
+  font-size: 15px
   color:$txt
 
   @media (max-width: 480px) /* Mobile */
@@ -187,7 +187,7 @@ a
 
 
 
-    
+
 
 /* ----------------------------------------------------------------------------
  * Content
@@ -303,7 +303,7 @@ body.no-literate .content pre > code
 @media (max-width: 1180px) /* Small desktop */
   .content pre > code
     inset-box()
-    
+
 // ----------------------------------------------------------------------------
 // Buttons
 
@@ -342,7 +342,7 @@ body.no-literate .content pre > code
       border-color: $grey
       background: $grey
       color: white
-    
+
 .content
   .button + em
     color: $grey
@@ -616,7 +616,7 @@ a.big.button
     &, &:visited, &:hover
       color: $txt !important
     font-weight: bold !important
-    
+
     // Indicator
     &:after
       content: ''
@@ -649,7 +649,7 @@ code
   .large-brief & > h1:first-child + p,
   > p.brief
     font-size: 1.3em
-    font-family: Open Sans, sans-serif
+    font-family: Roboto, sans-serif
     font-weight: 300
 
 // ----------------------------------------------------------------------------
@@ -672,6 +672,3 @@ code
   > div
     position: relative
     z-index: 1
-  
-
-

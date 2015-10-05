@@ -30,6 +30,13 @@
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script src='../_static/script.js'></script>
+    <!-- Transifex -->
+    <script type="text/javascript">
+      window.liveSettings = {
+        api_key: "bbf87af0641e4bbf89c98088d48e0449",
+      };
+    </script>
+    <script type="text/javascript" src="http://cdn.transifex.com/live.js"></script>
 
     <!-- title card -->
     <link  href='../_static/title-card.css' rel='stylesheet'>
@@ -136,6 +143,11 @@ Hence, if Alice wants to send funds to Bob, it may be required that only
 Celine signs for that transaction. Also, BitShares 2.0 has <a class="reference external" href="https://bitshares.org/technology/recurring-and-scheduled-payments/">a referral program</a>.
 Both features combined make it necessary that participants <em>register</em> an
 account on the blockchain.</li>
+<li><strong>No more Hierarchies in Account Names</strong>:
+In BitShares 1, there have been hierarchies in account names. Namely, you
+could only create a sub-account <code class="docutils literal"><span class="pre">home.wallet</span></code> if you also owned <code class="docutils literal"><span class="pre">wallet</span></code>.
+In BitShares 2.0, these hierarchies no longer exist and to register
+<code class="docutils literal"><span class="pre">home.wallet</span></code> you don&#8217;t need to own <code class="docutils literal"><span class="pre">wallet</span></code>.</li>
 <li><strong>Explicit Privacy</strong>:
 The <em>TITAN</em> technology in BitShares 2.0 slowed down blockchain processing
 significantly. Because of this and because TITAN did not really offer good

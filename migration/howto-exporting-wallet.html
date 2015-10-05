@@ -30,6 +30,13 @@
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script src='../_static/script.js'></script>
+    <!-- Transifex -->
+    <script type="text/javascript">
+      window.liveSettings = {
+        api_key: "bbf87af0641e4bbf89c98088d48e0449",
+      };
+    </script>
+    <script type="text/javascript" src="http://cdn.transifex.com/live.js"></script>
 
     <!-- title card -->
     <link  href='../_static/title-card.css' rel='stylesheet'>
@@ -118,6 +125,11 @@ export your current wallet.
 .. note:: Version 0.9.3**c** is required for this step. Otherewise the backup will have the old, incompatible format!</li>
 </ul>
 <a class="reference internal image-reference" href="../_images/export-menu-bar.png"><img alt="Export compatible keys from Menu bar" class="align-center" src="../_images/export-menu-bar.png" style="width: 550px;" /></a>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Bitshares in Windows might need to be started as administrator, if
+you export to the c:/ drive directy, i.e. with <code class="docutils literal"><span class="pre">wallet_export_keys</span> <span class="pre">c:\keys.json</span></code></p>
+</div>
 <ul class="simple">
 <li><strong>Exporting Brainkey</strong> (wallet.bitshares.org only) The keys of the <a class="reference external" href="http://wallet.bitshares.org">web
 wallet</a> can be exported simply by copying the brainkey provided as backup

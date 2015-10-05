@@ -33,6 +33,12 @@ What has Changed?
   Both features combined make it necessary that participants *register* an
   account on the blockchain.
 
+* **No more Hierarchies in Account Names**:
+  In BitShares 1, there have been hierarchies in account names. Namely, you
+  could only create a sub-account ``home.wallet`` if you also owned ``wallet``.
+  In BitShares 2.0, these hierarchies no longer exist and to register
+  ``home.wallet`` you don't need to own ``wallet``.
+
 * **Explicit Privacy**:
   The *TITAN* technology in BitShares 2.0 slowed down blockchain processing
   significantly. Because of this and because TITAN did not really offer good
