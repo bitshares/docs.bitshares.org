@@ -8,7 +8,7 @@ $mono-font = Menlo, monospace
 
 // Margins
 $pad = 40px      // Space between things
-$sidepad = 30px  // Padding to the left of the sidebar
+$sidepad = 10px  // Padding to the left of the sidebar
 $minipad = 20px  // Space for mobile
 $vmargin = 10px  // Margin between blocks
 
@@ -425,6 +425,8 @@ body.no-literate .content pre > code
   text-shadow: 0 1px 0 rgba(white, 0.5)
   border-bottom: solid 1px $line
   padding: 15px 15px 15px $sidepad
+  height: 20
+  width: 100%
   clearfix()
 
   line-height: 20px
@@ -436,8 +438,7 @@ body.no-literate .content pre > code
   .right
     text-align: right
     position: absolute
-    right: 15px
-    top: 15px
+    right: 35px
 
     iframe
       display: inline-block
@@ -491,11 +492,14 @@ body.no-literate .content pre > code
   .right
     display: none
 
+.header.fixed
+  position: fixed
+  top: 0
+  z-index: 100
+
 // ----------------------------------------------------------------------------
 // Search field
 #searchbox
-  float: right
-
   input
     font-size 9px
 
@@ -562,6 +566,7 @@ a.big.button
 
   .menubar.fixed
     position: fixed
+    top: 51px
 
     scrollbar()
     overflow-y: auto
@@ -591,7 +596,13 @@ a.big.button
 
 // Menu items
 .menu
-  ul.level-1 > li + li
+  h3
+   font-weight: 700
+   text-align: center
+   margin-bottom: 1ex
+   text-transform: uppercase
+
+  ul.toctree-l1 > li + li
     margin-top: 20px
 
   a
@@ -608,7 +619,7 @@ a.big.button
     &:hover
       color: $accent*0.8
 
-  a.level-1
+  li.toctree-l1 a
     font-family: Roboto
     text-transform: uppercase
     font-size: 0.9em
@@ -618,10 +629,10 @@ a.big.button
     &:hover
       color: $grey*0.6
 
-  a.level-2
+  li.toctree-l2 a
     font-weight: normal
 
-  a.level-3
+  li.toctree-l3 a
     font-weight: normal
     font-size: 0.9em
     padding-left: 10px
