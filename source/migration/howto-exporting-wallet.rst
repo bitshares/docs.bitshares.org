@@ -15,6 +15,9 @@ We offer several options to export your account names and funds from BitShares 1
         :width: 550px
         :align: center
 
+.. note:: Bitshares in Windows might need to be started as administrator, if
+          you export to the c:/ drive directy, i.e. with ``wallet_export_keys c:\keys.json``
+
 * **Exporting Brainkey** (wallet.bitshares.org only) The keys of the `web
   wallet`_ can be exported simply by copying the brainkey provided as backup
   option. It can be obtained from the web wallet's preferences: 
