@@ -197,6 +197,7 @@ deploy: html
 	@git commit -am "deploy" || exit 0
 	@git checkout gh-pages
 	@rsync -avP --delete \
+	            --delete-after \
 	            --exclude "CNAME" \
 	            --exclude ".git" \
 	            --exclude ".nojekyll" \
