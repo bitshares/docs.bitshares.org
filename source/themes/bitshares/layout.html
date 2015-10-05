@@ -105,9 +105,11 @@
    <div class='left'>
     {{ nav() }}
    </div>
-   {%- block sidebarsearch %}
-   {%- include "searchbox.html" %}
-   {%- endblock %}
+   <div class='right'>
+    {%- block sidebarsearch %}
+    {%- include "searchbox.html" %}
+    {%- endblock %}
+   </div>
  </div>
 
  <div class='content-root'>
