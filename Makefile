@@ -193,12 +193,15 @@ pseudoxml:
 
 deploy: html
 	@echo
+	@git add .
+	@git commit -am "deploy"
 	@git checkout gh-pages
 	@rsync -avP --delete \
 	            --exclude "CNAME" \
 	            --exclude ".git" \
 	            --exclude ".nojekyll" \
 	            --exclude ".gitignore" \
+	            --exclude "source" \
 	         build/html/ .
 	@git add .
 	@git commit -am "deploy"
