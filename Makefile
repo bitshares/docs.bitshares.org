@@ -194,7 +194,7 @@ pseudoxml:
 deploy: html
 	@echo
 	@git checkout gh-pages
-	@rsync -avP --delete-after\
+	@rsync -avP --delete \
 	            --exclude "CNAME" \
 	            --exclude ".git" \
 	            --exclude ".nojekyll" \
