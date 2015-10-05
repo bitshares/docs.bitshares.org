@@ -110,6 +110,7 @@ input {
   font-family: Roboto, sans-serif;
   line-height: 1.6;
   font-size: 15px;
+  font-weight: 300;
   color: #505050;
 }
 @media (max-width: 480px) {
@@ -157,13 +158,12 @@ a:hover {
   text-rendering: optimizeLegibility;
 }
 .content pre {
-  background: #fafbfc url("_static/blueprint-dark.png") repeat scroll center top;
+  background: #fafbfc url("/_static/blueprint-dark.png") repeat scroll center top;
   border-left: 5px solid #558abb;
   color: #4d4e53;
   font-family: Menlo, monospace;
   font-weight: 400;
-  -moz-tab-size: 4;
-  -moz-hyphens: none;
+  padding: 15px;
 }
 .content ul > li {
   list-style-type: disc;
@@ -678,6 +678,12 @@ body.no-literate .content pre > code:hover::-webkit-scrollbar-thumb {
   .right {
     display: none;
   }
+}
+#searchbox {
+  float: right;
+}
+#searchbox input {
+  font-size: 9px;
 }
 .menubar {
   -webkit-font-smoothing: antialiased;
