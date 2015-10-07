@@ -84,7 +84,7 @@
         &#160;&#160;::&#160;&#160;
         <a class="uplink" href="../index.html">Contents</a>
         &#160;&#160;::&#160;&#160;
-        <a href="Overview.html">Overview</a>&#160;&#160;»
+        <a href="step-by-step.html">Step-By-Step Instructions for Exchanges</a>&#160;&#160;»
 
    </div>
    <div class='right'>
@@ -121,12 +121,12 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="">Integrating the BitShares Network</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="step-by-step.html">Step-By-Step Instructions for Exchanges</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Overview.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="SupportingFeatures.html">Supporting Features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Interfacing.html">Interfacing with the BitShares Ecosystem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="NetworkSetup.html">Secure Network and Client Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="NodeJS.html">NodeJS Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Python.html">Python Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="NetworkSetup.html">Secure Network and Wallet Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Libraries.html">Supporting Code</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Whitelist.html">Using White- and Black-lists</a></li>
 <li class="toctree-l2"><a class="reference internal" href="SecuringFunds.html">Securing Funds</a></li>
 </ul>
@@ -168,7 +168,36 @@ profiting from</p>
 </ul>
 <p>We here illustrate the steps necessary to securely operate as a merchant,
 exchange, or fiat-gateway.</p>
-<div class="toctree-wrapper compound">
+<hr class="docutils" />
+<p class="centered">
+<strong><strong>Step-By-Step Instructions for Exchanges</strong></strong></p><div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="step-by-step.html">Step-By-Step Instructions for Exchanges</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="step-by-step.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="step-by-step.html#running-daemons-and-wallet">Running Daemons and Wallet</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="step-by-step.html#trusted-full-node">Trusted Full Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step-by-step.html#delayed-node">Delayed Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step-by-step.html#wallet">Wallet</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="step-by-step.html#query-blockchain-for-required-data">Query blockchain for required data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="step-by-step.html#existing-bitshares-1-account">Existing BitShares 1 Account</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="step-by-step.html#watching-deposits-with-python">Watching Deposits with Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="step-by-step.html#id1">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step-by-step.html#configuration">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step-by-step.html#running">Running</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="step-by-step.html#executing-transfers-for-withdrawals">Executing Transfers for Withdrawals</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<hr class="docutils" />
+<p class="centered">
+<strong><strong>Detailed Guide</strong></strong></p><div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="Overview.html">Overview</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Overview.html#merchants">Merchants</a></li>
@@ -182,22 +211,37 @@ exchange, or fiat-gateway.</p>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Interfacing.html">Interfacing with the BitShares Ecosystem</a></li>
-<li class="toctree-l1"><a class="reference internal" href="NetworkSetup.html">Secure Network and Client Configuration</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="NetworkSetup.html#overview-of-the-setup">Overview of the Setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="NetworkSetup.html#trusted-full-node">Trusted Full Node</a></li>
-<li class="toctree-l2"><a class="reference internal" href="NetworkSetup.html#delayed-full-node">Delayed Full Node</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NetworkSetup.html">Secure Network and Wallet Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="NetworkSetup.html#overview-of-the-setup">Overview of the Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NetworkSetup.html#p2p-network">P2P network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NetworkSetup.html#trusted-full-node">Trusted Full Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NetworkSetup.html#delayed-full-node">Delayed Full Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NetworkSetup.html#wallet">Wallet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NetworkSetup.html#deposit-api">Deposit API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NetworkSetup.html#withdraw-api">Withdraw API</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="NodeJS.html">NodeJS Example</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="NodeJS.html#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="NodeJS.html#configuration">Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="NodeJS.html#running">Running</a></li>
+<li class="toctree-l2"><a class="reference internal" href="NetworkSetup.html#example-configuration">Example Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NetworkSetup.html#id1">Trusted Full Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NetworkSetup.html#id2">Delayed Full Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NetworkSetup.html#id3">Wallet</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="Python.html">Python Example</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Python.html#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Python.html#configuration">Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Python.html#running">Running</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Libraries.html">Supporting Code</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Python.html">Python Example</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Python.html#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Python.html#configuration">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Python.html#running">Running</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="NodeJS.html">NodeJS Example</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="NodeJS.html#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NodeJS.html#configuration">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="NodeJS.html#running">Running</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Whitelist.html">Using White- and Black-lists</a><ul>

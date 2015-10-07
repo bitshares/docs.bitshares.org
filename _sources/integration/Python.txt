@@ -8,7 +8,7 @@ BitShares 2.0.
 Installation
 ############
 
-A graphene Python library can be installed by issuing:::
+A graphene Python 3.0 library can be installed by issuing:::
 
     git clone http://github.com/xeroc/python-graphenelib
     cd python-graphenelib

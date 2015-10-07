@@ -1,10 +1,27 @@
-/* -- admonitions ----------------------------------------------------------- */
-div.admonition {
+p.centered {
+    text-align: center;
     margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 7px;
 }
 
+/* -- admonitions ----------------------------------------------------------- */
+p.admonition-title {
+    margin: 0px 2px 2px 0px;
+    font-weight: bold;
+    border-bottom: 1px solid gray;
+}
+
+.admonition p {
+    padding: 0px !important;
+}
+
+div.admonition {
+    border-style: dotted;
+    border-width: thin;
+    border-color: #dcdcdc;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
 div.admonition dt {
     font-weight: bold;
 }
@@ -13,32 +30,11 @@ div.admonition dl {
     margin-bottom: 0;
 }
 
-p.admonition-title {
-    margin: 0px 10px 5px 0px;
-    font-weight: bold;
-}
-
-div.body p.centered {
-    text-align: center;
-    margin-top: 25px;
-}
-
-div.admonition {
-    -webkit-border-radius: 10px;
-    -khtml-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    border-style: dotted;
-    border-width: thin;
-    border-color: #dcdcdc;
-    padding: 10px 15px 10px 15px;
-    margin-bottom: 15px;
-    margin-top: 15px;
-}
 div.note {
-    padding: 10px 15px 10px 80px;
-    background: #e4ffde url(alert_info_32.png) 15px 15px no-repeat;
-    min-height: 42px;
+    padding: 5px;
+    background: #8AC2D5;
+    width: 70%;
+    margin: 0 auto 10px 10px;
 }
 div.warning {
     padding: 10px 15px 10px 80px;

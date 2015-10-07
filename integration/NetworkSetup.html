@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <title>Secure Network and Client Configuration</title>
+    <title>Secure Network and Wallet Configuration</title>
 
     <!-- CSS -->
     <link  href='../_static/main.css' rel='stylesheet'>
@@ -71,7 +71,7 @@
  <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
    <div class='in'>
      <div class='headline'>
-       <h1>Secure Network and Client Configuration</h1>
+       <h1>Secure Network and Wallet Configuration</h1>
  
      </div>
    </div>
@@ -84,7 +84,7 @@
         &#160;&#160;::&#160;&#160;
         <a class="uplink" href="../index.html">Contents</a>
         &#160;&#160;::&#160;&#160;
-        <a href="NodeJS.html">NodeJS Example</a>&#160;&#160;»
+        <a href="Libraries.html">Supporting Code</a>&#160;&#160;»
 
    </div>
    <div class='right'>
@@ -121,12 +121,12 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Integrating the BitShares Network</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="step-by-step.html">Step-By-Step Instructions for Exchanges</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Overview.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="SupportingFeatures.html">Supporting Features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Interfacing.html">Interfacing with the BitShares Ecosystem</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Secure Network and Client Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="NodeJS.html">NodeJS Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Python.html">Python Example</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Secure Network and Wallet Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Libraries.html">Supporting Code</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Whitelist.html">Using White- and Black-lists</a></li>
 <li class="toctree-l2"><a class="reference internal" href="SecuringFunds.html">Securing Funds</a></li>
 </ul>
@@ -154,56 +154,81 @@
   </div>
   <div class='content'>
    
-  <div class="section" id="secure-network-and-client-configuration">
-<h1>Secure Network and Client Configuration<a class="headerlink" href="#secure-network-and-client-configuration" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="secure-network-and-wallet-configuration">
+<h1>Secure Network and Wallet Configuration<a class="headerlink" href="#secure-network-and-wallet-configuration" title="Permalink to this headline">¶</a></h1>
 <p>Similar to other crypto currencies, it is recommended to wait for several
 confirmations of a transcation. Even though the consensus scheme of Graphene is
 alot more secure than regular proof-of-work or other proof-of-stake schemes, we
 still support exchanges that require more confirmations for deposits.</p>
-<p>We provide a so called <em>delayed</em> full node which accepts two additional
-parameters for the configuration besides those already available with the
-standard daemon.</p>
-<ul class="simple">
-<li><cite>trusted-node</cite> RPC endpoint of a trusted validating node (required)</li>
-<li><cite>delay-block-count</cite> Number of blocks to delay before advancing chain state (required)</li>
-</ul>
-<p>The trusted-node is a regular full node directly connected to the P2P
-network that works as a proxy. The <cite>delay-block-count</cite> gives the number of
-blocks that the delayed full node will be behind the real blockchain.</p>
+<p>We provide a so called <em>delayed</em> full node which accepts the parameter
+<code class="docutils literal"><span class="pre">trusted-node</span></code> for an RPC endpoint of a trusted validating node.
+The trusted-node is a regular full node directly connected to the P2P
+network that works as a proxy. The delayed node will delay blocks until they are
+<strong>irreversible</strong>. Depending on the block interval and the number of witnesses,
+this may lead to a few minutes of delay.</p>
 <div class="section" id="overview-of-the-setup">
 <h2>Overview of the Setup<a class="headerlink" href="#overview-of-the-setup" title="Permalink to this headline">¶</a></h2>
 <p>In the following, we will setup and use the following network::</p>
-<div class="highlight-python"><div class="highlight"><pre>P2P network   &lt;-&gt;   Trusted Full Node   &lt;-&gt;   Delayed Full Node   &lt;-&gt;   API
+<div class="highlight-python"><div class="highlight"><pre>                            +---&gt;  Delayed Full Node ---&gt; Deposit API
+                            |
+                            |
+P2P network   &lt;-&gt;   Trusted Full Node
+                            ^
+                            |
+                            +&lt;--------  Wallet &lt;--------- Withdraw API
 </pre></div>
 </div>
-<ul class="simple">
-<li><strong>P2P network</strong>:
-The BitShares client uses a peer-to-peer network to connect and broadcasts
+<div class="section" id="p2p-network">
+<h3>P2P network<a class="headerlink" href="#p2p-network" title="Permalink to this headline">¶</a></h3>
+<p>The BitShares client uses a peer-to-peer network to connect and broadcasts
 transactions there. A block producing full node will eventually catch your
-transcaction and validates it by adding it into a new block.</li>
-<li><strong>Trusted Full Node</strong>:
-We will use a Full node to connect to the network directly. We call it
-<em>trusted</em> since it is supposed to be under our control.</li>
-<li><strong>Delayed Full Node</strong>:
-The delayed full node node will provide us with a delayed and several times
+transcaction and validates it by adding it into a new block.</p>
+</div>
+<div class="section" id="trusted-full-node">
+<h3>Trusted Full Node<a class="headerlink" href="#trusted-full-node" title="Permalink to this headline">¶</a></h3>
+<p>We will use a Full node to connect to the network directly. We call it
+<em>trusted</em> since it is supposed to be under our control.</p>
+</div>
+<div class="section" id="delayed-full-node">
+<h3>Delayed Full Node<a class="headerlink" href="#delayed-full-node" title="Permalink to this headline">¶</a></h3>
+<p>The delayed full node node will provide us with a delayed and several times
 confirmed and verified blockchain. Even though DPOS is more resistant against
 forks than most other blockchain consensus schemes, we delay the blockchain
-here to reduces the risk of forks even more. In the end, the delayed full
-node is supposed to never enter an invalid fork.</li>
-<li><strong>API</strong>:
-Since we have a delayed full node that we can fully trust, we will interface
+here to reduces the risk of forks even more. All transactions that are confirmed
+by the delayed node are <strong>irreversible</strong>.</p>
+</div>
+<div class="section" id="wallet">
+<h3>Wallet<a class="headerlink" href="#wallet" title="Permalink to this headline">¶</a></h3>
+<p>The wallet is used to initiate transfers (customer withdrawals) and connects
+to the trusted full node (<strong>not</strong> to the delayed full node).</p>
+</div>
+<div class="section" id="deposit-api">
+<h3>Deposit API<a class="headerlink" href="#deposit-api" title="Permalink to this headline">¶</a></h3>
+<p>Since we have a delayed full node that we can fully trust, we will interface
 with this node to query the blockchain and receive notifications from it one
-balance changes.</li>
-</ul>
+balance changes. Hence, we use this API to watch deposits of users into the
+exchange&#8217;s account. Because the delayed node only knows about irreversible
+blocks all transactions are at this point irreversible as well.</p>
+</div>
+<div class="section" id="withdraw-api">
+<h3>Withdraw API<a class="headerlink" href="#withdraw-api" title="Permalink to this headline">¶</a></h3>
+<p>For customer withdrawals, we will interface with the wallet to initiate
+transfers to the accounts of the customers on request. As we are connected to
+the trusted node directly, there will not be any delay on withdrawals.</p>
+</div>
+</div>
+<div class="section" id="example-configuration">
+<h2>Example Configuration<a class="headerlink" href="#example-configuration" title="Permalink to this headline">¶</a></h2>
 <p>The delayed full node should be in the same <em>local</em> network as the trusted full
 node is in the same network and has internet access. Hence we will work with
-the following IPs:</p>
+the following IPs and open the corresponding RPC ports:</p>
 <ul>
 <li><dl class="first docutils">
 <dt>Trusted Full Node:</dt>
 <dd><ul class="first last simple">
-<li>extern: <em>internet access</em></li>
-<li>intern: <cite>192.168.0.100</cite></li>
+<li>extern: internet access <strong>required</strong></li>
+<li>intern: <code class="docutils literal"><span class="pre">192.168.0.100</span></code></li>
+<li>port: <code class="docutils literal"><span class="pre">8090</span></code></li>
 </ul>
 </dd>
 </dl>
@@ -211,17 +236,27 @@ the following IPs:</p>
 <li><dl class="first docutils">
 <dt>Delayed Full Node:</dt>
 <dd><ul class="first last simple">
-<li>extern: <em>no</em> internet access required</li>
-<li>intern: <cite>192.168.0.101</cite></li>
+<li>extern: <strong>no</strong> internet access required</li>
+<li>intern: <code class="docutils literal"><span class="pre">192.168.0.101</span></code></li>
+<li>port: <code class="docutils literal"><span class="pre">8090</span></code></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Wallet:</dt>
+<dd><ul class="first last simple">
+<li>extern: <strong>no</strong> internet access required</li>
+<li>intern: <code class="docutils literal"><span class="pre">192.168.0.102</span></code></li>
+<li>port: <code class="docutils literal"><span class="pre">8092</span></code></li>
 </ul>
 </dd>
 </dl>
 </li>
 </ul>
 <p>Let&#8217;s go into more detail how to set these up.</p>
-</div>
-<div class="section" id="trusted-full-node">
-<h2>Trusted Full Node<a class="headerlink" href="#trusted-full-node" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Trusted Full Node<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>For the trusted full node, the default settings can be used.  For later, we
 will need to open the RPC port and listen to an IP address to connect the
 delayed full node to.:</p>
@@ -234,8 +269,8 @@ delayed full node to.:</p>
 block-signing private key is provided.</p>
 </div>
 </div>
-<div class="section" id="delayed-full-node">
-<h2>Delayed Full Node<a class="headerlink" href="#delayed-full-node" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>Delayed Full Node<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>The delayed full node will need the IP address and port of the p2p-endpoint
 from the trusted full node and the number of blocks that should be delayed.  We
 also need to open the RPC/Websocket port (to the local network!) so that we can
@@ -243,14 +278,13 @@ interface using RPC-JSON calls.</p>
 <p>For our example and for 10 blocks delaye (i.e. 30 seconds for 3 second block
 intervals), we need::</p>
 <div class="highlight-python"><div class="highlight"><pre>./programs/delayed_node/delayed_node --trusted-node=&quot;192.168.0.100:8090&quot; \
-                                     --delay-block-count=10 \
                                      --rpc-endpoint=&quot;192.168.0.101:8090&quot;
 </pre></div>
 </div>
 <p>We could now connect via RPC:</p>
 <ul class="simple">
-<li><cite>192.168.0.100:8090</cite> : The trusted full node exposed to the internet</li>
-<li><cite>192.168.0.101:8090</cite> : The delayed full node not exposed to the internet</li>
+<li><code class="docutils literal"><span class="pre">192.168.0.100:8090</span></code> : The trusted full node exposed to the internet</li>
+<li><code class="docutils literal"><span class="pre">192.168.0.101:8090</span></code> : The delayed full node not exposed to the internet</li>
 </ul>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -259,6 +293,28 @@ full node.</p>
 </div>
 <p>For obvious reasons, the trusted full node is should be running before
 attempting to start the delayed full node.</p>
+<p>For customer deposits, we will interface to the delayed node&#8217;s API using
+<cite>192.168.0.101:8090</cite>.</p>
+</div>
+<div class="section" id="id3">
+<h3>Wallet<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>The wallet initiates outgoing transfers and has to connect to your trusted node
+because the <em>delayed</em> node has no P2P connections. We furthermore open up a
+RPC-JSON-HTTP port to be able to interface with API requests. The wallet can be
+connected to the trusted node and listens for RPC requests on port <code class="docutils literal"><span class="pre">8092</span></code>
+with::</p>
+<div class="highlight-python"><div class="highlight"><pre>./programs/cli_wallet/cli_wallet --server-rpc-endpoint=&quot;ws://192.168.0.100:8090&quot; \
+                                 --rpc-http-endpoint=&quot;192.168.0.102:8092&quot;
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For security reasons, the wallet should only listen to localhost or
+the local network and should <strong>NEVER</strong> be exposed to the internet.</p>
+</div>
+<p>For customer withdrawals, we will interface to the wallet&#8217;s API using
+<cite>192.168.0.102:8092</cite>.</p>
+</div>
 </div>
 </div>
 
