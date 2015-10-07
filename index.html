@@ -106,7 +106,7 @@
   <!-- menu bar -->
   <div class='menubar'>
    <div class='section'>
-    <img src="_static/grphn-logo.svg" width="48" />
+    <a href="./"><img src="_static/grphn-logo.svg" width="48" /></a>
        <!--<a class='big button' href='#' target='_blank'>Download</a>-->
    </div>
    <div class='menu section'>
@@ -119,20 +119,23 @@
 <li class="toctree-l1"><a class="reference internal" href="installation/index.html">Installation</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="apps/index.html">Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user/index.html">User Guide</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="integration/index.html">Integrating the BitShares Network</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="blockchain/index.html">Blockchain Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="apps/index.html">Applications</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="testnet/index.html">Testnets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blockchain/index.html">Blockchain Specifications</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="api/index.html">Graphene API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="namespaces/index.html">Namespaces</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="testnet/index.html">Testnets</a></li>
 </ul>
 
     </div>
@@ -188,18 +191,20 @@ those that want to compile from the source.</p>
 </ul>
 </div>
 </div>
-<div class="section" id="applications">
-<h2>Applications<a class="headerlink" href="#applications" title="Permalink to this headline">¶</a></h2>
-<p>The Graphene toolkit comprises several tools that shall be briefly described in
-the following sections.</p>
+<div class="section" id="user-guide">
+<h2>User Guide<a class="headerlink" href="#user-guide" title="Permalink to this headline">¶</a></h2>
+<p>We would like to introduce most features to the user in a friendly and easy to
+understand way in this <em>User Guide</em>.</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="apps/index.html">Applications</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="apps/Witness.html">Full Node</a></li>
-<li class="toctree-l2"><a class="reference internal" href="apps/DelayedNode.html">Delayed Full Node</a></li>
-<li class="toctree-l2"><a class="reference internal" href="apps/CliWallet.html">CLI Wallet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="apps/CliFullWallet.html">Full Node Wallet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="apps/WebWallet.html">Web Wallet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user/index.html">User Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user/Accounts.html">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/Assets.html">Assets/Tokens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/Dex.html">Decentralized Exchange</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/Shareholder.html">Shareholder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/Committee.html">Committee</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/Witness.html">Witnesses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/Worker.html">Workers / Budget Items</a></li>
 </ul>
 </li>
 </ul>
@@ -227,47 +232,46 @@ here describe the technical possibilities and implementation aspects.</p>
 </ul>
 </div>
 </div>
+<div class="section" id="developers">
+<h2>Developers<a class="headerlink" href="#developers" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="applications">
+<h3>Applications<a class="headerlink" href="#applications" title="Permalink to this headline">¶</a></h3>
+<p>The Graphene toolkit comprises several tools that shall be briefly described in
+the following sections.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="apps/index.html">Applications</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="apps/Witness.html">Full Node</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apps/DelayedNode.html">Delayed Full Node</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apps/CliWallet.html">CLI Wallet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apps/CliFullWallet.html">Full Node Wallet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apps/WebWallet.html">Web Wallet</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
 <div class="section" id="blockchain-specifications">
-<h2>Blockchain Specifications<a class="headerlink" href="#blockchain-specifications" title="Permalink to this headline">¶</a></h2>
+<h3>Blockchain Specifications<a class="headerlink" href="#blockchain-specifications" title="Permalink to this headline">¶</a></h3>
 <p>The technical specifications of blockchain objects and their serialization is
 part of the following sections.</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="blockchain/index.html">Blockchain Specifications</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="blockchain/index.html#blockchain-objects">Blockchain Objects</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="blockchain/Objects.html">Objects and IDs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="blockchain/Accounts.html">Accounts</a></li>
-<li class="toctree-l3"><a class="reference internal" href="blockchain/Assets.html">Assets/Tokens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blockchain/Objects.html">Objects and IDs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="blockchain/Objects.html#objects">Objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="blockchain/Objects.html#accounts">Accounts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="blockchain/Objects.html#object-types-1">Object Types: 1.*.*</a></li>
+<li class="toctree-l3"><a class="reference internal" href="blockchain/Objects.html#implementation-object-types-2">Implementation Object Types: 2.*.*</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="blockchain/index.html#organizational-structure">Organizational Structure</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="blockchain/Shareholder.html">Shareholder</a></li>
-<li class="toctree-l3"><a class="reference internal" href="blockchain/Committee.html">Committee</a></li>
-<li class="toctree-l3"><a class="reference internal" href="blockchain/Witness.html">Witnesses</a></li>
-<li class="toctree-l3"><a class="reference internal" href="blockchain/Worker.html">Workers / Budget Items</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-<div class="section" id="testnet-guide">
-<h2>Testnet Guide<a class="headerlink" href="#testnet-guide" title="Permalink to this headline">¶</a></h2>
-<p>For running comprehensive tests and evaluating algorithms cheaply, we offer to
-setup private or public testnets.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="testnet/index.html">Testnets</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="testnet/Private.html">Setting up private testnet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="testnet/Public.html">Setting up public testnet</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 <div class="section" id="api">
-<h2>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
+<h3>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h3>
 <p>The API for interfacing with either a full node or a CLI wallet are described
 in this comprehensive repository.</p>
 <div class="toctree-wrapper compound">
@@ -288,13 +292,20 @@ in this comprehensive repository.</p>
 </ul>
 </div>
 </div>
-<div class="section" id="indices-and-tables">
-<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><a class="reference internal" href="genindex.html"><span>Index</span></a></li>
-<li><a class="reference internal" href="py-modindex.html"><span>Module Index</span></a></li>
-<li><a class="reference internal" href="search.html"><span>Search Page</span></a></li>
+<div class="section" id="testnet-guide">
+<h3>Testnet Guide<a class="headerlink" href="#testnet-guide" title="Permalink to this headline">¶</a></h3>
+<p>For running comprehensive tests and evaluating algorithms cheaply, we offer to
+setup private or public testnets.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="testnet/index.html">Testnets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="testnet/Private.html">Setting up private testnet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testnet/Public.html">Setting up public testnet</a></li>
 </ul>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 

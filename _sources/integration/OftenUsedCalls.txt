@@ -35,6 +35,14 @@ BitShares 1.0.
 Example Outputs
 ################
 
+We will now take a look at some sample ouputs for some of the API calls in the
+table above. We recommend to read the following articles:
+
+.. toctree::
+
+   ../blockchain/Objects
+   ../api/cli_wallet
+
 ``list_account_balances <account>``
 ***********************************
 
