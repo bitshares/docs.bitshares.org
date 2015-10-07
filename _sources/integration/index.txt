@@ -22,6 +22,7 @@ exchange, or fiat-gateway.
 .. toctree::
 
    step-by-step
+   OftenUsedCalls
 
 -------
 
@@ -34,5 +35,6 @@ exchange, or fiat-gateway.
    Interfacing
    NetworkSetup
    Libraries
+   OftenUsedCalls
    Whitelist
    SecuringFunds
