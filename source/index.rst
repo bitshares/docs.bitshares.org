@@ -31,16 +31,16 @@ those that want to compile from the source.
 
    installation/index
 
-Applications
-############
+User Guide
+##########
 
-The Graphene toolkit comprises several tools that shall be briefly described in
-the following sections.
+We would like to introduce most features to the user in a friendly and easy to
+understand way in this *User Guide*.
 
 .. toctree::
    :maxdepth: 2
 
-   apps/index
+   user/index
 
 Integrations Guide
 ##################
@@ -53,8 +53,23 @@ here describe the technical possibilities and implementation aspects.
 
    integration/index
 
+
+Developers
+##########
+
+Applications
+************
+
+The Graphene toolkit comprises several tools that shall be briefly described in
+the following sections.
+
+.. toctree::
+   :maxdepth: 2
+
+   apps/index
+
 Blockchain Specifications
-#########################
+*************************
 
 The technical specifications of blockchain objects and their serialization is
 part of the following sections.
@@ -64,19 +79,8 @@ part of the following sections.
 
    blockchain/index
 
-Testnet Guide
-#############
-
-For running comprehensive tests and evaluating algorithms cheaply, we offer to
-setup private or public testnets.
-
-.. toctree::
-   :maxdepth: 2
-
-   testnet/index
-
 API
-###
+***
 
 The API for interfacing with either a full node or a CLI wallet are described
 in this comprehensive repository.
@@ -87,12 +91,16 @@ in this comprehensive repository.
    api/index
    namespaces/index
 
-Indices and tables
-##################
+Testnet Guide
+*************
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+For running comprehensive tests and evaluating algorithms cheaply, we offer to
+setup private or public testnets.
+
+.. toctree::
+   :maxdepth: 2
+
+   testnet/index
 
 .. comments
    ReStructure Syntax can be found here:
