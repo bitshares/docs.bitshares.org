@@ -2,6 +2,12 @@
 Building from Sources
 ***************************
 
+Downloading the sources
+#######################
+
+The sources can be downloaded from github as described 
+:doc:`here <../installation/Sources>`.
+
 Dependencies
 #############
 

@@ -15,13 +15,24 @@ profiting from
 We here illustrate the steps necessary to securely operate as a merchant,
 exchange, or fiat-gateway.
 
+-------
+
+.. centered:: **Step-By-Step Instructions for Exchanges**
+
+.. toctree::
+
+   step-by-step
+
+-------
+
+.. centered:: **Detailed Guide**
+
 .. toctree::
 
    Overview
    SupportingFeatures
    Interfacing
    NetworkSetup
-   NodeJS
-   Python
+   Libraries
    Whitelist
    SecuringFunds
