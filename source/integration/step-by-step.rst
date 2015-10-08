@@ -17,15 +17,17 @@ Running Daemons and Wallet
 ##########################
 
 For security reasons we will run two daemons and a wallet according to these
-diagram:::
+diagram:
 
-                                +--->  Delayed Full Node ---> Deposit API
-                                |
-                                |
-    P2P network   <->   Trusted Full Node 
-                                ^
-                                |
-                                +<--------  Wallet <--------- Withdraw API
+.. graphviz::
+
+   digraph foo {
+    rankdir=LR
+    node [shape=box]
+    "P2P network" -> "Trusted Full Node" [dir="both"]
+    "Trusted Full Node" -> "Delayed Full Node" -> "Deposit API"
+    "Trusted Full Node" -> "Wallet" -> "Withdraw API"
+   }
 
 In this tutorial we will run all deamons and the wallet on the same machine and
 use different ports to distinguish them:
@@ -138,6 +140,24 @@ Import the active key into BitShares 2 wallet:::
 
 This gives access to the funds stored in ``<account-name>``. We will need the
 memo private key later when watching deposits.
+
+Claiming BitShares 1.0 funds
+****************************
+We now describe how to claim your funds from the Bitshares 1 blockchain so you
+can use them in BitShares 2.
+
+For **Coldstorage** and plain private keys, we recommend to use::
+
+    import_balance <accountname> <private_key> false
+
+to import all balances that are locked in the private key into the account named
+``<accountname``. As long as the last argument is ``false`` the transaction will
+only be printed for audit and not be broadcasted or executed. **Only** after
+changing ``false`` to ``true`` will the balances be claimed!
+
+For your hot wallet (or any other active wallet running in the BitShares 1
+client) we recommend to use the GUI to claim your funds from hot wallet as
+described :doc:`here <../migration/howto-importing-wallet>`.
 
 Watching Deposits with Python
 #############################

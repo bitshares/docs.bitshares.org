@@ -26,7 +26,7 @@ exchange, or fiat-gateway.
 
 -------
 
-.. centered:: **Detailed Guide**
+.. centered:: **Detailed Technical Guide**
 
 .. toctree::
 

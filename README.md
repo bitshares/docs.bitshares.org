@@ -1,6 +1,7 @@
 Requirements
 ============
 
+* graphviz
 * sphinx (http://sphinx-doc.org)
 * breathe (https://github.com/michaeljones/breathe)
 

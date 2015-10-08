@@ -102,6 +102,15 @@ setup private or public testnets.
 
    testnet/index
 
+****
+Meta
+****
+
+.. toctree::
+   :maxdepth: 2
+
+   meta/index
+
 .. comments
    ReStructure Syntax can be found here:
    openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html

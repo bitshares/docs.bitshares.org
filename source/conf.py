@@ -32,6 +32,7 @@ import shlex
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
+    'sphinx.ext.graphviz'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -286,7 +287,9 @@ texinfo_documents = [
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
 
+###############################################################################
 # Breathe configuration
+###############################################################################
 try :
     import breathe
 
@@ -299,3 +302,8 @@ except :
     print("="*80)
     print("Please install 'breathe' as described in README.md to also have API documentation available!")
     print("="*80)
+
+###############################################################################
+# Graphiz
+###############################################################################
+graphviz_output_format = 'svg'
