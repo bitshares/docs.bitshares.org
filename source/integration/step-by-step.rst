@@ -5,6 +5,10 @@ Step-By-Step Instructions for Exchanges
 We here describe how to interface your exchange with BitShares step-by-step. We
 will link to a more detailed description where appropriate.
 
+.. warning:: We recommend exchanges to disable BitShares **1.0** withdrawals and
+   deposits before the snapshot takes place (**Di 13. Okt 13:00:00 UTC 2015**)
+   and re-enable both after successfull migration to BitShares **2.0**!
+
 Installation
 ############
 
