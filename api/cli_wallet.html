@@ -147,6 +147,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../testnet/index.html">Testnets</a></li>
 </ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../meta/index.html">Meta</a></li>
+</ul>
 
     </div>
    </div>
@@ -293,7 +296,7 @@ not offer P2P or blockchain capabilities.</p>
 <dt id="_CPPv2N8graphene6wallet10wallet_api13list_accountsERK6string8uint32_t">
 <span id="graphene::wallet::wallet_api::list_accounts__stringCR.uint32_t"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1ade01cfbd19d3aa965d96ce4931880e40"></span>map&lt;string, account_id_type&gt; <code class="descname">list_accounts</code><span class="sig-paren">(</span><em class="property">const</em> string &amp;<em>lowerbound</em>, uint32_t <em>limit</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api13list_accountsERK6string8uint32_t" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists all accounts registered in the blockchain. This returns a list of all account names and their account ids, sorted by account name.</p>
-<p>Use the <code class="docutils literal"><span class="pre">lowerbound</span></code> and limit parameters to page through the list. To retrieve all accounts, start by setting <code class="docutils literal"><span class="pre">lowerbound</span></code> to the empty string <code class="docutils literal"><span class="pre">&quot;&quot;</span></code>, and then each iteration, pass the last account name returned as the <code class="docutils literal"><span class="pre">lowerbound</span></code> for the next <code class="docutils literal"><a class="reference internal" href="#grapheneclassgraphene_1_1wallet_1_1wallet__api_1ade01cfbd19d3aa965d96ce4931880e40"><span><span class="pre">list_accounts()</span></span></a></code> call.</p>
+<p>Use the <code class="docutils literal"><span class="pre">lowerbound</span></code> and limit parameters to page through the list. To retrieve all accounts, start by setting <code class="docutils literal"><span class="pre">lowerbound</span></code> to the empty string <code class="docutils literal"><span class="pre">&quot;&quot;</span></code>, and then each iteration, pass the last account name returned as the <code class="docutils literal"><span class="pre">lowerbound</span></code> for the next <code class="docutils literal"><a class="reference internal" href="../namespaces/wallet.html#grapheneclassgraphene_1_1wallet_1_1wallet__api_1ade01cfbd19d3aa965d96ce4931880e40"><span><span class="pre">list_accounts()</span></span></a></code> call.</p>
 <p><dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>a list of accounts mapping account names to account ids </dd>
@@ -392,7 +395,7 @@ not offer P2P or blockchain capabilities.</p>
 <span id="graphene::wallet::wallet_api::get_global_properties"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1a85481b478b00eec558b21e43b917738f"></span>global_property_object <code class="descname">get_global_properties</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api21get_global_propertiesEv" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the block chain&#8217;s slowly-changing settings. This object contains all of the properties of the blockchain that are fixed or that change only once per maintenance interval (daily) such as the current list of witnesses, committee_members, block interval, etc. <dl class="docutils">
 <dt><strong>See</strong></dt>
-<dd><code class="docutils literal"><a class="reference internal" href="#grapheneclassgraphene_1_1wallet_1_1wallet__api_1ab050f5ee3b059a96f9a13878b671b2bf"><span><span class="pre">get_dynamic_global_properties()</span></span></a></code> for frequently changing properties </dd>
+<dd><code class="docutils literal"><a class="reference internal" href="../namespaces/wallet.html#grapheneclassgraphene_1_1wallet_1_1wallet__api_1ab050f5ee3b059a96f9a13878b671b2bf"><span><span class="pre">get_dynamic_global_properties()</span></span></a></code> for frequently changing properties </dd>
 <dt><strong>Return</strong></dt>
 <dd>the global properties </dd>
 </dl>
@@ -404,7 +407,7 @@ not offer P2P or blockchain capabilities.</p>
 <span id="graphene::wallet::wallet_api::get_dynamic_global_properties"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1ab050f5ee3b059a96f9a13878b671b2bf"></span>dynamic_global_property_object <code class="descname">get_dynamic_global_properties</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api29get_dynamic_global_propertiesEv" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the block chain&#8217;s rapidly-changing properties. The returned object contains information that changes every block interval such as the head block number, the next witness, etc. <dl class="docutils">
 <dt><strong>See</strong></dt>
-<dd><code class="docutils literal"><a class="reference internal" href="#grapheneclassgraphene_1_1wallet_1_1wallet__api_1a85481b478b00eec558b21e43b917738f"><span><span class="pre">get_global_properties()</span></span></a></code> for less-frequently changing properties </dd>
+<dd><code class="docutils literal"><a class="reference internal" href="../namespaces/wallet.html#grapheneclassgraphene_1_1wallet_1_1wallet__api_1a85481b478b00eec558b21e43b917738f"><span><span class="pre">get_global_properties()</span></span></a></code> for less-frequently changing properties </dd>
 <dt><strong>Return</strong></dt>
 <dd>the dynamic global properties </dd>
 </dl>
@@ -447,7 +450,7 @@ not offer P2P or blockchain capabilities.</p>
 <dl class="function">
 <dt id="_CPPv2N8graphene6wallet10wallet_api17get_bitasset_dataE6string">
 <span id="graphene::wallet::wallet_api::get_bitasset_data__string"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1a5884b3a9407f8dc7ab08fdf301972ebd"></span>asset_bitasset_data_object <code class="descname">get_bitasset_data</code><span class="sig-paren">(</span>string <em>asset_name_or_id</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api17get_bitasset_dataE6string" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the BitAsset-specific data for a given asset. Market-issued assets&#8217;s behavior are determined both by their &#8220;BitAsset Data&#8221; and their basic asset data, as returned by <code class="docutils literal"><a class="reference internal" href="#grapheneclassgraphene_1_1wallet_1_1wallet__api_1adeba50e052ff409fe1d19cc9e50e9a8f"><span><span class="pre">get_asset()</span></span></a></code>. <dl class="docutils">
+<dd><p>Returns the BitAsset-specific data for a given asset. Market-issued assets&#8217;s behavior are determined both by their &#8220;BitAsset Data&#8221; and their basic asset data, as returned by <code class="docutils literal"><a class="reference internal" href="../namespaces/wallet.html#grapheneclassgraphene_1_1wallet_1_1wallet__api_1adeba50e052ff409fe1d19cc9e50e9a8f"><span><span class="pre">get_asset()</span></span></a></code>. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>the BitAsset-specific data for this asset </dd>
 <dt><strong>Parameters</strong></dt>
@@ -496,7 +499,7 @@ not offer P2P or blockchain capabilities.</p>
 <dt id="_CPPv2N8graphene6wallet10wallet_api10get_objectE14object_id_type">
 <span id="graphene::wallet::wallet_api::get_object__object_id_type"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1a986966705420db7db5b7744956f763fe"></span>variant <code class="descname">get_object</code><span class="sig-paren">(</span>object_id_type <em>id</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api10get_objectE14object_id_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the blockchain object corresponding to the given id.</p>
-<p>This generic function can be used to retrieve any object from the blockchain that is assigned an ID. Certain types of objects have specialized convenience functions to return their objects  e.g., assets have <code class="docutils literal"><a class="reference internal" href="#grapheneclassgraphene_1_1wallet_1_1wallet__api_1adeba50e052ff409fe1d19cc9e50e9a8f"><span><span class="pre">get_asset()</span></span></a></code>, accounts have <code class="docutils literal"><a class="reference internal" href="#grapheneclassgraphene_1_1wallet_1_1wallet__api_1a479f699f7b704636e80a44bf8397d341"><span><span class="pre">get_account()</span></span></a></code>, but this function will work for any object.</p>
+<p>This generic function can be used to retrieve any object from the blockchain that is assigned an ID. Certain types of objects have specialized convenience functions to return their objects  e.g., assets have <code class="docutils literal"><a class="reference internal" href="../namespaces/wallet.html#grapheneclassgraphene_1_1wallet_1_1wallet__api_1adeba50e052ff409fe1d19cc9e50e9a8f"><span><span class="pre">get_asset()</span></span></a></code>, accounts have <code class="docutils literal"><a class="reference internal" href="../namespaces/wallet.html#grapheneclassgraphene_1_1wallet_1_1wallet__api_1a479f699f7b704636e80a44bf8397d341"><span><span class="pre">get_account()</span></span></a></code>, but this function will work for any object.</p>
 <p><dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>the requested object </dd>
@@ -517,7 +520,7 @@ not offer P2P or blockchain capabilities.</p>
 <p>This is the filename that will be used when automatically saving the wallet.</p>
 <p><dl class="docutils">
 <dt><strong>See</strong></dt>
-<dd><a class="reference internal" href="#grapheneclassgraphene_1_1wallet_1_1wallet__api_1aa5804e1ee29ff8f2c3bcc668ad2bfbcd"><span>set_wallet_filename()</span></a> </dd>
+<dd><a class="reference internal" href="../namespaces/wallet.html#grapheneclassgraphene_1_1wallet_1_1wallet__api_1aa5804e1ee29ff8f2c3bcc668ad2bfbcd"><span>set_wallet_filename()</span></a> </dd>
 <dt><strong>Return</strong></dt>
 <dd>the wallet filename </dd>
 </dl>
@@ -585,7 +588,7 @@ not offer P2P or blockchain capabilities.</p>
 <dt id="_CPPv2N8graphene6wallet10wallet_api9is_lockedEv">
 <span id="graphene::wallet::wallet_api::is_locked"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1ac9e44c26f1c4a0e447c94b503095ef57"></span>bool <code class="descname">is_locked</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api9is_lockedEv" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks whether the wallet is locked (is unable to use its private keys).</p>
-<p>This state can be changed by calling <code class="docutils literal"><a class="reference internal" href="#grapheneclassgraphene_1_1wallet_1_1wallet__api_1a5e7950c9039f0c59e1266d6732d94e09"><span><span class="pre">lock()</span></span></a></code> or <code class="docutils literal"><a class="reference internal" href="#grapheneclassgraphene_1_1wallet_1_1wallet__api_1ae16994a63cfdef1616b6b968117fd29d"><span><span class="pre">unlock()</span></span></a></code>. <dl class="docutils">
+<p>This state can be changed by calling <code class="docutils literal"><a class="reference internal" href="../namespaces/wallet.html#grapheneclassgraphene_1_1wallet_1_1wallet__api_1a5e7950c9039f0c59e1266d6732d94e09"><span><span class="pre">lock()</span></span></a></code> or <code class="docutils literal"><a class="reference internal" href="../namespaces/wallet.html#grapheneclassgraphene_1_1wallet_1_1wallet__api_1ae16994a63cfdef1616b6b968117fd29d"><span><span class="pre">unlock()</span></span></a></code>. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>true if the wallet is locked </dd>
 </dl>
@@ -605,7 +608,7 @@ not offer P2P or blockchain capabilities.</p>
 <p>The wallet remain unlocked until the <code class="docutils literal"><span class="pre">lock</span></code> is called or the program exits. <dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last">
-<li><code class="first docutils literal"><span class="pre">password</span></code> - <p>the password previously set with <code class="docutils literal"><a class="reference internal" href="#grapheneclassgraphene_1_1wallet_1_1wallet__api_1a2a5d174ec4fde8633b8e962fabc00804"><span><span class="pre">set_password()</span></span></a></code> </p>
+<li><code class="first docutils literal"><span class="pre">password</span></code> - <p>the password previously set with <code class="docutils literal"><a class="reference internal" href="../namespaces/wallet.html#grapheneclassgraphene_1_1wallet_1_1wallet__api_1a2a5d174ec4fde8633b8e962fabc00804"><span><span class="pre">set_password()</span></span></a></code> </p>
 </li>
 </ul>
 </dd>
@@ -624,7 +627,7 @@ not offer P2P or blockchain capabilities.</p>
 <dt id="_CPPv2N8graphene6wallet10wallet_api17dump_private_keysEv">
 <span id="graphene::wallet::wallet_api::dump_private_keys"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1a98369ea6e10699066c7beb181996a219"></span>map&lt;public_key_type, string&gt; <code class="descname">dump_private_keys</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api17dump_private_keysEv" title="Permalink to this definition">¶</a></dt>
 <dd><p>Dumps all private keys owned by the wallet.</p>
-<p>The keys are printed in WIF format. You can import these keys into another wallet using <code class="docutils literal"><a class="reference internal" href="#grapheneclassgraphene_1_1wallet_1_1wallet__api_1a45e93f4a83143cb8ec6a09b67f91f4bb"><span><span class="pre">import_key()</span></span></a></code> <dl class="docutils">
+<p>The keys are printed in WIF format. You can import these keys into another wallet using <code class="docutils literal"><a class="reference internal" href="../namespaces/wallet.html#grapheneclassgraphene_1_1wallet_1_1wallet__api_1a45e93f4a83143cb8ec6a09b67f91f4bb"><span><span class="pre">import_key()</span></span></a></code> <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>a map containing the private keys, indexed by their public key </dd>
 </dl>
@@ -666,7 +669,7 @@ not offer P2P or blockchain capabilities.</p>
 <p>The current wallet is closed before the new wallet is loaded.</p>
 <p><dl class="docutils">
 <dt><strong>Warning</strong></dt>
-<dd>This does not change the filename that will be used for future wallet writes, so this may cause you to overwrite your original wallet unless you also call <code class="docutils literal"><a class="reference internal" href="#grapheneclassgraphene_1_1wallet_1_1wallet__api_1aa5804e1ee29ff8f2c3bcc668ad2bfbcd"><span><span class="pre">set_wallet_filename()</span></span></a></code> </dd>
+<dd>This does not change the filename that will be used for future wallet writes, so this may cause you to overwrite your original wallet unless you also call <code class="docutils literal"><a class="reference internal" href="../namespaces/wallet.html#grapheneclassgraphene_1_1wallet_1_1wallet__api_1aa5804e1ee29ff8f2c3bcc668ad2bfbcd"><span><span class="pre">set_wallet_filename()</span></span></a></code> </dd>
 <dt><strong>Return</strong></dt>
 <dd>true if the specified wallet is loaded </dd>
 <dt><strong>Parameters</strong></dt>
@@ -685,7 +688,7 @@ not offer P2P or blockchain capabilities.</p>
 <dd><p>Saves the current wallet to the given filename.</p>
 <p><dl class="docutils">
 <dt><strong>Warning</strong></dt>
-<dd>This does not change the wallet filename that will be used for future writes, so think of this function as &#8216;Save a Copy As...&#8217; instead of &#8216;Save As...&#8217;. Use <code class="docutils literal"><a class="reference internal" href="#grapheneclassgraphene_1_1wallet_1_1wallet__api_1aa5804e1ee29ff8f2c3bcc668ad2bfbcd"><span><span class="pre">set_wallet_filename()</span></span></a></code> to make the filename persist. </dd>
+<dd>This does not change the wallet filename that will be used for future writes, so think of this function as &#8216;Save a Copy As...&#8217; instead of &#8216;Save As...&#8217;. Use <code class="docutils literal"><a class="reference internal" href="../namespaces/wallet.html#grapheneclassgraphene_1_1wallet_1_1wallet__api_1aa5804e1ee29ff8f2c3bcc668ad2bfbcd"><span><span class="pre">set_wallet_filename()</span></span></a></code> to make the filename persist. </dd>
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last">
 <li><code class="first docutils literal"><span class="pre">wallet_filename</span></code> - <p>the filename of the new wallet JSON file to create or overwrite. If <code class="docutils literal"><span class="pre">wallet_filename</span></code> is empty, save to the current filename. </p>
@@ -715,7 +718,7 @@ not offer P2P or blockchain capabilities.</p>
 <dl class="function">
 <dt id="_CPPv2N8graphene6wallet10wallet_api17suggest_brain_keyEv">
 <span id="graphene::wallet::wallet_api::suggest_brain_key"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1a3062c701e73acd60c6ffa74ea47c5cc1"></span>brain_key_info <code class="descname">suggest_brain_key</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api17suggest_brain_keyEv" title="Permalink to this definition">¶</a></dt>
-<dd><p>Suggests a safe brain key to use for creating your account. <code class="docutils literal"><a class="reference internal" href="#grapheneclassgraphene_1_1wallet_1_1wallet__api_1ac27928f7ca6db74e0ec4aee3ff0c545e"><span><span class="pre">create_account_with_brain_key()</span></span></a></code> requires you to specify a &#8216;brain key&#8217;, a long passphrase that provides enough entropy to generate cyrptographic keys. This function will suggest a suitably random string that should be easy to write down (and, with effort, memorize). <dl class="docutils">
+<dd><p>Suggests a safe brain key to use for creating your account. <code class="docutils literal"><a class="reference internal" href="../namespaces/wallet.html#grapheneclassgraphene_1_1wallet_1_1wallet__api_1ac27928f7ca6db74e0ec4aee3ff0c545e"><span><span class="pre">create_account_with_brain_key()</span></span></a></code> requires you to specify a &#8216;brain key&#8217;, a long passphrase that provides enough entropy to generate cyrptographic keys. This function will suggest a suitably random string that should be easy to write down (and, with effort, memorize). <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>a suggested brain_key </dd>
 </dl>
@@ -747,7 +750,7 @@ not offer P2P or blockchain capabilities.</p>
 <p>The private key must match either an owner key or an active key for the named account.</p>
 <p><dl class="docutils">
 <dt><strong>See</strong></dt>
-<dd><a class="reference internal" href="#grapheneclassgraphene_1_1wallet_1_1wallet__api_1a98369ea6e10699066c7beb181996a219"><span>dump_private_keys()</span></a></dd>
+<dd><a class="reference internal" href="../namespaces/wallet.html#grapheneclassgraphene_1_1wallet_1_1wallet__api_1a98369ea6e10699066c7beb181996a219"><span>dump_private_keys()</span></a></dd>
 <dt><strong>Return</strong></dt>
 <dd>true if the key was imported </dd>
 <dt><strong>Parameters</strong></dt>
@@ -802,7 +805,7 @@ not offer P2P or blockchain capabilities.</p>
 <p>This function is used to register an account for which you do not own the private keys. When acting as a registrar, an end user will generate their own private keys and send you the public keys. The registrar will use this function to register the account on behalf of the end user.</p>
 <p><dl class="docutils">
 <dt><strong>See</strong></dt>
-<dd><a class="reference internal" href="#grapheneclassgraphene_1_1wallet_1_1wallet__api_1ac27928f7ca6db74e0ec4aee3ff0c545e"><span>create_account_with_brain_key()</span></a></dd>
+<dd><a class="reference internal" href="../namespaces/wallet.html#grapheneclassgraphene_1_1wallet_1_1wallet__api_1ac27928f7ca6db74e0ec4aee3ff0c545e"><span>create_account_with_brain_key()</span></a></dd>
 <dt><strong>Return</strong></dt>
 <dd>the signed transaction registering the account </dd>
 <dt><strong>Parameters</strong></dt>
@@ -841,9 +844,9 @@ not offer P2P or blockchain capabilities.</p>
 <p></p>
 <p><dl class="docutils">
 <dt><strong>See</strong></dt>
-<dd><a class="reference internal" href="#grapheneclassgraphene_1_1wallet_1_1wallet__api_1a3062c701e73acd60c6ffa74ea47c5cc1"><span>suggest_brain_key()</span></a> </dd>
+<dd><a class="reference internal" href="../namespaces/wallet.html#grapheneclassgraphene_1_1wallet_1_1wallet__api_1a3062c701e73acd60c6ffa74ea47c5cc1"><span>suggest_brain_key()</span></a> </dd>
 <dt><strong>See</strong></dt>
-<dd><a class="reference internal" href="#grapheneclassgraphene_1_1wallet_1_1wallet__api_1abacf0448b5c3970f1f374b2016c10c01"><span>register_account()</span></a></dd>
+<dd><a class="reference internal" href="../namespaces/wallet.html#grapheneclassgraphene_1_1wallet_1_1wallet__api_1abacf0448b5c3970f1f374b2016c10c01"><span>register_account()</span></a></dd>
 <dt><strong>Return</strong></dt>
 <dd>the signed transaction registering the account </dd>
 <dt><strong>Parameters</strong></dt>
@@ -985,7 +988,7 @@ not offer P2P or blockchain capabilities.</p>
 <dt id="_CPPv2N8graphene6wallet10wallet_api12borrow_assetE6string6string6string6stringb">
 <span id="graphene::wallet::wallet_api::borrow_asset__string.string.string.string.b"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1a289195f6aa33668056993ee3caeceb39"></span>signed_transaction <code class="descname">borrow_asset</code><span class="sig-paren">(</span>string <em>borrower_name</em>, string <em>amount_to_borrow</em>, string <em>asset_symbol</em>, string <em>amount_of_collateral</em>, bool <em>broadcast</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api12borrow_assetE6string6string6string6stringb" title="Permalink to this definition">¶</a></dt>
 <dd><p>Borrow an asset or update the debt/collateral ratio for the loan.</p>
-<p>This is the first step in shorting an asset. Call <code class="docutils literal"><a class="reference internal" href="#grapheneclassgraphene_1_1wallet_1_1wallet__api_1aeb0d71a0ed4c6d05a003e48c3a0cb6d3"><span><span class="pre">sell_asset()</span></span></a></code> to complete the short.</p>
+<p>This is the first step in shorting an asset. Call <code class="docutils literal"><a class="reference internal" href="../namespaces/wallet.html#grapheneclassgraphene_1_1wallet_1_1wallet__api_1aeb0d71a0ed4c6d05a003e48c3a0cb6d3"><span><span class="pre">sell_asset()</span></span></a></code> to complete the short.</p>
 <p><dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>the signed transaction borrowing the asset </dd>
@@ -1011,7 +1014,7 @@ not offer P2P or blockchain capabilities.</p>
 <dt id="_CPPv2N8graphene6wallet10wallet_api12create_assetE6string6string7uint8_t13asset_optionsN2fc8optionalI16bitasset_optionsEEb">
 <span id="graphene::wallet::wallet_api::create_asset__string.string.uint8_t.asset_options.fc::optional:bitasset_options:.b"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1ae3028048916580695639fee8e9d815be"></span>signed_transaction <code class="descname">create_asset</code><span class="sig-paren">(</span>string <em>issuer</em>, string <em>symbol</em>, uint8_t <em>precision</em>, asset_options <em>common</em>, fc::optional&lt;bitasset_options&gt; <em>bitasset_opts</em>, bool <em>broadcast</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api12create_assetE6string6string7uint8_t13asset_optionsN2fc8optionalI16bitasset_optionsEEb" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new user-issued or market-issued asset.</p>
-<p>Many options can be changed later using <code class="docutils literal"><a class="reference internal" href="#grapheneclassgraphene_1_1wallet_1_1wallet__api_1a6c2a57593b39390b286efeecca2702d6"><span><span class="pre">update_asset()</span></span></a></code> </p>
+<p>Many options can be changed later using <code class="docutils literal"><a class="reference internal" href="../namespaces/wallet.html#grapheneclassgraphene_1_1wallet_1_1wallet__api_1a6c2a57593b39390b286efeecca2702d6"><span><span class="pre">update_asset()</span></span></a></code> </p>
 <p>Right now this function is difficult to use because you must provide raw JSON data structures for the options objects, and those include prices and asset ids.</p>
 <p><dl class="docutils">
 <dt><strong>Return</strong></dt>
@@ -1067,7 +1070,7 @@ not offer P2P or blockchain capabilities.</p>
 <dd><p>Update the core options on an asset. There are a number of options which all assets in the network use. These options are enumerated in the asset_object::asset_options struct. This command is used to update these options for an existing asset.</p>
 <p><dl class="docutils">
 <dt><strong>Note</strong></dt>
-<dd>This operation cannot be used to update BitAsset-specific options. For these options, <code class="docutils literal"><a class="reference internal" href="#grapheneclassgraphene_1_1wallet_1_1wallet__api_1aebe4459f45a748739595939d60b95b6b"><span><span class="pre">update_bitasset()</span></span></a></code> instead.</dd>
+<dd>This operation cannot be used to update BitAsset-specific options. For these options, <code class="docutils literal"><a class="reference internal" href="../namespaces/wallet.html#grapheneclassgraphene_1_1wallet_1_1wallet__api_1aebe4459f45a748739595939d60b95b6b"><span><span class="pre">update_bitasset()</span></span></a></code> instead.</dd>
 <dt><strong>Return</strong></dt>
 <dd>the signed transaction updating the asset </dd>
 <dt><strong>Parameters</strong></dt>
@@ -1093,7 +1096,7 @@ not offer P2P or blockchain capabilities.</p>
 <p>BitAssets have some options which are not relevant to other asset types. This operation is used to update those options an an existing BitAsset.</p>
 <p><dl class="docutils">
 <dt><strong>See</strong></dt>
-<dd><a class="reference internal" href="#grapheneclassgraphene_1_1wallet_1_1wallet__api_1a6c2a57593b39390b286efeecca2702d6"><span>update_asset()</span></a></dd>
+<dd><a class="reference internal" href="../namespaces/wallet.html#grapheneclassgraphene_1_1wallet_1_1wallet__api_1a6c2a57593b39390b286efeecca2702d6"><span>update_asset()</span></a></dd>
 <dt><strong>Return</strong></dt>
 <dd>the signed transaction updating the bitasset </dd>
 <dt><strong>Parameters</strong></dt>
@@ -1214,7 +1217,7 @@ not offer P2P or blockchain capabilities.</p>
 <p>When this operation is executed all balances are converted into the backing asset at the settle_price and all open margin positions are called at the settle price. If this asset is used as backing for other bitassets, those bitassets will be force settled at their current feed price.</p>
 <p><dl class="docutils">
 <dt><strong>Note</strong></dt>
-<dd>this operation is used only by the asset issuer, <code class="docutils literal"><a class="reference internal" href="#grapheneclassgraphene_1_1wallet_1_1wallet__api_1a95a3baa4b0c83c1fce14827acbbddd62"><span><span class="pre">settle_asset()</span></span></a></code> may be used by any user owning the asset</dd>
+<dd>this operation is used only by the asset issuer, <code class="docutils literal"><a class="reference internal" href="../namespaces/wallet.html#grapheneclassgraphene_1_1wallet_1_1wallet__api_1a95a3baa4b0c83c1fce14827acbbddd62"><span><span class="pre">settle_asset()</span></span></a></code> may be used by any user owning the asset</dd>
 <dt><strong>Return</strong></dt>
 <dd>the signed transaction settling the named asset </dd>
 <dt><strong>Parameters</strong></dt>
@@ -1326,7 +1329,7 @@ not offer P2P or blockchain capabilities.</p>
 <dt id="_CPPv2N8graphene6wallet10wallet_api22list_committee_membersERK6string8uint32_t">
 <span id="graphene::wallet::wallet_api::list_committee_members__stringCR.uint32_t"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1ab08449f00d6b4147787b23afa7aa6af6"></span>map&lt;string, committee_member_id_type&gt; <code class="descname">list_committee_members</code><span class="sig-paren">(</span><em class="property">const</em> string &amp;<em>lowerbound</em>, uint32_t <em>limit</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api22list_committee_membersERK6string8uint32_t" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lists all committee_members registered in the blockchain. This returns a list of all account names that own committee_members, and the associated committee_member id, sorted by name. This lists committee_members whether they are currently voted in or not.</p>
-<p>Use the <code class="docutils literal"><span class="pre">lowerbound</span></code> and limit parameters to page through the list. To retrieve all committee_members, start by setting <code class="docutils literal"><span class="pre">lowerbound</span></code> to the empty string <code class="docutils literal"><span class="pre">&quot;&quot;</span></code>, and then each iteration, pass the last committee_member name returned as the <code class="docutils literal"><span class="pre">lowerbound</span></code> for the next <code class="docutils literal"><a class="reference internal" href="#grapheneclassgraphene_1_1wallet_1_1wallet__api_1ab08449f00d6b4147787b23afa7aa6af6"><span><span class="pre">list_committee_members()</span></span></a></code> call.</p>
+<p>Use the <code class="docutils literal"><span class="pre">lowerbound</span></code> and limit parameters to page through the list. To retrieve all committee_members, start by setting <code class="docutils literal"><span class="pre">lowerbound</span></code> to the empty string <code class="docutils literal"><span class="pre">&quot;&quot;</span></code>, and then each iteration, pass the last committee_member name returned as the <code class="docutils literal"><span class="pre">lowerbound</span></code> for the next <code class="docutils literal"><a class="reference internal" href="../namespaces/wallet.html#grapheneclassgraphene_1_1wallet_1_1wallet__api_1ab08449f00d6b4147787b23afa7aa6af6"><span><span class="pre">list_committee_members()</span></span></a></code> call.</p>
 <p><dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>a list of committee_members mapping committee_member names to committee_member ids </dd>

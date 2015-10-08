@@ -147,6 +147,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../testnet/index.html">Testnets</a></li>
 </ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../meta/index.html">Meta</a></li>
+</ul>
 
     </div>
    </div>
@@ -174,16 +177,16 @@ sources according to:</p>
 <div class="section" id="running-daemons-and-wallet">
 <h2>Running Daemons and Wallet<a class="headerlink" href="#running-daemons-and-wallet" title="Permalink to this headline">¶</a></h2>
 <p>For security reasons we will run two daemons and a wallet according to these
-diagram::</p>
-<div class="highlight-python"><div class="highlight"><pre>                            +---&gt;  Delayed Full Node ---&gt; Deposit API
-                            |
-                            |
-P2P network   &lt;-&gt;   Trusted Full Node
-                            ^
-                            |
-                            +&lt;--------  Wallet &lt;--------- Withdraw API
-</pre></div>
-</div>
+diagram:</p>
+<p class="graphviz">
+<img src="../_images/graphviz-7d9d81c4365a706c191d79f0fdea4ebcdb49b043.svg" alt="digraph foo {
+ rankdir=LR
+ node [shape=box]
+ &quot;P2P network&quot; -&gt; &quot;Trusted Full Node&quot; [dir=&quot;both&quot;]
+ &quot;Trusted Full Node&quot; -&gt; &quot;Delayed Full Node&quot; -&gt; &quot;Deposit API&quot;
+ &quot;Trusted Full Node&quot; -&gt; &quot;Wallet&quot; -&gt; &quot;Withdraw API&quot;
+}" />
+</p>
 <p>In this tutorial we will run all deamons and the wallet on the same machine and
 use different ports to distinguish them:</p>
 <ul class="simple">
@@ -278,6 +281,22 @@ BitShares 1: &gt;&gt;&gt; wallet_dump_private_key &lt;active_key&gt;
 </div>
 <p>This gives access to the funds stored in <code class="docutils literal"><span class="pre">&lt;account-name&gt;</span></code>. We will need the
 memo private key later when watching deposits.</p>
+</div>
+<div class="section" id="claiming-bitshares-1-0-funds">
+<h3>Claiming BitShares 1.0 funds<a class="headerlink" href="#claiming-bitshares-1-0-funds" title="Permalink to this headline">¶</a></h3>
+<p>We now describe how to claim your funds from the Bitshares 1 blockchain so you
+can use them in BitShares 2.</p>
+<p>For <strong>Coldstorage</strong> and plain private keys, we recommend to use:</p>
+<div class="highlight-python"><div class="highlight"><pre>import_balance &lt;accountname&gt; &lt;private_key&gt; false
+</pre></div>
+</div>
+<p>to import all balances that are locked in the private key into the account named
+<code class="docutils literal"><span class="pre">&lt;accountname</span></code>. As long as the last argument is <code class="docutils literal"><span class="pre">false</span></code> the transaction will
+only be printed for audit and not be broadcasted or executed. <strong>Only</strong> after
+changing <code class="docutils literal"><span class="pre">false</span></code> to <code class="docutils literal"><span class="pre">true</span></code> will the balances be claimed!</p>
+<p>For your hot wallet (or any other active wallet running in the BitShares 1
+client) we recommend to use the GUI to claim your funds from hot wallet as
+described <a class="reference internal" href="../migration/howto-importing-wallet.html"><em>here</em></a>.</p>
 </div>
 </div>
 <div class="section" id="watching-deposits-with-python">

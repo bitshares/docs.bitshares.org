@@ -17,9 +17,19 @@ this may lead to a few minutes of delay.
 Overview of the Setup
 #####################
 
-In the following, we will setup and use the following network:::
+In the following, we will setup and use the following network:
 
-                                +--->  Delayed Full Node ---> Deposit API
+.. graphviz::
+
+   digraph foo {
+    rankdir=LR
+    node [shape=box]
+    "P2P network" -> "Trusted Full Node" [dir="both"]
+    "Trusted Full Node" -> "Delayed Full Node" -> "Deposit API"
+    "Trusted Full Node" -> "Wallet" -> "Withdraw API"
+   }
+
+..                              +--->  Delayed Full Node ---> Deposit API
                                 |
                                 |
     P2P network   <->   Trusted Full Node 

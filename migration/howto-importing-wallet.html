@@ -143,6 +143,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../testnet/index.html">Testnets</a></li>
 </ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../meta/index.html">Meta</a></li>
+</ul>
 
     </div>
    </div>
@@ -162,12 +165,37 @@
 <p>The web wallet of BitShares 2.0 has a <strong>Wallet management Console.</strong> that will
 help you import your funds. It can be access via <cite>BitShares 2.0: Settings -&gt; Wallets</cite></p>
 <a class="reference internal image-reference" href="../_images/wallet-management-console.png"><img alt="Wallet Management Console in BitShares 2.0" class="align-center" src="../_images/wallet-management-console.png" style="width: 550px;" /></a>
-<p>Here you can provide the wallet backup file produced from BitShares 0.9.3c
-You will be asked to define where to put your individual balances if you have
-multiple accounts.</p>
+<p>In order to import your existing accounts and claim all your funds you need to
+choose <code class="docutils literal"><span class="pre">Import</span> <span class="pre">Keys</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If loading the file files with <code class="docutils literal"><span class="pre">invalid</span> <span class="pre">format</span></code> please ensure that
+you have followed the steps described <a class="reference internal" href="howto-exporting-wallet.html"><em>Exporting Your Wallet</em></a> and make
+sure to click <code class="docutils literal"><span class="pre">Import</span> <span class="pre">Keys</span></code> and <strong>not</strong> <code class="docutils literal"><span class="pre">Restore</span> <span class="pre">Backup</span></code>.</p>
+</div>
+<a class="reference internal image-reference" href="../_images/wallet-management-console-import-keys.png"><img alt="Wallet Management Console in BitShares 2.0 -- Import Keys" class="align-center" src="../_images/wallet-management-console-import-keys.png" style="width: 550px;" /></a>
+<p>Here you can provide the wallet backup file produced from BitShares 0.9.3c and
+the pass phrase. Depending on the size of your import file, this step may take
+some time to auto-complete. Please be patient.</p>
 <a class="reference internal image-reference" href="../_images/import-keys.png"><img alt="Import Wallet Backup from BitShares 1.0" class="align-center" src="../_images/import-keys.png" style="width: 550px;" /></a>
+<p>The wallet will list all of your accounts including the number of private keys
+stored in the account names accordingly. The more often you have used your
+account, the higher this number should be. Confirm by pressing <code class="docutils literal"><span class="pre">Import</span></code>.</p>
+<a class="reference internal image-reference" href="../_images/wallet-management-console-imported-keys.png"><img alt="Import accounts" class="align-center" src="../_images/wallet-management-console-imported-keys.png" style="width: 550px;" /></a>
+<p>The wallet management console will now give an overview over unclaimed balances.</p>
+<a class="reference internal image-reference" href="../_images/wallet-management-console-claim-balances.png"><img alt="Import accounts" class="align-center" src="../_images/wallet-management-console-claim-balances.png" style="width: 550px;" /></a>
+<p>If you click on <code class="docutils literal"><span class="pre">Balance</span> <span class="pre">Claim</span></code> you will be brought to this screen.</p>
+<a class="reference internal image-reference" href="../_images/wallet-management-console-claiming-balances.png"><img alt="Import accounts" class="align-center" src="../_images/wallet-management-console-claiming-balances.png" style="width: 550px;" /></a>
+<p>You are asked to define where to put your individual balances if you have
+multiple accounts.</p>
 <p>After confirming all required steps, your accounts and the balances should
 appear accordingly.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">After importing your accounts and balances, we recommend to make a
+new backup of your wallet that will then contain access to your newly
+imported accounts and corresponding balances.</p>
+</div>
 </div>
 <div class="section" id="cli-wallet">
 <h2>CLI wallet<a class="headerlink" href="#cli-wallet" title="Permalink to this headline">¶</a></h2>
@@ -181,7 +209,7 @@ The proper syntax to do so is:</p>
 <div class="highlight-python"><div class="highlight"><pre>import_balance &lt;account name&gt; &lt;private key&gt; true
 </pre></div>
 </div>
-<p>But I always import my accounts and then use the gui to import my balances cause
+<p>But I always import my accounts and then use the GUI to import my balances cause
 it&#8217;s way easier.</p>
 </div>
 </div>
