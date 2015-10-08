@@ -22,7 +22,9 @@ exchange, or fiat-gateway.
 .. toctree::
 
    step-by-step
-   OftenUsedCalls
+
+For exchanges we recommend to also read :doc:`what-is-different` and
+:doc:`OftenUsedCalls`.
 
 -------
 
@@ -31,6 +33,7 @@ exchange, or fiat-gateway.
 .. toctree::
 
    Overview
+   what-is-different
    SupportingFeatures
    Interfacing
    NetworkSetup
