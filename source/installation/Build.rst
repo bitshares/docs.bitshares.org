@@ -101,11 +101,24 @@ install directory of boost if you have installed it manually.
 Distribution Specific Settings
 ##############################
 
+Ubuntu 14.04
+************
+
+As ``g++-4.9`` isn't available in 14.04 LTS, you need to do this first:::
+
+    sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+    sudo apt-get update
+
+If you get build failures due to abi incompatibilities, just use gcc 4.9::
+
+    CC=gcc-4.9 CXX=g++-4.9 cmake .
+
+
 Ubuntu 15.04
 ************
 
-  Ubuntu 15.04 uses gcc 5, which has the c++11 ABI as default, but the boost
-  libraries were compiled with the cxx11 ABI (this is an issue in many distros).
-  If you get build failures due to abi incompatibilities, just use gcc 4.9::
+Ubuntu 15.04 uses gcc 5, which has the c++11 ABI as default, but the boost
+libraries were compiled with the cxx11 ABI (this is an issue in many distros).
+If you get build failures due to abi incompatibilities, just use gcc 4.9::
 
-      CC=gcc-4.9 CXX=g++-4.9 cmake .
+    CC=gcc-4.9 CXX=g++-4.9 cmake .
