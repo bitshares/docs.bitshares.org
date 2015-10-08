@@ -8,11 +8,19 @@ $mono-font = Menlo, monospace
 
 // Margins
 $pad = 40px      // Space between things
-$sidepad = 10px  // Padding to the left of the sidebar
+$sidepad = 15px  // Padding to the left of the sidebar
 $minipad = 20px  // Space for mobile
 $vmargin = 10px  // Margin between blocks
 
 // Colors
+$btsblue1 = #B2D0DA
+$btsblue2 = #9FC9D7
+$btsblue3 = #8AC2D5
+$btsblue4 = #77BCD3
+$btsblue5 = #62B5D1
+$btsblue6 = #4BB0CF
+$btsblue7 = #00587C
+
 $offwhite = #f3f6fb
 $grey = #9090aa
 $txt = #505050
@@ -23,9 +31,10 @@ $line = #e4e7ec * 0.98
 $shadow-str = 0.1
 
 // Dimensions
-$sidebar-width = 230px
-$content-width = 850px
-$pre-width     = 80px
+$sidebar-width = 300px
+$content-width = 880px
+$pre-width     = 0px
+$maxWidthContent = 850px
 
 /* ----------------------------------------------------------------------------
  * Fonts
@@ -102,6 +111,9 @@ a
     font-family: $mono-font
     font-weight: 400
     padding: 15px
+
+  p, ul, ol
+    text-align: justify
 
   ul > li
     list-style-type: disc
@@ -210,7 +222,7 @@ a
   padding-right: $pad
   clearfix()
 
-  max-width: 700px
+  max-width: $maxWidthContent
 
   blockquote
     color: $grey
@@ -432,13 +444,27 @@ body.no-literate .content pre > code
   line-height: 20px
   position: relative
 
+  .navlinks div
+     display: inline-flex
+     flex-direction: column
+     margin: 0px 10px 0px 10px
+    .prev .title,
+    .top .title,
+    .next .title
+     font-size: 9px
+     font-weight: 700
+     font-color: gray
+     margin-bottom: -1ex !important;
+    .top .title
+     text-align: center
+    .next .title
+     text-align: right
+
   .left
     float: left
 
   .right
     text-align: right
-    position: absolute
-    right: 35px
 
     iframe
       display: inline-block
@@ -619,7 +645,8 @@ a.big.button
     &:hover
       color: $accent*0.8
 
-  li.toctree-l1 a
+  li.toctree-l1 
+   a
     font-family: Roboto
     text-transform: uppercase
     font-size: 0.9em
@@ -628,15 +655,24 @@ a.big.button
       color: $grey
     &:hover
       color: $grey*0.6
+   .current
+     border-left:5px solid $btsblue7
+     margin-left:-5px
 
-  li.toctree-l2 a
+  li.toctree-l2
+   a
+    text-transform: none
     font-weight: normal
-    padding-left:5px
+    padding-left:10px
+
+   .current
+     border-left:5px solid $btsblue4
+     margin-left:-5px
 
   li.toctree-l3 a
     font-weight: normal
     font-size: 0.9em
-    padding-left: 10px
+    padding-left: 15px
 
   a.active
     &, &:visited, &:hover
