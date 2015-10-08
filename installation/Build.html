@@ -251,16 +251,26 @@ install directory of boost if you have installed it manually.</p>
 </div>
 <div class="section" id="distribution-specific-settings">
 <h2>Distribution Specific Settings<a class="headerlink" href="#distribution-specific-settings" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ubuntu-14-04">
+<h3>Ubuntu 14.04<a class="headerlink" href="#ubuntu-14-04" title="Permalink to this headline">¶</a></h3>
+<p>As <code class="docutils literal"><span class="pre">g++-4.9</span></code> isn&#8217;t available in 14.04 LTS, you need to do this first::</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+sudo apt-get update
+</pre></div>
+</div>
+<p>If you get build failures due to abi incompatibilities, just use gcc 4.9:</p>
+<div class="highlight-python"><div class="highlight"><pre>CC=gcc-4.9 CXX=g++-4.9 cmake .
+</pre></div>
+</div>
+</div>
 <div class="section" id="ubuntu-15-04">
 <h3>Ubuntu 15.04<a class="headerlink" href="#ubuntu-15-04" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><p>Ubuntu 15.04 uses gcc 5, which has the c++11 ABI as default, but the boost
+<p>Ubuntu 15.04 uses gcc 5, which has the c++11 ABI as default, but the boost
 libraries were compiled with the cxx11 ABI (this is an issue in many distros).
 If you get build failures due to abi incompatibilities, just use gcc 4.9:</p>
 <div class="highlight-python"><div class="highlight"><pre>CC=gcc-4.9 CXX=g++-4.9 cmake .
 </pre></div>
 </div>
-</div></blockquote>
 </div>
 </div>
 </div>
