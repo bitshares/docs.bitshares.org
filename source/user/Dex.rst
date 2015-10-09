@@ -2,6 +2,8 @@
 Decentralized Exchange
 **********************
 
+(under construction) 
+
 ..
  * [Introduction](dex/introduction.md)
  * [Trading Pairs](dex/pairs.md)
