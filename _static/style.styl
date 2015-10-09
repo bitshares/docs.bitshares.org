@@ -436,7 +436,7 @@ body.no-literate .content pre > code
   background: $offwhite
   text-shadow: 0 1px 0 rgba(white, 0.5)
   border-bottom: solid 1px $line
-  padding: 15px 15px 15px $sidepad
+  padding: 7px 7px 7px $sidepad
   height: 20
   width: 100%
   clearfix()
@@ -444,6 +444,8 @@ body.no-literate .content pre > code
   line-height: 20px
   position: relative
 
+  .navlinks
+     margin-left: 20px
   .navlinks div
      display: inline-flex
      flex-direction: column
@@ -459,7 +461,7 @@ body.no-literate .content pre > code
     .next .title
      text-align: right
     .top 
-     margin: 0px 10px 0px 10px
+     margin: 0px 20px 0px 20px
 
   .left
     float: left
@@ -650,30 +652,77 @@ a.big.button
    a
     font-family: Roboto
     text-transform: uppercase
-    font-size: 0.9em
     font-weight: bold
+    padding-left:5px
     &, &:visited
       color: $grey
     &:hover
       color: $grey*0.6
+      border-left:5px solid $btsblue7
+      margin-left:-5px
    .current
      border-left:5px solid $btsblue7
      margin-left:-5px
 
-  li.toctree-l2
+  li.toctree-l2 
    a
+    font-family: Roboto
     text-transform: none
     font-weight: normal
+    font-size: 0.97em
     padding-left:10px
-
+    &:hover
+      color: $grey*0.6
+      border-left:5px solid $btsblue5
+      margin-left:-5px
    .current
-     border-left:5px solid $btsblue4
+     border-left:5px solid $btsblue5
      margin-left:-5px
 
-  li.toctree-l3 a
+  li.toctree-l3 
+   a
+    font-family: Roboto
+    text-transform: none
+    font-weight: normal
+    font-size: 0.95em
+    padding-left:15px
+    &:hover
+      color: $grey*0.6
+      border-left:5px solid $btsblue3
+      margin-left:-5px
+   .current
+     border-left:5px solid $btsblue3
+     margin-left:-5px
+
+  li.toctree-l4 
+   a
+    font-family: Roboto
+    text-transform: none
+    font-weight: normal
+    font-size: 0.93em
+    padding-left:20px
+    &:hover
+      color: $grey*0.6
+      border-left:5px solid $btsblue3
+      margin-left:-5px
+   .current
+     border-left:5px solid $btsblue7
+     margin-left:-5px
+
+  li.toctree-l5 
+   a
+    font-family: Roboto
+    text-transform: none
     font-weight: normal
     font-size: 0.9em
-    padding-left: 15px
+    padding-left:25px
+    &:hover
+      color: $grey*0.6
+      border-left:5px solid $btsblue3
+      margin-left:-5px
+   .current
+     border-left:5px solid $btsblue7
+     margin-left:-5px
 
   a.active
     &, &:visited, &:hover

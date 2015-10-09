@@ -603,7 +603,7 @@ body.no-literate .content pre > code:hover::-webkit-scrollbar-thumb {
   background: #f3f6fb;
   text-shadow: 0 1px 0 rgba(255,255,255,0.5);
   border-bottom: solid 1px #dfe2e7;
-  padding: 15px 15px 15px 15px;
+  padding: 7px 7px 7px 15px;
   height: 20;
   width: 100%;
   zoom: 1;
@@ -617,6 +617,9 @@ body.no-literate .content pre > code:hover::-webkit-scrollbar-thumb {
 }
 .header:after {
   clear: both;
+}
+.header .navlinks {
+  margin-left: 20px;
 }
 .header .navlinks div {
   display: -webkit-inline-box;
@@ -647,7 +650,7 @@ body.no-literate .content pre > code:hover::-webkit-scrollbar-thumb {
   text-align: right;
 }
 .header .top {
-  margin: 0px 10px 0px 10px;
+  margin: 0px 20px 0px 20px;
 }
 .header .left {
   float: left;
@@ -866,8 +869,8 @@ a.big.button:hover:visited {
 .menu li.toctree-l1 a {
   font-family: Roboto;
   text-transform: uppercase;
-  font-size: 0.9em;
   font-weight: bold;
+  padding-left: 5px;
 }
 .menu li.toctree-l1 a,
 .menu li.toctree-l1 a:visited {
@@ -875,24 +878,76 @@ a.big.button:hover:visited {
 }
 .menu li.toctree-l1 a:hover {
   color: #565666;
+  border-left: 5px solid #00587c;
+  margin-left: -5px;
 }
 .menu li.toctree-l1 .current {
   border-left: 5px solid #00587c;
   margin-left: -5px;
 }
 .menu li.toctree-l2 a {
+  font-family: Roboto;
   text-transform: none;
   font-weight: normal;
+  font-size: 0.97em;
   padding-left: 10px;
 }
+.menu li.toctree-l2 a:hover {
+  color: #565666;
+  border-left: 5px solid #62b5d1;
+  margin-left: -5px;
+}
 .menu li.toctree-l2 .current {
-  border-left: 5px solid #77bcd3;
+  border-left: 5px solid #62b5d1;
   margin-left: -5px;
 }
 .menu li.toctree-l3 a {
+  font-family: Roboto;
+  text-transform: none;
+  font-weight: normal;
+  font-size: 0.95em;
+  padding-left: 15px;
+}
+.menu li.toctree-l3 a:hover {
+  color: #565666;
+  border-left: 5px solid #8ac2d5;
+  margin-left: -5px;
+}
+.menu li.toctree-l3 .current {
+  border-left: 5px solid #8ac2d5;
+  margin-left: -5px;
+}
+.menu li.toctree-l4 a {
+  font-family: Roboto;
+  text-transform: none;
+  font-weight: normal;
+  font-size: 0.93em;
+  padding-left: 20px;
+}
+.menu li.toctree-l4 a:hover {
+  color: #565666;
+  border-left: 5px solid #8ac2d5;
+  margin-left: -5px;
+}
+.menu li.toctree-l4 .current {
+  border-left: 5px solid #00587c;
+  margin-left: -5px;
+}
+.menu li.toctree-l5 a {
+  font-family: Roboto;
+  text-transform: none;
   font-weight: normal;
   font-size: 0.9em;
-  padding-left: 15px;
+  padding-left: 25px;
+}
+.menu li.toctree-l5 a:hover {
+  color: #565666;
+  border-left: 5px solid #8ac2d5;
+  margin-left: -5px;
+}
+.menu li.toctree-l5 .current {
+  border-left: 5px solid #00587c;
+  margin-left: -5px;
 }
 .menu a.active {
   font-weight: bold !important;

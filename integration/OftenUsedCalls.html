@@ -94,7 +94,8 @@
         </div>
 
    </div>
-   <div class='right'>
+   <!--
+    <div class='right'>
 <div id="searchbox" style="display: none" role="search">
  <form class="search" action="../search.html" method="get">
    <input type="text" name="q" />
@@ -105,6 +106,7 @@
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
    </div>
+   -->
  </div>
 
  <div class='content-root'>
@@ -135,7 +137,19 @@
 <li class="toctree-l2"><a class="reference internal" href="Interfacing.html">Interfacing with the BitShares Ecosystem</a></li>
 <li class="toctree-l2"><a class="reference internal" href="NetworkSetup.html">Secure Network and Wallet Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Libraries.html">Supporting Code</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Often used API Calls</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Often used API Calls</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-outputs">Example Outputs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../blockchain/Objects.html">Objects and IDs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/cli_wallet.html">CLI Wallet API Calls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#list-account-balances-account"><code class="docutils literal"><span class="pre">list_account_balances</span> <span class="pre">&lt;account&gt;</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-account-history-account-limit"><code class="docutils literal"><span class="pre">get_account_history</span> <span class="pre">&lt;account&gt;</span> <span class="pre">&lt;limit&gt;</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-object-1-11-id"><code class="docutils literal"><span class="pre">get_object</span> <span class="pre">&quot;1.11.&lt;id&gt;&quot;</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#get-asset-usd"><code class="docutils literal"><span class="pre">get_asset</span> <span class="pre">&lt;USD&gt;</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="Whitelist.html">Using White- and Black-lists</a></li>
 <li class="toctree-l2"><a class="reference internal" href="SecuringFunds.html">Securing Funds</a></li>
 </ul>

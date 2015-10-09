@@ -94,7 +94,8 @@
         </div>
 
    </div>
-   <div class='right'>
+   <!--
+    <div class='right'>
 <div id="searchbox" style="display: none" role="search">
  <form class="search" action="../search.html" method="get">
    <input type="text" name="q" />
@@ -105,6 +106,7 @@
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
    </div>
+   -->
  </div>
 
  <div class='content-root'>
@@ -167,37 +169,43 @@
    
   <div class="section" id="blockchain-upgrade">
 <h1>Blockchain Upgrade<a class="headerlink" href="#blockchain-upgrade" title="Permalink to this headline">¶</a></h1>
+<p>BitShares 2.0 will be initialized with what is called a <em>Genesis Block</em>. That
+genesis block will be constructed from the balances of BitShares 1.0. BitShares
+1.0 offers many features that need to be migrated into BitShares 2.0. To
+simplify the process and reduce the risk of errors, the following conditions
+will be met:</p>
 <ul>
 <li><p class="first"><strong>Funds</strong>:</p>
 <ul class="simple">
-<li><strong>BTS Tokens</strong>: All BTS balances will be migrated 1:1</li>
+<li><strong>BTS Tokens</strong>: All BTS balances will be migrated 1:1. The supply not change!</li>
 <li><strong>User-Issed-Assets</strong>: All UAI tokens will be migrated 1:1</li>
 <li><strong>BitAssets</strong>: Because the new chain is a simple migration and should
 retain all the same &#8220;perceived value&#8221;, all BitAssets and short positions are
 migrated 1:1.</li>
 </ul>
 </li>
-<li><p class="first"><strong>Account Names</strong>:
-Under BitShares 2.0, accounts are transferable and have different prices
+<li><p class="first"><strong>Account Names</strong>:</p>
+<p>Under BitShares 2.0, accounts are transferable and have different prices
 based upon the &#8220;quality&#8221; of the account name. Any &#8220;premium&#8221; names registered
 on or after 2015-06-08 (US Eastern time) will be given the prefix “bts-“ or
 similar after the migration. All account names registered on or after
 2015-06-18 (US Eastern time) will be prefixed with &#8220;bts-&#8221; unless they were
 registered using the BitShares Faucet.</p>
 <ul class="simple">
-<li><strong>Premium Name</strong>:  No Numbers and has Vowles</li>
-<li><strong>Cheap Name</strong>:    Has Numbers or No Vowels</li>
+<li><strong>Premium Name</strong>:  No numbers and has vowles</li>
+<li><strong>Cheap Name</strong>:    Has numbers or no vowels</li>
 </ul>
 <p>All other account names will be migrated with their corresponding
 owner/active keys.</p>
 </li>
 <li><p class="first"><strong>Open Orders</strong>:
-All open (non-short) orders will be canceled prior to the snapshot and their
-funds returned to their owners.</p>
+Open orders (except open short positions) will <strong>not</strong> migrate and the funds
+will be credited to the corresponding owners.</p>
 </li>
 <li><p class="first"><strong>Open Shorts</strong>:
 Short orders will be migrated to BitShares 2.0 on a 1:1 ratio. You collateral
-will be imported as a separated account under your control.</p>
+will be imported as a separated account (e.g. <code class="docutils literal"><span class="pre">usd-collateral-holder-124</span></code>)
+under your control.</p>
 </li>
 <li><p class="first"><strong>Transaction History</strong>:
 Transaction histories of BitShares 1.0 will be inaccessible in BitShares 2.0.</p>
@@ -207,13 +215,25 @@ Vesting balances will migrate under the existing terms, if two or more vesting
 balances were partially claimed as part of the same transaction prior to the
 snapshot the vesting balances may be merged into a single balance.</p>
 </li>
-<li><p class="first"><strong>Deprecated Features</strong>:</p>
+<li><p class="first"><strong>Unclaimed Delegate Pay</strong>:
+Delegates that did not claim their pay prior to the snapshot will be able to
+claim their pay by importing their corresponding keys similar to any other
+balance.</p>
+</li>
+<li><p class="first"><strong>Assets</strong>:
+User issued assets and market pegged assets will migrated with their
+corresponding issuer and holders.</p>
+</li>
+<li><p class="first"><strong>Deprecated Features</strong>:
+Some features have turned out to be unreliable or impractical and will thus
+deprecate:</p>
 <ul class="simple">
-<li>Wall Messages will not be migrated as the feature is now deprecated</li>
-<li>Asset name/description information is no longer part of the blockchain state</li>
-<li>Account public data is deprecated and is no longer part of the blockchain state</li>
+<li><strong>Wall Messages</strong> will not be migrated as the feature is now deprecated</li>
+<li>Asset <strong>description information</strong> is no longer part of the blockchain state
+and will not be migrated</li>
+<li>Account <strong>public data</strong> is deprecated and is no longer part of the blockchain state</li>
 <li>BitShares URL scheme: <cite>bts://</cite> will be deprecated due to migration to hosted
-wallets</li>
+web wallets</li>
 </ul>
 </li>
 </ul>
