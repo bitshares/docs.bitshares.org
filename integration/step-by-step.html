@@ -236,7 +236,7 @@ use different ports to distinguish them:</p>
 <p>The trusted full node is your entry point to the BitShares P2P network. It will
 hold the blockchain, connect to other peers, and will receive new blocks in
 <em>real-time</em>.</p>
-<div class="highlight-bash"><div class="highlight"><pre>./programs/witness_node/witness_node --data-dir<span class="o">=</span>trusted_node/ --rpc-endpoint<span class="o">=</span><span class="s2">&quot;127.0.0.1:8090&quot;</span>
+<div class="highlight-sh"><div class="highlight"><pre>./programs/witness_node/witness_node --data-dir<span class="o">=</span>trusted_node/ --rpc-endpoint<span class="o">=</span><span class="s2">&quot;127.0.0.1:8090&quot;</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -257,7 +257,7 @@ connect to the P2P network. (See <a class="reference external" href="https://git
 <p>The delayed full node node will provide us with a delayed and several times
 confirmed and verified blockchain. All transactions that are confirmed by the
 delayed node are <strong>irreversible</strong>.</p>
-<div class="highlight-bash"><div class="highlight"><pre>./programs/delayed_node/delayed_node --trusted-node<span class="o">=</span><span class="s2">&quot;127.0.0.1:8090&quot;</span> <span class="se">\</span>
+<div class="highlight-sh"><div class="highlight"><pre>./programs/delayed_node/delayed_node --trusted-node<span class="o">=</span><span class="s2">&quot;127.0.0.1:8090&quot;</span> <span class="se">\</span>
                                      --rpc-endpoint<span class="o">=</span><span class="s2">&quot;127.0.0.1:8091&quot;</span>
 </pre></div>
 </div>
@@ -267,7 +267,7 @@ delayed node are <strong>irreversible</strong>.</p>
 <h3>Wallet<a class="headerlink" href="#wallet" title="Permalink to this headline">¶</a></h3>
 <p>The wallet will be used to transfer assets to the customers. It connects to the
 trusted full node and has spending privileges for the hot wallet.</p>
-<div class="highlight-bash"><div class="highlight"><pre>./programs/cli_wallet/cli_wallet --server-rpc-endpoint<span class="o">=</span><span class="s2">&quot;ws://127.0.0.1:8090&quot;</span> <span class="se">\</span>
+<div class="highlight-sh"><div class="highlight"><pre>./programs/cli_wallet/cli_wallet --server-rpc-endpoint<span class="o">=</span><span class="s2">&quot;ws://127.0.0.1:8090&quot;</span> <span class="se">\</span>
                                  --rpc-http-endpoint<span class="o">=</span><span class="s2">&quot;127.0.0.1:8092&quot;</span>
 </pre></div>
 </div>
@@ -343,7 +343,7 @@ configure it for notification on account changes for our deposit account above.<
 <code class="docutils literal"><span class="pre">python-graphenelib</span></code> <a class="reference external" href="http://python-graphenelib.readthedocs.org/en/latest/howto-exchanges-detailed.html">documentations</a>.</p>
 <div class="section" id="id1">
 <h3>Installation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-bash"><div class="highlight"><pre>git clone http://github.com/xeroc/python-graphenelib
+<div class="highlight-sh"><div class="highlight"><pre>git clone http://github.com/xeroc/python-graphenelib
 <span class="nb">cd </span>python-graphenelib
 easy_install-3.4 install autobahn
 easy_install-3.4 install requests

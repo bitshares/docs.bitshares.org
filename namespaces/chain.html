@@ -471,6 +471,11 @@
 <dd></dd></dl>
 
 <dl class="type">
+<dt id="_CPPv2N8graphene5chain21budget_record_id_typeE">
+<span id="graphene::chain::budget_record_id_type"></span><span class="target" id="graphenenamespacegraphene_1_1chain_1a099a839fe65d5b1148f713db000f08db"></span><em class="property">typedef </em>object_id&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain18implementation_idsE" title="graphene::chain::implementation_ids">implementation_ids</a>, <a class="reference internal" href="../blockchain/Objects.html#_CPPv2N8graphene5chain30impl_budget_record_object_typeE" title="graphene::chain::impl_budget_record_object_type">impl_budget_record_object_type</a>, budget_record_object&gt; <code class="descname">budget_record_id_type</code><a class="headerlink" href="#_CPPv2N8graphene5chain21budget_record_id_typeE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="type">
 <dt id="_CPPv2N8graphene5chain11symbol_typeE">
 <span id="graphene::chain::symbol_type"></span><span class="target" id="graphenenamespacegraphene_1_1chain_1a986241e0a89e7b8b58d00179f7fb3c0a"></span><em class="property">typedef </em>fc::array&lt;char, GRAPHENE_MAX_ASSET_SYMBOL_LENGTH&gt; <code class="descname">symbol_type</code><a class="headerlink" href="#_CPPv2N8graphene5chain11symbol_typeE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -765,8 +770,8 @@
 <dd></dd></dl>
 
 <dl class="member">
-<dt id="_CPPv2N8graphene5chain27impl_index_meta_object_typeE">
-<span id="graphene::chain::impl_index_meta_object_type"></span><span class="target" id="graphenenamespacegraphene_1_1chain_1ad3bef2f100b722a6c30fada38f6dcd73a8aa30f86cc46cc19e1bd6ae44dae9e7c"></span><code class="descname">impl_index_meta_object_type</code><a class="headerlink" href="#_CPPv2N8graphene5chain27impl_index_meta_object_typeE" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N8graphene5chain26impl_reserved0_object_typeE">
+<span id="graphene::chain::impl_reserved0_object_type"></span><span class="target" id="graphenenamespacegraphene_1_1chain_1ad3bef2f100b722a6c30fada38f6dcd73acbc380eaf3696f2d4b0808d12b8e4cb1"></span><code class="descname">impl_reserved0_object_type</code><a class="headerlink" href="#_CPPv2N8graphene5chain26impl_reserved0_object_typeE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="member">
@@ -819,20 +824,9 @@
 <span id="graphene::chain::impl_witness_schedule_object_type"></span><span class="target" id="graphenenamespacegraphene_1_1chain_1ad3bef2f100b722a6c30fada38f6dcd73a344ace874a02d31a31651328e080e91a"></span><code class="descname">impl_witness_schedule_object_type</code><a class="headerlink" href="#_CPPv2N8graphene5chain33impl_witness_schedule_object_typeE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-</dd></dl>
-
-<dl class="type">
-<dt id="_CPPv2N8graphene5chain21meta_info_object_typeE">
-<span id="graphene::chain::meta_info_object_type"></span><span class="target" id="graphenenamespacegraphene_1_1chain_1a3067a5a8446ab53cb8fe46917907c7a7"></span><em class="property">enum </em><code class="descname">meta_info_object_type</code><a class="headerlink" href="#_CPPv2N8graphene5chain21meta_info_object_typeE" title="Permalink to this definition">¶</a></dt>
-<dd><p><em>Values:</em></p>
 <dl class="member">
-<dt id="_CPPv2N8graphene5chain22meta_asset_object_typeE">
-<span id="graphene::chain::meta_asset_object_type"></span><span class="target" id="graphenenamespacegraphene_1_1chain_1a3067a5a8446ab53cb8fe46917907c7a7af56fa833d99425d4e2eeb1021a24add1"></span><code class="descname">meta_asset_object_type</code><a class="headerlink" href="#_CPPv2N8graphene5chain22meta_asset_object_typeE" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="member">
-<dt id="_CPPv2N8graphene5chain24meta_account_object_typeE">
-<span id="graphene::chain::meta_account_object_type"></span><span class="target" id="graphenenamespacegraphene_1_1chain_1a3067a5a8446ab53cb8fe46917907c7a7afd332dbdcc5305770cc92acc16cef06e"></span><code class="descname">meta_account_object_type</code><a class="headerlink" href="#_CPPv2N8graphene5chain24meta_account_object_typeE" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N8graphene5chain30impl_budget_record_object_typeE">
+<span id="graphene::chain::impl_budget_record_object_type"></span><span class="target" id="graphenenamespacegraphene_1_1chain_1ad3bef2f100b722a6c30fada38f6dcd73a8b4ffc45235b1f894dd7cb703cfde831"></span><code class="descname">impl_budget_record_object_type</code><a class="headerlink" href="#_CPPv2N8graphene5chain30impl_budget_record_object_typeE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -1234,6 +1228,16 @@
 <dd><em>#include &lt;account_object.hpp&gt;</em><p>This class represents an account on the object graph</p>
 <p>Accounts are the primary unit of authority on the graphene system. Users must have an account in order to use assets, trade in the markets, vote for committee_members, etc. </p>
 <div class="breathe-sectiondef container">
+<p class="breathe-sectiondef-title rubric">Unnamed Group</p>
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain14account_object20whitelisted_accountsE">
+<span id="graphene::chain::account_object::whitelisted_accounts__set:account_id_type:"></span><span class="target" id="grapheneclassgraphene_1_1chain_1_1account__object_1a3e1bd4c318ce23cb83eb74c07af73af7"></span>set&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain15account_id_typeE" title="graphene::chain::account_id_type">account_id_type</a>&gt; <code class="descname">whitelisted_accounts</code><a class="headerlink" href="#_CPPv2N8graphene5chain14account_object20whitelisted_accountsE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optionally track all of the accounts this account has whitelisted or blacklisted, these should be made Immutable so that when the account object is cloned no deep copy is required. This state is tracked for GUI display purposes.</p>
+<p>TODO: move white list tracking to its own multi-index container rather than having 4 fields on an account. This will scale better because under the current design if you whitelist 2000 accounts, then every time someone fetches this account object they will get the full list of 2000 accounts. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
 <dt id="_CPPv2N8graphene5chain14account_object18is_lifetime_memberEv">
@@ -1450,7 +1454,7 @@
 <dl class="member">
 <dt id="_CPPv2N8graphene5chain25account_statistics_object14most_recent_opE">
 <span id="graphene::chain::account_statistics_object::most_recent_op__account_transaction_history_id_type"></span><span class="target" id="grapheneclassgraphene_1_1chain_1_1account__statistics__object_1ac1bef1eef2dc6b82adb57a528aaa14d0"></span><a class="reference internal" href="#_CPPv2N8graphene5chain35account_transaction_history_id_typeE" title="graphene::chain::account_transaction_history_id_type">account_transaction_history_id_type</a> <code class="descname">most_recent_op</code><a class="headerlink" href="#_CPPv2N8graphene5chain25account_statistics_object14most_recent_opE" title="Permalink to this definition">¶</a></dt>
-<dd><p>Keep the most recent operation as a root pointer to a linked list of the transaction history. This field is not required by core validation and could in theory be made an annotation on the account object, but because transaction history is so common and this object is already cached in the undo buffer (because it likely affected the balances of this account) it is convienent to simply track this data here. Account balance objects don&#8217;t currenty inherit from annotated object. </p>
+<dd><p>Keep the most recent operation as a root pointer to a linked list of the transaction history. </p>
 </dd></dl>
 
 <dl class="member">
@@ -3687,12 +3691,6 @@ Pushes the block into the fork database and caches it if it doesn&#8217;t link <
 <span id="graphene::chain::memo_message"></span><span class="target" id="graphenestructgraphene_1_1chain_1_1memo__message"></span><em class="property">struct </em><code class="descname">memo_message</code><a class="headerlink" href="#_CPPv2N8graphene5chain12memo_messageE" title="Permalink to this definition">¶</a></dt>
 <dd><em>#include &lt;memo.hpp&gt;</em><p>defines a message and checksum to enable validation of successful decryption </p>
 <p>When encrypting/decrypting a checksum is required to determine whether or not decryption was successful. </p>
-</dd></dl>
-
-<dl class="class">
-<dt id="_CPPv2N8graphene5chain19meta_account_objectE">
-<span id="graphene::chain::meta_account_object"></span><span class="target" id="grapheneclassgraphene_1_1chain_1_1meta__account__object"></span><em class="property">class </em><code class="descname">meta_account_object</code><a class="headerlink" href="#_CPPv2N8graphene5chain19meta_account_objectE" title="Permalink to this definition">¶</a></dt>
-<dd><em>#include &lt;account_object.hpp&gt;</em><p>This object is attached as the meta annotation on the account object, this information is not relevant to validation. </p>
 </dd></dl>
 
 <dl class="class">

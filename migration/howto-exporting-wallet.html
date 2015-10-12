@@ -182,16 +182,14 @@ pass phrase when importing your funds into BitShares 2.0.</p>
 <p>Since BitShares 0.9.3c, we have a Graphene compatible <em>Export Wallet</em>
 function that can be issued in the console
 (<cite>Account List-&gt;Advanced Settings-&gt;Console</cite>):</p>
-<div class="highlight-python"><div class="highlight"><pre>wallet_export_keys keys.json
+<div class="highlight-python"><div class="highlight"><pre>wallet_export_keys C:/Users/[your user name]/AppData/Roaming/BitShares/keys.json
 </pre></div>
 </div>
+<p>Please replace <code class="docutils literal"><span class="pre">[your</span> <span class="pre">user</span> <span class="pre">name]</span></code> with your Windows account name. If you
+don&#8217;t know your full path you can browse to <code class="docutils literal"><span class="pre">%APPDATA%</span></code> and copy&amp;paste the
+directory.</p>
 <a class="reference internal image-reference" href="../_images/export-wallet-console.png"><img alt="Export compatible keys from Menu bar" class="align-center" src="../_images/export-wallet-console.png" style="width: 550px;" /></a>
 <p>The resulting file <code class="docutils literal"><span class="pre">keys.json</span></code> will be located in your</p>
-<ul class="simple">
-<li><strong>Windows</strong>: <code class="docutils literal"><span class="pre">%APPDATA%\Roaming\BitShares</span></code> (Try going to Start-&gt;Run and opening %APPDATA%, then open the BitShares folder)</li>
-<li><strong>Mac</strong>: <code class="docutils literal"><span class="pre">~/Library/Application</span> <span class="pre">Support/BitShares</span></code> (Open a Finder window and press Command-Shift-G, then paste in the path)</li>
-<li><strong>Linux</strong>: <code class="docutils literal"><span class="pre">~/.BitShares</span></code></li>
-</ul>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The exported wallet file will be encrypted with your pass phrase! Make
