@@ -24,7 +24,11 @@ Since BitShares 0.9.3c, we have a Graphene compatible *Export Wallet*
 function that can be issued in the console
 (`Account List->Advanced Settings->Console`)::
 
-          wallet_export_keys keys.json
+          wallet_export_keys C:/Users/[your user name]/AppData/Roaming/BitShares/keys.json
+
+Please replace ``[your user name]`` with your Windows account name. If you
+don't know your full path you can browse to ``%APPDATA%`` and copy&paste the
+directory.
 
 .. image:: ../static/export-wallet-console.png
         :alt: Export compatible keys from Menu bar
@@ -33,9 +37,9 @@ function that can be issued in the console
 
 The resulting file ``keys.json`` will be located in your 
 
-* **Windows**: ``%APPDATA%\Roaming\BitShares`` (Try going to Start->Run and opening %APPDATA%, then open the BitShares folder)
-* **Mac**: ``~/Library/Application Support/BitShares`` (Open a Finder window and press Command-Shift-G, then paste in the path)
-* **Linux**: ``~/.BitShares``
+.. * **Windows**: ``%APPDATA%\Roaming\BitShares`` (Try going to Start->Run and opening %APPDATA%, then open the BitShares folder)
+   * **Mac**: ``~/Library/Application Support/BitShares`` (Open a Finder window and press Command-Shift-G, then paste in the path)
+   * **Linux**: ``~/.BitShares``
 
 .. note:: The exported wallet file will be encrypted with your pass phrase! Make
           sure to remember it when trying to use that file again!

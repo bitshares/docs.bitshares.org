@@ -49,7 +49,7 @@ The trusted full node is your entry point to the BitShares P2P network. It will
 hold the blockchain, connect to other peers, and will receive new blocks in
 *real-time*.
 
-.. code-block:: bash
+.. code-block:: sh
 
     ./programs/witness_node/witness_node --data-dir=trusted_node/ --rpc-endpoint="127.0.0.1:8090"
 
@@ -70,7 +70,7 @@ The delayed full node node will provide us with a delayed and several times
 confirmed and verified blockchain. All transactions that are confirmed by the
 delayed node are **irreversible**.
 
-.. code-block:: bash
+.. code-block:: sh
 
     ./programs/delayed_node/delayed_node --trusted-node="127.0.0.1:8090" \
                                          --rpc-endpoint="127.0.0.1:8091"
@@ -83,7 +83,7 @@ Wallet
 The wallet will be used to transfer assets to the customers. It connects to the
 trusted full node and has spending privileges for the hot wallet.
 
-.. code-block:: bash
+.. code-block:: sh
 
     ./programs/cli_wallet/cli_wallet --server-rpc-endpoint="ws://127.0.0.1:8090" \
                                      --rpc-http-endpoint="127.0.0.1:8092"
@@ -177,7 +177,7 @@ A detailed descriptions about the python library can be found in the
 Installation
 ************
 
-.. code-block:: bash
+.. code-block:: sh
 
     git clone http://github.com/xeroc/python-graphenelib
     cd python-graphenelib
