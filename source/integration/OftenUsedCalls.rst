@@ -79,6 +79,61 @@ table above. We recommend to read the following articles:
         }
     ]
 
+
+``transfer <front> <to> <amount> <asset> "<memo>" <broadcast>``
+***************************************************************
+
+**Script**:
+
+.. code-block:: python
+
+    import json
+    from grapheneapi import GrapheneAPI
+    client = GrapheneAPI("localhost", 8092, "", "")
+    res = client.transfer("fromaccount","toaccount","10", "USD", "$10 gift", True);
+    print(json.dumps(res,indent=4))
+
+The final parameter ``True`` states that the signed transaction will be
+broadcast. If this parameter is ``False`` the transaction will be signed but
+not broadcast, hence not executed.
+
+**Result**:
+
+.. code-block:: json
+
+    {
+      "ref_block_num": 18,
+      "ref_block_prefix": 2320098938,
+      "expiration": "2015-10-13T13:56:15",
+      "operations": [[
+          0,{
+            "fee": {
+              "amount": 2089843,
+              "asset_id": "1.3.0"
+            },
+            "from": "1.2.17",
+            "to": "1.2.7",
+            "amount": {
+              "amount": 10000000,
+              "asset_id": "1.3.0"
+            },
+            "memo": {
+              "from": "GPH6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV",
+              "to": "GPH6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV",
+              "nonce": "16430576185191232340",
+              "message": "74d0e455e2e5587b7dc85380102c3291"
+            },
+            "extensions": []
+          }
+        ]
+      ],
+      "extensions": [],
+      "signatures": [
+        "1f147aed197a2925038e4821da54bd7818472ebe25257ac9a7ea66429494e7242d0dc13c55c6840614e6da6a5bf65ae609a436d13a3174fd12f073550f51c8e565"
+      ]
+    }
+
+
 ``get_account_history <account> <limit>``
 ******************************************
 

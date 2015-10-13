@@ -10,7 +10,11 @@ pass phrase when importing your funds into BitShares 2.0.
 BitShares 1.0 Full Client
 #########################
 
-Firstly, you need to upgrade your BitShares client to version 0.9.3c. To do the upgrade you need to:
+Since the snapshot has taken place already, all you need to do now to get
+access to your funds in BitShares 2.0 is described in the following.
+
+Firstly, you need to upgrade your BitShares client to version 0.9.3c. To do the
+upgrade you need to:
 
 * download the installation file from the `bitshares webpage`_
 * uninstall your previous version of the BitShares client
@@ -18,16 +22,18 @@ Firstly, you need to upgrade your BitShares client to version 0.9.3c. To do the 
 
 .. _bitshares webpage: http://bitshares.org/download
 
-Once you've upgraded you might want to perform two actions, which might be optional depending on your judgement:
+Attempt to sync with the blockchain (this is only necessary with if you think
+that since the last time you did the syncing there have been some new
+transactions involving any of your accounts).
 
-* attempt to sync with the blockchain (this is only necessary with if you think
-  that since the last time you did the syncing there have been some new
-  transactions involving any of your accounts)
-* send all your funds to yourself (this is only necessary if you want to tidy
-  up and consolidate your accounts before importing them to BTS 2.0, this is
-  optional as everything will be fine if you skip this step)
+You can see the syncing progress from the status bar or from the ``info``
+command in the console (``account list->advanced settings->console``).
+After having *synced* the blockchain, your wallet will automatically attempt to
+rescan the blockchain for new transcations. Depending on the amount of accounts
+in your wallet, this steps should only take very few minutes.
 
-Since BitShares 0.9.3c, we have a Graphene compatible Export Keys function that can be accessed in two ways:
+Since BitShares 0.9.3c, we have a Graphene compatible Export Keys function that
+can be accessed in two ways:
 
 * by accessing it in the main menu
 * by issuing a command in the console.
