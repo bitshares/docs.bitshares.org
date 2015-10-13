@@ -128,8 +128,32 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../user/index.html">User Guide</a></li>
 </ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../integration/index.html">Integrating the BitShares Network</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../integration/index.html">Integrating the BitShares Network</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../integration/step-by-step.html">Step-By-Step Instructions for Exchanges</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../integration/Overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../integration/what-is-different.html">What is Different</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../integration/SupportingFeatures.html">Supporting Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../integration/Interfacing.html">Interfacing with the BitShares Ecosystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../integration/NetworkSetup.html">Secure Network and Wallet Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../integration/Libraries.html">Supporting Code</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../integration/OftenUsedCalls.html">Often used API Calls</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../integration/OftenUsedCalls.html#overview">Overview</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../integration/OftenUsedCalls.html#example-outputs">Example Outputs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../blockchain/Objects.html">Objects and IDs</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="">CLI Wallet API Calls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../integration/OftenUsedCalls.html#list-account-balances-account"><code class="docutils literal"><span class="pre">list_account_balances</span> <span class="pre">&lt;account&gt;</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../integration/OftenUsedCalls.html#get-account-history-account-limit"><code class="docutils literal"><span class="pre">get_account_history</span> <span class="pre">&lt;account&gt;</span> <span class="pre">&lt;limit&gt;</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../integration/OftenUsedCalls.html#get-object-1-11-id"><code class="docutils literal"><span class="pre">get_object</span> <span class="pre">&quot;1.11.&lt;id&gt;&quot;</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../integration/OftenUsedCalls.html#get-asset-usd"><code class="docutils literal"><span class="pre">get_asset</span> <span class="pre">&lt;USD&gt;</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../integration/Whitelist.html">Using White- and Black-lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../integration/SecuringFunds.html">Securing Funds</a></li>
+</ul>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../apps/index.html">Applications</a></li>
@@ -137,17 +161,8 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../blockchain/index.html">Blockchain Specifications</a></li>
 </ul>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Graphene API</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="index.html#interfacing-with-graphene">Interfacing with Graphene</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html#cli-wallet-api">Cli Wallet API</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="">CLI Wallet API Calls</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#full-node-apis">Full Node APIs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#namespaces">Namespaces</a></li>
-</ul>
-</li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Graphene API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../namespaces/index.html">Namespaces</a></li>
 </ul>
 <ul>
@@ -783,8 +798,8 @@ not offer P2P or blockchain capabilities.</p>
 
 <dl class="function">
 <dt id="_CPPv2N8graphene6wallet10wallet_api14import_balanceE6stringRK6vectorI6stringEb">
-<span id="graphene::wallet::wallet_api::import_balance__string.vector:string:CR.b"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1a1a83003bb51adc3ba63bb29a806a9bf7"></span>signed_transaction <code class="descname">import_balance</code><span class="sig-paren">(</span>string <em>account_name_or_id</em>, <em class="property">const</em> vector&lt;string&gt; &amp;<em>wif_keys</em>, bool <em>broadcast</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api14import_balanceE6stringRK6vectorI6stringEb" title="Permalink to this definition">¶</a></dt>
-<dd><p>This call will construct a transaction that will claim all balances controled by wif_keys and deposit them into the given account. </p>
+<span id="graphene::wallet::wallet_api::import_balance__string.vector:string:CR.b"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1ac70989a765d5f84ff3d8d6444a398512"></span>vector&lt;signed_transaction&gt; <code class="descname">import_balance</code><span class="sig-paren">(</span>string <em>account_name_or_id</em>, <em class="property">const</em> vector&lt;string&gt; &amp;<em>wif_keys</em>, bool <em>broadcast</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api14import_balanceE6stringRK6vectorI6stringEb" title="Permalink to this definition">¶</a></dt>
+<dd><p>This call will construct transaction(s) that will claim all balances controled by wif_keys and deposit them into the given account. </p>
 </dd></dl>
 
 <dl class="function">
@@ -1601,8 +1616,8 @@ not offer P2P or blockchain capabilities.</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N8graphene6wallet10wallet_api24propose_parameter_changeERK6stringRK14variant_objectb">
-<span id="graphene::wallet::wallet_api::propose_parameter_change__stringCR.variant_objectCR.b"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1a1370ca76cd3fc533c9eb0df663134bbb"></span>signed_transaction <code class="descname">propose_parameter_change</code><span class="sig-paren">(</span><em class="property">const</em> string &amp;<em>proposing_account</em>, <em class="property">const</em> variant_object &amp;<em>changed_values</em>, bool <em>broadcast</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api24propose_parameter_changeERK6stringRK14variant_objectb" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N8graphene6wallet10wallet_api24propose_parameter_changeERK6stringN2fc14time_point_secERK14variant_objectb">
+<span id="graphene::wallet::wallet_api::propose_parameter_change__stringCR.fc::time_point_sec.variant_objectCR.b"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1a2238d380c7d5f2361533f31d996964b2"></span>signed_transaction <code class="descname">propose_parameter_change</code><span class="sig-paren">(</span><em class="property">const</em> string &amp;<em>proposing_account</em>, fc::time_point_sec <em>expiration_time</em>, <em class="property">const</em> variant_object &amp;<em>changed_values</em>, bool <em>broadcast</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api24propose_parameter_changeERK6stringN2fc14time_point_secERK14variant_objectb" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a transaction to propose a parameter change.</p>
 <p>Multiple parameters can be specified if an atomic change is desired.</p>
 <p><dl class="docutils">
@@ -1611,6 +1626,8 @@ not offer P2P or blockchain capabilities.</p>
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last">
 <li><code class="first docutils literal"><span class="pre">proposing_account</span></code> - <p>The account paying the fee to propose the tx </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">expiration_time</span></code> - <p>Timestamp specifying when the proposal will either take effect or expire. </p>
 </li>
 <li><code class="first docutils literal"><span class="pre">changed_values</span></code> - <p>The values to change; all other chain parameters are filled in with default values </p>
 </li>
@@ -1623,10 +1640,26 @@ not offer P2P or blockchain capabilities.</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N8graphene6wallet10wallet_api18propose_fee_changeERK6stringRK14variant_objectb">
-<span id="graphene::wallet::wallet_api::propose_fee_change__stringCR.variant_objectCR.b"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1ad48b4439c156a540e5ad62a5203d1262"></span>signed_transaction <code class="descname">propose_fee_change</code><span class="sig-paren">(</span><em class="property">const</em> string &amp;<em>proposing_account</em>, <em class="property">const</em> variant_object &amp;<em>changed_values</em>, bool <em>broadcast</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api18propose_fee_changeERK6stringRK14variant_objectb" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N8graphene6wallet10wallet_api18propose_fee_changeERK6stringN2fc14time_point_secERK14variant_objectb">
+<span id="graphene::wallet::wallet_api::propose_fee_change__stringCR.fc::time_point_sec.variant_objectCR.b"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1a9716675c16f6bc9c35371e8f2b28ada4"></span>signed_transaction <code class="descname">propose_fee_change</code><span class="sig-paren">(</span><em class="property">const</em> string &amp;<em>proposing_account</em>, fc::time_point_sec <em>expiration_time</em>, <em class="property">const</em> variant_object &amp;<em>changed_values</em>, bool <em>broadcast</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api18propose_fee_changeERK6stringN2fc14time_point_secERK14variant_objectb" title="Permalink to this definition">¶</a></dt>
 <dd><p>Propose a fee change.</p>
-<p>Not implemented. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>the signed version of the transaction </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">proposing_account</span></code> - <p>The account paying the fee to propose the tx </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">expiration_time</span></code> - <p>Timestamp specifying when the proposal will either take effect or expire. </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">changed_values</span></code> - <p>Map of operation type to new fee. Operations may be specified by name or ID. The &#8220;scale&#8221; key changes the scale. All other operations will maintain current values. </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">broadcast</span></code> - <p>true if you wish to broadcast the transaction </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
 </dd></dl>
 
 <dl class="function">

@@ -138,13 +138,19 @@
 <li class="toctree-l1"><a class="reference internal" href="../blockchain/index.html">Blockchain Specifications</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../api/index.html">Graphene API</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Namespaces</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="">Graphene::App</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chain.html">Graphene::Chain</a></li>
-<li class="toctree-l2"><a class="reference internal" href="wallet.html">Graphene::Wallet</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api/index.html">Graphene API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../api/index.html#interfacing-with-graphene">Interfacing with Graphene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/index.html#cli-wallet-api">Cli Wallet API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/index.html#full-node-apis">Full Node APIs</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../api/index.html#namespaces">Namespaces</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="chain.html">Graphene::Chain</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Graphene::App</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wallet.html">Graphene::Wallet</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Namespaces</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../testnet/index.html">Testnets</a></li>
@@ -1055,6 +1061,12 @@ The transaction will be checked for validity in the local database prior to broa
 <dd><em>#include &lt;api.hpp&gt;</em><p>The <a class="reference internal" href="#grapheneclassgraphene_1_1app_1_1network__node__api"><span>network_node_api</span></a> class allows maintenance of p2p connections. </p>
 <div class="breathe-sectiondef container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N8graphene3app16network_node_api8get_infoEv">
+<span id="graphene::app::network_node_api::get_info"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1network__node__api_1a23b9ffa058760e0ce28e8116724a1236"></span>fc::variant <code class="descname">get_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app16network_node_api8get_infoEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return general network information, such as p2p port. </p>
+</dd></dl>
+
 <dl class="function">
 <dt id="_CPPv2N8graphene3app16network_node_api8add_nodeERKN2fc2ip8endpointE">
 <span id="graphene::app::network_node_api::add_node__fc::ip::endpointCR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1network__node__api_1acb792c2b97e1775236b5001a94ddbaa0"></span>void <code class="descname">add_node</code><span class="sig-paren">(</span><em class="property">const</em> fc::ip::endpoint &amp;<em>ep</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene3app16network_node_api8add_nodeERKN2fc2ip8endpointE" title="Permalink to this definition">¶</a></dt>

@@ -183,22 +183,25 @@ keys will be encrypted and you will be required to provide the corresponding
 pass phrase when importing your funds into BitShares 2.0.</p>
 <div class="section" id="bitshares-1-0-full-client">
 <h2>BitShares 1.0 Full Client<a class="headerlink" href="#bitshares-1-0-full-client" title="Permalink to this headline">¶</a></h2>
-<p>Firstly, you need to upgrade your BitShares client to version 0.9.3c. To do the upgrade you need to:</p>
+<p>Since the snapshot has taken place already, all you need to do now to get
+access to your funds in BitShares 2.0 is described in the following.</p>
+<p>Firstly, you need to upgrade your BitShares client to version 0.9.3c. To do the
+upgrade you need to:</p>
 <ul class="simple">
 <li>download the installation file from the <a class="reference external" href="http://bitshares.org/download">bitshares webpage</a></li>
 <li>uninstall your previous version of the BitShares client</li>
 <li>install the new version</li>
 </ul>
-<p>Once you&#8217;ve upgraded you might want to perform two actions, which might be optional depending on your judgement:</p>
-<ul class="simple">
-<li>attempt to sync with the blockchain (this is only necessary with if you think
+<p>Attempt to sync with the blockchain (this is only necessary with if you think
 that since the last time you did the syncing there have been some new
-transactions involving any of your accounts)</li>
-<li>send all your funds to yourself (this is only necessary if you want to tidy
-up and consolidate your accounts before importing them to BTS 2.0, this is
-optional as everything will be fine if you skip this step)</li>
-</ul>
-<p>Since BitShares 0.9.3c, we have a Graphene compatible Export Keys function that can be accessed in two ways:</p>
+transactions involving any of your accounts).</p>
+<p>You can see the syncing progress from the status bar or from the <code class="docutils literal"><span class="pre">info</span></code>
+command in the console (<code class="docutils literal"><span class="pre">account</span> <span class="pre">list-&gt;advanced</span> <span class="pre">settings-&gt;console</span></code>).
+After having <em>synced</em> the blockchain, your wallet will automatically attempt to
+rescan the blockchain for new transcations. Depending on the amount of accounts
+in your wallet, this steps should only take very few minutes.</p>
+<p>Since BitShares 0.9.3c, we have a Graphene compatible Export Keys function that
+can be accessed in two ways:</p>
 <ul class="simple">
 <li>by accessing it in the main menu</li>
 <li>by issuing a command in the console.</li>

@@ -1,14 +1,14 @@
 Migration Remarks
 *****************
 
-Recommended Preparations (Optional)
-###################################
-To ease your migration we recommend that everyone upgrade to BitShares 0.9.3c
-prior to the snapshot date and transfer 100% of every asset balance to
-yourself. This will consolidate your balances under a single account.
+.. Recommended Preparations (Optional)
+.. ###################################
+   To ease your migration we recommend that everyone upgrade to BitShares 0.9.3c
+   prior to the snapshot date and transfer 100% of every asset balance to
+   yourself. This will consolidate your balances under a single account.
 
-If you missed this action, nothing will be lost. You will still be able to
-import all your account names and funds into BitShares 2.0 (see below).
+.. If you missed this action, nothing will be lost. You will still be able to
+   import all your account names and funds into BitShares 2.0 (see below).
 
 Remarks on Private Keys
 #######################

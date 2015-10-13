@@ -92,7 +92,7 @@ After downloading the graphene/bitshares sources according to :doc:`the download
 page <./Sources>`, we can run ``cmake`` for configuration and compile with
 ``make``:::
 
-    cmake -DBOOST_ROOT="$BOOST_ROOT" -DCMAKE_BUILD_TYPE=Debug .
+    cmake -DBOOST_ROOT="$BOOST_ROOT" -DCMAKE_BUILD_TYPE=Release .
     make 
 
 Note that the environmental variable ``$BOOST_ROOT`` should point to your
