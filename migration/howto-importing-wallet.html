@@ -127,7 +127,11 @@
 <li class="toctree-l2"><a class="reference internal" href="howto-exporting-wallet.html">Exporting Your Wallet</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">Importing Your Wallet</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#web-wallet">Web Wallet</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#cli-wallet">CLI wallet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cli-wallet">CLI wallet</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#claiming-balances">Claiming Balances</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#manually-claim-balances">Manually claim balances</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="howto-importing-wallet-remarks.html">Migration Remarks</a></li>
@@ -216,14 +220,36 @@ imported accounts and corresponding balances.</p>
 <div class="highlight-python"><div class="highlight"><pre>import_accounts &lt;path to exported json&gt; &lt;password of wallet you exported from&gt;
 </pre></div>
 </div>
-<p>Note that this doesn&#8217;t automatically claim the balances. They have to be
-imported one by one (unless this has been updated recently).
-The proper syntax to do so is:</p>
+<p>Note that this doesn&#8217;t automatically claim the balances.</p>
+<div class="section" id="claiming-balances">
+<h3>Claiming Balances<a class="headerlink" href="#claiming-balances" title="Permalink to this headline">¶</a></h3>
+<p>For each account <code class="docutils literal"><span class="pre">&lt;my_account_name&gt;</span></code> in your wallet (run <code class="docutils literal"><span class="pre">list_my_accounts</span></code> to see them)::</p>
+<div class="highlight-python"><div class="highlight"><pre>import_account_keys /path/to/keys.json &lt;my_password&gt; &lt;my_account_name&gt; &lt;my_account_name&gt;
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In the release tag, this will create a full backup of the wallet after every key it imports.
+If you have thousands of keys, this is quite slow and also takes up a lot of disk space.
+Monitor your free disk space during the import and, if necessary,
+periodically erase the backups to avoid filling your disk. The latest code
+only saves your wallet after all keys have been imported.</p>
+</div>
+<p>To verify the results, you can run::</p>
+<div class="highlight-python"><div class="highlight"><pre>import_balance &lt;my_account_name&gt; [&quot;*&quot;] true
+list_account_balances &lt;my_account_name&gt;
+</pre></div>
+</div>
+</div>
+<div class="section" id="manually-claim-balances">
+<h3>Manually claim balances<a class="headerlink" href="#manually-claim-balances" title="Permalink to this headline">¶</a></h3>
+<p>Balances can be imported one by one. The proper syntax to do so is:</p>
 <div class="highlight-python"><div class="highlight"><pre>import_balance &lt;account name&gt; &lt;private key&gt; true
 </pre></div>
 </div>
 <p>But I always import my accounts and then use the GUI to import my balances cause
 it&#8217;s way easier.</p>
+</div>
 </div>
 </div>
 

@@ -74,9 +74,31 @@ The wallet backup file can be imported by ::
 
     import_accounts <path to exported json> <password of wallet you exported from>
 
-Note that this doesn't automatically claim the balances. They have to be
-imported one by one (unless this has been updated recently).
-The proper syntax to do so is::
+Note that this doesn't automatically claim the balances. 
+
+Claiming Balances
+*****************
+
+For each account ``<my_account_name>`` in your wallet (run ``list_my_accounts`` to see them):::
+
+    import_account_keys /path/to/keys.json <my_password> <my_account_name> <my_account_name>
+
+.. note:: In the release tag, this will create a full backup of the wallet after every key it imports.
+   If you have thousands of keys, this is quite slow and also takes up a lot of disk space.
+   Monitor your free disk space during the import and, if necessary,
+   periodically erase the backups to avoid filling your disk. The latest code
+   only saves your wallet after all keys have been imported.  
+
+
+To verify the results, you can run:::
+
+     import_balance <my_account_name> ["*"] true
+     list_account_balances <my_account_name>
+
+Manually claim balances
+***********************
+
+Balances can be imported one by one. The proper syntax to do so is::
 
     import_balance <account name> <private key> true
 
