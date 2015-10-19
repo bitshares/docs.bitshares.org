@@ -134,11 +134,11 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Applications</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="">Full Node</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#launching-a-witness-node">Launching a witness node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#full-nodes">Full Nodes</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#configuration">Configuration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#enabling-remote-procedure-calls-rpc">Enabling Remote Procedure Calls (RPC)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#restarting-the-witness-node">Restarting the witness node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enabling-block-production">Enabling Block Production</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="DelayedNode.html">Delayed Full Node</a></li>
@@ -175,86 +175,146 @@
    
   <div class="section" id="full-node">
 <h1>Full Node<a class="headerlink" href="#full-node" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
-<p>A full node (a.k.a. <em>non-block producing</em> witness node) represents a node in the
-network that verifies all transactions and blocks against its local state.
-Hence, we recommend all service providers to run an maintain their own full
-nodes for reliability and security reasons.</p>
-<p>It takes a <cite>&#8211;data-dir</cite> parameter to define a working and data directory to
-store the configuration, blockchain and local databases. Those will be
-automatically created with default settings if they don&#8217;t exist locally set.</p>
-</div>
-<div class="section" id="launching-a-witness-node">
-<h2>Launching a witness node<a class="headerlink" href="#launching-a-witness-node" title="Permalink to this headline">¶</a></h2>
-<p>The witness is launched according to::</p>
-<div class="highlight-python"><div class="highlight"><pre>./programs/witness_node/witness_node --data-dir=&quot;mydata&quot;
+<p>We here distringuish between full nodes (a.k.a. <em>non-block producing</em> witness
+nodes) and <em>block producing</em> witness nodes. Both are implemented by the same
+executable but the latter requires some additional parameters to be defined and
+the corresponding witness voted active by the shareholders.</p>
+<p>Both represent nodes in the network that verify all transactions and blocks
+against the current state of the overall network. Hence, we recommend all
+service providers to run an maintain their own <strong>full nodes</strong> for reliability
+and security reasons.</p>
+<div class="section" id="full-nodes">
+<h2>Full Nodes<a class="headerlink" href="#full-nodes" title="Permalink to this headline">¶</a></h2>
+<p>The full node is launched according to::</p>
+<div class="highlight-python"><div class="highlight"><pre>./programs/witness_node/witness_node
 </pre></div>
 </div>
+<p>It takes an optional <cite>&#8211;data-dir</cite> parameter to define a working and data
+directory to store the configuration, blockchain and local databases (defaults
+to <code class="docutils literal"><span class="pre">witness_node_data_dir</span></code>. Those will be automatically created with default
+settings if they don&#8217;t exist locally set.</p>
 </div>
 <div class="section" id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
-<p>The configuration file <cite>config.ini</cite> in <cite>mydata</cite> is commented and contains the
-following essential settings::</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c"># Endpoint for P2P node to listen on</span>
-<span class="c"># p2p-endpoint =</span>
-
-<span class="c"># P2P nodes to connect to on startup (may specify multiple times)</span>
-<span class="c"># seed-node =</span>
-
-<span class="c"># Pairs of [BLOCK_NUM,BLOCK_ID] that should be enforced as checkpoints.</span>
-<span class="c"># checkpoint =</span>
-
-<span class="c"># Endpoint for websocket RPC to listen on</span>
-<span class="c"># rpc-endpoint = 0.0.0.0:8090</span>
-
-<span class="c"># Endpoint for TLS websocket RPC to listen on</span>
-<span class="c"># rpc-tls-endpoint =</span>
-
-<span class="c"># The TLS certificate file for this server</span>
-<span class="c"># server-pem =</span>
-
-<span class="c"># Password for this certificate</span>
-<span class="c"># server-pem-password =</span>
-
-<span class="c"># File to read Genesis State from</span>
-<span class="c"># genesis-json = sep-18-testnet-genesis.json</span>
-
-<span class="c"># JSON file specifying API permissions</span>
-<span class="c"># api-access = apiaccess.json</span>
-
-<span class="c"># Enable block production, even if the chain is stale.</span>
-<span class="n">enable</span><span class="o">-</span><span class="n">stale</span><span class="o">-</span><span class="n">production</span> <span class="o">=</span> <span class="n">false</span>
-
-<span class="c"># Percent of witnesses (0-99) that must be participating in order to produce blocks</span>
-<span class="n">required</span><span class="o">-</span><span class="n">participation</span> <span class="o">=</span> <span class="n">false</span>
-
-<span class="c"># Allow block production, even if the last block was produced by the same witness.</span>
-<span class="n">allow</span><span class="o">-</span><span class="n">consecutive</span> <span class="o">=</span> <span class="n">false</span>
-
-<span class="c"># ID of witness controlled by this node (e.g. &quot;1.6.5&quot;, quotes are required, may specify multiple times)</span>
-<span class="c"># witness-id =</span>
-
-<span class="c"># Tuple of [PublicKey, WIF private key] (may specify multiple times)</span>
-<span class="c"># private-key = [&quot;pubkey&quot;,&quot;wif-key&quot;]</span>
-
-<span class="c"># Account ID to track history for (may specify multiple times)</span>
-<span class="c"># track-account =</span>
-
-<span class="c"># Track market history by grouping orders into buckets of equal size measured in seconds specified as a JSON array of numbers</span>
-<span class="c"># bucket-size = [15,60,300,3600,86400]</span>
-
-<span class="c"># How far back in time to track history for each bucket size, measured in the number of buckets (default: 1000)</span>
-<span class="c"># history-per-size = 1000</span>
+<p>The configuration file <code class="docutils literal"><span class="pre">config.ini</span></code> in your data directory is commented and
+contains the following essential settings::</p>
+<div class="highlight-python"><div class="highlight"><pre>* ``p2p-endpoint``:
 </pre></div>
+</div>
+<blockquote>
+<div>Endpoint for P2P node to listen on</div></blockquote>
+<ul>
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">seed-node</span></code>:</dt>
+<dd><p class="first last">P2P nodes to connect to on startup (may specify multiple times)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">checkpoint</span></code>:</dt>
+<dd><p class="first last">Pairs of [BLOCK_NUM,BLOCK_ID] that should be enforced as checkpoints.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">rpc-endpoint</span></code>:</dt>
+<dd><p class="first last">Endpoint for websocket RPC to listen on (e.g. <code class="docutils literal"><span class="pre">0.0.0.0:8090</span></code>)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">rpc-tls-endpoint</span></code>:</dt>
+<dd><p class="first last">Endpoint for TLS websocket RPC to listen on</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">server-pem</span></code>:</dt>
+<dd><p class="first last">The TLS certificate file for this server</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">server-pem-password</span></code>:</dt>
+<dd><p class="first last">Password for this certificate</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">genesis-json</span></code>:</dt>
+<dd><p class="first last">File to read Genesis State from</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">api-access</span></code>:</dt>
+<dd><p class="first last">JSON file specifying API permissions</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">enable-stale-production</span></code>:</dt>
+<dd><p class="first last">Enable block production, even if the chain is stale. (unless for private testnets should be <code class="docutils literal"><span class="pre">false</span></code>)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">required-participation</span></code>:</dt>
+<dd><p class="first last">Percent of witnesses (0-99) that must be participating in order to produce blocks</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">allow-consecutive</span></code>:</dt>
+<dd><p class="first last">Allow block production, even if the last block was produced by the same witness.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">witness-id</span></code>:</dt>
+<dd><p class="first last">ID of witness controlled by this node (e.g. &#8220;1.6.5&#8221;, quotes are required, may specify multiple times)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">private-key</span></code>:</dt>
+<dd><p class="first last">Tuple of <code class="docutils literal"><span class="pre">[PublicKey,</span> <span class="pre">WIF</span> <span class="pre">private</span> <span class="pre">key]</span></code> (may specify multiple times)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">track-account</span></code>:</dt>
+<dd><p class="first last">Account ID to track history for (may specify multiple times)</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">bucket-size</span></code>:</dt>
+<dd><p class="first last">Track market history by grouping orders into buckets of equal size measured
+in seconds specified as a JSON array of numbers</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">history-per-size</span></code>:</dt>
+<dd><p class="first last">How far back in time to track history for each bucket size, measured in the number of buckets (default: 1000)</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Folders and files are considered to be relative to the working
+directory (i.e. the directory from which the executables are launched from)</p>
 </div>
 </div>
 <div class="section" id="enabling-remote-procedure-calls-rpc">
 <h2>Enabling Remote Procedure Calls (RPC)<a class="headerlink" href="#enabling-remote-procedure-calls-rpc" title="Permalink to this headline">¶</a></h2>
 <p>In order to allow RPC calls for blockchain operations you need to modify the
-following entry in the configuration file:</p>
-<blockquote>
-<div>rpc-endpoint = 0.0.0.0:8090</div></blockquote>
+following entry in the configuration file::</p>
+<div class="highlight-python"><div class="highlight"><pre>rpc-endpoint = 0.0.0.0:8090
+</pre></div>
+</div>
 <p>This will open the port 8090 for global queries only. Since the witness node
 only maintains the blockchain and (unless you are an actively block producing
 witness) no private keys are involved, it is safe to expose your witness to the
@@ -265,6 +325,34 @@ internet.</p>
 <p>When restarting the witness node, it may be required to append the
 <cite>&#8211;replay-blockchain</cite> parameter to regenerate the local (in-memory) blockchain
 state.</p>
+</div>
+<div class="section" id="enabling-block-production">
+<h2>Enabling Block Production<a class="headerlink" href="#enabling-block-production" title="Permalink to this headline">¶</a></h2>
+<p>For block production, the required parameters to be defined are</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">witness-id</span></code> and</li>
+<li><code class="docutils literal"><span class="pre">private-key</span></code> as a pair of public key and wif private key.</li>
+</ul>
+<p>The witness-id and public key can be obtain via::</p>
+<div class="highlight-python"><div class="highlight"><pre>unlocked &gt;&gt;&gt; get_witness &lt;accountname&gt;
+{
+  [...]
+  &quot;id&quot;: &quot;1.6.10&quot;,
+  &quot;signing_key&quot;: &quot;GPH7vQ7GmRSJfDHxKdBmWMeDMFENpmHWKn99J457BNApiX1T5TNM8&quot;,
+  [...]
+}
+</pre></div>
+</div>
+<p>Assuming we want to maintain the witness with id <code class="docutils literal"><span class="pre">1.6.10</span></code>, the corresponding
+setting would be::</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">witness</span><span class="o">-</span><span class="nb">id</span> <span class="o">=</span> <span class="s">&quot;1.6.10&quot;</span>
+</pre></div>
+</div>
+<p>The required private keys can be exported from most wallets (e.g.
+<code class="docutils literal"><span class="pre">dump_private_keys</span></code>) for configuration according to::</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">private</span><span class="o">-</span><span class="n">key</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;BTS7vQ7GmRSJfDHxKdBmWMeDMFENpmHWKn99J457BNApiX1T5TNM8&quot;</span><span class="p">,</span><span class="s">&quot;5JGi7DM7J8fSTizZ4D9roNgd8dUc5pirUe9taxYCUUsnvQ4zCaQ&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
 </div>
 </div>
 

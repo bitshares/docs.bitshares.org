@@ -1,3 +1,7 @@
+*****************
+Running a Testnet
+*****************
+
 The following instructions covers the setup of a witness in Ubuntu 14.04. The
 instructions are specific for the Test 3 release, but should be easily ported to
 other releases.
