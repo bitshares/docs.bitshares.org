@@ -7,6 +7,7 @@ User Guide
    Assets
    Dex
    Shareholder
+   Transactions
    Committee
    Witness
    Worker
