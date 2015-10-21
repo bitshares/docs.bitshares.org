@@ -89,10 +89,17 @@ For each account ``<my_account_name>`` in your wallet (run ``list_my_accounts`` 
    periodically erase the backups to avoid filling your disk. The latest code
    only saves your wallet after all keys have been imported.  
 
+The command above will only import your keys into the wallet and will **not**
+claim your funds. In order to claim the funds you need to execute:::
+
+     import_balance <my_account_name> ["*"] true
+
+.. note:: If you would like to preview this claiming transaction, you can
+   replace the ``true`` with a ``false``. That way, the transaction will not be
+   broadcast.
 
 To verify the results, you can run:::
 
-     import_balance <my_account_name> ["*"] true
      list_account_balances <my_account_name>
 
 Manually claim balances
