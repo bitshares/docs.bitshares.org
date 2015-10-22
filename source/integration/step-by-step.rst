@@ -74,6 +74,10 @@ delayed node are **irreversible**.
 
     ./programs/delayed_node/delayed_node --trusted-node="127.0.0.1:8090" \
                                          --rpc-endpoint="127.0.0.1:8091"
+                                         -d delayed_node \
+                                         -s "0.0.0.0:0" \
+                                         --p2p-endpoint="0.0.0.0:0" \
+                                         --seed-nodes "[]"
 
 We will use this node for notifications of customer deposits.
 

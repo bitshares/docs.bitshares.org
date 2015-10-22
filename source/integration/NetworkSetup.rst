@@ -124,6 +124,10 @@ intervals), we need:::
 
     ./programs/delayed_node/delayed_node --trusted-node="192.168.0.100:8090" \
                                          --rpc-endpoint="192.168.0.101:8090"
+                                         -d delayed_node \
+                                         -s "0.0.0.0:0" \
+                                         --p2p-endpoint="0.0.0.0:0" \
+                                         --seed-nodes "[]"
 
 We could now connect via RPC:
 
