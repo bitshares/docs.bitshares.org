@@ -8,7 +8,9 @@ BitShares 2.0.
 Installation
 ############
 
-A graphene Python 3.0 library can be installed by issuing:::
+A graphene Python 3.0 library can be installed by issuing
+
+.. code-block:: sh
 
     git clone http://github.com/xeroc/python-graphenelib
     cd python-graphenelib
@@ -30,7 +32,7 @@ We first prepare our variables and import all required modules
 Define the `accountID` and the `memo_wif_key` in `examples/monitor.py`.
 The accountID can be obtained from the GUI wallet, or by issuing:::
 
-    get_account <accountname>
+    >>> get_account <accountname>
 
 If the script exists abnormally, you can continue operations by setting
 `last_op` to the last operation id that you have captured before the
@@ -46,17 +48,19 @@ key. That way, exposing the memo private key will only expose transaction memos
 private key in 3rd party services and scripts. The memo public key can be
 obtained from the account settings or via command line:::
 
-    get_account <myaccount>
+    >>> get_account <myaccount>
 
 in the cli wallet. The corresponding private key can be obtain from:::
 
-    dump_private_keys
+    >>> dump_private_keys
 
 Note that the latter command exposes all private keys in clear-text wif.
 
 Running
 #######
 
-The monitoring script can be executed via::
+The monitoring script can be executed via
+
+.. code-block:: sh
 
     python3 monitor.py

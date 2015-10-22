@@ -33,7 +33,7 @@ We now define the authorities (i.e. accounts) that define the white- and
 blacklist of the asset ``G.USD``. We add ``g-issuer`` and ``kycprovider`` to
 the white- and black-list:::
 
-    update_asset G.USD "" "{blacklist_authorities:[g-issuer, kycprovider], whitelist_authorities:[g-issuer, kycprovider], flags:white_list}" true
+    >>> update_asset G.USD "" "{blacklist_authorities:[g-issuer, kycprovider], whitelist_authorities:[g-issuer, kycprovider], flags:white_list}" true
 
 .. note:: The third argument for ``update_asset`` replaces the existing
    settings. Make sure to have all desired settings present.
@@ -44,7 +44,7 @@ Let's assume the only authority is the issuer ``g-issuer`` himself for
 simplicity. The issuer now needs to add ``alice`` to ``g-issuer``'s account
 whitelist:::
 
-    whitelist_account g-issuer alice white_listed true
+    >>> whitelist_account g-issuer alice white_listed true
 
 
 Definition

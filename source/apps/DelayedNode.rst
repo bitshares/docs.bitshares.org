@@ -14,7 +14,9 @@ also need to open the RPC/Websocket port (to the local network!) so that we can
 interface using RPC-JSON calls.
 
 For our example and for 10 blocks delaye (i.e. 30 seconds for 3 second block
-intervals), we need:::
+intervals), we need:
+
+.. code-block:: sh
 
     ./programs/delayed_node/delayed_node --trusted-node="192.168.0.100:8090" \
                                          --delay-block-count=10 \

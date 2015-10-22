@@ -8,7 +8,9 @@ graphene-based network such as BitShares 2.0.
 Installation
 ############
 
-A NodeJS library to monitor incoming transactions can be downloaded from::
+A NodeJS library to monitor incoming transactions can be downloaded from
+
+.. code-block:: sh
 
     git clone https://github.com/xeroc/node-graphene-monitor
     cd node-graphene-monitor
@@ -26,7 +28,7 @@ We first prepare our variables and import all required modules
 Define the `accountID` and the `memo_wif_key`.
 The accountID can be obtained from the GUI wallet, or by issuing:::
 
-    get_account <accountname>
+    >>> get_account <accountname>
 
 If the script exists abnormally, you can continue operations by setting
 `last_op` to the last operation id that you have captured before the
@@ -54,18 +56,20 @@ key. That way, exposing the memo private key will only expose transaction memos
 private key in 3rd party services and scripts. The memo public key can be
 obtained from the account settings or via command line:::
 
-    get_account <myaccount>
+    >>> get_account <myaccount>
 
 in the cli wallet. The corresponding private key can be obtain from:::
 
-    dump_private_keys
+    >>> dump_private_keys
 
 Note that the latter command exposes all private keys in clear-text wif.
 
 Running
 #######
 
-The script can be executed simply by::
+The script can be executed simply by
+
+.. code-block:: sh
 
     npm start
 

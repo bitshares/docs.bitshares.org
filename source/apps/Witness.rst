@@ -14,7 +14,9 @@ and security reasons.
 Full Nodes
 ##########
 
-The full node is launched according to:::
+The full node is launched according to:
+
+.. code-block:: sh
 
     ./programs/witness_node/witness_node
 
@@ -98,7 +100,7 @@ For block production, the required parameters to be defined are
 
 The witness-id and public key can be obtain via:::
 
-    unlocked >>> get_witness <accountname>
+    >>> get_witness <accountname>
     {
       [...]
       "id": "1.6.10",

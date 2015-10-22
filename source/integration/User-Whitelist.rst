@@ -11,16 +11,16 @@ Examples
 
 A user ``white`` can be added to the white-list of account ``provider`` with:::
 
-    whitelist_account provider white white_listed true
+    >>> whitelist_account provider white white_listed true
 
 In contrast a ``black`` user can be added to its blacklist with:::
 
-    whitelist_account provider black black_listed true
+    >>> whitelist_account provider black black_listed true
 
 Both can be removed from their lists with:::
 
-    whitelist_account provider black no_listing true
-    whitelist_account provider white no_listing true
+    >>> whitelist_account provider black no_listing true
+    >>> whitelist_account provider white no_listing true
 
 Definition
 ##########

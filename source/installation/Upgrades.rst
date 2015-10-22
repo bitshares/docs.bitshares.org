@@ -5,7 +5,9 @@ Upgrading
 Recompiling from Sources
 ########################
 
-For upgrading from source you only need to execute:::
+For upgrading from source you only need to execute:
+
+.. code-block:: sh
 
     git fetch
     git checkout <version>

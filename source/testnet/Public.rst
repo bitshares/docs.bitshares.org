@@ -12,7 +12,9 @@ Starting genesis file:::
 
     8ff86468d7da87ae73a0a1fdc8adbf6353c427aacba7e27d33772afddabb5b07  genesis/aug-17-test-genesis-c.json
 
-Run following commands:::
+Run following commands:
+
+.. code-block:: sh
 
     cp genesis/aug-17-test-genesis-c.json genesis/gnew1.json
     sed -i -e 's/"block_interval": 1/"block_interval": 5/' genesis/gnew1.json
@@ -24,11 +26,15 @@ Run following commands:::
 Starting the network
 ####################
 
-Create data dir:::
+Create data dir:
+
+.. code-block:: sh
 
     programs/witness_node/witness_node --genesis-timestamp 10 --genesis-json genesis/gnew2.json --enable-stale-production --data-dir data/gnew
 
-Display witness keys and ID's for copy-pasting:::
+Display witness keys and ID's for copy-pasting:
+
+.. code-block:: sh
 
     programs/genesis_util/get_dev_key "$PREFIX" wit-block-signing-0:101 | python3 -c 'import json; import sys; print("\n".join("""private-key = ["{public_key}", "{private_key}"]""".format(**d) for d in json.load(sys.stdin)))' | sh -c 'cat >> data/gnew/config.ini'
     python3 -c 'print("\n".join("witness-id = \"1.6.{}\"".format(i) for i in range(1, 102)))' | sh -c 'cat >> data/gnew/config.ini'
@@ -42,12 +48,16 @@ Witness node startup
 ####################
 
 We need to blow away the previous blockchain so we can rewrite the genesis
-timestamp:::
+timestamp:
+
+.. code-block:: sh
 
     rm -Rf data/gnew/blockchain
 
 Open up a new file in a text editor to take some notes.
-Run the witness node like this:::
+Run the witness node like this:
+
+.. code-block:: sh
 
     programs/witness_node/witness_node --genesis-timestamp 10 --genesis-json genesis/gnew2.json --enable-stale-production --data-dir data/gnew
 

@@ -98,7 +98,7 @@ Query blockchain for required data
 We now use the open ``cli_wallet`` to issue transfers and query the blockchain
 for more information. First of all, we create a new wallet and set a pass phrase:::
 
-    set_password <password>
+    >>> set_password <password>
 
 .. New account
 .. ***********
@@ -119,7 +119,7 @@ We first get the account statistics ID (``2.6.*``) of the deposit account to
 monitor deposits, the memo key for later decoding of memos and the active key
 for being able to spend funds of that accounts:::
 
-    get_account <account-name>
+    >>> get_account <account-name>
     {
      [...]
      "active": {
@@ -156,7 +156,7 @@ can use them in BitShares 2.
 
 For **Coldstorage** and plain private keys, we recommend to use::
 
-    import_balance <accountname> <private_key> false
+    >>> import_balance <accountname> <private_key> false
 
 to import all balances that are locked in the private key into the account named
 ``<accountname``. As long as the last argument is ``false`` the transaction will
@@ -210,7 +210,9 @@ Move ``config-example.py`` to ``config.py`` and modify it accordingly:
 Running
 *******
 
-The monitoring script can be executed via::
+The monitoring script can be executed via
+
+.. code-block:: sh
 
     python3 monitor.py
 
@@ -229,9 +231,9 @@ Executing Transfers for Withdrawals
 Since we have imported the active key for our account into the wallet we can
 either initiate transfers from the wallet CLI with:::
 
-   transfer <account-name> <customer-account-name> <amount> <asset> <memo> <broadcast>
-   # e.g.
-   transfer myexchange xeroc 100 USD "withdrawal myexchange" true
+   >>> transfer <account-name> <customer-account-name> <amount> <asset> <memo> <broadcast>
+       # e.g.
+   >>> transfer myexchange xeroc 100 USD "withdrawal myexchange" true
 
 Make sure to add a ``true`` at the end so that the signed transaction is
 broadcast in the P2P network.

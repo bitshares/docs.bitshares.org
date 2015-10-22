@@ -72,7 +72,7 @@ CLI wallet
 
 The wallet backup file can be imported by ::
 
-    import_accounts <path to exported json> <password of wallet you exported from>
+    >>> import_accounts <path to exported json> <password of wallet you exported from>
 
 Note that this doesn't automatically claim the balances. 
 
@@ -81,7 +81,7 @@ Claiming Balances
 
 For each account ``<my_account_name>`` in your wallet (run ``list_my_accounts`` to see them):::
 
-    import_account_keys /path/to/keys.json <my_password> <my_account_name> <my_account_name>
+    >>> import_account_keys /path/to/keys.json <my_password> <my_account_name> <my_account_name>
 
 .. note:: In the release tag, this will create a full backup of the wallet after every key it imports.
    If you have thousands of keys, this is quite slow and also takes up a lot of disk space.
@@ -92,7 +92,7 @@ For each account ``<my_account_name>`` in your wallet (run ``list_my_accounts`` 
 The command above will only import your keys into the wallet and will **not**
 claim your funds. In order to claim the funds you need to execute:::
 
-     import_balance <my_account_name> ["*"] true
+     >>> import_balance <my_account_name> ["*"] true
 
 .. note:: If you would like to preview this claiming transaction, you can
    replace the ``true`` with a ``false``. That way, the transaction will not be
@@ -100,14 +100,14 @@ claim your funds. In order to claim the funds you need to execute:::
 
 To verify the results, you can run:::
 
-     list_account_balances <my_account_name>
+     >>> list_account_balances <my_account_name>
 
 Manually claim balances
 ***********************
 
 Balances can be imported one by one. The proper syntax to do so is::
 
-    import_balance <account name> <private key> true
+    >>> import_balance <account name> <private key> true
 
 But I always import my accounts and then use the GUI to import my balances cause
 it's way easier.
