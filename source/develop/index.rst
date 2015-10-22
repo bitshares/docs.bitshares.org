@@ -1,0 +1,7 @@
+***********
+Developers
+***********
+
+.. toctree::
+
+   faq

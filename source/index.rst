@@ -53,12 +53,8 @@ here describe the technical possibilities and implementation aspects.
 
    integration/index
 
-
-Developers
-##########
-
 Applications
-************
+############
 
 The Graphene toolkit comprises several tools that shall be briefly described in
 the following sections.
@@ -68,8 +64,16 @@ the following sections.
 
    apps/index
 
+Developers
+##########
+
+.. toctree::
+   :maxdepth: 2
+
+   develop/index
+
 Blockchain Specifications
-*************************
+#########################
 
 The technical specifications of blockchain objects and their serialization is
 part of the following sections.
@@ -80,7 +84,7 @@ part of the following sections.
    blockchain/index
 
 API
-***
+###
 
 The API for interfacing with either a full node or a CLI wallet are described
 in this comprehensive repository.
@@ -92,7 +96,7 @@ in this comprehensive repository.
    namespaces/index
 
 Testnet Guide
-*************
+#############
 
 For running comprehensive tests and evaluating algorithms cheaply, we offer to
 setup private or public testnets.
