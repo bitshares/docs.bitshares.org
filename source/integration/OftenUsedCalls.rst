@@ -22,7 +22,7 @@ BitShares 1.0.
 +-----------------------------------+--------------------------------------------------------------------------+
 |wallet_account_transaction_history | ``get_account_history <account> <limit>``                                |
 +-----------------------------------+--------------------------------------------------------------------------+
-|wallet_transfer                    | ``transfer <front> <to> <amount> <asset> "<memo>" <broadcast>``          |
+|wallet_transfer                    | ``transfer <from> <to> <amount> <asset> "<memo>" <broadcast>``           |
 +-----------------------------------+--------------------------------------------------------------------------+
 |blockchain_get_transaction         | ``get_object 1.11.<id>`` (``<id>`` integer)                              |
 +-----------------------------------+--------------------------------------------------------------------------+
@@ -80,7 +80,7 @@ table above. We recommend to read the following articles:
     ]
 
 
-``transfer <front> <to> <amount> <asset> "<memo>" <broadcast>``
+``transfer <from> <to> <amount> <asset> "<memo>" <broadcast>``
 ***************************************************************
 
 **Script**:
