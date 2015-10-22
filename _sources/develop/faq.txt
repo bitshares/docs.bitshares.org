@@ -1,23 +1,23 @@
 What is the standard Bitshares address structure and format?
-############################################################
+************************************************************
 address = 'BTS'+base58(ripemd(sha512(compressed_pub)))  (checksum obviated)
 But addresses are not used directly, instead you have an account (that can be controlled by one or more address, pubkey or another account).
 https://bitshares.org/technology/dynamic-account-permissions/
 
 What public key system is used? If elliptic curve, then what is the curve?
-##########################################################################
+**************************************************************************
 Same as Bitcoin, secp256k1.
 
 Is there a specification for Bitshares scripting language? (assuming there is one)
-##################################################################################
+**********************************************************************************
 No scripting
 
 Is the scripting language turing complete?
-##########################################
+******************************************
 No scripting
 
 What transaction types are natively supported?
-##############################################
+**********************************************
 Transaction are composed of operations (about ~40 different types).
 Example of operations are:
  * transfer_operation
@@ -28,17 +28,17 @@ Full list
 https://github.com/cryptonomex/graphene/blob/master/libraries/chain/include/graphene/chain/protocol/operations.hpp
 
 How is accounting addressed in Bitshares? Is it a Nxt style accounting model or like Bitcoin's UTXO
-###################################################################################################
+***************************************************************************************************
 Each account has a finite set of balances, one for each asset type.
 
 What is the average size in Bytes of a Bitshares transaction?
-#############################################################
+*************************************************************
 Average wire size of operations is ~30 bytes.
 Average mem size of operations is ~100 bytes.
 https://github.com/cryptonomex/graphene/blob/master/programs/size_checker/main.cpp
 
 How are transactions validated?
-###############################
+*******************************
 Each operation has a defined evaluator that checks for preconditions (do_evaluate) and modify the state (do_apply). (After signature verification)
 
 .. code-block:: cpp
@@ -52,7 +52,7 @@ Each operation has a defined evaluator that checks for preconditions (do_evaluat
        }
 
 Are there any special affordances made for privacy?
-####################################################
+****************************************************
 ...such as using CoinJoin or a ZK-SNARK based privacy scheme like Zerocash? If
 mixing is integrated at the protocl level are you using the standards set forth
 by the BNMCKF Mixcoin proposal
@@ -62,7 +62,7 @@ https://github.com/ElementsProject/elementsproject.github.io/blob/master/confide
 No mixing, No CoinJoin.
 
 What data structures are used in the blockchain?
-################################################
+************************************************
 
 ::
     Blocks => transactions => operations => objects.
@@ -92,7 +92,7 @@ Example objects:::
        };
 
 What is the format of the block header?
-########################################
+****************************************
 
 .. code-block:: cpp
 
@@ -110,7 +110,7 @@ What is the format of the block header?
        };
 
 What is the maximum bitshares block size?
-#########################################
+*****************************************
 Configurable by chain parameters.
 
 .. code-block:: cpp
@@ -155,15 +155,15 @@ Configurable by chain parameters.
 
 
 Are there any sharding mechanics currently deployed?
-####################################################
+****************************************************
 No
 
 How are SPV clients handled?
-############################
+****************************
 No SPV clients at the moment, each full node can expose a public websocket/http api.
 
 Does the protocol provide mechanisms for overlay protocols to interact such as OR_RETURN?
-##########################################################################################
+******************************************************************************************
 Yes, using a custom_operation.
 
 .. code-block:: cpp
@@ -188,18 +188,18 @@ Yes, using a custom_operation.
 
 
 How is time addressed in the blockchain? Is NTP used or some other protocol?
-############################################################################
+****************************************************************************
 NTP
 
 How do new clients bootstrap into the network?
-##############################################
+**********************************************
 Trusted seed nodes. Knowledge of initial witness keys.
 
 What is the average block time?
-###############################
+*******************************
 Current 3 seconds, configurable by chain parameters.
 
 Is this done via a gossip protocol or through a federate relay?
-###############################################################
+***************************************************************
 Each node immediately broadcast the data it receives to its peers after validating it
 https://github.com/cryptonomex/graphene/blob/master/libraries/p2p/design.md
