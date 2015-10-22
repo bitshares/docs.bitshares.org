@@ -3,7 +3,7 @@ User Guide
 **********
 
 .. toctree::
-   Accounts
+   Account
    Assets
    Dex
    Shareholder
