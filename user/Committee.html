@@ -186,8 +186,8 @@
 <h2>Technical Realization<a class="headerlink" href="#technical-realization" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="creating-a-new-committee-member">
 <h3>Creating a New Committee Member<a class="headerlink" href="#creating-a-new-committee-member" title="Permalink to this headline">¶</a></h3>
-<p>We can create a new committee member with:</p>
-<div class="highlight-sh"><div class="highlight"><pre>create_commitee_member account <span class="s2">&quot;url&quot;</span> <span class="nb">true</span>
+<p>We can create a new committee member with::</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">create_commitee_member</span> <span class="n">account</span> <span class="s">&quot;url&quot;</span> <span class="n">true</span>
 </pre></div>
 </div>
 </div>
@@ -204,13 +204,13 @@ a price per kbyte for the account creation transaction can be defined. We get</p
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>We propose the fee change for account <code class="docutils literal"><span class="pre">&lt;committee_member&gt;</span></code> with:</p>
-<div class="highlight-sh"><div class="highlight"><pre>propose_fee_change &lt;committee_member&gt; <span class="s2">&quot;2015-10-14T15:29:00&quot;</span> <span class="o">{</span><span class="s2">&quot;account_create_operation&quot;</span> : <span class="o">{</span><span class="s2">&quot;basic_fee&quot;</span>: 500000, <span class="s2">&quot;premium_fee&quot;</span>: 200000000, <span class="s2">&quot;price_per_kbyte&quot;</span>: 100000<span class="o">}}</span> <span class="nb">false</span>
+<p>We propose the fee change for account <code class="docutils literal"><span class="pre">&lt;committee_member&gt;</span></code> with::</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">propose_fee_change</span> <span class="o">&lt;</span><span class="n">committee_member</span><span class="o">&gt;</span> <span class="s">&quot;2015-10-14T15:29:00&quot;</span> <span class="p">{</span><span class="s">&quot;account_create_operation&quot;</span> <span class="p">:</span> <span class="p">{</span><span class="s">&quot;basic_fee&quot;</span><span class="p">:</span> <span class="mi">500000</span><span class="p">,</span> <span class="s">&quot;premium_fee&quot;</span><span class="p">:</span> <span class="mi">200000000</span><span class="p">,</span> <span class="s">&quot;price_per_kbyte&quot;</span><span class="p">:</span> <span class="mi">100000</span><span class="p">}}</span> <span class="n">false</span>
 </pre></div>
 </div>
 <p>Now we need to convince the other committee members to approve. We can do so on
 the blockchain by asking them for approval with</p>
-<div class="highlight-sh"><div class="highlight"><pre>approve_proposal &lt;committee_member&gt; <span class="s2">&quot;1.10.1&quot;</span> <span class="o">{</span><span class="s2">&quot;active_approvals_to_add&quot;</span> : <span class="o">[</span><span class="s2">&quot;init1&quot;</span>, <span class="s2">&quot;init2&quot;</span>, <span class="s2">&quot;init3&quot;</span>, <span class="s2">&quot;init4&quot;</span>, <span class="s2">&quot;init5&quot;</span>, <span class="s2">&quot;init6&quot;</span>, <span class="s2">&quot;init7&quot;</span>, <span class="s2">&quot;init8&quot;</span>, <span class="s2">&quot;init9&quot;</span>, <span class="s2">&quot;init10&quot;</span><span class="o">]}</span> <span class="nb">false</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">approve_proposal</span> <span class="o">&lt;</span><span class="n">committee_member</span><span class="o">&gt;</span> <span class="s">&quot;1.10.1&quot;</span> <span class="p">{</span><span class="s">&quot;active_approvals_to_add&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="s">&quot;init1&quot;</span><span class="p">,</span> <span class="s">&quot;init2&quot;</span><span class="p">,</span> <span class="s">&quot;init3&quot;</span><span class="p">,</span> <span class="s">&quot;init4&quot;</span><span class="p">,</span> <span class="s">&quot;init5&quot;</span><span class="p">,</span> <span class="s">&quot;init6&quot;</span><span class="p">,</span> <span class="s">&quot;init7&quot;</span><span class="p">,</span> <span class="s">&quot;init8&quot;</span><span class="p">,</span> <span class="s">&quot;init9&quot;</span><span class="p">,</span> <span class="s">&quot;init10&quot;</span><span class="p">]}</span> <span class="n">false</span>
 </pre></div>
 </div>
 <p>where <code class="docutils literal"><span class="pre">1.10.1</span></code> is the id of the proposal in question.</p>

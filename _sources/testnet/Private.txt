@@ -5,7 +5,9 @@ Setting up private testnet
 Genesis creation
 ################
 
-First, we'll create a `genesis.json` file named `my-genesis.json`:::
+First, we'll create a `genesis.json` file named `my-genesis.json`:
+
+.. code-block:: sh
 
     mkdir -p genesis
     programs/witness_node/witness_node --create-genesis-json genesis/my-genesis.json
@@ -35,13 +37,17 @@ witnesses' block production keys.
 Embedding genesis (optional)
 ****************************
 
-Once you have `genesis.json`, you may set a `cmake` variable like so:::
+Once you have `genesis.json`, you may set a `cmake` variable like so:
+
+.. code-block:: sh
 
     cmake -DGRAPHENE_EGENESIS_JSON="$(pwd)/genesis/my-genesis.json"
 
 and then rebuild.  Note, sometimes I've had to clean the build and
 CMake cache variables in order for `GRAPHENE_EGENESIS_JSON` to take
-effect:::
+effect:
+
+.. code-block:: sh
 
     make clean
     find . -name "CMakeCache.txt" | xargs rm -f
@@ -70,7 +76,9 @@ complication of the process for producing binaries.
 Creating data directory
 #######################
 
-We will a new data directory for our witness as follows:::
+We will a new data directory for our witness as follows:
+
+.. code-block:: sh
 
     programs/witness_node/witness_node --data-dir data/my-blockprod --genesis-json my-genesis.json
 
@@ -120,7 +128,9 @@ those blocks.  Normally each witness would be on a different node, but
 for the purposes of this testnet, we will start out with all witnesses
 signing blocks on a single node.
 
-Now run `witness_node` again:::
+Now run `witness_node` again:
+
+.. code-block:: sh
 
     programs/witness_node/witness_node --data-dir data/my-blockprod --enable-stale-production
 
@@ -144,7 +154,9 @@ using a testnet wallet on the real chain.
 
 The chain ID is printed at witness node startup.  It can also be
 obtained by using the API to query a running witness node with the
-`get_chain_properties` API call:::
+`get_chain_properties` API call:
+
+.. code-block:: sh
 
     curl --data '{"jsonrpc": "2.0", "method": "get_chain_properties", "params": [], "id": 1}' http://127.0.0.1:11011/rpc && echo
 
@@ -155,7 +167,9 @@ Creating a wallet
 
 In order to create a wallet, you must specify a chain ID and server.
 With the witness node's default access control settings, a blank
-username and password will suffice:::
+username and password will suffice:
+
+.. code-block:: sh
 
     programs/cli_wallet/cli_wallet --wallet-file my-wallet.json --chain-id cf307110d029cb882d126bf0488dc4864772f68d9888d86b458d16e6c36aa74b --server-rpc-endpoint ws://127.0.0.1:11011 -u '' -p ''
 
@@ -168,7 +182,7 @@ Before continuing, we should set a password.  This password is used
 to encrypt the private keys in the wallet.  We will use the word
 `supersecret` in this example.::
 
-    set_password supersecret
+    >>> set_password supersecret
 
 Gaining access to stake
 #######################
@@ -176,13 +190,13 @@ Gaining access to stake
 In Graphene, balances are contained in accounts.  To claim an account
 that exists in the Graphene genesis, use the `import_key` command:::
 
-    unlock supersecret
-    import_key nathan "5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3"
+    >>> unlock supersecret
+    >>> import_key nathan "5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3"
 
 Funds are stored in genesis balance objects.  These funds can be
 claimed, with no fee, using the `import_balance` command.::
 
-    import_balance nathan ["5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3"] true
+    >>> import_balance nathan ["5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3"] true
 
 Creating accounts
 #################
@@ -190,24 +204,24 @@ Creating accounts
 Creating an account requires lifetime member (LTM) status.  To upgrade
 to LTM, use the `upgrade_account` command:::
 
-    upgrade_account nathan true
+    >>> upgrade_account nathan true
 
 We can now register an account.  The `register_account` command
 allows you to register an account using only a public key:::
 
-    register_account alpha GPH4zSJHx7D84T1j6HQ7keXWdtabBBWJxvfJw72XmEyqmgdoo1njF GPH4zSJHx7D84T1j6HQ7keXWdtabBBWJxvfJw72XmEyqmgdoo1njF nathan nathan 0 true
-    transfer nathan alpha 100000 CORE "here is the cash" true
+    >>> register_account alpha GPH4zSJHx7D84T1j6HQ7keXWdtabBBWJxvfJw72XmEyqmgdoo1njF GPH4zSJHx7D84T1j6HQ7keXWdtabBBWJxvfJw72XmEyqmgdoo1njF nathan nathan 0 true
+    >>> transfer nathan alpha 100000 CORE "here is the cash" true
 
 We can now open a new wallet for `alpha` user:::
 
-    import_key alpha 5HuCDiMeESd86xrRvTbexLjkVg2BEoKrb7BAA5RLgXizkgV3shs
-    upgrade_account alpha true
-    create_witness alpha "http://www.alpha" true
+    >>> import_key alpha 5HuCDiMeESd86xrRvTbexLjkVg2BEoKrb7BAA5RLgXizkgV3shs
+    >>> upgrade_account alpha true
+    >>> create_witness alpha "http://www.alpha" true
 
 The `get_private_key` command allows us to obtain the public key corresponding
 to the block signing key:::
 
-    get_private_key GPH6viEhYCQr8xKP3Vj8wfHh6WfZeJK7H9uhLPDYWLGCRSj5kHQZM
+    >>> get_private_key GPH6viEhYCQr8xKP3Vj8wfHh6WfZeJK7H9uhLPDYWLGCRSj5kHQZM
 
 Creating committee members
 ##########################

@@ -296,8 +296,8 @@ the following IPs and open the corresponding RPC ports:</p>
 <h3>Trusted Full Node<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>For the trusted full node, the default settings can be used.  For later, we
 will need to open the RPC port and listen to an IP address to connect the
-delayed full node to.:</p>
-<div class="highlight-python"><div class="highlight"><pre>./programs/witness_node/witness_node --rpc-endpoint=&quot;192.168.0.100:8090&quot;
+delayed full node to.</p>
+<div class="highlight-sh"><div class="highlight"><pre>./programs/witness_node/witness_node --rpc-endpoint<span class="o">=</span><span class="s2">&quot;192.168.0.100:8090&quot;</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -313,13 +313,13 @@ from the trusted full node and the number of blocks that should be delayed.  We
 also need to open the RPC/Websocket port (to the local network!) so that we can
 interface using RPC-JSON calls.</p>
 <p>For our example and for 10 blocks delaye (i.e. 30 seconds for 3 second block
-intervals), we need::</p>
-<div class="highlight-python"><div class="highlight"><pre>./programs/delayed_node/delayed_node --trusted-node=&quot;192.168.0.100:8090&quot; \
-                                     --rpc-endpoint=&quot;192.168.0.101:8090&quot;
-                                     -d delayed_node \
-                                     -s &quot;0.0.0.0:0&quot; \
-                                     --p2p-endpoint=&quot;0.0.0.0:0&quot; \
-                                     --seed-nodes &quot;[]&quot;
+intervals), we need:</p>
+<div class="highlight-sh"><div class="highlight"><pre>./programs/delayed_node/delayed_node --trusted-node<span class="o">=</span><span class="s2">&quot;192.168.0.100:8090&quot;</span> <span class="se">\</span>
+                                     --rpc-endpoint<span class="o">=</span><span class="s2">&quot;192.168.0.101:8090&quot;</span>
+                                     -d delayed_node <span class="se">\</span>
+                                     -s <span class="s2">&quot;0.0.0.0:0&quot;</span> <span class="se">\</span>
+                                     --p2p-endpoint<span class="o">=</span><span class="s2">&quot;0.0.0.0:0&quot;</span> <span class="se">\</span>
+                                     --seed-nodes <span class="s2">&quot;[]&quot;</span>
 </pre></div>
 </div>
 <p>We could now connect via RPC:</p>
@@ -343,9 +343,9 @@ attempting to start the delayed full node.</p>
 because the <em>delayed</em> node has no P2P connections. We furthermore open up a
 RPC-JSON-HTTP port to be able to interface with API requests. The wallet can be
 connected to the trusted node and listens for RPC requests on port <code class="docutils literal"><span class="pre">8092</span></code>
-with::</p>
-<div class="highlight-python"><div class="highlight"><pre>./programs/cli_wallet/cli_wallet --server-rpc-endpoint=&quot;ws://192.168.0.100:8090&quot; \
-                                 --rpc-http-endpoint=&quot;192.168.0.102:8092&quot;
+with:</p>
+<div class="highlight-sh"><div class="highlight"><pre>./programs/cli_wallet/cli_wallet --server-rpc-endpoint<span class="o">=</span><span class="s2">&quot;ws://192.168.0.100:8090&quot;</span> <span class="se">\</span>
+                                 --rpc-http-endpoint<span class="o">=</span><span class="s2">&quot;192.168.0.102:8092&quot;</span>
 </pre></div>
 </div>
 <div class="admonition note">

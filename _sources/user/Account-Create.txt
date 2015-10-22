@@ -31,6 +31,7 @@ We can derive a new set auf keys using the ``suggest_brain_key`` command in the
 
 .. code-block:: json
 
+    >>> suggest_brain_key
     {
       "brain_priv_key": "FILINGS THEREOF ENSILE JAW OVERBID RETINAL PILULAR RYPE CHITTY RAFFERY HANDGUN ERANIST UNPILE TWISTER BABYDOM CIBOL",
       "wif_priv_key": "5JVrt2921aikA7QP5ZCtR2sJh4wbEnsHsK6qo67Shnk9ArKMzNT",
@@ -52,11 +53,11 @@ If you want to create and register a new account on your own because you have
 the funds in another account and don't want someone else involved, you can make
 use of the command ``create_account_with_brain_key``:::
 
-     create_account_with_brain_key(brain_key, account_name, registrar_account, referrer_account, broadcast)
+    >>> create_account_with_brain_key(brain_key, account_name, registrar_account, referrer_account, broadcast)
 
 For our example, we would get:::
 
-    create_account_with_brain_key "FILINGS THEREOF ENSILE JAW OVERBID RETINAL PILULAR RYPE CHITTY RAFFERY HANDGUN ERANIST UNPILE TWISTER BABYDOM CIBOL" mywallet myfunds anonymous 100 true
+    >>> create_account_with_brain_key "FILINGS THEREOF ENSILE JAW OVERBID RETINAL PILULAR RYPE CHITTY RAFFERY HANDGUN ERANIST UNPILE TWISTER BABYDOM CIBOL" mywallet myfunds anonymous 100 true
 
 Registering an Account
 ***************************
@@ -74,12 +75,12 @@ that will get ``referrer_percentage`` of the referral bonus program. Any
 registered account can take the role of the referrer. Hence we here say that
 user ``anonymous`` has referred us. The syntax goes like this:::
 
-    register_account name, owner_pubkey, active _pubkey, registrar_account, referrer_account, referrer_percent, broadcast
+    >>> register_account name, owner_pubkey, active _pubkey, registrar_account, referrer_account, referrer_percent, broadcast
 
 For our example we say we register a new user called ``mywallet``, use the
 pubkey derived above and let our account ``myfunds`` pay the fee:::
 
-    register_account mywallet BTS7D8jpQ2UwaQxqKyGpuhFQ9LBugCNxDhE7UN2jqgjVQgzG7zo9n BTS7D8jpQ2UwaQxqKyGpuhFQ9LBugCNxDhE7UN2jqgjVQgzG7zo9n myfunds anonymous 100 true
+    >>> register_account mywallet BTS7D8jpQ2UwaQxqKyGpuhFQ9LBugCNxDhE7UN2jqgjVQgzG7zo9n BTS7D8jpQ2UwaQxqKyGpuhFQ9LBugCNxDhE7UN2jqgjVQgzG7zo9n myfunds anonymous 100 true
 
 .. note:: Note that in order to register an account, the registrar (here:
    ``myfunds``) needs to be a **lifetime member**!

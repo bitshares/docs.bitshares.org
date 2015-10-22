@@ -181,10 +181,10 @@ from the trusted full node and the number of blocks that should be delayed.  We
 also need to open the RPC/Websocket port (to the local network!) so that we can
 interface using RPC-JSON calls.</p>
 <p>For our example and for 10 blocks delaye (i.e. 30 seconds for 3 second block
-intervals), we need::</p>
-<div class="highlight-python"><div class="highlight"><pre>./programs/delayed_node/delayed_node --trusted-node=&quot;192.168.0.100:8090&quot; \
-                                     --delay-block-count=10 \
-                                     --rpc-endpoint=&quot;192.168.0.101:8090&quot;
+intervals), we need:</p>
+<div class="highlight-sh"><div class="highlight"><pre>./programs/delayed_node/delayed_node --trusted-node<span class="o">=</span><span class="s2">&quot;192.168.0.100:8090&quot;</span> <span class="se">\</span>
+                                     --delay-block-count<span class="o">=</span><span class="m">10</span> <span class="se">\</span>
+                                     --rpc-endpoint<span class="o">=</span><span class="s2">&quot;192.168.0.101:8090&quot;</span>
 </pre></div>
 </div>
 </div>

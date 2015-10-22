@@ -196,34 +196,39 @@ node) on the same host via websockets.</p>
 <div class="section" id="download">
 <h2>Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h2>
 <p>The sources can be downloaded from github.</p>
-<blockquote>
-<div>git clone <a class="reference external" href="https://github.com/cryptonomex/graphene-ui">https://github.com/cryptonomex/graphene-ui</a></div></blockquote>
+<div class="highlight-sh"><div class="highlight"><pre>git clone https://github.com/cryptonomex/graphene-ui
+</pre></div>
+</div>
 <p>They consist of libraries, a JS-console, and the wallet, as well as other
 tools.</p>
 </div>
 <div class="section" id="installing-dependencies">
 <h2>Installing Dependencies<a class="headerlink" href="#installing-dependencies" title="Permalink to this headline">¶</a></h2>
 <p>First, we need to install the dependencies via <cite>npm</cite>:</p>
-<blockquote>
-<div>for I in cli dl web; do cd $I; npm install; cd ..; done</div></blockquote>
+<div class="highlight-sh"><div class="highlight"><pre><span class="k">for</span> I in cli dl web<span class="p">;</span> <span class="k">do</span> <span class="nb">cd</span> <span class="nv">$I</span><span class="p">;</span> npm install<span class="p">;</span> <span class="nb">cd</span> ..<span class="p">;</span> <span class="k">done</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="bundling">
 <h2>Bundling<a class="headerlink" href="#bundling" title="Permalink to this headline">¶</a></h2>
 <p>We now bundle the web wallet into JavaScript, CSS, and HTML assets.</p>
-<blockquote>
-<div>cd ./web
-npm run-script build</div></blockquote>
+<div class="highlight-sh"><div class="highlight"><pre><span class="nb">cd</span> ./web
+npm run build
+</pre></div>
+</div>
 <p>The resulting assets can be found in the <cite>dist</cite> folder.</p>
 </div>
 <div class="section" id="testing-bundle">
 <h2>Testing Bundle<a class="headerlink" href="#testing-bundle" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div>npm test</div></blockquote>
+<div class="highlight-sh"><div class="highlight"><pre>npm <span class="nb">test</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="live-development">
 <h2>Live Development<a class="headerlink" href="#live-development" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div>npm start</div></blockquote>
+<div class="highlight-sh"><div class="highlight"><pre>npm start
+</pre></div>
+</div>
 </div>
 </div>
 

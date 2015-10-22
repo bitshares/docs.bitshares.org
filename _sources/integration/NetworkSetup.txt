@@ -104,7 +104,9 @@ Trusted Full Node
 
 For the trusted full node, the default settings can be used.  For later, we
 will need to open the RPC port and listen to an IP address to connect the
-delayed full node to.::
+delayed full node to.
+
+.. code-block:: sh
 
     ./programs/witness_node/witness_node --rpc-endpoint="192.168.0.100:8090"
 
@@ -120,7 +122,9 @@ also need to open the RPC/Websocket port (to the local network!) so that we can
 interface using RPC-JSON calls.
 
 For our example and for 10 blocks delaye (i.e. 30 seconds for 3 second block
-intervals), we need:::
+intervals), we need:
+
+.. code-block:: sh
 
     ./programs/delayed_node/delayed_node --trusted-node="192.168.0.100:8090" \
                                          --rpc-endpoint="192.168.0.101:8090"
@@ -150,7 +154,9 @@ The wallet initiates outgoing transfers and has to connect to your trusted node
 because the *delayed* node has no P2P connections. We furthermore open up a
 RPC-JSON-HTTP port to be able to interface with API requests. The wallet can be
 connected to the trusted node and listens for RPC requests on port ``8092``
-with:::
+with:
+
+.. code-block:: sh
 
     ./programs/cli_wallet/cli_wallet --server-rpc-endpoint="ws://192.168.0.100:8090" \
                                      --rpc-http-endpoint="192.168.0.102:8092"

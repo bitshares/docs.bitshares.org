@@ -23,6 +23,8 @@ Download
 
 The sources can be downloaded from github.
 
+.. code-block:: sh
+
     git clone https://github.com/cryptonomex/graphene-ui
 
 They consist of libraries, a JS-console, and the wallet, as well as other
@@ -33,6 +35,8 @@ Installing Dependencies
 
 First, we need to install the dependencies via `npm`:
 
+.. code-block:: sh
+
     for I in cli dl web; do cd $I; npm install; cd ..; done
 
 Bundling
@@ -40,17 +44,23 @@ Bundling
 
 We now bundle the web wallet into JavaScript, CSS, and HTML assets.
 
+.. code-block:: sh
+
     cd ./web
-    npm run-script build
+    npm run build
 
 The resulting assets can be found in the `dist` folder.
 
 Testing Bundle
 ##############
 
+.. code-block:: sh
+
     npm test
 
 Live Development
 ################
+
+.. code-block:: sh
 
     npm start

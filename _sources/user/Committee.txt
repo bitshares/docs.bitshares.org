@@ -11,11 +11,9 @@ Technical Realization
 Creating a New Committee Member
 *******************************
 
-We can create a new committee member with:
+We can create a new committee member with:::
 
-.. code-block:: sh
-
-  create_commitee_member account "url" true
+  >>> create_commitee_member account "url" true
 
 Proposing a fee change
 *******************************
@@ -33,17 +31,13 @@ a price per kbyte for the account creation transaction can be defined. We get
                 "price_per_kbyte": 100000}
      }
 
-We propose the fee change for account ``<committee_member>`` with:
+We propose the fee change for account ``<committee_member>`` with:::
 
-.. code-block:: sh
-
-  propose_fee_change <committee_member> "2015-10-14T15:29:00" {"account_create_operation" : {"basic_fee": 500000, "premium_fee": 200000000, "price_per_kbyte": 100000}} false
+  >>> propose_fee_change <committee_member> "2015-10-14T15:29:00" {"account_create_operation" : {"basic_fee": 500000, "premium_fee": 200000000, "price_per_kbyte": 100000}} false
 
 Now we need to convince the other committee members to approve. We can do so on
-the blockchain by asking them for approval with 
+the blockchain by asking them for approval with ::
 
-.. code-block:: sh
-
-  approve_proposal <committee_member> "1.10.1" {"active_approvals_to_add" : ["init1", "init2", "init3", "init4", "init5", "init6", "init7", "init8", "init9", "init10"]} false
+  >>> approve_proposal <committee_member> "1.10.1" {"active_approvals_to_add" : ["init1", "init2", "init3", "init4", "init5", "init6", "init7", "init8", "init9", "init10"]} false
 
 where ``1.10.1`` is the id of the proposal in question.

@@ -284,7 +284,7 @@ trusted full node and has spending privileges for the hot wallet.</p>
 <h2>Query blockchain for required data<a class="headerlink" href="#query-blockchain-for-required-data" title="Permalink to this headline">¶</a></h2>
 <p>We now use the open <code class="docutils literal"><span class="pre">cli_wallet</span></code> to issue transfers and query the blockchain
 for more information. First of all, we create a new wallet and set a pass phrase::</p>
-<div class="highlight-python"><div class="highlight"><pre>set_password &lt;password&gt;
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">set_password</span> <span class="o">&lt;</span><span class="n">password</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <div class="section" id="existing-bitshares-1-account">
@@ -294,20 +294,20 @@ how to export it from the BitShares 1 client.</em></p>
 <p>We first get the account statistics ID (<code class="docutils literal"><span class="pre">2.6.*</span></code>) of the deposit account to
 monitor deposits, the memo key for later decoding of memos and the active key
 for being able to spend funds of that accounts::</p>
-<div class="highlight-python"><div class="highlight"><pre>get_account &lt;account-name&gt;
-{
- [...]
- &quot;active&quot;: {
-    &quot;key_auths&quot;: [[
-        &quot;&lt;active_key&gt;&quot;,
-        1
- ] ], },
- [...]
- &quot;memo_key&quot;: &quot;&lt;memo_key&gt;&quot;,
- [...]
- &quot;statistics&quot;: &quot;&lt;statistics&gt;&quot;,
- [...]
-}
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">get_account</span> <span class="o">&lt;</span><span class="n">account</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
+<span class="go">{</span>
+<span class="go"> [...]</span>
+<span class="go"> &quot;active&quot;: {</span>
+<span class="go">    &quot;key_auths&quot;: [[</span>
+<span class="go">        &quot;&lt;active_key&gt;&quot;,</span>
+<span class="go">        1</span>
+<span class="go"> ] ], },</span>
+<span class="go"> [...]</span>
+<span class="go"> &quot;memo_key&quot;: &quot;&lt;memo_key&gt;&quot;,</span>
+<span class="go"> [...]</span>
+<span class="go"> &quot;statistics&quot;: &quot;&lt;statistics&gt;&quot;,</span>
+<span class="go"> [...]</span>
+<span class="go">}</span>
 </pre></div>
 </div>
 <p>We now need to export the corresponding private keys from BitShares 1.0 and
@@ -330,7 +330,7 @@ memo private key later when watching deposits.</p>
 <p>We now describe how to claim your funds from the Bitshares 1 blockchain so you
 can use them in BitShares 2.</p>
 <p>For <strong>Coldstorage</strong> and plain private keys, we recommend to use:</p>
-<div class="highlight-python"><div class="highlight"><pre>import_balance &lt;accountname&gt; &lt;private_key&gt; false
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">import_balance</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">private_key</span><span class="o">&gt;</span> <span class="n">false</span>
 </pre></div>
 </div>
 <p>to import all balances that are locked in the private key into the account named
@@ -377,8 +377,8 @@ python3 setup.py install --user
 </div>
 <div class="section" id="running">
 <h3>Running<a class="headerlink" href="#running" title="Permalink to this headline">¶</a></h3>
-<p>The monitoring script can be executed via:</p>
-<div class="highlight-python"><div class="highlight"><pre>python3 monitor.py
+<p>The monitoring script can be executed via</p>
+<div class="highlight-sh"><div class="highlight"><pre>python3 monitor.py
 </pre></div>
 </div>
 <p>Every time a deposit was made into your account a new line will appear similar
@@ -395,9 +395,9 @@ registered deposit.</p>
 <h2>Executing Transfers for Withdrawals<a class="headerlink" href="#executing-transfers-for-withdrawals" title="Permalink to this headline">¶</a></h2>
 <p>Since we have imported the active key for our account into the wallet we can
 either initiate transfers from the wallet CLI with::</p>
-<div class="highlight-python"><div class="highlight"><pre>transfer &lt;account-name&gt; &lt;customer-account-name&gt; &lt;amount&gt; &lt;asset&gt; &lt;memo&gt; &lt;broadcast&gt;
-# e.g.
-transfer myexchange xeroc 100 USD &quot;withdrawal myexchange&quot; true
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">transfer</span> <span class="o">&lt;</span><span class="n">account</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">customer</span><span class="o">-</span><span class="n">account</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">amount</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">asset</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">memo</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">broadcast</span><span class="o">&gt;</span>
+<span class="go">    # e.g.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">transfer</span> <span class="n">myexchange</span> <span class="n">xeroc</span> <span class="mi">100</span> <span class="n">USD</span> <span class="s">&quot;withdrawal myexchange&quot;</span> <span class="n">true</span>
 </pre></div>
 </div>
 <p>Make sure to add a <code class="docutils literal"><span class="pre">true</span></code> at the end so that the signed transaction is

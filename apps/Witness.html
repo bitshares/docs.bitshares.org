@@ -188,8 +188,8 @@ service providers to run an maintain their own <strong>full nodes</strong> for r
 and security reasons.</p>
 <div class="section" id="full-nodes">
 <h2>Full Nodes<a class="headerlink" href="#full-nodes" title="Permalink to this headline">¶</a></h2>
-<p>The full node is launched according to::</p>
-<div class="highlight-python"><div class="highlight"><pre>./programs/witness_node/witness_node
+<p>The full node is launched according to:</p>
+<div class="highlight-sh"><div class="highlight"><pre>./programs/witness_node/witness_node
 </pre></div>
 </div>
 <p>It takes an optional <cite>&#8211;data-dir</cite> parameter to define a working and data
@@ -337,13 +337,13 @@ state.</p>
 <li><code class="docutils literal"><span class="pre">private-key</span></code> as a pair of public key and wif private key.</li>
 </ul>
 <p>The witness-id and public key can be obtain via::</p>
-<div class="highlight-python"><div class="highlight"><pre>unlocked &gt;&gt;&gt; get_witness &lt;accountname&gt;
-{
-  [...]
-  &quot;id&quot;: &quot;1.6.10&quot;,
-  &quot;signing_key&quot;: &quot;GPH7vQ7GmRSJfDHxKdBmWMeDMFENpmHWKn99J457BNApiX1T5TNM8&quot;,
-  [...]
-}
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">get_witness</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span>
+<span class="go">{</span>
+<span class="go">  [...]</span>
+<span class="go">  &quot;id&quot;: &quot;1.6.10&quot;,</span>
+<span class="go">  &quot;signing_key&quot;: &quot;GPH7vQ7GmRSJfDHxKdBmWMeDMFENpmHWKn99J457BNApiX1T5TNM8&quot;,</span>
+<span class="go">  [...]</span>
+<span class="go">}</span>
 </pre></div>
 </div>
 <p>Assuming we want to maintain the witness with id <code class="docutils literal"><span class="pre">1.6.10</span></code>, the corresponding

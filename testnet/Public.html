@@ -184,25 +184,25 @@ start up a new public testnet.</p>
 <div class="highlight-python"><div class="highlight"><pre>8ff86468d7da87ae73a0a1fdc8adbf6353c427aacba7e27d33772afddabb5b07  genesis/aug-17-test-genesis-c.json
 </pre></div>
 </div>
-<p>Run following commands::</p>
-<div class="highlight-python"><div class="highlight"><pre>cp genesis/aug-17-test-genesis-c.json genesis/gnew1.json
-sed -i -e &#39;s/&quot;block_interval&quot;: 1/&quot;block_interval&quot;: 5/&#39; genesis/gnew1.json
-sed -i -e &#39;s/&quot;\(block_signing_key\|owner\|owner_key\|active_key\)&quot;: &quot;BTS/&quot;\1&quot;: &quot;GPH/&#39; genesis/gnew1.json
+<p>Run following commands:</p>
+<div class="highlight-sh"><div class="highlight"><pre>cp genesis/aug-17-test-genesis-c.json genesis/gnew1.json
+sed -i -e <span class="s1">&#39;s/&quot;block_interval&quot;: 1/&quot;block_interval&quot;: 5/&#39;</span> genesis/gnew1.json
+sed -i -e <span class="s1">&#39;s/&quot;\(block_signing_key\|owner\|owner_key\|active_key\)&quot;: &quot;BTS/&quot;\1&quot;: &quot;GPH/&#39;</span> genesis/gnew1.json
 
-PREFIX=aaaa
-programs/genesis_util/genesis_update -g genesis/gnew1.json -o genesis/gnew2.json --dev-account-count=1000 --dev-balance-count=200 --dev-key-prefix &quot;$PREFIX&quot;
+<span class="nv">PREFIX</span><span class="o">=</span>aaaa
+programs/genesis_util/genesis_update -g genesis/gnew1.json -o genesis/gnew2.json --dev-account-count<span class="o">=</span><span class="m">1000</span> --dev-balance-count<span class="o">=</span><span class="m">200</span> --dev-key-prefix <span class="s2">&quot;</span><span class="nv">$PREFIX</span><span class="s2">&quot;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="starting-the-network">
 <h2>Starting the network<a class="headerlink" href="#starting-the-network" title="Permalink to this headline">¶</a></h2>
-<p>Create data dir::</p>
-<div class="highlight-python"><div class="highlight"><pre>programs/witness_node/witness_node --genesis-timestamp 10 --genesis-json genesis/gnew2.json --enable-stale-production --data-dir data/gnew
+<p>Create data dir:</p>
+<div class="highlight-sh"><div class="highlight"><pre>programs/witness_node/witness_node --genesis-timestamp <span class="m">10</span> --genesis-json genesis/gnew2.json --enable-stale-production --data-dir data/gnew
 </pre></div>
 </div>
-<p>Display witness keys and ID&#8217;s for copy-pasting::</p>
-<div class="highlight-python"><div class="highlight"><pre>programs/genesis_util/get_dev_key &quot;$PREFIX&quot; wit-block-signing-0:101 | python3 -c &#39;import json; import sys; print(&quot;\n&quot;.join(&quot;&quot;&quot;private-key = [&quot;{public_key}&quot;, &quot;{private_key}&quot;]&quot;&quot;&quot;.format(**d) for d in json.load(sys.stdin)))&#39; | sh -c &#39;cat &gt;&gt; data/gnew/config.ini&#39;
-python3 -c &#39;print(&quot;\n&quot;.join(&quot;witness-id = \&quot;1.6.{}\&quot;&quot;.format(i) for i in range(1, 102)))&#39; | sh -c &#39;cat &gt;&gt; data/gnew/config.ini&#39;
+<p>Display witness keys and ID&#8217;s for copy-pasting:</p>
+<div class="highlight-sh"><div class="highlight"><pre>programs/genesis_util/get_dev_key <span class="s2">&quot;</span><span class="nv">$PREFIX</span><span class="s2">&quot;</span> wit-block-signing-0:101 <span class="p">|</span> python3 -c <span class="s1">&#39;import json; import sys; print(&quot;\n&quot;.join(&quot;&quot;&quot;private-key = [&quot;{public_key}&quot;, &quot;{private_key}&quot;]&quot;&quot;&quot;.format(**d) for d in json.load(sys.stdin)))&#39;</span> <span class="p">|</span> sh -c <span class="s1">&#39;cat &gt;&gt; data/gnew/config.ini&#39;</span>
+python3 -c <span class="s1">&#39;print(&quot;\n&quot;.join(&quot;witness-id = \&quot;1.6.{}\&quot;&quot;.format(i) for i in range(1, 102)))&#39;</span> <span class="p">|</span> sh -c <span class="s1">&#39;cat &gt;&gt; data/gnew/config.ini&#39;</span>
 </pre></div>
 </div>
 <p>Also set p2p and rpc endpoints.</p>
@@ -212,13 +212,13 @@ does not play nicely with appending because of sections.</p>
 <div class="section" id="witness-node-startup">
 <h2>Witness node startup<a class="headerlink" href="#witness-node-startup" title="Permalink to this headline">¶</a></h2>
 <p>We need to blow away the previous blockchain so we can rewrite the genesis
-timestamp::</p>
-<div class="highlight-python"><div class="highlight"><pre>rm -Rf data/gnew/blockchain
+timestamp:</p>
+<div class="highlight-sh"><div class="highlight"><pre>rm -Rf data/gnew/blockchain
 </pre></div>
 </div>
 <p>Open up a new file in a text editor to take some notes.
-Run the witness node like this::</p>
-<div class="highlight-python"><div class="highlight"><pre>programs/witness_node/witness_node --genesis-timestamp 10 --genesis-json genesis/gnew2.json --enable-stale-production --data-dir data/gnew
+Run the witness node like this:</p>
+<div class="highlight-sh"><div class="highlight"><pre>programs/witness_node/witness_node --genesis-timestamp <span class="m">10</span> --genesis-json genesis/gnew2.json --enable-stale-production --data-dir data/gnew
 </pre></div>
 </div>
 <p>You should copy-paste a line like this into your notes::</p>

@@ -191,16 +191,16 @@ but serve as a basis for <em>list authorities</em>.</p>
 <div class="section" id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
 <p>A user <code class="docutils literal"><span class="pre">white</span></code> can be added to the white-list of account <code class="docutils literal"><span class="pre">provider</span></code> with::</p>
-<div class="highlight-python"><div class="highlight"><pre>whitelist_account provider white white_listed true
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">whitelist_account</span> <span class="n">provider</span> <span class="n">white</span> <span class="n">white_listed</span> <span class="n">true</span>
 </pre></div>
 </div>
 <p>In contrast a <code class="docutils literal"><span class="pre">black</span></code> user can be added to its blacklist with::</p>
-<div class="highlight-python"><div class="highlight"><pre>whitelist_account provider black black_listed true
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">whitelist_account</span> <span class="n">provider</span> <span class="n">black</span> <span class="n">black_listed</span> <span class="n">true</span>
 </pre></div>
 </div>
 <p>Both can be removed from their lists with::</p>
-<div class="highlight-python"><div class="highlight"><pre>whitelist_account provider black no_listing true
-whitelist_account provider white no_listing true
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">whitelist_account</span> <span class="n">provider</span> <span class="n">black</span> <span class="n">no_listing</span> <span class="n">true</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">whitelist_account</span> <span class="n">provider</span> <span class="n">white</span> <span class="n">no_listing</span> <span class="n">true</span>
 </pre></div>
 </div>
 </div>

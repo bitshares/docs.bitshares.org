@@ -15,12 +15,12 @@ A gateway with IOU ``G.USD`` that wants to prevent his customers from trading
 ``G.USD`` against ``bitCNY`` can do so by adding ``bitCNY`` to the blacklist of
 ``G.USD`` by issuing:::
 
-    update_asset G.USD "" "{blacklist_markets:[CNY]}" true
+    >>> update_asset G.USD "" "{blacklist_markets:[CNY]}" true
 
 Alternatively, if an issuer may want to only open the market ``G.USD : bitUSD``
 with his asset, he can do so as well with:::
 
-    update_asset G.USD "" "{whitelist_markets:[USD]}" true
+    >>> update_asset G.USD "" "{whitelist_markets:[USD]}" true
 
 .. note:: The third argument for ``update_asset`` replaces the existing
    settings. Make sure to have all desired settings present.

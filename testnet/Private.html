@@ -184,8 +184,8 @@
 <h1>Setting up private testnet<a class="headerlink" href="#setting-up-private-testnet" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="genesis-creation">
 <h2>Genesis creation<a class="headerlink" href="#genesis-creation" title="Permalink to this headline">¶</a></h2>
-<p>First, we&#8217;ll create a <cite>genesis.json</cite> file named <cite>my-genesis.json</cite>::</p>
-<div class="highlight-python"><div class="highlight"><pre>mkdir -p genesis
+<p>First, we&#8217;ll create a <cite>genesis.json</cite> file named <cite>my-genesis.json</cite>:</p>
+<div class="highlight-sh"><div class="highlight"><pre>mkdir -p genesis
 programs/witness_node/witness_node --create-genesis-json genesis/my-genesis.json
 </pre></div>
 </div>
@@ -210,17 +210,17 @@ witnesses&#8217; block production keys.</p>
 </div>
 <div class="section" id="embedding-genesis-optional">
 <h3>Embedding genesis (optional)<a class="headerlink" href="#embedding-genesis-optional" title="Permalink to this headline">¶</a></h3>
-<p>Once you have <cite>genesis.json</cite>, you may set a <cite>cmake</cite> variable like so::</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">cmake</span> <span class="o">-</span><span class="n">DGRAPHENE_EGENESIS_JSON</span><span class="o">=</span><span class="s">&quot;$(pwd)/genesis/my-genesis.json&quot;</span>
+<p>Once you have <cite>genesis.json</cite>, you may set a <cite>cmake</cite> variable like so:</p>
+<div class="highlight-sh"><div class="highlight"><pre>cmake -DGRAPHENE_EGENESIS_JSON<span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span><span class="s2">/genesis/my-genesis.json&quot;</span>
 </pre></div>
 </div>
 <p>and then rebuild.  Note, sometimes I&#8217;ve had to clean the build and
 CMake cache variables in order for <cite>GRAPHENE_EGENESIS_JSON</cite> to take
-effect::</p>
-<div class="highlight-python"><div class="highlight"><pre>make clean
-find . -name &quot;CMakeCache.txt&quot; | xargs rm -f
-find . -name &quot;CMakeFiles&quot; | xargs rm -Rf
-cmake -DGRAPHENE_EGENESIS_JSON=&quot;$(pwd)/genesis/my-genesis.json&quot; .
+effect:</p>
+<div class="highlight-sh"><div class="highlight"><pre>make clean
+find . -name <span class="s2">&quot;CMakeCache.txt&quot;</span> <span class="p">|</span> xargs rm -f
+find . -name <span class="s2">&quot;CMakeFiles&quot;</span> <span class="p">|</span> xargs rm -Rf
+cmake -DGRAPHENE_EGENESIS_JSON<span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span><span class="s2">/genesis/my-genesis.json&quot;</span> .
 </pre></div>
 </div>
 <p>Deleting caches will reset all <cite>cmake</cite> variables, so if you have used
@@ -244,8 +244,8 @@ complication of the process for producing binaries.</p>
 </div>
 <div class="section" id="creating-data-directory">
 <h2>Creating data directory<a class="headerlink" href="#creating-data-directory" title="Permalink to this headline">¶</a></h2>
-<p>We will a new data directory for our witness as follows::</p>
-<div class="highlight-python"><div class="highlight"><pre>programs/witness_node/witness_node --data-dir data/my-blockprod --genesis-json my-genesis.json
+<p>We will a new data directory for our witness as follows:</p>
+<div class="highlight-sh"><div class="highlight"><pre>programs/witness_node/witness_node --data-dir data/my-blockprod --genesis-json my-genesis.json
 </pre></div>
 </div>
 <p>The <cite>data/my-blockprod</cite> directory does not exist, it will be created
@@ -290,8 +290,8 @@ listed <cite>witness-id</cite>&#8216;s, and specifies the private key needed to 
 those blocks.  Normally each witness would be on a different node, but
 for the purposes of this testnet, we will start out with all witnesses
 signing blocks on a single node.</p>
-<p>Now run <cite>witness_node</cite> again::</p>
-<div class="highlight-python"><div class="highlight"><pre>programs/witness_node/witness_node --data-dir data/my-blockprod --enable-stale-production
+<p>Now run <cite>witness_node</cite> again:</p>
+<div class="highlight-sh"><div class="highlight"><pre>programs/witness_node/witness_node --data-dir data/my-blockprod --enable-stale-production
 </pre></div>
 </div>
 <p>Note that we need not specify <cite>genesis.json</cite> on the command line, since
@@ -311,8 +311,8 @@ by its chain ID.  This is to protect the user from e.g. unintentionally
 using a testnet wallet on the real chain.</p>
 <p>The chain ID is printed at witness node startup.  It can also be
 obtained by using the API to query a running witness node with the
-<cite>get_chain_properties</cite> API call::</p>
-<div class="highlight-python"><div class="highlight"><pre>curl --data &#39;{&quot;jsonrpc&quot;: &quot;2.0&quot;, &quot;method&quot;: &quot;get_chain_properties&quot;, &quot;params&quot;: [], &quot;id&quot;: 1}&#39; http://127.0.0.1:11011/rpc &amp;&amp; echo
+<cite>get_chain_properties</cite> API call:</p>
+<div class="highlight-sh"><div class="highlight"><pre>curl --data <span class="s1">&#39;{&quot;jsonrpc&quot;: &quot;2.0&quot;, &quot;method&quot;: &quot;get_chain_properties&quot;, &quot;params&quot;: [], &quot;id&quot;: 1}&#39;</span> http://127.0.0.1:11011/rpc <span class="o">&amp;&amp;</span> <span class="nb">echo</span>
 </pre></div>
 </div>
 <p>This <cite>curl</cite> command will return a short JSON object including the <cite>chain_id</cite>.</p>
@@ -321,8 +321,8 @@ obtained by using the API to query a running witness node with the
 <h2>Creating a wallet<a class="headerlink" href="#creating-a-wallet" title="Permalink to this headline">¶</a></h2>
 <p>In order to create a wallet, you must specify a chain ID and server.
 With the witness node&#8217;s default access control settings, a blank
-username and password will suffice::</p>
-<div class="highlight-python"><div class="highlight"><pre>programs/cli_wallet/cli_wallet --wallet-file my-wallet.json --chain-id cf307110d029cb882d126bf0488dc4864772f68d9888d86b458d16e6c36aa74b --server-rpc-endpoint ws://127.0.0.1:11011 -u &#39;&#39; -p &#39;&#39;
+username and password will suffice:</p>
+<div class="highlight-sh"><div class="highlight"><pre>programs/cli_wallet/cli_wallet --wallet-file my-wallet.json --chain-id cf307110d029cb882d126bf0488dc4864772f68d9888d86b458d16e6c36aa74b --server-rpc-endpoint ws://127.0.0.1:11011 -u <span class="s1">&#39;&#39;</span> -p <span class="s1">&#39;&#39;</span>
 </pre></div>
 </div>
 <p>Note, since the genesis timestamp will likely be different, your chain
@@ -332,7 +332,7 @@ instructions.)</p>
 <p>Before continuing, we should set a password.  This password is used
 to encrypt the private keys in the wallet.  We will use the word
 <cite>supersecret</cite> in this example.:</p>
-<div class="highlight-python"><div class="highlight"><pre>set_password supersecret
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">set_password</span> <span class="n">supersecret</span>
 </pre></div>
 </div>
 </div>
@@ -340,13 +340,13 @@ to encrypt the private keys in the wallet.  We will use the word
 <h2>Gaining access to stake<a class="headerlink" href="#gaining-access-to-stake" title="Permalink to this headline">¶</a></h2>
 <p>In Graphene, balances are contained in accounts.  To claim an account
 that exists in the Graphene genesis, use the <cite>import_key</cite> command::</p>
-<div class="highlight-python"><div class="highlight"><pre>unlock supersecret
-import_key nathan &quot;5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3&quot;
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">unlock</span> <span class="n">supersecret</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">import_key</span> <span class="n">nathan</span> <span class="s">&quot;5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3&quot;</span>
 </pre></div>
 </div>
 <p>Funds are stored in genesis balance objects.  These funds can be
 claimed, with no fee, using the <cite>import_balance</cite> command.:</p>
-<div class="highlight-python"><div class="highlight"><pre>import_balance nathan [&quot;5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3&quot;] true
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">import_balance</span> <span class="n">nathan</span> <span class="p">[</span><span class="s">&quot;5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3&quot;</span><span class="p">]</span> <span class="n">true</span>
 </pre></div>
 </div>
 </div>
@@ -354,24 +354,24 @@ claimed, with no fee, using the <cite>import_balance</cite> command.:</p>
 <h2>Creating accounts<a class="headerlink" href="#creating-accounts" title="Permalink to this headline">¶</a></h2>
 <p>Creating an account requires lifetime member (LTM) status.  To upgrade
 to LTM, use the <cite>upgrade_account</cite> command::</p>
-<div class="highlight-python"><div class="highlight"><pre>upgrade_account nathan true
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">upgrade_account</span> <span class="n">nathan</span> <span class="n">true</span>
 </pre></div>
 </div>
 <p>We can now register an account.  The <cite>register_account</cite> command
 allows you to register an account using only a public key::</p>
-<div class="highlight-python"><div class="highlight"><pre>register_account alpha GPH4zSJHx7D84T1j6HQ7keXWdtabBBWJxvfJw72XmEyqmgdoo1njF GPH4zSJHx7D84T1j6HQ7keXWdtabBBWJxvfJw72XmEyqmgdoo1njF nathan nathan 0 true
-transfer nathan alpha 100000 CORE &quot;here is the cash&quot; true
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">register_account</span> <span class="n">alpha</span> <span class="n">GPH4zSJHx7D84T1j6HQ7keXWdtabBBWJxvfJw72XmEyqmgdoo1njF</span> <span class="n">GPH4zSJHx7D84T1j6HQ7keXWdtabBBWJxvfJw72XmEyqmgdoo1njF</span> <span class="n">nathan</span> <span class="n">nathan</span> <span class="mi">0</span> <span class="n">true</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">transfer</span> <span class="n">nathan</span> <span class="n">alpha</span> <span class="mi">100000</span> <span class="n">CORE</span> <span class="s">&quot;here is the cash&quot;</span> <span class="n">true</span>
 </pre></div>
 </div>
 <p>We can now open a new wallet for <cite>alpha</cite> user::</p>
-<div class="highlight-python"><div class="highlight"><pre>import_key alpha 5HuCDiMeESd86xrRvTbexLjkVg2BEoKrb7BAA5RLgXizkgV3shs
-upgrade_account alpha true
-create_witness alpha &quot;http://www.alpha&quot; true
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">import_key</span> <span class="n">alpha</span> <span class="mi">5</span><span class="n">HuCDiMeESd86xrRvTbexLjkVg2BEoKrb7BAA5RLgXizkgV3shs</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">upgrade_account</span> <span class="n">alpha</span> <span class="n">true</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">create_witness</span> <span class="n">alpha</span> <span class="s">&quot;http://www.alpha&quot;</span> <span class="n">true</span>
 </pre></div>
 </div>
 <p>The <cite>get_private_key</cite> command allows us to obtain the public key corresponding
 to the block signing key::</p>
-<div class="highlight-python"><div class="highlight"><pre>get_private_key GPH6viEhYCQr8xKP3Vj8wfHh6WfZeJK7H9uhLPDYWLGCRSj5kHQZM
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">get_private_key</span> <span class="n">GPH6viEhYCQr8xKP3Vj8wfHh6WfZeJK7H9uhLPDYWLGCRSj5kHQZM</span>
 </pre></div>
 </div>
 </div>
