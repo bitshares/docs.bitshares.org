@@ -1,0 +1,219 @@
+
+
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Developers</title>
+
+    <!-- CSS -->
+    <link  href='../_static/main.css' rel='stylesheet'>
+    <link  href='../_static/style.css' rel='stylesheet'>
+    <link  href='../_static/doxygen.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+    <!-- Sphinx search -->
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <!-- Transifex -->
+    <script type="text/javascript">
+      window.liveSettings = {
+        api_key: "bbf87af0641e4bbf89c98088d48e0449",
+      };
+    </script>
+    <script type="text/javascript" src="http://cdn.transifex.com/live.js"></script>
+
+    <!-- title card -->
+    <link  href='../_static/title-card.css' rel='stylesheet'>
+    <script src='../_static/script.js'></script>
+    
+    <!-- Sphinx search -->
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Graphene/BitShares 2.0 Technical Documentation  documentation"
+          href="../_static/opensearch.xml"/>
+
+    <!-- Meta -->
+    <meta content="Graphene Documentation" property="og:site_name">
+    <meta content="Graphene Documentation" property="og:title">
+    <meta content="website" property="og:type">
+    <meta content="Graphene Documentation" name="description">
+    <meta content="Graphene Documentation" property="og:description">
+    
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-68381245-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+ </head>
+ <body class='no-literate'>
+
+
+ <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
+   <div class='in'>
+     <div class='headline'>
+       <h1>Developers</h1>
+ 
+     </div>
+   </div>
+ </div>
+
+ <div class='header'>
+   <div class='left navlinks'>
+    
+        <div class="prev">
+         <div class="title">previous</div>
+         <span><a href="../apps/WebWallet.html">Web Wallet</a></span>
+        </div>
+        <div class="top">
+         <div class="title">top</div>
+         <span><a class="uplink" href="../index.html">Contents</a></span>
+        </div>
+        <div class="next">
+         <div class="title">next</div>
+         <span><a href="faq.html">What is the standard Bitshares address structure and format?</a></span>
+        </div>
+
+   </div>
+   <!--
+    <div class='right'>
+<div id="searchbox" style="display: none" role="search">
+ <form class="search" action="../search.html" method="get">
+   <input type="text" name="q" />
+   <input type="submit" value="Go" />
+   <input type="hidden" name="check_keywords" value="yes" />
+   <input type="hidden" name="area" value="default" />
+ </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+   </div>
+   -->
+ </div>
+
+ <div class='content-root'>
+  <!-- menu bar -->
+  <div class='menubar'>
+   <div class='section'>
+    <a href="../"><img src="../_static/grphn-logo.svg" width="48" /></a>
+       <!--<a class='big button' href='#' target='_blank'>Download</a>-->
+   </div>
+   <div class='menu section'>
+    <div id="toc">
+      <h3>Table Of Contents</h3>
+      <ul>
+<li class="toctree-l1"><a class="reference internal" href="../migration/index.html">Migrating from BitShares 1.0 to BitShares 2.0</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../user/index.html">User Guide</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../integration/index.html">Integrating the BitShares Network</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../apps/index.html">Applications</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">Developers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="faq.html">What is the standard Bitshares address structure and format?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#what-public-key-system-is-used-if-elliptic-curve-then-what-is-the-curve">What public key system is used? If elliptic curve, then what is the curve?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#is-there-a-specification-for-bitshares-scripting-language-assuming-there-is-one">Is there a specification for Bitshares scripting language? (assuming there is one)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#is-the-scripting-language-turing-complete">Is the scripting language turing complete?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#what-transaction-types-are-natively-supported">What transaction types are natively supported?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-is-accounting-addressed-in-bitshares-is-it-a-nxt-style-accounting-model-or-like-bitcoin-s-utxo">How is accounting addressed in Bitshares? Is it a Nxt style accounting model or like Bitcoin&#8217;s UTXO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#what-is-the-average-size-in-bytes-of-a-bitshares-transaction">What is the average size in Bytes of a Bitshares transaction?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-are-transactions-validated">How are transactions validated?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#are-there-any-special-affordances-made-for-privacy">Are there any special affordances made for privacy?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#what-data-structures-are-used-in-the-blockchain">What data structures are used in the blockchain?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#what-is-the-format-of-the-block-header">What is the format of the block header?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#what-is-the-maximum-bitshares-block-size">What is the maximum bitshares block size?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#are-there-any-sharding-mechanics-currently-deployed">Are there any sharding mechanics currently deployed?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-are-spv-clients-handled">How are SPV clients handled?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#does-the-protocol-provide-mechanisms-for-overlay-protocols-to-interact-such-as-or-return">Does the protocol provide mechanisms for overlay protocols to interact such as OR_RETURN?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-is-time-addressed-in-the-blockchain-is-ntp-used-or-some-other-protocol">How is time addressed in the blockchain? Is NTP used or some other protocol?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#how-do-new-clients-bootstrap-into-the-network">How do new clients bootstrap into the network?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#what-is-the-average-block-time">What is the average block time?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#is-this-done-via-a-gossip-protocol-or-through-a-federate-relay">Is this done via a gossip protocol or through a federate relay?</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../blockchain/index.html">Blockchain Specifications</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">Graphene API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../namespaces/index.html">Namespaces</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../testnet/index.html">Testnets</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../meta/index.html">Meta</a></li>
+</ul>
+
+    </div>
+   </div>
+   <div class='bottom section'>
+   <!--
+     <a href='https://github.com/cryptonomex/graphene'>View on GitHub</a><br>
+     <a href='https://github.com/cryptonomex/graphene/blob/master/README.md' target='_blank'>See .md source</a>
+   -->
+   </div>
+  </div>
+  <div class='content'>
+   
+  <div class="section" id="developers">
+<h1>Developers<a class="headerlink" href="#developers" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">What is the standard Bitshares address structure and format?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#what-public-key-system-is-used-if-elliptic-curve-then-what-is-the-curve">What public key system is used? If elliptic curve, then what is the curve?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#is-there-a-specification-for-bitshares-scripting-language-assuming-there-is-one">Is there a specification for Bitshares scripting language? (assuming there is one)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#is-the-scripting-language-turing-complete">Is the scripting language turing complete?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#what-transaction-types-are-natively-supported">What transaction types are natively supported?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#how-is-accounting-addressed-in-bitshares-is-it-a-nxt-style-accounting-model-or-like-bitcoin-s-utxo">How is accounting addressed in Bitshares? Is it a Nxt style accounting model or like Bitcoin&#8217;s UTXO</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#what-is-the-average-size-in-bytes-of-a-bitshares-transaction">What is the average size in Bytes of a Bitshares transaction?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#how-are-transactions-validated">How are transactions validated?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#are-there-any-special-affordances-made-for-privacy">Are there any special affordances made for privacy?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#what-data-structures-are-used-in-the-blockchain">What data structures are used in the blockchain?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#what-is-the-format-of-the-block-header">What is the format of the block header?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#what-is-the-maximum-bitshares-block-size">What is the maximum bitshares block size?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#are-there-any-sharding-mechanics-currently-deployed">Are there any sharding mechanics currently deployed?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#how-are-spv-clients-handled">How are SPV clients handled?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#does-the-protocol-provide-mechanisms-for-overlay-protocols-to-interact-such-as-or-return">Does the protocol provide mechanisms for overlay protocols to interact such as OR_RETURN?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#how-is-time-addressed-in-the-blockchain-is-ntp-used-or-some-other-protocol">How is time addressed in the blockchain? Is NTP used or some other protocol?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#how-do-new-clients-bootstrap-into-the-network">How do new clients bootstrap into the network?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#what-is-the-average-block-time">What is the average block time?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html#is-this-done-via-a-gossip-protocol-or-through-a-federate-relay">Is this done via a gossip protocol or through a federate relay?</a></li>
+</ul>
+</div>
+</div>
+
+
+  </div>
+ </div>
+
+ <script>var HN=[];HN.factory=function(e){return function(){HN.push([e].concat(Array.prototype.slice.call(arguments,0)))};},HN.on=HN.factory("on"),HN.once=HN.factory("once"),HN.off=HN.factory("off"),HN.emit=HN.factory("emit"),HN.load=function(){var e="hn-button.js";if(document.getElementById(e))return;var t=document.createElement("script");t.id=e,t.src="//hn-button.herokuapp.com/hn-button.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)},HN.load();</script>
+ </body>
+</html>

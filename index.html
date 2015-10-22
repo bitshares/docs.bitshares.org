@@ -135,6 +135,9 @@
 <li class="toctree-l1"><a class="reference internal" href="apps/index.html">Applications</a></li>
 </ul>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="develop/index.html">Developers</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="blockchain/index.html">Blockchain Specifications</a></li>
 </ul>
 <ul>
@@ -243,10 +246,8 @@ here describe the technical possibilities and implementation aspects.</p>
 </ul>
 </div>
 </div>
-<div class="section" id="developers">
-<h2>Developers<a class="headerlink" href="#developers" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="applications">
-<h3>Applications<a class="headerlink" href="#applications" title="Permalink to this headline">¶</a></h3>
+<h2>Applications<a class="headerlink" href="#applications" title="Permalink to this headline">¶</a></h2>
 <p>The Graphene toolkit comprises several tools that shall be briefly described in
 the following sections.</p>
 <div class="toctree-wrapper compound">
@@ -262,8 +263,37 @@ the following sections.</p>
 </ul>
 </div>
 </div>
+<div class="section" id="developers">
+<h2>Developers<a class="headerlink" href="#developers" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="develop/index.html">Developers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="develop/faq.html">What is the standard Bitshares address structure and format?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="develop/faq.html#what-public-key-system-is-used-if-elliptic-curve-then-what-is-the-curve">What public key system is used? If elliptic curve, then what is the curve?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="develop/faq.html#is-there-a-specification-for-bitshares-scripting-language-assuming-there-is-one">Is there a specification for Bitshares scripting language? (assuming there is one)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="develop/faq.html#is-the-scripting-language-turing-complete">Is the scripting language turing complete?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="develop/faq.html#what-transaction-types-are-natively-supported">What transaction types are natively supported?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="develop/faq.html#how-is-accounting-addressed-in-bitshares-is-it-a-nxt-style-accounting-model-or-like-bitcoin-s-utxo">How is accounting addressed in Bitshares? Is it a Nxt style accounting model or like Bitcoin&#8217;s UTXO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="develop/faq.html#what-is-the-average-size-in-bytes-of-a-bitshares-transaction">What is the average size in Bytes of a Bitshares transaction?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="develop/faq.html#how-are-transactions-validated">How are transactions validated?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="develop/faq.html#are-there-any-special-affordances-made-for-privacy">Are there any special affordances made for privacy?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="develop/faq.html#what-data-structures-are-used-in-the-blockchain">What data structures are used in the blockchain?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="develop/faq.html#what-is-the-format-of-the-block-header">What is the format of the block header?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="develop/faq.html#what-is-the-maximum-bitshares-block-size">What is the maximum bitshares block size?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="develop/faq.html#are-there-any-sharding-mechanics-currently-deployed">Are there any sharding mechanics currently deployed?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="develop/faq.html#how-are-spv-clients-handled">How are SPV clients handled?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="develop/faq.html#does-the-protocol-provide-mechanisms-for-overlay-protocols-to-interact-such-as-or-return">Does the protocol provide mechanisms for overlay protocols to interact such as OR_RETURN?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="develop/faq.html#how-is-time-addressed-in-the-blockchain-is-ntp-used-or-some-other-protocol">How is time addressed in the blockchain? Is NTP used or some other protocol?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="develop/faq.html#how-do-new-clients-bootstrap-into-the-network">How do new clients bootstrap into the network?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="develop/faq.html#what-is-the-average-block-time">What is the average block time?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="develop/faq.html#is-this-done-via-a-gossip-protocol-or-through-a-federate-relay">Is this done via a gossip protocol or through a federate relay?</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
 <div class="section" id="blockchain-specifications">
-<h3>Blockchain Specifications<a class="headerlink" href="#blockchain-specifications" title="Permalink to this headline">¶</a></h3>
+<h2>Blockchain Specifications<a class="headerlink" href="#blockchain-specifications" title="Permalink to this headline">¶</a></h2>
 <p>The technical specifications of blockchain objects and their serialization is
 part of the following sections.</p>
 <div class="toctree-wrapper compound">
@@ -282,7 +312,7 @@ part of the following sections.</p>
 </div>
 </div>
 <div class="section" id="api">
-<h3>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h3>
+<h2>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
 <p>The API for interfacing with either a full node or a CLI wallet are described
 in this comprehensive repository.</p>
 <div class="toctree-wrapper compound">
@@ -304,7 +334,7 @@ in this comprehensive repository.</p>
 </div>
 </div>
 <div class="section" id="testnet-guide">
-<h3>Testnet Guide<a class="headerlink" href="#testnet-guide" title="Permalink to this headline">¶</a></h3>
+<h2>Testnet Guide<a class="headerlink" href="#testnet-guide" title="Permalink to this headline">¶</a></h2>
 <p>For running comprehensive tests and evaluating algorithms cheaply, we offer to
 setup private or public testnets.</p>
 <div class="toctree-wrapper compound">
@@ -315,7 +345,6 @@ setup private or public testnets.</p>
 </ul>
 </li>
 </ul>
-</div>
 </div>
 </div>
 </div>
