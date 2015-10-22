@@ -259,6 +259,10 @@ confirmed and verified blockchain. All transactions that are confirmed by the
 delayed node are <strong>irreversible</strong>.</p>
 <div class="highlight-sh"><div class="highlight"><pre>./programs/delayed_node/delayed_node --trusted-node<span class="o">=</span><span class="s2">&quot;127.0.0.1:8090&quot;</span> <span class="se">\</span>
                                      --rpc-endpoint<span class="o">=</span><span class="s2">&quot;127.0.0.1:8091&quot;</span>
+                                     -d delayed_node <span class="se">\</span>
+                                     -s <span class="s2">&quot;0.0.0.0:0&quot;</span> <span class="se">\</span>
+                                     --p2p-endpoint<span class="o">=</span><span class="s2">&quot;0.0.0.0:0&quot;</span> <span class="se">\</span>
+                                     --seed-nodes <span class="s2">&quot;[]&quot;</span>
 </pre></div>
 </div>
 <p>We will use this node for notifications of customer deposits.</p>

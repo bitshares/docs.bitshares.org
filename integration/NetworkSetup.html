@@ -313,6 +313,10 @@ interface using RPC-JSON calls.</p>
 intervals), we need::</p>
 <div class="highlight-python"><div class="highlight"><pre>./programs/delayed_node/delayed_node --trusted-node=&quot;192.168.0.100:8090&quot; \
                                      --rpc-endpoint=&quot;192.168.0.101:8090&quot;
+                                     -d delayed_node \
+                                     -s &quot;0.0.0.0:0&quot; \
+                                     --p2p-endpoint=&quot;0.0.0.0:0&quot; \
+                                     --seed-nodes &quot;[]&quot;
 </pre></div>
 </div>
 <p>We could now connect via RPC:</p>
