@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <title>Decentralized Exchange</title>
+    <title>Trading</title>
 
     <!-- CSS -->
     <link  href='../_static/main.css' rel='stylesheet'>
@@ -71,7 +71,7 @@
  <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
    <div class='in'>
      <div class='headline'>
-       <h1>Decentralized Exchange</h1>
+       <h1>Trading</h1>
  
      </div>
    </div>
@@ -82,7 +82,7 @@
     
         <div class="prev">
          <div class="title">previous</div>
-         <span><a href="privbta.html">Privatized BitAssets</a></span>
+         <span><a href="Dex.html">Decentralized Exchange</a></span>
         </div>
         <div class="top">
          <div class="title">top</div>
@@ -90,7 +90,7 @@
         </div>
         <div class="next">
          <div class="title">next</div>
-         <span><a href="Dex-Trading.html">Trading</a></span>
+         <span><a href="Dex-Short.html">Short Selling BitAssets</a></span>
         </div>
 
    </div>
@@ -129,8 +129,12 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">User Guide</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Account.html">Accounts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Assets.html">Assets/Tokens</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Decentralized Exchange</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Dex-Trading.html">Trading</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="Dex.html">Decentralized Exchange</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="">Trading</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pairs">Pairs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Trading</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="Dex-Short.html">Short Selling BitAssets</a></li>
 </ul>
 </li>
@@ -176,73 +180,63 @@
   </div>
   <div class='content'>
    
-  <div class="section" id="decentralized-exchange">
-<h1>Decentralized Exchange<a class="headerlink" href="#decentralized-exchange" title="Permalink to this headline">¶</a></h1>
-<p>The decentralized exchange (further denoted simply as <em>the DEX</em>) allows for
-direct exchange of digital goods traded in the BitShares ecosystem.</p>
-<p>A decentralized exchange has a very particular set of advantages over
-traditional centralized exchanges and we would like to address some of them
-briefly below. Although the BitShares DEX comes with all of them, it is up to
-the reader and customer to leverage those features in full or only partially.</p>
-<ul class="simple">
-<li><strong>Separation of Powers</strong>:
-There is no reason why the same entity needs to be responsible for
-issuing IOUs and for processing the order book. In BitShares, order matching
-is performed by the protocol, which is unaware of implications concerning the
-involved assets.</li>
-<li><strong>Global Unified Order Book</strong>:
-Since BitShares is global, anybody with an internet access can use the DEX for
-trading. This brings the world&#8217;s liquidity to a single order book for
-decentralized trading.</li>
-<li><strong>Trade Almost Anything</strong>:
-The BitShares DEX is asset agnostic. Hence you can trade at <strong>any</strong> pair.
-While some pairs may end up with low liquidity, such as SILVER:GOLD, other
-pairs such as USD:EUR for FOREX trading will see huge volume.</li>
-<li><strong>No Limits</strong>:
-The BitShares protocol is unable to limit your trading experience.</li>
-<li><strong>Decentralized</strong>:
-The DEX is decentralized across the globe. This not only means that there is
-no single point of failure, but it also implies that the BitShares exchange is
-open for trading 24/7 because it&#8217;s always daytime somewhere.</li>
-<li><strong>Secure</strong>:
-Your funds and trades are secured with industry-grade elliptic curve
-cryptography. No one will be able to access your funds unless you let them. To
-further strengthen the security, we allow our customers to setup escrow and
-multi-signature schemes.</li>
-<li><strong>Fast</strong>:
-In contrast to other decentralized networks, the BitShares DEX allows for
-real-time trading and is only limited by the speed of light and the size of
-the planet.</li>
-<li><strong>Provable Order Matching Algorithm</strong>:
-What makes the BitShares DEX unique is the provable order matching algorithm.
-Given a set of orders, you will always be able to provably verify that these
-orders have been matched properly.</li>
-<li><strong>Collateralized Smartcoins</strong>:
-One of the biggest features of BitShares are its <em>smartcoins</em> such as bitUSD,
-bitEUR, bitCNY, and others. For the sake of convenience, these assets are
-denotes simply as USD, EUR, CNY, etc. in the wallet. These digital tokens
-represent the same value as their underlaying physical asset. Hence 1 USD in
-this wallet is worth $1 and can be redeemed as such. Any of these tokens is
-backed by BitShares&#8217; company shares (BTS) being locked up as collateral and
-being available for settlement at its current price.</li>
-</ul>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Dex-Trading.html">Trading</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Dex-Trading.html#pairs">Pairs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Dex-Trading.html#id1">Trading</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Dex-Short.html">Short Selling BitAssets</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Dex-Short.html#borrowing">Borrowing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Dex-Short.html#margin-call">Margin Call</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Dex-Short.html#settlement">Settlement</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Dex-Short.html#selling">Selling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Dex-Short.html#updating-collateral-ratio">Updating Collateral Ratio</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Dex-Short.html#covering">Covering</a></li>
-</ul>
-</li>
-</ul>
+  <div class="section" id="trading">
+<h1>Trading<a class="headerlink" href="#trading" title="Permalink to this headline">¶</a></h1>
+<p>This page will give a very quick introduction on how to interpret the terms used
+by the DEX and how trading pairs are presented.</p>
+<div class="section" id="pairs">
+<h2>Pairs<a class="headerlink" href="#pairs" title="Permalink to this headline">¶</a></h2>
+<p>In BitShares, almost any asset can be traded with all other assets. Once we have
+picked two assets, we usually refer to a <em>market pair</em>. For instance, we can
+trade USD against EUR in the USD:EUR pair.</p>
+<p>For sake of consistency, we will use the generalized terms <em>base</em> and <em>quote</em>
+such that pairs are represented as:</p>
+<div class="highlight-python"><div class="highlight"><pre>quote : base
+</pre></div>
+</div>
+<p>and for instance with <em>base</em> being USD and <em>quote</em> being EUR, denote the EUR:USD
+pair.</p>
+<p>## Order Books</p>
+<p>The order book consists of an <em>ask</em> and a <em>bid</em> side. Since trading pairs do not
+have a preferred orientation, and can be flipped, the following table shall give
+an overview of ask/bid and the corresponding buy/sell operations for each side:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="30%" />
+<col width="30%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Side</th>
+<th class="head">Sell</th>
+<th class="head">Buy</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Ask</td>
+<td><em>quote</em></td>
+<td><em>base</em></td>
+</tr>
+<tr class="row-odd"><td>Bid</td>
+<td><em>base</em></td>
+<td><em>quote</em></td>
+</tr>
+</tbody>
+</table>
+<p>Obviously, what is on the bid side of the USD:EUR pair will be on the ask side
+on the EUR:USD pair. Of course prices are internally represented as fractions,
+and thus results in both pairs being identical.</p>
+</div>
+<div class="section" id="id1">
+<h2>Trading<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>To place a trading order, it is required to fill the form on either the <em>ask</em> or
+the <em>bid</em> side (respectively, <em>buy</em> or <em>sell</em> side). You will need to define
+a <em>price</em> and an <em>amount</em> to sell/buy. The cost for this order will be
+calculated automatically. Note that there will be an additional fee required to
+actually place the order.</p>
+<p>Once the order is filled (i.e. someone sold/bought your offer), your account
+will be credited by the corresponding asset.</p>
+<p>Unfilled orders can be canceled at any time.</p>
 </div>
 </div>
 

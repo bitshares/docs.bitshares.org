@@ -34,10 +34,10 @@ permissions!
 (Flat) Multi-Signature
 **********************
 
-A flat multi-signature scheme is composed of `M` entities of which `N` entities
-must sign in order for the transaction to be valid. Now, in BitShares, we have
-*weights* and a *threshold* instead of `M` and `N`. Still we can achieve the
-very same thing with even more flexibility as we will see now.
+A flat multi-signature scheme is composed of ``M`` entities of which ``N``
+entities must sign in order for the transaction to be valid. Now, in BitShares,
+we have *weights* and a *threshold* instead of ``M`` and ``N``. Still we can
+achieve the very same thing with even more flexibility as we will see now.
 
 Let's assume, Alice, Bob, Charlie and Dennis have common funds. We want to be
 able to construct a valid transaction if only two of those agree. Hence a
