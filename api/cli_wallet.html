@@ -124,6 +124,7 @@
       <ul>
 <li class="toctree-l1"><a class="reference internal" href="../migration/index.html">Migrating from BitShares 1.0 to BitShares 2.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../papers/index.html">Whitepapers</a></li>
 </ul>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation</a></li>
@@ -891,6 +892,18 @@ not offer P2P or blockchain capabilities.</p>
 </dd></dl>
 
 <dl class="function">
+<dt id="_CPPv2N8graphene6wallet10wallet_api9transfer2E6string6string6string6string6string">
+<span id="graphene::wallet::wallet_api::transfer2__string.string.string.string.string"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1a52bd06d61575ff4cfc208d887db3d8ff"></span>pair&lt;transaction_id_type, signed_transaction&gt; <code class="descname">transfer2</code><span class="sig-paren">(</span>string <em>from</em>, string <em>to</em>, string <em>amount</em>, string <em>asset_symbol</em>, string <em>memo</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api9transfer2E6string6string6string6string6string" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method works just like transfer, except it always broadcasts and returns the transaction ID along with the signed transaction. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene6wallet10wallet_api18get_transaction_idERK18signed_transaction">
+<span id="graphene::wallet::wallet_api::get_transaction_id__signed_transactionCR"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1ad53d506571c99dff3b8a4adec3fbe232"></span>transaction_id_type <code class="descname">get_transaction_id</code><span class="sig-paren">(</span><em class="property">const</em> signed_transaction &amp;<em>trx</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api18get_transaction_idERK18signed_transaction" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method is used to convert a JSON transaction to its transactin ID. </p>
+</dd></dl>
+
+<dl class="function">
 <dt id="_CPPv2N8graphene6wallet10wallet_api13blind_historyE6string">
 <span id="graphene::wallet::wallet_api::blind_history__string"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1a5ff47c6fd55fb231cf5b5a5fe36354b2"></span>vector&lt;blind_receipt&gt; <code class="descname">blind_history</code><span class="sig-paren">(</span>string <em>key_or_account</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api13blind_historyE6string" title="Permalink to this definition">¶</a></dt>
 <dd><p><dl class="docutils">
@@ -1408,6 +1421,54 @@ not offer P2P or blockchain capabilities.</p>
 <li><code class="first docutils literal"><span class="pre">url</span></code> - <p>Same as for create_witness. The empty string makes it remain the same. </p>
 </li>
 <li><code class="first docutils literal"><span class="pre">block_signing_key</span></code> - <p>The new block signing public key. The empty string makes it remain the same. </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">broadcast</span></code> - <p>true if you wish to broadcast the transaction. </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene6wallet10wallet_api13create_workerE6string14time_point_sec14time_point_sec10share_type6string6string7variantb">
+<span id="graphene::wallet::wallet_api::create_worker__string.time_point_sec.time_point_sec.share_type.string.string.variant.b"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1a85d25eaf8c6f749420e93fad46bc79cb"></span>signed_transaction <code class="descname">create_worker</code><span class="sig-paren">(</span>string <em>owner_account</em>, time_point_sec <em>work_begin_date</em>, time_point_sec <em>work_end_date</em>, share_type <em>daily_pay</em>, string <em>name</em>, string <em>url</em>, variant <em>worker_settings</em>, bool <em>broadcast</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api13create_workerE6string14time_point_sec14time_point_sec10share_type6string6string7variantb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a worker object.</p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">owner_account</span></code> - <p>The account which owns the worker and will be paid </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">work_begin_date</span></code> - <p>When the work begins </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">work_end_date</span></code> - <p>When the work ends </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">daily_pay</span></code> - <p>Amount of pay per day (NOT per maint interval) </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">name</span></code> - <p>Any text </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">url</span></code> - <p>Any text </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">worker_settings</span></code> - <p>{&#8220;type&#8221; : &#8220;burn&#8221;|&#8221;refund&#8221;|&#8221;vesting&#8221;, &#8220;pay_vesting_period_days&#8221; : x} </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">broadcast</span></code> - <p>true if you wish to broadcast the transaction. </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene6wallet10wallet_api19update_worker_votesE6string17worker_vote_deltab">
+<span id="graphene::wallet::wallet_api::update_worker_votes__string.worker_vote_delta.b"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1a4af1e9b3a5d70e1b7c5fde6a519cbd24"></span>signed_transaction <code class="descname">update_worker_votes</code><span class="sig-paren">(</span>string <em>account</em>, worker_vote_delta <em>delta</em>, bool <em>broadcast</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api19update_worker_votesE6string17worker_vote_deltab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update your votes for a worker</p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">account</span></code> - <p>The account which will pay the fee and update votes. </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">worker_vote_delta</span></code> - <p>{&#8220;vote_for&#8221; : [...], &#8220;vote_against&#8221; : [...], &#8220;vote_abstain&#8221; : [...]} </p>
 </li>
 <li><code class="first docutils literal"><span class="pre">broadcast</span></code> - <p>true if you wish to broadcast the transaction. </p>
 </li>

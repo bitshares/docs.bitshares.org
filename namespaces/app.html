@@ -124,19 +124,26 @@
       <ul>
 <li class="toctree-l1"><a class="reference internal" href="../migration/index.html">Migrating from BitShares 1.0 to BitShares 2.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../papers/index.html">Whitepapers</a></li>
 </ul>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../api/index.html">Graphene API</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api/index.html">Graphene API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../api/index.html#interfacing-with-graphene">Interfacing with Graphene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/index.html#cli-wallet-api">Cli Wallet API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/index.html#full-node-apis">Full Node APIs</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../api/index.html#namespaces">Namespaces</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="chain.html">Graphene::Chain</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Graphene::App</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wallet.html">Graphene::Wallet</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../apps/index.html">Applications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../integration/index.html">Integrating the BitShares Network</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../blockchain/index.html">Blockchain Specifications</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Namespaces</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="">Graphene::App</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chain.html">Graphene::Chain</a></li>
-<li class="toctree-l2"><a class="reference internal" href="wallet.html">Graphene::Wallet</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Namespaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../testnet/index.html">Testnets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../develop/index.html">Developers</a></li>
 </ul>
@@ -347,6 +354,12 @@ If any of the provided IDs does not map to an object, a null variant is returned
 <dt id="_CPPv2N8graphene3app12database_api15get_transactionE8uint32_t8uint32_t">
 <span id="graphene::app::database_api::get_transaction__uint32_t.uint32_t"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1ae1d1fc757dc2f658466c258fb70dd84c"></span>processed_transaction <code class="descname">get_transaction</code><span class="sig-paren">(</span>uint32_t <em>block_num</em>, uint32_t <em>trx_in_block</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api15get_transactionE8uint32_t8uint32_t" title="Permalink to this definition">¶</a></dt>
 <dd><p>used to fetch an individual transaction. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api28get_recent_transaction_by_idERK19transaction_id_type">
+<span id="graphene::app::database_api::get_recent_transaction_by_id__transaction_id_typeCR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1ac1475ae15f2b5398a08a68d067051e92"></span>optional&lt;signed_transaction&gt; <code class="descname">get_recent_transaction_by_id</code><span class="sig-paren">(</span><em class="property">const</em> transaction_id_type &amp;<em>id</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api28get_recent_transaction_by_idERK19transaction_id_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>If the transaction has not expired, this method will return the transaction for the given ID or it will return NULL if it is not known. Just because it is not known does not mean it wasn&#8217;t included in the blockchain. </p>
 </dd></dl>
 
 <dl class="function">

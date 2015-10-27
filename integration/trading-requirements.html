@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <title>Graphene API</title>
+    <title>Requirements for Traders</title>
 
     <!-- CSS -->
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
@@ -73,7 +73,7 @@
  <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
    <div class='in'>
      <div class='headline'>
-       <h1>Graphene API</h1>
+       <h1>Requirements for Traders</h1>
  
      </div>
    </div>
@@ -84,7 +84,7 @@
     
         <div class="prev">
          <div class="title">previous</div>
-         <span><a href="../installation/Upgrades.html">Upgrading</a></span>
+         <span><a href="index.html">Integrating the BitShares Network</a></span>
         </div>
         <div class="top">
          <div class="title">top</div>
@@ -92,7 +92,7 @@
         </div>
         <div class="next">
          <div class="title">next</div>
-         <span><a href="access.html">API Access Restrictions</a></span>
+         <span><a href="trading-api.html">Trading API calls</a></span>
         </div>
 
    </div>
@@ -128,36 +128,22 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Graphene API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#interfacing-with-graphene">Interfacing with Graphene</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="access.html">API Access Restrictions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="rpc.html">Remote Procedure Calls</a></li>
-<li class="toctree-l3"><a class="reference internal" href="websocket.html">Websocket Calls &amp; Notifications</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#cli-wallet-api">Cli Wallet API</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="cli_wallet.html">CLI Wallet API Calls</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#full-node-apis">Full Node APIs</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="fullnode.html">Full Node</a></li>
-<li class="toctree-l3"><a class="reference internal" href="login.html">Login API</a></li>
-<li class="toctree-l3"><a class="reference internal" href="database.html">Database API</a></li>
-<li class="toctree-l3"><a class="reference internal" href="history.html">Account History API</a></li>
-<li class="toctree-l3"><a class="reference internal" href="network_broadcast.html">Network Broadcast API</a></li>
-<li class="toctree-l3"><a class="reference internal" href="network_node.html">Network Nodes API</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#namespaces">Namespaces</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../namespaces/chain.html">Graphene::Chain</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../namespaces/app.html">Graphene::App</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../namespaces/wallet.html">Graphene::Wallet</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">Graphene API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../apps/index.html">Applications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../integration/index.html">Integrating the BitShares Network</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Integrating the BitShares Network</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#traders">Traders</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="">Requirements for Traders</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#cli-wallet">CLI Wallet</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#importing-your-account">Importing your Account</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="trading-api.html">Trading API calls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="what-is-different.html">What is Different</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#exchanges-gateways-and-merchants">Exchanges, Gateways and Merchants</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../blockchain/index.html">Blockchain Specifications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../namespaces/index.html">Namespaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../testnet/index.html">Testnets</a></li>
@@ -178,65 +164,43 @@
   </div>
   <div class='content'>
    
-  <div class="section" id="graphene-api">
-<h1>Graphene API<a class="headerlink" href="#graphene-api" title="Permalink to this headline">¶</a></h1>
-<p>This page serves as a comprehensive reference for the Graphene API. Since
-BitShares 2.0 is the first blockchain that makes use of the Graphene technology,
-this documentation is mostly compatible with BitShares 2.0 as well.</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">All API calls are formated in JSON and return JSON only.</p>
-</div>
-<div class="section" id="interfacing-with-graphene">
-<h2>Interfacing with Graphene<a class="headerlink" href="#interfacing-with-graphene" title="Permalink to this headline">¶</a></h2>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The set of available calls depends on whether you connect to a full
-node (<code class="docutils literal"><span class="pre">witness_node</span></code>) or a CLI wallet (<code class="docutils literal"><span class="pre">cli_wallet</span></code>). Both support
-RPC-JSON. The full node also supports the websocket protocol with
-notifications.</p>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="access.html">API Access Restrictions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rpc.html">Remote Procedure Calls</a></li>
-<li class="toctree-l1"><a class="reference internal" href="websocket.html">Websocket Calls &amp; Notifications</a></li>
-</ul>
+  <div class="section" id="requirements-for-traders">
+<h1>Requirements for Traders<a class="headerlink" href="#requirements-for-traders" title="Permalink to this headline">¶</a></h1>
+<p>Since BitShares is all about <strong>not exposing</strong> your funds to counter-party risk,
+a trader requires to sign its transactions to authenticate against the
+decentralized exchange. This authentication is done by signing your account&#8217;s
+trades with the so called <em>active key</em> of that particular account. For this
+tutorial, we assume that you already own an account that you want to use for
+your trading and that you have exported the <em>active private key</em> from your
+account&#8217;s permission page.</p>
+<div class="section" id="cli-wallet">
+<h2>CLI Wallet<a class="headerlink" href="#cli-wallet" title="Permalink to this headline">¶</a></h2>
+<p>To make trading easy and allow for bots to interface with the markets, we have
+implemented the <a class="reference internal" href="../apps/CliWallet.html"><em>CLI Wallet</em></a> that acts as a wallet and takes care
+of your private keys, funds and trades. It exposes an API that we will describe
+briefly in <a class="reference internal" href="trading-api.html"><em>Trading API calls</em></a>. Since the cli-wallet acts as a light-weight
+client and hence does not maintain a full copy of the blockchain, we let it
+interface with a trusted full node (e.g. <code class="docutils literal"><span class="pre">bitshares.openledger.info</span></code>).</p>
+<p>To launch the cli-wallet and expose the API for localhost at port <code class="docutils literal"><span class="pre">8092</span></code>, we
+only need to call the wallet with:</p>
+<div class="highlight-sh"><div class="highlight"><pre>./programs/cli_wallet/cli_wallet -s wss://bitshares.openledger.info/ws -H 127.0.0.1:8092
+</pre></div>
 </div>
 </div>
-<div class="section" id="cli-wallet-api">
-<h2>Cli Wallet API<a class="headerlink" href="#cli-wallet-api" title="Permalink to this headline">¶</a></h2>
-<p>This chapter introduces the calls available to a running CLI wallet. If you
-have not set up your CLI wallet yet please visit our other documentation pages
-aswell.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="cli_wallet.html">CLI Wallet API Calls</a></li>
-</ul>
+<div class="section" id="importing-your-account">
+<h2>Importing your Account<a class="headerlink" href="#importing-your-account" title="Permalink to this headline">¶</a></h2>
+<p>We import your account by simply importing your account&#8217;s active private key.
+Once that key is imported, the cli-wallet will have the required permissions to
+use the funds of that account. We import the account&#8217;s active key with::</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">import_key</span> <span class="o">&lt;</span><span class="n">account</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">active_key</span><span class="o">&gt;</span>
+</pre></div>
 </div>
+<p>You can verify that you have successfully imported your account with::</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">list_my_accounts</span>
+</pre></div>
 </div>
-<div class="section" id="full-node-apis">
-<h2>Full Node APIs<a class="headerlink" href="#full-node-apis" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="fullnode.html">Full Node</a></li>
-<li class="toctree-l1"><a class="reference internal" href="login.html">Login API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="database.html">Database API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="history.html">Account History API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="network_broadcast.html">Network Broadcast API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="network_node.html">Network Nodes API</a></li>
-</ul>
-</div>
-</div>
-<div class="section" id="namespaces">
-<h2>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../namespaces/chain.html">Graphene::Chain</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../namespaces/app.html">Graphene::App</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../namespaces/wallet.html">Graphene::Wallet</a></li>
-</ul>
-</div>
+<p>We can now access the cli-wallet via RPC and use funds from your account. Let&#8217;s
+go to the next step and see what the <a class="reference internal" href="trading-api.html"><em>trader&#8217;s API</em></a> can do.</p>
 </div>
 </div>
 

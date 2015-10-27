@@ -1,0 +1,44 @@
+************************
+Requirements for Traders
+************************
+
+Since BitShares is all about **not exposing** your funds to counter-party risk,
+a trader requires to sign its transactions to authenticate against the
+decentralized exchange. This authentication is done by signing your account's
+trades with the so called *active key* of that particular account. For this
+tutorial, we assume that you already own an account that you want to use for
+your trading and that you have exported the *active private key* from your
+account's permission page.
+
+CLI Wallet
+##########
+
+To make trading easy and allow for bots to interface with the markets, we have
+implemented the :doc:`../apps/CliWallet` that acts as a wallet and takes care
+of your private keys, funds and trades. It exposes an API that we will describe
+briefly in :doc:`trading-api`. Since the cli-wallet acts as a light-weight
+client and hence does not maintain a full copy of the blockchain, we let it
+interface with a trusted full node (e.g. ``bitshares.openledger.info``).
+
+To launch the cli-wallet and expose the API for localhost at port ``8092``, we
+only need to call the wallet with:
+
+.. code-block:: sh
+
+    ./programs/cli_wallet/cli_wallet -s wss://bitshares.openledger.info/ws -H 127.0.0.1:8092
+
+Importing your Account
+######################
+
+We import your account by simply importing your account's active private key.
+Once that key is imported, the cli-wallet will have the required permissions to
+use the funds of that account. We import the account's active key with:::
+
+    >>> import_key <account-name> <active_key>
+
+You can verify that you have successfully imported your account with:::
+
+    >>> list_my_accounts
+
+We can now access the cli-wallet via RPC and use funds from your account. Let's
+go to the next step and see what the :doc:`trader's API <trading-api>` can do.

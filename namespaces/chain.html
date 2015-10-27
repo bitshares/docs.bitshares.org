@@ -124,19 +124,26 @@
       <ul>
 <li class="toctree-l1"><a class="reference internal" href="../migration/index.html">Migrating from BitShares 1.0 to BitShares 2.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../papers/index.html">Whitepapers</a></li>
 </ul>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../api/index.html">Graphene API</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api/index.html">Graphene API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../api/index.html#interfacing-with-graphene">Interfacing with Graphene</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/index.html#cli-wallet-api">Cli Wallet API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/index.html#full-node-apis">Full Node APIs</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../api/index.html#namespaces">Namespaces</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="">Graphene::Chain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="app.html">Graphene::App</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wallet.html">Graphene::Wallet</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../apps/index.html">Applications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../integration/index.html">Integrating the BitShares Network</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../blockchain/index.html">Blockchain Specifications</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Namespaces</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="app.html">Graphene::App</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Graphene::Chain</a></li>
-<li class="toctree-l2"><a class="reference internal" href="wallet.html">Graphene::Wallet</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Namespaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../testnet/index.html">Testnets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../develop/index.html">Developers</a></li>
 </ul>
@@ -194,7 +201,7 @@
 
 <dl class="type">
 <dt id="_CPPv2N8graphene5chain29asset_object_multi_index_typeE">
-<span id="graphene::chain::asset_object_multi_index_type"></span><span class="target" id="graphenenamespacegraphene_1_1chain_1aa0257cb9111da7ddc4ec3ebb48fe2687"></span><em class="property">typedef </em>multi_index_container&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain12asset_objectE" title="graphene::chain::asset_object">asset_object</a>, indexed_by&lt;ordered_unique&lt;tag&lt;by_id&gt;, member&lt;object, object_id_type, &amp;object::id&gt;&gt;, ordered_unique&lt;tag&lt;by_symbol&gt;, member&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain12asset_objectE" title="graphene::chain::asset_object">asset_object</a>, string, &amp;asset_object::symbol&gt;&gt;&gt;&gt; <code class="descname">asset_object_multi_index_type</code><a class="headerlink" href="#_CPPv2N8graphene5chain29asset_object_multi_index_typeE" title="Permalink to this definition">¶</a></dt>
+<span id="graphene::chain::asset_object_multi_index_type"></span><span class="target" id="graphenenamespacegraphene_1_1chain_1a11daafac7b9958026e1155673d94ec0b"></span><em class="property">typedef </em>multi_index_container&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain12asset_objectE" title="graphene::chain::asset_object">asset_object</a>, indexed_by&lt;ordered_unique&lt;tag&lt;by_id&gt;, member&lt;object, object_id_type, &amp;object::id&gt;&gt;, ordered_unique&lt;tag&lt;by_symbol&gt;, member&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain12asset_objectE" title="graphene::chain::asset_object">asset_object</a>, string, &amp;asset_object::symbol&gt;&gt;, ordered_non_unique&lt;tag&lt;by_type&gt;, const_mem_fun&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain12asset_objectE" title="graphene::chain::asset_object">asset_object</a>, bool, &amp;asset_object::is_market_issued&gt;&gt;&gt;&gt; <code class="descname">asset_object_multi_index_type</code><a class="headerlink" href="#_CPPv2N8graphene5chain29asset_object_multi_index_typeE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="type">
@@ -464,6 +471,11 @@
 <dl class="type">
 <dt id="_CPPv2N8graphene5chain21budget_record_id_typeE">
 <span id="graphene::chain::budget_record_id_type"></span><span class="target" id="graphenenamespacegraphene_1_1chain_1a099a839fe65d5b1148f713db000f08db"></span><em class="property">typedef </em>object_id&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain18implementation_idsE" title="graphene::chain::implementation_ids">implementation_ids</a>, <a class="reference internal" href="../blockchain/Objects.html#_CPPv2N8graphene5chain30impl_budget_record_object_typeE" title="graphene::chain::impl_budget_record_object_type">impl_budget_record_object_type</a>, budget_record_object&gt; <code class="descname">budget_record_id_type</code><a class="headerlink" href="#_CPPv2N8graphene5chain21budget_record_id_typeE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="type">
+<dt id="_CPPv2N8graphene5chain23blinded_balance_id_typeE">
+<span id="graphene::chain::blinded_balance_id_type"></span><span class="target" id="graphenenamespacegraphene_1_1chain_1a2fedd4e326e2b143e0188eb79cd7183e"></span><em class="property">typedef </em>object_id&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain18implementation_idsE" title="graphene::chain::implementation_ids">implementation_ids</a>, <a class="reference internal" href="../blockchain/Objects.html#_CPPv2N8graphene5chain32impl_blinded_balance_object_typeE" title="graphene::chain::impl_blinded_balance_object_type">impl_blinded_balance_object_type</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain22blinded_balance_objectE" title="graphene::chain::blinded_balance_object">blinded_balance_object</a>&gt; <code class="descname">blinded_balance_id_type</code><a class="headerlink" href="#_CPPv2N8graphene5chain23blinded_balance_id_typeE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="type">
@@ -856,12 +868,6 @@
 <dt id="_CPPv2N8graphene5chain7cut_feeE10share_type8uint16_t">
 <span id="graphene::chain::cut_fee__share_type.uint16_t"></span><span class="target" id="graphenenamespacegraphene_1_1chain_1a8239dba8aaa25b29bb29aa103223ec17"></span><a class="reference internal" href="#_CPPv2N8graphene5chain10share_typeE" title="graphene::chain::share_type">share_type</a> <code class="descname">cut_fee</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N8graphene5chain10share_typeE" title="graphene::chain::share_type">share_type</a> <em>a</em>, uint16_t <em>p</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene5chain7cut_feeE10share_type8uint16_t" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
-
-<dl class="function">
-<dt id="_CPPv2N8graphene5chain19is_valid_symbol_oldERK6string">
-<span id="graphene::chain::is_valid_symbol_old__stringCR"></span><span class="target" id="graphenenamespacegraphene_1_1chain_1aa65cb0bb6d1563538f760e51dd9b3316"></span>bool <code class="descname">is_valid_symbol_old</code><span class="sig-paren">(</span><em class="property">const</em> string &amp;<em>symbol</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene5chain19is_valid_symbol_oldERK6string" title="Permalink to this definition">¶</a></dt>
-<dd><p>Valid symbols can contain [A-Z0-9], and &#8216;.&#8217; They must start with [A, Z] They must end with [A, Z] They can contain a maximum of one &#8216;.&#8217; </p>
-</dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N8graphene5chain10get_configEv">

@@ -1,0 +1,311 @@
+
+
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Trading API calls</title>
+
+    <!-- CSS -->
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href='../_static/main.css' rel='stylesheet'>
+    <link href='../_static/style.css' rel='stylesheet'>
+    <link href='../_static/doxygen.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+    <!-- Sphinx search -->
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <!-- Transifex -->
+    <script type="text/javascript">
+      window.liveSettings = {
+        api_key: "bbf87af0641e4bbf89c98088d48e0449",
+      };
+    </script>
+    <script type="text/javascript" src="http://cdn.transifex.com/live.js"></script>
+
+    <!-- title card -->
+    <link  href='../_static/title-card.css' rel='stylesheet'>
+    <script src='../_static/script.js'></script>
+    
+    <!-- Sphinx search -->
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Graphene/BitShares 2.0 Technical Documentation  documentation"
+          href="../_static/opensearch.xml"/>
+
+    <!-- Meta -->
+    <meta content="Graphene Documentation" property="og:site_name">
+    <meta content="Graphene Documentation" property="og:title">
+    <meta content="website" property="og:type">
+    <meta content="Graphene Documentation" name="description">
+    <meta content="Graphene Documentation" property="og:description">
+    
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-68381245-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+ </head>
+ <body class='no-literate'>
+
+
+ <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
+   <div class='in'>
+     <div class='headline'>
+       <h1>Trading API calls</h1>
+ 
+     </div>
+   </div>
+ </div>
+
+ <div class='header'>
+   <div class='left navlinks'>
+    
+        <div class="prev">
+         <div class="title">previous</div>
+         <span><a href="trading-requirements.html">Requirements for Traders</a></span>
+        </div>
+        <div class="top">
+         <div class="title">top</div>
+         <span><a class="uplink" href="../index.html">Contents</a></span>
+        </div>
+        <div class="next">
+         <div class="title">next</div>
+         <span><a href="what-is-different.html">What is Different</a></span>
+        </div>
+
+   </div>
+   <!--
+    <div class='right'>
+<div id="searchbox" style="display: none" role="search">
+ <form class="search" action="../search.html" method="get">
+   <input type="text" name="q" />
+   <input type="submit" value="Go" />
+   <input type="hidden" name="check_keywords" value="yes" />
+   <input type="hidden" name="area" value="default" />
+ </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+   </div>
+   -->
+ </div>
+
+ <div class='content-root'>
+  <!-- menu bar -->
+  <div class='menubar'>
+   <div class='section'>
+    <a href="../"><img src="../_static/grphn-logo.svg" width="48" /></a>
+       <!--<a class='big button' href='#' target='_blank'>Download</a>-->
+   </div>
+   <div class='menu section'>
+    <div id="toc">
+      <h3>Table Of Contents</h3>
+      <ul>
+<li class="toctree-l1"><a class="reference internal" href="../migration/index.html">Migrating from BitShares 1.0 to BitShares 2.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/index.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../papers/index.html">Whitepapers</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation/index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">Graphene API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apps/index.html">Applications</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Integrating the BitShares Network</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#traders">Traders</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="trading-requirements.html">Requirements for Traders</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Trading API calls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="what-is-different.html">What is Different</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#exchanges-gateways-and-merchants">Exchanges, Gateways and Merchants</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../blockchain/index.html">Blockchain Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../namespaces/index.html">Namespaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testnet/index.html">Testnets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../develop/index.html">Developers</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../meta/index.html">Meta</a></li>
+</ul>
+
+    </div>
+   </div>
+   <div class='bottom section'>
+   <!--
+     <a href='https://github.com/cryptonomex/graphene'>View on GitHub</a><br>
+     <a href='https://github.com/cryptonomex/graphene/blob/master/README.md' target='_blank'>See .md source</a>
+   -->
+   </div>
+  </div>
+  <div class='content'>
+   
+  <div class="section" id="trading-api-calls">
+<h1>Trading API calls<a class="headerlink" href="#trading-api-calls" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="_CPPv2N8graphene6wallet10wallet_api16get_limit_ordersE6string6string8uint32_t">
+<span id="graphene::wallet::wallet_api::get_limit_orders__string.string.uint32_t"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1a25164d9daf13b626c1afbe2c6c60dd5e"></span>vector&lt;limit_order_object&gt; <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">get_limit_orders</code><span class="sig-paren">(</span>string <em>a</em>, string <em>b</em>, uint32_t <em>limit</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api16get_limit_ordersE6string6string8uint32_t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene6wallet10wallet_api18get_market_historyE6string6string8uint32_t">
+<span id="graphene::wallet::wallet_api::get_market_history__string.string.uint32_t"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1a6f9d448423b8e7a2b28d34ed43488dc7"></span>vector&lt;bucket_object&gt; <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">get_market_history</code><span class="sig-paren">(</span>string <em>symbol</em>, string <em>symbol2</em>, uint32_t <em>bucket</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api18get_market_historyE6string6string8uint32_t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene6wallet10wallet_api9get_assetE6string">
+<span id="graphene::wallet::wallet_api::get_asset__string"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1adeba50e052ff409fe1d19cc9e50e9a8f"></span>asset_object <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">get_asset</code><span class="sig-paren">(</span>string <em>asset_name_or_id</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api9get_assetE6string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns information about the given asset. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>the information about the asset stored in the block chain </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">asset_name_or_id</span></code> - <p>the symbol or id of the asset in question </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene6wallet10wallet_api15get_call_ordersE6string8uint32_t">
+<span id="graphene::wallet::wallet_api::get_call_orders__string.uint32_t"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1acd90cfe6b46f2944985bc2b104d646c0"></span>vector&lt;call_order_object&gt; <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">get_call_orders</code><span class="sig-paren">(</span>string <em>a</em>, uint32_t <em>limit</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api15get_call_ordersE6string8uint32_t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene6wallet10wallet_api16get_limit_ordersE6string6string8uint32_t">
+<span id="graphene::wallet::wallet_api::get_limit_orders__string.string.uint32_t"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1a25164d9daf13b626c1afbe2c6c60dd5e"></span>vector&lt;limit_order_object&gt; <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">get_limit_orders</code><span class="sig-paren">(</span>string <em>a</em>, string <em>b</em>, uint32_t <em>limit</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api16get_limit_ordersE6string6string8uint32_t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene6wallet10wallet_api18get_market_historyE6string6string8uint32_t">
+<span id="graphene::wallet::wallet_api::get_market_history__string.string.uint32_t"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1a6f9d448423b8e7a2b28d34ed43488dc7"></span>vector&lt;bucket_object&gt; <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">get_market_history</code><span class="sig-paren">(</span>string <em>symbol</em>, string <em>symbol2</em>, uint32_t <em>bucket</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api18get_market_historyE6string6string8uint32_t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene6wallet10wallet_api17get_settle_ordersE6string8uint32_t">
+<span id="graphene::wallet::wallet_api::get_settle_orders__string.uint32_t"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1a29b8b1e1e30f24dc14b5575124e61b83"></span>vector&lt;force_settlement_object&gt; <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">get_settle_orders</code><span class="sig-paren">(</span>string <em>a</em>, uint32_t <em>limit</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api17get_settle_ordersE6string8uint32_t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene6wallet10wallet_api19global_settle_assetE6string5priceb">
+<span id="graphene::wallet::wallet_api::global_settle_asset__string.price.b"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1ad35610a05a5f4cf0d70fd4d6e8f99937"></span>signed_transaction <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">global_settle_asset</code><span class="sig-paren">(</span>string <em>symbol</em>, price <em>settle_price</em>, bool <em>broadcast</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api19global_settle_assetE6string5priceb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Forces a global settling of the given asset (black swan or prediction markets).</p>
+<p>In order to use this operation, asset_to_settle must have the global_settle flag set</p>
+<p>When this operation is executed all balances are converted into the backing asset at the settle_price and all open margin positions are called at the settle price. If this asset is used as backing for other bitassets, those bitassets will be force settled at their current feed price.</p>
+<p><dl class="docutils">
+<dt><strong>Note</strong></dt>
+<dd>this operation is used only by the asset issuer, <code class="docutils literal"><a class="reference internal" href="../namespaces/wallet.html#grapheneclassgraphene_1_1wallet_1_1wallet__api_1a95a3baa4b0c83c1fce14827acbbddd62"><span><span class="pre">settle_asset()</span></span></a></code> may be used by any user owning the asset</dd>
+<dt><strong>Return</strong></dt>
+<dd>the signed transaction settling the named asset </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">symbol</span></code> - <p>the name or id of the asset to force settlement on </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">settle_price</span></code> - <p>the price at which to settle </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">broadcast</span></code> - <p>true to broadcast the transaction on the network </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene6wallet10wallet_api21list_account_balancesERK6string">
+<span id="graphene::wallet::wallet_api::list_account_balances__stringCR"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1a36320ec4d8646bf2149bb4e383b291b5"></span>vector&lt;asset&gt; <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">list_account_balances</code><span class="sig-paren">(</span><em class="property">const</em> string &amp;<em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api21list_account_balancesERK6string" title="Permalink to this definition">¶</a></dt>
+<dd><p>List the balances of an account. Each account can have multiple balances, one for each type of asset owned by that account. The returned list will only contain assets for which the account has a nonzero balance <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>a list of the given account&#8217;s balances </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">id</span></code> - <p>the name or id of the account whose balances you want </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene6wallet10wallet_api12settle_assetE6string6string6stringb">
+<span id="graphene::wallet::wallet_api::settle_asset__string.string.string.b"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1a95a3baa4b0c83c1fce14827acbbddd62"></span>signed_transaction <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">settle_asset</code><span class="sig-paren">(</span>string <em>account_to_settle</em>, string <em>amount_to_settle</em>, string <em>symbol</em>, bool <em>broadcast</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api12settle_assetE6string6string6stringb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Schedules a market-issued asset for automatic settlement.</p>
+<p>Holders of market-issued assests may request a forced settlement for some amount of their asset. This means that the specified sum will be locked by the chain and held for the settlement period, after which time the chain will choose a margin posision holder and buy the settled asset using the margin&#8217;s collateral. The price of this sale will be based on the feed price for the market-issued asset being settled. The exact settlement price will be the feed price at the time of settlement with an offset in favor of the margin position, where the offset is a blockchain parameter set in the global_property_object.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>the signed transaction settling the named asset </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">account_to_settle</span></code> - <p>the name or id of the account owning the asset </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">amount_to_settle</span></code> - <p>the amount of the named asset to schedule for settlement </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">symbol</span></code> - <p>the name or id of the asset to settlement on </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">broadcast</span></code> - <p>true to broadcast the transaction on the network </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene6wallet10wallet_api8transferE6string6string6string6string6stringb">
+<span id="graphene::wallet::wallet_api::transfer__string.string.string.string.string.b"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1a338fc74bb723d9c649f161b5279e41f0"></span>signed_transaction <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">transfer</code><span class="sig-paren">(</span>string <em>from</em>, string <em>to</em>, string <em>amount</em>, string <em>asset_symbol</em>, string <em>memo</em>, bool <em>broadcast</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api8transferE6string6string6string6string6stringb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transfer an amount from one account to another. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>the signed transaction transferring funds </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">from</span></code> - <p>the name or id of the account sending the funds </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">to</span></code> - <p>the name or id of the account receiving the funds </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">amount</span></code> - <p>the amount to send (in nominal units  to send half of a BTS, specify 0.5) </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">asset_symbol</span></code> - <p>the symbol or id of the asset to send </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">memo</span></code> - <p>a memo to attach to the transaction. The memo will be encrypted in the transaction and readable for the receiver. There is no length limit other than the limit imposed by maximum transaction size, but transaction increase with transaction size </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">broadcast</span></code> - <p>true to broadcast the transaction on the network </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+
+
+  </div>
+ </div>
+
+ <script>var HN=[];HN.factory=function(e){return function(){HN.push([e].concat(Array.prototype.slice.call(arguments,0)))};},HN.on=HN.factory("on"),HN.once=HN.factory("once"),HN.off=HN.factory("off"),HN.emit=HN.factory("emit"),HN.load=function(){var e="hn-button.js";if(document.getElementById(e))return;var t=document.createElement("script");t.id=e,t.src="//hn-button.herokuapp.com/hn-button.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)},HN.load();</script>
+ <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+ </body>
+</html>
