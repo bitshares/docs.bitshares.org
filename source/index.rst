@@ -2,109 +2,52 @@
 Welcome to the Graphene Documentation
 *************************************
 
+BitShares 2.0 is a Financial Smart Contracts platform that is based on the
+`Graphene`_ technology built by `Cryptonomex`_ . You can see Graphene as a
+toolkit for real-time blockchains.
+
+.. _Cryptonomex: http://cryptonomex.com
+.. _Graphene: https://github.com/cryptonomex/graphene
+
 Below, you can find the Graphene documentation. Since BitShares 2.0 is the
 first application of Graphene technology, you will be able to use almost
 everything in BitShares 2.0, too. We separated the documentation into smaller
 parts for convenience and for the sake of easy location of relevant
 information.
 
-Migration Guide from BitShares 1 to BitShares 2
-###############################################
+Whitepapers
+###########
 
-The migration tutorial is relevant only to those customers and investors that
-have participated in BitShares 1.0. We show improvements, new features and give
-assistance for claiming your funds in BitShares 2.0.
+.. raw:: html
+
+   <center>
+    <a href="_downloads/bitshares-financial-platform.pdf" type="button" class="btn btn-info">BitShares 2.0: Financial Smart Contract Platform</a>
+   </center>
+
+User Guide
+##########
 
 .. toctree::
    :maxdepth: 2
 
    migration/index
+   user/index
+   papers/index
 
-Installation Guide
-##################
-
-This section describes the installation procedure and the build process for
-those that want to compile from the source.
+Developer Guide
+###############
 
 .. toctree::
    :maxdepth: 2
 
    installation/index
-
-User Guide
-##########
-
-We would like to introduce most features to the user in a friendly and easy to
-understand way in this *User Guide*.
-
-.. toctree::
-   :maxdepth: 2
-
-   user/index
-
-Integrations Guide
-##################
-
-For integrating the BitShares network and profiting from its network effect, we
-here describe the technical possibilities and implementation aspects.
-
-.. toctree::
-   :maxdepth: 2
-
-   integration/index
-
-Applications
-############
-
-The Graphene toolkit comprises several tools that shall be briefly described in
-the following sections.
-
-.. toctree::
-   :maxdepth: 2
-
-   apps/index
-
-Developers
-##########
-
-.. toctree::
-   :maxdepth: 2
-
-   develop/index
-
-Blockchain Specifications
-#########################
-
-The technical specifications of blockchain objects and their serialization is
-part of the following sections.
-
-.. toctree::
-   :maxdepth: 3
-
-   blockchain/index
-
-API
-###
-
-The API for interfacing with either a full node or a CLI wallet are described
-in this comprehensive repository.
-
-.. toctree::
-   :maxdepth: 2
-
    api/index
+   apps/index
+   integration/index
+   blockchain/index
    namespaces/index
-
-Testnet Guide
-#############
-
-For running comprehensive tests and evaluating algorithms cheaply, we offer to
-setup private or public testnets.
-
-.. toctree::
-   :maxdepth: 2
-
    testnet/index
+   develop/index
 
 ****
 Meta

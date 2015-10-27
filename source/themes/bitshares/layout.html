@@ -31,9 +31,11 @@
     {%- endblock %}
 
     <!-- CSS -->
-    <link  href='{{ pathto( '_static/main.css',1 )}}' rel='stylesheet'>
-    <link  href='{{ pathto( '_static/style.css',1 )}}' rel='stylesheet'>
-    <link  href='{{ pathto( '_static/doxygen.css',1 )}}' rel='stylesheet'>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href='{{ pathto( '_static/main.css',1 )}}' rel='stylesheet'>
+    <link href='{{ pathto( '_static/style.css',1 )}}' rel='stylesheet'>
+    <link href='{{ pathto( '_static/doxygen.css',1 )}}' rel='stylesheet'>
     <link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
     {%- for cssfile in css_files %}
     <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
@@ -147,5 +149,6 @@
  </div>
 
  <script>var HN=[];HN.factory=function(e){return function(){HN.push([e].concat(Array.prototype.slice.call(arguments,0)))};},HN.on=HN.factory("on"),HN.once=HN.factory("once"),HN.off=HN.factory("off"),HN.emit=HN.factory("emit"),HN.load=function(){var e="hn-button.js";if(document.getElementById(e))return;var t=document.createElement("script");t.id=e,t.src="//hn-button.herokuapp.com/hn-button.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)},HN.load();</script>
+ <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
  </body>
 </html>
