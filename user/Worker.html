@@ -181,10 +181,10 @@ syntax::</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">create_worker</span> <span class="n">owner_account</span> <span class="n">work_begin_date</span> <span class="n">work_end_date</span> <span class="n">daily_pay</span> <span class="n">name</span> <span class="n">url</span> <span class="n">worker_settings</span> <span class="n">broadcast</span>
 </pre></div>
 </div>
-<p>example, awesomebitsharer is creating a one day worker starting Oct 28 and will
-get paid 1 BTS/day (vesting in 1 day) to make an android app. The first command
-won&#8217;t broadcast, this will just check::</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">create_worker</span> <span class="s">&quot;worker-name&quot;</span> <span class="s">&quot;2015-10-28T00:00:00&quot;</span> <span class="s">&quot;2015-10-29T00:00:00&quot;</span> <span class="mi">10000</span> <span class="s">&quot;Description&quot;</span> <span class="s">&quot;http://URL&quot;</span> <span class="p">{</span><span class="s">&quot;type&quot;</span> <span class="p">:</span> <span class="s">&quot;vesting&quot;</span><span class="p">,</span> <span class="s">&quot;pay_vesting_period_days&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">}</span> <span class="n">false</span>
+<p>example, <code class="docutils literal"><span class="pre">owner_account</span></code> is creating a one day worker starting Oct 28 and will
+get paid 1 BTS/day (vesting in 1 day, 1 BTS = 100,000 &#8216;satoshi&#8217;) to make an
+android app. The first command won&#8217;t broadcast, this will just check::</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">create_worker</span> <span class="s">&quot;worker-name&quot;</span> <span class="s">&quot;2015-10-28T00:00:00&quot;</span> <span class="s">&quot;2015-10-29T00:00:00&quot;</span> <span class="mi">100000</span> <span class="s">&quot;Description&quot;</span> <span class="s">&quot;http://URL&quot;</span> <span class="p">{</span><span class="s">&quot;type&quot;</span> <span class="p">:</span> <span class="s">&quot;vesting&quot;</span><span class="p">,</span> <span class="s">&quot;pay_vesting_period_days&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">}</span> <span class="n">false</span>
 </pre></div>
 </div>
 <p>The URL should point to something describing your proposal. We recommend to answer the following questions:</p>
@@ -205,7 +205,7 @@ won&#8217;t broadcast, this will just check::</p>
 Some people don&#8217;t want workers to withdraw and sell large sums of BTS
 immediately, as it puts sell pressure on BTS. Also, if you require vesting, you
 have &#8220;skin in the game&#8221; and thus an incentive to improve BTS value. Pay is pay
-per day (not hour or maintenance period) and is in units of 1/10,000 BTS (the
+per day (not hour or maintenance period) and is in units of 1/100,000 BTS (the
 precision of BTS)</p>
 <p>To <strong>actually</strong> generate a worker proposal, replace the last <code class="docutils literal"><span class="pre">false</span></code> by <code class="docutils literal"><span class="pre">true</span></code>.</p>
 </div>
