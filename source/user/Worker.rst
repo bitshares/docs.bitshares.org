@@ -12,13 +12,14 @@ How to Create a Worker
 
 Workers are currently created with the cli_wallet with the following command
 syntax:::
+
     >>> create_worker owner_account work_begin_date work_end_date daily_pay name url worker_settings broadcast
 
-example, awesomebitsharer is creating a one day worker starting Oct 28 and will
-get paid 1 BTS/day (vesting in 1 day) to make an android app. The first command
-won't broadcast, this will just check:::
+example, ``owner_account`` is creating a one day worker starting Oct 28 and will
+get paid 1 BTS/day (vesting in 1 day, 1 BTS = 100,000 'satoshi') to make an
+android app. The first command won't broadcast, this will just check:::
 
-    >>> create_worker "worker-name" "2015-10-28T00:00:00" "2015-10-29T00:00:00" 10000 "Description" "http://URL" {"type" : "vesting", "pay_vesting_period_days" : 1} false
+    >>> create_worker "worker-name" "2015-10-28T00:00:00" "2015-10-29T00:00:00" 100000 "Description" "http://URL" {"type" : "vesting", "pay_vesting_period_days" : 1} false
 
 The URL should point to something describing your proposal. We recommend to answer the following questions:
 
@@ -36,7 +37,7 @@ The variable ``pay_vesting_period_days`` is the integer number of days you set f
 Some people don't want workers to withdraw and sell large sums of BTS
 immediately, as it puts sell pressure on BTS. Also, if you require vesting, you
 have "skin in the game" and thus an incentive to improve BTS value. Pay is pay
-per day (not hour or maintenance period) and is in units of 1/10,000 BTS (the
+per day (not hour or maintenance period) and is in units of 1/100,000 BTS (the
 precision of BTS)
 
 To **actually** generate a worker proposal, replace the last ``false`` by ``true``.
