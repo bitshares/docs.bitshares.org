@@ -125,13 +125,16 @@
 <li class="toctree-l1"><a class="reference internal" href="../migration/index.html">Migrating from BitShares 1.0 to BitShares 2.0</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">User Guide</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Account.html">Accounts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Transactions.html">Transactions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Assets.html">Assets/Tokens</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Dex.html">Decentralized Exchange</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Shareholder.html">Shareholder</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Transactions.html">Transactions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Committee.html">Committee</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Witness.html">Witnesses</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Worker.html">Workers / Budget Items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#blockchain-positions">Blockchain &#8220;Positions&#8221;</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Shareholder.html">Shareholder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Committee.html">Committee</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Witness.html">Witnesses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Worker.html">Workers / Budget Items</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../papers/index.html">Whitepapers</a></li>
@@ -205,6 +208,19 @@ understand way in this <em>User Guide</em>.</p>
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="Transactions.html">Transactions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="StealthTransactions.html">Stealth Transfers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="StealthTransactions.html#creating-a-blind-account">Creating a Blind Account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="StealthTransactions.html#adding-a-contact">Adding a Contact</a></li>
+<li class="toctree-l3"><a class="reference internal" href="StealthTransactions.html#transferring-to-a-stealth-balance">Transferring to a Stealth Balance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="StealthTransactions.html#viewing-blind-balances">Viewing Blind Balances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="StealthTransactions.html#stealth-transfer-to-bob">Stealth Transfer to Bob</a></li>
+<li class="toctree-l3"><a class="reference internal" href="StealthTransactions.html#receiving-a-blind-transfer">Receiving a Blind Transfer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="StealthTransactions.html#transferring-back-to-public">Transferring back to Public</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Assets.html">Assets/Tokens</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="uia.html">User Issued Assets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mpa.html">Market Pegged Assets</a></li>
@@ -228,20 +244,31 @@ understand way in this <em>User Guide</em>.</p>
 </li>
 </ul>
 </li>
+</ul>
+</div>
+<div class="section" id="blockchain-positions">
+<h2>Blockchain &#8220;Positions&#8221;<a class="headerlink" href="#blockchain-positions" title="Permalink to this headline">¶</a></h2>
+<p>Graphene/BitShares 2 separates responsibilities and incentives activities that are
+beneficial to the network, thus acknowledging different skill sets and
+interested community members to have incentives to contribute in the most
+appropriate way.</p>
+<ul class="simple">
+<li>Witnesses are paid for maintaining the back-bone of the network.</li>
+<li>Committee members are unpaid volunteers that organize the community and propose changes to the network.</li>
+<li>Marketers are paid in referral fees.</li>
+<li>Workers are paid for whatever they propose and do.</li>
+<li>Shareholders are people holding BTS. They can cast a vote and influence the DAC&#8217;s businesses</li>
+</ul>
+<p>Each of the above (except Marketers) requires users to vote for the people,
+proposals, and/or changes. Those with sufficient approval will be compensated.</p>
+<p>Workers are the &#8220;catch all&#8221; group where if you have an idea for something that
+could improve the network, you can get &#8220;paid&#8221; by the network to do it.
+Organizing meet-ups, developing a new tool or feature for the community, and
+maintaining websites and infrastructure (e.g. the mumble server team or linux
+distribution) are all examples of things workers may do.</p>
+<div class="toctree-wrapper compound">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="Shareholder.html">Shareholder</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Transactions.html">Transactions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="StealthTransactions.html">Stealth Transfers</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="StealthTransactions.html#creating-a-blind-account">Creating a Blind Account</a></li>
-<li class="toctree-l3"><a class="reference internal" href="StealthTransactions.html#adding-a-contact">Adding a Contact</a></li>
-<li class="toctree-l3"><a class="reference internal" href="StealthTransactions.html#transferring-to-a-stealth-balance">Transferring to a Stealth Balance</a></li>
-<li class="toctree-l3"><a class="reference internal" href="StealthTransactions.html#viewing-blind-balances">Viewing Blind Balances</a></li>
-<li class="toctree-l3"><a class="reference internal" href="StealthTransactions.html#stealth-transfer-to-bob">Stealth Transfer to Bob</a></li>
-<li class="toctree-l3"><a class="reference internal" href="StealthTransactions.html#receiving-a-blind-transfer">Receiving a Blind Transfer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="StealthTransactions.html#transferring-back-to-public">Transferring back to Public</a></li>
-</ul>
-</li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="Committee.html">Committee</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="Committee.html#technical-realization">Technical Realization</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="Committee.html#creating-a-new-committee-member">Creating a New Committee Member</a></li>
@@ -251,8 +278,16 @@ understand way in this <em>User Guide</em>.</p>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Witness.html">Witnesses</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Worker.html">Workers / Budget Items</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Worker.html">Workers / Budget Items</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Worker.html#how-to-create-a-worker">How to Create a Worker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Worker.html#how-to-see-proposals-on-the-chain">How to see proposals on the chain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Worker.html#how-to-vote-for-a-worker">How to Vote for a Worker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Worker.html#how-workers-get-paid">How Workers Get Paid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Worker.html#technical-details">Technical Details</a></li>
 </ul>
+</li>
+</ul>
+</div>
 </div>
 </div>
 

@@ -2,6 +2,11 @@
 Committee
 *********
 
+.. https://bitsharestalk.org/index.php/topic,19444.0/all.html
+.. http://bitsharestalk.org/index.php?topic=19444.msg250969.msg#250969
+.. http://bitsharestalk.org/index.php?topic=19444.msg250974.msg#250974
+
+
 (under construction) 
 
 
