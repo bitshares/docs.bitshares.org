@@ -10,8 +10,9 @@ decentralized exchange.
 From Bitcoin Pre-Sale
 ######################
 
-If you have bought your shares via the Bitcoin Pre-Sale, you can obtain the
-required information as described in the following guide:
+Those that participated in the NOTEs pre-sale using Bitcoin can obtain the
+required information to redeem their corresponding amount of MUSE (rebranding of
+NOTE) as described in the following guide:
 
 * :doc:`Bitcoin Pre-Sale <howto-exporting-wallet-btc>`
 
