@@ -1,17 +1,10 @@
 *********************
-Exporting Your Wallet
+BitShares' NOTE Token
 *********************
 
-In this tutorial, we will export you wallet including all keys to access your
-accounts and funds, into a single JSON-formated file. Note that your private
-keys will be encrypted and you will be required to provide the corresponding
-pass phrase when importing your funds into BitShares 2.0.
-
-BitShares 1.0 Full Client
-#########################
-
 Since the snapshot has taken place already, all you need to do now to get
-access to your funds in BitShares 2.0 is described in the following.
+access to your funds in MUSE is described in the following. Note that the name
+of the asset in BitShares 1.0 was **NOTE** instead of **MUSE**.
 
 Firstly, you need to upgrade your BitShares client to version 0.9.3c. To do the
 upgrade you need to:
@@ -38,8 +31,11 @@ can be accessed in two ways:
 * by accessing it in the main menu
 * by issuing a command in the console.
 
+Note that your private keys will be encrypted and you will be required to
+provide the corresponding pass phrase when importing your funds into MUSE.
+
 Using the main menu
-*******************
+###################
 
 Just select ``File Menu -> Export Wallet``  and you'll be asked to select a
 file location where the keys will be exported. 
@@ -49,7 +45,7 @@ file location where the keys will be exported.
         be compatible with BTS 2.0. This refers to Windows only.
 
 Using the console
-*****************
+#################
 
 * navigate to the console: Account List -> Advanced Settings -> Console
 * type: wallet_export_keys [full path to the file]/[file name].json
