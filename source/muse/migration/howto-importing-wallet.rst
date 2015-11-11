@@ -1,15 +1,15 @@
-*********************
-Importing Your Wallet
-*********************
+**********************
+Importing Your Balance
+**********************
 
-Web Wallet
-##########
+Using the Web Wallet (recommended)
+##################################
 
-The web wallet of BitShares 2.0 has a **Wallet management Console.** that will
-help you import your funds. It can be access via `BitShares 2.0: Settings -> Wallets` 
+The web wallet of MUSE has a **Wallet management Console.** that will
+help you import your funds. It can be access via `MUSE: Settings -> Wallets` 
 
 .. image:: /static/wallet-management-console.png
-        :alt: Wallet Management Console in BitShares 2.0
+        :alt: Wallet Management Console in MUSE
         :width: 550px
         :align: center
 
@@ -21,7 +21,7 @@ choose ``Import Keys``.
    sure to click ``Import Keys`` and **not** ``Restore Backup``.
 
 .. image:: /static/wallet-management-console-import-keys.png
-        :alt: Wallet Management Console in BitShares 2.0 -- Import Keys
+        :alt: Wallet Management Console in MUSE -- Import Keys
         :width: 550px
         :align: center
 
@@ -30,7 +30,7 @@ the pass phrase. Depending on the size of your import file, this step may take
 some time to auto-complete. Please be patient.
 
 .. image:: /static/import-keys.png
-        :alt: Import Wallet Backup from BitShares 1.0
+        :alt: Import Wallet
         :width: 550px
         :align: center
 
@@ -67,8 +67,8 @@ appear accordingly.
           new backup of your wallet that will then contain access to your newly
           imported accounts and corresponding balances.
 
-CLI wallet
-##########
+Using the Console Client (advanced users)
+#########################################
 
 The wallet backup file can be imported by ::
 

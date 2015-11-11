@@ -96,10 +96,10 @@ To actually run `cmake` we now need the following parameters:
            -DBOOST_ROOT="$BOOST_ROOT" -DCMAKE_BUILD_TYPE=Debug   .
     cd ..
 
-Building BitShares
+Building MUSE
 ###########################
 
-After downloading the BitShares sources according to :doc:`the download
+After downloading the muse sources according to :doc:`the download
 page <./Sources>`, we can run ``cmake`` for configuration and compile with
 ``make``:
 
