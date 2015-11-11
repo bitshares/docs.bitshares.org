@@ -15,8 +15,8 @@ everything in BitShares 2.0, too. We separated the documentation into smaller
 parts for convenience and for the sake of easy location of relevant
 information.
 
-Whitepapers
-###########
+BitShares Whitepapers
+#####################
 
 .. raw:: html
 
@@ -26,23 +26,57 @@ Whitepapers
     </a>
    </center>
 
+Blockchain Specific Guides
+##########################
+
+.. raw:: html
+
+   <div class="row">
+    <div class="col-md-6">
+
+BitShares
+*********
+
+.. toctree::
+   :maxdepth: 2
+
+   migration/index
+   installation/index
+   papers/index
+
+.. raw:: html
+
+    </div>
+    <div class="col-md-6">
+
+MUSE
+****
+
+.. toctree::
+   :maxdepth: 2
+
+   muse/installation/index
+   muse/migration/index
+
+.. raw:: html
+
+    </div>
+   </div>
+
 User Guide
 ##########
 
 .. toctree::
    :maxdepth: 2
 
-   migration/index
    user/index
-   papers/index
 
-Developer Guide
-###############
+Graphene Developer Guide
+########################
 
 .. toctree::
    :maxdepth: 2
 
-   installation/index
    api/index
    apps/index
    integration/index
