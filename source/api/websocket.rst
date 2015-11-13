@@ -25,7 +25,7 @@ Requesting API access
 
 The first thing we need to do is to *login*::
 
-    > {"id":2,"method":"call","params":[0,"login",["",""]]}
+    > {"id":2,"method":"call","params":[1,"login",["",""]]}
     < {"id":2,"result":true}
 
 If you have :doc:`restricted access <./access>` then you may be required to put
@@ -35,7 +35,7 @@ should verify, that the ``result`` give positive confirmation about your login.
 Before we can subscribe to any object changes and get notified automatically,
 we first need to ask for access to the ``database``-api with::
 
-    > {"id":2,"method":"call","params":[0,"database",[]]}
+    > {"id":2,"method":"call","params":[1,"database",[]]}
     < {"id":2,"result":1}
 
 The ``result`` will be our ``DATABASE_API_ID``!
@@ -95,9 +95,9 @@ Example Session
 
 Here is an example of a full session:::
 
-    > {"id":1,"method":"call","params":[0,"login",["",""]]}
+    > {"id":1,"method":"call","params":[1,"login",["",""]]}
     < {"id":1,"result":true}
-    > {"id":2,"method":"call","params":[0,"database",[]]}
+    > {"id":2,"method":"call","params":[1,"database",[]]}
     < {"id":2,"result":1}
     > {"id":3,"method":"call","params":[1,"set_subscribe_callback",[200]]}
     < {"id":3,"result":true}
