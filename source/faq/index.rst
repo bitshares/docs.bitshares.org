@@ -1,3 +1,7 @@
+**************************
+Frequently Asked Questions
+**************************
+
 What is the standard Bitshares address structure and format?
 ************************************************************
 address = 'BTS'+base58(ripemd(sha512(compressed_pub)))  (checksum obviated)
@@ -20,6 +24,7 @@ What transaction types are natively supported?
 **********************************************
 Transaction are composed of operations (about ~40 different types).
 Example of operations are:
+
  * transfer_operation
  * limit_order_create_operation
  * asset_issue_operation
@@ -39,9 +44,11 @@ https://github.com/cryptonomex/graphene/blob/master/programs/size_checker/main.c
 
 How are transactions validated?
 *******************************
-Each operation has a defined evaluator that checks for preconditions (do_evaluate) and modify the state (do_apply). (After signature verification)
+Each operation has a defined evaluator that checks for preconditions
+(do_evaluate) and modify the state (do_apply). (After signature verification)
 
 .. code-block:: cpp
+
     class transfer_evaluator : public evaluator<transfer_evaluator>
        {
           public:

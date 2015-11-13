@@ -29,42 +29,42 @@ Configuration
 #############
 
 The configuration file ``config.ini`` in your data directory is commented and
-contains the following essential settings:::
+contains the following essential settings:
 
-* ``p2p-endpoint``:
+* ``p2p-endpoint``
     Endpoint for P2P node to listen on
-* ``seed-node``:
+* ``seed-node``
     P2P nodes to connect to on startup (may specify multiple times)
-* ``checkpoint``:
+* ``checkpoint``
     Pairs of [BLOCK_NUM,BLOCK_ID] that should be enforced as checkpoints.
-* ``rpc-endpoint``:
+* ``rpc-endpoint``
     Endpoint for websocket RPC to listen on (e.g. ``0.0.0.0:8090``)
-* ``rpc-tls-endpoint``:
+* ``rpc-tls-endpoint``
     Endpoint for TLS websocket RPC to listen on
-* ``server-pem``:
+* ``server-pem``
     The TLS certificate file for this server
-* ``server-pem-password``:
+* ``server-pem-password``
     Password for this certificate
-* ``genesis-json``:
+* ``genesis-json``
     File to read Genesis State from
-* ``api-access``:
+* ``api-access``
     JSON file specifying API permissions
-* ``enable-stale-production``:
+* ``enable-stale-production``
     Enable block production, even if the chain is stale. (unless for private testnets should be ``false``)
-* ``required-participation``:
+* ``required-participation``
     Percent of witnesses (0-99) that must be participating in order to produce blocks
-* ``allow-consecutive``:
+* ``allow-consecutive``
     Allow block production, even if the last block was produced by the same witness.
-* ``witness-id``:
+* ``witness-id``
     ID of witness controlled by this node (e.g. "1.6.5", quotes are required, may specify multiple times)
-* ``private-key``:
+* ``private-key``
     Tuple of ``[PublicKey, WIF private key]`` (may specify multiple times)
-* ``track-account``:
+* ``track-account``
     Account ID to track history for (may specify multiple times)
-* ``bucket-size``:
+* ``bucket-size``
     Track market history by grouping orders into buckets of equal size measured
     in seconds specified as a JSON array of numbers
-* ``history-per-size``:
+* ``history-per-size``
     How far back in time to track history for each bucket size, measured in the number of buckets (default: 1000)
 
 .. note:: Folders and files are considered to be relative to the working

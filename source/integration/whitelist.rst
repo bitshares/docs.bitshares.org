@@ -8,6 +8,6 @@ assets serve a very practical need.
 
 .. toctree::
 
-   User-Whitelist
-   Asset-Whitelist
-   Market-Whitelist
+   user-whitelist
+   asset-whitelist
+   market-whitelist

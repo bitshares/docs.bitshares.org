@@ -8,7 +8,7 @@ Overview
 The following will show the usage of websocket connections. We make use of the
 ``wscat`` application available via ``npm``:
 
-.. code-block::
+.. code-block:: sh
 
     npm install -g wscat
 
@@ -39,6 +39,17 @@ we first need to ask for access to the ``database``-api with::
     < {"id":2,"result":1}
 
 The ``result`` will be our ``DATABASE_API_ID``!
+
+Fine below a list of available APIs:
+
+.. toctree::
+   :maxdepth: 1
+
+   login
+   database
+   history
+   network_broadcast
+   network_node
 
 Notifications
 #############

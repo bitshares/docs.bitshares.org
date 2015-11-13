@@ -15,7 +15,7 @@ Installation
 In this step-by-step instruction we assume you have successfully built from the
 sources according to:
 
-* :doc:`../installation/Build`
+* :doc:`/bitshares/installation/Build`
 
 Running Daemons and Wallet
 ##########################
@@ -40,7 +40,7 @@ use different ports to distinguish them:
 * port ``8091``: delayed node
 * port ``8092``: wallet
 
-:doc:`Read more details <../integration/NetworkSetup>`
+:doc:`Read more details </bitshares/integration/network-setup>`
 
 Trusted Full Node
 *****************
@@ -165,7 +165,7 @@ changing ``false`` to ``true`` will the balances be claimed!
 
 For your hot wallet (or any other active wallet running in the BitShares 1
 client) we recommend to use the GUI to claim your funds from hot wallet as
-described :doc:`here <../migration/howto-importing-wallet>`.
+described :doc:`here </bitshares/migration/howto-importing-wallet>`.
 
 Watching Deposits with Python
 #############################

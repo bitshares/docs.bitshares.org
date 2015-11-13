@@ -1,89 +1,102 @@
+.. role:: html(raw)
+   :format: html
+
 *************************************
 Welcome to the Graphene Documentation
 *************************************
 
-BitShares 2.0 is a Financial Smart Contracts platform that is based on the
-`Graphene`_ technology built by `Cryptonomex`_ . You can see Graphene as a
-toolkit for real-time blockchains.
+The developers of BitShares formed Cryptonomex to monetize the technology,
+experience, reputation and good will they accumulated during their first two
+years of development and operations. Much of that technology is embodied in
+Graphene™, an industrial strength software platform for deploying third
+generation cryptographically secure decentralized ledgers known as block chains. 
+
+Graphene based systems have orders of magnitude better performance than
+first-generation Bitcoin-derived systems or even the second generation "Bitcoin
+2.0" systems that constitute our current closest competitors. Graphene based
+systems go beyond mere "checkbook" style payments to offer a broad range of
+financial services distinguished by their transparency and inherent
+incorruptibility.
+
+Graphene technology is already developed and deployed. It will be generating
+profits in multiple industries before the end of 2015. The purpose of this
+round of capital is to scale and proliferate the technology into many more
+applications, industries, partnerships and customer relationships.  We intend
+to capture market share and grow network effect while we continue to extend our
+substantial technical lead in the industry. 
+
+This page documents the `Graphene`_ technology built by `Cryptonomex`_ . You can
+see Graphene as a toolkit for real-time blockchains. We separated the
+documentation into smaller parts for convenience and for the sake of easy
+location of relevant information.
 
 .. _Cryptonomex: http://cryptonomex.com
 .. _Graphene: https://github.com/cryptonomex/graphene
 
-Below, you can find the Graphene documentation. Since BitShares 2.0 is the
-first application of Graphene technology, you will be able to use almost
-everything in BitShares 2.0, too. We separated the documentation into smaller
-parts for convenience and for the sake of easy location of relevant
-information.
+Recent Updates
+##############
 
-BitShares Whitepapers
-#####################
+.. r!date +\%y/\%m/\%d
 
-.. raw:: html
-
-   <center>
-    <a href="_downloads/bitshares-financial-platform.pdf" type="button" class="btn btn-info" onclick="ga('set', 'nonInteraction', false);ga('send', 'event', { eventCategory: 'download', eventAction: 'click', eventLabel: 'BitShares 2.0: Financial Smart Contract Platform'});">
-     BitShares 2.0: Financial Smart Contract Platform
-    </a>
-   </center>
+* ``15/11/13`` Refactoring, updates for: :doc:`integration/index`, 
+* ``15/11/10`` Added MUSE blockchain: :doc:`muse/index`
+* ``15/11/01`` Release of :html:`<a href="_downloads/bitshares-financial-platform.pdf" onclick="ga('set', 'nonInteraction', false);ga('send', 'event', { eventCategory: 'download', eventAction: 'click', eventLabel: 'BitShares 2.0: Financial Smart Contract Platform'});">BitShares 2.0: Financial Smart Contract Platform</a>`
 
 Blockchain Specific Guides
 ##########################
 
-.. raw:: html
+The Graphene Technology has been applied to several blockchain already.
+BitShares 2.0 has been the first application of Graphene technology and you will
+be able to find almost everything feature implemented in BitShares 2.0. Further
+blockchains will be added independenly.
 
-   <div class="row">
-    <div class="col-md-6">
+:html:`<div class="container-fluid"><div class="row"><div class="col-md-6">`
 
-BitShares
-*********
+`BitShares 2.0`_ is a Financial Smart Contracts platform that enables trading
+of digital assets and has market-pegged assets that track the value of their
+underlying asset (e.g. bitUSD tracking the U.S. dollar).
+
+.. _BitShares 2.0: http://BitShares.org
+
+.. toctree::
+   :maxdepth: 3
+
+   bitshares/index
+
+:html:`</div><div class="col-md-6">`
+
+`MUSE`_ is a public ledger specifically tailored for the Music Industry that
+keeps track of worldwide copyrights. It is an ownerless, automated, globally
+distributed, Peer-to-Peer network that is both transparent and open to all.
+
+.. _MUSE: http://museblockchain.com
+
+.. toctree::
+   :maxdepth: 3
+
+   muse/index
+
+:html:`</div></div></div>`
+
+Integration Guide
+#################
 
 .. toctree::
    :maxdepth: 2
 
-   migration/index
-   installation/index
-   papers/index
-
-.. raw:: html
-
-    </div>
-    <div class="col-md-6">
-
-MUSE
-****
-
-.. toctree::
-   :maxdepth: 2
-
-   muse/installation/index
-   muse/migration/index
-
-.. raw:: html
-
-    </div>
-   </div>
-
-User Guide
-##########
-
-.. toctree::
-   :maxdepth: 2
-
-   user/index
-
-Graphene Developer Guide
-########################
-
-.. toctree::
-   :maxdepth: 2
-
-   api/index
-   apps/index
    integration/index
+   api/index
+
+Development
+###########
+
+.. toctree::
+   :maxdepth: 1
+
    blockchain/index
    namespaces/index
    testnet/index
-   develop/index
+   faq/index
 
 ****
 Meta

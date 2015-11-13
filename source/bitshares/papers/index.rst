@@ -1,3 +1,6 @@
+.. role:: html(raw)
+   :format: html
+
 ***************
 Whitepapers
 ***************
@@ -10,12 +13,8 @@ Whitepapers
     </a>
    </center>
 
-.. raw:: html
-
-   <!--
+:html:`<!-- Adding the downloads in Sphinx syntax to be sure it is moved to _downloads properly`
 
 * :download:`BitShares 2.0: Financial Smart Contract Platform <bitshares-financial-platform.pdf>`
 
-.. raw:: html
-
-   //-->
+:html:`//-->`

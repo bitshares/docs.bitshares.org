@@ -27,7 +27,7 @@ Brain, Private and Public Key Derivation
 ****************************************
 
 We can derive a new set auf keys using the ``suggest_brain_key`` command in the
-:doc:`../apps/CliWallet`. The result will look like this:
+:doc:`/apps/cliwallet`. The result will look like this:
 
 .. code-block:: json
 
