@@ -1,0 +1,269 @@
+
+
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>User Whitelists</title>
+
+    <!-- CSS -->
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href='../_static/main.css' rel='stylesheet'>
+    <link href='../_static/style.css' rel='stylesheet'>
+    <link href='../_static/doxygen.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+    <!-- Sphinx search -->
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <!-- Transifex -->
+    <script type="text/javascript">
+      window.liveSettings = {
+        api_key: "bbf87af0641e4bbf89c98088d48e0449",
+      };
+    </script>
+    <script type="text/javascript" src="http://cdn.transifex.com/live.js"></script>
+
+    <!-- title card -->
+    <link  href='../_static/title-card.css' rel='stylesheet'>
+    <script src='../_static/script.js'></script>
+    
+    <!-- Sphinx search -->
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Graphene Technical Documentation  documentation"
+          href="../_static/opensearch.xml"/>
+
+    <!-- Meta -->
+    <meta content="Graphene Documentation" property="og:site_name">
+    <meta content="Graphene Documentation" property="og:title">
+    <meta content="website" property="og:type">
+    <meta content="Graphene Documentation" name="description">
+    <meta content="Graphene Documentation" property="og:description">
+    
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-68381245-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+ </head>
+ <body class='no-literate'>
+
+
+ <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
+   <div class='in'>
+     <div class='headline'>
+       <h1>User Whitelists</h1>
+ 
+     </div>
+   </div>
+ </div>
+
+ <div class='header'>
+   <div class='left navlinks'>
+    
+        <div class="prev">
+         <div class="title">previous</div>
+         <span><a href="whitelist.html">Using White- and Black-lists</a></span>
+        </div>
+        <div class="top">
+         <div class="title">top</div>
+         <span><a class="uplink" href="../index.html">Contents</a></span>
+        </div>
+        <div class="next">
+         <div class="title">next</div>
+         <span><a href="asset-whitelist.html">Asset User Whitelists</a></span>
+        </div>
+
+   </div>
+   <!--
+    <div class='right'>
+<div id="searchbox" style="display: none" role="search">
+ <form class="search" action="../search.html" method="get">
+   <input type="text" name="q" />
+   <input type="submit" value="Go" />
+   <input type="hidden" name="check_keywords" value="yes" />
+   <input type="hidden" name="area" value="default" />
+ </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+   </div>
+   -->
+ </div>
+
+ <div class='content-root'>
+  <!-- menu bar -->
+  <div class='menubar'>
+   <div class='section'>
+    <a href="../"><img src="../_static/grphn-logo.svg" width="48" /></a>
+       <!--<a class='big button' href='#' target='_blank'>Download</a>-->
+   </div>
+   <div class='menu section'>
+    <div id="toc">
+      <h3>Table Of Contents</h3>
+      <ul>
+<li class="toctree-l1"><a class="reference internal" href="../bitshares/index.html">BitShares 2.0</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../muse/index.html">MUSE</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Integration Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#basic-knowledge">Basic Knowledge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#merchants">Merchants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#traders">Traders</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#exchanges">Exchanges</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="exchanges/index.html">Exchanges Bridges and Gateways</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="exchanges/index.html#step-by-step-instructions-for-exchanges">Step-By-Step Instructions for Exchanges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exchanges/index.html#libraries">Libraries</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="exchanges/index.html#detailed-technical-guide">Detailed Technical Guide</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="exchanges/preface.html">Overview</a></li>
+<li class="toctree-l5"><a class="reference internal" href="what-is-different.html">What is Different</a></li>
+<li class="toctree-l5"><a class="reference internal" href="supporting-features.html">Supporting Features</a></li>
+<li class="toctree-l5"><a class="reference internal" href="interfacing.html">Interfacing with the BitShares Ecosystem</a></li>
+<li class="toctree-l5"><a class="reference internal" href="network-setup.html">Secure Network and Wallet Configuration</a></li>
+<li class="toctree-l5"><a class="reference internal" href="often-used-calls.html">Often used API Calls</a></li>
+<li class="toctree-l5 current"><a class="reference internal" href="whitelist.html">Using White- and Black-lists</a></li>
+<li class="toctree-l5"><a class="reference internal" href="securing-funds.html">Securing Funds</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">Graphene API</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../blockchain/index.html">Blockchain Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../namespaces/index.html">Namespaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testnet/index.html">Testnets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">Frequently Asked Questions</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../meta/index.html">Meta</a></li>
+</ul>
+
+    </div>
+   </div>
+   <div class='bottom section'>
+   <!--
+     <a href='https://github.com/cryptonomex/graphene'>View on GitHub</a><br>
+     <a href='https://github.com/cryptonomex/graphene/blob/master/README.md' target='_blank'>See .md source</a>
+   -->
+   </div>
+  </div>
+  <div class='content'>
+   
+  <div class="section" id="user-whitelists">
+<h1>User Whitelists<a class="headerlink" href="#user-whitelists" title="Permalink to this headline">¶</a></h1>
+<p>Any live-time member can cast an opinion about other accounts using white- and
+black-lists. They <strong>do not</strong> prevent anyone from interacting with your account
+but serve as a basis for <em>list authorities</em>.</p>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>A user <code class="docutils literal"><span class="pre">white</span></code> can be added to the white-list of account <code class="docutils literal"><span class="pre">provider</span></code> with::</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">whitelist_account</span> <span class="n">provider</span> <span class="n">white</span> <span class="n">white_listed</span> <span class="n">true</span>
+</pre></div>
+</div>
+<p>In contrast a <code class="docutils literal"><span class="pre">black</span></code> user can be added to its blacklist with::</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">whitelist_account</span> <span class="n">provider</span> <span class="n">black</span> <span class="n">black_listed</span> <span class="n">true</span>
+</pre></div>
+</div>
+<p>Both can be removed from their lists with::</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">whitelist_account</span> <span class="n">provider</span> <span class="n">black</span> <span class="n">no_listing</span> <span class="n">true</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">whitelist_account</span> <span class="n">provider</span> <span class="n">white</span> <span class="n">no_listing</span> <span class="n">true</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="definition">
+<h2>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h2>
+<p>White- and Black-listing of accounts works with the following API call:</p>
+<dl class="function">
+<dt id="_CPPv2N8graphene6wallet10wallet_api17whitelist_accountE6string6stringN27account_whitelist_operation15account_listingEb">
+<span id="graphene::wallet::wallet_api::whitelist_account__string.string.account_whitelist_operation::account_listing.b"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1aa6483d143fecb817fad3c08ee982bda0"></span>signed_transaction <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">whitelist_account</code><span class="sig-paren">(</span>string <em>authorizing_account</em>, string <em>account_to_list</em>, account_whitelist_operation::account_listing <em>new_listing_status</em>, bool <em>broadcast</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api17whitelist_accountE6string6stringN27account_whitelist_operation15account_listingEb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whitelist and blacklist accounts, primarily for transacting in whitelisted assets.</p>
+<p>Accounts can freely specify opinions about other accounts, in the form of either whitelisting or blacklisting them. This information is used in chain validation only to determine whether an account is authorized to transact in an asset type which enforces a whitelist, but third parties can use this information for other uses as well, as long as it does not conflict with the use of whitelisted assets.</p>
+<p>An asset which enforces a whitelist specifies a list of accounts to maintain its whitelist, and a list of accounts to maintain its blacklist. In order for a given account A to hold and transact in a whitelisted asset S, A must be whitelisted by at least one of S&#8217;s whitelist_authorities and blacklisted by none of S&#8217;s blacklist_authorities. If A receives a balance of S, and is later removed from the whitelist(s) which allowed it to hold S, or added to any blacklist S specifies as authoritative, A&#8217;s balance of S will be frozen until A&#8217;s authorization is reinstated.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>the signed transaction changing the whitelisting status </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">authorizing_account</span></code> - <p>the account who is doing the whitelisting </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">account_to_list</span></code> - <p>the account being whitelisted </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">new_listing_status</span></code> - <p>the new whitelisting status </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">broadcast</span></code> - <p>true to broadcast the transaction on the network </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<p>It expects a <cite>new_listing_status</cite> from</p>
+<dl class="type">
+<dt id="_CPPv2N8graphene5chain27account_whitelist_operation15account_listingE">
+<span id="graphene::chain::account_whitelist_operation::account_listing"></span><span class="target" id="graphenestructgraphene_1_1chain_1_1account__whitelist__operation_1abba3d110e073c52309b894c4342fc660"></span><em class="property">enum </em><code class="descclassname">graphene::chain::account_whitelist_operation::</code><code class="descname">account_listing</code><a class="headerlink" href="#_CPPv2N8graphene5chain27account_whitelist_operation15account_listingE" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Values:</em></p>
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain27account_whitelist_operation10no_listingE">
+<span id="graphene::chain::account_whitelist_operation::no_listing"></span><span class="target" id="graphenestructgraphene_1_1chain_1_1account__whitelist__operation_1abba3d110e073c52309b894c4342fc660a5784b62ddb2021fb6f337578f714ef3e"></span><code class="descname">no_listing</code> = 0x0<a class="headerlink" href="#_CPPv2N8graphene5chain27account_whitelist_operation10no_listingE" title="Permalink to this definition">¶</a></dt>
+<dd><p>No opinion is specified about this account. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain27account_whitelist_operation12white_listedE">
+<span id="graphene::chain::account_whitelist_operation::white_listed"></span><span class="target" id="graphenestructgraphene_1_1chain_1_1account__whitelist__operation_1abba3d110e073c52309b894c4342fc660a57b41bd3f476a766dd10d0c83accb2fa"></span><code class="descname">white_listed</code> = 0x1<a class="headerlink" href="#_CPPv2N8graphene5chain27account_whitelist_operation12white_listedE" title="Permalink to this definition">¶</a></dt>
+<dd><p>This account is whitelisted, but not blacklisted. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain27account_whitelist_operation12black_listedE">
+<span id="graphene::chain::account_whitelist_operation::black_listed"></span><span class="target" id="graphenestructgraphene_1_1chain_1_1account__whitelist__operation_1abba3d110e073c52309b894c4342fc660a52535472688741b32b3e8bc05ec61e73"></span><code class="descname">black_listed</code> = 0x2<a class="headerlink" href="#_CPPv2N8graphene5chain27account_whitelist_operation12black_listedE" title="Permalink to this definition">¶</a></dt>
+<dd><p>This account is blacklisted, but not whitelisted. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain27account_whitelist_operation22white_and_black_listedE">
+<span id="graphene::chain::account_whitelist_operation::white_and_black_listed"></span><span class="target" id="graphenestructgraphene_1_1chain_1_1account__whitelist__operation_1abba3d110e073c52309b894c4342fc660a8a0156a219f322cde14c69b0f9748515"></span><code class="descname">white_and_black_listed</code> = white_listed | black_listed<a class="headerlink" href="#_CPPv2N8graphene5chain27account_whitelist_operation22white_and_black_listedE" title="Permalink to this definition">¶</a></dt>
+<dd><p>This account is both whitelisted and blacklisted. </p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+  </div>
+ </div>
+
+ <script>var HN=[];HN.factory=function(e){return function(){HN.push([e].concat(Array.prototype.slice.call(arguments,0)))};},HN.on=HN.factory("on"),HN.once=HN.factory("once"),HN.off=HN.factory("off"),HN.emit=HN.factory("emit"),HN.load=function(){var e="hn-button.js";if(document.getElementById(e))return;var t=document.createElement("script");t.id=e,t.src="//hn-button.herokuapp.com/hn-button.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)},HN.load();</script>
+ <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+ </body>
+</html>

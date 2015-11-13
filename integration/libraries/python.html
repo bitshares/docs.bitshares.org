@@ -1,0 +1,236 @@
+
+
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Python Example</title>
+
+    <!-- CSS -->
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href='../../_static/main.css' rel='stylesheet'>
+    <link href='../../_static/style.css' rel='stylesheet'>
+    <link href='../../_static/doxygen.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+    <!-- Sphinx search -->
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <!-- Transifex -->
+    <script type="text/javascript">
+      window.liveSettings = {
+        api_key: "bbf87af0641e4bbf89c98088d48e0449",
+      };
+    </script>
+    <script type="text/javascript" src="http://cdn.transifex.com/live.js"></script>
+
+    <!-- title card -->
+    <link  href='../../_static/title-card.css' rel='stylesheet'>
+    <script src='../../_static/script.js'></script>
+    
+    <!-- Sphinx search -->
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Graphene Technical Documentation  documentation"
+          href="../../_static/opensearch.xml"/>
+
+    <!-- Meta -->
+    <meta content="Graphene Documentation" property="og:site_name">
+    <meta content="Graphene Documentation" property="og:title">
+    <meta content="website" property="og:type">
+    <meta content="Graphene Documentation" name="description">
+    <meta content="Graphene Documentation" property="og:description">
+    
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-68381245-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+ </head>
+ <body class='no-literate'>
+
+
+ <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
+   <div class='in'>
+     <div class='headline'>
+       <h1>Python Example</h1>
+ 
+     </div>
+   </div>
+ </div>
+
+ <div class='header'>
+   <div class='left navlinks'>
+    
+        <div class="prev">
+         <div class="title">previous</div>
+         <span><a href="index.html">Supporting Libraries</a></span>
+        </div>
+        <div class="top">
+         <div class="title">top</div>
+         <span><a class="uplink" href="../../index.html">Contents</a></span>
+        </div>
+        <div class="next">
+         <div class="title">next</div>
+         <span><a href="nodejs.html">NodeJS Example</a></span>
+        </div>
+
+   </div>
+   <!--
+    <div class='right'>
+<div id="searchbox" style="display: none" role="search">
+ <form class="search" action="../../search.html" method="get">
+   <input type="text" name="q" />
+   <input type="submit" value="Go" />
+   <input type="hidden" name="check_keywords" value="yes" />
+   <input type="hidden" name="area" value="default" />
+ </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+   </div>
+   -->
+ </div>
+
+ <div class='content-root'>
+  <!-- menu bar -->
+  <div class='menubar'>
+   <div class='section'>
+    <a href="../../"><img src="../../_static/grphn-logo.svg" width="48" /></a>
+       <!--<a class='big button' href='#' target='_blank'>Download</a>-->
+   </div>
+   <div class='menu section'>
+    <div id="toc">
+      <h3>Table Of Contents</h3>
+      <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../bitshares/index.html">BitShares 2.0</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../muse/index.html">MUSE</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Integration Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#basic-knowledge">Basic Knowledge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#merchants">Merchants</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#traders">Traders</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../traders/index.html">Traders</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="../traders/index.html#libraries">Libraries</a><ul class="current">
+<li class="toctree-l5 current"><a class="reference internal" href="index.html">Supporting Libraries</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#exchanges">Exchanges</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">Graphene API</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../blockchain/index.html">Blockchain Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../namespaces/index.html">Namespaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../testnet/index.html">Testnets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/index.html">Frequently Asked Questions</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../meta/index.html">Meta</a></li>
+</ul>
+
+    </div>
+   </div>
+   <div class='bottom section'>
+   <!--
+     <a href='https://github.com/cryptonomex/graphene'>View on GitHub</a><br>
+     <a href='https://github.com/cryptonomex/graphene/blob/master/README.md' target='_blank'>See .md source</a>
+   -->
+   </div>
+  </div>
+  <div class='content'>
+   
+  <div class="section" id="python-example">
+<h1>Python Example<a class="headerlink" href="#python-example" title="Permalink to this headline">¶</a></h1>
+<p>This python library assists interfacing with a graphene-based network such as
+BitShares 2.0.</p>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>A graphene Python 3.0 library can be installed by issuing</p>
+<div class="highlight-sh"><div class="highlight"><pre>git clone http://github.com/xeroc/python-graphenelib
+<span class="nb">cd </span>python-graphenelib
+easy_install-3.4 install autobahn
+python3 setup.py install --user
+</pre></div>
+</div>
+<p>As you can see, this library requires Python3 and will <strong>not</strong> work properly
+with Python2.</p>
+</div>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<p>To make use of this library, we can instruct any full-node to send
+notifications for all incoming transactions for any account. Let&#8217;s discuss the
+following example script in more details:</p>
+<p>We first prepare our variables and import all required modules</p>
+<p>Define the <cite>accountID</cite> and the <cite>memo_wif_key</cite> in <cite>examples/monitor.py</cite>.
+The accountID can be obtained from the GUI wallet, or by issuing::</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">get_account</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>If the script exists abnormally, you can continue operations by setting
+<cite>last_op</cite> to the last operation id that you have captured before the
+abnormal exit.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The current implementation has a maxium history size of 100
+transaction. If you have missed more than 100 transaction with the
+current implementation, manual fixing is required.</p>
+</div>
+<p>Furthermore, in Graphene, memos are usually encrypted using a distinct memo
+key. That way, exposing the memo private key will only expose transaction memos
+(for that key) and not compromise any funds. It is thus safe to store the memo
+private key in 3rd party services and scripts. The memo public key can be
+obtained from the account settings or via command line::</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">get_account</span> <span class="o">&lt;</span><span class="n">myaccount</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>in the cli wallet. The corresponding private key can be obtain from::</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">dump_private_keys</span>
+</pre></div>
+</div>
+<p>Note that the latter command exposes all private keys in clear-text wif.</p>
+</div>
+<div class="section" id="running">
+<h2>Running<a class="headerlink" href="#running" title="Permalink to this headline">¶</a></h2>
+<p>The monitoring script can be executed via</p>
+<div class="highlight-sh"><div class="highlight"><pre>python3 monitor.py
+</pre></div>
+</div>
+</div>
+</div>
+
+
+  </div>
+ </div>
+
+ <script>var HN=[];HN.factory=function(e){return function(){HN.push([e].concat(Array.prototype.slice.call(arguments,0)))};},HN.on=HN.factory("on"),HN.once=HN.factory("once"),HN.off=HN.factory("off"),HN.emit=HN.factory("emit"),HN.load=function(){var e="hn-button.js";if(document.getElementById(e))return;var t=document.createElement("script");t.id=e,t.src="//hn-button.herokuapp.com/hn-button.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)},HN.load();</script>
+ <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+ </body>
+</html>

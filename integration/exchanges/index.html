@@ -1,0 +1,346 @@
+
+
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Exchanges, Bridges, and Gateways</title>
+
+    <!-- CSS -->
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href='../../_static/main.css' rel='stylesheet'>
+    <link href='../../_static/style.css' rel='stylesheet'>
+    <link href='../../_static/doxygen.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+    <!-- Sphinx search -->
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <!-- Transifex -->
+    <script type="text/javascript">
+      window.liveSettings = {
+        api_key: "bbf87af0641e4bbf89c98088d48e0449",
+      };
+    </script>
+    <script type="text/javascript" src="http://cdn.transifex.com/live.js"></script>
+
+    <!-- title card -->
+    <link  href='../../_static/title-card.css' rel='stylesheet'>
+    <script src='../../_static/script.js'></script>
+    
+    <!-- Sphinx search -->
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Graphene Technical Documentation  documentation"
+          href="../../_static/opensearch.xml"/>
+
+    <!-- Meta -->
+    <meta content="Graphene Documentation" property="og:site_name">
+    <meta content="Graphene Documentation" property="og:title">
+    <meta content="website" property="og:type">
+    <meta content="Graphene Documentation" name="description">
+    <meta content="Graphene Documentation" property="og:description">
+    
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-68381245-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+ </head>
+ <body class='no-literate'>
+
+
+ <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
+   <div class='in'>
+     <div class='headline'>
+       <h1>Exchanges, Bridges, and Gateways</h1>
+ 
+     </div>
+   </div>
+ </div>
+
+ <div class='header'>
+   <div class='left navlinks'>
+    
+        <div class="prev">
+         <div class="title">previous</div>
+         <span><a href="../interfacing.html">Interfacing with the BitShares Ecosystem</a></span>
+        </div>
+        <div class="top">
+         <div class="title">top</div>
+         <span><a class="uplink" href="../../index.html">Contents</a></span>
+        </div>
+        <div class="next">
+         <div class="title">next</div>
+         <span><a href="step-by-step.html">Step-By-Step Instructions for Exchanges</a></span>
+        </div>
+
+   </div>
+   <!--
+    <div class='right'>
+<div id="searchbox" style="display: none" role="search">
+ <form class="search" action="../../search.html" method="get">
+   <input type="text" name="q" />
+   <input type="submit" value="Go" />
+   <input type="hidden" name="check_keywords" value="yes" />
+   <input type="hidden" name="area" value="default" />
+ </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+   </div>
+   -->
+ </div>
+
+ <div class='content-root'>
+  <!-- menu bar -->
+  <div class='menubar'>
+   <div class='section'>
+    <a href="../../"><img src="../../_static/grphn-logo.svg" width="48" /></a>
+       <!--<a class='big button' href='#' target='_blank'>Download</a>-->
+   </div>
+   <div class='menu section'>
+    <div id="toc">
+      <h3>Table Of Contents</h3>
+      <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../bitshares/index.html">BitShares 2.0</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../muse/index.html">MUSE</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Integration Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#basic-knowledge">Basic Knowledge</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#use-cases">Use-Cases</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="">Exchanges, Bridges, and Gateways</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-by-step-instructions-for-exchanges">Step-By-Step Instructions for Exchanges</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="step-by-step.html">Step-By-Step Instructions for Exchanges</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#libraries">Libraries</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../libraries/index.html">Supporting Libraries</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#detailed-technical-guide">Detailed Technical Guide</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../what-is-different.html">What is Different</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../supporting-features.html">Supporting Features</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../interfacing.html">Interfacing with the BitShares Ecosystem</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../network-setup.html">Secure Network and Wallet Configuration</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../often-used-calls.html">Often used API Calls</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../whitelist.html">Using White- and Black-lists</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../securing-funds.html">Securing Funds</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../merchants/index.html">Merchants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../traders/index.html">Traders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../businesses/index.html">Businesses</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">Graphene API</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../blockchain/index.html">Blockchain Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../namespaces/index.html">Namespaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../testnet/index.html">Testnets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/index.html">Frequently Asked Questions</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../meta/index.html">Meta</a></li>
+</ul>
+
+    </div>
+   </div>
+   <div class='bottom section'>
+   <!--
+     <a href='https://github.com/cryptonomex/graphene'>View on GitHub</a><br>
+     <a href='https://github.com/cryptonomex/graphene/blob/master/README.md' target='_blank'>See .md source</a>
+   -->
+   </div>
+  </div>
+  <div class='content'>
+   
+  <div class="section" id="exchanges-bridges-and-gateways">
+<h1>Exchanges, Bridges, and Gateways<a class="headerlink" href="#exchanges-bridges-and-gateways" title="Permalink to this headline">¶</a></h1>
+<p>We here illustrate the steps necessary to securely operate as exchange or
+gateway. Gateways take Fiat and convert them to their corresponding bitAsset at
+a fee and vice versa. For instance:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>A customer requests 100 bitUSD from a gateway</li>
+<li>The gateway sends an invoice with bank account details</li>
+<li>When the funds arrive at the gateway a percentage is taken as a fee and the
+rest is transfered as bitUSD directly into the BitShares wallet of the
+customer.</li>
+</ol>
+</div></blockquote>
+<p>For exchanges we recommend to also read <a class="reference internal" href="../what-is-different.html"><em>What is Different</em></a> and
+<a class="reference internal" href="../often-used-calls.html"><em>Often used API Calls</em></a>.</p>
+<div class="section" id="step-by-step-instructions-for-exchanges">
+<h2>Step-By-Step Instructions for Exchanges<a class="headerlink" href="#step-by-step-instructions-for-exchanges" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="step-by-step.html">Step-By-Step Instructions for Exchanges</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="step-by-step.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="step-by-step.html#running-daemons-and-wallet">Running Daemons and Wallet</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="step-by-step.html#trusted-full-node">Trusted Full Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step-by-step.html#delayed-node">Delayed Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step-by-step.html#wallet">Wallet</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="step-by-step.html#query-blockchain-for-required-data">Query blockchain for required data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="step-by-step.html#existing-bitshares-1-account">Existing BitShares 1 Account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step-by-step.html#claiming-bitshares-1-0-funds">Claiming BitShares 1.0 funds</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="step-by-step.html#watching-deposits-with-python">Watching Deposits with Python</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="step-by-step.html#id1">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step-by-step.html#configuration">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="step-by-step.html#running">Running</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="step-by-step.html#executing-transfers-for-withdrawals">Executing Transfers for Withdrawals</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="libraries">
+<h2>Libraries<a class="headerlink" href="#libraries" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../libraries/index.html">Supporting Libraries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/python.html">Python Example</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../libraries/python.html#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libraries/python.html#configuration">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libraries/python.html#running">Running</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/nodejs.html">NodeJS Example</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../libraries/nodejs.html#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libraries/nodejs.html#configuration">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libraries/nodejs.html#running">Running</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="detailed-technical-guide">
+<h2>Detailed Technical Guide<a class="headerlink" href="#detailed-technical-guide" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../what-is-different.html">What is Different</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../what-is-different.html#several-tokens">Several Tokens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../what-is-different.html#registered-identifies">Registered Identifies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../what-is-different.html#no-more-addresses">No More Addresses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../what-is-different.html#memos">Memos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../what-is-different.html#securing-funds">Securing Funds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../what-is-different.html#full-nodes-and-clients">Full Nodes and Clients</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../what-is-different.html#object-ids">Object IDs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../supporting-features.html">Supporting Features</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../supporting-features.html#user-issued-assets">User Issued Assets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../supporting-features.html#whitelists-and-blacklists">Whitelists and Blacklists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../supporting-features.html#hierarchical-corporate-accounts">Hierarchical Corporate Accounts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../interfacing.html">Interfacing with the BitShares Ecosystem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../network-setup.html">Secure Network and Wallet Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../network-setup.html#overview-of-the-setup">Overview of the Setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../network-setup.html#p2p-network">P2P network</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../network-setup.html#trusted-full-node">Trusted Full Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../network-setup.html#delayed-full-node">Delayed Full Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../network-setup.html#wallet">Wallet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../network-setup.html#deposit-api">Deposit API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../network-setup.html#withdraw-api">Withdraw API</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../network-setup.html#example-configuration">Example Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../network-setup.html#id1">Trusted Full Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../network-setup.html#id2">Delayed Full Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../network-setup.html#id3">Wallet</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../often-used-calls.html">Often used API Calls</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../often-used-calls.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../often-used-calls.html#example-outputs">Example Outputs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../blockchain/Objects.html">Objects and IDs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../blockchain/Objects.html#objects">Objects</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../blockchain/Objects.html#accounts">Accounts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../blockchain/Objects.html#object-types-1">Object Types: 1.*.*</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../blockchain/Objects.html#implementation-object-types-2">Implementation Object Types: 2.*.*</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/cli_wallet.html">CLI Wallet API Calls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../often-used-calls.html#list-account-balances-account"><code class="docutils literal"><span class="pre">list_account_balances</span> <span class="pre">&lt;account&gt;</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../often-used-calls.html#transfer-from-to-amount-asset-memo-broadcast"><code class="docutils literal"><span class="pre">transfer</span> <span class="pre">&lt;from&gt;</span> <span class="pre">&lt;to&gt;</span> <span class="pre">&lt;amount&gt;</span> <span class="pre">&lt;asset&gt;</span> <span class="pre">&quot;&lt;memo&gt;&quot;</span> <span class="pre">&lt;broadcast&gt;</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../often-used-calls.html#get-account-history-account-limit"><code class="docutils literal"><span class="pre">get_account_history</span> <span class="pre">&lt;account&gt;</span> <span class="pre">&lt;limit&gt;</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../often-used-calls.html#get-object-1-11-id"><code class="docutils literal"><span class="pre">get_object</span> <span class="pre">&quot;1.11.&lt;id&gt;&quot;</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../often-used-calls.html#get-asset-usd"><code class="docutils literal"><span class="pre">get_asset</span> <span class="pre">&lt;USD&gt;</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../whitelist.html">Using White- and Black-lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user-whitelist.html">User Whitelists</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../user-whitelist.html#examples">Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../user-whitelist.html#definition">Definition</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../asset-whitelist.html">Asset User Whitelists</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../asset-whitelist.html#example">Example</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../asset-whitelist.html#defining-an-asset-s-list-authorities">Defining an asset&#8217;s list authorities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../asset-whitelist.html#adding-alice-to-a-whitelist">Adding <code class="docutils literal"><span class="pre">alice</span></code> to a whitelist</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../asset-whitelist.html#definition">Definition</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../market-whitelist.html">Asset Market Whitelists</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../market-whitelist.html#example">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../market-whitelist.html#defintion">Defintion</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../securing-funds.html">Securing Funds</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+  </div>
+ </div>
+
+ <script>var HN=[];HN.factory=function(e){return function(){HN.push([e].concat(Array.prototype.slice.call(arguments,0)))};},HN.on=HN.factory("on"),HN.once=HN.factory("once"),HN.off=HN.factory("off"),HN.emit=HN.factory("emit"),HN.load=function(){var e="hn-button.js";if(document.getElementById(e))return;var t=document.createElement("script");t.id=e,t.src="//hn-button.herokuapp.com/hn-button.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)},HN.load();</script>
+ <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+ </body>
+</html>

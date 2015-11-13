@@ -47,7 +47,7 @@
     
     <!-- Sphinx search -->
     <link rel="search" type="application/opensearchdescription+xml"
-          title="Search within Graphene/BitShares 2.0 Technical Documentation  documentation"
+          title="Search within Graphene Technical Documentation  documentation"
           href="_static/opensearch.xml"/>
 
     <!-- Meta -->
@@ -75,7 +75,7 @@
  <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
    <div class='in'>
      <div class='headline'>
-       <h1>Graphene/BitShares 2.0 Technical Documentation</h1>
+       <h1>Graphene Technical Documentation</h1>
        <p>Welcome to the Graphene Documentation</p>
        <p style="margin-top: 3em;"><img src="_static/learn.svg" width="124" /><p>
  
@@ -92,7 +92,7 @@
         </div>
         <div class="next">
          <div class="title">next</div>
-         <span><a href="migration/index.html">Migrating from BitShares 1.0 to BitShares 2.0</a></span>
+         <span><a href="bitshares/index.html">BitShares 2.0</a></span>
         </div>
 
    </div>
@@ -122,25 +122,20 @@
     <div id="toc">
       <h3>Table Of Contents</h3>
       <ul>
-<li class="toctree-l1"><a class="reference internal" href="migration/index.html">Migrating from BitShares 1.0 to BitShares 2.0</a></li>
-<li class="toctree-l1"><a class="reference internal" href="installation/index.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="papers/index.html">Whitepapers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bitshares/index.html">BitShares 2.0</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="muse/installation/index.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="muse/migration/index.html">Howto Redeem your MUSE/NOTE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="muse/index.html">MUSE</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="user/index.html">User Guide</a></li>
-</ul>
-<ul>
+<li class="toctree-l1"><a class="reference internal" href="integration/index.html">Integration Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api/index.html">Graphene API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="apps/index.html">Applications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="integration/index.html">Integrating the BitShares Network</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="blockchain/index.html">Blockchain Specifications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="namespaces/index.html">Namespaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testnet/index.html">Testnets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="develop/index.html">Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq/index.html">Frequently Asked Questions</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="meta/index.html">Meta</a></li>
@@ -159,89 +154,111 @@
    
   <div class="section" id="welcome-to-the-graphene-documentation">
 <h1>Welcome to the Graphene Documentation<a class="headerlink" href="#welcome-to-the-graphene-documentation" title="Permalink to this headline">¶</a></h1>
-<p>BitShares 2.0 is a Financial Smart Contracts platform that is based on the
-<a class="reference external" href="https://github.com/cryptonomex/graphene">Graphene</a> technology built by <a class="reference external" href="http://cryptonomex.com">Cryptonomex</a> . You can see Graphene as a
-toolkit for real-time blockchains.</p>
-<p>Below, you can find the Graphene documentation. Since BitShares 2.0 is the
-first application of Graphene technology, you will be able to use almost
-everything in BitShares 2.0, too. We separated the documentation into smaller
-parts for convenience and for the sake of easy location of relevant
-information.</p>
-<div class="section" id="bitshares-whitepapers">
-<h2>BitShares Whitepapers<a class="headerlink" href="#bitshares-whitepapers" title="Permalink to this headline">¶</a></h2>
-<center>
- <a href="_downloads/bitshares-financial-platform.pdf" type="button" class="btn btn-info" onclick="ga('set', 'nonInteraction', false);ga('send', 'event', { eventCategory: 'download', eventAction: 'click', eventLabel: 'BitShares 2.0: Financial Smart Contract Platform'});">
-  BitShares 2.0: Financial Smart Contract Platform
- </a>
-</center></div>
+<p>The developers of BitShares formed Cryptonomex to monetize the technology,
+experience, reputation and good will they accumulated during their first two
+years of development and operations. Much of that technology is embodied in
+Graphene™, an industrial strength software platform for deploying third
+generation cryptographically secure decentralized ledgers known as block chains.</p>
+<p>Graphene based systems have orders of magnitude better performance than
+first-generation Bitcoin-derived systems or even the second generation &#8220;Bitcoin
+2.0&#8221; systems that constitute our current closest competitors. Graphene based
+systems go beyond mere &#8220;checkbook&#8221; style payments to offer a broad range of
+financial services distinguished by their transparency and inherent
+incorruptibility.</p>
+<p>Graphene technology is already developed and deployed. It will be generating
+profits in multiple industries before the end of 2015. The purpose of this
+round of capital is to scale and proliferate the technology into many more
+applications, industries, partnerships and customer relationships.  We intend
+to capture market share and grow network effect while we continue to extend our
+substantial technical lead in the industry.</p>
+<p>This page documents the <a class="reference external" href="https://github.com/cryptonomex/graphene">Graphene</a> technology built by <a class="reference external" href="http://cryptonomex.com">Cryptonomex</a> . You can
+see Graphene as a toolkit for real-time blockchains. We separated the
+documentation into smaller parts for convenience and for the sake of easy
+location of relevant information.</p>
+<div class="section" id="recent-updates">
+<h2>Recent Updates<a class="headerlink" href="#recent-updates" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">15/11/13</span></code> Refactoring, updates for: <a class="reference internal" href="integration/index.html"><em>Integration Guide</em></a>,</li>
+<li><code class="docutils literal"><span class="pre">15/11/10</span></code> Added MUSE blockchain: <a class="reference internal" href="muse/index.html"><em>MUSE</em></a></li>
+<li><code class="docutils literal"><span class="pre">15/11/01</span></code> Release of <span class="html"><a href="_downloads/bitshares-financial-platform.pdf" onclick="ga('set', 'nonInteraction', false);ga('send', 'event', { eventCategory: 'download', eventAction: 'click', eventLabel: 'BitShares 2.0: Financial Smart Contract Platform'});">BitShares 2.0: Financial Smart Contract Platform</a></span></li>
+</ul>
+</div>
 <div class="section" id="blockchain-specific-guides">
 <h2>Blockchain Specific Guides<a class="headerlink" href="#blockchain-specific-guides" title="Permalink to this headline">¶</a></h2>
-<div class="row">
- <div class="col-md-6"><div class="section" id="bitshares">
-<h3>BitShares<a class="headerlink" href="#bitshares" title="Permalink to this headline">¶</a></h3>
+<p>The Graphene Technology has been applied to several blockchain already.
+BitShares 2.0 has been the first application of Graphene technology and you will
+be able to find almost everything feature implemented in BitShares 2.0. Further
+blockchains will be added independenly.</p>
+<p><span class="html"><div class="container-fluid"><div class="row"><div class="col-md-6"></span></p>
+<p><a class="reference external" href="http://BitShares.org">BitShares 2.0</a> is a Financial Smart Contracts platform that enables trading
+of digital assets and has market-pegged assets that track the value of their
+underlying asset (e.g. bitUSD tracking the U.S. dollar).</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="migration/index.html">Migrating from BitShares 1.0 to BitShares 2.0</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="migration/what-is-new.html">What is New in BitShares 2.0</a></li>
-<li class="toctree-l2"><a class="reference internal" href="migration/what-changed.html">What has Changed?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="migration/blockchain-transition.html">Blockchain Upgrade</a></li>
-<li class="toctree-l2"><a class="reference internal" href="migration/howto-exporting-wallet.html">Exporting Your Wallet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="migration/howto-importing-wallet.html">Importing Your Wallet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="migration/howto-importing-wallet-remarks.html">Migration Remarks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bitshares/index.html">BitShares 2.0</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bitshares/installation/index.html">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bitshares/installation/Download.html">Downloads</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitshares/installation/Sources.html">Sources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitshares/installation/Build.html">Building from Sources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitshares/installation/Upgrades.html">Upgrading</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="installation/index.html">Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="installation/Download.html">Downloads</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installation/Sources.html">Sources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installation/Build.html">Building from Sources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="installation/Upgrades.html">Upgrading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bitshares/migration/index.html">Migrating from BitShares 1.0 to BitShares 2.0</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bitshares/migration/what-is-new.html">What is New in BitShares 2.0</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitshares/migration/what-changed.html">What has Changed?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitshares/migration/blockchain-transition.html">Blockchain Upgrade</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitshares/migration/howto-exporting-wallet.html">Exporting Your Wallet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitshares/migration/howto-importing-wallet.html">Importing Your Wallet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitshares/migration/howto-importing-wallet-remarks.html">Migration Remarks</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="papers/index.html">Whitepapers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bitshares/papers/index.html">Whitepapers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bitshares/user/index.html">User Guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bitshares/user/Account.html">Accounts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitshares/user/Transactions.html">Transactions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitshares/user/Assets.html">Assets/Tokens</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitshares/user/Dex.html">Decentralized Exchange</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bitshares/user/index.html#blockchain-positions">Blockchain &#8220;Positions&#8221;</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
-</div>
-<div class="col-md-6"></div>
-<div class="section" id="muse">
-<h3>MUSE<a class="headerlink" href="#muse" title="Permalink to this headline">¶</a></h3>
+<p><span class="html"></div><div class="col-md-6"></span></p>
+<p><a class="reference external" href="http://museblockchain.com">MUSE</a> is a public ledger specifically tailored for the Music Industry that
+keeps track of worldwide copyrights. It is an ownerless, automated, globally
+distributed, Peer-to-Peer network that is both transparent and open to all.</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="muse/installation/index.html">Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="muse/installation/Download.html">Downloads</a></li>
-<li class="toctree-l2"><a class="reference internal" href="muse/installation/Sources.html">Sources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="muse/installation/Build.html">Building from Sources</a></li>
-<li class="toctree-l2"><a class="reference internal" href="muse/installation/Upgrades.html">Upgrading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="muse/index.html">MUSE</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="muse/installation/index.html">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="muse/installation/Download.html">Downloads</a></li>
+<li class="toctree-l3"><a class="reference internal" href="muse/installation/Sources.html">Sources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="muse/installation/Build.html">Building from Sources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="muse/installation/Upgrades.html">Upgrading</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="muse/migration/index.html">Howto Redeem your MUSE/NOTE</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="muse/migration/howto-exporting-wallet.html">Exporting your wallet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="muse/migration/howto-importing-wallet.html">Importing Your Balance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="muse/migration/index.html">Howto Redeem your MUSE/NOTE</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="muse/migration/howto-exporting-wallet.html">Exporting your wallet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="muse/migration/howto-importing-wallet.html">Importing Your Balance</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 </div>
- </div>
-</div></div>
+<p><span class="html"></div></div></div></span></p>
 </div>
-<div class="section" id="user-guide">
-<h2>User Guide<a class="headerlink" href="#user-guide" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="integration-guide">
+<h2>Integration Guide<a class="headerlink" href="#integration-guide" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="user/index.html">User Guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="user/Account.html">Accounts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="user/Transactions.html">Transactions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="user/Assets.html">Assets/Tokens</a></li>
-<li class="toctree-l2"><a class="reference internal" href="user/Dex.html">Decentralized Exchange</a></li>
-<li class="toctree-l2"><a class="reference internal" href="user/index.html#blockchain-positions">Blockchain &#8220;Positions&#8221;</a></li>
+<li class="toctree-l1"><a class="reference internal" href="integration/index.html">Integration Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="integration/index.html#basic-knowledge">Basic Knowledge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="integration/index.html#use-cases">Use-Cases</a></li>
 </ul>
 </li>
-</ul>
-</div>
-</div>
-<div class="section" id="graphene-developer-guide">
-<h2>Graphene Developer Guide<a class="headerlink" href="#graphene-developer-guide" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="api/index.html">Graphene API</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="api/index.html#interfacing-with-graphene">Interfacing with Graphene</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/index.html#cli-wallet-api">Cli Wallet API</a></li>
@@ -249,64 +266,17 @@ information.</p>
 <li class="toctree-l2"><a class="reference internal" href="api/index.html#namespaces">Namespaces</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="apps/index.html">Applications</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="apps/Witness.html">Full Node</a></li>
-<li class="toctree-l2"><a class="reference internal" href="apps/DelayedNode.html">Delayed Full Node</a></li>
-<li class="toctree-l2"><a class="reference internal" href="apps/CliWallet.html">CLI Wallet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="apps/CliFullWallet.html">Full Node Wallet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="apps/WebWallet.html">Web Wallet</a></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="integration/index.html">Integrating the BitShares Network</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="integration/step-by-step.html">Step-By-Step Instructions for Exchanges</a></li>
-<li class="toctree-l2"><a class="reference internal" href="integration/Overview.html">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="integration/what-is-different.html">What is Different</a></li>
-<li class="toctree-l2"><a class="reference internal" href="integration/SupportingFeatures.html">Supporting Features</a></li>
-<li class="toctree-l2"><a class="reference internal" href="integration/Interfacing.html">Interfacing with the BitShares Ecosystem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="integration/NetworkSetup.html">Secure Network and Wallet Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="integration/Libraries.html">Supporting Code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="integration/OftenUsedCalls.html">Often used API Calls</a></li>
-<li class="toctree-l2"><a class="reference internal" href="integration/Whitelist.html">Using White- and Black-lists</a></li>
-<li class="toctree-l2"><a class="reference internal" href="integration/SecuringFunds.html">Securing Funds</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="blockchain/index.html">Blockchain Specifications</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="blockchain/Objects.html">Objects and IDs</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="namespaces/index.html">Namespaces</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="namespaces/app.html">Graphene::App</a></li>
-<li class="toctree-l2"><a class="reference internal" href="namespaces/chain.html">Graphene::Chain</a></li>
-<li class="toctree-l2"><a class="reference internal" href="namespaces/wallet.html">Graphene::Wallet</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="testnet/index.html">Testnets</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="testnet/Private.html">Setting up private testnet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="testnet/Public.html">Setting up public testnet</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="develop/index.html">Developers</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="develop/faq.html">What is the standard Bitshares address structure and format?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="develop/faq.html#what-public-key-system-is-used-if-elliptic-curve-then-what-is-the-curve">What public key system is used? If elliptic curve, then what is the curve?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="develop/faq.html#is-there-a-specification-for-bitshares-scripting-language-assuming-there-is-one">Is there a specification for Bitshares scripting language? (assuming there is one)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="develop/faq.html#is-the-scripting-language-turing-complete">Is the scripting language turing complete?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="develop/faq.html#what-transaction-types-are-natively-supported">What transaction types are natively supported?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="develop/faq.html#how-is-accounting-addressed-in-bitshares-is-it-a-nxt-style-accounting-model-or-like-bitcoin-s-utxo">How is accounting addressed in Bitshares? Is it a Nxt style accounting model or like Bitcoin&#8217;s UTXO</a></li>
-<li class="toctree-l2"><a class="reference internal" href="develop/faq.html#what-is-the-average-size-in-bytes-of-a-bitshares-transaction">What is the average size in Bytes of a Bitshares transaction?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="develop/faq.html#how-are-transactions-validated">How are transactions validated?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="develop/faq.html#are-there-any-special-affordances-made-for-privacy">Are there any special affordances made for privacy?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="develop/faq.html#what-data-structures-are-used-in-the-blockchain">What data structures are used in the blockchain?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="develop/faq.html#what-is-the-format-of-the-block-header">What is the format of the block header?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="develop/faq.html#what-is-the-maximum-bitshares-block-size">What is the maximum bitshares block size?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="develop/faq.html#are-there-any-sharding-mechanics-currently-deployed">Are there any sharding mechanics currently deployed?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="develop/faq.html#how-are-spv-clients-handled">How are SPV clients handled?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="develop/faq.html#does-the-protocol-provide-mechanisms-for-overlay-protocols-to-interact-such-as-or-return">Does the protocol provide mechanisms for overlay protocols to interact such as OR_RETURN?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="develop/faq.html#how-is-time-addressed-in-the-blockchain-is-ntp-used-or-some-other-protocol">How is time addressed in the blockchain? Is NTP used or some other protocol?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="develop/faq.html#how-do-new-clients-bootstrap-into-the-network">How do new clients bootstrap into the network?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="develop/faq.html#what-is-the-average-block-time">What is the average block time?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="develop/faq.html#is-this-done-via-a-gossip-protocol-or-through-a-federate-relay">Is this done via a gossip protocol or through a federate relay?</a></li>
-</ul>
-</li>
+</div>
+</div>
+<div class="section" id="development">
+<h2>Development<a class="headerlink" href="#development" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="blockchain/index.html">Blockchain Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="namespaces/index.html">Namespaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testnet/index.html">Testnets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq/index.html">Frequently Asked Questions</a></li>
 </ul>
 </div>
 </div>

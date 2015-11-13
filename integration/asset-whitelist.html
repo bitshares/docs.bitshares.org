@@ -1,0 +1,422 @@
+
+
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Asset User Whitelists</title>
+
+    <!-- CSS -->
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href='../_static/main.css' rel='stylesheet'>
+    <link href='../_static/style.css' rel='stylesheet'>
+    <link href='../_static/doxygen.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+    <!-- Sphinx search -->
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <!-- Transifex -->
+    <script type="text/javascript">
+      window.liveSettings = {
+        api_key: "bbf87af0641e4bbf89c98088d48e0449",
+      };
+    </script>
+    <script type="text/javascript" src="http://cdn.transifex.com/live.js"></script>
+
+    <!-- title card -->
+    <link  href='../_static/title-card.css' rel='stylesheet'>
+    <script src='../_static/script.js'></script>
+    
+    <!-- Sphinx search -->
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Graphene Technical Documentation  documentation"
+          href="../_static/opensearch.xml"/>
+
+    <!-- Meta -->
+    <meta content="Graphene Documentation" property="og:site_name">
+    <meta content="Graphene Documentation" property="og:title">
+    <meta content="website" property="og:type">
+    <meta content="Graphene Documentation" name="description">
+    <meta content="Graphene Documentation" property="og:description">
+    
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-68381245-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+ </head>
+ <body class='no-literate'>
+
+
+ <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
+   <div class='in'>
+     <div class='headline'>
+       <h1>Asset User Whitelists</h1>
+ 
+     </div>
+   </div>
+ </div>
+
+ <div class='header'>
+   <div class='left navlinks'>
+    
+        <div class="prev">
+         <div class="title">previous</div>
+         <span><a href="user-whitelist.html">User Whitelists</a></span>
+        </div>
+        <div class="top">
+         <div class="title">top</div>
+         <span><a class="uplink" href="../index.html">Contents</a></span>
+        </div>
+        <div class="next">
+         <div class="title">next</div>
+         <span><a href="market-whitelist.html">Asset Market Whitelists</a></span>
+        </div>
+
+   </div>
+   <!--
+    <div class='right'>
+<div id="searchbox" style="display: none" role="search">
+ <form class="search" action="../search.html" method="get">
+   <input type="text" name="q" />
+   <input type="submit" value="Go" />
+   <input type="hidden" name="check_keywords" value="yes" />
+   <input type="hidden" name="area" value="default" />
+ </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+   </div>
+   -->
+ </div>
+
+ <div class='content-root'>
+  <!-- menu bar -->
+  <div class='menubar'>
+   <div class='section'>
+    <a href="../"><img src="../_static/grphn-logo.svg" width="48" /></a>
+       <!--<a class='big button' href='#' target='_blank'>Download</a>-->
+   </div>
+   <div class='menu section'>
+    <div id="toc">
+      <h3>Table Of Contents</h3>
+      <ul>
+<li class="toctree-l1"><a class="reference internal" href="../bitshares/index.html">BitShares 2.0</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../muse/index.html">MUSE</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Integration Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#basic-knowledge">Basic Knowledge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#merchants">Merchants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#traders">Traders</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#exchanges">Exchanges</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="exchanges/index.html">Exchanges Bridges and Gateways</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="exchanges/index.html#step-by-step-instructions-for-exchanges">Step-By-Step Instructions for Exchanges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exchanges/index.html#libraries">Libraries</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="exchanges/index.html#detailed-technical-guide">Detailed Technical Guide</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="exchanges/preface.html">Overview</a></li>
+<li class="toctree-l5"><a class="reference internal" href="what-is-different.html">What is Different</a></li>
+<li class="toctree-l5"><a class="reference internal" href="supporting-features.html">Supporting Features</a></li>
+<li class="toctree-l5"><a class="reference internal" href="interfacing.html">Interfacing with the BitShares Ecosystem</a></li>
+<li class="toctree-l5"><a class="reference internal" href="network-setup.html">Secure Network and Wallet Configuration</a></li>
+<li class="toctree-l5"><a class="reference internal" href="often-used-calls.html">Often used API Calls</a></li>
+<li class="toctree-l5 current"><a class="reference internal" href="whitelist.html">Using White- and Black-lists</a></li>
+<li class="toctree-l5"><a class="reference internal" href="securing-funds.html">Securing Funds</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">Graphene API</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../blockchain/index.html">Blockchain Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../namespaces/index.html">Namespaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testnet/index.html">Testnets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">Frequently Asked Questions</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../meta/index.html">Meta</a></li>
+</ul>
+
+    </div>
+   </div>
+   <div class='bottom section'>
+   <!--
+     <a href='https://github.com/cryptonomex/graphene'>View on GitHub</a><br>
+     <a href='https://github.com/cryptonomex/graphene/blob/master/README.md' target='_blank'>See .md source</a>
+   -->
+   </div>
+  </div>
+  <div class='content'>
+   
+  <div class="section" id="asset-user-whitelists">
+<h1>Asset User Whitelists<a class="headerlink" href="#asset-user-whitelists" title="Permalink to this headline">¶</a></h1>
+<p>Asset User white- and black-lists serve the need for companies to restrict
+service to a subset of accounts. For instance, a fiat gateway may require
+to follow KYC/AML regulations and can hence only deal with those
+customers that have been verified accordingly. If the issuer of an user-issued
+asset desires, he may set a restriction so that only users on the white-list
+(and/or <strong>not</strong> on the blacklist) are allowed to hold his token.</p>
+<p>Instead of putting all verified accounts into the respective asset&#8217;s white-list
+directly, BitShares 2.0 allows to define one or several white-list
+<em>authorities</em>. In practice, the white- and black-lists of these accounts are
+combined and serve as white- and black-lists for the asset.</p>
+<p>This allows for easy out-sourcing of KYC/AML verification to 3rd-party
+providers.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">By removing a user from the whitelist, funds can effectively be
+frozen.</p>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>Let&#8217;s assume user <code class="docutils literal"><span class="pre">alice</span></code> wants to own a gateways IOUs called <code class="docutils literal"><span class="pre">G.USD</span></code> which are
+restricted by a whitelists. Before being able to own <code class="docutils literal"><span class="pre">G.USD</span></code>, <code class="docutils literal"><span class="pre">alice</span></code> needs
+to be white-listed by one of the authorities of <code class="docutils literal"><span class="pre">G.USD</span></code>.</p>
+<div class="section" id="defining-an-asset-s-list-authorities">
+<h3>Defining an asset&#8217;s list authorities<a class="headerlink" href="#defining-an-asset-s-list-authorities" title="Permalink to this headline">¶</a></h3>
+<p>We now define the authorities (i.e. accounts) that define the white- and
+blacklist of the asset <code class="docutils literal"><span class="pre">G.USD</span></code>. We add <code class="docutils literal"><span class="pre">g-issuer</span></code> and <code class="docutils literal"><span class="pre">kycprovider</span></code> to
+the white- and black-list::</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">update_asset</span> <span class="n">G</span><span class="o">.</span><span class="n">USD</span> <span class="s">&quot;&quot;</span> <span class="s">&quot;{blacklist_authorities:[g-issuer, kycprovider], whitelist_authorities:[g-issuer, kycprovider], flags:white_list}&quot;</span> <span class="n">true</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The third argument for <code class="docutils literal"><span class="pre">update_asset</span></code> replaces the existing
+settings. Make sure to have all desired settings present.</p>
+</div>
+</div>
+<div class="section" id="adding-alice-to-a-whitelist">
+<h3>Adding <code class="docutils literal"><span class="pre">alice</span></code> to a whitelist<a class="headerlink" href="#adding-alice-to-a-whitelist" title="Permalink to this headline">¶</a></h3>
+<p>Let&#8217;s assume the only authority is the issuer <code class="docutils literal"><span class="pre">g-issuer</span></code> himself for
+simplicity. The issuer now needs to add <code class="docutils literal"><span class="pre">alice</span></code> to <code class="docutils literal"><span class="pre">g-issuer</span></code>&#8216;s account
+whitelist::</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">whitelist_account</span> <span class="n">g</span><span class="o">-</span><span class="n">issuer</span> <span class="n">alice</span> <span class="n">white_listed</span> <span class="n">true</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="definition">
+<h2>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h2>
+<p>White- and Black-listing of assets works with the following API call:</p>
+<dl class="function">
+<dt id="_CPPv2N8graphene6wallet10wallet_api12update_assetE6string8optionalI6stringE13asset_optionsb">
+<span id="graphene::wallet::wallet_api::update_asset__string.optional:string:.asset_options.b"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1a6c2a57593b39390b286efeecca2702d6"></span>signed_transaction <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">update_asset</code><span class="sig-paren">(</span>string <em>symbol</em>, optional&lt;string&gt; <em>new_issuer</em>, asset_options <em>new_options</em>, bool <em>broadcast</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api12update_assetE6string8optionalI6stringE13asset_optionsb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update the core options on an asset. There are a number of options which all assets in the network use. These options are enumerated in the asset_object::asset_options struct. This command is used to update these options for an existing asset.</p>
+<p><dl class="docutils">
+<dt><strong>Note</strong></dt>
+<dd>This operation cannot be used to update BitAsset-specific options. For these options, <code class="docutils literal"><a class="reference internal" href="../namespaces/wallet.html#grapheneclassgraphene_1_1wallet_1_1wallet__api_1aebe4459f45a748739595939d60b95b6b"><span><span class="pre">update_bitasset()</span></span></a></code> instead.</dd>
+<dt><strong>Return</strong></dt>
+<dd>the signed transaction updating the asset </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">symbol</span></code> - <p>the name or id of the asset to update </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">new_issuer</span></code> - <p>if changing the asset&#8217;s issuer, the name or id of the new issuer. null if you wish to remain the issuer of the asset </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">new_options</span></code> - <p>the new asset_options object, which will entirely replace the existing options. </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">broadcast</span></code> - <p>true to broadcast the transaction on the network </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="_CPPv2N8graphene5chain13asset_optionsE">
+<span id="graphene::chain::asset_options"></span><span class="target" id="graphenestructgraphene_1_1chain_1_1asset__options"></span><em class="property">struct </em><code class="descclassname">graphene::chain::</code><code class="descname">asset_options</code><a class="headerlink" href="#_CPPv2N8graphene5chain13asset_optionsE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference internal" href="../namespaces/chain.html#graphenestructgraphene_1_1chain_1_1asset__options"><span>asset_options</span></a> struct contains options available on all assets in the network. </p>
+<p><dl class="docutils">
+<dt><strong>Note</strong></dt>
+<dd>Changes to this struct will break protocol compatibility </dd>
+</dl>
+</p>
+<div class="breathe-sectiondef container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N8graphene5chain13asset_options8validateEv">
+<span id="graphene::chain::asset_options::validate"></span><span class="target" id="graphenestructgraphene_1_1chain_1_1asset__options_1a2bf6bd52581839452b13db4af6a6e5fa"></span>void <code class="descname">validate</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene5chain13asset_options8validateEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform internal consistency checks. <dl class="docutils">
+<dt><strong>Exceptions</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">fc::exception</span></code> - <p>if any check fails </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain13asset_options10max_supplyE">
+<span id="graphene::chain::asset_options::max_supply__share_type"></span><span class="target" id="graphenestructgraphene_1_1chain_1_1asset__options_1ab52b7282e9bea8c6a57ee282a66c6f92"></span><a class="reference internal" href="../namespaces/chain.html#_CPPv2N8graphene5chain10share_typeE" title="graphene::chain::share_type">share_type</a> <code class="descname">max_supply</code><a class="headerlink" href="#_CPPv2N8graphene5chain13asset_options10max_supplyE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum supply of this asset which may exist at any given time. This can be as large as GRAPHENE_MAX_SHARE_SUPPLY </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain13asset_options18market_fee_percentE">
+<span id="graphene::chain::asset_options::market_fee_percent__uint16_t"></span><span class="target" id="graphenestructgraphene_1_1chain_1_1asset__options_1ace27aedf849e0a01950ec362ffb3c6c8"></span>uint16_t <code class="descname">market_fee_percent</code><a class="headerlink" href="#_CPPv2N8graphene5chain13asset_options18market_fee_percentE" title="Permalink to this definition">¶</a></dt>
+<dd><p>When this asset is traded on the markets, this percentage of the total traded will be exacted and paid to the issuer. This is a fixed point value, representing hundredths of a percent, i.e. a value of 100 in this field means a 1% fee is charged on market trades of this asset. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain13asset_options14max_market_feeE">
+<span id="graphene::chain::asset_options::max_market_fee__share_type"></span><span class="target" id="graphenestructgraphene_1_1chain_1_1asset__options_1a1316295332120e67582f919f1cb88a41"></span><a class="reference internal" href="../namespaces/chain.html#_CPPv2N8graphene5chain10share_typeE" title="graphene::chain::share_type">share_type</a> <code class="descname">max_market_fee</code><a class="headerlink" href="#_CPPv2N8graphene5chain13asset_options14max_market_feeE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Market fees calculated as <a class="reference internal" href="../namespaces/chain.html#graphenestructgraphene_1_1chain_1_1asset__options_1ace27aedf849e0a01950ec362ffb3c6c8"><span>market_fee_percent</span></a> of the traded volume are capped to this value. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain13asset_options18issuer_permissionsE">
+<span id="graphene::chain::asset_options::issuer_permissions__uint16_t"></span><span class="target" id="graphenestructgraphene_1_1chain_1_1asset__options_1af0e2f972dd6f62147301b79369f74e24"></span>uint16_t <code class="descname">issuer_permissions</code><a class="headerlink" href="#_CPPv2N8graphene5chain13asset_options18issuer_permissionsE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The flags which the issuer has permission to update. See <a class="reference internal" href="../namespaces/chain.html#graphenenamespacegraphene_1_1chain_1a6a12bfc3745c709e79e6bbcd1fa6c3d2"><span>asset_issuer_permission_flags</span></a>. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain13asset_options5flagsE">
+<span id="graphene::chain::asset_options::flags__uint16_t"></span><span class="target" id="graphenestructgraphene_1_1chain_1_1asset__options_1af00c8e76afbe6cbc47e3eeb71f456f4c"></span>uint16_t <code class="descname">flags</code><a class="headerlink" href="#_CPPv2N8graphene5chain13asset_options5flagsE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The currently active flags on this permission. See <a class="reference internal" href="../namespaces/chain.html#graphenenamespacegraphene_1_1chain_1a6a12bfc3745c709e79e6bbcd1fa6c3d2"><span>asset_issuer_permission_flags</span></a>. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain13asset_options18core_exchange_rateE">
+<span id="graphene::chain::asset_options::core_exchange_rate__price"></span><span class="target" id="graphenestructgraphene_1_1chain_1_1asset__options_1a86a119a813714a608c6bae62e6f59a10"></span><a class="reference internal" href="../namespaces/chain.html#_CPPv2N8graphene5chain5priceE" title="graphene::chain::price">price</a> <code class="descname">core_exchange_rate</code><a class="headerlink" href="#_CPPv2N8graphene5chain13asset_options18core_exchange_rateE" title="Permalink to this definition">¶</a></dt>
+<dd><p>When a non-core asset is used to pay a fee, the blockchain must convert that asset to core asset in order to accept the fee. If this asset&#8217;s fee pool is funded, the chain will automatically deposite fees in this asset to its accumulated fees, and withdraw from the fee pool the same amount as converted at the core exchange rate. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain13asset_options21whitelist_authoritiesE">
+<span id="graphene::chain::asset_options::whitelist_authorities__flat_set:account_id_type:"></span><span class="target" id="graphenestructgraphene_1_1chain_1_1asset__options_1a9bb53490451f02ecb9fe07e01bce2da0"></span>flat_set&lt;<a class="reference internal" href="../namespaces/chain.html#_CPPv2N8graphene5chain15account_id_typeE" title="graphene::chain::account_id_type">account_id_type</a>&gt; <code class="descname">whitelist_authorities</code><a class="headerlink" href="#_CPPv2N8graphene5chain13asset_options21whitelist_authoritiesE" title="Permalink to this definition">¶</a></dt>
+<dd><p>A set of accounts which maintain whitelists to consult for this asset. If enforce_white_list() returns true, an account may only send, receive, trade, etc. in this asset if one of these accounts appears in its <a class="reference internal" href="../namespaces/chain.html#grapheneclassgraphene_1_1chain_1_1account__object_1ac624b05f17f24fbb67f66d5fa85814fa"><span>account_object::whitelisting_accounts</span></a> field. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain13asset_options21blacklist_authoritiesE">
+<span id="graphene::chain::asset_options::blacklist_authorities__flat_set:account_id_type:"></span><span class="target" id="graphenestructgraphene_1_1chain_1_1asset__options_1af04793715b1da8f1b8f9927f6e8d8e9e"></span>flat_set&lt;<a class="reference internal" href="../namespaces/chain.html#_CPPv2N8graphene5chain15account_id_typeE" title="graphene::chain::account_id_type">account_id_type</a>&gt; <code class="descname">blacklist_authorities</code><a class="headerlink" href="#_CPPv2N8graphene5chain13asset_options21blacklist_authoritiesE" title="Permalink to this definition">¶</a></dt>
+<dd><p>A set of accounts which maintain blacklists to consult for this asset. If enforce_white_list() returns true, an account may only send, receive, trade, etc. in this asset if none of these accounts appears in its <a class="reference internal" href="../namespaces/chain.html#grapheneclassgraphene_1_1chain_1_1account__object_1aa89c8709baa83afd446a8314179b100e"><span>account_object::blacklisting_accounts</span></a> field. If the account is blacklisted, it may not transact in this asset even if it is also whitelisted. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain13asset_options17whitelist_marketsE">
+<span id="graphene::chain::asset_options::whitelist_markets__flat_set:asset_id_type:"></span><span class="target" id="graphenestructgraphene_1_1chain_1_1asset__options_1a1d035949834b38d6044e2870c9a937e5"></span>flat_set&lt;<a class="reference internal" href="../namespaces/chain.html#_CPPv2N8graphene5chain13asset_id_typeE" title="graphene::chain::asset_id_type">asset_id_type</a>&gt; <code class="descname">whitelist_markets</code><a class="headerlink" href="#_CPPv2N8graphene5chain13asset_options17whitelist_marketsE" title="Permalink to this definition">¶</a></dt>
+<dd><p>defines the assets that this asset may be traded against in the market </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain13asset_options17blacklist_marketsE">
+<span id="graphene::chain::asset_options::blacklist_markets__flat_set:asset_id_type:"></span><span class="target" id="graphenestructgraphene_1_1chain_1_1asset__options_1a15aaf1409aba651d2302d16db61e1723"></span>flat_set&lt;<a class="reference internal" href="../namespaces/chain.html#_CPPv2N8graphene5chain13asset_id_typeE" title="graphene::chain::asset_id_type">asset_id_type</a>&gt; <code class="descname">blacklist_markets</code><a class="headerlink" href="#_CPPv2N8graphene5chain13asset_options17blacklist_marketsE" title="Permalink to this definition">¶</a></dt>
+<dd><p>defines the assets that this asset may not be traded against in the market, must not overlap whitelist </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain13asset_options11descriptionE">
+<span id="graphene::chain::asset_options::description__string"></span><span class="target" id="graphenestructgraphene_1_1chain_1_1asset__options_1a94acd3a518a5fb1ba2f4d515bfa897a0"></span>string <code class="descname">description</code><a class="headerlink" href="#_CPPv2N8graphene5chain13asset_options11descriptionE" title="Permalink to this definition">¶</a></dt>
+<dd><p>data that describes the meaning/purpose of this asset, fee will be charged proportional to size of description. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="type">
+<dt id="_CPPv2N8graphene5chain29asset_issuer_permission_flagsE">
+<span id="graphene::chain::asset_issuer_permission_flags"></span><span class="target" id="graphenenamespacegraphene_1_1chain_1a6a12bfc3745c709e79e6bbcd1fa6c3d2"></span><em class="property">enum </em><code class="descclassname">graphene::chain::</code><code class="descname">asset_issuer_permission_flags</code><a class="headerlink" href="#_CPPv2N8graphene5chain29asset_issuer_permission_flagsE" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Values:</em></p>
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain17charge_market_feeE">
+<span id="graphene::chain::charge_market_fee"></span><span class="target" id="graphenenamespacegraphene_1_1chain_1a6a12bfc3745c709e79e6bbcd1fa6c3d2ab08a02732dce7c06fc45c35683957909"></span><code class="descname">charge_market_fee</code> = 0x01<a class="headerlink" href="#_CPPv2N8graphene5chain17charge_market_feeE" title="Permalink to this definition">¶</a></dt>
+<dd><p>an issuer-specified percentage of all market trades in this asset is paid to the issuer </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain10white_listE">
+<span id="graphene::chain::white_list"></span><span class="target" id="graphenenamespacegraphene_1_1chain_1a6a12bfc3745c709e79e6bbcd1fa6c3d2a8cbbfe4de4c5ceb2b2274f92aa164209"></span><code class="descname">white_list</code> = 0x02<a class="headerlink" href="#_CPPv2N8graphene5chain10white_listE" title="Permalink to this definition">¶</a></dt>
+<dd><p>accounts must be whitelisted in order to hold this asset </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain18override_authorityE">
+<span id="graphene::chain::override_authority"></span><span class="target" id="graphenenamespacegraphene_1_1chain_1a6a12bfc3745c709e79e6bbcd1fa6c3d2af00fdf25c2ccc64f702d990d2c3d34b1"></span><code class="descname">override_authority</code> = 0x04<a class="headerlink" href="#_CPPv2N8graphene5chain18override_authorityE" title="Permalink to this definition">¶</a></dt>
+<dd><p>issuer may transfer asset back to himself </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain19transfer_restrictedE">
+<span id="graphene::chain::transfer_restricted"></span><span class="target" id="graphenenamespacegraphene_1_1chain_1a6a12bfc3745c709e79e6bbcd1fa6c3d2a7f10195ef256169dc13d1bfd4dbca118"></span><code class="descname">transfer_restricted</code> = 0x08<a class="headerlink" href="#_CPPv2N8graphene5chain19transfer_restrictedE" title="Permalink to this definition">¶</a></dt>
+<dd><p>require the issuer to be one party to every transfer </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain20disable_force_settleE">
+<span id="graphene::chain::disable_force_settle"></span><span class="target" id="graphenenamespacegraphene_1_1chain_1a6a12bfc3745c709e79e6bbcd1fa6c3d2a58326f264a443528bb9c8a7dd05d9ef5"></span><code class="descname">disable_force_settle</code> = 0x10<a class="headerlink" href="#_CPPv2N8graphene5chain20disable_force_settleE" title="Permalink to this definition">¶</a></dt>
+<dd><p>disable force settling </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain13global_settleE">
+<span id="graphene::chain::global_settle"></span><span class="target" id="graphenenamespacegraphene_1_1chain_1a6a12bfc3745c709e79e6bbcd1fa6c3d2a58c0aa104472d6de38db9eb6ea4dd2d4"></span><code class="descname">global_settle</code> = 0x20<a class="headerlink" href="#_CPPv2N8graphene5chain13global_settleE" title="Permalink to this definition">¶</a></dt>
+<dd><p>allow the bitasset issuer to force a global settling  this may be set in permissions, but not flags </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain20disable_confidentialE">
+<span id="graphene::chain::disable_confidential"></span><span class="target" id="graphenenamespacegraphene_1_1chain_1a6a12bfc3745c709e79e6bbcd1fa6c3d2a106133e99fff12fb46c8bd8248c83661"></span><code class="descname">disable_confidential</code> = 0x40<a class="headerlink" href="#_CPPv2N8graphene5chain20disable_confidentialE" title="Permalink to this definition">¶</a></dt>
+<dd><p>allow the asset to be used with confidential transactions </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain17witness_fed_assetE">
+<span id="graphene::chain::witness_fed_asset"></span><span class="target" id="graphenenamespacegraphene_1_1chain_1a6a12bfc3745c709e79e6bbcd1fa6c3d2a2568c32be39df623e59af33b2c9e696b"></span><code class="descname">witness_fed_asset</code> = 0x80<a class="headerlink" href="#_CPPv2N8graphene5chain17witness_fed_assetE" title="Permalink to this definition">¶</a></dt>
+<dd><p>allow the asset to be fed by witnesses </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain19committee_fed_assetE">
+<span id="graphene::chain::committee_fed_asset"></span><span class="target" id="graphenenamespacegraphene_1_1chain_1a6a12bfc3745c709e79e6bbcd1fa6c3d2af027c659d4b7da8672e8ed3e21c1f4db"></span><code class="descname">committee_fed_asset</code> = 0x100<a class="headerlink" href="#_CPPv2N8graphene5chain19committee_fed_assetE" title="Permalink to this definition">¶</a></dt>
+<dd><p>allow the asset to be fed by the committee </p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+  </div>
+ </div>
+
+ <script>var HN=[];HN.factory=function(e){return function(){HN.push([e].concat(Array.prototype.slice.call(arguments,0)))};},HN.on=HN.factory("on"),HN.once=HN.factory("once"),HN.off=HN.factory("off"),HN.emit=HN.factory("emit"),HN.load=function(){var e="hn-button.js";if(document.getElementById(e))return;var t=document.createElement("script");t.id=e,t.src="//hn-button.herokuapp.com/hn-button.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)},HN.load();</script>
+ <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+ </body>
+</html>
