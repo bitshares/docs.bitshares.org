@@ -195,7 +195,7 @@
 <div class="section" id="requesting-api-access">
 <h2>Requesting API access<a class="headerlink" href="#requesting-api-access" title="Permalink to this headline">¶</a></h2>
 <p>The first thing we need to do is to <em>login</em>:</p>
-<div class="highlight-python"><div class="highlight"><pre>&gt; {&quot;id&quot;:2,&quot;method&quot;:&quot;call&quot;,&quot;params&quot;:[0,&quot;login&quot;,[&quot;&quot;,&quot;&quot;]]}
+<div class="highlight-python"><div class="highlight"><pre>&gt; {&quot;id&quot;:2,&quot;method&quot;:&quot;call&quot;,&quot;params&quot;:[1,&quot;login&quot;,[&quot;&quot;,&quot;&quot;]]}
 &lt; {&quot;id&quot;:2,&quot;result&quot;:true}
 </pre></div>
 </div>
@@ -204,7 +204,7 @@ your <code class="docutils literal"><span class="pre">username</span></code> and
 should verify, that the <code class="docutils literal"><span class="pre">result</span></code> give positive confirmation about your login.</p>
 <p>Before we can subscribe to any object changes and get notified automatically,
 we first need to ask for access to the <code class="docutils literal"><span class="pre">database</span></code>-api with:</p>
-<div class="highlight-python"><div class="highlight"><pre>&gt; {&quot;id&quot;:2,&quot;method&quot;:&quot;call&quot;,&quot;params&quot;:[0,&quot;database&quot;,[]]}
+<div class="highlight-python"><div class="highlight"><pre>&gt; {&quot;id&quot;:2,&quot;method&quot;:&quot;call&quot;,&quot;params&quot;:[1,&quot;database&quot;,[]]}
 &lt; {&quot;id&quot;:2,&quot;result&quot;:1}
 </pre></div>
 </div>
@@ -272,9 +272,9 @@ every time the object changes::</p>
 <div class="section" id="example-session">
 <h2>Example Session<a class="headerlink" href="#example-session" title="Permalink to this headline">¶</a></h2>
 <p>Here is an example of a full session::</p>
-<div class="highlight-python"><div class="highlight"><pre>&gt; {&quot;id&quot;:1,&quot;method&quot;:&quot;call&quot;,&quot;params&quot;:[0,&quot;login&quot;,[&quot;&quot;,&quot;&quot;]]}
+<div class="highlight-python"><div class="highlight"><pre>&gt; {&quot;id&quot;:1,&quot;method&quot;:&quot;call&quot;,&quot;params&quot;:[1,&quot;login&quot;,[&quot;&quot;,&quot;&quot;]]}
 &lt; {&quot;id&quot;:1,&quot;result&quot;:true}
-&gt; {&quot;id&quot;:2,&quot;method&quot;:&quot;call&quot;,&quot;params&quot;:[0,&quot;database&quot;,[]]}
+&gt; {&quot;id&quot;:2,&quot;method&quot;:&quot;call&quot;,&quot;params&quot;:[1,&quot;database&quot;,[]]}
 &lt; {&quot;id&quot;:2,&quot;result&quot;:1}
 &gt; {&quot;id&quot;:3,&quot;method&quot;:&quot;call&quot;,&quot;params&quot;:[1,&quot;set_subscribe_callback&quot;,[200]]}
 &lt; {&quot;id&quot;:3,&quot;result&quot;:true}
