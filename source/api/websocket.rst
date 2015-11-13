@@ -23,6 +23,15 @@ A non-restricted call against a full-node would take the form:
 Requesting API access
 #####################
 
+The first thing we need to do is to *login*::
+
+    > {"id":2,"method":"call","params":[0,"login",["",""]]}
+    < {"id":2,"result":true}
+
+If you have :doc:`restricted access <./access>` then you may be required to put
+your ``username`` and ``pasword`` into the quotes, accordinly. Furthermore, you
+should verify, that the ``result`` give positive confirmation about your login.
+
 Before we can subscribe to any object changes and get notified automatically,
 we first need to ask for access to the ``database``-api with::
 
