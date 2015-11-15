@@ -25,7 +25,7 @@ applications, industries, partnerships and customer relationships.  We intend
 to capture market share and grow network effect while we continue to extend our
 substantial technical lead in the industry. 
 
-This page documents the `Graphene`_ technology built by `Cryptonomex`_ . You can
+This page documents the `Graphene`_ technology built by `Cryptonomex`_. You can
 see Graphene as a toolkit for real-time blockchains. We separated the
 documentation into smaller parts for convenience and for the sake of easy
 location of relevant information.

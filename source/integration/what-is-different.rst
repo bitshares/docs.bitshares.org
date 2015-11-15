@@ -14,7 +14,7 @@ blockchain tokens. There is not just the BTS (core token) but many others.
 Hence, as an exchange you need to distinguish different assets, either by their
 id (1.3.0 (BTS), 1.3.1 (USD), ...) or by there symbol.
 
-Registered Identifies
+Registered Identities
 #####################
 
 All participants in BitShares 2.0 are required to have a registered unique name.
