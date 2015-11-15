@@ -115,8 +115,11 @@
   <!-- menu bar -->
   <div class='menubar'>
    <div class='section'>
-    <a href="../"><img src="../_static/grphn-logo.svg" width="48" /></a>
-       <!--<a class='big button' href='#' target='_blank'>Download</a>-->
+    <a href="..//index.html"><img src="../_static/grphn-logo.svg" height="48" /></a>
+
+    <a href="..//bitshares/index.html"><img src="../_static/bitshares-logo.png" height="48" /></a>
+
+    <a href="..//muse/index.html"><img src="../_static/MUSE_logo_transp_v1.png" height="48" /></a>
    </div>
    <div class='menu section'>
     <div id="toc">
@@ -132,7 +135,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#basic-knowledge">Basic Knowledge</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="">What is Different</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#several-tokens">Several Tokens</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#registered-identifies">Registered Identifies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#registered-identities">Registered Identities</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#no-more-addresses">No More Addresses</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#memos">Memos</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#securing-funds">Securing Funds</a></li>
@@ -145,7 +148,27 @@
 <li class="toctree-l3"><a class="reference internal" href="interfacing.html">Interfacing with the BitShares Ecosystem</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#use-cases">Use-Cases</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#use-cases">Use-Cases</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="exchanges/index.html">Exchanges, Bridges, and Gateways</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="exchanges/index.html#step-by-step-instructions-for-exchanges">Step-By-Step Instructions for Exchanges</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exchanges/index.html#libraries">Libraries</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="exchanges/index.html#detailed-technical-guide">Detailed Technical Guide</a><ul class="current">
+<li class="toctree-l5 current"><a class="current reference internal" href="">What is Different</a></li>
+<li class="toctree-l5"><a class="reference internal" href="supporting-features.html">Supporting Features</a></li>
+<li class="toctree-l5"><a class="reference internal" href="interfacing.html">Interfacing with the BitShares Ecosystem</a></li>
+<li class="toctree-l5"><a class="reference internal" href="network-setup.html">Secure Network and Wallet Configuration</a></li>
+<li class="toctree-l5"><a class="reference internal" href="often-used-calls.html">Often used API Calls</a></li>
+<li class="toctree-l5"><a class="reference internal" href="whitelist.html">Using White- and Black-lists</a></li>
+<li class="toctree-l5"><a class="reference internal" href="securing-funds.html">Securing Funds</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="merchants/index.html">Merchants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="traders/index.html">Traders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="businesses/index.html">Businesses</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../api/index.html">Graphene API</a></li>
@@ -183,8 +206,8 @@ blockchain tokens. There is not just the BTS (core token) but many others.
 Hence, as an exchange you need to distinguish different assets, either by their
 id (1.3.0 (BTS), 1.3.1 (USD), ...) or by there symbol.</p>
 </div>
-<div class="section" id="registered-identifies">
-<h2>Registered Identifies<a class="headerlink" href="#registered-identifies" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="registered-identities">
+<h2>Registered Identities<a class="headerlink" href="#registered-identities" title="Permalink to this headline">¶</a></h2>
 <p>All participants in BitShares 2.0 are required to have a registered unique name.
 This is similar to mail addresses and are used to address recipients for
 transfers. As an exchange you will only ever need to tell your customers your
