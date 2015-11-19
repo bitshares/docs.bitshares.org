@@ -7,7 +7,7 @@ What has Changed?
   bitAssets to its underlay. BitAssets like the bitUSD in BitShares 2.0 will
   always trade for *at least* the value of its underlying asset, i.e. $1.
   We have summarized the economical analysis and incentives for market
-  participants for `bitAssets 2.0`_
+  participants here: `bitAssets 2.0`_
 
 * **Faster Blocks**:
   Initially, the BitShares 2.0 blockchain will come with 3 seconds block
@@ -18,12 +18,8 @@ What has Changed?
   per second. Find out how we achieve `industrial performance and scalability`_.
 
 * **New Reactive UI**:
-  Since some customers of BitShares 1.0 complained about the slow user
-  interface that lacked several milli-seconds between actions, we reimplemented
-  the whole wallet in a modern web framework that is as reactive as facebook
-  and as user-friendly as humanly possible. The new BitShares UI will be an
-  entirely browser-based wallet, with private keys maintained in the browser.
-  We expect a flourishing ecosystem about forked and tweaked wallets based of
+  The BitShares 1.0 user interface was powerful but lacking in responsiveness and perfomance. For Bitshares 2.0 we've reimplemented the whole wallet using the React.js framework developed by Facebook, which is well-known for having excellent performance. The new BitShares UI is an entirely browser-based wallet, with private keys maintained in the browser.
+  We expect a flourishing ecosystem of forked and tweaked wallets based off of
   our UI.
 
 * **Accounts must be registered**:
@@ -43,20 +39,20 @@ What has Changed?
   The *TITAN* technology in BitShares 2.0 slowed down blockchain processing
   significantly. Because of this and because TITAN did not really offer good
   privacy, we eliminated TITAN as a default transaction feature. 
-  Hence: **Account transactions are public now aswell.**
+  Hence: **Account transactions are public now as well.**
   However, since we recognize the value of financial privacy, we offer
-  *blinded* transactions that hide the transfered *amount*, and *stealth*
-  transactions to hide the sender and receiver. A combination of both is also
+  *blinded* transactions that hide the transferred *amount*, and *stealth*
+  transactions that hide the sender and receiver. A combination of both is also
   possible.
  
-* **Prices are _Fractions_**:
+* **Prices are Fractions**:
   To circumvent rounding errors, all prices in BitShares 2.0 are represented as
   fractions.
 
-* **Delegates are now Witnessess and Payed Positions are now Budget Itmes**:
+* **Delegates are now Witnesses and Payed Positions are now Budget Items**:
   Since we have separated the business part from the block producing part, we
-  now call block producers (formaly known as *delegates*) witnesses, while the
-  additional payed position for workers is called budget item.
+  now call block producers (formerly known as *delegates*) witnesses, while the
+  additional payed position for workers are called budget items.
 
 .. _industrial performance and scalability: https://bitshares.org/technology/industrial-performance-and-scalability/
 .. _bitAssets 2.0: https://bitshares.org/technology/price-stable-cryptocurrencies/
