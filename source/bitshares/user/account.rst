@@ -26,5 +26,4 @@ linked to individuals (this includes transferes, trades, shorts, etc. but not
 
     account-memberships
     account-permissions
-    account-import
     account-create

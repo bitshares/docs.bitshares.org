@@ -6,7 +6,10 @@ We would like to introduce most features to the user in a friendly and easy to
 understand way in this *User Guide*.
 
 .. toctree::
+   :maxdepth: 2
+
    account
+   security
    transactions
    assets
    dex
@@ -35,6 +38,7 @@ maintaining websites and infrastructure (e.g. the mumble server team or linux
 distribution) are all examples of things workers may do.
 
 .. toctree::
+   :maxdepth: 2
 
    shareholder
    committee

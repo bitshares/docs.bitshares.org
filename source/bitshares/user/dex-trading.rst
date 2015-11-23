@@ -20,7 +20,8 @@ such that pairs are represented as::
 and for instance with *base* being USD and *quote* being EUR, denote the EUR:USD
 pair.
 
-## Order Books
+Order Books
+###########
 
 The order book consists of an *ask* and a *bid* side. Since trading pairs do not
 have a preferred orientation, and can be flipped, the following table shall give
@@ -52,3 +53,12 @@ will be credited by the corresponding asset.
 
 Unfilled orders can be canceled at any time.
 
+Order Matching
+##############
+
+BitShares 2.0 matches orders on a first-come, first-serve basis and gives the
+buyer the best price possible up to the limit. Rather than charging
+*unpredictable fees* from market overlap (as has been in the previous network),
+the network charges a defined fee based upon the size of the order matched and
+the assets involved. Each asset issuer gets an opportunity to configure their
+fees.

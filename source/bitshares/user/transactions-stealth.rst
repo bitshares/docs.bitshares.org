@@ -9,6 +9,9 @@ blinded transfers. When privacy is important no account is ever used twice and
 it is impossible for any third party to identify how money is moving through
 blockchain analysis alone.
 
+.. note:: Confindential transactions are currently only available using the
+   :doc:`cli-wallet <../../integration/apps/cliwallet>`
+
 Creating a Blind Account
 ########################
 

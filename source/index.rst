@@ -38,9 +38,10 @@ Recent Updates
 
 .. r!date +\%y/\%m/\%d
 
-* ``15/11/13`` Refactoring, updates for: :doc:`integration/index`, 
+* ``15/11/23`` User Guide updates: :doc:`bitshares/user/transactions`, :doc:`bitshares/user/dex`, :doc:`bitshares/user/security`
+* ``15/11/13`` Refactoring, updates for: :doc:`integration/index`
 * ``15/11/10`` Added MUSE blockchain: :doc:`muse/index`
-* ``15/11/01`` Release of :html:`<a href="_downloads/bitshares-financial-platform.pdf" onclick="ga('set', 'nonInteraction', false);ga('send', 'event', { eventCategory: 'download', eventAction: 'click', eventLabel: 'BitShares 2.0: Financial Smart Contract Platform'});">BitShares 2.0: Financial Smart Contract Platform</a>`
+* ``15/11/01`` Release of :html:`<a href="_downloads/bitshares-financial-platform.pdf" onclick="ga('set', 'nonInteraction', false);ga('send', 'event', { eventCategory: 'download', eventAction: 'click', eventLabel: 'BitShares 2.0: Financial Smart Contract Platform'});">BitShares 2.0: Financial Smart Contract Platform</a> whitepaper`
 
 Blockchain Specific Guides
 ##########################
