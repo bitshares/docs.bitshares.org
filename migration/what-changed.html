@@ -155,7 +155,7 @@ Our research has identified an improved mechanism to achieve a solid <em>peg</em
 bitAssets to its underlay. BitAssets like the bitUSD in BitShares 2.0 will
 always trade for <em>at least</em> the value of its underlying asset, i.e. $1.
 We have summarized the economical analysis and incentives for market
-participants for <a class="reference external" href="https://bitshares.org/technology/price-stable-cryptocurrencies/">bitAssets 2.0</a></li>
+participants here: <a class="reference external" href="https://bitshares.org/technology/price-stable-cryptocurrencies/">bitAssets 2.0</a></li>
 <li><strong>Faster Blocks</strong>:
 Initially, the BitShares 2.0 blockchain will come with 3 seconds block
 interval with the option to reduce down to 1 second if shareholders agree.</li>
@@ -163,12 +163,8 @@ interval with the option to reduce down to 1 second if shareholders agree.</li>
 BitShares 2.0 can support massive load and works well beyond 100k transactions
 per second. Find out how we achieve <a class="reference external" href="https://bitshares.org/technology/industrial-performance-and-scalability/">industrial performance and scalability</a>.</li>
 <li><strong>New Reactive UI</strong>:
-Since some customers of BitShares 1.0 complained about the slow user
-interface that lacked several milli-seconds between actions, we reimplemented
-the whole wallet in a modern web framework that is as reactive as facebook
-and as user-friendly as humanly possible. The new BitShares UI will be an
-entirely browser-based wallet, with private keys maintained in the browser.
-We expect a flourishing ecosystem about forked and tweaked wallets based of
+The BitShares 1.0 user interface was powerful but lacking in responsiveness and perfomance. For Bitshares 2.0 we&#8217;ve reimplemented the whole wallet using the React.js framework developed by Facebook, which is well-known for having excellent performance. The new BitShares UI is an entirely browser-based wallet, with private keys maintained in the browser.
+We expect a flourishing ecosystem of forked and tweaked wallets based off of
 our UI.</li>
 <li><strong>Accounts must be registered</strong>:
 In BitShares 2.0 we have separated <em>authorities</em> from transaction partners.
@@ -185,18 +181,18 @@ In BitShares 2.0, these hierarchies no longer exist and to register
 The <em>TITAN</em> technology in BitShares 2.0 slowed down blockchain processing
 significantly. Because of this and because TITAN did not really offer good
 privacy, we eliminated TITAN as a default transaction feature.
-Hence: <strong>Account transactions are public now aswell.</strong>
+Hence: <strong>Account transactions are public now as well.</strong>
 However, since we recognize the value of financial privacy, we offer
-<em>blinded</em> transactions that hide the transfered <em>amount</em>, and <em>stealth</em>
-transactions to hide the sender and receiver. A combination of both is also
+<em>blinded</em> transactions that hide the transferred <em>amount</em>, and <em>stealth</em>
+transactions that hide the sender and receiver. A combination of both is also
 possible.</li>
-<li><strong>Prices are _Fractions_</strong>:
+<li><strong>Prices are Fractions</strong>:
 To circumvent rounding errors, all prices in BitShares 2.0 are represented as
 fractions.</li>
-<li><strong>Delegates are now Witnessess and Payed Positions are now Budget Itmes</strong>:
+<li><strong>Delegates are now Witnesses and Payed Positions are now Budget Items</strong>:
 Since we have separated the business part from the block producing part, we
-now call block producers (formaly known as <em>delegates</em>) witnesses, while the
-additional payed position for workers is called budget item.</li>
+now call block producers (formerly known as <em>delegates</em>) witnesses, while the
+additional payed position for workers are called budget items.</li>
 </ul>
 </div>
 

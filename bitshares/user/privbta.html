@@ -92,7 +92,7 @@
         </div>
         <div class="next">
          <div class="title">next</div>
-         <span><a href="Dex.html">Decentralized Exchange</a></span>
+         <span><a href="dex.html">Decentralized Exchange</a></span>
         </div>
 
    </div>
@@ -130,15 +130,16 @@
 <li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migrating from BitShares 1.0 to BitShares 2.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../papers/index.html">Whitepapers</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">User Guide</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="Account.html">Accounts</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Transactions.html">Transactions</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="Assets.html">Assets/Tokens</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="account.html">Accounts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="security.html">Security</a></li>
+<li class="toctree-l3"><a class="reference internal" href="transactions.html">Transactions and Operations</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="assets.html">Assets/Tokens</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="uia.html">User Issued Assets</a></li>
 <li class="toctree-l4"><a class="reference internal" href="mpa.html">Market Pegged Assets</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="">Privatized BitAssets</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="Dex.html">Decentralized Exchange</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dex.html">Decentralized Exchange</a></li>
 <li class="toctree-l3"><a class="reference internal" href="index.html#blockchain-positions">Blockchain &#8220;Positions&#8221;</a></li>
 </ul>
 </li>
@@ -175,7 +176,24 @@
    
   <div class="section" id="privatized-bitassets">
 <h1>Privatized BitAssets<a class="headerlink" href="#privatized-bitassets" title="Permalink to this headline">¶</a></h1>
-<p>(under construction)</p>
+<p>Alternatively to regular MPA like the bitUSD, BitShares also offers
+entrepreneurs an opportunity to create their own SmartCoins with custom
+parameters and a distinct set of price feed producers.</p>
+<p>Privatized SmartCoin managers can experiment with different parameters such as
+collateral requirements, price feeds, force settlement delays and forced
+settlement fees. They also earn the trading fees from transactions the issued
+asset is involved in, and therefore have a financial incentive to market and
+promote it on the network. The entrepreneur who can discover and market the best
+set of parameters can earn a significant profit.  The set of parameters that can
+be tweaked by entrepreneurs is broad enough that SmartCoins can be used to
+implement a fully functional prediction market with a guaranteed global
+settlement at a fair price, and no forced settlement before the resolution date.</p>
+<p>Some entrepreneurs may want to experiment with SmartCoins that always trade at
+exactly $1.00 rather than strictly more than $1.00. They can do this by
+manipulating the forced settlement fee continuously such that the average
+trading price stays at about $1.00. By default, BitShares prefers fees set by
+the market, and thus opts to let the price float above $1.00, rather than fixing
+the price by directly manipulating the forced settlement fee.</p>
 </div>
 
 

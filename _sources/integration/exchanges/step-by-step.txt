@@ -40,7 +40,7 @@ use different ports to distinguish them:
 * port ``8091``: delayed node
 * port ``8092``: wallet
 
-:doc:`Read more details </bitshares/integration/network-setup>`
+:doc:`Read more details <../network-setup>`
 
 Trusted Full Node
 *****************

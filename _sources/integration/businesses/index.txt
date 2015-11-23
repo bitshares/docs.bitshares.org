@@ -3,7 +3,7 @@ Businesses
 **********
 
 For exchanges we recommend to also read :doc:`../what-is-different` and
-:doc:`../oftenusedcalls`.
+:doc:`../often-used-calls`.
 
 Libraries
 #########

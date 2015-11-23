@@ -52,8 +52,8 @@ you can propose a transaction on the blockchain and don't need other means of
 communications to add your approval to a certain transactions. You can find more
 details about these account types in
 
-* :doc:`../user/Account-Memberships`
-* :doc:`SecuringFunds`
+* :doc:`../user/account-memberships`
+* :doc:`securing-funds`
 
 Full Nodes and Clients
 ######################
