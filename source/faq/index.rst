@@ -124,7 +124,7 @@ Now set a password for the wallet
       locked >>> unlock my_password
       unlocked >>>
 
-Now you need to go to your bitshares 2.0 webwallet of lite client and 
+Now you need to go to your bitshares 2.0 webwallet or lite client and 
 select the account you wish to bring across. Click on permissions followed
 by the key icon within Active Permissions. This will reveal your private key.
 Copy it to the clipboard.
