@@ -53,5 +53,5 @@ the reader and customer to leverage those features in full or only partially.
 
 .. toctree::
 
-   Dex-Trading
-   Dex-Short
+   dex-trading
+   dex-short

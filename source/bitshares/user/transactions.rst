@@ -4,4 +4,4 @@ Transactions
 
 .. toctree::
 
-   StealthTransactions
+   transactions-stealth

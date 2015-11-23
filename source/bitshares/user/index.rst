@@ -6,10 +6,10 @@ We would like to introduce most features to the user in a friendly and easy to
 understand way in this *User Guide*.
 
 .. toctree::
-   Account
-   Transactions
-   Assets
-   Dex
+   account
+   transactions
+   assets
+   dex
 
 Blockchain "Positions"
 ######################
@@ -36,8 +36,8 @@ distribution) are all examples of things workers may do.
 
 .. toctree::
 
-   Shareholder
-   Committee
-   Witness
-   Worker
-   Marketer
+   shareholder
+   committee
+   witness
+   worker
+   marketer

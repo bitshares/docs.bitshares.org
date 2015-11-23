@@ -22,10 +22,9 @@ linked to individuals (this includes transferes, trades, shorts, etc. but not
 .. note:: Even though an account is required to be registered properly, we offer
    tools to improve privacy and anonymity.
 
-
 .. toctree::
 
-    Account-Memberships
-    Account-Permissions
-    Account-Import
-    Account-Create
+    account-memberships
+    account-permissions
+    account-import
+    account-create
