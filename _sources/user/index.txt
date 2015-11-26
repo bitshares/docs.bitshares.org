@@ -3,11 +3,16 @@ User Guide
 **********
 
 We would like to introduce most features to the user in a friendly and easy to
-understand way in this *User Guide*.
+understand way in this *User Guide*. Note, that the blockchain itself is capable
+of many more things that are not (yet) exposed to the end-user. In the future,
+we expect to see many more customized wallets that expose different features to
+their users.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
+   first-steps-users
+   you-should-know
    account
    security
    transactions
@@ -17,7 +22,7 @@ understand way in this *User Guide*.
 Blockchain "Positions"
 ######################
 
-Graphene/BitShares 2 separates responsibilities and incentives activities that are
+BitShares 2 separates responsibilities and incentives activities that are
 beneficial to the network, thus acknowledging different skill sets and
 interested community members to have incentives to contribute in the most
 appropriate way.
@@ -38,7 +43,7 @@ maintaining websites and infrastructure (e.g. the mumble server team or linux
 distribution) are all examples of things workers may do.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    shareholder
    committee

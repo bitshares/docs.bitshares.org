@@ -138,13 +138,12 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="">Meta</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#contributing-to-this-documentation">Contributing to this Documentation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#configuration">Configuration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#building">Building</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#results">Results</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#contributing-to-this-documentation">Contributing to this Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#building">Building</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#output">Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deployment">Deployment</a></li>
 </ul>
 </li>
 </ul>
@@ -165,12 +164,19 @@
 <div class="section" id="contributing-to-this-documentation">
 <h2>Contributing to this Documentation<a class="headerlink" href="#contributing-to-this-documentation" title="Permalink to this headline">¶</a></h2>
 <p>This documentation page is hosted at github and can be cloned with</p>
-<div class="highlight-sh"><div class="highlight"><pre>git clone https://github.com/BitSharesEurope/graphene-docs
+<div class="highlight-sh"><div class="highlight"><pre>git clone https://github.com/BitSharesEurope/docs.bitshares.eu
 </pre></div>
 </div>
+<p>Sources are in the <code class="docutils literal"><span class="pre">master</span></code> branch whereas deployment (generated html pages)
+are located in the <code class="docutils literal"><span class="pre">gh-pages</span></code> branch.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The <code class="docutils literal"><span class="pre">docs.bitshares.org</span></code> repository (<strong>org</strong>-domain) is a deployment, only!</p>
+</div>
 <p><strong>Pull requests are welcome!</strong></p>
+</div>
 <div class="section" id="requirements">
-<h3>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h3>
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>graphviz</li>
 <li>sphinx (<a class="reference external" href="http://sphinx-doc.org">http://sphinx-doc.org</a>)</li>
@@ -178,25 +184,39 @@
 </ul>
 </div>
 <div class="section" id="configuration">
-<h3>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h3>
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
 <p>In <cite>source/conf.py</cite> point the graphene key to the xml folder of the graphene
 sources:</p>
-<blockquote>
-<div><dl class="docutils">
-<dt>breathe_projects = {</dt>
-<dd>&#8220;graphene&#8221;: &#8221;../../graphene/doxygen/xml/&#8221;,</dd>
-</dl>
-<p>}</p>
-</div></blockquote>
+<div class="code json highlight-python"><div class="highlight"><pre><span class="n">breathe_projects</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="s">&quot;graphene&quot;</span><span class="p">:</span> <span class="s">&quot;../../graphene/doxygen/xml/&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="building">
-<h3>Building<a class="headerlink" href="#building" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div>make html</div></blockquote>
+<h2>Building<a class="headerlink" href="#building" title="Permalink to this headline">¶</a></h2>
+<div class="code sh highlight-python"><div class="highlight"><pre>make html
+</pre></div>
 </div>
-<div class="section" id="results">
-<h3>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="output">
+<h2>Output<a class="headerlink" href="#output" title="Permalink to this headline">¶</a></h2>
 <p>The resulting html files will be writen to <cite>build/html</cite>.</p>
+</div>
+<div class="section" id="deployment">
+<h2>Deployment<a class="headerlink" href="#deployment" title="Permalink to this headline">¶</a></h2>
+<p>The Makefile can automatically deploy to several domains. Currently, a
+deployment installs the page simultanisouly at</p>
+<blockquote>
+<div><ul class="simple">
+<li>docs.bitshares.org</li>
+<li>docs.bitshares.eu</li>
+</ul>
+</div></blockquote>
+<div class="code sh highlight-python"><div class="highlight"><pre>git remote set-url origin github:BitSharesEurope/docs.bitshares.eu
+git remote     add org    github:BitSharesEurope/docs.bitshares.org
+make deploy
+</pre></div>
 </div>
 </div>
 </div>
