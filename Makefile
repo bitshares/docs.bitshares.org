@@ -207,6 +207,7 @@ deploy: html
 	         build/html/ .
 	@git add .
 	@git commit -am "deploy"
-	@git push origin gh-pages
+	@git push origin gh-pages  ## docs.bitshares.eu
+	@git push org gh-pages     ## docs.bitshares.org
 	@git checkout master
 	@echo "Deploy finished. Back at 'master'."
