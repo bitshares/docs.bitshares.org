@@ -210,12 +210,16 @@ deploy: html
 	@echo "=================================="
 	@echo "Deploy to docs.bitshares.eu"
 	@echo "=================================="
+	@git fetch origin
+	@git rebase origin/gh-pages
 	@git push origin gh-pages
 	@echo "=================================="
 	@echo "Deploy to docs.bitshares.org"
 	@echo "=================================="
 	@git checkout gh-pages-org
+	@git fetch org
 	@git rebase gh-pages
+	@git rebase org/gh-pages
 	@git push org gh-pages-org:gh-pages
 	@echo "=================================="
 	@echo "Back to master branch"
