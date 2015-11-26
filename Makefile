@@ -207,7 +207,18 @@ deploy: html
 	         build/html/ .
 	@git add .
 	@git commit -am "deploy"
-	@git push origin gh-pages  ## docs.bitshares.eu
-	@git push org gh-pages     ## docs.bitshares.org
+	@echo "=================================="
+	@echo "Deploy to docs.bitshares.eu"
+	@echo "=================================="
+	@git push origin gh-pages
+	@echo "=================================="
+	@echo "Deploy to docs.bitshares.org"
+	@echo "=================================="
+	@git checkout gh-pages-org
+	@git rebase gh-pages
+	@git push org gh-pages-org:gh-pages
+	@echo "=================================="
+	@echo "Back to master branch"
+	@echo "=================================="
 	@git checkout master
 	@echo "Deploy finished. Back at 'master'."
