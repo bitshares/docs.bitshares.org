@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <title>What has Changed since BitShares 0.9?</title>
+    <title>Things you should know</title>
 
     <!-- CSS -->
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
@@ -73,7 +73,7 @@
  <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
    <div class='in'>
      <div class='headline'>
-       <h1>What has Changed since BitShares 0.9?</h1>
+       <h1>Things you should know</h1>
  
      </div>
    </div>
@@ -84,7 +84,7 @@
     
         <div class="prev">
          <div class="title">previous</div>
-         <span><a href="what-is-new.html">What is New in BitShares 2.0</a></span>
+         <span><a href="first-steps-users.html">First Steps for End-Users</a></span>
         </div>
         <div class="top">
          <div class="title">top</div>
@@ -92,7 +92,7 @@
         </div>
         <div class="next">
          <div class="title">next</div>
-         <span><a href="blockchain-transition.html">Blockchain Upgrade</a></span>
+         <span><a href="../migration/what-is-new.html">What is New in BitShares 2.0</a></span>
         </div>
 
    </div>
@@ -127,17 +127,28 @@
       <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">BitShares 2.0</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../installation/index.html">Installation</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Migrating from BitShares 1.0 to BitShares 2.0</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="what-is-new.html">What is New in BitShares 2.0</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">What has Changed since BitShares 0.9?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="blockchain-transition.html">Blockchain Upgrade</a></li>
-<li class="toctree-l3"><a class="reference internal" href="howto-exporting-wallet.html">Exporting Your Wallet</a></li>
-<li class="toctree-l3"><a class="reference internal" href="howto-importing-wallet.html">Importing Your Wallet</a></li>
-<li class="toctree-l3"><a class="reference internal" href="howto-importing-wallet-remarks.html">Migration Remarks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migrating from BitShares 1.0 to BitShares 2.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../papers/index.html">Whitepapers</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">User Guide</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="first-steps-users.html">First Steps for End-Users</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Things you should know</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#the-starters">The Starters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-investors">The Investors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#technological-aspects">Technological Aspects</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../migration/what-is-new.html">What is New in BitShares 2.0</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../migration/what-changed.html">What has Changed since BitShares 0.9?</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../papers/index.html">Whitepapers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user/index.html">User Guide</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="account.html">Accounts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="security.html">Security</a></li>
+<li class="toctree-l3"><a class="reference internal" href="transactions.html">Transactions and Operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assets.html">Assets/Tokens</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dex.html">Decentralized Exchange</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#blockchain-positions">Blockchain &#8220;Positions&#8221;</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -169,53 +180,62 @@
   </div>
   <div class='content'>
    
-  <div class="section" id="what-has-changed-since-bitshares-0-9">
-<h1>What has Changed since BitShares 0.9?<a class="headerlink" href="#what-has-changed-since-bitshares-0-9" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="things-you-should-know">
+<h1>Things you should know<a class="headerlink" href="#things-you-should-know" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="the-starters">
+<h2>The Starters<a class="headerlink" href="#the-starters" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><strong>BitAssets are Contracts-For-Difference</strong>:
-Our research has identified an improved mechanism to achieve a solid <em>peg</em> of
-bitAssets to its underlay. BitAssets like the bitUSD in BitShares 2.0 will
-always trade for <em>at least</em> the value of its underlying asset, i.e. $1.
-We have summarized the economical analysis and incentives for market
-participants here: <a class="reference external" href="https://bitshares.org/technology/price-stable-cryptocurrencies/">bitAssets 2.0</a></li>
-<li><strong>Faster Blocks</strong>:
-Initially, the BitShares 2.0 blockchain will come with 3 seconds block
-interval with the option to reduce down to 1 second if shareholders agree.</li>
-<li><strong>Industrial Performance</strong>:
-BitShares 2.0 can support massive load and works well beyond 100k transactions
-per second. Find out how we achieve <a class="reference external" href="https://bitshares.org/technology/industrial-performance-and-scalability/">industrial performance and scalability</a>.</li>
-<li><strong>New Reactive UI</strong>:
-The BitShares 1.0 user interface was powerful but lacking in responsiveness and perfomance. For Bitshares 2.0 we&#8217;ve reimplemented the whole wallet using the React.js framework developed by Facebook, which is well-known for having excellent performance. The new BitShares UI is an entirely browser-based wallet, with private keys maintained in the browser.
-We expect a flourishing ecosystem of forked and tweaked wallets based off of
-our UI.</li>
-<li><strong>Accounts must be registered</strong>:
-In BitShares 2.0 we have separated <em>authorities</em> from transaction partners.
-Hence, if Alice wants to send funds to Bob, it may be required that only
-Celine signs for that transaction. Also, BitShares 2.0 has <a class="reference external" href="https://bitshares.org/technology/recurring-and-scheduled-payments/">a referral program</a>.
-Both features combined make it necessary that participants <em>register</em> an
-account on the blockchain.</li>
-<li><strong>No more Hierarchies in Account Names</strong>:
-In BitShares 1, there have been hierarchies in account names. Namely, you
-could only create a sub-account <code class="docutils literal"><span class="pre">home.wallet</span></code> if you also owned <code class="docutils literal"><span class="pre">wallet</span></code>.
-In BitShares 2.0, these hierarchies no longer exist and to register
-<code class="docutils literal"><span class="pre">home.wallet</span></code> you don&#8217;t need to own <code class="docutils literal"><span class="pre">wallet</span></code>.</li>
-<li><strong>Explicit Privacy</strong>:
-The <em>TITAN</em> technology in BitShares 2.0 slowed down blockchain processing
-significantly. Because of this and because TITAN did not really offer good
-privacy, we eliminated TITAN as a default transaction feature.
-Hence: <strong>Account transactions are public now as well.</strong>
-However, since we recognize the value of financial privacy, we offer
-<em>blinded</em> transactions that hide the transferred <em>amount</em>, and <em>stealth</em>
-transactions that hide the sender and receiver. A combination of both is also
-possible.</li>
-<li><strong>Prices are Fractions</strong>:
-To circumvent rounding errors, all prices in BitShares 2.0 are represented as
-fractions.</li>
-<li><strong>Delegates are now Witnesses and Payed Positions are now Budget Items</strong>:
-Since we have separated the business part from the block producing part, we
-now call block producers (formerly known as <em>delegates</em>) witnesses, while the
-additional payed position for workers are called budget items.</li>
+<li><strong>Security and Control over accounts and funds</strong>:
+No one can access your funds unless you let them, intentionally, or
+unintentionally. With the power to be independent from 3rd parties, comes
+the responsibility to <a class="reference internal" href="security.html"><em>protect what belongs to you</em></a>.</li>
+<li><strong>Can interact with people directly</strong>:
+With BitShares it becomes possible to interact with people directly without
+needing to go through a middleman.  Hence, BitShares is a platform of free
+speech that implements a payment platform and exchange for digital goods.</li>
+<li><strong>Fast</strong>:
+Transactions in BitShares are verified and irrevocable in only a few seconds
+time.</li>
+<li><strong>Decentralized Committee</strong>:
+Decisions that can effect the BitShares ecosystem are made using a on-chain
+committee voted upon by shareholders.  Hence, no single entity can change
+the deal retroactively.</li>
+<li><strong>Flexible</strong>:
+Protocol upgrades (formerly known as <em>hard forks</em>) can be implemented and
+executed to improve the BitShares business over time and allow to react on
+external influences quickly.</li>
 </ul>
+</div>
+<div class="section" id="the-investors">
+<h2>The Investors<a class="headerlink" href="#the-investors" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>Become Shareholder</strong>:
+If you buy <code class="docutils literal"><span class="pre">BTS</span></code> either from a partner exchange or from the DEX, you
+become a shareholder of the BitShares decentralized business and as such can
+take a cut of its profits and participate in votes for future directions.</li>
+<li><strong>Expenses</strong>:
+Vote for expenses of the business and hire workers to do important tasks for
+BitShares.</li>
+<li><strong>Leaders</strong>:
+Participate in political decisions by voting for committee members that
+represent your views!</li>
+<li><strong>Protocol upgrades</strong>:
+Improve the technology, integrate new features and adept legal and
+regulative changes by voting for upgrades.</li>
+<li><strong>Decision making for a proft</strong>:
+Take part in decision finding about fair pricing models for transaction fees
+to a) increase growth and b) make BitShares profitable for its shareholders</li>
+</ul>
+</div>
+<div class="section" id="technological-aspects">
+<h2>Technological Aspects<a class="headerlink" href="#technological-aspects" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../migration/what-is-new.html">What is New in BitShares 2.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../migration/what-changed.html">What has Changed since BitShares 0.9?</a></li>
+</ul>
+</div>
+</div>
 </div>
 
 

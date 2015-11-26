@@ -1,6 +1,6 @@
-*****************
-What has Changed?
-*****************
+*************************************
+What has Changed since BitShares 0.9?
+*************************************
 
 * **BitAssets are Contracts-For-Difference**:
   Our research has identified an improved mechanism to achieve a solid *peg* of
