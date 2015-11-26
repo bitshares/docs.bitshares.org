@@ -27,3 +27,5 @@ This is a subset of the available market pegged assets:
 * BitGOLD
 * ...
 
+In the User Interface, MPAs are easily distinguishable from UIAs in the asset
+explorer.
