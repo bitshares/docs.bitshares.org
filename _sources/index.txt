@@ -38,7 +38,7 @@ Recent Updates
 
 .. r!date +\%y/\%m/\%d
 
-* ``15/11/26`` :doc:`bitshares/user/first-steps-users`, :doc:`bitshares/user/you-should-know`
+* ``15/11/26`` :doc:`bitshares/user/first-steps-users`, :doc:`bitshares/user/you-should-know`, :doc:`bitshares/user/assets`
 * ``15/11/23`` User Guide updates: :doc:`bitshares/user/transactions`, :doc:`bitshares/user/dex`, :doc:`bitshares/user/security`
 * ``15/11/13`` Refactoring, updates for: :doc:`integration/index`
 * ``15/11/10`` Added MUSE blockchain: :doc:`muse/index`
@@ -100,9 +100,8 @@ Development
    testnet/index
    faq/index
 
-****
 Meta
-****
+####
 
 .. toctree::
    :maxdepth: 2
