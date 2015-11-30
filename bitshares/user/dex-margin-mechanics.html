@@ -1,0 +1,370 @@
+
+
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Margin call mechanics</title>
+
+    <!-- CSS -->
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href='../../_static/main.css' rel='stylesheet'>
+    <link href='../../_static/style.css' rel='stylesheet'>
+    <link href='../../_static/doxygen.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+    <!-- Sphinx search -->
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <!-- Transifex -->
+    <script type="text/javascript">
+      window.liveSettings = {
+        api_key: "bbf87af0641e4bbf89c98088d48e0449",
+      };
+    </script>
+    <script type="text/javascript" src="http://cdn.transifex.com/live.js"></script>
+
+    <!-- title card -->
+    <link  href='../../_static/title-card.css' rel='stylesheet'>
+    <script src='../../_static/script.js'></script>
+    
+    <!-- Sphinx search -->
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Graphene Technical Documentation  documentation"
+          href="../../_static/opensearch.xml"/>
+
+    <!-- Meta -->
+    <meta content="Graphene Documentation" property="og:site_name">
+    <meta content="Graphene Documentation" property="og:title">
+    <meta content="website" property="og:type">
+    <meta content="Graphene Documentation" name="description">
+    <meta content="Graphene Documentation" property="og:description">
+    
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-68381245-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+ </head>
+ <body class='no-literate'>
+
+
+ <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
+   <div class='in'>
+     <div class='headline'>
+       <h1>Margin call mechanics</h1>
+ 
+     </div>
+   </div>
+ </div>
+
+ <div class='header'>
+   <div class='left navlinks'>
+    
+        <div class="prev">
+         <div class="title">previous</div>
+         <span><a href="dex-short.html">Short Selling BitAssets</a></span>
+        </div>
+        <div class="top">
+         <div class="title">top</div>
+         <span><a class="uplink" href="../../index.html">Contents</a></span>
+        </div>
+        <div class="next">
+         <div class="title">next</div>
+         <span><a href="shareholder.html">Shareholder</a></span>
+        </div>
+
+   </div>
+   <!--
+    <div class='right'>
+<div id="searchbox" style="display: none" role="search">
+ <form class="search" action="../../search.html" method="get">
+   <input type="text" name="q" />
+   <input type="submit" value="Go" />
+   <input type="hidden" name="check_keywords" value="yes" />
+   <input type="hidden" name="area" value="default" />
+ </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+   </div>
+   -->
+ </div>
+
+ <div class='content-root'>
+  <!-- menu bar -->
+  <div class='menubar'>
+   <div class='section'>
+    <a href="../..//index.html"><img src="../../_static/grphn-logo.svg" height="48" /></a>
+
+    <a href="../..//bitshares/index.html"><img src="../../_static/bitshares-logo.png" height="48" /></a>
+
+    <a href="../..//muse/index.html"><img src="../../_static/MUSE_logo_transp_v1.png" height="48" /></a>
+   </div>
+   <div class='menu section'>
+    <div id="toc">
+      <h3>Table Of Contents</h3>
+      <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">BitShares 2.0</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../installation/index.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migrating from BitShares 1.0 to BitShares 2.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../papers/index.html">Whitepapers</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">User Guide</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="first-steps-users.html">First Steps for End-Users</a></li>
+<li class="toctree-l3"><a class="reference internal" href="you-should-know.html">Things you should know</a></li>
+<li class="toctree-l3"><a class="reference internal" href="account.html">Accounts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="security.html">Security</a></li>
+<li class="toctree-l3"><a class="reference internal" href="transactions.html">Transactions and Operations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assets.html">Assets/Tokens</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="dex.html">Decentralized Exchange</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="dex-trading.html">Trading</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dex-short.html">Short Selling BitAssets</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="">Margin call mechanics</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#what-is-a-margin-call">What is a margin call?</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#how-is-the-call-price-calculated">How is the call price calculated?</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#how-is-the-collateral-ratio-cr-calculated">How is the collateral ratio (CR) calculated?</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#execution-conditions">Execution Conditions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#blockchain-positions">Blockchain &#8220;Positions&#8221;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../muse/index.html">MUSE</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../integration/index.html">Integration Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">Graphene API</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../blockchain/index.html">Blockchain Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../namespaces/index.html">Namespaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../testnet/index.html">Testnets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/index.html">Frequently Asked Questions</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../meta/index.html">Meta</a></li>
+</ul>
+
+    </div>
+   </div>
+   <div class='bottom section'>
+   <!--
+     <a href='https://github.com/cryptonomex/graphene'>View on GitHub</a><br>
+     <a href='https://github.com/cryptonomex/graphene/blob/master/README.md' target='_blank'>See .md source</a>
+   -->
+   </div>
+  </div>
+  <div class='content'>
+   
+  <div class="section" id="margin-call-mechanics">
+<h1>Margin call mechanics<a class="headerlink" href="#margin-call-mechanics" title="Permalink to this headline">¶</a></h1>
+<p>The mechanics of a margin call in Bitshares are currently poorly understood, so
+I&#8217;d like to try to clarify a little by using examples from the <code class="docutils literal"><span class="pre">USD:BTS</span></code>
+market. I think part of the current confusion lies in people talking about the
+same market but using different market directions, ie. <code class="docutils literal"><span class="pre">USD:BTS</span></code> or
+<code class="docutils literal"><span class="pre">BTS:USD</span></code>, so terms like above/below don&#8217;t mean the same thing to different
+people. I will only use USD in these examples, but USD can be replaced by any
+bit asset in this context. I prefer to use the <code class="docutils literal"><span class="pre">USD:BTS</span></code> market direction, so
+these examples will have prices in BTS/USD.</p>
+<div class="section" id="what-is-a-margin-call">
+<h2>What is a margin call?<a class="headerlink" href="#what-is-a-margin-call" title="Permalink to this headline">¶</a></h2>
+<p>A margin call is the market forcing you to sell your collateral in order to buy
+enough USD to close your position. In the USD:BTS market a margin call is
+equivalent to a bid: it is an order to buy USD for BTS.</p>
+<p>A margin call will happen because the price has increased to the point where
+your collateral is insufficient with respect to the current collateral
+requirements of the Bitshares market rules. The required collateral is a
+tuneable parameter in Bitshares, set by the maintenance collateral ratio (MCR)
+which is maintained by the feed producers (ie. the witnesses).</p>
+</div>
+<div class="section" id="how-is-the-call-price-calculated">
+<h2>How is the call price calculated?<a class="headerlink" href="#how-is-the-call-price-calculated" title="Permalink to this headline">¶</a></h2>
+<p>As mentioned above the call price of a margin position depends on the MCR and
+the amount of debt and collateral in your position. It is independent of the
+price feed (settlement price). As an example, say you have opened the following
+position:</p>
+<ul class="simple">
+<li>Debt: <code class="docutils literal"><span class="pre">10</span> <span class="pre">USD</span></code></li>
+<li>Collateral: <code class="docutils literal"><span class="pre">10000</span> <span class="pre">BTS</span></code></li>
+<li>MCR is <code class="docutils literal"><span class="pre">1.75</span></code></li>
+</ul>
+<p>The call price of your position is  <code class="docutils literal"><span class="pre">10000</span> <span class="pre">BTS</span> <span class="pre">/</span> <span class="pre">(10</span> <span class="pre">*</span> <span class="pre">1.75</span> <span class="pre">USD)</span> <span class="pre">=</span>&nbsp; <span class="pre">571.429</span> <span class="pre">BTS/USD</span></code>.</p>
+</div>
+<div class="section" id="how-is-the-collateral-ratio-cr-calculated">
+<h2>How is the collateral ratio (CR) calculated?<a class="headerlink" href="#how-is-the-collateral-ratio-cr-calculated" title="Permalink to this headline">¶</a></h2>
+<p>The collateral ratio depends on the feed price (settlement price). Taking a feed
+price of <code class="docutils literal"><span class="pre">300</span> <span class="pre">BTS/USD</span></code> and building on the above example with <code class="docutils literal"><span class="pre">10</span> <span class="pre">USD</span></code> debt and
+<code class="docutils literal"><span class="pre">10000</span> <span class="pre">BTS</span></code> collateral:</p>
+<ul class="simple">
+<li>CR: <code class="docutils literal"><span class="pre">(10000</span> <span class="pre">BTS</span> <span class="pre">/</span> <span class="pre">300</span> <span class="pre">BTS/USD)</span> <span class="pre">/</span> <span class="pre">10</span> <span class="pre">USD</span> <span class="pre">=</span> <span class="pre">3.33</span></code></li>
+</ul>
+</div>
+<div class="section" id="execution-conditions">
+<h2>Execution Conditions<a class="headerlink" href="#execution-conditions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="when-will-a-margin-call-happen">
+<h3>When will a margin call happen?<a class="headerlink" href="#when-will-a-margin-call-happen" title="Permalink to this headline">¶</a></h3>
+<p>This is where it gets complicated. A margin call will happen whenever the
+squeeze protection price goes above the call price of your position. To better
+understand how this works, let&#8217;s go back to our margin position and look at
+collateral ratios:</p>
+<p>Say we have the following:</p>
+<ul class="simple">
+<li>Debt: <code class="docutils literal"><span class="pre">10</span> <span class="pre">USD</span></code></li>
+<li>Settlement price: <code class="docutils literal"><span class="pre">300</span> <span class="pre">BTS/USD</span></code></li>
+<li>CR: <code class="docutils literal"><span class="pre">1</span></code></li>
+<li>Collateral is therefore <code class="docutils literal"><span class="pre">3000</span> <span class="pre">BTS</span></code></li>
+</ul>
+<p>This is also known as the Black Swan level, and we want to perform a margin call
+before the collateral ratio goes this low. This is why we have the Maintenance
+Collateral Ratio, to enforce a buffer zone before a position goes into Black
+Swan territory. So if we apply the MCR of <code class="docutils literal"><span class="pre">1.75</span></code> to this position:</p>
+<ul class="simple">
+<li>Debt: <code class="docutils literal"><span class="pre">10</span> <span class="pre">USD</span></code></li>
+<li>Settlement Price: <code class="docutils literal"><span class="pre">300</span> <span class="pre">BTS/USD</span></code></li>
+<li>CR: <code class="docutils literal"><span class="pre">1.75</span></code></li>
+<li>Collateral is therefore <code class="docutils literal"><span class="pre">3000</span> <span class="pre">BTS</span> <span class="pre">*</span> <span class="pre">1.75</span> <span class="pre">=</span> <span class="pre">5250</span> <span class="pre">BTS</span></code></li>
+</ul>
+<p>This is much safer, there is a bit of margin for the position to be closed
+before going into Black Swan levels. The call price of this position is now
+exactly equal to the feed price of <code class="docutils literal"><span class="pre">300</span> <span class="pre">BTS/USD</span></code>.</p>
+<ul class="simple">
+<li>Call price: <code class="docutils literal"><span class="pre">5250</span> <span class="pre">/</span> <span class="pre">(10</span> <span class="pre">*</span> <span class="pre">1.75)</span> <span class="pre">=</span> <span class="pre">300</span> <span class="pre">BTS/USD</span></code></li>
+</ul>
+<p>The remaining question then is, at what point should we force the position to
+attempt to close itself? This is where the SQPR comes in. Let&#8217;s look at two
+scenarios, SQPR of <code class="docutils literal"><span class="pre">1.1</span></code> and SQPR of <code class="docutils literal"><span class="pre">1.5</span></code>:</p>
+</div>
+<div class="section" id="sqpr-of-1-1">
+<h3>SQPR of <code class="docutils literal"><span class="pre">1.1</span></code><a class="headerlink" href="#sqpr-of-1-1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Settlement price: <code class="docutils literal"><span class="pre">300</span> <span class="pre">BTS/USD</span></code></li>
+<li>SQPR: <code class="docutils literal"><span class="pre">1.1</span></code></li>
+<li>Squeeze Protection Price (SQPP): <code class="docutils literal"><span class="pre">330</span> <span class="pre">BTS/USD</span></code></li>
+</ul>
+<p>In this case, any margin position that has a call price below <code class="docutils literal"><span class="pre">330</span> <span class="pre">BTS/USD</span></code>
+will be forced to settle, and therefore be added to the orderbook as an order to
+buy USD for BTS.</p>
+</div>
+<div class="section" id="sqpr-of-1-5">
+<h3>SQPR of <code class="docutils literal"><span class="pre">1.5</span></code><a class="headerlink" href="#sqpr-of-1-5" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Settlement price: <code class="docutils literal"><span class="pre">300</span> <span class="pre">BTS/USD</span></code></li>
+<li>SQPR: <code class="docutils literal"><span class="pre">1.5</span></code></li>
+<li>Squeeze Protection Price (SQPP): <code class="docutils literal"><span class="pre">450</span> <span class="pre">BTS/USD</span></code></li>
+</ul>
+<p>In this case, any margin position that has a call price below <code class="docutils literal"><span class="pre">450</span> <span class="pre">BTS/USD</span></code>
+will be forced to settle, and therefore be added to the orderbook as an order to
+buy USD for BTS.</p>
+</div>
+<div class="section" id="discussion">
+<h3>Discussion<a class="headerlink" href="#discussion" title="Permalink to this headline">¶</a></h3>
+<p>Another way of looking at this is by looking at the Collateral Ratio of the
+position. If we want to stay at or above the squeeze protection price, what is
+the required collateral ratio? Let&#8217;s do the math:</p>
+<ul class="simple">
+<li>Settlement Price: <code class="docutils literal"><span class="pre">300</span> <span class="pre">BTS/USD</span></code></li>
+<li>MCR: <code class="docutils literal"><span class="pre">1.75</span></code></li>
+<li>SQPR: <code class="docutils literal"><span class="pre">1.1</span></code></li>
+<li>Debt: <code class="docutils literal"><span class="pre">10</span> <span class="pre">USD</span></code></li>
+<li>Call price: <code class="docutils literal"><span class="pre">CP</span> <span class="pre">=</span> <span class="pre">SQPP</span> <span class="pre">=</span> <span class="pre">300</span> <span class="pre">*</span> <span class="pre">1.1</span> <span class="pre">=</span> <span class="pre">330</span> <span class="pre">BTS/USD</span></code></li>
+<li>Collateral = <code class="docutils literal"><span class="pre">(10</span> <span class="pre">USD</span> <span class="pre">*</span> <span class="pre">1.75)</span> <span class="pre">*</span> <span class="pre">330</span> <span class="pre">BTS/USD</span>&nbsp; <span class="pre">=</span> <span class="pre">5775</span> <span class="pre">BTS</span></code></li>
+</ul>
+<p>The collateral ratio of this position is <code class="docutils literal"><span class="pre">(5775</span> <span class="pre">BTS</span> <span class="pre">/</span> <span class="pre">300</span> <span class="pre">BTS/USD)</span> <span class="pre">/</span> <span class="pre">10</span> <span class="pre">USD</span> <span class="pre">=</span> <span class="pre">1.925</span></code>.</p>
+<p>This is equivalent to the MCR</p>
+<ul class="simple">
+<li>SQPR: <code class="docutils literal"><span class="pre">1.75</span> <span class="pre">*</span> <span class="pre">1.1</span> <span class="pre">=</span> <span class="pre">1.925</span></code>.</li>
+</ul>
+<p>In other words, in order to stay <strong>safe</strong> and not be margin called, the margin
+position must maintain a collateral ratio higher than <code class="docutils literal"><span class="pre">MCR</span> <span class="pre">*</span> <span class="pre">SQPR</span></code>.</p>
+<ul class="simple">
+<li><strong>Safe position</strong>: <code class="docutils literal"><span class="pre">CR</span> <span class="pre">&gt;</span> <span class="pre">MCR</span> <span class="pre">*</span> <span class="pre">SQPR</span></code></li>
+</ul>
+</div>
+<div class="section" id="at-what-price-will-the-margin-call-execute">
+<h3>At what price will the margin call execute?<a class="headerlink" href="#at-what-price-will-the-margin-call-execute" title="Permalink to this headline">¶</a></h3>
+<p>This is the part I believe is most misunderstood, so I will use some screenshots
+of a fictional <code class="docutils literal"><span class="pre">USD:BTS</span></code> market to explain. We will use the following parameters:</p>
+<ul class="simple">
+<li>SQPR: <code class="docutils literal"><span class="pre">1.2</span></code></li>
+<li>MCR: <code class="docutils literal"><span class="pre">1.75</span></code></li>
+<li>SQPR * MCR:  <code class="docutils literal"><span class="pre">2.1</span></code></li>
+<li>Settlement price: <code class="docutils literal"><span class="pre">300</span> <span class="pre">BTS/USD</span></code></li>
+<li>Squeeze protection price: <code class="docutils literal"><span class="pre">300</span> <span class="pre">*</span> <span class="pre">1.2</span> <span class="pre">=</span> <span class="pre">360</span> <span class="pre">BTS/USD</span></code></li>
+<li>Debt: <code class="docutils literal"><span class="pre">10</span> <span class="pre">USD</span></code></li>
+<li>Collateral: <code class="docutils literal"><span class="pre">5687.5</span></code></li>
+<li>CR: <code class="docutils literal"><span class="pre">1.896</span></code></li>
+<li>Call price: <code class="docutils literal"><span class="pre">325</span> <span class="pre">BTS/USD</span></code></li>
+</ul>
+<p>From what we&#8217;ve seen above, it&#8217;s clear that this position should be margin
+called: it has a CR of <code class="docutils literal"><span class="pre">1.896</span></code> which is well below the safe ratio of 2.1.</p>
+<p>It will therefore get added to the order book as a bid to buy USD like this:</p>
+<a class="reference internal image-reference" href="../../_images/margin-buyregion.png"><img alt="Margin Call Buy Region" class="align-center" src="../../_images/margin-buyregion.png" style="width: 800px;" /></a>
+<p>The margin called order will buy any USD priced in the range <code class="docutils literal"><span class="pre">325-360</span>
+<span class="pre">BTS/USD</span></code>. The squeeze protection price acts as a price ceiling, meaning the
+forced margin order will not execute at a very high price in an illiquid market:
+it is protected from high prices by the SQPR.</p>
+</div>
+<div class="section" id="margin-calls-only-execute-in-the-range-call-price-sqpp">
+<h3>Margin calls only execute in the range [Call Price - SQPP]<a class="headerlink" href="#margin-calls-only-execute-in-the-range-call-price-sqpp" title="Permalink to this headline">¶</a></h3>
+<p>A margin call will occur any time the lowest ask is higher than the call price
+and lower than the SQPP. This has several consequences, as we will see below. It
+can create some very strange situations, and also force the margin called orders
+to &#8220;buy high&#8221;.</p>
+<p><strong>Consequence #1</strong>: Asks below the call price prevent margin calls from executing</p>
+<p>Because margin calls only execute in the range Call Price - SQPP, if there is a
+sell order for <code class="docutils literal"><span class="pre">5</span> <span class="pre">USD</span></code> at <code class="docutils literal"><span class="pre">315</span> <span class="pre">BTS/USD</span></code> in this market, the call order will
+not use it, which makes the market look like this:</p>
+<a class="reference internal image-reference" href="../../_images/margin-not-cheap.png"><img alt="Margin Calls can't buy cheap" class="align-center" src="../../_images/margin-not-cheap.png" style="width: 800px;" /></a>
+<p>If a second sell order of <code class="docutils literal"><span class="pre">2.5</span> <span class="pre">USD</span></code> were added at <code class="docutils literal"><span class="pre">345</span> <span class="pre">BTS/USD</span></code>, the margin called
+order would still not buy any USD because of the &#8220;blocking&#8221; sell order at <code class="docutils literal"><span class="pre">315</span>
+<span class="pre">BTS/USD</span></code>:</p>
+<a class="reference internal image-reference" href="../../_images/margin-not-cheap-2.png"><img alt="Margin Calls can't buy cheap" class="align-center" src="../../_images/margin-not-cheap-2.png" style="width: 800px;" /></a>
+<p>If the order at <code class="docutils literal"><span class="pre">315</span> <span class="pre">BTS/USD</span></code> were to be removed, either from being cancelled or
+from being filled, the order at <code class="docutils literal"><span class="pre">345</span> <span class="pre">BTS/USD</span></code> would instantly get filled by the
+margin called order, and the margin called position would have a reduced debt of
+<code class="docutils literal"><span class="pre">10</span> <span class="pre">-</span> <span class="pre">2.5</span> <span class="pre">=</span> <span class="pre">7.5</span> <span class="pre">USD</span></code>:</p>
+<a class="reference internal image-reference" href="../../_images/margin-execute.png"><img alt="Margin Call executes" class="align-center" src="../../_images/margin-execute.png" style="width: 800px;" /></a>
+<p><strong>Consequence #2</strong>: Margin calls cannot &#8220;buy cheap&#8221; As we&#8217;ve seen above, unless
+the settlement price goes above the call price of the position, forced margin
+calls always buy at a premium relative to the settlement price. Even if there
+are sell orders available at or near the feed price, the margin called orders
+will not be matched with those sell orders if their call price is higher than
+the price of those sell orders.</p>
+</div>
+</div>
+</div>
+
+
+  </div>
+ </div>
+
+ <script>var HN=[];HN.factory=function(e){return function(){HN.push([e].concat(Array.prototype.slice.call(arguments,0)))};},HN.on=HN.factory("on"),HN.once=HN.factory("once"),HN.off=HN.factory("off"),HN.emit=HN.factory("emit"),HN.load=function(){var e="hn-button.js";if(document.getElementById(e))return;var t=document.createElement("script");t.id=e,t.src="//hn-button.herokuapp.com/hn-button.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)},HN.load();</script>
+ <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+ </body>
+</html>

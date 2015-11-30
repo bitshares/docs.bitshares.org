@@ -29,3 +29,6 @@ This is a subset of the available market pegged assets:
 
 In the User Interface, MPAs are easily distinguishable from UIAs in the asset
 explorer.
+
+Read more about the :doc:`margin call mechanics <dex-margin-mechanics>` before
+trading.
