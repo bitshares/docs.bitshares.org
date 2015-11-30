@@ -55,3 +55,4 @@ the reader and customer to leverage those features in full or only partially.
 
    dex-trading
    dex-short
+   dex-margin-mechanics
