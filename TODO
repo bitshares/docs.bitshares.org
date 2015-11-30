@@ -1,1 +1,358 @@
 https://bitsharestalk.org/index.php/topic,20169.msg255901/topicseen.html#new
+------------------------------------------
+[quote author=Thom link=action=profile;u=21490 date=1448682605]
+My effort to get familiar with the cli commands to transfer assets from a public account to a stealth account using your "Stealth Transfer" guide on github.
+
+I viewed your guide as a sequencial progression, which would be the logical way to describe this. I discovered that isn't how it was presented, which led to some confusion. I have included the cli sessions used to run through this exercise so you can see the errors I encountered.
+
+[b]Step 1[/b]
+You start by describing how to create 2 wallets and reference labels for blind accounts. That was very straightforward.
+
+[b]Step 2[/b]
+Then you describe the process of sending assets from a public account named "alicepub" to the blind account named alice which you created in Step 1. However, you don't explain how the alicepub account becomes aware of the bind account labeled alice, you just use the name alice in the transfer example, which won't work.
+
+I assume you would have to assign a label in the alicepub account the same way you described for how the alice account would set a contact (label) for the bob account (labeled bobby). We know however, that assumptions can yield surprising results, so it's better to be explicit with instructions. Although I too am an INTJ personality, I appear to see the devil in the details. BTW, there is no scientific, repeatable basis for the Meyers-Briggs system of personality classification. I have however taken it at least 4 times at different stages of my life and it has provided the same results, so although not double-blind / control group scientific does seem to produce consistent results, at least it has for me. Back on topic now.
+
+[b]Step 3[/b]
+It then appears you put the cart before the horse and describe how to view the blind balance in the alice account using "get_blind_balances" before you describe how to recieve the transfer from alicepub.  After sending a token amount of BTS from verbaltech2 to a blind account I labled babe1 and recording the receipt, I attempted to use the get_blind_balances command in the same wallet as I sent the funds from and it returned an empty line. No error, no OK, just an empty line. I reasoned that *may* be normal, since the public source wallet only knew of the destination by a labeled public key address; it did not have access to the babe1 private key to decrypt the balance.
+
+So I logged out of the verbaltech2 source wallet and restarted the cli with the wallet for the babe1 blinded account, and issued the "get_blind_balances" command. Again it returned an empty line, no error, just like that command did in the source wallet. Reading [u]further down[/u] in your doc I see you describe how to recieve a blind transfer using the transfer reciept. After receiving the blind transfer I could then see the balance with "get_blind_balances", however your writeup says there are 2 optional arguments that may follow the receipt key, which is not correct, those arguments are not optional. The "gethelp receive_blind_transfer" is also incorrect, saying the first parameter (opt_from) is optional and the second is confirmation_receipt. It doesn't even mention the memo field. None of these arguments are optional.
+
+[b]Step 4[/b]
+Now that I successfully transferred assets from a public to a blinded account, I then attempted to transfer the assets received from one blind account to another. You describe that process in the "Stealth Transfer to Bob" section. Another detail I discovered that you failed to mention is that the labels are not persistent. I created the labels right after I created the wallets. I closed the cli between each use of the 3 different accounts (verbaltech2, bab1 (labeled babe1) and bab2 (labeled language) ). I had to define the label again in the bab1 wallet to transfer funds to the bab2 wallet. Besides that it worked as you described. 
+
+[b]Step 5[/b]
+The last step was to transfer a blinded balance back to a public account. Of the 58 BTS transfered into the babe1 blind account I sent 18 BTS to the language account leaving 25 BTS remaining in the babe1 account. I sent 10 of those BTS back to the verbaltech2 public account costing 15 BTS and no remaining balance in babe1. 
+
+After I verified the successful transfer of 18 BTS from babe1 to language, I transfered 3 BTS back to the public verbaltech2 account. get_blind_balances language returned 18, so it should have been enough to send 3 BTS back to verbaltech2 and it was, leaving the language account empty.
+
+Conclusion
+----------------
+As a rough guide the "Stealth Transfers" document did not provide all of the information required to accomplish the goal of transferring balances between public and blind accounts and back again, and the information presented was out of sequence for the logical progression of steps to complete the transfers. It also omitted the point about labels not being persistent in the wallets, which must me re-entered each time the cli is invoked. Nevertheless, it did provide enough clues to deduce what was necessary to do a round trip transfer. The guide was marginally adequate for those comfortable with the cli wallet interface but clearly insufficient for all others.
+
+Below find the cli sessions I used as I attempted to follow the "Stealth Transfers" guide:
+
+[quote]
+========================
+TESTING STEALTH TRANSFER
+========================
+$ cli_wallet -w /home/admin/.BitShares2/bab1 -H 127.0.0.1:8092 -s ws://127.0.0.1:8090
+new >>> set_password "B@b31"
+set_password "B@b31"
+locked >>> unlock "B@b31"                                                                             
+unlock "B@b31"
+unlocked >>> create_blind_account bab1 "B@b-L is the ancient city where the people banded together"
+create_blind_account bab1 "B@b-L is the ancient city where the people banded together"
+1083845ms th_a       wallet.cpp:743                save_wallet_file     ] saving wallet to file /home/
+admin/.BitShares2/bab1
+"BTS4xeNgMAVEczz3fnzDZuzEJPKdQK5kmAno23Ed42nM9nZvcq6gS"
+unlocked >>> ^C
+
+$ cli_wallet -w /home/admin/.BitShares2/bab2 -H 127.0.0.1:8092 -s ws://127.0.0.1:8090
+new >>> set_password "B@b32"
+set_password "B@b32"
+locked >>> unlock "B@b32"                                                                             
+unlock "B@b32"
+unlocked >>> set_key_label "BTS4xeNgMAVEczz3fnzDZuzEJPKdQK5kmAno23Ed42nM9nZvcq6gS" babe1
+set_key_label "BTS4xeNgMAVEczz3fnzDZuzEJPKdQK5kmAno23Ed42nM9nZvcq6gS" babe1
+true
+unlocked >>> create_blind_account bab2 "B@b-L is the ancient city where people lost common language"  
+create_blind_account bab2 "B@b-L is the ancient city where people lost common language"
+1483572ms th_a       wallet.cpp:743                save_wallet_file     ] saving wallet to file /home/
+admin/.BitShares2/bab2
+"BTS5Qmr9H9SM39EHmVgXtsVjUGn2xBUtqbF6MdQ6RpnxUWNak7mse"
+unlocked >>> ^C
+
+$ cli_wallet -w /home/admin/.BitShares2/bab1 -H 127.0.0.1:8092 -s ws://127.0.0.1:8090
+locked >>> unlock "B@b31"
+unlock "B@b31"
+unlocked >>> set_key_label "BTS5Qmr9H9SM39EHmVgXtsVjUGn2xBUtqbF6MdQ6RpnxUWNak7mse" language
+set_key_label "BTS5Qmr9H9SM39EHmVgXtsVjUGn2xBUtqbF6MdQ6RpnxUWNak7mse" language
+true
+unlocked >>> ^C
+
+$ cli_wallet -w /home/admin/.BitShares2/vt2-6keyWallet -H 127.0.0.1:8092 -s ws://127.0.0.1:8090
+locked >>> unlock "<public account wallet password>"
+unlock "<public account wallet password>"
+unlocked >>> get_account verbaltech2
+get_account verbaltech2
+{
+  "id": "1.2.91787",
+  "membership_expiration_date": "1969-12-31T23:59:59",
+  "registrar": "1.2.91787",
+  "referrer": "1.2.91787",
+  "lifetime_referrer": "1.2.91787",
+  "network_fee_percentage": 2000,
+  "lifetime_referrer_fee_percentage": 8000,
+  "referrer_rewards_percentage": 100,
+  "name": "verbaltech2",
+  "owner": {
+    "weight_threshold": 1,
+    "account_auths": [],
+    "key_auths": [[
+        "BTS5Q53G6XutTmUnktTT9XswYspCaBaECSoxDsWeDpE2y9DjHgvVt",
+        1
+      ]
+    ],
+    "address_auths": []
+  },
+  "active": {
+    "weight_threshold": 1,
+    "account_auths": [],
+    "key_auths": [[
+        "BTS6oxUUKFD8SfGoXb6AwDBEoBt8WM7g4Mtz8SWdinUeHemr9yoxi",
+        1
+      ]
+    ],
+    "address_auths": []
+  },
+  "options": {
+    "memo_key": "BTS6oxUUKFD8SfGoXb6AwDBEoBt8WM7g4Mtz8SWdinUeHemr9yoxi",
+    "voting_account": "1.2.19600",
+    "num_witness": 0,
+    "num_committee": 0,
+    "votes": [],
+    "extensions": []
+  },
+  "statistics": "2.6.91787",
+  "whitelisting_accounts": [],
+  "blacklisting_accounts": [],
+  "blacklisted_accounts": [],
+  "cashback_vb": "1.13.69"
+unlocked >>> list_account_balances verbaltech2
+list_account_balances verbaltech2
+4408.42697 BTS
+
+unlocked >>> set_key_label "BTS4xeNgMAVEczz3fnzDZuzEJPKdQK5kmAno23Ed42nM9nZvcq6gS" babe1
+set_key_label "BTS4xeNgMAVEczz3fnzDZuzEJPKdQK5kmAno23Ed42nM9nZvcq6gS" babe1
+true
+unlocked >>> set_key_label "BTS5Qmr9H9SM39EHmVgXtsVjUGn2xBUtqbF6MdQ6RpnxUWNak7mse" language
+set_key_label "BTS5Qmr9H9SM39EHmVgXtsVjUGn2xBUtqbF6MdQ6RpnxUWNak7mse" language
+true
+unlocked >>> transfer_to_blind verbaltech2 BTS [[babe1,58]] true
+transfer_to_blind verbaltech2 BTS [[babe1,58]] true
+3369305ms th_a       wallet.cpp:3794               transfer_to_blind    ] to_amounts: [["babe1","58"]]
+ 
+verbaltech2 sent 58 BTS to 1 blinded balance fee: 40 BTS
+58 BTS to  babe1
+          receipt: 2B2vTjJ19hgqzGp8qdc8MEWmsgEUGECNJcoQTYNQqMU8bRofmbQYemXs56FoUc4Z5PdVM65nsySZgwJMq9Z
+SkpWQFhEqLGuZi1N3jQm8yBwaLD2DQzwY5AEW1rSK9HWJbfqNLtx8U4kc3o9xKtJoED2SgHW6jDQ7igBTcVhuUiKSwFu3DFa6LTeS5
+Wm5khjgy1LrR5uhmp
+
+
+unlocked >>> list_account_balances verbaltech2                                                        
+list_account_balances verbaltech2
+4310.42697 BTS
+
+unlocked >>> get_blind_balances babe1
+get_blind_balances babe1
+
+unlocked >>> ^C
+
+$ cli_wallet -w /home/admin/.BitShares2/bab1 -H 127.0.0.1:8092 -s ws://127.0.0.1:8090
+locked >>> unlock "B@b31"
+unlock "B@b31"
+unlocked >>> get_blind_balances babe1
+get_blind_balances babe1
+
+unlocked >>> get_blind_balances bab1                                                                  
+get_blind_balances bab1
+
+unlocked >>> get_blind_balances language
+get_blind_balances language
+
+unlocked >>> gethelp receive_blind_transfer                                                           
+gethelp receive_blind_transfer 
+
+Given a confirmation receipt, this method will parse it for a blinded
+balance and confirm that it exists in the blockchain. If it exists then it
+will report the amount received and who sent it.
+
+Parameters:
+    opt_from: - if not empty and the sender is a unknown public key, then
+        the unknown public key will be given the label opt_from (type:
+        string)
+    confirmation_receipt: - a base58 encoded stealth confirmation (type:
+        string)
+
+unlocked >>> receive_blind_transfer 2B2vTjJ19hgqzGp8qdc8MEWmsgEUGECNJcoQTYNQqMU8bRofmbQYemXs56FoUc4Z5P
+dVM65nsySZgwJMq9ZSkpWQFhEqLGuZi1N3jQm8yBwaLD2DQzwY5AEW1rSK9HWJbfqNLtx8U4kc3o9xKtJoED2SgHW6jDQ7igBTcVhu
+UiKSwFu3DFa6LTeS5Wm5khjgy1LrR5uhmp 
+receive_blind_transfer 2B2vTjJ19hgqzGp8qdc8MEWmsgEUGECNJcoQTYNQqMU8bRofmbQYemXs56FoUc4Z5PdVM65nsySZgwJ
+Mq9ZSkpWQFhEqLGuZi1N3jQm8yBwaLD2DQzwY5AEW1rSK9HWJbfqNLtx8U4kc3o9xKtJoED2SgHW6jDQ7igBTcVhuUiKSwFu3DFa6L
+TeS5Wm5khjgy1LrR5uhmp 
+10 assert_exception: Assert Exception
+a0 != e: too few arguments passed to method
+    {}
+    th_a  api_connection.hpp:140 call_generic
+unlocked >>> receive_blind_transfer 2B2vTjJ19hgqzGp8qdc8MEWmsgEUGECNJcoQTYNQqMU8bRofmbQYemXs56FoUc4Z5P
+dVM65nsySZgwJMq9ZSkpWQFhEqLGuZi1N3jQm8yBwaLD2DQzwY5AEW1rSK9HWJbfqNLtx8U4kc3o9xKtJoED2SgHW6jDQ7igBTcVhu
+UiKSwFu3DFa6LTeS5Wm5khjgy1LrR5uhmp "vt2"
+receive_blind_transfer 2B2vTjJ19hgqzGp8qdc8MEWmsgEUGECNJcoQTYNQqMU8bRofmbQYemXs56FoUc4Z5PdVM65nsySZgwJ
+Mq9ZSkpWQFhEqLGuZi1N3jQm8yBwaLD2DQzwY5AEW1rSK9HWJbfqNLtx8U4kc3o9xKtJoED2SgHW6jDQ7igBTcVhuUiKSwFu3DFa6L
+TeS5Wm5khjgy1LrR5uhmp "vt2"
+10 assert_exception: Assert Exception
+a0 != e: too few arguments passed to method
+    {}
+    th_a  api_connection.hpp:140 call_generic
+unlocked >>> receive_blind_transfer 2B2vTjJ19hgqzGp8qdc8MEWmsgEUGECNJcoQTYNQqMU8bRofmbQYemXs56FoUc4Z5P
+dVM65nsySZgwJMq9ZSkpWQFhEqLGuZi1N3jQm8yBwaLD2DQzwY5AEW1rSK9HWJbfqNLtx8U4kc3o9xKtJoED2SgHW6jDQ7igBTcVhu
+UiKSwFu3DFa6LTeS5Wm5khjgy1LrR5uhmp "vt2" "memo"
+receive_blind_transfer 2B2vTjJ19hgqzGp8qdc8MEWmsgEUGECNJcoQTYNQqMU8bRofmbQYemXs56FoUc4Z5PdVM65nsySZgwJ
+Mq9ZSkpWQFhEqLGuZi1N3jQm8yBwaLD2DQzwY5AEW1rSK9HWJbfqNLtx8U4kc3o9xKtJoED2SgHW6jDQ7igBTcVhuUiKSwFu3DFa6L
+TeS5Wm5khjgy1LrR5uhmp "vt2" "memo"
+1164044ms th_a       wallet.cpp:743                save_wallet_file     ] saving wallet to file /home/
+admin/.BitShares2/bab1
+58 BTS  vt2  =>  bab1  memo
+
+unlocked >>> get_blind_balances babe1                                                                 
+get_blind_balances babe1
+
+unlocked >>> get_blind_balances bab1                                                                  
+get_blind_balances bab1
+58 BTS
+
+>>>label "language" not persistent so first attempt to transfer fails <<<
+unlocked >>> blind_transfer bab1 language 18 BTS true
+blind_transfer bab1 language 18 BTS true
+10 assert_exception: Assert Exception
+other.my->_key != empty_pub: 
+    {}
+    th_a  elliptic_secp256k1.cpp:69 get_shared_secret
+
+    {"from_key_or_label":"bab1","to_key_or_label":"language","amount_in":"18","symbol":"BTS","broadcas
+t":true,"confirm":{"trx":{"ref_block_num":0,"ref_block_prefix":0,"expiration":"1970-01-01T00:00:00","o
+perations":[],"extensions":[],"signatures":[]},"outputs":[]}}
+    th_a  wallet.cpp:3779 blind_transfer_help
+unlocked >>> set_key_label "BTS5Qmr9H9SM39EHmVgXtsVjUGn2xBUtqbF6MdQ6RpnxUWNak7mse" language
+set_key_label "BTS5Qmr9H9SM39EHmVgXtsVjUGn2xBUtqbF6MdQ6RpnxUWNak7mse" language
+true
+unlocked >>> blind_transfer bab1 language 18 BTS true                                                 
+blind_transfer bab1 language 18 BTS true
+2263870ms th_a       wallet.cpp:3692               blind_transfer_help  ] "to_blind_factor": to_blind_
+factor blind_factor: 9abf35bb0d50fdc78dd9d3d3c46ef8c3c77fd00f5a3f3ff14c63970ec7d1a855 
+2263871ms th_a       wallet.cpp:3695               blind_transfer_help  ] "change_blind_factor": chang
+e_blind_factor change_blind_factor: 0e3924372fdf8c98063d15c8ca736e90d0194f178b670bd574d4141301654d5d 
+2263873ms th_a       wallet.cpp:3711               blind_transfer_help  ] "to_out.blind": to_out.blind
+ blind_factor: 9abf35bb0d50fdc78dd9d3d3c46ef8c3c77fd00f5a3f3ff14c63970ec7d1a855 to_out.commitment: 029
+829192ef2813e1c274da679f26e478150b1c7b3f23c810a2e6ddfc34e3215e9 
+2263897ms th_a       wallet.cpp:3766               blind_transfer_help  ] validate before
+2263915ms th_a       wallet.cpp:743                save_wallet_file     ] saving wallet to file /home/
+admin/.BitShares2/bab1
+blind_transfer_operation temp-account fee: 15 BTS
+25 BTS to  bab1
+          receipt: boqRZqyKaZW6bExrystPwFdXvzUBJSjGeaqy482NxBJ6S9Un4zima1mzysTrUipBiBpm4CrLTvCJZfqDaAa
+qEpmxWAWAKhi2GmnuT7nLU6n18GWjLxUnpskyywA8qCBw9VTAvaxtrNpFRtxx16NzJiZEYk6zfndvLJ2txvjq9cTT16QRXdqPQ75GJ
+xuTAWKNdvzYm3NyK3w3K3462AbutEF9TyNGEfHidvAff49Q3yBATFs1g5NkGAMsmx4ffgwnFeMPBqi58cSZ
+
+18 BTS to  language
+          receipt: boqRZqyKaZW6bExrystPwFdXvzUBJSjGeaqy482NxBJ6S9VPCqArXCypszWZnpCeG7jfS3oUnbtmn5bmmVH
+5HCXJg9QxCmn4pocbJ8ipRHfzgeq1mLMewQNn6HGrkb5WbosSntj3o4LcSEMpw2etsR2GjnBxcdxN879rBwxm6inhbpsoYn1nGwS4H
+o3SqoCF43MRDK3ouYrFBcAK2TTPXfnnvAU3r1UvhNHpxuNaS1cexbd88Nn6BTxSifKdJ8ysFft98e88Cbek
+
+unlocked >>> get_blind_balances bab1                                                                  
+get_blind_balances bab1
+25 BTS
+
+>>>public account verbaltech2 is unknown so first attempt to transfer fails <<<
+unlocked >>> blind_transfer bab1 verbaltech2 10 BTS true                                              
+blind_transfer bab1 verbaltech2 10 BTS true
+10 assert_exception: Assert Exception
+other.my->_key != empty_pub: 
+    {}
+    th_a  elliptic_secp256k1.cpp:69 get_shared_secret
+
+    {"from_key_or_label":"bab1","to_key_or_label":"verbaltech2","amount_in":"10","symbol":"BTS","broad
+cast":true,"confirm":{"trx":{"ref_block_num":0,"ref_block_prefix":0,"expiration":"1970-01-01T00:00:00"
+,"operations":[],"extensions":[],"signatures":[]},"outputs":[]}}
+    th_a  wallet.cpp:3779 blind_transfer_help
+
+unlocked >>> set_key_label BTS6oxUUKFD8SfGoXb6AwDBEoBt8WM7g4Mtz8SWdinUeHemr9yoxi vt2
+set_key_label BTS6oxUUKFD8SfGoXb6AwDBEoBt8WM7g4Mtz8SWdinUeHemr9yoxi vt2
+true
+unlocked >>> blind_transfer bab1 vt2 10 BTS true                                                      
+blind_transfer bab1 vt2 10 BTS true
+3530479ms th_a       wallet.cpp:3701               blind_transfer_help  ] "to_sum_blind_factor": to_su
+m_blind_factor blind_factor: 0e3924372fdf8c98063d15c8ca736e90d0194f178b670bd574d4141301654d5d 
+3530480ms th_a       wallet.cpp:3703               blind_transfer_help  ] "nochange to_blind_factor": 
+nochange to_blind_factor blind_factor: 0e3924372fdf8c98063d15c8ca736e90d0194f178b670bd574d4141301654d5
+d 
+3530482ms th_a       wallet.cpp:3711               blind_transfer_help  ] "to_out.blind": to_out.blind
+ blind_factor: 0e3924372fdf8c98063d15c8ca736e90d0194f178b670bd574d4141301654d5d to_out.commitment: 02e
+bf9d1ce6e41019c77f483aacec0baa1ee3a88c14186942b73a424fb86a7f68b 
+3530485ms th_a       wallet.cpp:3766               blind_transfer_help  ] validate before
+blind_transfer_operation temp-account fee: 15 BTS
+10 BTS to  vt2
+          receipt: qowcnJw76j28z6fLAupwNfbYmGBwPtCyqCHtvDH4hYk9koaV98BScAU9rUCYqHfK6ypF6Lmrf3mQ89vKLLY
+Gw4YFG2te5zPGaQRJoVP1cb6WwE7QkQNZ5v2q9g6WDDZTFdkJvrvFX84h8oamL7to9rdMxXydiXSLwNRQ4K7CWndn6Dg6c2wpmJyYV
+a8s3qydrwXwTyfh3HfqTXdHEYY7x6r1iw4FTUuSWnTf9gLtWccB4XwvNKXgwriWgGAGF9GqLAFuyknF9jtJ
+
+>>>second attempt to transfer 10 BTS back to verbaltech2 succeeds at a cost of 15 BTS, leaving account babe1 empty<<<
+unlocked >>> ^C
+
+$ cli_wallet -w /home/admin/.BitShares2/bab2 -H 127.0.0.1:8092 -s ws://127.0.0.1:8090
+locked >>> unlock "B@b32" 
+unlock "B@b32" 
+unlocked >>> set_key_label "BTS5Qmr9H9SM39EHmVgXtsVjUGn2xBUtqbF6MdQ6RpnxUWNak7mse" language
+set_key_label "BTS5Qmr9H9SM39EHmVgXtsVjUGn2xBUtqbF6MdQ6RpnxUWNak7mse" language
+true
+unlocked >>> get_blind_balances language
+get_blind_balances language
+
+unlocked >>> receive_blind_transfer boqRZqyKaZW6bExrystPwFdXvzUBJSjGeaqy482NxBJ6S9VPCqArXCypszWZnpCeG7
+jfS3oUnbtmn5bmmVH5HCXJg9QxCmn4pocbJ8ipRHfzgeq1mLMewQNn6HGrkb5WbosSntj3o4LcSEMpw2etsR2GjnBxcdxN879rBwxm
+6inhbpsoYn1nGwS4Ho3SqoCF43MRDK3ouYrFBcAK2TTPXfnnvAU3r1UvhNHpxuNaS1cexbd88Nn6BTxSifKdJ8ysFft98e88Cbek
+receive_blind_transfer boqRZqyKaZW6bExrystPwFdXvzUBJSjGeaqy482NxBJ6S9VPCqArXCypszWZnpCeG7jfS3oUnbtmn5b
+mmVH5HCXJg9QxCmn4pocbJ8ipRHfzgeq1mLMewQNn6HGrkb5WbosSntj3o4LcSEMpw2etsR2GjnBxcdxN879rBwxm6inhbpsoYn1nG
+wS4Ho3SqoCF43MRDK3ouYrFBcAK2TTPXfnnvAU3r1UvhNHpxuNaS1cexbd88Nn6BTxSifKdJ8ysFft98e88Cbek
+10 assert_exception: Assert Exception
+a0 != e: too few arguments passed to method
+    {}
+    th_a  api_connection.hpp:140 call_generic
+unlocked >>> receive_blind_transfer boqRZqyKaZW6bExrystPwFdXvzUBJSjGeaqy482NxBJ6S9VPCqArXCypszWZnpCeG7
+jfS3oUnbtmn5bmmVH5HCXJg9QxCmn4pocbJ8ipRHfzgeq1mLMewQNn6HGrkb5WbosSntj3o4LcSEMpw2etsR2GjnBxcdxN879rBwxm
+6inhbpsoYn1nGwS4Ho3SqoCF43MRDK3ouYrFBcAK2TTPXfnnvAU3r1UvhNHpxuNaS1cexbd88Nn6BTxSifKdJ8ysFft98e88Cbek b
+ab1
+receive_blind_transfer boqRZqyKaZW6bExrystPwFdXvzUBJSjGeaqy482NxBJ6S9VPCqArXCypszWZnpCeG7jfS3oUnbtmn5b
+mmVH5HCXJg9QxCmn4pocbJ8ipRHfzgeq1mLMewQNn6HGrkb5WbosSntj3o4LcSEMpw2etsR2GjnBxcdxN879rBwxm6inh[73/1990]
+wS4Ho3SqoCF43MRDK3ouYrFBcAK2TTPXfnnvAU3r1UvhNHpxuNaS1cexbd88Nn6BTxSifKdJ8ysFft98e88Cbek bab1
+10 assert_exception: Assert Exception
+a0 != e: too few arguments passed to method
+    {}
+    th_a  api_connection.hpp:140 call_generic
+unlocked >>> receive_blind_transfer boqRZqyKaZW6bExrystPwFdXvzUBJSjGeaqy482NxBJ6S9VPCqArXCypszWZnpCeG7
+jfS3oUnbtmn5bmmVH5HCXJg9QxCmn4pocbJ8ipRHfzgeq1mLMewQNn6HGrkb5WbosSntj3o4LcSEMpw2etsR2GjnBxcdxN879rBwxm
+6inhbpsoYn1nGwS4Ho3SqoCF43MRDK3ouYrFBcAK2TTPXfnnvAU3r1UvhNHpxuNaS1cexbd88Nn6BTxSifKdJ8ysFft98e88Cbek b
+ab1 memo
+receive_blind_transfer boqRZqyKaZW6bExrystPwFdXvzUBJSjGeaqy482NxBJ6S9VPCqArXCypszWZnpCeG7jfS3oUnbtmn5b
+mmVH5HCXJg9QxCmn4pocbJ8ipRHfzgeq1mLMewQNn6HGrkb5WbosSntj3o4LcSEMpw2etsR2GjnBxcdxN879rBwxm6inhbpsoYn1nG
+wS4Ho3SqoCF43MRDK3ouYrFBcAK2TTPXfnnvAU3r1UvhNHpxuNaS1cexbd88Nn6BTxSifKdJ8ysFft98e88Cbek bab1 memo
+2840580ms th_a       wallet.cpp:743                save_wallet_file     ] saving wallet to file /home/
+admin/.BitShares2/bab2
+18 BTS  babe1  =>  language  memo
+
+unlocked >>> get_blind_balances language
+get_blind_balances language
+18 BTS
+
+unlocked >>> set_key_label BTS6oxUUKFD8SfGoXb6AwDBEoBt8WM7g4Mtz8SWdinUeHemr9yoxi vt2
+set_key_label BTS6oxUUKFD8SfGoXb6AwDBEoBt8WM7g4Mtz8SWdinUeHemr9yoxi vt2
+true
+unlocked >>> set_key_label "BTS5Qmr9H9SM39EHmVgXtsVjUGn2xBUtqbF6MdQ6RpnxUWNak7mse" language
+set_key_label "BTS5Qmr9H9SM39EHmVgXtsVjUGn2xBUtqbF6MdQ6RpnxUWNak7mse" language
+false
+unlocked >>> blind_transfer language vt2 3 BTS true
+blind_transfer language vt2 3 BTS true
+2158958ms th_a       wallet.cpp:3701               blind_transfer_help  ] "to_sum_blind_factor": to_sum_blind_factor blind_factor: 9abf35bb0d50fdc78dd9d3d3c46ef8c3c77fd00f5a3f3ff14c63970ec7d1a855 
+2158959ms th_a       wallet.cpp:3703               blind_transfer_help  ] "nochange to_blind_factor": nochange to_blind_factor blind_factor: 9abf35bb0d50fdc78dd9d3d3c46ef8c3c77fd00f5a3f3ff14c63970ec7d1a855 
+2158962ms th_a       wallet.cpp:3711               blind_transfer_help  ] "to_out.blind": to_out.blind blind_factor: 9abf35bb0d50fdc78dd9d3d3c46ef8c3c77fd00f5a3f3ff14c63970ec7d1a855 to_out.commitment: 03b8001a951e87e394ef54a53c246da1ffb3e28a8d5d10ebde3ad4bd4467c41925 
+2158964ms th_a       wallet.cpp:3766               blind_transfer_help  ] validate before
+blind_transfer_operation temp-account fee: 15 BTS
+3 BTS to  vt2
+          receipt: bcVWr9kfGHHyzRKraLQaUzPass6C8MGbAecCjpPfSkAfkctLomX2eCoQq1k2wzXfKC6L9ZMfAU8MouF6R5Wmudayg4BqFzaaixbmQibFucnc1Tz6cj4xidDb5Jsu6ThQtZD13DamKsFRgmcG4sE47NsJJf5UfPoE47pVdJLaVNdNdrfxnZ5naYVA597wVbG8ttTDgkXq74uYwZjx5vg6enWJoQPj5DQpw1Zf6JtPXTTccf3LD5Dj7ghZoRExqYTYuxqoMvhaZWM6
+[/quote]
+
+[/quote]
+
+--------------------------------------------------------------
+
