@@ -8,4 +8,7 @@ Tutorials
    confidential-transactions
    account-create
    committee-fee-change
-   committee--member-create
+   committee-member-create
+
+   worker-create
+   worker-budget

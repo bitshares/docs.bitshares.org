@@ -1,5 +1,5 @@
 **********************************
-Howto Run a Blockproducing Witness
+Howto Run a Block-producing Witness
 **********************************
 
 This document serves as an introduction on how to become an actively block
@@ -229,3 +229,4 @@ implemented is available in ``scripts/pricefeed`` at `github`_ together with
 the corresponding documentation.
 
 .. _github: https://github.com/xeroc/python-graphenelib/
+
