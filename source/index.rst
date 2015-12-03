@@ -38,18 +38,10 @@ Recent Updates
 
 .. r!date +\%y/\%m/\%d
 
-* ``15/12/03`` :doc:`bitshares/tutorials/index`
-               :doc:`bitshares/tutorials/confidential-transactions`, 
-               :doc:`bitshares/user/committee`,
-               :doc:`bitshares/user/worker-budget`,
-               :doc:`bitshares/user/shareholder`,
-               :doc:`bitshares/user/worker`,
+* ``15/12/03`` :doc:`bitshares/tutorials/index`, :doc:`bitshares/tutorials/confidential-transactions`, :doc:`bitshares/user/committee`, :doc:`bitshares/tutorials/worker-budget`, :doc:`bitshares/user/shareholder`, :doc:`bitshares/user/worker`,
 * ``15/11/30`` :doc:`bitshares/user/dex-margin-mechanics`
-* ``15/11/26`` :doc:`bitshares/user/first-steps-users`,
-               :doc:`bitshares/user/you-should-know`,
-               :doc:`bitshares/user/assets`
-* ``15/11/23`` User Guide updates: :doc:`bitshares/user/transactions`,
-               :doc:`bitshares/user/dex`, :doc:`bitshares/user/security`
+* ``15/11/26`` :doc:`bitshares/user/first-steps-users`, :doc:`bitshares/user/you-should-know`, :doc:`bitshares/user/assets`
+* ``15/11/23`` User Guide updates: :doc:`bitshares/user/transactions`, :doc:`bitshares/user/dex`, :doc:`bitshares/user/security`
 * ``15/11/13`` Refactoring, updates for: :doc:`integration/index`
 * ``15/11/10`` Added MUSE blockchain: :doc:`muse/index`
 * ``15/11/01`` Release of :html:`<a href="_downloads/bitshares-financial-platform.pdf" onclick="ga('set', 'nonInteraction', false);ga('send', 'event', { eventCategory: 'download', eventAction: 'click', eventLabel: 'BitShares 2.0: Financial Smart Contract Platform'});">BitShares 2.0: Financial Smart Contract Platform</a> whitepaper`
@@ -71,7 +63,7 @@ underlying asset (e.g. bitUSD tracking the U.S. dollar).
 .. _BitShares 2.0: http://BitShares.org
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
 
    bitshares/index
 
@@ -84,7 +76,7 @@ distributed, Peer-to-Peer network that is both transparent and open to all.
 .. _MUSE: http://museblockchain.com
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
 
    muse/index
 
