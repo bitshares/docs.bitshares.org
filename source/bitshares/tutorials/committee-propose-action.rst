@@ -67,7 +67,12 @@ the number returned by ``begin_builder_transaction`` above.
 
 ::
 
-    >>> add_operation_to_builder_transaction $HANDLE [12,{"fee": {"amount": 100000000, "asset_id": "1.3.0"}, "issuer": "1.2.0", "asset_to_update": "1.3.113", "new_options": { "feed_lifetime_sec": 86400, "minimum_feeds": 7, "force_settlement_delay_sec": 86400, "force_settlement_offset_percent": 0, "maximum_force_settlement_volume": 200, "short_backing_asset": "1.3.0", "extensions": []}, "extensions": []}]
+    >>> add_operation_to_builder_transaction $HANDLE [12,{"fee": {"amount":
+    100000000, "asset_id": "1.3.0"}, "issuer": "1.2.0", "asset_to_update":
+    "1.3.113", "new_options": { "feed_lifetime_sec": 86400, "minimum_feeds": 7,
+    "force_settlement_delay_sec": 86400, "force_settlement_offset_percent": 0,
+    "maximum_force_settlement_volume": 200, "short_backing_asset": "1.3.0",
+    "extensions": []}, "extensions": []}]
     >>> propose_builder_transaction2 $HANDLE init0 "2015-12-04T14:55:00" 3600 false
 
 The ``propose_builder_transaction`` command is broken and deprecated.

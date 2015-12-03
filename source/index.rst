@@ -38,6 +38,7 @@ Recent Updates
 
 .. r!date +\%y/\%m/\%d
 
+* ``15/12/03`` :doc:`bitshares/tutorials/construct-transaction`, :doc:`bitshares/tutorials/propose-transaction`
 * ``15/12/03`` :doc:`bitshares/tutorials/index`, :doc:`bitshares/tutorials/confidential-transactions`, :doc:`bitshares/user/committee`, :doc:`bitshares/tutorials/worker-budget`, :doc:`bitshares/user/shareholder`, :doc:`bitshares/user/worker`, :doc:`integration/often-used-calls`, :doc:`integration/merchants/merchant-protocol`, :doc:`integration/merchants/login-protocol`
 * ``15/11/30`` :doc:`bitshares/user/dex-margin-mechanics`
 * ``15/11/26`` :doc:`bitshares/user/first-steps-users`, :doc:`bitshares/user/you-should-know`, :doc:`bitshares/user/assets`

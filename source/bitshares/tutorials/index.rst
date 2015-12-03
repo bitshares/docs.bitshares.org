@@ -10,6 +10,8 @@ General Tutorials
 
    confidential-transactions
    account-create
+   construct-transaction
+   propose-transaction
 
 Committee Tutorials
 ###################
