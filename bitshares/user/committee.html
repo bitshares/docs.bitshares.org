@@ -139,10 +139,7 @@
 <li class="toctree-l3"><a class="reference internal" href="dex.html">Decentralized Exchange</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html#blockchain-positions">Blockchain &#8220;Positions&#8221;</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="shareholder.html">Shareholder</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="">Committee</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#technical-realization">Technical Realization</a></li>
-</ul>
-</li>
+<li class="toctree-l4 current"><a class="current reference internal" href="">Committee</a></li>
 <li class="toctree-l4"><a class="reference internal" href="witness.html">Witnesses</a></li>
 <li class="toctree-l4"><a class="reference internal" href="worker.html">Workers / Budget Items</a></li>
 <li class="toctree-l4"><a class="reference internal" href="marketer.html">Marketer</a></li>
@@ -150,6 +147,7 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
 </ul>
 </li>
 </ul>
@@ -183,41 +181,33 @@
    
   <div class="section" id="committee">
 <h1>Committee<a class="headerlink" href="#committee" title="Permalink to this headline">¶</a></h1>
-<p>(under construction)</p>
-<div class="section" id="technical-realization">
-<h2>Technical Realization<a class="headerlink" href="#technical-realization" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="creating-a-new-committee-member">
-<h3>Creating a New Committee Member<a class="headerlink" href="#creating-a-new-committee-member" title="Permalink to this headline">¶</a></h3>
-<p>We can create a new committee member with::</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">create_committee_member</span> <span class="n">account</span> <span class="s">&quot;url&quot;</span> <span class="n">true</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="proposing-a-fee-change">
-<h3>Proposing a fee change<a class="headerlink" href="#proposing-a-fee-change" title="Permalink to this headline">¶</a></h3>
-<p>Let&#8217;s assume we want to propose a new fee for the account creation operation. We
-want 5 BTS as basic fee and want premium names to cost 2000 BTS. Additionally,
-a price per kbyte for the account creation transaction can be defined. We get</p>
-<div class="highlight-json"><div class="highlight"><pre><span class="p">{</span>
- <span class="nt">&quot;account_create_operation&quot;</span> <span class="p">:</span> <span class="p">{</span>
-           <span class="nt">&quot;basic_fee&quot;</span>      <span class="p">:</span> <span class="mi">500000</span><span class="p">,</span>
-           <span class="nt">&quot;premium_fee&quot;</span>    <span class="p">:</span> <span class="mi">200000000</span><span class="p">,</span>
-           <span class="nt">&quot;price_per_kbyte&quot;</span><span class="p">:</span> <span class="mi">100000</span><span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p>We propose the fee change for account <code class="docutils literal"><span class="pre">&lt;committee_member&gt;</span></code> with::</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">propose_fee_change</span> <span class="o">&lt;</span><span class="n">committee_member</span><span class="o">&gt;</span> <span class="s">&quot;2015-10-14T15:29:00&quot;</span> <span class="p">{</span><span class="s">&quot;account_create_operation&quot;</span> <span class="p">:</span> <span class="p">{</span><span class="s">&quot;basic_fee&quot;</span><span class="p">:</span> <span class="mi">500000</span><span class="p">,</span> <span class="s">&quot;premium_fee&quot;</span><span class="p">:</span> <span class="mi">200000000</span><span class="p">,</span> <span class="s">&quot;price_per_kbyte&quot;</span><span class="p">:</span> <span class="mi">100000</span><span class="p">}}</span> <span class="n">false</span>
-</pre></div>
-</div>
-<p>Now we need to convince the other committee members to approve. We can do so on
-the blockchain by asking them for approval with</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">approve_proposal</span> <span class="o">&lt;</span><span class="n">committee_member</span><span class="o">&gt;</span> <span class="s">&quot;1.10.1&quot;</span> <span class="p">{</span><span class="s">&quot;active_approvals_to_add&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="s">&quot;init1&quot;</span><span class="p">,</span> <span class="s">&quot;init2&quot;</span><span class="p">,</span> <span class="s">&quot;init3&quot;</span><span class="p">,</span> <span class="s">&quot;init4&quot;</span><span class="p">,</span> <span class="s">&quot;init5&quot;</span><span class="p">,</span> <span class="s">&quot;init6&quot;</span><span class="p">,</span> <span class="s">&quot;init7&quot;</span><span class="p">,</span> <span class="s">&quot;init8&quot;</span><span class="p">,</span> <span class="s">&quot;init9&quot;</span><span class="p">,</span> <span class="s">&quot;init10&quot;</span><span class="p">]}</span> <span class="n">false</span>
-</pre></div>
-</div>
-<p>where <code class="docutils literal"><span class="pre">1.10.1</span></code> is the id of the proposal in question.</p>
-</div>
-</div>
+<p>Since Bitcoin struggled to reach a consensus about the size of their blocks,
+the people in the cryptocurrency space realized that the governance of a DAC
+should not be ignored. Hence, BitShares offers a tools to reach on-chain
+consensus about business management decisions.</p>
+<p>The BitShares blockchain has a set of parameters available that are subject of
+shareholder approval. Shareholders can define their preferred set of parameters
+and thereby create a so called <em>committee member</em> or alternatively vote for an
+existing committee member. The BitShares committee consists of several <em>active</em>
+committee members.</p>
+<p>The BitShares ecosystem has a set of parameters available that are subject of
+shareholder approval. Initially, BitShares has the following blockchain
+parameters:</p>
+<ul class="simple">
+<li><strong>fee structure</strong>:         <em>fess that have to be paid by customers for individual transactions</em></li>
+<li><strong>block interval</strong>:        <em>i.e. block interval, max size of block/transaction</em></li>
+<li><strong>expiration parameters</strong>: <em>i.e. maximum expiration interval</em></li>
+<li><strong>witness parameters</strong>:    <em>i.e. maximum amount of witnesses (block producers)</em></li>
+<li><strong>committee parameters</strong>:  <em>i.e. maximum amount of committee members</em></li>
+<li><strong>witness pay</strong>:           <em>payment for each witnesses per signed block</em></li>
+<li><strong>worker budget</strong>:         <em>available budget available for budget items (e.g. development)</em></li>
+</ul>
+<p>Please note that the given set of parameters serves as an example and that the
+network&#8217;s parameters are subject to change over time.</p>
+<p>Additionally to defining the parameters any active witness can propose a
+protocol or business upgrade (i.e. hard fork) which can be voted on (or against)
+by shareholders. When the total votes for the hard fork are greater than the
+median witness weight <cite>w</cite> then the hard fork takes effect.</p>
 </div>
 
 

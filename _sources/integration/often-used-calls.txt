@@ -2,38 +2,15 @@
 Often used API Calls
 ********************
 
+.. contents:: Table of Contents
+   :depth: 3
+
 Overview
 ########
 
 Some API calls that are most interesting for exchanges and gateways are listed
 in the following table. They are compared to their corresponding API calls in
 BitShares 1.0.
-
-+-----------------------------------+--------------------------------------------------------------------------+
-| BitShares 1.0 Calls               | BitShares 2.0 Calls                                                      |
-+===================================+==========================================================================+
-|wallet_open                        | n.A. (default ``wallet.json``)                                           |
-+-----------------------------------+--------------------------------------------------------------------------+
-|wallet_unlock                      | ``unlock <password>``                                                    |
-+-----------------------------------+--------------------------------------------------------------------------+
-|wallet_account_balance             | ``list_account_balances <account>``                                      |
-+-----------------------------------+--------------------------------------------------------------------------+
-|wallet_address_create              | n.A. no addresses available for sending                                  |
-+-----------------------------------+--------------------------------------------------------------------------+
-|wallet_account_transaction_history | ``get_account_history <account> <limit>``                                |
-+-----------------------------------+--------------------------------------------------------------------------+
-|wallet_transfer                    | ``transfer <from> <to> <amount> <asset> "<memo>" <broadcast>``           |
-+-----------------------------------+--------------------------------------------------------------------------+
-|blockchain_get_transaction         | ``get_object 1.11.<id>`` (``<id>`` integer)                              |
-+-----------------------------------+--------------------------------------------------------------------------+
-|blockchain_get_asset               | ``get_asset <symbol>`` or ``get_object 1.3.<id>`` (``<id>`` integer)     |
-+-----------------------------------+--------------------------------------------------------------------------+
-|info                               | ``info``                                                                 |
-+-----------------------------------+--------------------------------------------------------------------------+
-
-
-Example Outputs
-################
 
 We will now take a look at some sample ouputs for some of the API calls in the
 table above. We recommend to read the following articles:
@@ -44,9 +21,10 @@ table above. We recommend to read the following articles:
    ../api/cli_wallet
 
 ``list_account_balances <account>``
-***********************************
+###################################
 
-**Script**:
+Script
+******
 
 .. code-block:: python
 
@@ -56,7 +34,8 @@ table above. We recommend to read the following articles:
     res = client.list_account_balances("dan")
     print(json.dumps(res,indent=4))
 
-**Result**:
+Result
+******
 
 .. code-block:: json
 
@@ -79,11 +58,16 @@ table above. We recommend to read the following articles:
         }
     ]
 
+Reference
+*********
+
+.. doxygenfunction:: graphene::wallet::wallet_api::list_account_balances
 
 ``transfer <from> <to> <amount> <asset> "<memo>" <broadcast>``
-***************************************************************
+###############################################################
 
-**Script**:
+Script
+******
 
 .. code-block:: python
 
@@ -97,7 +81,8 @@ The final parameter ``True`` states that the signed transaction will be
 broadcast. If this parameter is ``False`` the transaction will be signed but
 not broadcast, hence not executed.
 
-**Result**:
+Result
+******
 
 .. code-block:: json
 
@@ -133,11 +118,77 @@ not broadcast, hence not executed.
       ]
     }
 
+Reference
+*********
+
+.. doxygenfunction:: graphene::wallet::wallet_api::transfer
+
+``transfer2 <from> <to> <amount> <asset> "<memo>"``
+###############################################################
+
+Script
+******
+
+.. code-block:: python
+
+    import json
+    from grapheneapi import GrapheneAPI
+    client = GrapheneAPI("localhost", 8092, "", "")
+    res = client.transfer2("fromaccount","toaccount","10", "USD", "$10 gift");
+    print(json.dumps(res,indent=4))
+
+This method works just like transfer, except it always broadcasts and returns
+the transaction ID along with the signed transaction.
+
+Result
+******
+
+.. code-block:: json
+
+    [b546a75a891b5c51de6d1aafd40d10e91a717bb3,{
+      "ref_block_num": 18,
+      "ref_block_prefix": 2320098938,
+      "expiration": "2015-10-13T13:56:15",
+      "operations": [[
+          0,{
+            "fee": {
+              "amount": 2089843,
+              "asset_id": "1.3.0"
+            },
+            "from": "1.2.17",
+            "to": "1.2.7",
+            "amount": {
+              "amount": 10000000,
+              "asset_id": "1.3.0"
+            },
+            "memo": {
+              "from": "GPH6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV",
+              "to": "GPH6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV",
+              "nonce": "16430576185191232340",
+              "message": "74d0e455e2e5587b7dc85380102c3291"
+            },
+            "extensions": []
+          }
+        ]
+      ],
+      "extensions": [],
+      "signatures": [
+        "1f147aed197a2925038e4821da54bd7818472ebe25257ac9a7ea66429494e7242d0dc13c55c6840614e6da6a5bf65ae609a436d13a3174fd12f073550f51c8e565"
+      ]
+    }
+   ]
+
+Reference
+*********
+
+.. doxygenfunction:: graphene::wallet::wallet_api::transfer2
+
 
 ``get_account_history <account> <limit>``
-******************************************
+##########################################
 
-**Script**:
+Script
+******
 
 .. code-block:: python
 
@@ -147,7 +198,8 @@ not broadcast, hence not executed.
     res = client.get_account_history("dan", 1)
     print(json.dumps(res,indent=4))
 
-**Result**:
+Result
+******
 
 .. code-block:: json
 
@@ -188,10 +240,16 @@ not broadcast, hence not executed.
         }
     ]
 
-``get_object "1.11.<id>"``
-***********************************
+Reference
+*********
 
-**Script**:
+.. doxygenfunction:: graphene::wallet::wallet_api::get_account_history
+
+``get_object "1.11.<id>"``
+###################################
+
+Script
+******
 
 .. code-block:: python
 
@@ -201,7 +259,8 @@ not broadcast, hence not executed.
     res = client.get_object("1.11.213277")
     print(json.dumps(res,indent=4))
 
-**Result**:
+Result
+******
 
 .. code-block:: json
 
@@ -236,11 +295,16 @@ not broadcast, hence not executed.
         "virtual_op": 47888
     }
 
+Reference
+*********
+
+.. doxygenfunction:: graphene::wallet::wallet_api::get_object
 
 ``get_asset <USD>``
-***********************************
+###################################
 
-**Script**:
+Script
+******
 
 .. code-block:: python
 
@@ -250,7 +314,8 @@ not broadcast, hence not executed.
     res = client.get_asset("USD")
     print(json.dumps(res,indent=4))
 
-**Result**:
+Result
+******
 
 .. code-block:: json
 
@@ -285,3 +350,36 @@ not broadcast, hence not executed.
         "id": "1.3.536",
         "precision": 4
     }
+
+Reference
+*********
+
+.. doxygenfunction:: graphene::wallet::wallet_api::get_asset
+
+Correspondences with BitShares 1.0 Calls
+########################################
+
++----------------------------------------+--------------------------------------------------------------------------+
+| BitShares 1.0 Calls                    | BitShares 2.0 Calls                                                      |
++========================================+==========================================================================+
+|``wallet_open``                         | n.A. (default ``wallet.json``)                                           |
++----------------------------------------+--------------------------------------------------------------------------+
+|``wallet_unlock``                       | ``unlock <password>``                                                    |
++----------------------------------------+--------------------------------------------------------------------------+
+|``wallet_account_balance``              | ``list_account_balances <account>``                                      |
++----------------------------------------+--------------------------------------------------------------------------+
+|``wallet_address_create``               | n.A. no addresses available for sending                                  |
++----------------------------------------+--------------------------------------------------------------------------+
+|``wallet_account_transaction_history``  | ``get_account_history <account> <limit>``                                |
++----------------------------------------+--------------------------------------------------------------------------+
+|``wallet_transfer``                     | ``transfer <from> <to> <amount> <asset> "<memo>" <broadcast>``           |
+|                                        | ``transfer2 <from> <to> <amount> <asset> "<memo>"``                      |
++----------------------------------------+--------------------------------------------------------------------------+
+|n.A.                                    | ``get_transaction_id(const signed_transaction & trx)``                   |
++----------------------------------------+--------------------------------------------------------------------------+
+|``blockchain_get_transaction``          | ``get_object 1.11.<id>`` (``<id>`` integer)                              |
++----------------------------------------+--------------------------------------------------------------------------+
+|``blockchain_get_asset``                | ``get_asset <symbol>`` or ``get_object 1.3.<id>`` (``<id>`` integer)     |
++----------------------------------------+--------------------------------------------------------------------------+
+|``info``                                | ``info``                                                                 |
++----------------------------------------+--------------------------------------------------------------------------+
