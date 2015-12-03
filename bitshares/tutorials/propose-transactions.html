@@ -1,0 +1,254 @@
+
+
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Proposing a Transaction</title>
+
+    <!-- CSS -->
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href='../../_static/main.css' rel='stylesheet'>
+    <link href='../../_static/style.css' rel='stylesheet'>
+    <link href='../../_static/doxygen.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+    <!-- Sphinx search -->
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <!-- Transifex -->
+    <script type="text/javascript">
+      window.liveSettings = {
+        api_key: "bbf87af0641e4bbf89c98088d48e0449",
+      };
+    </script>
+    <script type="text/javascript" src="http://cdn.transifex.com/live.js"></script>
+
+    <!-- title card -->
+    <link  href='../../_static/title-card.css' rel='stylesheet'>
+    <script src='../../_static/script.js'></script>
+    
+    <!-- Sphinx search -->
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Graphene Technical Documentation  documentation"
+          href="../../_static/opensearch.xml"/>
+
+    <!-- Meta -->
+    <meta content="Graphene Documentation" property="og:site_name">
+    <meta content="Graphene Documentation" property="og:title">
+    <meta content="website" property="og:type">
+    <meta content="Graphene Documentation" name="description">
+    <meta content="Graphene Documentation" property="og:description">
+    
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-68381245-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+ </head>
+ <body class='no-literate'>
+
+
+ <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
+   <div class='in'>
+     <div class='headline'>
+       <h1>Proposing a Transaction</h1>
+ 
+     </div>
+   </div>
+ </div>
+
+ <div class='header'>
+   <div class='left navlinks'>
+    
+        <div class="top">
+         <div class="title">top</div>
+         <span><a class="uplink" href="../../index.html">Contents</a></span>
+        </div>
+
+   </div>
+   <!--
+    <div class='right'>
+<div id="searchbox" style="display: none" role="search">
+ <form class="search" action="../../search.html" method="get">
+   <input type="text" name="q" />
+   <input type="submit" value="Go" />
+   <input type="hidden" name="check_keywords" value="yes" />
+   <input type="hidden" name="area" value="default" />
+ </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+   </div>
+   -->
+ </div>
+
+ <div class='content-root'>
+  <!-- menu bar -->
+  <div class='menubar'>
+   <div class='section'>
+    <a href="../..//index.html"><img src="../../_static/grphn-logo.svg" height="48" /></a>
+
+    <a href="../..//bitshares/index.html"><img src="../../_static/bitshares-logo.png" height="48" /></a>
+
+    <a href="../..//muse/index.html"><img src="../../_static/MUSE_logo_transp_v1.png" height="48" /></a>
+   </div>
+   <div class='menu section'>
+    <div id="toc">
+      <h3>Table Of Contents</h3>
+      <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">BitShares 2.0</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../muse/index.html">MUSE</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../integration/index.html">Integration Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">Graphene API</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../blockchain/index.html">Blockchain Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../namespaces/index.html">Namespaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../testnet/index.html">Testnets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/index.html">Frequently Asked Questions</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../meta/index.html">Meta</a></li>
+</ul>
+
+    </div>
+   </div>
+   <div class='bottom section'>
+   <!--
+     <a href='https://github.com/cryptonomex/graphene'>View on GitHub</a><br>
+     <a href='https://github.com/cryptonomex/graphene/blob/master/README.md' target='_blank'>See .md source</a>
+   -->
+   </div>
+  </div>
+  <div class='content'>
+   
+  <div class="section" id="proposing-a-transaction">
+<h1>Proposing a Transaction<a class="headerlink" href="#proposing-a-transaction" title="Permalink to this headline">¶</a></h1>
+<p>Proposed transactions can be used everywhere multiple parties have to agree for
+a transaction to become valid.</p>
+<div class="section" id="crafting-a-transaction">
+<h2>Crafting a Transaction<a class="headerlink" href="#crafting-a-transaction" title="Permalink to this headline">¶</a></h2>
+<p>If is recommended that the reader first reads through the following tutorial:</p>
+<ul class="simple">
+<li><a class="reference internal" href="construct-transaction.html"><em>Manually Construct Any Transaction</em></a></li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h2>Proposing a Transaction<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>A proposed transaction is encapsulated within another operation type. We can
+achieve this by slightly modifying our procedure:</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt;&gt;&gt; begin_builder_transaction
+&gt;&gt;&gt; add_operation_to_builder_transaction $HANDLE [opId, {operation}]
+
+# New:
+&gt;&gt;&gt; propose_builder_transaction2 $HANDLE init0 &quot;2015-12-04T14:55:00&quot; 3600 false
+
+&gt;&gt;&gt; set_fees_on_builder_transaction $HANDLE BTS
+&gt;&gt;&gt; sign_builder_transaction $HANDLE true
+</pre></div>
+</div>
+<div class="section" id="definition">
+<h3>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h3>
+<dl class="function">
+<dt id="_CPPv2N8graphene6wallet10wallet_api27propose_builder_transactionE23transaction_handle_type14time_point_sec8uint32_tb">
+<span id="graphene::wallet::wallet_api::propose_builder_transaction__transaction_handle_type.time_point_sec.uint32_t.b"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1acd0cbe740362f4b83f3b97f9192039f6"></span>signed_transaction <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">propose_builder_transaction</code><span class="sig-paren">(</span><a class="reference internal" href="../../namespaces/wallet.html#_CPPv2N8graphene6wallet23transaction_handle_typeE" title="graphene::wallet::transaction_handle_type">transaction_handle_type</a> <em>handle</em>, time_point_sec <em>expiration</em>, uint32_t <em>review_period_seconds</em>, bool <em>broadcast</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api27propose_builder_transactionE23transaction_handle_type14time_point_sec8uint32_tb" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">doxygenfunction: Cannot find function &#8220;graphene::wallet::wallet_api::propose_builder_transaction2&#8221; in doxygen xml output for project &#8220;graphene&#8221; from directory: ../../graphene/doxygen/xml/</p>
+</div>
+</div>
+</div>
+<div class="section" id="example-transfer">
+<h2>Example: Transfer<a class="headerlink" href="#example-transfer" title="Permalink to this headline">¶</a></h2>
+<p>A simple <em>transfer</em> takes the following form:</p>
+<div class="highlight-python"><div class="highlight"><pre>get_prototype_operation transfer_operation
+[
+  0,{
+    &quot;fee&quot;: {
+      &quot;amount&quot;: 0,
+      &quot;asset_id&quot;: &quot;1.3.0&quot;
+    },
+    &quot;from&quot;: &quot;1.2.0&quot;,
+    &quot;to&quot;: &quot;1.2.0&quot;,
+    &quot;amount&quot;: {
+      &quot;amount&quot;: 0,
+      &quot;asset_id&quot;: &quot;1.3.0&quot;
+    },
+    &quot;extensions&quot;: []
+  }
+]
+</pre></div>
+</div>
+<p>The operation id for the <code class="docutils literal"><span class="pre">transfer_operation</span></code> is thus <code class="docutils literal"><span class="pre">0</span></code> (third line) and
+the core elements (removing fee) of this operation take the form:</p>
+<div class="highlight-json"><div class="highlight"><pre><span class="p">{</span>
+  <span class="nt">&quot;from&quot;</span><span class="p">:</span> <span class="s2">&quot;1.2.0&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;to&quot;</span><span class="p">:</span> <span class="s2">&quot;1.2.0&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;amount&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;asset_id&quot;</span><span class="p">:</span> <span class="s2">&quot;1.3.0&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>We add an operation to a transaction as follows (line breaks inserted for
+readability):</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">begin_builder_transaction</span>
+<span class="go">0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">add_operation_to_builder_transaction</span>
+<span class="go">     0</span>
+<span class="go">    [0,{</span>
+<span class="go">           &quot;from&quot;: &quot;1.2.0&quot;,</span>
+<span class="go">           &quot;to&quot;: &quot;1.2.0&quot;,</span>
+<span class="go">           &quot;amount&quot;: {</span>
+<span class="go">             &quot;amount&quot;: 0,</span>
+<span class="go">             &quot;asset_id&quot;: &quot;1.3.0&quot;</span>
+<span class="go">           }</span>
+<span class="go">       }]</span>
+</pre></div>
+</div>
+<p>The corresponding <code class="docutils literal"><span class="pre">id</span></code> can be obtained with <code class="docutils literal"><span class="pre">get_account</span></code>, and
+<code class="docutils literal"><span class="pre">get_asset</span></code>.</p>
+<p>We add a fee payed in BTS, sign and broadcast the transaction (if valid):</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">set_fees_on_builder_transaction</span> <span class="mi">0</span> <span class="n">BTS</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">sign_builder_transaction</span> <span class="mi">0</span> <span class="n">true</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+  </div>
+ </div>
+
+ <script>var HN=[];HN.factory=function(e){return function(){HN.push([e].concat(Array.prototype.slice.call(arguments,0)))};},HN.on=HN.factory("on"),HN.once=HN.factory("once"),HN.off=HN.factory("off"),HN.emit=HN.factory("emit"),HN.load=function(){var e="hn-button.js";if(document.getElementById(e))return;var t=document.createElement("script");t.id=e,t.src="//hn-button.herokuapp.com/hn-button.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)},HN.load();</script>
+ <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+ </body>
+</html>

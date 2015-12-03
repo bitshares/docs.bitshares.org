@@ -135,18 +135,14 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#basic-knowledge">Basic Knowledge</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#use-cases">Use-Cases</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="exchanges/index.html">Exchanges, Bridges, and Gateways</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="exchanges/index.html#step-by-step-instructions-for-exchanges">Step-By-Step Instructions for Exchanges</a></li>
-<li class="toctree-l4"><a class="reference internal" href="exchanges/index.html#libraries">Libraries</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="exchanges/index.html#detailed-technical-guide">Detailed Technical Guide</a><ul class="current">
-<li class="toctree-l5"><a class="reference internal" href="what-is-different.html">What is Different</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="exchanges/index.html#integration-instructions">Integration Instructions</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="exchanges/step-by-step.html">Step-By-Step Instructions for Exchanges</a></li>
 <li class="toctree-l5"><a class="reference internal" href="supporting-features.html">Supporting Features</a></li>
-<li class="toctree-l5"><a class="reference internal" href="interfacing.html">Interfacing with the BitShares Ecosystem</a></li>
-<li class="toctree-l5"><a class="reference internal" href="network-setup.html">Secure Network and Wallet Configuration</a></li>
-<li class="toctree-l5"><a class="reference internal" href="often-used-calls.html">Often used API Calls</a></li>
 <li class="toctree-l5 current"><a class="reference internal" href="whitelist.html">Using White- and Black-lists</a></li>
 <li class="toctree-l5"><a class="reference internal" href="securing-funds.html">Securing Funds</a></li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="exchanges/index.html#libraries">Libraries</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="merchants/index.html">Merchants</a></li>
@@ -322,13 +318,13 @@ whitelist::</p>
 <dl class="member">
 <dt id="_CPPv2N8graphene5chain13asset_options21whitelist_authoritiesE">
 <span id="graphene::chain::asset_options::whitelist_authorities__flat_set:account_id_type:"></span><span class="target" id="graphenestructgraphene_1_1chain_1_1asset__options_1a9bb53490451f02ecb9fe07e01bce2da0"></span>flat_set&lt;<a class="reference internal" href="../namespaces/chain.html#_CPPv2N8graphene5chain15account_id_typeE" title="graphene::chain::account_id_type">account_id_type</a>&gt; <code class="descname">whitelist_authorities</code><a class="headerlink" href="#_CPPv2N8graphene5chain13asset_options21whitelist_authoritiesE" title="Permalink to this definition">¶</a></dt>
-<dd><p>A set of accounts which maintain whitelists to consult for this asset. If enforce_white_list() returns true, an account may only send, receive, trade, etc. in this asset if one of these accounts appears in its <a class="reference internal" href="../namespaces/chain.html#grapheneclassgraphene_1_1chain_1_1account__object_1ac624b05f17f24fbb67f66d5fa85814fa"><span>account_object::whitelisting_accounts</span></a> field. </p>
+<dd><p>A set of accounts which maintain whitelists to consult for this asset. If whitelist_authorities is non-empty, then only accounts in whitelist_authorities are allowed to hold, use, or transfer the asset. </p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv2N8graphene5chain13asset_options21blacklist_authoritiesE">
 <span id="graphene::chain::asset_options::blacklist_authorities__flat_set:account_id_type:"></span><span class="target" id="graphenestructgraphene_1_1chain_1_1asset__options_1af04793715b1da8f1b8f9927f6e8d8e9e"></span>flat_set&lt;<a class="reference internal" href="../namespaces/chain.html#_CPPv2N8graphene5chain15account_id_typeE" title="graphene::chain::account_id_type">account_id_type</a>&gt; <code class="descname">blacklist_authorities</code><a class="headerlink" href="#_CPPv2N8graphene5chain13asset_options21blacklist_authoritiesE" title="Permalink to this definition">¶</a></dt>
-<dd><p>A set of accounts which maintain blacklists to consult for this asset. If enforce_white_list() returns true, an account may only send, receive, trade, etc. in this asset if none of these accounts appears in its <a class="reference internal" href="../namespaces/chain.html#grapheneclassgraphene_1_1chain_1_1account__object_1aa89c8709baa83afd446a8314179b100e"><span>account_object::blacklisting_accounts</span></a> field. If the account is blacklisted, it may not transact in this asset even if it is also whitelisted. </p>
+<dd><p>A set of accounts which maintain blacklists to consult for this asset. If flags &amp; white_list is set, an account may only send, receive, trade, etc. in this asset if none of these accounts appears in its <a class="reference internal" href="../namespaces/chain.html#grapheneclassgraphene_1_1chain_1_1account__object_1aa89c8709baa83afd446a8314179b100e"><span>account_object::blacklisting_accounts</span></a> field. If the account is blacklisted, it may not transact in this asset even if it is also whitelisted. </p>
 </dd></dl>
 
 <dl class="member">
