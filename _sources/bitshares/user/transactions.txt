@@ -14,4 +14,4 @@ documentation about all operation types can be found in our `doxygen docs`_.
 
    transactions-transfers
    transactions-proposed
-   transactions-stealth
+   transactions-confidential

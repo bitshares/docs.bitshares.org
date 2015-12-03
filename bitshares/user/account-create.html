@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <title>Manual Account Creation</title>
+    <title>Account Registration</title>
 
     <!-- CSS -->
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
@@ -73,7 +73,7 @@
  <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
    <div class='in'>
      <div class='headline'>
-       <h1>Manual Account Creation</h1>
+       <h1>Account Registration</h1>
  
      </div>
    </div>
@@ -84,7 +84,7 @@
     
         <div class="prev">
          <div class="title">previous</div>
-         <span><a href="account-permissions.html">Permissions</a></span>
+         <span><a href="account.html">Accounts</a></span>
         </div>
         <div class="top">
          <div class="title">top</div>
@@ -92,7 +92,7 @@
         </div>
         <div class="next">
          <div class="title">next</div>
-         <span><a href="security.html">Security</a></span>
+         <span><a href="account-memberships.html">Memberships</a></span>
         </div>
 
    </div>
@@ -133,13 +133,9 @@
 <li class="toctree-l3"><a class="reference internal" href="first-steps-users.html">First Steps for End-Users</a></li>
 <li class="toctree-l3"><a class="reference internal" href="you-should-know.html">Things you should know</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="account.html">Accounts</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="">Account Registration</a></li>
 <li class="toctree-l4"><a class="reference internal" href="account-memberships.html">Memberships</a></li>
 <li class="toctree-l4"><a class="reference internal" href="account-permissions.html">Permissions</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="">Manual Account Creation</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#using-the-wallet">Using the Wallet</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#manual-account-registration">Manual Account Registration</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="security.html">Security</a></li>
@@ -149,6 +145,7 @@
 <li class="toctree-l3"><a class="reference internal" href="index.html#blockchain-positions">Blockchain &#8220;Positions&#8221;</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
 </ul>
 </li>
 </ul>
@@ -180,91 +177,37 @@
   </div>
   <div class='content'>
    
-  <div class="section" id="manual-account-creation">
-<h1>Manual Account Creation<a class="headerlink" href="#manual-account-creation" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="using-the-wallet">
-<h2>Using the Wallet<a class="headerlink" href="#using-the-wallet" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="account-registration">
+<h1>Account Registration<a class="headerlink" href="#account-registration" title="Permalink to this headline">¶</a></h1>
+<p>In order to use BitShares, you will need to register an account.  All you need
+to provide is</p>
+<ul class="simple">
+<li>an account name</li>
+<li>a password</li>
+</ul>
 <p>For regular users, please follow the instructions in the wallet to create a new
-account. The wallet will contact a 3rd party faucet to pay for the registration
-fee.</p>
-</div>
-<div class="section" id="manual-account-registration">
-<h2>Manual Account Registration<a class="headerlink" href="#manual-account-registration" title="Permalink to this headline">¶</a></h2>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">This page is for advanced users only. For the sake of simplicity, we
-recommend every user to use one of the existing faucets which are integrated
-into most wallets already.</p>
-</div>
-<p>The process of registering a new account on the blockchain consists of two
-parts:</p>
+account:</p>
 <blockquote>
 <div><ul class="simple">
-<li>Picking a random brain key and deriving a <em>priate/public key</em> pair</li>
-<li>Create the corresponding account and registering it on the blockchain</li>
+<li><a class="reference external" href="https://openledger.info">OpenLedger</a></li>
+<li><a class="reference external" href="https://bitshares.org/wallet">BitShares.org</a></li>
+<li><a class="reference external" href="http://decentral.exchange">Decentral.exchange</a></li>
+<li>BunkerDex (under construction)</li>
+<li><em>more to come</em></li>
 </ul>
 </div></blockquote>
-<div class="section" id="brain-private-and-public-key-derivation">
-<h3>Brain, Private and Public Key Derivation<a class="headerlink" href="#brain-private-and-public-key-derivation" title="Permalink to this headline">¶</a></h3>
-<p>We can derive a new set auf keys using the <code class="docutils literal"><span class="pre">suggest_brain_key</span></code> command in the
-<a class="reference internal" href="../../apps/cliwallet.html"><em>CLI Wallet</em></a>. The result will look like this:</p>
-<div class="highlight-json"><div class="highlight"><pre>&gt;&gt;&gt; suggest_brain_key
-{
-  &quot;brain_priv_key&quot;: &quot;FILINGS THEREOF ENSILE JAW OVERBID RETINAL PILULAR RYPE CHITTY RAFFERY HANDGUN ERANIST UNPILE TWISTER BABYDOM CIBOL&quot;,
-  &quot;wif_priv_key&quot;: &quot;5JVrt2921aikA7QP5ZCtR2sJh4wbEnsHsK6qo67Shnk9ArKMzNT&quot;,
-  &quot;pub_key&quot;: &quot;BTS7D8jpQ2UwaQxqKyGpuhFQ9LBugCNxDhE7UN2jqgjVQgzG7zo9n&quot;
-}
-</pre></div>
-</div>
-<p>The hierarchy for these values goes like this::</p>
-<div class="highlight-python"><div class="highlight"><pre>HASH(brain_priv_key) -&gt; wif_priv_key
-HASH(HASH(brain_priv_key)) -&gt; pub_key
-</pre></div>
-</div>
-<p>Hence, if you keep the brain key, you will be able to recover your required keys
-to access your account and/or funds.</p>
-</div>
-<div class="section" id="creating-and-registering-an-account">
-<h3>Creating and Registering an account<a class="headerlink" href="#creating-and-registering-an-account" title="Permalink to this headline">¶</a></h3>
-<p>If you want to create and register a new account on your own because you have
-the funds in another account and don&#8217;t want someone else involved, you can make
-use of the command <code class="docutils literal"><span class="pre">create_account_with_brain_key</span></code>::</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">create_account_with_brain_key</span><span class="p">(</span><span class="n">brain_key</span><span class="p">,</span> <span class="n">account_name</span><span class="p">,</span> <span class="n">registrar_account</span><span class="p">,</span> <span class="n">referrer_account</span><span class="p">,</span> <span class="n">broadcast</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>For our example, we would get::</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">create_account_with_brain_key</span> <span class="s">&quot;FILINGS THEREOF ENSILE JAW OVERBID RETINAL PILULAR RYPE CHITTY RAFFERY HANDGUN ERANIST UNPILE TWISTER BABYDOM CIBOL&quot;</span> <span class="n">mywallet</span> <span class="n">myfunds</span> <span class="n">anonymous</span> <span class="mi">100</span> <span class="n">true</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="registering-an-account">
-<h3>Registering an Account<a class="headerlink" href="#registering-an-account" title="Permalink to this headline">¶</a></h3>
-<p>If you want to register the account of someone else, all you need is the public
-key. In theory, the BitShares blockchain distinguishes three keys for each
-account, namely the <strong>owner</strong>, <strong>active</strong>, and the <strong>memo</strong> key.  However, for
-the sake of simplicity, we here make use of only one public key (see example
-above).</p>
-<p>In order to register an account, we need an other account that has enough funds
-to pay the fee for the registration transaction. This account will be called
-<code class="docutils literal"><span class="pre">registrar_account</span></code>. Another account <code class="docutils literal"><span class="pre">referrer_account</span></code> can be registered
-that will get <code class="docutils literal"><span class="pre">referrer_percentage</span></code> of the referral bonus program. Any
-registered account can take the role of the referrer. Hence we here say that
-user <code class="docutils literal"><span class="pre">anonymous</span></code> has referred us. The syntax goes like this::</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">register_account</span> <span class="n">name</span><span class="p">,</span> <span class="n">owner_pubkey</span><span class="p">,</span> <span class="n">active</span> <span class="n">_pubkey</span><span class="p">,</span> <span class="n">registrar_account</span><span class="p">,</span> <span class="n">referrer_account</span><span class="p">,</span> <span class="n">referrer_percent</span><span class="p">,</span> <span class="n">broadcast</span>
-</pre></div>
-</div>
-<p>For our example we say we register a new user called <code class="docutils literal"><span class="pre">mywallet</span></code>, use the
-pubkey derived above and let our account <code class="docutils literal"><span class="pre">myfunds</span></code> pay the fee::</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">register_account</span> <span class="n">mywallet</span> <span class="n">BTS7D8jpQ2UwaQxqKyGpuhFQ9LBugCNxDhE7UN2jqgjVQgzG7zo9n</span> <span class="n">BTS7D8jpQ2UwaQxqKyGpuhFQ9LBugCNxDhE7UN2jqgjVQgzG7zo9n</span> <span class="n">myfunds</span> <span class="n">anonymous</span> <span class="mi">100</span> <span class="n">true</span>
-</pre></div>
-</div>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Note that in order to register an account, the registrar (here:
-<code class="docutils literal"><span class="pre">myfunds</span></code>) needs to be a <strong>lifetime member</strong>!</p>
-</div>
-</div>
-</div>
+<p>The identicon at the top cn be used to verify your account name to third
+parties. It is derived from your acocunt name and gives a second verification
+factor. And this is how you register your account:</p>
+<a class="reference internal image-reference" href="../../_images/create-account.png"><img alt="Create new account" class="align-center" src="../../_images/create-account.png" style="width: 350px;" /></a>
+<p>Note that, in contrast to any other platform you have ever used:
+<strong>Creating an account at one of our partners will make your account available at
+all the other partners as well.</strong>
+Hence, your account name can be seen similar to a mail address in such that it
+is <strong>unique</strong> and every participant in the BitShares network can interact with
+you independent of the actual partner providing the wallet.</p>
+<p>We also provide a <a class="reference internal" href="../tutorials/account-create.html"><em>tutorial</em></a> on how to
+<strong>manually</strong> register an account using the <a class="reference internal" href="../../integration/apps/cliwallet.html"><em>CLI wallet</em></a>.</p>
 </div>
 
 

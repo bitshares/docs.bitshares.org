@@ -1,3 +1,5 @@
+.. original autor: @svk
+
 *********************
 Margin call mechanics
 *********************

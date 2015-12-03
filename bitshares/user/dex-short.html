@@ -92,7 +92,7 @@
         </div>
         <div class="next">
          <div class="title">next</div>
-         <span><a href="shareholder.html">Shareholder</a></span>
+         <span><a href="dex-margin-mechanics.html">Margin call mechanics</a></span>
         </div>
 
    </div>
@@ -147,6 +147,7 @@
 <li class="toctree-l5"><a class="reference internal" href="#covering">Covering</a></li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="dex-margin-mechanics.html">Margin call mechanics</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="index.html#blockchain-positions">Blockchain &#8220;Positions&#8221;</a></li>
@@ -215,12 +216,17 @@ call price = DEBT / COLLATERAL * MCR
 <p>The margin call will take the collateral, buy shares of borrowed bitAsset at
 market rates up to the SQP and close the position. The remaining BTS of the
 collateral are returned to the customer.</p>
+<p>Read more about the <a class="reference internal" href="dex-margin-mechanics.html"><em>margin call mechanics</em></a> before
+trading.</p>
 </div>
 <div class="section" id="settlement">
 <h2>Settlement<a class="headerlink" href="#settlement" title="Permalink to this headline">¶</a></h2>
 <p>Holders of any bitAsset can request a settlement at a <em>fair price</em> at any time.
 The settlement closes the borrow/short positions with lowest collateral ratio
 and sells the collateral for the settlement.</p>
+<p>Note, that there is a maximum daily settlement volume defined by the
+<a class="reference internal" href="committee.html"><em>committee</em></a> to prevent exploitation via external price
+movements.</p>
 </div>
 <div class="section" id="selling">
 <h2>Selling<a class="headerlink" href="#selling" title="Permalink to this headline">¶</a></h2>

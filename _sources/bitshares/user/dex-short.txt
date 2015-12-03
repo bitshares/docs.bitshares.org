@@ -35,12 +35,19 @@ The margin call will take the collateral, buy shares of borrowed bitAsset at
 market rates up to the SQP and close the position. The remaining BTS of the
 collateral are returned to the customer.
 
+Read more about the :doc:`margin call mechanics <dex-margin-mechanics>` before
+trading.
+
 Settlement
 ##########
 
 Holders of any bitAsset can request a settlement at a *fair price* at any time.
 The settlement closes the borrow/short positions with lowest collateral ratio
 and sells the collateral for the settlement.
+
+Note, that there is a maximum daily settlement volume defined by the
+:doc:`committee <committee>` to prevent exploitation via external price
+movements.
 
 Selling
 #######
