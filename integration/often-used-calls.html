@@ -132,28 +132,58 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Integration Guide</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="index.html#basic-knowledge">Basic Knowledge</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html#use-cases">Use-Cases</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="exchanges/index.html">Exchanges, Bridges, and Gateways</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="exchanges/index.html#step-by-step-instructions-for-exchanges">Step-By-Step Instructions for Exchanges</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="exchanges/index.html#detailed-technical-guide">Detailed Technical Guide</a><ul class="current">
-<li class="toctree-l5"><a class="reference internal" href="what-is-different.html">What is Different</a></li>
-<li class="toctree-l5"><a class="reference internal" href="supporting-features.html">Supporting Features</a></li>
-<li class="toctree-l5"><a class="reference internal" href="apps/index.html">Blockchain Interaction</a></li>
-<li class="toctree-l5"><a class="reference internal" href="network-setup.html">Secure Network and Wallet Configuration</a></li>
-<li class="toctree-l5 current"><a class="current reference internal" href="">Often used API Calls</a></li>
-<li class="toctree-l5"><a class="reference internal" href="whitelist.html">Using White- and Black-lists</a></li>
-<li class="toctree-l5"><a class="reference internal" href="securing-funds.html">Securing Funds</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#basic-knowledge">Basic Knowledge</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="what-is-different.html">What is Different</a></li>
+<li class="toctree-l3"><a class="reference internal" href="apps/index.html">Blockchain Interaction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="network-setup.html">Secure Network and Wallet Configuration</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Often used API Calls</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../blockchain/Objects.html">Objects and IDs</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../api/cli_wallet.html">CLI Wallet API Calls</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="exchanges/index.html#libraries">Libraries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#list-account-balances-account"><code class="docutils literal"><span class="pre">list_account_balances</span> <span class="pre">&lt;account&gt;</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#script">Script</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#result">Result</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#reference">Reference</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="merchants/index.html">Merchants</a></li>
-<li class="toctree-l3"><a class="reference internal" href="traders/index.html">Traders</a></li>
-<li class="toctree-l3"><a class="reference internal" href="businesses/index.html">Businesses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transfer-from-to-amount-asset-memo-broadcast"><code class="docutils literal"><span class="pre">transfer</span> <span class="pre">&lt;from&gt;</span> <span class="pre">&lt;to&gt;</span> <span class="pre">&lt;amount&gt;</span> <span class="pre">&lt;asset&gt;</span> <span class="pre">&quot;&lt;memo&gt;&quot;</span> <span class="pre">&lt;broadcast&gt;</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id1">Script</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id2">Result</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id3">Reference</a></li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="#transfer2-from-to-amount-asset-memo"><code class="docutils literal"><span class="pre">transfer2</span> <span class="pre">&lt;from&gt;</span> <span class="pre">&lt;to&gt;</span> <span class="pre">&lt;amount&gt;</span> <span class="pre">&lt;asset&gt;</span> <span class="pre">&quot;&lt;memo&gt;&quot;</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id4">Script</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id5">Result</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id6">Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#get-account-history-account-limit"><code class="docutils literal"><span class="pre">get_account_history</span> <span class="pre">&lt;account&gt;</span> <span class="pre">&lt;limit&gt;</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id7">Script</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id8">Result</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id9">Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#get-object-1-11-id"><code class="docutils literal"><span class="pre">get_object</span> <span class="pre">&quot;1.11.&lt;id&gt;&quot;</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id10">Script</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id11">Result</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id12">Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#get-asset-usd"><code class="docutils literal"><span class="pre">get_asset</span> <span class="pre">&lt;USD&gt;</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id13">Script</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id14">Result</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id15">Reference</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#correspondences-with-bitshares-1-0-calls">Correspondences with BitShares 1.0 Calls</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#use-cases">Use-Cases</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../api/index.html">Graphene API</a></li>
@@ -576,7 +606,7 @@ the transaction ID along with the signed transaction.</p>
 <dt id="_CPPv2N8graphene6wallet10wallet_api10get_objectE14object_id_type">
 <span id="graphene::wallet::wallet_api::get_object__object_id_type"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1a986966705420db7db5b7744956f763fe"></span>variant <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">get_object</code><span class="sig-paren">(</span>object_id_type <em>id</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api10get_objectE14object_id_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the blockchain object corresponding to the given id.</p>
-<p>This generic function can be used to retrieve any object from the blockchain that is assigned an ID. Certain types of objects have specialized convenience functions to return their objects  e.g., assets have <code class="docutils literal"><a class="reference internal" href="#grapheneclassgraphene_1_1wallet_1_1wallet__api_1adeba50e052ff409fe1d19cc9e50e9a8f"><span><span class="pre">get_asset()</span></span></a></code>, accounts have <code class="docutils literal"><a class="reference internal" href="../namespaces/wallet.html#grapheneclassgraphene_1_1wallet_1_1wallet__api_1a479f699f7b704636e80a44bf8397d341"><span><span class="pre">get_account()</span></span></a></code>, but this function will work for any object.</p>
+<p>This generic function can be used to retrieve any object from the blockchain that is assigned an ID. Certain types of objects have specialized convenience functions to return their objects  e.g., assets have <code class="docutils literal"><a class="reference internal" href="../namespaces/wallet.html#grapheneclassgraphene_1_1wallet_1_1wallet__api_1adeba50e052ff409fe1d19cc9e50e9a8f"><span><span class="pre">get_asset()</span></span></a></code>, accounts have <code class="docutils literal"><a class="reference internal" href="../namespaces/wallet.html#grapheneclassgraphene_1_1wallet_1_1wallet__api_1a479f699f7b704636e80a44bf8397d341"><span><span class="pre">get_account()</span></span></a></code>, but this function will work for any object.</p>
 <p><dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>the requested object </dd>
