@@ -19,16 +19,7 @@ To interact with the BitShares ecosystem, you can either
 * `download the official Light Wallet`_
 * or access the network in the browsers via one of our partners:
 
-  * `OpenLedger`_
-  * `BitShares.org`_
-  * `Decentral.exchange`_
-  * BunkerDex (under construction)
-  * *more to come*
-
-.. _download the official Light Wallet: https://github.com/BitShares/BitShares-2/releases/latest
-.. _OpenLedger: https://openledger.info
-.. _BitShares.org: https://bitshares.org/wallet
-.. _Decentral.exchange: http://decentral.exchange
+.. include:: /bitshares/register-ref.rst
 
 Create an account
 #################

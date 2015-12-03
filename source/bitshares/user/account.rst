@@ -23,7 +23,8 @@ linked to individuals (this includes transferes, trades, shorts, etc. but not
    tools to improve privacy and anonymity.
 
 .. toctree::
+    :maxdepth: 2
 
+    account-create
     account-memberships
     account-permissions
-    account-create

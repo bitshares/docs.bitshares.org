@@ -2,47 +2,33 @@
 Committee
 *********
 
-.. https://bitsharestalk.org/index.php/topic,19444.0/all.html
-.. http://bitsharestalk.org/index.php?topic=19444.msg250969.msg#250969
-.. http://bitsharestalk.org/index.php?topic=19444.msg250974.msg#250974
+Since Bitcoin struggled to reach a consensus about the size of their blocks,
+the people in the cryptocurrency space realized that the governance of a DAC
+should not be ignored. Hence, BitShares offers a tools to reach on-chain
+consensus about business management decisions.
 
+The BitShares blockchain has a set of parameters available that are subject of
+shareholder approval. Shareholders can define their preferred set of parameters
+and thereby create a so called *committee member* or alternatively vote for an
+existing committee member. The BitShares committee consists of several *active*
+committee members.
 
-(under construction) 
+The BitShares ecosystem has a set of parameters available that are subject of
+shareholder approval. Initially, BitShares has the following blockchain
+parameters:
 
+* **fee structure**:         *fess that have to be paid by customers for individual transactions*
+* **block interval**:        *i.e. block interval, max size of block/transaction*
+* **expiration parameters**: *i.e. maximum expiration interval*
+* **witness parameters**:    *i.e. maximum amount of witnesses (block producers)*
+* **committee parameters**:  *i.e. maximum amount of committee members*
+* **witness pay**:           *payment for each witnesses per signed block*
+* **worker budget**:         *available budget available for budget items (e.g. development)*
 
-Technical Realization
-#####################
+Please note that the given set of parameters serves as an example and that the
+network's parameters are subject to change over time.
 
-Creating a New Committee Member
-*******************************
-
-We can create a new committee member with:::
-
-  >>> create_committee_member account "url" true
-
-Proposing a fee change
-*******************************
-
-Let's assume we want to propose a new fee for the account creation operation. We
-want 5 BTS as basic fee and want premium names to cost 2000 BTS. Additionally,
-a price per kbyte for the account creation transaction can be defined. We get
-
-.. code-block:: json
-
-     {
-      "account_create_operation" : {
-                "basic_fee"      : 500000,
-                "premium_fee"    : 200000000,
-                "price_per_kbyte": 100000}
-     }
-
-We propose the fee change for account ``<committee_member>`` with:::
-
-  >>> propose_fee_change <committee_member> "2015-10-14T15:29:00" {"account_create_operation" : {"basic_fee": 500000, "premium_fee": 200000000, "price_per_kbyte": 100000}} false
-
-Now we need to convince the other committee members to approve. We can do so on
-the blockchain by asking them for approval with ::
-
-  >>> approve_proposal <committee_member> "1.10.1" {"active_approvals_to_add" : ["init1", "init2", "init3", "init4", "init5", "init6", "init7", "init8", "init9", "init10"]} false
-
-where ``1.10.1`` is the id of the proposal in question.
+Additionally to defining the parameters any active witness can propose a
+protocol or business upgrade (i.e. hard fork) which can be voted on (or against)
+by shareholders. When the total votes for the hard fork are greater than the
+median witness weight `w` then the hard fork takes effect.
