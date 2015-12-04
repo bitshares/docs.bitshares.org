@@ -1,9 +1,24 @@
 Requirements
 ############
 
+* graphene (https://github.com/cryptonomex/graphene)
+* doxygen (run `doxygen` in the graphene source to generate required files)
 * graphviz
 * sphinx (http://sphinx-doc.org)
 * breathe (https://github.com/michaeljones/breathe)
+
+Quick Install in OSX
+********************
+
+It's easy to get started on OSX using brew and easy_install.
+
+.. code:: sh
+
+   brew install doxygen
+   brew install graphviz
+
+   easy_install sphinx
+   easy_install breathe
 
 Configuration
 #############
