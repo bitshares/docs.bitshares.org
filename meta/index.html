@@ -139,7 +139,10 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="">Meta</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#contributing-to-this-documentation">Contributing to this Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#quick-install-in-osx">Quick Install in OSX</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#configuration">Configuration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#building">Building</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#output">Output</a></li>
@@ -178,10 +181,23 @@ are located in the <code class="docutils literal"><span class="pre">gh-pages</sp
 <div class="section" id="requirements">
 <h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
+<li>graphene (<a class="reference external" href="https://github.com/cryptonomex/graphene">https://github.com/cryptonomex/graphene</a>)</li>
+<li>doxygen (run <cite>doxygen</cite> in the graphene source to generate required files)</li>
 <li>graphviz</li>
 <li>sphinx (<a class="reference external" href="http://sphinx-doc.org">http://sphinx-doc.org</a>)</li>
 <li>breathe (<a class="reference external" href="https://github.com/michaeljones/breathe">https://github.com/michaeljones/breathe</a>)</li>
 </ul>
+<div class="section" id="quick-install-in-osx">
+<h3>Quick Install in OSX<a class="headerlink" href="#quick-install-in-osx" title="Permalink to this headline">¶</a></h3>
+<p>It&#8217;s easy to get started on OSX using brew and easy_install.</p>
+<div class="code sh highlight-python"><div class="highlight"><pre>brew install doxygen
+brew install graphviz
+
+easy_install sphinx
+easy_install breathe
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>

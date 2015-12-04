@@ -38,7 +38,7 @@ If you want to create and register a new account on your own because you have
 the funds in another account and don't want someone else involved, you can make
 use of the command ``create_account_with_brain_key``:::
 
-    >>> create_account_with_brain_key(brain_key, account_name, registrar_account, referrer_account, broadcast)
+    >>> create_account_with_brain_key <brain_key> <account_name> <registrar_account> <referrer_account> <broadcast>
 
 For our example, we would get:::
 

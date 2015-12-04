@@ -198,12 +198,21 @@ this may lead to a few minutes of delay.</p>
 <h2>Overview of the Setup<a class="headerlink" href="#overview-of-the-setup" title="Permalink to this headline">¶</a></h2>
 <p>In the following, we will setup and use the following network:</p>
 <p class="graphviz">
-<img src="../_images/graphviz-7d9d81c4365a706c191d79f0fdea4ebcdb49b043.svg" alt="digraph foo {
+<img src="../_images/graphviz-dcb5648446bd14d910be95a81bf47b0308307a05.svg" alt="digraph foo {
  rankdir=LR
- node [shape=box]
- &quot;P2P network&quot; -&gt; &quot;Trusted Full Node&quot; [dir=&quot;both&quot;]
- &quot;Trusted Full Node&quot; -&gt; &quot;Delayed Full Node&quot; -&gt; &quot;Deposit API&quot;
- &quot;Trusted Full Node&quot; -&gt; &quot;Wallet&quot; -&gt; &quot;Withdraw API&quot;
+ ranksep=0.5;
+ nodesep=0.1;
+ overlap=false;
+
+ node [fontname=Verdana,fontsize=12]
+ node [style=filled]
+ node [fillcolor=&quot;#EEEEEE&quot;]
+ node [color=&quot;#EEEEEE&quot;, shape=box]
+ edge [color=&quot;#31CEF0&quot;, fontsize=9, fontname=Verdana]
+
+ &quot;P2P network&quot;       -&gt; &quot;Trusted Full Node&quot; [dir=&quot;both&quot;]
+ &quot;Trusted Full Node&quot; -&gt; &quot;Delayed Full Node&quot;              -&gt; &quot;Deposit API&quot;
+ &quot;Trusted Full Node&quot; -&gt; &quot;Wallet&quot;                         -&gt; &quot;Withdraw API&quot;
 }" />
 </p>
 <div class="section" id="p2p-network">

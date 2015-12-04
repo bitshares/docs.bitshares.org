@@ -209,6 +209,24 @@ able to construct a valid transaction if only two of those agree. Hence a
 </tr>
 </tbody>
 </table>
+<p class="graphviz">
+<img src="../_images/graphviz-a9975eda24033d32fa0244f2d9106bfcdd2a64e1.svg" alt="digraph G {
+ ranksep=0.5;
+ nodesep=0.1;
+ overlap=false;
+
+ node [fontname=Verdana,fontsize=12]
+ node [style=filled]
+ node [fillcolor=&quot;#EEEEEE&quot;]
+ node [color=&quot;#EEEEEE&quot;]
+ edge [color=&quot;#31CEF0&quot;, dir=back, fontsize=9, fontname=Verdana]
+
+ proposal -&gt; Alice [label=&quot;33%&quot;];
+ proposal -&gt; Bob [label=&quot;33%&quot;];
+ proposal -&gt; Charlie [label=&quot;33%&quot;];
+ proposal -&gt; Dennis [label=&quot;33%&quot;];
+}" />
+</p>
 <p>All four participants have a weight of 33% but the threshold is set to 51%.
 Hence only two out of the four need to agree to validate the transaction.</p>
 <p>Alternatively, to construct a 3-of-4 scheme, we can either decrease the weights
@@ -249,6 +267,24 @@ much control to her friends. Hence, we create an authority similar to:</p>
 </tr>
 </tbody>
 </table>
+<p class="graphviz">
+<img src="../_images/graphviz-66da28d8eb4064ee3a3af67d19f3dac5964b9168.svg" alt="digraph G {
+ ranksep=0.5;
+ nodesep=0.1;
+ overlap=false;
+
+ node [fontname=Verdana,fontsize=12]
+ node [style=filled]
+ node [fillcolor=&quot;#EEEEEE&quot;]
+ node [color=&quot;#EEEEEE&quot;]
+ edge [color=&quot;#31CEF0&quot;, dir=back, fontsize=9, fontname=Verdana]
+
+ proposal -&gt; Alice [label=&quot;49%&quot;];
+ proposal -&gt; Bob [label=&quot;25%&quot;];
+ proposal -&gt; Charlie [label=&quot;25%&quot;];
+ proposal -&gt; Dennis [label=&quot;10%&quot;];
+}" />
+</p>
 <p>Now the funds can either be accessed by Alice and a single friend or by all
 three friends together.</p>
 </div>
@@ -281,6 +317,22 @@ privileges. Hence we construct an authority for the funds according to:</p>
 </tr>
 </tbody>
 </table>
+<p class="graphviz">
+<img src="../_images/graphviz-2fb935ac4d3ea3f97a2740b891efc10cac2a845d.svg" alt="digraph G {
+ ranksep=0.5;
+ nodesep=0.1;
+ overlap=false;
+
+ node [fontname=Verdana,fontsize=12]
+ node [style=filled]
+ node [fillcolor=&quot;#EEEEEE&quot;]
+ node [color=&quot;#EEEEEE&quot;]
+ edge [color=&quot;#31CEF0&quot;, dir=back, fontsize=9, fontname=Verdana]
+
+ proposal -&gt; &quot;CEO.COMPANY&quot; [label=&quot;51%&quot;];
+ proposal -&gt; &quot;CFO.COMPANY&quot; [label=&quot;51%&quot;];
+}" />
+</p>
 <p>whereas CEO.COMPANY and CFO.COMPANY have their own authorities. For instance,
 the CFO.COMPANY account could look like:</p>
 <table border="1" class="docutils">
@@ -314,6 +366,31 @@ the CFO.COMPANY account could look like:</p>
 </tr>
 </tbody>
 </table>
+<p class="graphviz">
+<img src="../_images/graphviz-a4f027dbd98e0031f5fe222376df66e8e605c558.svg" alt="digraph G {
+ ranksep=0.5;
+ nodesep=0.1;
+ overlap=false;
+
+ node [fontname=Verdana,fontsize=12]
+ node [style=filled]
+ node [fillcolor=&quot;#EEEEEE&quot;]
+ node [color=&quot;#EEEEEE&quot;]
+ edge [color=&quot;#31CEF0&quot;, dir=back, fontsize=9, fontname=Verdana]
+
+ proposal -&gt; &quot;Chief.COMPANY&quot; [label=&quot;51%&quot;];
+ proposal -&gt; &quot;Treasurer.COMPANY&quot; [label=&quot;33%&quot;]
+ proposal -&gt; &quot;Controller.COMPANY&quot; [label=&quot;33%&quot;];
+ proposal -&gt; &quot;Tax.COMPANY&quot; [label=&quot;10%&quot;]
+ proposal -&gt; &quot;Accounting.COMPANY&quot; [label=&quot;10%&quot;];
+
+ &quot;Treasurer.COMPANY&quot; -&gt; {T1,T2,T3};
+ &quot;Controller.COMPANY&quot; -&gt; {C1,C2};
+ &quot;Tax.COMPANY&quot; -&gt; {X1,X2};
+ &quot;Accounting.COMPANY&quot; -&gt; {A1,A2,A3,A4,A5};
+
+}" />
+</p>
 <p>This scheme allows:</p>
 <ul class="simple">
 <li>the CEO to spend funds</li>
