@@ -23,10 +23,19 @@ In the following, we will setup and use the following network:
 
    digraph foo {
     rankdir=LR
-    node [shape=box]
-    "P2P network" -> "Trusted Full Node" [dir="both"]
-    "Trusted Full Node" -> "Delayed Full Node" -> "Deposit API"
-    "Trusted Full Node" -> "Wallet" -> "Withdraw API"
+    ranksep=0.5;
+    nodesep=0.1;
+    overlap=false;
+
+    node [fontname=Verdana,fontsize=12]
+    node [style=filled]
+    node [fillcolor="#EEEEEE"]
+    node [color="#EEEEEE", shape=box]
+    edge [color="#31CEF0", fontsize=9, fontname=Verdana]
+
+    "P2P network"       -> "Trusted Full Node" [dir="both"]
+    "Trusted Full Node" -> "Delayed Full Node"              -> "Deposit API"
+    "Trusted Full Node" -> "Wallet"                         -> "Withdraw API"
    }
 
 ..                              +--->  Delayed Full Node ---> Deposit API

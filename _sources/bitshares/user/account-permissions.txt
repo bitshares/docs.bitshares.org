@@ -57,6 +57,25 @@ able to construct a valid transaction if only two of those agree. Hence a
 | **Threshold:** | 51%    | 
 +----------------+--------+ 
 
+.. graphviz::
+
+   digraph G {
+    ranksep=0.5;
+    nodesep=0.1;
+    overlap=false;
+
+    node [fontname=Verdana,fontsize=12]
+    node [style=filled]
+    node [fillcolor="#EEEEEE"]
+    node [color="#EEEEEE"]
+    edge [color="#31CEF0", dir=back, fontsize=9, fontname=Verdana]
+    
+    proposal -> Alice [label="33%"];
+    proposal -> Bob [label="33%"];
+    proposal -> Charlie [label="33%"];
+    proposal -> Dennis [label="33%"];
+   }
+
 All four participants have a weight of 33% but the threshold is set to 51%.
 Hence only two out of the four need to agree to validate the transaction.
 
@@ -86,6 +105,25 @@ much control to her friends. Hence, we create an authority similar to:
 | **Threshold:** | 51%    |
 +----------------+--------+ 
 
+.. graphviz::
+
+   digraph G {
+    ranksep=0.5;
+    nodesep=0.1;
+    overlap=false;
+
+    node [fontname=Verdana,fontsize=12]
+    node [style=filled]
+    node [fillcolor="#EEEEEE"]
+    node [color="#EEEEEE"]
+    edge [color="#31CEF0", dir=back, fontsize=9, fontname=Verdana]
+    
+    proposal -> Alice [label="49%"];
+    proposal -> Bob [label="25%"];
+    proposal -> Charlie [label="25%"];
+    proposal -> Dennis [label="10%"];
+   }
+
 Now the funds can either be accessed by Alice and a single friend or by all
 three friends together.
 
@@ -108,6 +146,23 @@ privileges. Hence we construct an authority for the funds according to:
 | **Threshold:**   | 51%    |
 +------------------+--------+ 
 
+.. graphviz::
+
+   digraph G {
+    ranksep=0.5;
+    nodesep=0.1;
+    overlap=false;
+
+    node [fontname=Verdana,fontsize=12]
+    node [style=filled]
+    node [fillcolor="#EEEEEE"]
+    node [color="#EEEEEE"]
+    edge [color="#31CEF0", dir=back, fontsize=9, fontname=Verdana]
+    
+    proposal -> "CEO.COMPANY" [label="51%"];
+    proposal -> "CFO.COMPANY" [label="51%"];
+   }
+
 whereas CEO.COMPANY and CFO.COMPANY have their own authorities. For instance,
 the CFO.COMPANY account could look like:
 
@@ -126,6 +181,32 @@ the CFO.COMPANY account could look like:
 +-------------------------+--------+ 
 | **Threshold:**          | 51%    |
 +-------------------------+--------+ 
+
+.. graphviz::
+
+   digraph G {
+    ranksep=0.5;
+    nodesep=0.1;
+    overlap=false;
+
+    node [fontname=Verdana,fontsize=12]
+    node [style=filled]
+    node [fillcolor="#EEEEEE"]
+    node [color="#EEEEEE"]
+    edge [color="#31CEF0", dir=back, fontsize=9, fontname=Verdana]
+    
+    proposal -> "Chief.COMPANY" [label="51%"];
+    proposal -> "Treasurer.COMPANY" [label="33%"]
+    proposal -> "Controller.COMPANY" [label="33%"];
+    proposal -> "Tax.COMPANY" [label="10%"]
+    proposal -> "Accounting.COMPANY" [label="10%"];
+
+    "Treasurer.COMPANY" -> {T1,T2,T3};
+    "Controller.COMPANY" -> {C1,C2};
+    "Tax.COMPANY" -> {X1,X2};
+    "Accounting.COMPANY" -> {A1,A2,A3,A4,A5};
+
+   }
 
 This scheme allows:
 

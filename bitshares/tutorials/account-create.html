@@ -92,7 +92,7 @@
         </div>
         <div class="next">
          <div class="title">next</div>
-         <span><a href="committee-fee-change.html">How Committee Proposes a Change in Fee</a></span>
+         <span><a href="construct-transaction.html">Manually Construct Any Transaction</a></span>
         </div>
 
    </div>
@@ -131,17 +131,21 @@
 <li class="toctree-l2"><a class="reference internal" href="../papers/index.html">Whitepapers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../user/index.html">User Guide</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Tutorials</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="confidential-transactions.html">Confidential Transfers</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">Account Registration</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#brain-private-and-public-key-derivation">Brain, Private and Public Key Derivation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#creating-and-registering-an-account">Creating and Registering an account</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#registering-an-account">Registering an Account</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#general-tutorials">General Tutorials</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="confidential-transactions.html">Confidential Transfers</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="">Account Registration</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#brain-private-and-public-key-derivation">Brain, Private and Public Key Derivation</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#creating-and-registering-an-account">Creating and Registering an account</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#registering-an-account">Registering an Account</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="committee-fee-change.html">How Committee Proposes a Change in Fee</a></li>
-<li class="toctree-l3"><a class="reference internal" href="committee-member-create.html">Creating a New Committee Member</a></li>
-<li class="toctree-l3"><a class="reference internal" href="worker-create.html">How to Create a Worker</a></li>
-<li class="toctree-l3"><a class="reference internal" href="worker-budget.html">Claim Worker Pay</a></li>
+<li class="toctree-l4"><a class="reference internal" href="construct-transaction.html">Manually Construct Any Transaction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="propose-transaction.html">Proposing a Transaction</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#committee-tutorials">Committee Tutorials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#worker-tutorials">Worker Tutorials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#witness-tutorials">Witness Tutorials</a></li>
 </ul>
 </li>
 </ul>
@@ -210,7 +214,7 @@ to access your account and/or funds.</p>
 <p>If you want to create and register a new account on your own because you have
 the funds in another account and don&#8217;t want someone else involved, you can make
 use of the command <code class="docutils literal"><span class="pre">create_account_with_brain_key</span></code>::</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">create_account_with_brain_key</span><span class="p">(</span><span class="n">brain_key</span><span class="p">,</span> <span class="n">account_name</span><span class="p">,</span> <span class="n">registrar_account</span><span class="p">,</span> <span class="n">referrer_account</span><span class="p">,</span> <span class="n">broadcast</span><span class="p">)</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">create_account_with_brain_key</span> <span class="o">&lt;</span><span class="n">brain_key</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">account_name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">registrar_account</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">referrer_account</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">broadcast</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>For our example, we would get::</p>
