@@ -56,7 +56,7 @@ importing any private keys:::
     null
     locked >>> unlock <password>
     null
-    unlocked >>>
+    >>>
 
 Wallet creation is now done.
 
@@ -66,18 +66,18 @@ Basic Account Management
 We can import the account name (owner key) and the balance containing (active)
 key into the CLI wallet:::
 
-    unlocked >>> import_key <accountname> <owner wif key>
+    >>> import_key <accountname> <owner wif key>
     true
-    unlocked >>> import_key <accountname> <active wif key>
+    >>> import_key <accountname> <active wif key>
     true
-    unlocked >>> list_my_accounts
+    >>> list_my_accounts
     [{
     "id": "1.2.15",
     ...
     "name": <accountname>,
     ...
     ]
-    unlocked >>> list_account_balances <accountname>
+    >>> list_account_balances <accountname>
     XXXXXXX BTS
 
 Both keys can be exported from the web wallet.
@@ -87,7 +87,7 @@ Both keys can be exported from the web wallet.
 Since only lifetime members can become witnesses, you must first upgrade to a
 lifetime member. This step costs the lifetime-upgrade fee:::
 
-    unlocked >>> upgrade_account <accountname> true
+    >>> upgrade_account <accountname> true
     [a transaction in json format]
 
 Registering a Witness Object
@@ -98,7 +98,7 @@ witness object that can be voted in.
 
 We create a new witness object by issuing:::
 
-    unlocked >>> create_witness <accountname> "http://<url-to-proposal>" true
+    >>> create_witness <accountname> "http://<url-to-proposal>" true
     {
       "ref_block_num": 139,
       "ref_block_prefix": 3692461913,
@@ -125,7 +125,7 @@ Our witness is registered, but it can't produce blocks because nobody has voted
 it in. You can see the current list of active witnesses with
 `get_global_properties`:::
 
-    unlocked >>> get_global_properties
+    >>> get_global_properties
     {
       "active_witnesses": [
     "1.6.0",
@@ -143,7 +143,7 @@ it in. You can see the current list of active witnesses with
 Now, we should vote our witness in. Vote all of the shares your account
 ``<accountname>`` in favor of your new witness.::
 
-    unlocked >>> vote_for_witness <accountname> <accountname> true true
+    >>> vote_for_witness <accountname> <accountname> true true
     [a transaction in json format]
 
 .. note:: If you want to experiment with things that require voting, be aware that
@@ -175,7 +175,7 @@ private-key pairs to find the private key.
 
 .. code-block:: sh
 
-    unlocked >>> get_witness <accountname>
+    >>> get_witness <accountname>
     {
       [...]
       "id": "1.6.10",
@@ -186,7 +186,7 @@ private-key pairs to find the private key.
 The ``id`` and the ``signing_key`` are the two important parameters, here. Let's get
 the private key for that signing key with:::
 
-    unlocked >>> dump_private_keys
+    >>> dump_private_keys
     [[
       ...
       ],[

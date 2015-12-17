@@ -59,7 +59,7 @@ impossibility it would be if you lost the wallet and failed to record the
 
 ::
           
-    unlocked >>> create_blind_account alice "alice-brain-key which is a series of words that are usually very long"                                                                   
+    >>> create_blind_account alice "alice-brain-key which is a series of words that are usually very long"                                                                   
     1483572ms th_a       wallet.cpp:743                save_wallet_file     ] saving wallet to file /home/admin/BitShares2/blindAliceWallet
     BTS5Qmr9H9SM39EHmVgXtsVjUGn2xBUtqbF6MdQ6RpnxUWNak7mse
     true
@@ -91,19 +91,19 @@ then we'll use that label to transfer assets into the alice blind account.
 
 ::
 
-    unlocked >>> list_account_balances "peters-public-registered-account"                                                        
+    >>> list_account_balances "peters-public-registered-account"                                                        
     5000 BTS
 
-    unlocked >>> set_key_label "BTS5Qmr9H9SM39EHmVgXtsVjUGn2xBUtqbF6MdQ6RpnxUWNak7mse" "Alice-is-Blind"
+    >>> set_key_label "BTS5Qmr9H9SM39EHmVgXtsVjUGn2xBUtqbF6MdQ6RpnxUWNak7mse" "Alice-is-Blind"
     true
 
-    unlocked >>> transfer_to_blind "peters-public-registered-account" BTS [[Alice-is-Blind,100]] true
+    >>> transfer_to_blind "peters-public-registered-account" BTS [[Alice-is-Blind,100]] true
     3369305ms th_a       wallet.cpp:3794               transfer_to_blind    ] to_amounts: [["Alice-is-Blind","100"]]
     peters-public-registered-account sent 100 BTS to 1 blinded balance fee: 40 BTS
     100 BTS to  Alice-is-Blind
               receipt: 2B2vTjJ19hgqzGp8qdc8MEWmsgEUGECNJcoQTYNQqMU8bRofmbQYemXs56FoUc4Z5PdVM65nsySZgwJMq9Z SkpWQFhEqLGuZi1N3jQm8yBwaLD2DQzwY5AEW1rSK9HWJbfqNLtx8U4kc3o9xKtJoED2SgHW6jDQ7igBTcVhuUiKSwFu3DFa6LTeS5 Wm5khjgy1LrR5uhmp
 
-    unlocked >>> list_account_balances "peters-public-registered-account"                                                       
+    >>> list_account_balances "peters-public-registered-account"                                                       
     list_account_balances verbaltech2
     4860 BTS
 
@@ -145,7 +145,7 @@ the correct balance:
 
 ::
           
-    unlocked >>> receive_blind_transfer "2B2vTjJ19hgqzGp8qdc8MEWmsgEUGECNJcoQTYNQqMU8bRofmbQYemXs56FoUc4Z5PdVM65nsySZgwJMq9ZSkpWQFhEqLGuZi1N3jQm8yBwaLD2DQzwY5AEW1rSK9HWJbfqNLtx8U4kc3o9xKtJoED2SgHW6jDQ7igBTcVhuUiKSwFu3DFa6LTeS5Wm5khjgy1LrR5uhmp "peter" "from Peter"
+    >>> receive_blind_transfer "2B2vTjJ19hgqzGp8qdc8MEWmsgEUGECNJcoQTYNQqMU8bRofmbQYemXs56FoUc4Z5PdVM65nsySZgwJMq9ZSkpWQFhEqLGuZi1N3jQm8yBwaLD2DQzwY5AEW1rSK9HWJbfqNLtx8U4kc3o9xKtJoED2SgHW6jDQ7igBTcVhuUiKSwFu3DFa6LTeS5Wm5khjgy1LrR5uhmp "peter" "from Peter"
     100 BTS  peter  =>  alice   "from Peter"
 
 Using the balance receipt value returned from the transfer_to_blind command in
@@ -167,13 +167,13 @@ accounts returned from that to obtain their balances:
 
 ::
           
-    unlocked >>> get_my_blind_accounts                                                                  
+    >>> get_my_blind_accounts                                                                  
     [[
     "alice",
     "BTS5Qmr9H9SM39EHmVgXtsVjUGn2xBUtqbF6MdQ6RpnxUWNak7mse"
     ]]
 
-    unlocked >>> get_blind_balances "alice"                                                                
+    >>> get_blind_balances "alice"                                                                
     100 BTS
 
 To review, you have learned how to:
@@ -233,7 +233,7 @@ before you continue.
 
 ::
 
-    unlocked >>> create_blind_account bobby "bobby-brain-key which is a series of words that are usually very long"                                                                   
+    >>> create_blind_account bobby "bobby-brain-key which is a series of words that are usually very long"                                                                   
     1434971ms th_a       wallet.cpp:743                save_wallet_file     ] saving wallet to file /home/admin/BitShares2/blindBobWallet
     BTS6V829H9SM39EHmVgXtsVjUGn2xBUtqbF6MdQ6RpnxUWNakaV26
     true
@@ -246,10 +246,10 @@ account to do the transfer.
 
 ::
 
-    unlocked >>> set_key_label "BTS6V829H9SM39EHmVgXtsVjUGn2xBUtqbF6MdQ6RpnxUWNakaV26" "bobby"
+    >>> set_key_label "BTS6V829H9SM39EHmVgXtsVjUGn2xBUtqbF6MdQ6RpnxUWNakaV26" "bobby"
     true
 
-    unlocked >>> blind_transfer alice bobby 80 BTS true
+    >>> blind_transfer alice bobby 80 BTS true
     318318ms th_a       wallet.cpp:743                save_wallet_file     ] saving wallet to file /home/admin/BitShares2/blindAliceWallet
     blind_transfer_operation temp-account fee: 15 BTS
     5 BTS to  alice
@@ -297,13 +297,13 @@ shown under the Active Permissions heading.
 
 ::
 
-    unlocked >>> receive_blind_transfer "iiMe3q3X4DqW1AqCXfkYEcuRsRATxMwSvJpaUuCbMTcxRUUsn1qUtjfqLYUaNycrpKHfmUG1PR9mxd2nVKB15RYSryyjSn54ADzNBaFzxTY1s699iJWWHw2itiagfcKtvwizhN9Ru8nfnzgx8c5vi7RCLNB2PgrcTxSjYUJW1sfMicFyLRgYrCHFyNd1VhBeWpsLMwagcTGkUTf4rNDyXTrRqqLf2Nhy6P3ohk3J5WbshYyHxuLJGY2E7B5nPpFuf4Bnf9paD6jW "alice" "from Alice"
+    >>> receive_blind_transfer "iiMe3q3X4DqW1AqCXfkYEcuRsRATxMwSvJpaUuCbMTcxRUUsn1qUtjfqLYUaNycrpKHfmUG1PR9mxd2nVKB15RYSryyjSn54ADzNBaFzxTY1s699iJWWHw2itiagfcKtvwizhN9Ru8nfnzgx8c5vi7RCLNB2PgrcTxSjYUJW1sfMicFyLRgYrCHFyNd1VhBeWpsLMwagcTGkUTf4rNDyXTrRqqLf2Nhy6P3ohk3J5WbshYyHxuLJGY2E7B5nPpFuf4Bnf9paD6jW "alice" "from Alice"
     100 BTS  alice  =>  bobby   "from Alice"
 
     set_key_label BTS9oxUqKFD8gfGoXb6AwDBEoBt8W47g4Mtz8SW8inUeHemR9nOi9 "peter"
     true
 
-    unlocked >>> blind_transfer bobby peter 50 BTS true                                                      
+    >>> blind_transfer bobby peter 50 BTS true                                                      
     2263915ms th_a       wallet.cpp:743                save_wallet_file     ] saving wallet to file /home/admin/BitShares2/blindBobWallet
     blind_transfer_operation temp-account fee: 15 BTS
     15 BTS to  bobby
@@ -312,7 +312,7 @@ shown under the Active Permissions heading.
     50 BTS to  peter
               receipt: boqRZqyKaZW6bExrystPwFdXvzUBJSjGeaqy482NxBJ6S9VPCqArXCypszWZnpCeG7jfS3oUnbtmn5bmmVH5HCXJg9QxCmn4pocbJ8ipRHfzgeq1mLMewQNn6HGrkb5WbosSntj3o4LcSEMpw2etsR2GjnBxcdxN879rBwxm6inhbpsoYn1nGwS4H o3SqoCF43MRDK3ouYrFBcAK2TTPXfnnvAU3r1UvhNHpxuNaS1cexbd88Nn6BTxSifKdJ8ysFft98e88Cbek
 
-    unlocked >>> get_blind_balances bab1                                                                  
+    >>> get_blind_balances bab1                                                                  
     get_blind_balances bab1
     15 BTS
 
@@ -327,16 +327,16 @@ primarily to illustrate the syntax of the command.
 
 ::
 
-    unlocked >>> list_account_balances "peters-public-registered-account"                                                        
+    >>> list_account_balances "peters-public-registered-account"                                                        
     4860 BTS
 
-    unlocked >>> set_key_label "BTS5Qmr9H9SM39EHmVgXtsVjUGn2xBUtqbF6MdQ6RpnxUWNak7mse" "Alice-is-Blind"
+    >>> set_key_label "BTS5Qmr9H9SM39EHmVgXtsVjUGn2xBUtqbF6MdQ6RpnxUWNak7mse" "Alice-is-Blind"
     true
 
-    unlocked >>> set_key_label "BTS6V829H9SM39EHmVgXtsVjUGn2xBUtqbF6MdQ6RpnxUWNakaV26" "bobby"
+    >>> set_key_label "BTS6V829H9SM39EHmVgXtsVjUGn2xBUtqbF6MdQ6RpnxUWNakaV26" "bobby"
     true
 
-    unlocked >>> transfer_to_blind peter BTS [[alice,800],[alice,2000],[bobby,2000] true
+    >>> transfer_to_blind peter BTS [[alice,800],[alice,2000],[bobby,2000] true
     peter sent 4800 BTS to 3 blinded balances fee: 40 BTS
     800 BTS to  alice
       receipt: 2Dif6AK9AqYGDLDLYcpcwBmzA36dZRmuXXJR8tTQsXg32nBGs6AetDT2E4u4GSVbMKEiTi54sqYu1Bc23cPvzSAyPGEJTLkVpihaot4e1FUDnNPz41uFfu2G6rug1hcRf2Qp5kkRm4ucsAi4Fzb2M3MSfw4r56ucztRisk9JJjLdqFjUPuiAiTdM99JdfKZy8WTkKF2npd
