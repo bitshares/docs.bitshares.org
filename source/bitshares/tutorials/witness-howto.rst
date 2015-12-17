@@ -52,9 +52,9 @@ node:::
 First thing to do is setting up a password for the newly created wallet prior to
 importing any private keys:::
 
-    new >>> set_password <password>
+    >>> set_password <password>
     null
-    locked >>> unlock <password>
+    >>> unlock <password>
     null
     >>>
 

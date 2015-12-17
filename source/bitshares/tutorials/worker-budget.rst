@@ -45,7 +45,7 @@ For example:
 
 ::
 
-     new >>> get_object 2.13.361
+     >>> get_object 2.13.361
      get_object 2.13.361
      [{
          "id": "2.13.361",
