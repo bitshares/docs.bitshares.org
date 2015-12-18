@@ -40,7 +40,7 @@ How to see proposals on the chain
 Since there is no support in the UI yet, go to http://cryptofresh.com/ and look at the worker proposal chart.
 You also can inspect all the objects 1.4.*:::
 
-    >>> unlocked >>> get_object 1.14.4
+    >>> get_object 1.14.4
     get_object 1.14.4
     [{
         "id": "1.14.4",

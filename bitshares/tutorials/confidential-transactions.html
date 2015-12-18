@@ -227,10 +227,10 @@ key / brainkey&#8221; pair into a wallet so you could access your confidential
 balance. At least it would be possible to do so at some future date, unlike the
 impossibility it would be if you lost the wallet and failed to record the
 &#8220;brainkey&#8221;.</p>
-<div class="highlight-python"><div class="highlight"><pre>unlocked &gt;&gt;&gt; create_blind_account alice &quot;alice-brain-key which is a series of words that are usually very long&quot;
-1483572ms th_a       wallet.cpp:743                save_wallet_file     ] saving wallet to file /home/admin/BitShares2/blindAliceWallet
-BTS5Qmr9H9SM39EHmVgXtsVjUGn2xBUtqbF6MdQ6RpnxUWNak7mse
-true
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">create_blind_account</span> <span class="n">alice</span> <span class="s">&quot;alice-brain-key which is a series of words that are usually very long&quot;</span>
+<span class="go">1483572ms th_a       wallet.cpp:743                save_wallet_file     ] saving wallet to file /home/admin/BitShares2/blindAliceWallet</span>
+<span class="go">BTS5Qmr9H9SM39EHmVgXtsVjUGn2xBUtqbF6MdQ6RpnxUWNak7mse</span>
+<span class="go">true</span>
 </pre></div>
 </div>
 <p>The result of the create_blind_account command is to print out the Public Key
@@ -255,21 +255,21 @@ was printed for the alice account when it was created. Since the alice account
 is not registered we need a way to refer to it before we can do the transfer. So
 in this CLI session we&#8217;ll also show you how to create a label to do that and
 then we&#8217;ll use that label to transfer assets into the alice blind account.</p>
-<div class="highlight-python"><div class="highlight"><pre>unlocked &gt;&gt;&gt; list_account_balances &quot;peters-public-registered-account&quot;
-5000 BTS
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">list_account_balances</span> <span class="s">&quot;peters-public-registered-account&quot;</span>
+<span class="go">5000 BTS</span>
 
-unlocked &gt;&gt;&gt; set_key_label &quot;BTS5Qmr9H9SM39EHmVgXtsVjUGn2xBUtqbF6MdQ6RpnxUWNak7mse&quot; &quot;Alice-is-Blind&quot;
-true
+<span class="gp">&gt;&gt;&gt; </span><span class="n">set_key_label</span> <span class="s">&quot;BTS5Qmr9H9SM39EHmVgXtsVjUGn2xBUtqbF6MdQ6RpnxUWNak7mse&quot;</span> <span class="s">&quot;Alice-is-Blind&quot;</span>
+<span class="go">true</span>
 
-unlocked &gt;&gt;&gt; transfer_to_blind &quot;peters-public-registered-account&quot; BTS [[Alice-is-Blind,100]] true
-3369305ms th_a       wallet.cpp:3794               transfer_to_blind    ] to_amounts: [[&quot;Alice-is-Blind&quot;,&quot;100&quot;]]
-peters-public-registered-account sent 100 BTS to 1 blinded balance fee: 40 BTS
-100 BTS to  Alice-is-Blind
-          receipt: 2B2vTjJ19hgqzGp8qdc8MEWmsgEUGECNJcoQTYNQqMU8bRofmbQYemXs56FoUc4Z5PdVM65nsySZgwJMq9Z SkpWQFhEqLGuZi1N3jQm8yBwaLD2DQzwY5AEW1rSK9HWJbfqNLtx8U4kc3o9xKtJoED2SgHW6jDQ7igBTcVhuUiKSwFu3DFa6LTeS5 Wm5khjgy1LrR5uhmp
+<span class="gp">&gt;&gt;&gt; </span><span class="n">transfer_to_blind</span> <span class="s">&quot;peters-public-registered-account&quot;</span> <span class="n">BTS</span> <span class="p">[[</span><span class="n">Alice</span><span class="o">-</span><span class="ow">is</span><span class="o">-</span><span class="n">Blind</span><span class="p">,</span><span class="mi">100</span><span class="p">]]</span> <span class="n">true</span>
+<span class="go">3369305ms th_a       wallet.cpp:3794               transfer_to_blind    ] to_amounts: [[&quot;Alice-is-Blind&quot;,&quot;100&quot;]]</span>
+<span class="go">peters-public-registered-account sent 100 BTS to 1 blinded balance fee: 40 BTS</span>
+<span class="go">100 BTS to  Alice-is-Blind</span>
+<span class="go">          receipt: 2B2vTjJ19hgqzGp8qdc8MEWmsgEUGECNJcoQTYNQqMU8bRofmbQYemXs56FoUc4Z5PdVM65nsySZgwJMq9Z SkpWQFhEqLGuZi1N3jQm8yBwaLD2DQzwY5AEW1rSK9HWJbfqNLtx8U4kc3o9xKtJoED2SgHW6jDQ7igBTcVhuUiKSwFu3DFa6LTeS5 Wm5khjgy1LrR5uhmp</span>
 
-unlocked &gt;&gt;&gt; list_account_balances &quot;peters-public-registered-account&quot;
-list_account_balances verbaltech2
-4860 BTS
+<span class="gp">&gt;&gt;&gt; </span><span class="n">list_account_balances</span> <span class="s">&quot;peters-public-registered-account&quot;</span>
+<span class="go">list_account_balances verbaltech2</span>
+<span class="go">4860 BTS</span>
 </pre></div>
 </div>
 <p>The above 2 steps transmit BTS assets from a public, registered account named
@@ -305,8 +305,8 @@ assets into alice&#8217;s blind account.</p>
 the confidential account. We covered the process required to transmit assets in
 Step 2, now lets see what it takes to complete the transfer and verify we have
 the correct balance:</p>
-<div class="highlight-python"><div class="highlight"><pre>unlocked &gt;&gt;&gt; receive_blind_transfer &quot;2B2vTjJ19hgqzGp8qdc8MEWmsgEUGECNJcoQTYNQqMU8bRofmbQYemXs56FoUc4Z5PdVM65nsySZgwJMq9ZSkpWQFhEqLGuZi1N3jQm8yBwaLD2DQzwY5AEW1rSK9HWJbfqNLtx8U4kc3o9xKtJoED2SgHW6jDQ7igBTcVhuUiKSwFu3DFa6LTeS5Wm5khjgy1LrR5uhmp &quot;peter&quot; &quot;from Peter&quot;
-100 BTS  peter  =&gt;  alice   &quot;from Peter&quot;
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">receive_blind_transfer</span> <span class="s">&quot;2B2vTjJ19hgqzGp8qdc8MEWmsgEUGECNJcoQTYNQqMU8bRofmbQYemXs56FoUc4Z5PdVM65nsySZgwJMq9ZSkpWQFhEqLGuZi1N3jQm8yBwaLD2DQzwY5AEW1rSK9HWJbfqNLtx8U4kc3o9xKtJoED2SgHW6jDQ7igBTcVhuUiKSwFu3DFa6LTeS5Wm5khjgy1LrR5uhmp &quot;</span><span class="n">peter</span><span class="s">&quot; &quot;</span><span class="kn">from</span> <span class="nn">Peter</span><span class="s">&quot;</span>
+<span class="go">100 BTS  peter  =&gt;  alice   &quot;from Peter&quot;</span>
 </pre></div>
 </div>
 <p>Using the balance receipt value returned from the transfer_to_blind command in
@@ -323,14 +323,14 @@ transfer is correct and complete.</p>
 <p>For any wallet in which you have created confidential accounts you can list the
 accounts present using the &#8220;get_my_blind_accounts&#8221; CLI command, and use the
 accounts returned from that to obtain their balances:</p>
-<div class="highlight-python"><div class="highlight"><pre>unlocked &gt;&gt;&gt; get_my_blind_accounts
-[[
-&quot;alice&quot;,
-&quot;BTS5Qmr9H9SM39EHmVgXtsVjUGn2xBUtqbF6MdQ6RpnxUWNak7mse&quot;
-]]
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">get_my_blind_accounts</span>
+<span class="go">[[</span>
+<span class="go">&quot;alice&quot;,</span>
+<span class="go">&quot;BTS5Qmr9H9SM39EHmVgXtsVjUGn2xBUtqbF6MdQ6RpnxUWNak7mse&quot;</span>
+<span class="go">]]</span>
 
-unlocked &gt;&gt;&gt; get_blind_balances &quot;alice&quot;
-100 BTS
+<span class="gp">&gt;&gt;&gt; </span><span class="n">get_blind_balances</span> <span class="s">&quot;alice&quot;</span>
+<span class="go">100 BTS</span>
 </pre></div>
 </div>
 <p>To review, you have learned how to:</p>
@@ -385,10 +385,10 @@ ecosystem.</p>
 our hypothetical final destination. We&#8217;ll call this account bobby. We&#8217;ve already
 shown how to do this in part 1, but you may wish to review those basic steps
 before you continue.</p>
-<div class="highlight-python"><div class="highlight"><pre>unlocked &gt;&gt;&gt; create_blind_account bobby &quot;bobby-brain-key which is a series of words that are usually very long&quot;
-1434971ms th_a       wallet.cpp:743                save_wallet_file     ] saving wallet to file /home/admin/BitShares2/blindBobWallet
-BTS6V829H9SM39EHmVgXtsVjUGn2xBUtqbF6MdQ6RpnxUWNakaV26
-true
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">create_blind_account</span> <span class="n">bobby</span> <span class="s">&quot;bobby-brain-key which is a series of words that are usually very long&quot;</span>
+<span class="go">1434971ms th_a       wallet.cpp:743                save_wallet_file     ] saving wallet to file /home/admin/BitShares2/blindBobWallet</span>
+<span class="go">BTS6V829H9SM39EHmVgXtsVjUGn2xBUtqbF6MdQ6RpnxUWNakaV26</span>
+<span class="go">true</span>
 </pre></div>
 </div>
 <p>We need to restart the CLI wallet with the alice account, where we have a 100
@@ -396,17 +396,17 @@ BTS balance. We will create a label to refer to Bob&#8217;s confidential account
 (bobby) and transfer some BTS assets from alice to bobby. Note that the process
 is the same as before, and we need to set a label for the bobby (destination)
 account to do the transfer.</p>
-<div class="highlight-python"><div class="highlight"><pre>unlocked &gt;&gt;&gt; set_key_label &quot;BTS6V829H9SM39EHmVgXtsVjUGn2xBUtqbF6MdQ6RpnxUWNakaV26&quot; &quot;bobby&quot;
-true
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">set_key_label</span> <span class="s">&quot;BTS6V829H9SM39EHmVgXtsVjUGn2xBUtqbF6MdQ6RpnxUWNakaV26&quot;</span> <span class="s">&quot;bobby&quot;</span>
+<span class="go">true</span>
 
-unlocked &gt;&gt;&gt; blind_transfer alice bobby 80 BTS true
-318318ms th_a       wallet.cpp:743                save_wallet_file     ] saving wallet to file /home/admin/BitShares2/blindAliceWallet
-blind_transfer_operation temp-account fee: 15 BTS
-5 BTS to  alice
-          receipt: iiMe3q3X4DqW1AqCXfkYEcuRsRATxMwSvJpaUuCbMTcxRUUGeBPPwYU1SRRs4tEQGPNmP$Js4jTJkDGEHzUm33o6h14wa1XNsmedLJCKnwmyGeqFB4vPRk9ZxnaizbMNu8bHr62xQaTc73ALxAZEPRdkNLyqMk$oDEFja3vCPgcyDYCQmkVnNiAQaKeMG83KrW11QZMHQZfzZ8ofTSTEy8qruLAa27vrjAM6q2ckbD8ZTNMWnkSWniq$4fay3Tbcd2zsy9EgxuxN
+<span class="gp">&gt;&gt;&gt; </span><span class="n">blind_transfer</span> <span class="n">alice</span> <span class="n">bobby</span> <span class="mi">80</span> <span class="n">BTS</span> <span class="n">true</span>
+<span class="go">318318ms th_a       wallet.cpp:743                save_wallet_file     ] saving wallet to file /home/admin/BitShares2/blindAliceWallet</span>
+<span class="go">blind_transfer_operation temp-account fee: 15 BTS</span>
+<span class="go">5 BTS to  alice</span>
+<span class="go">          receipt: iiMe3q3X4DqW1AqCXfkYEcuRsRATxMwSvJpaUuCbMTcxRUUGeBPPwYU1SRRs4tEQGPNmP$Js4jTJkDGEHzUm33o6h14wa1XNsmedLJCKnwmyGeqFB4vPRk9ZxnaizbMNu8bHr62xQaTc73ALxAZEPRdkNLyqMk$oDEFja3vCPgcyDYCQmkVnNiAQaKeMG83KrW11QZMHQZfzZ8ofTSTEy8qruLAa27vrjAM6q2ckbD8ZTNMWnkSWniq$4fay3Tbcd2zsy9EgxuxN</span>
 
-80 BTS to  bobby
-          receipt: iiMe3q3X4DqW1AqCXfkYEcuRsRATxMwSvJpaUuCbMTcxRUUsn1qUtjfqLYUaNycrpKHfmUG1PR9mxd2nVKB15RYSryyjSn54ADzNBaFzxTY1s699iJWWHw2itiagfcKtvwizhN9Ru8nfnzgx8c5vi7RCLNB2PgrcTxSjYUJW1sfMicFyLRgYrCHFyNd1VhBeWpsLMwagcTGkUTf4rNDyXTrRqqLf2Nhy6P3ohk3J5WbshYyHxuLJGY2E7B5nPpFuf4Bnf9paD6jW
+<span class="go">80 BTS to  bobby</span>
+<span class="go">          receipt: iiMe3q3X4DqW1AqCXfkYEcuRsRATxMwSvJpaUuCbMTcxRUUsn1qUtjfqLYUaNycrpKHfmUG1PR9mxd2nVKB15RYSryyjSn54ADzNBaFzxTY1s699iJWWHw2itiagfcKtvwizhN9Ru8nfnzgx8c5vi7RCLNB2PgrcTxSjYUJW1sfMicFyLRgYrCHFyNd1VhBeWpsLMwagcTGkUTf4rNDyXTrRqqLf2Nhy6P3ohk3J5WbshYyHxuLJGY2E7B5nPpFuf4Bnf9paD6jW</span>
 </pre></div>
 </div>
 <p>There is a bit more output printed than what is shown above, but the important
@@ -441,24 +441,24 @@ think needs no label to access, that isn&#8217;t the case.</p>
 a blind (confidential) account. The public key value for the account is readily
 available using the account&#8217;s permission page explorer. Use the account/key
 shown under the Active Permissions heading.</p>
-<div class="highlight-python"><div class="highlight"><pre>unlocked &gt;&gt;&gt; receive_blind_transfer &quot;iiMe3q3X4DqW1AqCXfkYEcuRsRATxMwSvJpaUuCbMTcxRUUsn1qUtjfqLYUaNycrpKHfmUG1PR9mxd2nVKB15RYSryyjSn54ADzNBaFzxTY1s699iJWWHw2itiagfcKtvwizhN9Ru8nfnzgx8c5vi7RCLNB2PgrcTxSjYUJW1sfMicFyLRgYrCHFyNd1VhBeWpsLMwagcTGkUTf4rNDyXTrRqqLf2Nhy6P3ohk3J5WbshYyHxuLJGY2E7B5nPpFuf4Bnf9paD6jW &quot;alice&quot; &quot;from Alice&quot;
-100 BTS  alice  =&gt;  bobby   &quot;from Alice&quot;
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">receive_blind_transfer</span> <span class="s">&quot;iiMe3q3X4DqW1AqCXfkYEcuRsRATxMwSvJpaUuCbMTcxRUUsn1qUtjfqLYUaNycrpKHfmUG1PR9mxd2nVKB15RYSryyjSn54ADzNBaFzxTY1s699iJWWHw2itiagfcKtvwizhN9Ru8nfnzgx8c5vi7RCLNB2PgrcTxSjYUJW1sfMicFyLRgYrCHFyNd1VhBeWpsLMwagcTGkUTf4rNDyXTrRqqLf2Nhy6P3ohk3J5WbshYyHxuLJGY2E7B5nPpFuf4Bnf9paD6jW &quot;</span><span class="n">alice</span><span class="s">&quot; &quot;</span><span class="kn">from</span> <span class="nn">Alice</span><span class="s">&quot;</span>
+<span class="go">100 BTS  alice  =&gt;  bobby   &quot;from Alice&quot;</span>
 
-set_key_label BTS9oxUqKFD8gfGoXb6AwDBEoBt8W47g4Mtz8SW8inUeHemR9nOi9 &quot;peter&quot;
-true
+<span class="go">set_key_label BTS9oxUqKFD8gfGoXb6AwDBEoBt8W47g4Mtz8SW8inUeHemR9nOi9 &quot;peter&quot;</span>
+<span class="go">true</span>
 
-unlocked &gt;&gt;&gt; blind_transfer bobby peter 50 BTS true
-2263915ms th_a       wallet.cpp:743                save_wallet_file     ] saving wallet to file /home/admin/BitShares2/blindBobWallet
-blind_transfer_operation temp-account fee: 15 BTS
-15 BTS to  bobby
-          receipt: boqRZqyKaZW6bExrystPwFdXvzUBJSjGeaqy482NxBJ6S9Un4zima1mzysTrUipBiBpm4CrLTvCJZfqDaAaqEpmxWAWAKhi2GmnuT7nLU6n18GWjLxUnpskyywA8qCBw9VTAvaxtrNpFRtxx16NzJiZEYk6zfndvLJ2txvjq9cTT16QRXdqPQ75GJxuTAWKNdvzYm3NyK3w3K3462AbutEF9TyNGEfHidvAff49Q3yBATFs1g5NkGAMsmx4ffgwnFeMPBqi58cSZ
+<span class="gp">&gt;&gt;&gt; </span><span class="n">blind_transfer</span> <span class="n">bobby</span> <span class="n">peter</span> <span class="mi">50</span> <span class="n">BTS</span> <span class="n">true</span>
+<span class="go">2263915ms th_a       wallet.cpp:743                save_wallet_file     ] saving wallet to file /home/admin/BitShares2/blindBobWallet</span>
+<span class="go">blind_transfer_operation temp-account fee: 15 BTS</span>
+<span class="go">15 BTS to  bobby</span>
+<span class="go">          receipt: boqRZqyKaZW6bExrystPwFdXvzUBJSjGeaqy482NxBJ6S9Un4zima1mzysTrUipBiBpm4CrLTvCJZfqDaAaqEpmxWAWAKhi2GmnuT7nLU6n18GWjLxUnpskyywA8qCBw9VTAvaxtrNpFRtxx16NzJiZEYk6zfndvLJ2txvjq9cTT16QRXdqPQ75GJxuTAWKNdvzYm3NyK3w3K3462AbutEF9TyNGEfHidvAff49Q3yBATFs1g5NkGAMsmx4ffgwnFeMPBqi58cSZ</span>
 
-50 BTS to  peter
-          receipt: boqRZqyKaZW6bExrystPwFdXvzUBJSjGeaqy482NxBJ6S9VPCqArXCypszWZnpCeG7jfS3oUnbtmn5bmmVH5HCXJg9QxCmn4pocbJ8ipRHfzgeq1mLMewQNn6HGrkb5WbosSntj3o4LcSEMpw2etsR2GjnBxcdxN879rBwxm6inhbpsoYn1nGwS4H o3SqoCF43MRDK3ouYrFBcAK2TTPXfnnvAU3r1UvhNHpxuNaS1cexbd88Nn6BTxSifKdJ8ysFft98e88Cbek
+<span class="go">50 BTS to  peter</span>
+<span class="go">          receipt: boqRZqyKaZW6bExrystPwFdXvzUBJSjGeaqy482NxBJ6S9VPCqArXCypszWZnpCeG7jfS3oUnbtmn5bmmVH5HCXJg9QxCmn4pocbJ8ipRHfzgeq1mLMewQNn6HGrkb5WbosSntj3o4LcSEMpw2etsR2GjnBxcdxN879rBwxm6inhbpsoYn1nGwS4H o3SqoCF43MRDK3ouYrFBcAK2TTPXfnnvAU3r1UvhNHpxuNaS1cexbd88Nn6BTxSifKdJ8ysFft98e88Cbek</span>
 
-unlocked &gt;&gt;&gt; get_blind_balances bab1
-get_blind_balances bab1
-15 BTS
+<span class="gp">&gt;&gt;&gt; </span><span class="n">get_blind_balances</span> <span class="n">bab1</span>
+<span class="go">get_blind_balances bab1</span>
+<span class="go">15 BTS</span>
 </pre></div>
 </div>
 <p>The explanation for this CLI session is essentially the same as it was for step
@@ -468,28 +468,28 @@ role in the transfer process are the same.</p>
 confidential accounts. This is very useful because it not only saves on transfer
 fees it also obscures what amounts end up where. The point of showing this is
 primarily to illustrate the syntax of the command.</p>
-<div class="highlight-python"><div class="highlight"><pre>unlocked &gt;&gt;&gt; list_account_balances &quot;peters-public-registered-account&quot;
-4860 BTS
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">list_account_balances</span> <span class="s">&quot;peters-public-registered-account&quot;</span>
+<span class="go">4860 BTS</span>
 
-unlocked &gt;&gt;&gt; set_key_label &quot;BTS5Qmr9H9SM39EHmVgXtsVjUGn2xBUtqbF6MdQ6RpnxUWNak7mse&quot; &quot;Alice-is-Blind&quot;
-true
+<span class="gp">&gt;&gt;&gt; </span><span class="n">set_key_label</span> <span class="s">&quot;BTS5Qmr9H9SM39EHmVgXtsVjUGn2xBUtqbF6MdQ6RpnxUWNak7mse&quot;</span> <span class="s">&quot;Alice-is-Blind&quot;</span>
+<span class="go">true</span>
 
-unlocked &gt;&gt;&gt; set_key_label &quot;BTS6V829H9SM39EHmVgXtsVjUGn2xBUtqbF6MdQ6RpnxUWNakaV26&quot; &quot;bobby&quot;
-true
+<span class="gp">&gt;&gt;&gt; </span><span class="n">set_key_label</span> <span class="s">&quot;BTS6V829H9SM39EHmVgXtsVjUGn2xBUtqbF6MdQ6RpnxUWNakaV26&quot;</span> <span class="s">&quot;bobby&quot;</span>
+<span class="go">true</span>
 
-unlocked &gt;&gt;&gt; transfer_to_blind peter BTS [[alice,800],[alice,2000],[bobby,2000] true
-peter sent 4800 BTS to 3 blinded balances fee: 40 BTS
-800 BTS to  alice
-  receipt: 2Dif6AK9AqYGDLDLYcpcwBmzA36dZRmuXXJR8tTQsXg32nBGs6AetDT2E4u4GSVbMKEiTi54sqYu1Bc23cPvzSAyPGEJTLkVpihaot4e1FUDnNPz41uFfu2G6rug1hcRf2Qp5kkRm4ucsAi4Fzb2M3MSfw4r56ucztRisk9JJjLdqFjUPuiAiTdM99JdfKZy8WTkKF2npd
+<span class="gp">&gt;&gt;&gt; </span><span class="n">transfer_to_blind</span> <span class="n">peter</span> <span class="n">BTS</span> <span class="p">[[</span><span class="n">alice</span><span class="p">,</span><span class="mi">800</span><span class="p">],[</span><span class="n">alice</span><span class="p">,</span><span class="mi">2000</span><span class="p">],[</span><span class="n">bobby</span><span class="p">,</span><span class="mi">2000</span><span class="p">]</span> <span class="n">true</span>
+<span class="go">peter sent 4800 BTS to 3 blinded balances fee: 40 BTS</span>
+<span class="go">800 BTS to  alice</span>
+<span class="go">  receipt: 2Dif6AK9AqYGDLDLYcpcwBmzA36dZRmuXXJR8tTQsXg32nBGs6AetDT2E4u4GSVbMKEiTi54sqYu1Bc23cPvzSAyPGEJTLkVpihaot4e1FUDnNPz41uFfu2G6rug1hcRf2Qp5kkRm4ucsAi4Fzb2M3MSfw4r56ucztRisk9JJjLdqFjUPuiAiTdM99JdfKZy8WTkKF2npd</span>
 
-2000 BTS to  alice
-  receipt: 28HrgG1nzkGEDNnL1eZmNvN9JmTVQp7X88nf7rfayjM7sACY8yA7FjV1cW5QXHi1sqv1ywCqfnGiNBqDQWMwpcGB1KdRwDcJPaTMZ5gZpw7Vw4BhdnVeZHY88GV5n8j3uGmZuGBEq18zgHDCFiLJ6WAYvs5PiFvjaNjwQmvBXaC6CqAJWJKXeKCCgmoVJ3CQCw2ErocfVH
+<span class="go">2000 BTS to  alice</span>
+<span class="go">  receipt: 28HrgG1nzkGEDNnL1eZmNvN9JmTVQp7X88nf7rfayjM7sACY8yA7FjV1cW5QXHi1sqv1ywCqfnGiNBqDQWMwpcGB1KdRwDcJPaTMZ5gZpw7Vw4BhdnVeZHY88GV5n8j3uGmZuGBEq18zgHDCFiLJ6WAYvs5PiFvjaNjwQmvBXaC6CqAJWJKXeKCCgmoVJ3CQCw2ErocfVH</span>
 
-2000 BTS to  bobby
-  receipt: 82NxBJ6S9Un4zima1mzyboqRZqyKaZW6bExrystPwFdXvzUBJSjGeaqy4sTrUipBiBpm4CrLTvCJZfqDaAaqEpmxWAWAKhi2GmnuT7nLU6n18GWjLxUnpskyywA8qCBw9VTAvaxtrk6zfndvLJ2txvjq9cTT16QRXdqPQ75GJNpFRtxx16NzJiZEY49Q3yBATFs1g5NkGAMsmx4ffgwnFeMPBqi58cSZxuTAWKNdvzYm3NyK3w3K3462AbutEF9TyNGEfHidvAff
+<span class="go">2000 BTS to  bobby</span>
+<span class="go">  receipt: 82NxBJ6S9Un4zima1mzyboqRZqyKaZW6bExrystPwFdXvzUBJSjGeaqy4sTrUipBiBpm4CrLTvCJZfqDaAaqEpmxWAWAKhi2GmnuT7nLU6n18GWjLxUnpskyywA8qCBw9VTAvaxtrk6zfndvLJ2txvjq9cTT16QRXdqPQ75GJNpFRtxx16NzJiZEY49Q3yBATFs1g5NkGAMsmx4ffgwnFeMPBqi58cSZxuTAWKNdvzYm3NyK3w3K3462AbutEF9TyNGEfHidvAff</span>
 
-20 BTS to  peter
-  receipt: cwBmzA36dZRmuXXJR8tTQs2Dif6AK9AqYGetDT2E4u4GSVbMKEiTi54saot4e1FUDnNPz41uFDLDLYcpXg32nBGs6Afu2G6rpguiAiTdM99JdfKZy8WTkKF2npd1hcRf2Qp5kkRm4ucsAi4Fzb2M3MSfw4r56ucztRisk9JJjLdqFjUPqYu1Bc23cPvzSAyPGEJTLkVpih
+<span class="go">20 BTS to  peter</span>
+<span class="go">  receipt: cwBmzA36dZRmuXXJR8tTQs2Dif6AK9AqYGetDT2E4u4GSVbMKEiTi54saot4e1FUDnNPz41uFDLDLYcpXg32nBGs6Afu2G6rpguiAiTdM99JdfKZy8WTkKF2npd1hcRf2Qp5kkRm4ucsAi4Fzb2M3MSfw4r56ucztRisk9JJjLdqFjUPqYu1Bc23cPvzSAyPGEJTLkVpih</span>
 </pre></div>
 </div>
 <p>In this case the only thing the public sees is that account &#8216;peter&#8217; sent 4800

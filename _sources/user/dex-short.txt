@@ -45,8 +45,8 @@ Holders of any bitAsset can request a settlement at a *fair price* at any time.
 The settlement closes the borrow/short positions with lowest collateral ratio
 and sells the collateral for the settlement.
 
-Note, that there is a maximum daily settlement volume defined by the
-:doc:`committee <committee>` to prevent exploitation via external price
+Note, that there is a maximum daily settlement volume (currently 2%) defined by
+the :doc:`committee <committee>` to prevent exploitation via external price
 movements.
 
 Selling
@@ -72,3 +72,32 @@ To close a borrow/short position, one must hold the borrowed amount of that
 particular bitAsset to hand it over to the BitShares network. After that, the
 BitAssets are reduced from the corresponding supply and the collateral is
 released and given back to its owner.
+
+Discussion
+##########
+
+Shorts can pick their place in line for settlement. Think of it this way, if you
+fall in the bottom 2% of shorters by collateral you have been given notice of
+potential margin call since only 2% can be settled, daily. This is like any
+other market where they give you 24 hours to add collateral. If someone is short
+and doesn't want to meet the new higher collateral limits then they can either
+cover on their own terms or add collateral.
+
+By giving 24 hours shorts have an opportunity to cover prior to any price
+manipulation by big players.
+
+If there is a 10% premium on BitUSD relative to the feed, then the attacker
+would have to increase reported price feed (value of BTS) by 10% just to get the
+force-settlement price to equal the previously fair value for BitUSD. They
+would have to push beyond 10% before the short starts taking a loss relative to
+a voluntary cover. All savvy market participants would be aware of a large
+force-settle order and would therefore reset the manipulator making it much
+harder to manipulate the price. In effect, price manipulation represents "free
+money" to those who know it is going on.
+
+Look at it another way, someone enters a large force-settlement order it becomes
+an opportunity for the shorter to do reverse manipulation. It is a tug of war
+where both sides (short and long) have equal opportunity to manipulate the
+market in their favor. They go to battle and the result is just the fair market
+price at that point in time. It is not a guaranteed win for the potential
+manipulator.

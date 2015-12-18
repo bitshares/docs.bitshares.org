@@ -15,6 +15,15 @@ integrating **any** Graphene based technology to profiting from
 * its network effect, and
 * existing ecosystem.
 
+Skype Group for Important Announcements
+#######################################
+
+We offer a *low noise* skype group for important announcements for our partners,
+including exchanges, merchants and integrated businesses. If you would like to
+be added, please send a short mail to `Fabian`_ describing your service.
+
+.. _Fabian: mailto:Fabian@cryptonomex.com
+
 Basic Knowledge
 ###############
 
