@@ -5,6 +5,14 @@
 Whitepapers
 ***************
 
+BitShares 2.0: Financial Smart Contract Platform
+################################################
+
+BitShares 2.0 is considered to be a Financial Smart Contract Platform, even
+though it offers way more features and innovations than just that. However, this
+paper focuses on the financial aspects, market pegged assets (i.e. *smartcoins*)
+and the decentralized exchange.
+
 .. raw:: html
 
    <center>
