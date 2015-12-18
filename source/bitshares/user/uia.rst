@@ -14,3 +14,8 @@ Obviously, the regulations that apply to each kind of token vary widely and are
 often different in every jurisdiction. Hence, BitShares comes with tools that
 allow issuers to remain compliant with all applicable regulations when issuing
 assets assuming regulators allow such assets in the first place.
+
+.. .. toctree::
+..   :maxdepth: 1
+..
+..   uia_create
