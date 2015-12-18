@@ -11,4 +11,4 @@ taken from the limited reserves pool at a rate that is defined by the
 shareholders by means of approval voting.
 
 How to run a witness is described in a :doc:`separated tutorial
-<../tutorial/witness-howto>`.
+<../tutorials/witness-howto>`.

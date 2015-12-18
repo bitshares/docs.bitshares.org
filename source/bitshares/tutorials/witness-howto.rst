@@ -12,7 +12,7 @@ witness node.
 Requirements
 ############
 
-* A registered account in the corresponding network (see i.e. :doc:`../bitshares/user/account`)
+* A registered account in the corresponding network (see i.e. :doc:`../user/account`)
 * Some funds in the account to pay for the registration fee
 * Executable binary (see :doc:`../installation/index`)
 
