@@ -20,6 +20,11 @@ All of them can be grouped into three *types of assets*:
   A flexible mixture between UIA and MPA that allows 3rd parties to create their
   own customized MPAs. :doc:`Read more <privbta>`.
 
+* **Fee Backed Assets**:
+  An FBA is a token that pays you a fraction of the transaction fees generated
+  by a particular feature that has been funded independent of BitShares.
+  :doc:`Read more <fba>`.
+
 All assets are equal from a technological point of view and come with more or
 less the same features, namely, they can be traded against each other and can be
 transfered within seconds. The differences between them are of economical
