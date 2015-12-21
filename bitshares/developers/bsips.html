@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <title>User Guide</title>
+    <title>BitShares Improvement Proposal</title>
 
     <!-- CSS -->
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
@@ -73,7 +73,7 @@
  <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
    <div class='in'>
      <div class='headline'>
-       <h1>User Guide</h1>
+       <h1>BitShares Improvement Proposal</h1>
  
      </div>
    </div>
@@ -82,17 +82,9 @@
  <div class='header'>
    <div class='left navlinks'>
     
-        <div class="prev">
-         <div class="title">previous</div>
-         <span><a href="../papers/index.html">Whitepapers</a></span>
-        </div>
         <div class="top">
          <div class="title">top</div>
          <span><a class="uplink" href="../../index.html">Contents</a></span>
-        </div>
-        <div class="next">
-         <div class="title">next</div>
-         <span><a href="first-steps-users.html">First Steps for End-Users</a></span>
         </div>
 
    </div>
@@ -124,33 +116,8 @@
    <div class='menu section'>
     <div id="toc">
       <h3>Table Of Contents</h3>
-      <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">BitShares 2.0</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../installation/index.html">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migrating from BitShares 1.0 to BitShares 2.0</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../papers/index.html">Whitepapers</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">User Guide</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="first-steps-users.html">First Steps for End-Users</a></li>
-<li class="toctree-l3"><a class="reference internal" href="you-should-know.html">Things you should know</a></li>
-<li class="toctree-l3"><a class="reference internal" href="account.html">Accounts</a></li>
-<li class="toctree-l3"><a class="reference internal" href="security.html">Security</a></li>
-<li class="toctree-l3"><a class="reference internal" href="transactions.html">Transactions and Operations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="assets.html">Assets/Tokens</a></li>
-<li class="toctree-l3"><a class="reference internal" href="dex.html">Decentralized Exchange</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#blockchain-positions">Blockchain &#8220;Positions&#8221;</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="shareholder.html">Shareholder</a></li>
-<li class="toctree-l4"><a class="reference internal" href="committee.html">Committee</a></li>
-<li class="toctree-l4"><a class="reference internal" href="witness.html">Witnesses</a></li>
-<li class="toctree-l4"><a class="reference internal" href="worker.html">Workers / Budget Items</a></li>
-<li class="toctree-l4"><a class="reference internal" href="marketer.html">Marketer</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../developers/index.html">Businesses, Developers and Business Developers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
-</ul>
-</li>
+      <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">BitShares 2.0</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../muse/index.html">MUSE</a></li>
@@ -180,54 +147,21 @@
   </div>
   <div class='content'>
    
-  <div class="section" id="user-guide">
-<h1>User Guide<a class="headerlink" href="#user-guide" title="Permalink to this headline">¶</a></h1>
-<p>We would like to introduce most features to the user in a friendly and easy to
-understand way in this <em>User Guide</em>. Note, that the blockchain itself is capable
-of many more things that are not (yet) exposed to the end-user. In the future,
-we expect to see many more customized wallets that expose different features to
-their users.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="first-steps-users.html">First Steps for End-Users</a></li>
-<li class="toctree-l1"><a class="reference internal" href="you-should-know.html">Things you should know</a></li>
-<li class="toctree-l1"><a class="reference internal" href="account.html">Accounts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="security.html">Security</a></li>
-<li class="toctree-l1"><a class="reference internal" href="transactions.html">Transactions and Operations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="assets.html">Assets/Tokens</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dex.html">Decentralized Exchange</a></li>
-</ul>
-</div>
-<div class="section" id="blockchain-positions">
-<h2>Blockchain &#8220;Positions&#8221;<a class="headerlink" href="#blockchain-positions" title="Permalink to this headline">¶</a></h2>
-<p>BitShares 2 separates responsibilities and incentives activities that are
-beneficial to the network, thus acknowledging different skill sets and
-interested community members to have incentives to contribute in the most
-appropriate way.</p>
-<ul class="simple">
-<li>Witnesses are paid for maintaining the back-bone of the network.</li>
-<li>Committee members are unpaid volunteers that organize the community and propose changes to the network.</li>
-<li>Marketers are paid in referral fees.</li>
-<li>Workers are paid for whatever they propose and do.</li>
-<li>Shareholders are people holding BTS. They can cast a vote and influence the DAC&#8217;s businesses</li>
-</ul>
-<p>Each of the above (except Marketers) requires users to vote for the people,
-proposals, and/or changes. Those with sufficient approval will be compensated.</p>
-<p>Workers are the &#8220;catch all&#8221; group where if you have an idea for something that
-could improve the network, you can get &#8220;paid&#8221; by the network to do it.
-Organizing meet-ups, developing a new tool or feature for the community, and
-maintaining websites and infrastructure (e.g. the mumble server team or linux
-distribution) are all examples of things workers may do.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="shareholder.html">Shareholder</a></li>
-<li class="toctree-l1"><a class="reference internal" href="committee.html">Committee</a></li>
-<li class="toctree-l1"><a class="reference internal" href="witness.html">Witnesses</a></li>
-<li class="toctree-l1"><a class="reference internal" href="worker.html">Workers / Budget Items</a></li>
-<li class="toctree-l1"><a class="reference internal" href="marketer.html">Marketer</a></li>
-</ul>
-</div>
-</div>
+  <div class="section" id="bitshares-improvement-proposal">
+<h1>BitShares Improvement Proposal<a class="headerlink" href="#bitshares-improvement-proposal" title="Permalink to this headline">¶</a></h1>
+<p>BSIP stands for BitShares Improvement Proposal but can also seen as an
+improvement <em>protocol</em>. A BSIP is a design document providing information to the
+BitShares community, or describing a new feature for BitShares or its processes
+or environment. The BSIP should provide a concise technical specification of the
+feature or the idea and a rationale for it. It may not only describe technical
+improvements but also document <em>best-practises</em> and recommendations.</p>
+<p>We intend BSIPs to be the primary mechanisms for proposing new features, for
+collecting community input on an issue, and for documenting the design decisions
+that have gone into BitShares. The BSIP author is responsible for building
+consensus within the community and documenting dissenting opinions.</p>
+<p>Because the BSIPs are maintained as text files in a versioned repository, their
+revision history is the historical record of the feature proposal.</p>
+<p>A detailed description of the structure of BSIPs can be found in <a class="reference external" href="https://github.com/bitshares/bsips/blob/master/bsip-0001.md">BSIP-0001</a></p>
 </div>
 
 
