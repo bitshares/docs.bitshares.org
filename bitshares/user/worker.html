@@ -141,7 +141,12 @@
 <li class="toctree-l4"><a class="reference internal" href="shareholder.html">Shareholder</a></li>
 <li class="toctree-l4"><a class="reference internal" href="committee.html">Committee</a></li>
 <li class="toctree-l4"><a class="reference internal" href="witness.html">Witnesses</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="">Workers / Budget Items</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="">Workers / Budget Items</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#payouts">Payouts</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#working-for-bitshares">Working for BitShares</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#pseudo-workers">Pseudo Workers</a></li>
+</ul>
+</li>
 <li class="toctree-l4"><a class="reference internal" href="marketer.html">Marketer</a></li>
 </ul>
 </li>
@@ -184,6 +189,26 @@
 <p>Thanks to the funds stored in the reserve pool, BitShares can offer to not only
 pay for its own development and protocol improvement but also support and
 encourage growth of an ecosystem.</p>
+<div class="section" id="payouts">
+<h2>Payouts<a class="headerlink" href="#payouts" title="Permalink to this headline">¶</a></h2>
+<p>A blockchain parameter (defined by shareholders through the committee) defines
+the daily available budget. No more than that can be paid at any time to all
+workers combined.</p>
+<p>The daily budget is distributed as follows:</p>
+<ul class="simple">
+<li>The available budget is taken out of reserves pool.</li>
+<li>The budget items are sorted according to their approval rate (<code class="docutils literal"><span class="pre">Pro</span> <span class="pre">-</span> <span class="pre">Con</span></code>) in a descending order.</li>
+<li>Starting at the worker with the highest approval rate, the requested daily pay is payed until the daily budget is depleted.</li>
+<li>The worker with the least approval rate that was paid may receive less than the requested pay</li>
+</ul>
+<p>Hence, in order to be successfully funded by the BitShares ecosystem, the
+shareholder approval for your budget item needs to be highly ranked.</p>
+<p>Since the payments for workers from the non-liquid reserve pool result in an
+increased supply of BTS, these payments are vesting over a period of time
+defined by shareholders.</p>
+</div>
+<div class="section" id="working-for-bitshares">
+<h2>Working for BitShares<a class="headerlink" href="#working-for-bitshares" title="Permalink to this headline">¶</a></h2>
 <p>In order to be get paid by BitShares, a proposal containing</p>
 <ul class="simple">
 <li>the date of work begin,</li>
@@ -216,6 +241,33 @@ increased supply of BTS, these payments are vesting over a period of time
 defined by shareholders.</p>
 <p>A description on how to create your own worker can be found in the
 <a class="reference internal" href="../tutorials/worker-create.html"><em>tutorials</em></a>.</p>
+</div>
+<div class="section" id="pseudo-workers">
+<h2>Pseudo Workers<a class="headerlink" href="#pseudo-workers" title="Permalink to this headline">¶</a></h2>
+<p>Three types of pseudo workers exist that are not primarily used to for salary.</p>
+<div class="section" id="polling-workers">
+<h3>Polling Workers<a class="headerlink" href="#polling-workers" title="Permalink to this headline">¶</a></h3>
+<p>A worker proposal can be used to poll the shareholders for an opinion. Those
+workers usually have no or very small pay. Additionally, they come with a
+<em>proposal</em>, <em>recommendation</em> or other topic on which shareholders can publish a
+binary opinion (pro, or contra).</p>
+</div>
+<div class="section" id="refund-worker">
+<h3>Refund Worker<a class="headerlink" href="#refund-worker" title="Permalink to this headline">¶</a></h3>
+<p>This worker is used to set an approval limit for worker proposals and their
+payment by simply refunding his payment/salary to the reserve pool. If its
+amount of daily pay is as large as the daily available funds, and the worker
+has highest approval among all worker proposals, all funds will be returned to
+the reserves and no one will be payed. If, however, an other worker proposal has
+more votes than the refund worker, the proposal gets paid its salary, and the
+rest is return.</p>
+</div>
+<div class="section" id="burn-worker">
+<h3>Burn Worker<a class="headerlink" href="#burn-worker" title="Permalink to this headline">¶</a></h3>
+<p>This type of worker is similar to the <em>Refund Worker</em> above but <strong>burns</strong> his
+pay.</p>
+</div>
+</div>
 </div>
 
 
