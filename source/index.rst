@@ -38,7 +38,7 @@ Recent Updates
 
 .. r!date +\%y/\%m/\%d
 
-* ``15/12/21`` :doc:`bitshares/user/worker.rst`, :doc:`bitshares/funding/index`
+* ``15/12/21`` :doc:`bitshares/user/worker.rst`, :doc:`bitshares/user/fba`, :doc:`bitshares/developers/funding`, :doc:`bitshares/developers/bsips`
 * ``15/12/18`` :doc:`bitshares/papers/index`: Release Candiate for the *BitShares: General Overview* whitepaper
 * ``15/12/04`` :doc:`bitshares/user/account-permissions`, :doc:`bitshares/user/transactions-proposed`
 * ``15/12/03`` :doc:`bitshares/tutorials/construct-transaction`, :doc:`bitshares/tutorials/propose-transaction`

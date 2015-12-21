@@ -9,4 +9,5 @@ BitShares 2.0
    migration/index
    papers/index
    user/index
+   developers/index
    tutorials/index
