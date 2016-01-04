@@ -177,38 +177,38 @@
 <h1>Setting up private testnet<a class="headerlink" href="#setting-up-private-testnet" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="genesis-creation">
 <h2>Genesis creation<a class="headerlink" href="#genesis-creation" title="Permalink to this headline">¶</a></h2>
-<p>First, we&#8217;ll create a <cite>genesis.json</cite> file named <cite>my-genesis.json</cite>:</p>
+<p>First, we&#8217;ll create a <code class="docutils literal"><span class="pre">genesis.json</span></code> file named <code class="docutils literal"><span class="pre">my-genesis.json</span></code>:</p>
 <div class="highlight-sh"><div class="highlight"><pre>mkdir -p genesis
 programs/witness_node/witness_node --create-genesis-json genesis/my-genesis.json
 </pre></div>
 </div>
-<p>The <cite>genesis.json</cite> is the initial state of the network.</p>
+<p>The <code class="docutils literal"><span class="pre">genesis.json</span></code> is the initial state of the network.</p>
 <div class="section" id="genesis-editing">
 <h3>Genesis editing<a class="headerlink" href="#genesis-editing" title="Permalink to this headline">¶</a></h3>
-<p>If you want to customize the network&#8217;s initial state, edit <cite>my-genesis.json</cite>.
+<p>If you want to customize the network&#8217;s initial state, edit <code class="docutils literal"><span class="pre">my-genesis.json</span></code>.
 This allows you to control things such as:</p>
 <ul class="simple">
 <li>The accounts that exist at genesis, their names and public keys</li>
 <li>Assets and their initial distribution (including core asset)</li>
 <li>The initial values of chain parameters</li>
-<li>The account / signing keys of the <cite>init</cite> witnesses (or in fact any account at all).</li>
+<li>The account / signing keys of the <code class="docutils literal"><span class="pre">init</span></code> witnesses (or in fact any account at all).</li>
 </ul>
 <p>The chain ID is a hash of the genesis state.  All transaction signatures
 are only valid for a single chain ID.  So editing the genesis file will
 change your chain ID, and make you unable to sync with all existing
 chains (unless one of them has exactly the same genesis file you do).</p>
-<p>For testing purposes, the <cite>&#8211;dbg-init-key</cite> option will allow you to
+<p>For testing purposes, the <code class="docutils literal"><span class="pre">--dbg-init-key</span></code> option will allow you to
 quickly create a new chain against any genesis file, by replacing the
 witnesses&#8217; block production keys.</p>
 </div>
 <div class="section" id="embedding-genesis-optional">
 <h3>Embedding genesis (optional)<a class="headerlink" href="#embedding-genesis-optional" title="Permalink to this headline">¶</a></h3>
-<p>Once you have <cite>genesis.json</cite>, you may set a <cite>cmake</cite> variable like so:</p>
+<p>Once you have <code class="docutils literal"><span class="pre">genesis.json</span></code>, you may set a <code class="docutils literal"><span class="pre">cmake</span></code> variable like so:</p>
 <div class="highlight-sh"><div class="highlight"><pre>cmake -DGRAPHENE_EGENESIS_JSON<span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span><span class="s2">/genesis/my-genesis.json&quot;</span>
 </pre></div>
 </div>
 <p>and then rebuild.  Note, sometimes I&#8217;ve had to clean the build and
-CMake cache variables in order for <cite>GRAPHENE_EGENESIS_JSON</cite> to take
+CMake cache variables in order for <code class="docutils literal"><span class="pre">GRAPHENE_EGENESIS_JSON</span></code> to take
 effect:</p>
 <div class="highlight-sh"><div class="highlight"><pre>make clean
 find . -name <span class="s2">&quot;CMakeCache.txt&quot;</span> <span class="p">|</span> xargs rm -f
@@ -216,18 +216,18 @@ find . -name <span class="s2">&quot;CMakeFiles&quot;</span> <span class="p">|</s
 cmake -DGRAPHENE_EGENESIS_JSON<span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span><span class="s2">/genesis/my-genesis.json&quot;</span> .
 </pre></div>
 </div>
-<p>Deleting caches will reset all <cite>cmake</cite> variables, so if you have used
+<p>Deleting caches will reset all <code class="docutils literal"><span class="pre">cmake</span></code> variables, so if you have used
 instructions like <a class="reference internal" href="../installation/Build.html"><em>Building from Sources</em></a> which tells you to
-set other <cite>cmake</cite> variables, you will have to add those variables
-to the <cite>cmake</cite> line above.</p>
-<p>Embedding the genesis copies the entire content of <cite>genesis.json</cite>
-into the <cite>witness_node</cite> binary, and additionally copies the chain ID
-into the <cite>cli_wallet</cite> binary.  Embedded genesis allows the following
+set other <code class="docutils literal"><span class="pre">cmake</span></code> variables, you will have to add those variables
+to the <code class="docutils literal"><span class="pre">cmake</span></code> line above.</p>
+<p>Embedding the genesis copies the entire content of <code class="docutils literal"><span class="pre">genesis.json</span></code>
+into the <code class="docutils literal"><span class="pre">witness_node</span></code> binary, and additionally copies the chain ID
+into the <code class="docutils literal"><span class="pre">cli_wallet</span></code> binary.  Embedded genesis allows the following
 simplifications to the subsequent instructions:</p>
 <ul class="simple">
-<li>You need not specify the <cite>genesis.json</cite> file on the witness node command
+<li>You need not specify the <code class="docutils literal"><span class="pre">genesis.json</span></code> file on the witness node command
 line, or in the witness node configuration file.</li>
-<li>You need not specify the chain ID on the <cite>cli_wallet</cite> command line when
+<li>You need not specify the chain ID on the <code class="docutils literal"><span class="pre">cli_wallet</span></code> command line when
 starting a new wallet.</li>
 </ul>
 <p>Embedded genesis is a feature designed to make life easier for
@@ -241,7 +241,7 @@ complication of the process for producing binaries.</p>
 <div class="highlight-sh"><div class="highlight"><pre>programs/witness_node/witness_node --data-dir data/my-blockprod --genesis-json my-genesis.json
 </pre></div>
 </div>
-<p>The <cite>data/my-blockprod</cite> directory does not exist, it will be created
+<p>The <code class="docutils literal"><span class="pre">data/my-blockprod</span></code> directory does not exist, it will be created
 by the witness node.</p>
 <p>Several messages will go to the console.  When you see messages like these::</p>
 <div class="highlight-python"><div class="highlight"><pre>3501235ms th_a       main.cpp:165                  main                 ] Started witness node on a chain with 0 blocks.
@@ -252,11 +252,11 @@ by the witness node.</p>
 (Note:  Initialization will complete nearly instantaneously with the tiny
 example genesis, unless you added a ton of balances.)</p>
 <p>The reason for running the witness node:  It tells us the chain ID,
-and it initializes the <cite>data/my-blockprod</cite> directory.</p>
+and it initializes the <code class="docutils literal"><span class="pre">data/my-blockprod</span></code> directory.</p>
 </div>
 <div class="section" id="starting-block-production">
 <h2>Starting block production<a class="headerlink" href="#starting-block-production" title="Permalink to this headline">¶</a></h2>
-<p>Open <cite>data/my-blockprod/config.ini</cite> in your favorite text editor,
+<p>Open <code class="docutils literal"><span class="pre">data/my-blockprod/config.ini</span></code> in your favorite text editor,
 and set the following settings, uncommenting them if necessary::</p>
 <div class="highlight-python"><div class="highlight"><pre>p2p-endpoint = 127.0.0.1:11010
 rpc-endpoint = 127.0.0.1:11011
@@ -278,24 +278,24 @@ witness-id = &quot;1.6.10&quot;
 witness-id = &quot;1.6.11&quot;
 </pre></div>
 </div>
-<p>This authorizes the <cite>witness_node</cite> to produce blocks on behalf of the
-listed <cite>witness-id</cite>&#8216;s, and specifies the private key needed to sign
+<p>This authorizes the <code class="docutils literal"><span class="pre">witness_node</span></code> to produce blocks on behalf of the
+listed <code class="docutils literal"><span class="pre">witness-id</span></code>&#8216;s, and specifies the private key needed to sign
 those blocks.  Normally each witness would be on a different node, but
 for the purposes of this testnet, we will start out with all witnesses
 signing blocks on a single node.</p>
-<p>Now run <cite>witness_node</cite> again:</p>
+<p>Now run <code class="docutils literal"><span class="pre">witness_node</span></code> again:</p>
 <div class="highlight-sh"><div class="highlight"><pre>programs/witness_node/witness_node --data-dir data/my-blockprod --enable-stale-production
 </pre></div>
 </div>
-<p>Note that we need not specify <cite>genesis.json</cite> on the command line, since
-we now specify it in the config file.  The <cite>&#8211;enable-stale-production</cite>
-flag tells the <cite>witness_node</cite> to produce on a chain with zero blocks or
-very old blocks.  We specify the <cite>&#8211;enable-stale-production</cite> parameter
+<p>Note that we need not specify <code class="docutils literal"><span class="pre">genesis.json</span></code> on the command line, since
+we now specify it in the config file.  The <code class="docutils literal"><span class="pre">--enable-stale-production</span></code>
+flag tells the <code class="docutils literal"><span class="pre">witness_node</span></code> to produce on a chain with zero blocks or
+very old blocks.  We specify the <code class="docutils literal"><span class="pre">--enable-stale-production</span></code> parameter
 on the command line as we will not normally need it (although it can
 also be specified in the config file).</p>
 <p>Subsequent runs which connect to an existing witness node over the p2p
 network, or which get blockchain state from an existing data directory,
-need not have the <cite>&#8211;enable-stale-production</cite> flag.</p>
+need not have the <code class="docutils literal"><span class="pre">--enable-stale-production</span></code> flag.</p>
 </div>
 <div class="section" id="obtaining-the-chain-id">
 <h2>Obtaining the chain ID<a class="headerlink" href="#obtaining-the-chain-id" title="Permalink to this headline">¶</a></h2>
@@ -304,11 +304,11 @@ by its chain ID.  This is to protect the user from e.g. unintentionally
 using a testnet wallet on the real chain.</p>
 <p>The chain ID is printed at witness node startup.  It can also be
 obtained by using the API to query a running witness node with the
-<cite>get_chain_properties</cite> API call:</p>
+<code class="docutils literal"><span class="pre">get_chain_properties</span></code> API call:</p>
 <div class="highlight-sh"><div class="highlight"><pre>curl --data <span class="s1">&#39;{&quot;jsonrpc&quot;: &quot;2.0&quot;, &quot;method&quot;: &quot;get_chain_properties&quot;, &quot;params&quot;: [], &quot;id&quot;: 1}&#39;</span> http://127.0.0.1:11011/rpc <span class="o">&amp;&amp;</span> <span class="nb">echo</span>
 </pre></div>
 </div>
-<p>This <cite>curl</cite> command will return a short JSON object including the <cite>chain_id</cite>.</p>
+<p>This <code class="docutils literal"><span class="pre">curl</span></code> command will return a short JSON object including the <code class="docutils literal"><span class="pre">chain_id</span></code>.</p>
 </div>
 <div class="section" id="creating-a-wallet">
 <h2>Creating a wallet<a class="headerlink" href="#creating-a-wallet" title="Permalink to this headline">¶</a></h2>
@@ -319,12 +319,12 @@ username and password will suffice:</p>
 </pre></div>
 </div>
 <p>Note, since the genesis timestamp will likely be different, your chain
-ID will be different!  Instead of <cite>cf3071110...</cite> you should use the
-chain ID reported by your <cite>witness_node</cite>.  (See TODO:link for
+ID will be different!  Instead of <code class="docutils literal"><span class="pre">cf3071110...</span></code> you should use the
+chain ID reported by your <code class="docutils literal"><span class="pre">witness_node</span></code>.  (See TODO:link for
 instructions.)</p>
 <p>Before continuing, we should set a password.  This password is used
 to encrypt the private keys in the wallet.  We will use the word
-<cite>supersecret</cite> in this example.:</p>
+<code class="docutils literal"><span class="pre">supersecret</span></code> in this example.:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">set_password</span> <span class="n">supersecret</span>
 </pre></div>
 </div>
@@ -332,13 +332,13 @@ to encrypt the private keys in the wallet.  We will use the word
 <div class="section" id="gaining-access-to-stake">
 <h2>Gaining access to stake<a class="headerlink" href="#gaining-access-to-stake" title="Permalink to this headline">¶</a></h2>
 <p>In Graphene, balances are contained in accounts.  To claim an account
-that exists in the Graphene genesis, use the <cite>import_key</cite> command::</p>
+that exists in the Graphene genesis, use the <code class="docutils literal"><span class="pre">import_key</span></code> command::</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">unlock</span> <span class="n">supersecret</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">import_key</span> <span class="n">nathan</span> <span class="s">&quot;5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3&quot;</span>
 </pre></div>
 </div>
 <p>Funds are stored in genesis balance objects.  These funds can be
-claimed, with no fee, using the <cite>import_balance</cite> command.:</p>
+claimed, with no fee, using the <code class="docutils literal"><span class="pre">import_balance</span></code> command.:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">import_balance</span> <span class="n">nathan</span> <span class="p">[</span><span class="s">&quot;5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3&quot;</span><span class="p">]</span> <span class="n">true</span>
 </pre></div>
 </div>
@@ -346,23 +346,23 @@ claimed, with no fee, using the <cite>import_balance</cite> command.:</p>
 <div class="section" id="creating-accounts">
 <h2>Creating accounts<a class="headerlink" href="#creating-accounts" title="Permalink to this headline">¶</a></h2>
 <p>Creating an account requires lifetime member (LTM) status.  To upgrade
-to LTM, use the <cite>upgrade_account</cite> command::</p>
+to LTM, use the <code class="docutils literal"><span class="pre">upgrade_account</span></code> command::</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">upgrade_account</span> <span class="n">nathan</span> <span class="n">true</span>
 </pre></div>
 </div>
-<p>We can now register an account.  The <cite>register_account</cite> command
+<p>We can now register an account.  The <code class="docutils literal"><span class="pre">register_account</span></code> command
 allows you to register an account using only a public key::</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">register_account</span> <span class="n">alpha</span> <span class="n">GPH4zSJHx7D84T1j6HQ7keXWdtabBBWJxvfJw72XmEyqmgdoo1njF</span> <span class="n">GPH4zSJHx7D84T1j6HQ7keXWdtabBBWJxvfJw72XmEyqmgdoo1njF</span> <span class="n">nathan</span> <span class="n">nathan</span> <span class="mi">0</span> <span class="n">true</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">transfer</span> <span class="n">nathan</span> <span class="n">alpha</span> <span class="mi">100000</span> <span class="n">CORE</span> <span class="s">&quot;here is the cash&quot;</span> <span class="n">true</span>
 </pre></div>
 </div>
-<p>We can now open a new wallet for <cite>alpha</cite> user::</p>
+<p>We can now open a new wallet for <code class="docutils literal"><span class="pre">alpha</span></code> user::</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">import_key</span> <span class="n">alpha</span> <span class="mi">5</span><span class="n">HuCDiMeESd86xrRvTbexLjkVg2BEoKrb7BAA5RLgXizkgV3shs</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">upgrade_account</span> <span class="n">alpha</span> <span class="n">true</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">create_witness</span> <span class="n">alpha</span> <span class="s">&quot;http://www.alpha&quot;</span> <span class="n">true</span>
 </pre></div>
 </div>
-<p>The <cite>get_private_key</cite> command allows us to obtain the public key corresponding
+<p>The <code class="docutils literal"><span class="pre">get_private_key</span></code> command allows us to obtain the public key corresponding
 to the block signing key::</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">get_private_key</span> <span class="n">GPH6viEhYCQr8xKP3Vj8wfHh6WfZeJK7H9uhLPDYWLGCRSj5kHQZM</span>
 </pre></div>
@@ -370,22 +370,20 @@ to the block signing key::</p>
 </div>
 <div class="section" id="creating-committee-members">
 <h2>Creating committee members<a class="headerlink" href="#creating-committee-members" title="Permalink to this headline">¶</a></h2>
-<dl class="docutils">
-<dt>::</dt>
-<dd><p class="first">create_account_with_brain_key com0 com0 nathan nathan true
+<div class="highlight-python"><div class="highlight"><pre>create_account_with_brain_key com0 com0 nathan nathan true
 create_account_with_brain_key com1 com1 nathan nathan true
 create_account_with_brain_key com2 com2 nathan nathan true
 create_account_with_brain_key com3 com3 nathan nathan true
 create_account_with_brain_key com4 com4 nathan nathan true
 create_account_with_brain_key com5 com5 nathan nathan true
 create_account_with_brain_key com6 com6 nathan nathan true
-transfer nathan com0 100000 CORE &#8220;some cash&#8221; true
-transfer nathan com1 100000 CORE &#8220;some cash&#8221; true
-transfer nathan com2 100000 CORE &#8220;some cash&#8221; true
-transfer nathan com3 100000 CORE &#8220;some cash&#8221; true
-transfer nathan com4 100000 CORE &#8220;some cash&#8221; true
-transfer nathan com5 100000 CORE &#8220;some cash&#8221; true
-transfer nathan com6 100000 CORE &#8220;some cash&#8221; true
+transfer nathan com0 100000 CORE &quot;some cash&quot; true
+transfer nathan com1 100000 CORE &quot;some cash&quot; true
+transfer nathan com2 100000 CORE &quot;some cash&quot; true
+transfer nathan com3 100000 CORE &quot;some cash&quot; true
+transfer nathan com4 100000 CORE &quot;some cash&quot; true
+transfer nathan com5 100000 CORE &quot;some cash&quot; true
+transfer nathan com6 100000 CORE &quot;some cash&quot; true
 upgrade_account com0 true
 upgrade_account com1 true
 upgrade_account com2 true
@@ -393,23 +391,24 @@ upgrade_account com3 true
 upgrade_account com4 true
 upgrade_account com5 true
 upgrade_account com6 true
-create_committee_member com0 &#8220;<a class="reference external" href="http://www.com0">http://www.com0</a>&#8221; true
-create_committee_member com1 &#8220;<a class="reference external" href="http://www.com1">http://www.com1</a>&#8221; true
-create_committee_member com2 &#8220;<a class="reference external" href="http://www.com2">http://www.com2</a>&#8221; true
-create_committee_member com3 &#8220;<a class="reference external" href="http://www.com3">http://www.com3</a>&#8221; true
-create_committee_member com4 &#8220;<a class="reference external" href="http://www.com4">http://www.com4</a>&#8221; true
-create_committee_member com5 &#8220;<a class="reference external" href="http://www.com5">http://www.com5</a>&#8221; true
-create_committee_member com6 &#8220;<a class="reference external" href="http://www.com6">http://www.com6</a>&#8221; true
+create_committee_member com0 &quot;http://www.com0&quot; true
+create_committee_member com1 &quot;http://www.com1&quot; true
+create_committee_member com2 &quot;http://www.com2&quot; true
+create_committee_member com3 &quot;http://www.com3&quot; true
+create_committee_member com4 &quot;http://www.com4&quot; true
+create_committee_member com5 &quot;http://www.com5&quot; true
+create_committee_member com6 &quot;http://www.com6&quot; true
 vote_for_committee_member nathan com0 true true
 vote_for_committee_member nathan com1 true true
 vote_for_committee_member nathan com2 true true
 vote_for_committee_member nathan com3 true true
 vote_for_committee_member nathan com4 true true
 vote_for_committee_member nathan com5 true true
-vote_for_committee_member nathan com6 true true</p>
-<p class="last">propose_parameter_change com0 {&#8220;block_interval&#8221; : 6} true</p>
-</dd>
-</dl>
+vote_for_committee_member nathan com6 true true
+
+propose_parameter_change com0 {&quot;block_interval&quot; : 6} true
+</pre></div>
+</div>
 </div>
 </div>
 

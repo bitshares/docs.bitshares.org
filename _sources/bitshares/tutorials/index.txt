@@ -39,3 +39,4 @@ Witness Tutorials
    :maxdepth: 1
 
    witness-create
+   witness-change-key
