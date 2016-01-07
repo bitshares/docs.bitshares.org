@@ -38,6 +38,8 @@ Recent Updates
 
 .. r!date +\%y/\%m/\%d
 
+* ``16/01/07`` :doc:`bitshares/user/uia`, :doc:`bitshares/tutorials/uia-create-gui`, :doc:`bitshares/tutorials/uia-create-manual`
+* ``16/01/06`` :doc:`bitshares/tutorials/witness-change-key`
 * ``15/12/21`` :doc:`bitshares/user/worker`, :doc:`bitshares/user/fba`, :doc:`bitshares/developers/funding`, :doc:`bitshares/developers/bsips`
 * ``15/12/18`` :doc:`bitshares/papers/index`: Release Candiate for the *BitShares: General Overview* whitepaper
 * ``15/12/04`` :doc:`bitshares/user/account-permissions`, :doc:`bitshares/user/transactions-proposed`

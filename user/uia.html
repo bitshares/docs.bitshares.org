@@ -160,6 +160,81 @@ tracking or even to sell equity of a company in form of stock.</p>
 often different in every jurisdiction. Hence, BitShares comes with tools that
 allow issuers to remain compliant with all applicable regulations when issuing
 assets assuming regulators allow such assets in the first place.</p>
+<div class="section" id="use-cases">
+<h2>Use Cases<a class="headerlink" href="#use-cases" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Reward Points</li>
+<li>Fan Credits</li>
+<li>Flight Miles</li>
+<li>Event Tickets</li>
+<li>Digital Property</li>
+<li>Crowd-Funding</li>
+<li>Company Shares</li>
+</ul>
+</div>
+<div class="section" id="frequently-asked-questions">
+<h2>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="market-fees">
+<h3>Market Fees?<a class="headerlink" href="#market-fees" title="Permalink to this headline">¶</a></h3>
+<p>If <em>Market Fees</em> of a UIA are turned on, fees have to be payed for each
+market transaction (buy, sell, bid, fill, etc ...). If the asset&#8217;s fee
+pool is funded, the fees can payed in the native IUA instead of BTS.</p>
+<p>The percentage of market fees that are applied can be defined and
+changed by the issuer.</p>
+<p>If the Market Fee is set to 1%, the issuer will earn 1% of market volume
+as profit. These profits are accumulated for each UIA and can be
+withdrawn by the issuer.</p>
+</div>
+<div class="section" id="what-are-asset-flags-and-permissions">
+<h3>What are Asset Flags and Permissions?<a class="headerlink" href="#what-are-asset-flags-and-permissions" title="Permalink to this headline">¶</a></h3>
+<p>When an asset is creatd, the issuer can set any combination of
+flags/permissions. <strong>Flags</strong> are set in stone unless there is
+<strong>permission</strong> to edit. Once a permission to edit is revoked, flags are
+permanent, and can never be modified again.</p>
+</div>
+<div class="section" id="what-are-the-permissions">
+<h3>What are the Permissions:<a class="headerlink" href="#what-are-the-permissions" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Enable market fee</li>
+<li>Require holders to be white-listed</li>
+<li>Issuer may transfer asset back to himself</li>
+<li>Issuer must approve all transfers</li>
+<li>Disable confidential transactions</li>
+</ul>
+</div>
+<div class="section" id="what-are-the-flags">
+<h3>What are the Flags?<a class="headerlink" href="#what-are-the-flags" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">charge_market_fee</span></code>:
+an issuer-specified percentage of all market trades in this asset is
+paid to the issuer</li>
+<li><code class="docutils literal"><span class="pre">white_list</span></code>:
+accounts must be whitelisted in order to hold this asset</li>
+<li><code class="docutils literal"><span class="pre">override_authority</span></code>:
+issuer may transfer asset back to himself</li>
+<li><code class="docutils literal"><span class="pre">transfer_restricted</span></code>:
+require the issuer to be one party to every transfer</li>
+<li><code class="docutils literal"><span class="pre">disable_force_settle</span></code>:
+disable force settling</li>
+<li><code class="docutils literal"><span class="pre">global_settle</span></code>:
+allow the bitasset issuer to force a global settling – this may be set
+in permissions, but not flags</li>
+<li><code class="docutils literal"><span class="pre">disable_confidential</span></code>:
+allow the asset to be used with confidential transactions</li>
+<li><code class="docutils literal"><span class="pre">witness_fed_asset</span></code>:
+allow the asset to be fed by witnesses</li>
+<li><code class="docutils literal"><span class="pre">committee_fed_asset</span></code>:
+allow the asset to be fed by the committee</li>
+</ul>
+</div>
+</div>
+<div class="section" id="tutorials">
+<h2>Tutorials<a class="headerlink" href="#tutorials" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
+</div>
 </div>
 
 
