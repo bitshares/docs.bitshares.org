@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <title>Creating a UIA</title>
+    <title>Creating a new UIA</title>
 
     <!-- CSS -->
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
@@ -73,7 +73,7 @@
  <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
    <div class='in'>
      <div class='headline'>
-       <h1>Creating a UIA</h1>
+       <h1>Creating a new UIA</h1>
  
      </div>
    </div>
@@ -147,55 +147,72 @@
   </div>
   <div class='content'>
    
-  <div class="section" id="creating-a-uia">
-<h1>Creating a UIA<a class="headerlink" href="#creating-a-uia" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="how-are-transfer-fees-treated">
-<h2>How are transfer fees treated?<a class="headerlink" href="#how-are-transfer-fees-treated" title="Permalink to this headline">¶</a></h2>
-<p>From what I&#8217;ve seen, if you turn on Market Fee you pay fees in your UIA. If
-it&#8217;s Off, you pay fees in BTS.</p>
-<p>Note that you control the fee price with the ratio set between your UIA:BTS in
-QUOTE ASSET and BASE AMOUNT.</p>
-<p>So for 1 UIA = 1 BTS you set both to 1 which means you will pay the same amount
-in your UIA for fees as you would if you turned off Market Fee and payed fees in
-BTS. &#8220;same&#8221; being if it&#8217;s 30 BTS you pay 30 UIA.</p>
-<p>I &#8220;think&#8221; if you set Market Fee % to 50% you will earn 50% of market fees back
-to your account. I&#8217;m hoping someone will correct me if that&#8217;s wrong. I have
-heard from tonyk that if you set to 100% it makes your UIA stealth but I cannot
-confirm this and in my testing that did not appear to be the case, but again I
-have no idea and am hoping for some documentation one day. ;)</p>
-<p>I have no clue what Max Market Fee does, but I set mine to 100,000 always simply
-because I saw Dan set Brownie.PTS to some really high number. ;)</p>
+  <div class="section" id="creating-a-new-uia">
+<h1>Creating a new UIA<a class="headerlink" href="#creating-a-new-uia" title="Permalink to this headline">¶</a></h1>
+<p>In order to create a new asset, we first need to enter our account&#8217;s
+asset page and click <cite>CREATE ASSET</cite>:</p>
+<a class="reference internal image-reference" href="../../_images/uia-create-step1.png"><img alt="Export compatible keys from Menu bar" class="align-center" src="../../_images/uia-create-step1.png" style="width: 550px;" /></a>
+<p>We will enter the asset creation page that will allow us to define the
+assets parameters.</p>
+<div class="section" id="primary-settings">
+<h2>Primary Settings<a class="headerlink" href="#primary-settings" title="Permalink to this headline">¶</a></h2>
+<p>The most important settings are listed in the primary settings.</p>
+<a class="reference internal image-reference" href="../../_images/uia-create-flags-marketfees.png"><img alt="Asset Flags and Market Fees" class="align-center" src="../../_images/uia-create-flags-marketfees.png" style="width: 350px;" /></a>
+<p>The <strong>Symbol</strong> defined here will be reserved in the system for your assets.
+One the asset is created, the symbol cannot be changed again!</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Smybols with less than <strong>5</strong> characters are very expense.
+Please consult the Networks fees in the explorer!</p>
 </div>
-<div class="section" id="what-is-the-meaning-of-each-flag">
-<h2>What is the meaning of each flag?<a class="headerlink" href="#what-is-the-meaning-of-each-flag" title="Permalink to this headline">¶</a></h2>
-<p>FLAGS:</p>
-<ol class="arabic simple">
-<li>Enable market fee. why there are 2 lines what does it mean?</li>
-<li>Require holders to be white-listed?</li>
-<li>Issuer may transfer asset back to himself? Does this mean I can take back the tokens who others may have paid in the future to buy in the open market? what...???</li>
-<li>Issuer must approve all transfers? I guess this mean people can&#8217;t trade and only I can make the transfers?</li>
-<li>Disable confidential transactions?</li>
-</ol>
-<p>PERMISSIONS:
-Same questions as above. What does these mean. What is the difference. Which ones I turn on or disable..??</p>
-<ol class="upperalpha simple" start="3">
-<li>Sharebits.io</li>
-</ol>
-<p>I am not sure exactly what this does. I do apologize there is no excuse to that.
-Please explain if possible in 2 lines.  Can I use sharebits to distribute my
-coin to all forum members, to bitcoin talk members, reddit members etc?</p>
-<p>D) Is there a way for me to distribute my token to forum members automatically
-or do I need to make one by one the transfers my self?</p>
-<p>E) Ideally I would like people who visit www.bitshares.gr and register in an
-online wallet to receive x amount automatically from my token. Is there an easy
-automated way I can do this or do I need to check every time who registered via
-the website and do it my self manually.</p>
-<p>F) Once eventually I manage hopefully to create my UIA, How do I list this in
-the market? What do I do if I want my token to be traded vs. BTS for example?</p>
-<ol class="upperalpha simple" start="7">
-<li>Anything else I should know about this?</li>
-</ol>
-<p>THANK YOU VERY MUCH!! :)</p>
+<p>The <strong>maximum supply</strong> is also a permanent setting and denotes the maximum
+amount of shares that can ever exist at the same time.</p>
+<p>The <em>precision</em> is used to denoted the number of decimal places. A <cite>0</cite>
+will result in an asset that cannot be separated below integer amounts
+(e.g. 1, 2, ..)</p>
+<p>To allow transaction fees to be paid in the native asset, a core
+exchange rate is required at which a customer can implicitly trade the
+UIA into BTS from the asset&#8217;s <em>fee pool</em>. This also requires that the
+fee pool is funded (e.g. by the issuer). Since all prices in BitShares
+are internally represented as <em>fractions</em> (i.e. <cite>a/b</cite>), we need to
+define a ratio between quote (the UIA) and base (BTS), i.e. the
+numerator and denominator for <cite>price = a/b</cite>.</p>
+<p>Finally, a <strong>description</strong> can be used to let everyone know the purpose
+of the asset, or an internet address for further information.</p>
+</div>
+<div class="section" id="permissions-optional">
+<h2>Permissions (optional)<a class="headerlink" href="#permissions-optional" title="Permalink to this headline">¶</a></h2>
+<p>Even though the default settings should be fine for most UIAs, we have
+the option to <strong>opt-out</strong> of some available features. (By default, or
+permissions are <em>enabled</em>).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Once a permission has been set to <em>false</em>, the permission
+cannot be reactivated!</p>
+</div>
+<a class="reference internal image-reference" href="../../_images/uia-create-permissions.png"><img alt="Permissions" class="align-center" src="../../_images/uia-create-permissions.png" style="width: 350px;" /></a>
+<p>We have the options to opt-out of:</p>
+<ul class="simple">
+<li>Enabling Market Fees</li>
+<li>Requiring holders to be white-listed</li>
+<li>Allow Issuer to withdraw from any account</li>
+<li>Require all transfers to be approved by the issuer</li>
+<li>Allow to disable confidential transactions</li>
+</ul>
+<p>Note that setting these permissions does not imply that the features is
+enabled. To do so, we would also require to enable the corresponding
+flag(s). (See below)</p>
+</div>
+<div class="section" id="flags-and-market-fees-optional">
+<h2>Flags and Market Fees (optional)<a class="headerlink" href="#flags-and-market-fees-optional" title="Permalink to this headline">¶</a></h2>
+<p>The flags are used to <em>actually enable</em> a particular features, such as
+market fees or confidential transfers.</p>
+<a class="reference internal image-reference" href="../../_images/uia-create-primary-settings.png"><img alt="Primary Settings" class="align-center" src="../../_images/uia-create-primary-settings.png" style="width: 350px;" /></a>
+<p>If we have set the permission to have a market fee, we can enable the
+market fees here and set a percentage and max. fee.</p>
+<p>We here also can enable the requirements for users to be white-listed,
+enable confidential transfers and give the issuer the power to withdraw
+its asset from customer accounts.</p>
 </div>
 </div>
 
