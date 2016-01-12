@@ -7,7 +7,7 @@ $body-font = Roboto, sans-serif
 $mono-font = Menlo, monospace
 
 // Margins
-$pad = 40px      // Space between things
+$pad = 10px      // Space between things
 $sidepad = 15px  // Padding to the left of the sidebar
 $minipad = 20px  // Space for mobile
 $vmargin = 10px  // Margin between blocks
@@ -96,8 +96,11 @@ a
  */
 
 .content
-  p, ul, ol, h1, h2, h3, h4, h5, h6, pre, blockquote
+  p, h1, h2, h3, h4, h5, h6, pre, blockquote
     padding: $vmargin 0
+    box-sizing: border-box
+
+  ul, ol
     box-sizing: border-box
 
   h1, h2, h3, h4, h5, h6
@@ -216,7 +219,7 @@ a
   position: relative
 
 .content
-  padding-top: $pad - $vmargin
+  padding-top: $pad
   padding-bottom: $pad
   padding-left: $pad
   padding-right: $pad
