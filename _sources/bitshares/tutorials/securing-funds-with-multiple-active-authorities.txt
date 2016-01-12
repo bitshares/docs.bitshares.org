@@ -59,7 +59,7 @@ Example: Transfer
 The operation id for the ``transfer_operation`` is thus ``0`` (third line) and
 the core elements (removing fee) of this operation take the form:
 
-.. code-block:: json
+.. code-block:: js
 
       {
         "from": "1.2.0",

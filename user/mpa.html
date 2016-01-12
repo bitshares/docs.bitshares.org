@@ -155,6 +155,25 @@ dollar), has high utility for convenient and censorship resistant commerce. This
 can be achieved by BitShares&#8217; market pegged assets (MPA), a new type of freely
 traded digital asset whose value is meant to track the value of a conventional
 underlying asset by means of contracts for difference (CFD).</p>
+<p>In the User Interface, MPAs are easily distinguishable from UIAs in the asset
+explorer.</p>
+<div class="section" id="smartcoins">
+<h2>SmartCoins<a class="headerlink" href="#smartcoins" title="Permalink to this headline">¶</a></h2>
+<p>BitAssets can be created and owned by anyone on the network. However,
+those that are owned by the BitShares Committee, are called
+<em>SmartCoins</em>. Among these are:</p>
+<ul class="simple">
+<li>(Bit)USD</li>
+<li>(Bit)CNY</li>
+<li>(Bit)EUR</li>
+<li>(Bit)GOLD</li>
+<li>(Bit)Silver</li>
+</ul>
+<p>Balances in these assets are labeled with <cite>USD</cite>, <cite>CNY</cite>, etc., because
+represent the same value as their underly.</p>
+</div>
+<div class="section" id="collateralized-tokens">
+<h2>Collateralized Tokens<a class="headerlink" href="#collateralized-tokens" title="Permalink to this headline">¶</a></h2>
 <p>A <em>SmartCoin</em> (synonym for MPA) is a crypto-currency that <em>always</em> has 100% or
 more of its value backed by the BitShares core currency (BTS), to which they can
 be converted at any time, as <em>collateral</em> in a CFD.</p>
@@ -163,18 +182,45 @@ they resemble a CFD backed by collateral. This is achievable by letting the
 network itself (implemented as a software protocol) be responsible for securing
 the collateral and performing settlements as will be described in more detail
 below.</p>
-<p>This is a subset of the available market pegged assets:</p>
-<ul class="simple">
-<li>BitUSD</li>
-<li>BitCNY</li>
-<li>BitEUR</li>
-<li>BitGOLD</li>
-<li>...</li>
+</div>
+<div class="section" id="market-mechanics">
+<h2>Market Mechanics<a class="headerlink" href="#market-mechanics" title="Permalink to this headline">¶</a></h2>
+<p>Each BitAsset has a feed that is provided by the witnesses that indicate
+a fair price for that asset. This so called <em>Settlement Price</em> or <em>Feed
+Price</em> is used to margin call positions that borrowed BitAssets and can no
+longer maintain the minimum collateral ratio (i.e. maintenance
+collateral ratio). The collateral of these positions is used to buy back
+the debt from the market automatically and the position will be closed.
+By these rules, the network enforces the exchange participants to always
+maintain a collateral that is higher than the minimum requirement.
+Currently, the minimum required collateral ratio is <strong>175%</strong> and can be
+changed by the witnesses.</p>
+<p>Read more about the <a class="reference internal" href="dex-margin-mechanics.html"><em>margin call mechanics</em></a>
+before trading.</p>
+</div>
+<div class="section" id="frequently-asked-questions">
+<h2>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="assets-faq.html">Frequently Asked Questions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="assets-faq.html#what-about-parent-and-child-assets">What about Parent and Child assets?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets-faq.html#market-fees">Market Fees?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets-faq.html#what-are-asset-flags-and-permissions">What are Asset Flags and Permissions?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets-faq.html#what-are-the-permissions">What are the Permissions:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets-faq.html#what-are-the-flags">What are the Flags?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assets-faq.html#what-are-market-pegged-asset-specific-parameters">What are market-pegged-asset-specific parameters</a></li>
 </ul>
-<p>In the User Interface, MPAs are easily distinguishable from UIAs in the asset
-explorer.</p>
-<p>Read more about the <a class="reference internal" href="dex-margin-mechanics.html"><em>margin call mechanics</em></a> before
-trading.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="tutorials">
+<h2>Tutorials<a class="headerlink" href="#tutorials" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
+</div>
 </div>
 
 

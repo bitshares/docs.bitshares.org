@@ -38,19 +38,22 @@ Recent Updates
 
 .. r!date +\%y/\%m/\%d
 
+* ``16/01/12`` :doc:`bitshares/user/assets`, :doc:`bitshares/tutorials/uia-create-manual` :doc:`bitshares/tutorials/mpa-create-manual`, :doc:`bitshares/user/assets-faq`, :doc:`bitshares/user/privbta`, :doc:`bitshares/tutorials/publish-feed`, :doc:`bitshares/user/pm`, :doc:`bitshares/tutorials/pm-create-manual`, :doc:`bitshares/tutorials/pm-close-manual`
 * ``16/01/07`` :doc:`bitshares/user/uia`, :doc:`bitshares/tutorials/uia-create-gui`, :doc:`bitshares/tutorials/uia-create-manual`
 * ``16/01/06`` :doc:`bitshares/tutorials/witness-change-key`
 * ``15/12/21`` :doc:`bitshares/user/worker`, :doc:`bitshares/user/fba`, :doc:`bitshares/developers/funding`, :doc:`bitshares/developers/bsips`
 * ``15/12/18`` :doc:`bitshares/papers/index`: Release Candiate for the *BitShares: General Overview* whitepaper
 * ``15/12/04`` :doc:`bitshares/user/account-permissions`, :doc:`bitshares/user/transactions-proposed`
-* ``15/12/03`` :doc:`bitshares/tutorials/construct-transaction`, :doc:`bitshares/tutorials/propose-transaction`
-* ``15/12/03`` :doc:`bitshares/tutorials/index`, :doc:`bitshares/tutorials/confidential-transactions`, :doc:`bitshares/user/committee`, :doc:`bitshares/tutorials/worker-budget`, :doc:`bitshares/user/shareholder`, :doc:`bitshares/user/worker`, :doc:`integration/often-used-calls`, :doc:`integration/merchants/merchant-protocol`, :doc:`integration/merchants/login-protocol`
-* ``15/11/30`` :doc:`bitshares/user/dex-margin-mechanics`
-* ``15/11/26`` :doc:`bitshares/user/first-steps-users`, :doc:`bitshares/user/you-should-know`, :doc:`bitshares/user/assets`
-* ``15/11/23`` User Guide updates: :doc:`bitshares/user/transactions`, :doc:`bitshares/user/dex`, :doc:`bitshares/user/security`
-* ``15/11/13`` Refactoring, updates for: :doc:`integration/index`
-* ``15/11/10`` Added MUSE blockchain: :doc:`muse/index`
-* ``15/11/01`` Release of :html:`<a href="_downloads/bitshares-financial-platform.pdf" onclick="ga('set', 'nonInteraction', false);ga('send', 'event', { eventCategory: 'download', eventAction: 'click', eventLabel: 'BitShares 2.0: Financial Smart Contract Platform'});">BitShares 2.0: Financial Smart Contract Platform</a> whitepaper`
+
+..
+ * ``15/12/03`` :doc:`bitshares/tutorials/construct-transaction`, :doc:`bitshares/tutorials/propose-transaction`
+ * ``15/12/03`` :doc:`bitshares/tutorials/index`, :doc:`bitshares/tutorials/confidential-transactions`, :doc:`bitshares/user/committee`, :doc:`bitshares/tutorials/worker-budget`, :doc:`bitshares/user/shareholder`, :doc:`bitshares/user/worker`, :doc:`integration/often-used-calls`, :doc:`integration/merchants/merchant-protocol`, :doc:`integration/merchants/login-protocol`
+ * ``15/11/30`` :doc:`bitshares/user/dex-margin-mechanics`
+ * ``15/11/26`` :doc:`bitshares/user/first-steps-users`, :doc:`bitshares/user/you-should-know`, :doc:`bitshares/user/assets`
+ * ``15/11/23`` User Guide updates: :doc:`bitshares/user/transactions`, :doc:`bitshares/user/dex`, :doc:`bitshares/user/security`
+ * ``15/11/13`` Refactoring, updates for: :doc:`integration/index`
+ * ``15/11/10`` Added MUSE blockchain: :doc:`muse/index`
+ * ``15/11/01`` Release of :html:`<a href="_downloads/bitshares-financial-platform.pdf" onclick="ga('set', 'nonInteraction', false);ga('send', 'event', { eventCategory: 'download', eventAction: 'click', eventLabel: 'BitShares 2.0: Financial Smart Contract Platform'});">BitShares 2.0: Financial Smart Contract Platform</a> whitepaper`
 
 Blockchain Specific Guides
 ##########################
