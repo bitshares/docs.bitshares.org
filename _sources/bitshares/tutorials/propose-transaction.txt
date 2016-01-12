@@ -94,7 +94,7 @@ The operation id for the ``asset_update_bitasset_operation`` is thus ``12``
 (third line) and the core elements (removing fee) of this operation take the
 form:
 
-.. code-block:: json
+.. code-block:: js
 
     {
        "issuer": "1.2.0",

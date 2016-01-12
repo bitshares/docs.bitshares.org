@@ -167,6 +167,43 @@ manipulating the forced settlement fee continuously such that the average
 trading price stays at about $1.00. By default, BitShares prefers fees set by
 the market, and thus opts to let the price float above $1.00, rather than fixing
 the price by directly manipulating the forced settlement fee.</p>
+<div class="section" id="preparations">
+<h2>Preparations<a class="headerlink" href="#preparations" title="Permalink to this headline">¶</a></h2>
+<p>First, the reader should familiarize himself with the following
+articles:</p>
+<ul class="simple">
+<li><a class="reference internal" href="assets-faq.html"><em>Frequently Asked Questions</em></a></li>
+<li><a class="reference internal" href="../tutorials/uia-create-manual.html"><em>Creating a UIA manually</em></a></li>
+<li><a class="reference internal" href="../tutorials/mpa-create-manual.html"><em>Creating a MPA manually</em></a></li>
+</ul>
+</div>
+<div class="section" id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
+<p>The relevant and interesting parameters are located in the uia flags:</p>
+<div class="highlight-js"><div class="highlight"><pre><span class="p">{</span>
+   <span class="s2">&quot;witness_fed_asset&quot;</span> <span class="o">:</span> <span class="kc">false</span>
+   <span class="s2">&quot;committee_fed_asset&quot;</span> <span class="o">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Setting these two parameters to <code class="docutils literal"><span class="pre">false</span></code>, allows to manually define the
+set of feed producers (see below). Alternatively, setting either of both
+to <code class="docutils literal"><span class="pre">true</span></code> will give the corresponding entity the responsibility to
+produce and publish a feed.</p>
+</div>
+<div class="section" id="changing-the-feed-producers">
+<h2>Changing the Feed producers<a class="headerlink" href="#changing-the-feed-producers" title="Permalink to this headline">¶</a></h2>
+<p>The following command replaces the set of currently allowed feed
+producers by the new set of feed producers:</p>
+<div class="highlight-python"><div class="highlight"><pre>update_asset_feed_producers &lt;symbol&gt; [&quot;prod-a&quot;, &quot;prod-b&quot;] True
+</pre></div>
+</div>
+</div>
+<div class="section" id="producing-a-feed">
+<h2>Producing a Feed<a class="headerlink" href="#producing-a-feed" title="Permalink to this headline">¶</a></h2>
+<p>We have a distinct tutorial that describes how feed are can be
+published: <a class="reference internal" href="../tutorials/publish-feed.html"><em>Publishing a Feed</em></a>.</p>
+</div>
 </div>
 
 

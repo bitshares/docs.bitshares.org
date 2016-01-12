@@ -14,7 +14,7 @@ Brain, Private and Public Key Derivation
 We can derive a new set auf keys using the ``suggest_brain_key`` command in the
 :doc:`/apps/cliwallet`. The result will look like this:
 
-.. code-block:: json
+.. code-block:: js
 
     >>> suggest_brain_key
     {

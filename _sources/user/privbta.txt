@@ -22,3 +22,46 @@ manipulating the forced settlement fee continuously such that the average
 trading price stays at about $1.00. By default, BitShares prefers fees set by
 the market, and thus opts to let the price float above $1.00, rather than fixing
 the price by directly manipulating the forced settlement fee.
+
+Preparations
+############
+
+First, the reader should familiarize himself with the following
+articles:
+
+* :doc:`assets-faq`
+* :doc:`../tutorials/uia-create-manual`
+* :doc:`../tutorials/mpa-create-manual`
+
+Parameters
+##########
+
+The relevant and interesting parameters are located in the uia flags:
+
+.. code-block:: js
+
+   {
+      "witness_fed_asset" : false
+      "committee_fed_asset" : false
+   }
+
+Setting these two parameters to ``false``, allows to manually define the
+set of feed producers (see below). Alternatively, setting either of both
+to ``true`` will give the corresponding entity the responsibility to
+produce and publish a feed.
+
+Changing the Feed producers
+###########################
+
+The following command replaces the set of currently allowed feed
+producers by the new set of feed producers:
+
+::
+
+    update_asset_feed_producers <symbol> ["prod-a", "prod-b"] True
+
+Producing a Feed
+################
+
+We have a distinct tutorial that describes how feed are can be
+published: :doc:`../tutorials/publish-feed`.
