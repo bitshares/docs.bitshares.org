@@ -1,75 +1,41 @@
-***********************
-Creating a UIA manually
-***********************
+****************************
+Creating a Prediction Market
+****************************
 
-Of course a UIA can also be created *manually* by means of the
-:doc:`../../integration/apps/cliwallet` command:
+Settings
+########
 
-.. or by manually constructing a transaction, signing and broadcasting
-   it (:doc:`construct-transaction`).
-.. CLI
-.. ###
-
-::
-
-    >>> create_asset <issuer> <symbol> <precision> <options> {} false
-
-.. note:: A `false` at the end allows to check and verify the
-          constructed transaction and does **not** broadcast it.  The
-          empty `{}` could be used to construct a :doc:`../user/mpa` and
-          is subject of another tutorial.
-
-The `precision` can any positive integer starting from `0`.
-
-As `options` we pass a JSON object that can contain these settings:
+A new MPA has to be created that has the following **flags** (not
+permissions):
 
 .. code-block:: js
 
    {
-      "max_supply" : 10000,    # Integer in satoshi! (100 for precision 1 and max 10)
-      "market_fee_percent" : 0.3,
-      "max_market_fee" : 1000, # in satoshi
-      "issuer_permissions" : <permissions>,
-      "flags" : <flags>,
-      "core_exchange_rate" : {
-          "base": {
-            "amount": 21,           # denominator
-            "asset_id": "1.3.0"     # BTS
-          },
-          "quote": {
-            "amount": 76399,        # numerator
-            "asset_id": "1.3.1"     # !THIS! asset
-          }
-      },
-      "whitelist_authorities" : [],
-      "blacklist_authorities" : [],
-      "whitelist_markets" : [],
-      "blacklist_markets" : [],
-      "description" : "My fancy description"
-   }
-
-The flags are construction as an JSON object containing these
-flags/permissions (see :docs:`../user/assets-faq`):
-
-.. code-block:: js
-
-   {
-      "charge_market_fee" : true,
-      "white_list" : true,
-      "override_authority" : true,
-      "transfer_restricted" : true,
       "disable_force_settle" : true,
-      "global_settle" : true,
-      "disable_confidential" : true,
-      "witness_fed_asset" : true,
-      "committee_fed_asset" : true
+      "global_settle" : false,
+      "witness_fed_asset" : false,
+      "committee_fed_asset" : false
    }
 
-Permissions and flags are modelled as sum of binary flags (see example
-below)
+and these MPA-options:
 
-White-listing is described in more detail in
-:doc:`../../integration/asset-whitelist`.
+.. code-block:: js
+
+   {
+    "feed_lifetime_sec" : 60 * 60 * 24 * 356,
+    "minimum_feeds" : 1,
+    "force_settlement_delay_sec" : 60
+    "force_settlement_offset_percent" : 0
+    "maximum_force_settlement_volume" : 100 * GRAPHENE_1_PERCENT,
+    "short_backing_asset" : "1.3.0",
+   }
+
+.. note:: Unfortunatelly, ``create_asset`` cannot create prediction
+          markets. Thus, we need to construct our
+          ``asser_create_operation`` manually (see below)
+
+.. note:: The precision of the prediction market asset has to be
+          identical with the short backing asset's precision
 
 Python Example
 ##############
@@ -89,6 +55,8 @@ Python Example
     perm["disable_confidential"] = 0x40
     perm["witness_fed_asset"] = 0x80
     perm["committee_fed_asset"] = 0x100
+    GRAPHENE_100_PERCENT = 10000
+    GRAPHENE_1_PERCENT = GRAPHENE_100_PERCENT / 100
 
 
     class Config():
@@ -99,6 +67,13 @@ Python Example
 
     if __name__ == '__main__':
         graphene = GrapheneClient(Config)
+
+        issuer = "nathan"
+        symbol = "PMMP"
+        backing = "1.3.0"
+
+        account = graphene.rpc.get_account(issuer)
+        asset = graphene.rpc.get_asset(backing)
 
         permissions = {"charge_market_fee" : True,
                        "white_list" : True,
@@ -114,7 +89,7 @@ Python Example
                        "white_list" : False,
                        "override_authority" : False,
                        "transfer_restricted" : False,
-                       "disable_force_settle" : False,
+                       "disable_force_settle" : True,
                        "global_settle" : False,
                        "disable_confidential" : False,
                        "witness_fed_asset" : False,
@@ -128,7 +103,7 @@ Python Example
         for p in permissions :
             if flags[p]:
                 flags_int += perm[p]
-        options = {"max_supply" : 10000,
+        options = {"max_supply" : 10000000000,
                    "market_fee_percent" : 0,
                    "max_market_fee" : 0,
                    "issuer_permissions" : permissions_int,
@@ -136,7 +111,7 @@ Python Example
                    "core_exchange_rate" : {
                        "base": {
                            "amount": 10,
-                           "asset_id": "1.3.0"},
+                           "asset_id": asset["id"]},
                        "quote": {
                            "amount": 10,
                            "asset_id": "1.3.1"}},
@@ -144,8 +119,26 @@ Python Example
                    "blacklist_authorities" : [],
                    "whitelist_markets" : [],
                    "blacklist_markets" : [],
-                   "description" : "My fancy description"
+                   "description" : "Prediction Market"
                    }
+        mpaoptions = {"feed_lifetime_sec" : 60 * 60 * 24 * 14,
+                      "minimum_feeds" : 1,
+                      "force_settlement_delay_sec" : 10,
+                      "force_settlement_offset_percent" : 0 * GRAPHENE_1_PERCENT,
+                      "maximum_force_settlement_volume" : 100 * GRAPHENE_1_PERCENT,
+                      "short_backing_asset" : asset["id"],
+                      }
+        
+        op = graphene.rpc.get_prototype_operation("asset_create_operation")
+        op[1]["issuer"] = account["id"]
+        op[1]["symbol"] = symbol
+        op[1]["precision"] = asset["precision"]
+        op[1]["common_options"] = options
+        op[1]["is_prediction_market"] = True
+        op[1]["bitasset_opts"] = mpaoptions
 
-        tx = graphene.rpc.create_asset("nathan", "SYMBOL", 3, options, {}, True)
+        handle = graphene.rpc.begin_builder_transaction()
+        graphene.rpc.add_operation_to_builder_transaction(handle, op)
+        graphene.rpc.set_fees_on_builder_transaction(handle, "1.3.0")
+        tx = graphene.rpc.sign_builder_transaction(handle, True)
         print(json.dumps(tx, indent=4))

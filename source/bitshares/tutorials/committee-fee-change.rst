@@ -9,7 +9,7 @@ Let's assume we want to propose a new fee for the account creation operation. We
 want 5 BTS as basic fee and want premium names to cost 2000 BTS. Additionally,
 a price per kbyte for the account creation transaction can be defined. We get
 
-.. code-block:: json
+.. code-block:: js
 
      {
       "account_create_operation" : {

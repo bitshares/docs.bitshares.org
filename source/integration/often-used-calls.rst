@@ -37,7 +37,7 @@ Script
 Result
 ******
 
-.. code-block:: json
+.. code-block:: js
 
     [
         {
@@ -84,7 +84,7 @@ not broadcast, hence not executed.
 Result
 ******
 
-.. code-block:: json
+.. code-block:: js
 
     {
       "ref_block_num": 18,
@@ -143,7 +143,7 @@ the transaction ID along with the signed transaction.
 Result
 ******
 
-.. code-block:: json
+.. code-block:: js
 
     [b546a75a891b5c51de6d1aafd40d10e91a717bb3,{
       "ref_block_num": 18,
@@ -201,7 +201,7 @@ Script
 Result
 ******
 
-.. code-block:: json
+.. code-block:: js
 
    [
         {
@@ -262,7 +262,7 @@ Script
 Result
 ******
 
-.. code-block:: json
+.. code-block:: js
 
     {
         "trx_in_block": 0,
@@ -317,7 +317,7 @@ Script
 Result
 ******
 
-.. code-block:: json
+.. code-block:: js
 
     {
         "symbol": "USD",
