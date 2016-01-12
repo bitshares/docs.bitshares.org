@@ -30,8 +30,8 @@ Prediction Markets
 .. toctree::
    :maxdepth: 1
 
-    pm-create-manual
-    pm-close-manual
+   pm-create-manual
+   pm-close-manual
 
 Committee Tutorials
 ###################
