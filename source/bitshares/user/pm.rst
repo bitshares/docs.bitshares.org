@@ -61,6 +61,18 @@ If you can buy tokens at a price of `0.2` (i.e. market participants
 think it is unlikely to resolve positively), then you could make `80%`
 profits at a risk of loosing with `80%` probability.
 
+After closing of the bet, a user can claim his profits by **settling**
+his borrow position and taking out the collateral:
+
+* **Settlement in the CLI wallet**:
+  ::
+
+    >>> settle_asset <account> <account> <symbol> True
+
+* **Borrowing in the GUI wallet**:
+  A settlement button is available when hovering the asset in your
+  account's overview.
+
 Betting for a Negative Outcome
 ******************************
 
@@ -115,15 +127,3 @@ can settle at the outcome of the bet (0, or 1). The details are shown in
 the tutorial:
 
 * :doc:`../tutorials/pm-close-manual`
-
-Claiming Profits
-################
-
-After closing the bet, a user claim his win by **settling** his borrow
-position and taking out the collateral:
-
-::
-
-    >>> settle_asset <account> <account> <symbol> True
-
-A settlement button is also available in the GUI/web wallet.
