@@ -2,6 +2,9 @@
 Creating a UIA manually
 ***********************
 
+Creating an Asset
+#################
+
 Of course a UIA can also be created *manually* by means of the
 :doc:`../../integration/apps/cliwallet` command:
 
@@ -19,8 +22,10 @@ Of course a UIA can also be created *manually* by means of the
           empty `{}` could be used to construct a :doc:`../user/mpa` and
           is subject of another tutorial.
 
-The `precision` can any positive integer starting from `0`.
+Parameters
+##########
 
+The `precision` can any positive integer starting from `0`.
 As `options` we pass a JSON object that can contain these settings:
 
 .. code-block:: js
@@ -70,6 +75,17 @@ below)
 
 White-listing is described in more detail in
 :doc:`../../integration/asset-whitelist`.
+
+Issuing Shares
+##############
+
+After creation of the asset, no shares will be in existence until they
+are issued by the issuer:
+
+::
+
+    issue_asset <account> <amount> <symbol> <memo> True
+  
 
 Python Example
 ##############

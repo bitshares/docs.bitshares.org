@@ -91,3 +91,14 @@ market fees here and set a percentage and max. fee.
 We here also can enable the requirements for users to be white-listed,
 enable confidential transfers and give the issuer the power to withdraw
 its asset from customer accounts.
+
+Issuing Shares
+##############
+
+After creating the asset, no shares will exist until the issuer *issues*
+them:
+
+.. image:: uia-create-issue-1.png
+        :alt: Issue shares
+        :width: 350px
+        :align: center

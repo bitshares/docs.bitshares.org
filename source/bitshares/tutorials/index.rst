@@ -8,10 +8,11 @@ General Tutorials
 .. toctree::
    :maxdepth: 1
 
-   confidential-transactions
+   full-node-usage
    account-create
    construct-transaction
    propose-transaction
+   confidential-transactions
 
 Assets
 ######
@@ -21,6 +22,7 @@ Assets
 
    uia-create-gui
    uia-create-manual
+   uia-update-manual
    mpa-create-manual
    publish-feed
 
@@ -58,5 +60,6 @@ Witness Tutorials
 .. toctree::
    :maxdepth: 1
 
+   witness-howto
    witness-create
    witness-change-key
