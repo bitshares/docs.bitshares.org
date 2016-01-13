@@ -2,6 +2,9 @@
 User Guide
 **********
 
+For End User
+############
+
 We would like to introduce most features to the user in a friendly and easy to
 understand way in this *User Guide*. Note, that the blockchain itself is capable
 of many more things that are not (yet) exposed to the end-user. In the future,
@@ -18,9 +21,10 @@ their users.
    transactions
    assets
    dex
+   pm
 
-Blockchain "Positions"
-######################
+For Blockchain "Employees"
+##########################
 
 BitShares 2 separates responsibilities and incentives activities that are
 beneficial to the network, thus acknowledging different skill sets and
