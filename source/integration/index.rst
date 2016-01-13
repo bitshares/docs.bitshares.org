@@ -75,6 +75,7 @@ used to implement automated robots for trading algorithms.
    :maxdepth: 2
 
    traders/index
+   traders/python-binding
 
 :html:`</div><div class="col-md-6">`
 
