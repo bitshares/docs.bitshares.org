@@ -3,7 +3,7 @@ Often used API Calls
 ********************
 
 .. contents:: Table of Contents
-   :depth: 3
+   :depth: 2
 
 Overview
 ########

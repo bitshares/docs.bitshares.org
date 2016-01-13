@@ -15,6 +15,7 @@ blockchain on different levels and shall thus be briefly described in the
 following sections.
 
 .. toctree::
+    :maxdepth: 1
 
     node
     delayednode
