@@ -1,0 +1,242 @@
+
+
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Howto Propose Committee Actions</title>
+
+    <!-- CSS -->
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href='../_static/main.css' rel='stylesheet'>
+    <link href='../_static/style.css' rel='stylesheet'>
+    <link href='../_static/doxygen.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+    <!-- Sphinx search -->
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <!-- Transifex -->
+    <script type="text/javascript">
+      window.liveSettings = {
+        api_key: "bbf87af0641e4bbf89c98088d48e0449",
+      };
+    </script>
+    <script type="text/javascript" src="http://cdn.transifex.com/live.js"></script>
+
+    <!-- title card -->
+    <link  href='../_static/title-card.css' rel='stylesheet'>
+    <script src='../_static/script.js'></script>
+    
+    <!-- Sphinx search -->
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Graphene Technical Documentation  documentation"
+          href="../_static/opensearch.xml"/>
+
+    <!-- Meta -->
+    <meta content="Graphene Documentation" property="og:site_name">
+    <meta content="Graphene Documentation" property="og:title">
+    <meta content="website" property="og:type">
+    <meta content="Graphene Documentation" name="description">
+    <meta content="Graphene Documentation" property="og:description">
+    
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-68381245-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+ </head>
+ <body class='no-literate'>
+
+
+ <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
+   <div class='in'>
+     <div class='headline'>
+       <h1>Howto Propose Committee Actions</h1>
+ 
+     </div>
+   </div>
+ </div>
+
+ <div class='header'>
+   <div class='left navlinks'>
+    
+        <div class="top">
+         <div class="title">top</div>
+         <span><a class="uplink" href="../index.html">Contents</a></span>
+        </div>
+
+   </div>
+   <!--
+    <div class='right'>
+<div id="searchbox" style="display: none" role="search">
+ <form class="search" action="../search.html" method="get">
+   <input type="text" name="q" />
+   <input type="submit" value="Go" />
+   <input type="hidden" name="check_keywords" value="yes" />
+   <input type="hidden" name="area" value="default" />
+ </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+   </div>
+   -->
+ </div>
+
+ <div class='content-root'>
+  <!-- menu bar -->
+  <div class='menubar'>
+   <div class='section'>
+    <a href="..//index.html"><img src="../_static/grphn-logo.svg" height="48" /></a>
+
+    <a href="..//bitshares/index.html"><img src="../_static/bitshares-logo.png" height="48" /></a>
+
+    <a href="..//muse/index.html"><img src="../_static/MUSE_logo_transp_v1.png" height="48" /></a>
+   </div>
+   <div class='menu section'>
+    <div id="toc">
+      <h3>Table Of Contents</h3>
+      <ul>
+<li class="toctree-l1"><a class="reference internal" href="../bitshares/index.html">BitShares 2.0</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../muse/index.html">MUSE</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../integration/index.html">Integration Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">Graphene API</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../blockchain/index.html">Blockchain Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../namespaces/index.html">Namespaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testnet/index.html">Testnets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">Frequently Asked Questions</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../meta/index.html">Meta</a></li>
+</ul>
+
+    </div>
+   </div>
+   <div class='bottom section'>
+   <!--
+     <a href='https://github.com/cryptonomex/graphene'>View on GitHub</a><br>
+     <a href='https://github.com/cryptonomex/graphene/blob/master/README.md' target='_blank'>See .md source</a>
+   -->
+   </div>
+  </div>
+  <div class='content'>
+   
+  <div class="section" id="howto-propose-committee-actions">
+<h1>Howto Propose Committee Actions<a class="headerlink" href="#howto-propose-committee-actions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="setting-smartcoin-parameters">
+<h2>Setting Smartcoin Parameters<a class="headerlink" href="#setting-smartcoin-parameters" title="Permalink to this headline">¶</a></h2>
+<p>This paragraph shows how the committee account can act using the proposed
+transaction system. Specifically, as an example I&#8217;m using the creation of
+BitShares proposal 1.10.21, a proposal to update a committee-controlled BitAsset
+to reduce <code class="docutils literal"><span class="pre">maximum_force_settlement_volume</span></code> for asset <code class="docutils literal"><span class="pre">CNY</span></code> from 2000 (20%)
+to 200 (2%).</p>
+<p>First check the asset to see what its current configuration is:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">get_asset</span> <span class="n">CNY</span>
+<span class="go">{</span>
+<span class="go">  ...</span>
+<span class="go">  &quot;bitasset_data_id&quot;: &quot;2.4.13&quot;</span>
+<span class="go">}</span>
+</pre></div>
+</div>
+<p>Then check its bitasset object to get the currently active options:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">get_object</span> <span class="mf">2.4</span><span class="o">.</span><span class="mi">13</span>
+<span class="go">{</span>
+<span class="go">  ...</span>
+<span class="go">    &quot;options&quot;: {</span>
+<span class="go">      &quot;feed_lifetime_sec&quot;: 86400,</span>
+<span class="go">      &quot;minimum_feeds&quot;: 7,</span>
+<span class="go">      &quot;force_settlement_delay_sec&quot;: 86400,</span>
+<span class="go">      &quot;force_settlement_offset_percent&quot;: 0,</span>
+<span class="go">      &quot;maximum_force_settlement_volume&quot;: 2000,</span>
+<span class="go">      &quot;short_backing_asset&quot;: &quot;1.3.0&quot;,</span>
+<span class="go">      &quot;extensions&quot;: []</span>
+<span class="go">    },</span>
+<span class="go">  ...</span>
+<span class="go">}</span>
+</pre></div>
+</div>
+<p>Then do <code class="docutils literal"><span class="pre">update_bitasset</span></code> to update the options. Note we copy-paste
+other fields from above; there is no way to selectively update only one
+field.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">update_bitasset</span> <span class="s">&quot;CNY&quot;</span> <span class="p">{</span><span class="s">&quot;feed_lifetime_sec&quot;</span> <span class="p">:</span> <span class="mi">86400</span><span class="p">,</span> <span class="s">&quot;minimum_feeds&quot;</span> <span class="p">:</span> <span class="mi">7</span><span class="p">,</span> <span class="s">&quot;force_settlement_delay_sec&quot;</span> <span class="p">:</span> <span class="mi">86400</span><span class="p">,</span> <span class="s">&quot;force_settlement_offset_percent&quot;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s">&quot;maximum_force_settlement_volume&quot;</span> <span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="s">&quot;short_backing_asset&quot;</span> <span class="p">:</span> <span class="s">&quot;1.3.0&quot;</span><span class="p">,</span> <span class="s">&quot;extensions&quot;</span> <span class="p">:</span> <span class="p">[]}</span> <span class="n">false</span>
+</pre></div>
+</div>
+<p>If this was a privatized BitAsset (i.e. a user-issued asset with feed), you
+could simply set the <code class="docutils literal"><span class="pre">broadcast</span></code> parameter of the above command to <code class="docutils literal"><span class="pre">true</span></code>
+and be done.</p>
+<p>However this is a committee-issued asset, so we have to use a proposed
+transaction to update it. To create the proposed transaction, we use the
+transaction builder API. Create a transaction builder transaction with
+<code class="docutils literal"><span class="pre">begin_builder_transaction</span></code> command:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">begin_builder_transaction</span>
+</pre></div>
+</div>
+<p>This returns a numeric handle used to refer to the transaction being
+built. In the following commands you need to replace <code class="docutils literal"><span class="pre">$HANDLE</span></code> with
+the number returned by <code class="docutils literal"><span class="pre">begin_builder_transaction</span></code> above.</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt;&gt;&gt; add_operation_to_builder_transaction $HANDLE [12,{&quot;fee&quot;: {&quot;amount&quot;:
+100000000, &quot;asset_id&quot;: &quot;1.3.0&quot;}, &quot;issuer&quot;: &quot;1.2.0&quot;, &quot;asset_to_update&quot;:
+&quot;1.3.113&quot;, &quot;new_options&quot;: { &quot;feed_lifetime_sec&quot;: 86400, &quot;minimum_feeds&quot;: 7,
+&quot;force_settlement_delay_sec&quot;: 86400, &quot;force_settlement_offset_percent&quot;: 0,
+&quot;maximum_force_settlement_volume&quot;: 200, &quot;short_backing_asset&quot;: &quot;1.3.0&quot;,
+&quot;extensions&quot;: []}, &quot;extensions&quot;: []}]
+&gt;&gt;&gt; propose_builder_transaction2 $HANDLE init0 &quot;2015-12-04T14:55:00&quot; 3600 false
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">propose_builder_transaction</span></code> command is broken and deprecated.
+You need to recompile with <a class="reference external" href="https://github.com/cryptonomex/graphene/commit/7a5c5c476d9762cbba1d745447191523ca5cd601">this
+patch</a>
+in order to use the new <code class="docutils literal"><span class="pre">propose_builder_transaction2</span></code> command which
+allows you to set the proposing account.</p>
+<p>Then set fees, sign and broadcast the transaction:</p>
+<div class="highlight-python"><div class="highlight"><pre>&gt;&gt;&gt; set_fees_on_builder_transaction $HANDLE BTS
+&gt;&gt;&gt; sign_builder_transaction $HANDLE true
+</pre></div>
+</div>
+<p>Notes:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">propose_builder_transaction2</span></code> modifies builder transaction in
+place. It is not idempotent, running it once will get you a proposal
+to execute the transaction, running it twice will cause you to get a
+proposal to propose the transaction!</li>
+<li>Remember to transfer enough to cover the fee to committee account and
+set review period to at least <code class="docutils literal"><span class="pre">committee_proposal_review_period</span></code></li>
+<li>Much of this could be automated by a better wallet command.</li>
+</ul>
+</div>
+</div>
+
+
+  </div>
+ </div>
+
+ <script>var HN=[];HN.factory=function(e){return function(){HN.push([e].concat(Array.prototype.slice.call(arguments,0)))};},HN.on=HN.factory("on"),HN.once=HN.factory("once"),HN.off=HN.factory("off"),HN.emit=HN.factory("emit"),HN.load=function(){var e="hn-button.js";if(document.getElementById(e))return;var t=document.createElement("script");t.id=e,t.src="//hn-button.herokuapp.com/hn-button.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)},HN.load();</script>
+ <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+ </body>
+</html>

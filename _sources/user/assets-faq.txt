@@ -2,6 +2,32 @@
 Frequently Asked Questions
 **************************
 
+Can I change `x` after creation of the asset
+********************************************
+
+The following parameters can be changed after creation:
+
+* Issuer
+* UIA-Options:
+ * Max Supply
+ * Market Fee
+ * Permissions (disable only/nor re-enable)
+ * Flags (if permissions allow it)
+ * Core exchange rate
+ * White/Black Listing
+ * Description
+* MPG-Options:
+ * Feed Life Time
+ * Minimum Feeds
+ * Force Settlement Offset/Delay/Volume
+
+Things that cannot be changes:
+
+* Symbol
+* Precision
+
+A tutorial can be found :doc:`here <../tutorials/uia-update-manual>`.
+
 What about Parent and Child assets?
 ***********************************
 

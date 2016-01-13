@@ -156,6 +156,13 @@ market asset. A prediction market is globally settled by the issuer
 after the event being predicted resolves, thus a prediction market must
 always have the <cite>global_settle</cite> permission enabled. The maximum price for
 global settlement or short sale of a prediction market asset is 1-to-1.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In the following, we denote a <em>positive outcome</em> as a
+predication market that resolves to <cite>true</cite> (i.e. a price feed
+of <cite>1</cite>) and a <em>negative outcome</em> to resolve to <cite>false</cite> (i.e. a
+price feed of <cite>0</cite>)</p>
+</div>
 <p>If the bet resolves to <cite>true</cite> (i.e. a price feed of <cite>1</cite>), then the
 PM-asset can be settled release the collateral to the holder of the
 asset.</p>
@@ -169,18 +176,69 @@ the market at a 1:1 ratio with the backing asset (which could be any
 other asset, including BTS, USD, GOLD).</p>
 <p>The technical details are described in a separate tutorial:</p>
 <ul class="simple">
-<li><code class="xref doc docutils literal"><span class="pre">../tutorials/pm-create-manual</span></code></li>
+<li><a class="reference internal" href="../tutorials/pm-create-manual.html"><em>Creating a Prediction Market</em></a></li>
 </ul>
 </div>
 <div class="section" id="betting">
 <h2>Betting<a class="headerlink" href="#betting" title="Permalink to this headline">¶</a></h2>
-<p>The bet can be take by borrowing the prediction market asset (here
-<code class="docutils literal"><span class="pre">PMsymbol</span></code>). Since the collateral ratio is 100%, you need to pay the
-exact same amount for to borrow the asset:</p>
+<p>A user can take either bet on a positive outcome, or a negative outcome.
+We here show how this works, technically.</p>
+<div class="section" id="betting-for-a-positive-outcome">
+<h3>Betting for a Positive Outcome<a class="headerlink" href="#betting-for-a-positive-outcome" title="Permalink to this headline">¶</a></h3>
+<p>If you are confident that the bet will resolve positive, you want to
+<strong>hold</strong> that particular PM-asset since it allows you to settle it for
+it&#8217;s collateral on a 1:1 basis.</p>
+<p>In order to get hold of those tokens, you can put a buy order for them
+at any price (between 0 and 1) and wait for it to be filled, or buy at
+market rates. By this technique, a user can pre define at which odds to
+buy shares.</p>
+<p>For instance, if you think that the bet resolves positively at a
+probability of <cite>80%</cite>, you can put your buy order at a price of <cite>0.8</cite>. If
+the bet resolves positively (price feed of <cite>1</cite>), then you can settle
+your shares at <cite>1</cite> and make a 20% profit.</p>
+<p>If you can buy tokens at a price of <cite>0.2</cite> (i.e. market participants
+think it is unlikely to resolve positively), then you could make <cite>80%</cite>
+profits at a risk of loosing with <cite>80%</cite> probability.</p>
+</div>
+<div class="section" id="betting-for-a-negative-outcome">
+<h3>Betting for a Negative Outcome<a class="headerlink" href="#betting-for-a-negative-outcome" title="Permalink to this headline">¶</a></h3>
+<p>In order to bet for a negative outcome (bet resolves to <cite>false</cite> with a
+price feed of <cite>0</cite>), you need to <strong>sell</strong> the tokens. In order to get
+them, you should <strong>not</strong> buy them at the market, but instead <strong>borrow</strong>
+them from the network by paying collateral at a 1:1 ratio.</p>
+<p>For example, in the <cite>PM.PRESIDENT2016</cite> if you want to bet on a negative
+outcome with <cite>100k BTS</cite>, you can borrow <cite>100k PM.PRESIDENT2016</cite> by paying
+<cite>100k BTS</cite> to the network.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Since PM-Assets can technically be pegged by any other asset,
+you may need to pay USD (or anything else) instead of BTS.</p>
+</div>
+<p>Once you borrowed the token, you can sell them at any price between <cite>0</cite>
+and <cite>1</cite>. If you thing the probability of a negative outcome is <cite>20%</cite>,
+you should consider selling your tokens at <cite>0.2</cite>.</p>
+<p>If the bet resolves negatively (price feed of <cite>0</cite>), your debts is worth
+<cite>debt = amount * price = 0 BTS</cite>, you can reclaim your collateral at zero
+cost, and get to keep <cite>20%</cite> profits from selling the token at <cite>0.2</cite>. If
+instead the bet resolves positively and you sold all tokens, you cannot
+close your borrow position to redeem your collateral. However, your
+total loss is reduced by <cite>20%</cite> for selling the tokens at the market.</p>
+<p>If, by the end of the bet, you still have some of the tokens left, you
+can of course close your borrow position partly and redeem the
+corresponding percentage of the collateral.</p>
+<ul>
+<li><p class="first"><strong>Borrowing in the CLI wallet</strong>:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">borrow_asset</span> <span class="o">&lt;</span><span class="n">account</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">amount</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">PMsymbol</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="o">-</span><span class="n">amount</span><span class="o">&gt;</span> <span class="n">true</span>
 </pre></div>
 </div>
-<p>Of course, the asset can also be borrowed in the <strong>GUI/web wallet</strong>.</p>
+</li>
+<li><p class="first"><strong>Borrowing in the GUI wallet</strong>:
+Of course, the asset can also be borrowed in the <strong>GUI/web wallet</strong> by
+using the <cite>Borrow x</cite> button in the market.</p>
+<a class="reference internal image-reference" href="../_images/pm-borrow-btn1.png"><img alt="Borrow PM-Asset" class="align-center" src="../_images/pm-borrow-btn1.png" style="width: 400px;" /></a>
+</li>
+</ul>
+</div>
 </div>
 <div class="section" id="resolving">
 <h2>Resolving<a class="headerlink" href="#resolving" title="Permalink to this headline">¶</a></h2>
@@ -190,7 +248,7 @@ will set the parameters of the asset such that the holders of the asset
 can settle at the outcome of the bet (0, or 1). The details are shown in
 the tutorial:</p>
 <ul class="simple">
-<li><code class="xref doc docutils literal"><span class="pre">../tutorials/pm-close-manual</span></code></li>
+<li><a class="reference internal" href="../tutorials/pm-close-manual.html"><em>Closing/Settling a Prediction Market</em></a></li>
 </ul>
 </div>
 <div class="section" id="claiming-profits">

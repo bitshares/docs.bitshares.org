@@ -1,3 +1,6 @@
+.. role:: html(raw)
+   :format: html
+
 *************
 Assets/Tokens
 *************
@@ -71,3 +74,16 @@ Tutorials
   ../tutorials/mpa-create-manual
   ../tutorials/pm-create-manual
   ../tutorials/pm-close-manual
+
+:html:`<!-- Adding the toctree`
+
+.. toctree::
+   :maxdepth: 1
+
+   uia
+   mpa
+   fba
+   privbta
+   pm
+
+:html:`//-->`
