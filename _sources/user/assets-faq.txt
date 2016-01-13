@@ -9,6 +9,7 @@ The following parameters can be changed after creation:
 
 * Issuer
 * UIA-Options:
+
  * Max Supply
  * Market Fee
  * Permissions (disable only/nor re-enable)
@@ -16,7 +17,9 @@ The following parameters can be changed after creation:
  * Core exchange rate
  * White/Black Listing
  * Description
+
 * MPG-Options:
+
  * Feed Life Time
  * Minimum Feeds
  * Force Settlement Offset/Delay/Volume

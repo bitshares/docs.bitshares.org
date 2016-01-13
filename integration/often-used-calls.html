@@ -84,7 +84,7 @@
     
         <div class="prev">
          <div class="title">previous</div>
-         <span><a href="network-setup.html">Secure Network and Wallet Configuration</a></span>
+         <span><a href="network-setup.html">Network and Wallet Configuration</a></span>
         </div>
         <div class="top">
          <div class="title">top</div>
@@ -132,11 +132,10 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Integration Guide</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="index.html#skype-group-for-important-announcements">Skype Group for Important Announcements</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#basic-knowledge">Basic Knowledge</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="what-is-different.html">What is Different</a></li>
+<li class="toctree-l3"><a class="reference internal" href="what-is-different.html">What is Different in BitShares</a></li>
 <li class="toctree-l3"><a class="reference internal" href="apps/index.html">Blockchain Interaction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="network-setup.html">Secure Network and Wallet Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="network-setup.html">Network and Wallet Configuration</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="">Often used API Calls</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../blockchain/Objects.html">Objects and IDs</a></li>
@@ -217,43 +216,13 @@
 <ul class="simple">
 <li><a class="reference internal" href="#often-used-api-calls" id="id16">Often used API Calls</a><ul>
 <li><a class="reference internal" href="#overview" id="id17">Overview</a></li>
-<li><a class="reference internal" href="#list-account-balances-account" id="id18"><code class="docutils literal"><span class="pre">list_account_balances</span> <span class="pre">&lt;account&gt;</span></code></a><ul>
-<li><a class="reference internal" href="#script" id="id19">Script</a></li>
-<li><a class="reference internal" href="#result" id="id20">Result</a></li>
-<li><a class="reference internal" href="#reference" id="id21">Reference</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#transfer-from-to-amount-asset-memo-broadcast" id="id22"><code class="docutils literal"><span class="pre">transfer</span> <span class="pre">&lt;from&gt;</span> <span class="pre">&lt;to&gt;</span> <span class="pre">&lt;amount&gt;</span> <span class="pre">&lt;asset&gt;</span> <span class="pre">&quot;&lt;memo&gt;&quot;</span> <span class="pre">&lt;broadcast&gt;</span></code></a><ul>
-<li><a class="reference internal" href="#id1" id="id23">Script</a></li>
-<li><a class="reference internal" href="#id2" id="id24">Result</a></li>
-<li><a class="reference internal" href="#id3" id="id25">Reference</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#transfer2-from-to-amount-asset-memo" id="id26"><code class="docutils literal"><span class="pre">transfer2</span> <span class="pre">&lt;from&gt;</span> <span class="pre">&lt;to&gt;</span> <span class="pre">&lt;amount&gt;</span> <span class="pre">&lt;asset&gt;</span> <span class="pre">&quot;&lt;memo&gt;&quot;</span></code></a><ul>
-<li><a class="reference internal" href="#id4" id="id27">Script</a></li>
-<li><a class="reference internal" href="#id5" id="id28">Result</a></li>
-<li><a class="reference internal" href="#id6" id="id29">Reference</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#get-account-history-account-limit" id="id30"><code class="docutils literal"><span class="pre">get_account_history</span> <span class="pre">&lt;account&gt;</span> <span class="pre">&lt;limit&gt;</span></code></a><ul>
-<li><a class="reference internal" href="#id7" id="id31">Script</a></li>
-<li><a class="reference internal" href="#id8" id="id32">Result</a></li>
-<li><a class="reference internal" href="#id9" id="id33">Reference</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#get-object-1-11-id" id="id34"><code class="docutils literal"><span class="pre">get_object</span> <span class="pre">&quot;1.11.&lt;id&gt;&quot;</span></code></a><ul>
-<li><a class="reference internal" href="#id10" id="id35">Script</a></li>
-<li><a class="reference internal" href="#id11" id="id36">Result</a></li>
-<li><a class="reference internal" href="#id12" id="id37">Reference</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#get-asset-usd" id="id38"><code class="docutils literal"><span class="pre">get_asset</span> <span class="pre">&lt;USD&gt;</span></code></a><ul>
-<li><a class="reference internal" href="#id13" id="id39">Script</a></li>
-<li><a class="reference internal" href="#id14" id="id40">Result</a></li>
-<li><a class="reference internal" href="#id15" id="id41">Reference</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#correspondences-with-bitshares-1-0-calls" id="id42">Correspondences with BitShares 1.0 Calls</a></li>
+<li><a class="reference internal" href="#list-account-balances-account" id="id18"><code class="docutils literal"><span class="pre">list_account_balances</span> <span class="pre">&lt;account&gt;</span></code></a></li>
+<li><a class="reference internal" href="#transfer-from-to-amount-asset-memo-broadcast" id="id19"><code class="docutils literal"><span class="pre">transfer</span> <span class="pre">&lt;from&gt;</span> <span class="pre">&lt;to&gt;</span> <span class="pre">&lt;amount&gt;</span> <span class="pre">&lt;asset&gt;</span> <span class="pre">&quot;&lt;memo&gt;&quot;</span> <span class="pre">&lt;broadcast&gt;</span></code></a></li>
+<li><a class="reference internal" href="#transfer2-from-to-amount-asset-memo" id="id20"><code class="docutils literal"><span class="pre">transfer2</span> <span class="pre">&lt;from&gt;</span> <span class="pre">&lt;to&gt;</span> <span class="pre">&lt;amount&gt;</span> <span class="pre">&lt;asset&gt;</span> <span class="pre">&quot;&lt;memo&gt;&quot;</span></code></a></li>
+<li><a class="reference internal" href="#get-account-history-account-limit" id="id21"><code class="docutils literal"><span class="pre">get_account_history</span> <span class="pre">&lt;account&gt;</span> <span class="pre">&lt;limit&gt;</span></code></a></li>
+<li><a class="reference internal" href="#get-object-1-11-id" id="id22"><code class="docutils literal"><span class="pre">get_object</span> <span class="pre">&quot;1.11.&lt;id&gt;&quot;</span></code></a></li>
+<li><a class="reference internal" href="#get-asset-usd" id="id23"><code class="docutils literal"><span class="pre">get_asset</span> <span class="pre">&lt;USD&gt;</span></code></a></li>
+<li><a class="reference internal" href="#correspondences-with-bitshares-1-0-calls" id="id24">Correspondences with BitShares 1.0 Calls</a></li>
 </ul>
 </li>
 </ul>
@@ -281,7 +250,7 @@ table above. We recommend to read the following articles:</p>
 <div class="section" id="list-account-balances-account">
 <h2><a class="toc-backref" href="#id18"><code class="docutils literal"><span class="pre">list_account_balances</span> <span class="pre">&lt;account&gt;</span></code></a><a class="headerlink" href="#list-account-balances-account" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="script">
-<h3><a class="toc-backref" href="#id19">Script</a><a class="headerlink" href="#script" title="Permalink to this headline">¶</a></h3>
+<h3>Script<a class="headerlink" href="#script" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">json</span>
 <span class="kn">from</span> <span class="nn">grapheneapi</span> <span class="kn">import</span> <span class="n">GrapheneAPI</span>
 <span class="n">client</span> <span class="o">=</span> <span class="n">GrapheneAPI</span><span class="p">(</span><span class="s">&quot;localhost&quot;</span><span class="p">,</span> <span class="mi">8092</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">)</span>
@@ -291,7 +260,7 @@ table above. We recommend to read the following articles:</p>
 </div>
 </div>
 <div class="section" id="result">
-<h3><a class="toc-backref" href="#id20">Result</a><a class="headerlink" href="#result" title="Permalink to this headline">¶</a></h3>
+<h3>Result<a class="headerlink" href="#result" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-js"><div class="highlight"><pre><span class="p">[</span>
     <span class="p">{</span>
         <span class="s2">&quot;asset_id&quot;</span><span class="o">:</span> <span class="s2">&quot;1.3.0&quot;</span><span class="p">,</span>
@@ -314,7 +283,7 @@ table above. We recommend to read the following articles:</p>
 </div>
 </div>
 <div class="section" id="reference">
-<h3><a class="toc-backref" href="#id21">Reference</a><a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h3>
+<h3>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h3>
 <dl class="function">
 <dt id="_CPPv2N8graphene6wallet10wallet_api21list_account_balancesERK6string">
 <span id="graphene::wallet::wallet_api::list_account_balances__stringCR"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1a36320ec4d8646bf2149bb4e383b291b5"></span>vector&lt;asset&gt; <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">list_account_balances</code><span class="sig-paren">(</span><em class="property">const</em> string &amp;<em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api21list_account_balancesERK6string" title="Permalink to this definition">¶</a></dt>
@@ -334,9 +303,9 @@ table above. We recommend to read the following articles:</p>
 </div>
 </div>
 <div class="section" id="transfer-from-to-amount-asset-memo-broadcast">
-<h2><a class="toc-backref" href="#id22"><code class="docutils literal"><span class="pre">transfer</span> <span class="pre">&lt;from&gt;</span> <span class="pre">&lt;to&gt;</span> <span class="pre">&lt;amount&gt;</span> <span class="pre">&lt;asset&gt;</span> <span class="pre">&quot;&lt;memo&gt;&quot;</span> <span class="pre">&lt;broadcast&gt;</span></code></a><a class="headerlink" href="#transfer-from-to-amount-asset-memo-broadcast" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id19"><code class="docutils literal"><span class="pre">transfer</span> <span class="pre">&lt;from&gt;</span> <span class="pre">&lt;to&gt;</span> <span class="pre">&lt;amount&gt;</span> <span class="pre">&lt;asset&gt;</span> <span class="pre">&quot;&lt;memo&gt;&quot;</span> <span class="pre">&lt;broadcast&gt;</span></code></a><a class="headerlink" href="#transfer-from-to-amount-asset-memo-broadcast" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id1">
-<h3><a class="toc-backref" href="#id23">Script</a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h3>Script<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">json</span>
 <span class="kn">from</span> <span class="nn">grapheneapi</span> <span class="kn">import</span> <span class="n">GrapheneAPI</span>
 <span class="n">client</span> <span class="o">=</span> <span class="n">GrapheneAPI</span><span class="p">(</span><span class="s">&quot;localhost&quot;</span><span class="p">,</span> <span class="mi">8092</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">)</span>
@@ -349,7 +318,7 @@ broadcast. If this parameter is <code class="docutils literal"><span class="pre"
 not broadcast, hence not executed.</p>
 </div>
 <div class="section" id="id2">
-<h3><a class="toc-backref" href="#id24">Result</a><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<h3>Result<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-js"><div class="highlight"><pre><span class="p">{</span>
   <span class="s2">&quot;ref_block_num&quot;</span><span class="o">:</span> <span class="mi">18</span><span class="p">,</span>
   <span class="s2">&quot;ref_block_prefix&quot;</span><span class="o">:</span> <span class="mi">2320098938</span><span class="p">,</span>
@@ -385,7 +354,7 @@ not broadcast, hence not executed.</p>
 </div>
 </div>
 <div class="section" id="id3">
-<h3><a class="toc-backref" href="#id25">Reference</a><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<h3>Reference<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <dl class="function">
 <dt id="_CPPv2N8graphene6wallet10wallet_api8transferE6string6string6string6string6stringb">
 <span id="graphene::wallet::wallet_api::transfer__string.string.string.string.string.b"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1a338fc74bb723d9c649f161b5279e41f0"></span>signed_transaction <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">transfer</code><span class="sig-paren">(</span>string <em>from</em>, string <em>to</em>, string <em>amount</em>, string <em>asset_symbol</em>, string <em>memo</em>, bool <em>broadcast</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api8transferE6string6string6string6string6stringb" title="Permalink to this definition">¶</a></dt>
@@ -415,9 +384,9 @@ not broadcast, hence not executed.</p>
 </div>
 </div>
 <div class="section" id="transfer2-from-to-amount-asset-memo">
-<h2><a class="toc-backref" href="#id26"><code class="docutils literal"><span class="pre">transfer2</span> <span class="pre">&lt;from&gt;</span> <span class="pre">&lt;to&gt;</span> <span class="pre">&lt;amount&gt;</span> <span class="pre">&lt;asset&gt;</span> <span class="pre">&quot;&lt;memo&gt;&quot;</span></code></a><a class="headerlink" href="#transfer2-from-to-amount-asset-memo" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id20"><code class="docutils literal"><span class="pre">transfer2</span> <span class="pre">&lt;from&gt;</span> <span class="pre">&lt;to&gt;</span> <span class="pre">&lt;amount&gt;</span> <span class="pre">&lt;asset&gt;</span> <span class="pre">&quot;&lt;memo&gt;&quot;</span></code></a><a class="headerlink" href="#transfer2-from-to-amount-asset-memo" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id4">
-<h3><a class="toc-backref" href="#id27">Script</a><a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<h3>Script<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">json</span>
 <span class="kn">from</span> <span class="nn">grapheneapi</span> <span class="kn">import</span> <span class="n">GrapheneAPI</span>
 <span class="n">client</span> <span class="o">=</span> <span class="n">GrapheneAPI</span><span class="p">(</span><span class="s">&quot;localhost&quot;</span><span class="p">,</span> <span class="mi">8092</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">)</span>
@@ -429,7 +398,7 @@ not broadcast, hence not executed.</p>
 the transaction ID along with the signed transaction.</p>
 </div>
 <div class="section" id="id5">
-<h3><a class="toc-backref" href="#id28">Result</a><a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<h3>Result<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-js"><div class="highlight"><pre> <span class="p">[</span><span class="nx">b546a75a891b5c51de6d1aafd40d10e91a717bb3</span><span class="p">,{</span>
    <span class="s2">&quot;ref_block_num&quot;</span><span class="o">:</span> <span class="mi">18</span><span class="p">,</span>
    <span class="s2">&quot;ref_block_prefix&quot;</span><span class="o">:</span> <span class="mi">2320098938</span><span class="p">,</span>
@@ -466,7 +435,7 @@ the transaction ID along with the signed transaction.</p>
 </div>
 </div>
 <div class="section" id="id6">
-<h3><a class="toc-backref" href="#id29">Reference</a><a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<h3>Reference<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
 <dl class="function">
 <dt id="_CPPv2N8graphene6wallet10wallet_api9transfer2E6string6string6string6string6string">
 <span id="graphene::wallet::wallet_api::transfer2__string.string.string.string.string"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1a52bd06d61575ff4cfc208d887db3d8ff"></span>pair&lt;transaction_id_type, signed_transaction&gt; <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">transfer2</code><span class="sig-paren">(</span>string <em>from</em>, string <em>to</em>, string <em>amount</em>, string <em>asset_symbol</em>, string <em>memo</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api9transfer2E6string6string6string6string6string" title="Permalink to this definition">¶</a></dt>
@@ -476,9 +445,9 @@ the transaction ID along with the signed transaction.</p>
 </div>
 </div>
 <div class="section" id="get-account-history-account-limit">
-<h2><a class="toc-backref" href="#id30"><code class="docutils literal"><span class="pre">get_account_history</span> <span class="pre">&lt;account&gt;</span> <span class="pre">&lt;limit&gt;</span></code></a><a class="headerlink" href="#get-account-history-account-limit" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id21"><code class="docutils literal"><span class="pre">get_account_history</span> <span class="pre">&lt;account&gt;</span> <span class="pre">&lt;limit&gt;</span></code></a><a class="headerlink" href="#get-account-history-account-limit" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id7">
-<h3><a class="toc-backref" href="#id31">Script</a><a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<h3>Script<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">json</span>
 <span class="kn">from</span> <span class="nn">grapheneapi</span> <span class="kn">import</span> <span class="n">GrapheneAPI</span>
 <span class="n">client</span> <span class="o">=</span> <span class="n">GrapheneAPI</span><span class="p">(</span><span class="s">&quot;localhost&quot;</span><span class="p">,</span> <span class="mi">8092</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">)</span>
@@ -488,7 +457,7 @@ the transaction ID along with the signed transaction.</p>
 </div>
 </div>
 <div class="section" id="id8">
-<h3><a class="toc-backref" href="#id32">Result</a><a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<h3>Result<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-js"><div class="highlight"><pre><span class="p">[</span>
      <span class="p">{</span>
          <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;fill_order_operation dan fee: 0 CORE&quot;</span><span class="p">,</span>
@@ -529,7 +498,7 @@ the transaction ID along with the signed transaction.</p>
 </div>
 </div>
 <div class="section" id="id9">
-<h3><a class="toc-backref" href="#id33">Reference</a><a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<h3>Reference<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
 <dl class="function">
 <dt id="_CPPv2N8graphene6wallet10wallet_api19get_account_historyE6stringi">
 <span id="graphene::wallet::wallet_api::get_account_history__string.i"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1a61434b0b141c6237e6dd89c0346885ee"></span>vector&lt;operation_detail&gt; <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">get_account_history</code><span class="sig-paren">(</span>string <em>name</em>, int <em>limit</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api19get_account_historyE6stringi" title="Permalink to this definition">¶</a></dt>
@@ -555,9 +524,9 @@ the transaction ID along with the signed transaction.</p>
 </div>
 </div>
 <div class="section" id="get-object-1-11-id">
-<h2><a class="toc-backref" href="#id34"><code class="docutils literal"><span class="pre">get_object</span> <span class="pre">&quot;1.11.&lt;id&gt;&quot;</span></code></a><a class="headerlink" href="#get-object-1-11-id" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id22"><code class="docutils literal"><span class="pre">get_object</span> <span class="pre">&quot;1.11.&lt;id&gt;&quot;</span></code></a><a class="headerlink" href="#get-object-1-11-id" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id10">
-<h3><a class="toc-backref" href="#id35">Script</a><a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<h3>Script<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">json</span>
 <span class="kn">from</span> <span class="nn">grapheneapi</span> <span class="kn">import</span> <span class="n">GrapheneAPI</span>
 <span class="n">client</span> <span class="o">=</span> <span class="n">GrapheneAPI</span><span class="p">(</span><span class="s">&quot;localhost&quot;</span><span class="p">,</span> <span class="mi">8092</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">)</span>
@@ -567,7 +536,7 @@ the transaction ID along with the signed transaction.</p>
 </div>
 </div>
 <div class="section" id="id11">
-<h3><a class="toc-backref" href="#id36">Result</a><a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<h3>Result<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-js"><div class="highlight"><pre><span class="p">{</span>
     <span class="s2">&quot;trx_in_block&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
     <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;1.11.213277&quot;</span><span class="p">,</span>
@@ -602,12 +571,12 @@ the transaction ID along with the signed transaction.</p>
 </div>
 </div>
 <div class="section" id="id12">
-<h3><a class="toc-backref" href="#id37">Reference</a><a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<h3>Reference<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
 <dl class="function">
 <dt id="_CPPv2N8graphene6wallet10wallet_api10get_objectE14object_id_type">
 <span id="graphene::wallet::wallet_api::get_object__object_id_type"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1a986966705420db7db5b7744956f763fe"></span>variant <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">get_object</code><span class="sig-paren">(</span>object_id_type <em>id</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api10get_objectE14object_id_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the blockchain object corresponding to the given id.</p>
-<p>This generic function can be used to retrieve any object from the blockchain that is assigned an ID. Certain types of objects have specialized convenience functions to return their objects  e.g., assets have <code class="docutils literal"><a class="reference internal" href="../namespaces/wallet.html#grapheneclassgraphene_1_1wallet_1_1wallet__api_1adeba50e052ff409fe1d19cc9e50e9a8f"><span><span class="pre">get_asset()</span></span></a></code>, accounts have <code class="docutils literal"><a class="reference internal" href="../namespaces/wallet.html#grapheneclassgraphene_1_1wallet_1_1wallet__api_1a479f699f7b704636e80a44bf8397d341"><span><span class="pre">get_account()</span></span></a></code>, but this function will work for any object.</p>
+<p>This generic function can be used to retrieve any object from the blockchain that is assigned an ID. Certain types of objects have specialized convenience functions to return their objects  e.g., assets have <code class="docutils literal"><a class="reference internal" href="#grapheneclassgraphene_1_1wallet_1_1wallet__api_1adeba50e052ff409fe1d19cc9e50e9a8f"><span><span class="pre">get_asset()</span></span></a></code>, accounts have <code class="docutils literal"><a class="reference internal" href="../namespaces/wallet.html#grapheneclassgraphene_1_1wallet_1_1wallet__api_1a479f699f7b704636e80a44bf8397d341"><span><span class="pre">get_account()</span></span></a></code>, but this function will work for any object.</p>
 <p><dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>the requested object </dd>
@@ -624,9 +593,9 @@ the transaction ID along with the signed transaction.</p>
 </div>
 </div>
 <div class="section" id="get-asset-usd">
-<h2><a class="toc-backref" href="#id38"><code class="docutils literal"><span class="pre">get_asset</span> <span class="pre">&lt;USD&gt;</span></code></a><a class="headerlink" href="#get-asset-usd" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id23"><code class="docutils literal"><span class="pre">get_asset</span> <span class="pre">&lt;USD&gt;</span></code></a><a class="headerlink" href="#get-asset-usd" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id13">
-<h3><a class="toc-backref" href="#id39">Script</a><a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<h3>Script<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">json</span>
 <span class="kn">from</span> <span class="nn">grapheneapi</span> <span class="kn">import</span> <span class="n">GrapheneAPI</span>
 <span class="n">client</span> <span class="o">=</span> <span class="n">GrapheneAPI</span><span class="p">(</span><span class="s">&quot;localhost&quot;</span><span class="p">,</span> <span class="mi">8092</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">)</span>
@@ -636,7 +605,7 @@ the transaction ID along with the signed transaction.</p>
 </div>
 </div>
 <div class="section" id="id14">
-<h3><a class="toc-backref" href="#id40">Result</a><a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<h3>Result<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-js"><div class="highlight"><pre><span class="p">{</span>
     <span class="s2">&quot;symbol&quot;</span><span class="o">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
     <span class="s2">&quot;issuer&quot;</span><span class="o">:</span> <span class="s2">&quot;1.2.1&quot;</span><span class="p">,</span>
@@ -672,7 +641,7 @@ the transaction ID along with the signed transaction.</p>
 </div>
 </div>
 <div class="section" id="id15">
-<h3><a class="toc-backref" href="#id41">Reference</a><a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<h3>Reference<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
 <dl class="function">
 <dt id="_CPPv2N8graphene6wallet10wallet_api9get_assetE6string">
 <span id="graphene::wallet::wallet_api::get_asset__string"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1adeba50e052ff409fe1d19cc9e50e9a8f"></span>asset_object <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">get_asset</code><span class="sig-paren">(</span>string <em>asset_name_or_id</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api9get_assetE6string" title="Permalink to this definition">¶</a></dt>
@@ -692,7 +661,7 @@ the transaction ID along with the signed transaction.</p>
 </div>
 </div>
 <div class="section" id="correspondences-with-bitshares-1-0-calls">
-<h2><a class="toc-backref" href="#id42">Correspondences with BitShares 1.0 Calls</a><a class="headerlink" href="#correspondences-with-bitshares-1-0-calls" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id24">Correspondences with BitShares 1.0 Calls</a><a class="headerlink" href="#correspondences-with-bitshares-1-0-calls" title="Permalink to this headline">¶</a></h2>
 <table border="1" class="docutils">
 <colgroup>
 <col width="35%" />
