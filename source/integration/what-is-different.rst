@@ -1,6 +1,6 @@
-*****************
-What is Different
-*****************
+******************************
+What is Different in BitShares
+******************************
 
 Here we give a brief overview of what is different in BitShares 2.0 when
 compared to satoshi-based blockchains such as Bitcoin, Litecoin, etc.. from the
