@@ -112,8 +112,8 @@ Development
    testnet/index
    faq/index
 
-Meta
-####
+Contribute
+##########
 
 .. toctree::
    :maxdepth: 2
