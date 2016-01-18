@@ -33,7 +33,7 @@ on Ubuntu LTS; this requirement was an accident, see `this mailing list post`_).
 
 .. code-block:: sh
 
-    BOOST_ROOT=$HOME/opt/boost_1_57_0
+    export BOOST_ROOT=$HOME/opt/boost_1_57_0
     sudo apt-get update
     sudo apt-get install autotools-dev build-essential \
                          g++ libbz2-dev libicu-dev python-dev
