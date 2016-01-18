@@ -21,3 +21,5 @@ following sections.
     delayednode
     cliwallet
     webwallet
+    cli-faq
+    witness-faq
