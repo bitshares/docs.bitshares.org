@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <title>Testnets</title>
+    <title>Public Graphene Testnet</title>
 
     <!-- CSS -->
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
@@ -73,7 +73,7 @@
  <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
    <div class='in'>
      <div class='headline'>
-       <h1>Testnets</h1>
+       <h1>Public Graphene Testnet</h1>
  
      </div>
    </div>
@@ -92,7 +92,7 @@
         </div>
         <div class="next">
          <div class="title">next</div>
-         <span><a href="Private.html">Setting up private testnet</a></span>
+         <span><a href="1-install.html">Installation/Confguration of Witness</a></span>
         </div>
 
    </div>
@@ -137,15 +137,27 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../blockchain/index.html">Blockchain Specifications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../namespaces/index.html">Namespaces</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Testnets</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Private.html">Setting up private testnet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Public.html">Setting up public testnet</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Public Graphene Testnet</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#public-testnet">Public Testnet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-it-has-been-deployed">How it has been deployed</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="1-install.html">Installation/Confguration of Witness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2-genesis.html">Genesis Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3-init-blockchain.html">Initializing Blockchain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="4-cli-wallet.html">Connecting a CLI wallet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5-committee.html">Establishing a Committee</a></li>
+<li class="toctree-l3"><a class="reference internal" href="6-webwallet.html">Web Wallet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7-faucet.html">Setting up the Faucet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="8-nginx.html">Nginx Webserver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="9-python-library.html">Installation of Python Library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="10-create-assets.html">Create MPAs/UIAs</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../faq/index.html">Frequently Asked Questions</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../meta/index.html">Meta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../meta/index.html">How to Contribute</a></li>
 </ul>
 
     </div>
@@ -159,37 +171,75 @@
   </div>
   <div class='content'>
    
-  <div class="section" id="testnets">
-<h1>Testnets<a class="headerlink" href="#testnets" title="Permalink to this headline">¶</a></h1>
-<p>For running comprehensive tests and evaluating algorithms cheaply, we offer to
-setup private or public testnets.</p>
+  <div class="section" id="public-graphene-testnet">
+<h1>Public Graphene Testnet<a class="headerlink" href="#public-graphene-testnet" title="Permalink to this headline">¶</a></h1>
+<p>We produdly present the first <a class="reference external" href="http://testnet.bitshares.eu">public testnet</a> based on graphene and
+took the opportunity to construct a tutorial from the process.</p>
+<div class="section" id="public-testnet">
+<h2>Public Testnet<a class="headerlink" href="#public-testnet" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><strong>Access</strong>:<ul>
+<li>Web wallet: <a class="reference external" href="http://testnet.bitshares.eu">public testnet</a></li>
+<li>Seed node: <cite>testnet.bitshares.eu:11010</cite></li>
+</ul>
+</li>
+<li><strong>Sources</strong>:<ul>
+<li>Blockcain: <a class="reference external" href="https://github.com/BitSharesEurope/graphene-testnet">https://github.com/BitSharesEurope/graphene-testnet</a></li>
+<li>Wallet: <a class="reference external" href="https://github.com/BitSharesEurope/graphene-ui-testnet">https://github.com/BitSharesEurope/graphene-ui-testnet</a></li>
+<li>Faucet: <a class="reference external" href="https://github.com/BitSharesEurope/faucet-testnet">https://github.com/BitSharesEurope/faucet-testnet</a></li>
+<li>Python Scripts: <a class="reference external" href="https://github.com/BitSharesEurope/testnet-pythonscripts">https://github.com/BitSharesEurope/testnet-pythonscripts</a></li>
+</ul>
+</li>
+<li><strong>Core Unit</strong>: <cite>TEST</cite><ul>
+<li>10k TEST for free upon registration</li>
+</ul>
+</li>
+<li><strong>Asset</strong>: <cite>PEG.RANDOM</cite><ul>
+<li>price feed at a random walk started at <cite>100</cite></li>
+<li>price feed updated every 15 minutes</li>
+<li>force Settlement Delay: 300 seconds</li>
+<li>maintenance collateral ratio: 120%</li>
+<li>short squeeze protection: 110%</li>
+</ul>
+</li>
+<li><strong>Asset</strong>: <cite>PEG.PARITY</cite><ul>
+<li>price feed at <cite>1.0</cite></li>
+<li>price feed updated every full hour (UTC)</li>
+<li>force Settlement Delay: 300 seconds</li>
+<li>maintenance collateral ratio: 120%</li>
+<li>short squeeze protection: 110%</li>
+</ul>
+</li>
+<li><strong>Witnesses</strong>: currently <cite>init0</cite> ... <cite>init9</cite></li>
+<li><strong>Committee members</strong>: currently <cite>committee-member-1</cite> ... <cite>committee-member-10</cite></li>
+</ul>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">On this network, <strong>everything</strong> is allowed. As a
+consequence the <em>outside</em> price of any token on this
+blockchain is exactly <strong>zero</strong>. A reset of the blockchain
+may occure at any moment!</p>
+</div>
+</div>
+<div class="section" id="how-it-has-been-deployed">
+<h2>How it has been deployed<a class="headerlink" href="#how-it-has-been-deployed" title="Permalink to this headline">¶</a></h2>
+<p>We took the opportunity to write the process of customizing and
+deploying a graphene blockchain as well as the faucet, web wallet and
+feed scripts into a tutorial for everyone to use.</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="Private.html">Setting up private testnet</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Private.html#genesis-creation">Genesis creation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Private.html#genesis-editing">Genesis editing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Private.html#embedding-genesis-optional">Embedding genesis (optional)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1-install.html">Installation/Confguration of Witness</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2-genesis.html">Genesis Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3-init-blockchain.html">Initializing Blockchain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4-cli-wallet.html">Connecting a CLI wallet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5-committee.html">Establishing a Committee</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6-webwallet.html">Web Wallet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7-faucet.html">Setting up the Faucet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8-nginx.html">Nginx Webserver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9-python-library.html">Installation of Python Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10-create-assets.html">Create MPAs/UIAs</a></li>
 </ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="Private.html#creating-data-directory">Creating data directory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Private.html#starting-block-production">Starting block production</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Private.html#obtaining-the-chain-id">Obtaining the chain ID</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Private.html#creating-a-wallet">Creating a wallet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Private.html#gaining-access-to-stake">Gaining access to stake</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Private.html#creating-accounts">Creating accounts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Private.html#creating-committee-members">Creating committee members</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="Public.html">Setting up public testnet</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Public.html#updating-previous-testnet-genesis">Updating previous testnet genesis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Public.html#starting-the-network">Starting the network</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Public.html#witness-node-startup">Witness node startup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Public.html#writing-final-genesis">Writing final genesis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Public.html#running-the-wallet">Running the wallet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Public.html#embedding-genesis-optional">Embedding genesis (optional)</a></li>
-</ul>
-</li>
-</ul>
+</div>
 </div>
 </div>
 

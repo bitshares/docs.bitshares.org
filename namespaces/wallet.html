@@ -92,7 +92,7 @@
         </div>
         <div class="next">
          <div class="title">next</div>
-         <span><a href="../testnet/index.html">Testnets</a></span>
+         <span><a href="../testnet/index.html">Public Graphene Testnet</a></span>
         </div>
 
    </div>
@@ -142,11 +142,11 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="">Graphene::Wallet</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../testnet/index.html">Testnets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testnet/index.html">Public Graphene Testnet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../faq/index.html">Frequently Asked Questions</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../meta/index.html">Meta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../meta/index.html">How to Contribute</a></li>
 </ul>
 
     </div>
@@ -333,6 +333,16 @@
 </div>
 <div class="breathe-sectiondef container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N8graphene6wallet10wallet_api5aboutEv">
+<span id="graphene::wallet::wallet_api::about"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1a031e794f42365f2f9bc6fb89eefa7586"></span>variant_object <code class="descname">about</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api5aboutEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns info such as client version, git version of graphene/fc, version of boost, openssl. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>compile time info and client and dependencies versions </dd>
+</dl>
+</p>
+</dd></dl>
+
 <dl class="function">
 <dt id="_CPPv2N8graphene6wallet10wallet_api17get_account_countEv">
 <span id="graphene::wallet::wallet_api::get_account_count"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1aff94b2efa8e9e414aa08374769315cf6"></span>uint64_t <code class="descname">get_account_count</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api17get_account_countEv" title="Permalink to this definition">¶</a></dt>
@@ -790,8 +800,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N8graphene6wallet10wallet_api16register_accountE6string15public_key_type15public_key_type6string6string7uint8_tb">
-<span id="graphene::wallet::wallet_api::register_account__string.public_key_type.public_key_type.string.string.uint8_t.b"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1abacf0448b5c3970f1f374b2016c10c01"></span>signed_transaction <code class="descname">register_account</code><span class="sig-paren">(</span>string <em>name</em>, public_key_type <em>owner</em>, public_key_type <em>active</em>, string <em>registrar_account</em>, string <em>referrer_account</em>, uint8_t <em>referrer_percent</em>, bool <em>broadcast</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api16register_accountE6string15public_key_type15public_key_type6string6string7uint8_tb" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N8graphene6wallet10wallet_api16register_accountE6string15public_key_type15public_key_type6string6string8uint32_tb">
+<span id="graphene::wallet::wallet_api::register_account__string.public_key_type.public_key_type.string.string.uint32_t.b"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1aba1c5e3025f44273fb19e264c2b3ec2f"></span>signed_transaction <code class="descname">register_account</code><span class="sig-paren">(</span>string <em>name</em>, public_key_type <em>owner</em>, public_key_type <em>active</em>, string <em>registrar_account</em>, string <em>referrer_account</em>, uint32_t <em>referrer_percent</em>, bool <em>broadcast</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api16register_accountE6string15public_key_type15public_key_type6string6string8uint32_tb" title="Permalink to this definition">¶</a></dt>
 <dd><p>Registers a third party&#8217;s account on the blockckain.</p>
 <p>This function is used to register an account for which you do not own the private keys. When acting as a registrar, an end user will generate their own private keys and send you the public keys. The registrar will use this function to register the account on behalf of the end user.</p>
 <p><dl class="docutils">
@@ -811,7 +821,7 @@
 </li>
 <li><code class="first docutils literal"><span class="pre">referrer_account</span></code> - <p>the account who is acting as a referrer, and may receive a portion of the user&#8217;s transaction fees. This can be the same as the registrar_account if there is no referrer. </p>
 </li>
-<li><code class="first docutils literal"><span class="pre">referrer_percent</span></code> - <p>the percentage (0 - 100) of the new user&#8217;s transaction fees not claimed by the blockchain that will be distributed to the referrer; the rest will be sent to the registrar </p>
+<li><code class="first docutils literal"><span class="pre">referrer_percent</span></code> - <p>the percentage (0 - 100) of the new user&#8217;s transaction fees not claimed by the blockchain that will be distributed to the referrer; the rest will be sent to the registrar. Will be multiplied by GRAPHENE_1_PERCENT when constructing the transaction. </p>
 </li>
 <li><code class="first docutils literal"><span class="pre">broadcast</span></code> - <p>true to broadcast the transaction on the network </p>
 </li>
@@ -837,7 +847,7 @@
 <dt><strong>See</strong></dt>
 <dd><a class="reference internal" href="#grapheneclassgraphene_1_1wallet_1_1wallet__api_1a3062c701e73acd60c6ffa74ea47c5cc1"><span>suggest_brain_key()</span></a> </dd>
 <dt><strong>See</strong></dt>
-<dd><a class="reference internal" href="#grapheneclassgraphene_1_1wallet_1_1wallet__api_1abacf0448b5c3970f1f374b2016c10c01"><span>register_account()</span></a></dd>
+<dd><a class="reference internal" href="#grapheneclassgraphene_1_1wallet_1_1wallet__api_1aba1c5e3025f44273fb19e264c2b3ec2f"><span>register_account()</span></a></dd>
 <dt><strong>Return</strong></dt>
 <dd>the signed transaction registering the account </dd>
 <dt><strong>Parameters</strong></dt>
@@ -1004,6 +1014,25 @@
 <li><code class="first docutils literal"><span class="pre">asset_symbol</span></code> - <p>the symbol or id of the asset being borrowed. </p>
 </li>
 <li><code class="first docutils literal"><span class="pre">amount_of_collateral</span></code> - <p>the amount of the backing asset to add to your collateral position. Make this negative to claim back some of your collateral. The backing asset is defined in the <code class="docutils literal"><span class="pre">bitasset_options</span></code> for the asset being borrowed. </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">broadcast</span></code> - <p>true to broadcast the transaction on the network </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene6wallet10wallet_api12cancel_orderE14object_id_typeb">
+<span id="graphene::wallet::wallet_api::cancel_order__object_id_type.b"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1ab525bedb82547d7eafb77106fd26e251"></span>signed_transaction <code class="descname">cancel_order</code><span class="sig-paren">(</span>object_id_type <em>order_id</em>, bool <em>broadcast</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api12cancel_orderE14object_id_typeb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cancel an existing order</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>the signed transaction canceling the order </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">order_id</span></code> - <p>the id of order to be cancelled </p>
 </li>
 <li><code class="first docutils literal"><span class="pre">broadcast</span></code> - <p>true to broadcast the transaction on the network </p>
 </li>

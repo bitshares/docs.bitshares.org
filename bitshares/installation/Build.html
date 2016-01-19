@@ -134,7 +134,6 @@
 <li class="toctree-l4"><a class="reference internal" href="#dependencies">Dependencies</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="#development-toolkit">Development Toolkit</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#boost-1-57">Boost 1.57</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#qt-5-5">QT 5.5</a></li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="#building-bitshares">Building BitShares</a></li>
@@ -166,11 +165,11 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../blockchain/index.html">Blockchain Specifications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../namespaces/index.html">Namespaces</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../testnet/index.html">Testnets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../testnet/index.html">Public Graphene Testnet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../faq/index.html">Frequently Asked Questions</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../meta/index.html">Meta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../meta/index.html">How to Contribute</a></li>
 </ul>
 
     </div>
@@ -209,7 +208,7 @@ LTS:</p>
 <p>The Boost which ships with Ubuntu 15.04 is too old.  You need to download the
 Boost tarball for Boost 1.57.0 (Note, 1.58.0 requires C++14 and will not build
 on Ubuntu LTS; this requirement was an accident, see <a class="reference external" href="http://boost.2283326.n4.nabble.com/1-58-1-bugfix-release-necessary-td4674686.html">this mailing list post</a>).</p>
-<div class="highlight-sh"><div class="highlight"><pre><span class="nv">BOOST_ROOT</span><span class="o">=</span><span class="nv">$HOME</span>/opt/boost_1_57_0
+<div class="highlight-sh"><div class="highlight"><pre><span class="nb">export </span><span class="nv">BOOST_ROOT</span><span class="o">=</span><span class="nv">$HOME</span>/opt/boost_1_57_0
 sudo apt-get update
 sudo apt-get install autotools-dev build-essential <span class="se">\</span>
                      g++ libbz2-dev libicu-dev python-dev
@@ -221,46 +220,6 @@ tar xjf boost_1_57_0.tar.bz2
 <span class="nb">cd </span>boost_1_57_0/
 ./bootstrap.sh <span class="s2">&quot;--prefix=</span><span class="nv">$BOOST_ROOT</span><span class="s2">&quot;</span>
 ./b2 install
-</pre></div>
-</div>
-</div>
-<div class="section" id="qt-5-5">
-<h3>QT 5.5<a class="headerlink" href="#qt-5-5" title="Permalink to this headline">¶</a></h3>
-<p>Qt 5.5 is a dependency if you wish to build <cite>light_client</cite>.  Building it from
-source requires the following dependencies on Ubuntu LTS:</p>
-<div class="highlight-sh"><div class="highlight"><pre>sudo apt-get install libxcb1 libxcb1-dev libx11-xcb1 libx11-xcb-dev <span class="se">\</span>
-                     libxcb-keysyms1 libxcb-keysyms1-dev libxcb-image0 libxcb-image0-dev <span class="se">\</span>
-                     libxcb-shm0 libxcb-shm0-dev libxcb-icccm4 libxcb-icccm4-dev libxcb-sync1 <span class="se">\</span>
-                     libxcb-sync-dev
-</pre></div>
-</div>
-<p>Qt 5.5 can be built as follows:</p>
-<div class="highlight-sh"><div class="highlight"><pre><span class="nv">QT_ROOT</span><span class="o">=</span><span class="nv">$HOME</span>/opt/qt5.5.0
-
-wget http://download.qt.io/official_releases/qt/5.5/5.5.0/single/qt-everywhere-opensource-src-5.5.0.tar.gz
-sha256sum qt-everywhere-opensource-src-5.5.0.tar.gz
-<span class="c"># &quot;bf3cfc54696fe7d77f2cf33ade46c2cc28841389e22a72f77bae606622998e82&quot;</span>
-tar xzf qt-everywhere-opensource-src-5.5.0.tar.gz
-<span class="nb">cd </span>qt-everywhere-opensource-src-5.5.0
-./configure -prefix <span class="s2">&quot;</span><span class="nv">$QT_ROOT</span><span class="s2">&quot;</span> -opensource -nomake tests
-make <span class="c"># -j4</span>
-make install
-</pre></div>
-</div>
-<p>Next we need to tell <cite>cmake</cite> where to find them.  If you have ever run CMake in
-this tree before, we must first delete some leftovers:</p>
-<div class="highlight-sh"><div class="highlight"><pre>make clean
-rm -f CMakeCache.txt
-find . -name CMakeFiles <span class="p">|</span> xargs rm -Rf
-</pre></div>
-</div>
-<p>To actually run <cite>cmake</cite> we now need the following parameters:</p>
-<div class="highlight-sh"><div class="highlight"><pre>cmake -DCMAKE_PREFIX_PATH<span class="o">=</span><span class="s2">&quot;</span><span class="nv">$QT_ROOT</span><span class="s2">&quot;</span> <span class="se">\</span>
-      -DCMAKE_MODULE_PATH<span class="o">=</span><span class="s2">&quot;</span><span class="nv">$QT_ROOT</span><span class="s2">/lib/cmake/Qt5Core&quot;</span> <span class="se">\</span>
-      -DQT_QMAKE_EXECUTABLE<span class="o">=</span><span class="s2">&quot;</span><span class="nv">$QT_ROOT</span><span class="s2">/bin/qmake&quot;</span> -DBUILD_QT_GUI<span class="o">=</span>TRUE <span class="se">\</span>
-       -DGRAPHENE_EGENESIS_JSON<span class="o">=</span><span class="s2">&quot;</span><span class="nv">$GENESIS_JSON</span><span class="s2">&quot;</span> <span class="se">\</span>
-       -DBOOST_ROOT<span class="o">=</span><span class="s2">&quot;</span><span class="nv">$BOOST_ROOT</span><span class="s2">&quot;</span> -DCMAKE_BUILD_TYPE<span class="o">=</span>Debug   .
-<span class="nb">cd</span> ..
 </pre></div>
 </div>
 </div>

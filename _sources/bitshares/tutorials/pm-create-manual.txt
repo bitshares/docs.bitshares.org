@@ -5,8 +5,12 @@ Creating a Prediction Market
 Settings
 ########
 
-A new MPA has to be created that has the following **flags** (not
-permissions):
+In order to create a PM, we will need to set a particular parameter when
+creating the asset. This parameter can not be changed after creation of
+the asset.
+
+Further, A PM-asset should have the following **flags**
+(not permissions):
 
 .. code-block:: js
 
@@ -134,8 +138,12 @@ Python Example
         op[1]["symbol"] = symbol
         op[1]["precision"] = asset["precision"]
         op[1]["common_options"] = options
-        op[1]["is_prediction_market"] = True
         op[1]["bitasset_opts"] = mpaoptions
+
+        """ This flag will declare the asset as a prediction market
+            asset!
+        """
+        op[1]["is_prediction_market"] = True
 
         handle = graphene.rpc.begin_builder_transaction()
         graphene.rpc.add_operation_to_builder_transaction(handle, op)

@@ -136,14 +136,7 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#interfacing-with-graphene">Interfacing with Graphene</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#cli-wallet-api">Cli Wallet API</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#full-node-apis">Full Node APIs</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="fullnode.html">Full Node</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="">Database API</a></li>
-<li class="toctree-l4"><a class="reference internal" href="history.html">Account History API</a></li>
-<li class="toctree-l4"><a class="reference internal" href="login.html">Login API</a></li>
-<li class="toctree-l4"><a class="reference internal" href="network_broadcast.html">Network Broadcast API</a></li>
-<li class="toctree-l4"><a class="reference internal" href="network_node.html">Network Nodes API</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="fullnode.html">Full Node</a></li>
 <li class="toctree-l3"><a class="reference internal" href="login.html">Login API</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="">Database API</a></li>
 <li class="toctree-l3"><a class="reference internal" href="history.html">Account History API</a></li>
@@ -158,11 +151,11 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../blockchain/index.html">Blockchain Specifications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../namespaces/index.html">Namespaces</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../testnet/index.html">Testnets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testnet/index.html">Public Graphene Testnet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../faq/index.html">Frequently Asked Questions</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../meta/index.html">Meta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../meta/index.html">How to Contribute</a></li>
 </ul>
 
     </div>
@@ -748,7 +741,7 @@ This function has semantics identical to <a class="reference internal" href="../
 
 <dl class="function">
 <dt id="_CPPv2N8graphene3app12database_api17get_required_feesERK6vectorI9operationE13asset_id_type">
-<span id="graphene::app::database_api::get_required_fees__vector:operation:CR.asset_id_type"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1aad843d0bf167aa4b26558b45d80fe2c0"></span>vector&lt;asset&gt; <code class="descname">get_required_fees</code><span class="sig-paren">(</span><em class="property">const</em> vector&lt;operation&gt; &amp;<em>ops</em>, asset_id_type <em>id</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api17get_required_feesERK6vectorI9operationE13asset_id_type" title="Permalink to this definition">¶</a></dt>
+<span id="graphene::app::database_api::get_required_fees__vector:operation:CR.asset_id_type"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1ab14e95ffd757cc2f7e2242a7fb8482aa"></span>vector&lt;fc::variant&gt; <code class="descname">get_required_fees</code><span class="sig-paren">(</span><em class="property">const</em> vector&lt;operation&gt; &amp;<em>ops</em>, asset_id_type <em>id</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api17get_required_feesERK6vectorI9operationE13asset_id_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>For each operation calculate the required fee in the specified asset type. If the asset type does not have a valid core_exchange_rate </p>
 </dd></dl>
 

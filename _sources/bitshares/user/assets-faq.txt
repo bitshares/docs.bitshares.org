@@ -1,6 +1,6 @@
-**************************
-Frequently Asked Questions
-**************************
+**********
+Assets FAQ
+**********
 
 Can I change `x` after creation of the asset
 ********************************************

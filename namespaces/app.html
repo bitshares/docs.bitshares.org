@@ -142,11 +142,11 @@
 <li class="toctree-l2"><a class="reference internal" href="wallet.html">Graphene::Wallet</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../testnet/index.html">Testnets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testnet/index.html">Public Graphene Testnet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../faq/index.html">Frequently Asked Questions</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../meta/index.html">Meta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../meta/index.html">How to Contribute</a></li>
 </ul>
 
     </div>
@@ -852,7 +852,7 @@ This function has semantics identical to <a class="reference internal" href="#gr
 
 <dl class="function">
 <dt id="_CPPv2N8graphene3app12database_api17get_required_feesERK6vectorI9operationE13asset_id_type">
-<span id="graphene::app::database_api::get_required_fees__vector:operation:CR.asset_id_type"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1aad843d0bf167aa4b26558b45d80fe2c0"></span>vector&lt;asset&gt; <code class="descname">get_required_fees</code><span class="sig-paren">(</span><em class="property">const</em> vector&lt;operation&gt; &amp;<em>ops</em>, asset_id_type <em>id</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api17get_required_feesERK6vectorI9operationE13asset_id_type" title="Permalink to this definition">¶</a></dt>
+<span id="graphene::app::database_api::get_required_fees__vector:operation:CR.asset_id_type"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1ab14e95ffd757cc2f7e2242a7fb8482aa"></span>vector&lt;fc::variant&gt; <code class="descname">get_required_fees</code><span class="sig-paren">(</span><em class="property">const</em> vector&lt;operation&gt; &amp;<em>ops</em>, asset_id_type <em>id</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api17get_required_feesERK6vectorI9operationE13asset_id_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>For each operation calculate the required fee in the specified asset type. If the asset type does not have a valid core_exchange_rate </p>
 </dd></dl>
 
@@ -923,6 +923,12 @@ This function has semantics identical to <a class="reference internal" href="#gr
 </dd></dl>
 
 </div>
+</dd></dl>
+
+<dl class="class">
+<dt id="_CPPv2N8graphene3app24get_required_fees_helperE">
+<span id="graphene::app::get_required_fees_helper"></span><span class="target" id="graphenestructgraphene_1_1app_1_1get__required__fees__helper"></span><em class="property">struct </em><code class="descname">get_required_fees_helper</code><a class="headerlink" href="#_CPPv2N8graphene3app24get_required_fees_helperE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Container method for mutually recursive functions used to implement get_required_fees() with potentially nested proposals. </p>
 </dd></dl>
 
 <dl class="class">
@@ -1059,7 +1065,7 @@ The transaction will be checked for validity in the local database prior to broa
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
 <dt id="_CPPv2N8graphene3app16network_node_api8get_infoEv">
-<span id="graphene::app::network_node_api::get_info"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1network__node__api_1a23b9ffa058760e0ce28e8116724a1236"></span>fc::variant <code class="descname">get_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app16network_node_api8get_infoEv" title="Permalink to this definition">¶</a></dt>
+<span id="graphene::app::network_node_api::get_info"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1network__node__api_1aef815bd4b4dab0023e6fc4929d780248"></span>fc::variant_object <code class="descname">get_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app16network_node_api8get_infoEv" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return general network information, such as p2p port. </p>
 </dd></dl>
 
@@ -1082,6 +1088,33 @@ The transaction will be checked for validity in the local database prior to broa
 <dt id="_CPPv2N8graphene3app16network_node_api19get_connected_peersEv">
 <span id="graphene::app::network_node_api::get_connected_peers"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1network__node__api_1a3441fb8762c1b26a89af97838cee7aca"></span>std::vector&lt;net::peer_status&gt; <code class="descname">get_connected_peers</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app16network_node_api19get_connected_peersEv" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get status of all current connections to peers. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app16network_node_api28get_advanced_node_parametersEv">
+<span id="graphene::app::network_node_api::get_advanced_node_parameters"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1network__node__api_1a0574f6802ee41d7419d2911cdb7a4972"></span>fc::variant_object <code class="descname">get_advanced_node_parameters</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app16network_node_api28get_advanced_node_parametersEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get advanced node parameters, such as desired and max number of connections. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app16network_node_api28set_advanced_node_parametersERKN2fc14variant_objectE">
+<span id="graphene::app::network_node_api::set_advanced_node_parameters__fc::variant_objectCR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1network__node__api_1a59eb5a747b02c2b7c7f08462338a6805"></span>void <code class="descname">set_advanced_node_parameters</code><span class="sig-paren">(</span><em class="property">const</em> fc::variant_object &amp;<em>params</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene3app16network_node_api28set_advanced_node_parametersERKN2fc14variant_objectE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set advanced node parameters, such as desired and max number of connections. </p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">params</span></code> - <p>a JSON object containing the name/value pairs for the parameters to set </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app16network_node_api19get_potential_peersEv">
+<span id="graphene::app::network_node_api::get_potential_peers"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1network__node__api_1ae31bd43a30221f6a4bca9d20d93ee195"></span>std::vector&lt;net::potential_peer_record&gt; <code class="descname">get_potential_peers</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app16network_node_api19get_potential_peersEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return list of potential peers. </p>
 </dd></dl>
 
 </div>

@@ -1,6 +1,6 @@
-***************************************
-Secure Network and Wallet Configuration
-***************************************
+****************************************
+General Network and Wallet Configuration
+****************************************
 
 We will work with the following IPs and open the corresponding RPC
 ports:

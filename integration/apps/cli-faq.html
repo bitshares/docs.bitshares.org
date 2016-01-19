@@ -1,0 +1,243 @@
+
+
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>CLI Wallet FAQ</title>
+
+    <!-- CSS -->
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href='../../_static/main.css' rel='stylesheet'>
+    <link href='../../_static/style.css' rel='stylesheet'>
+    <link href='../../_static/doxygen.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+    <!-- Sphinx search -->
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <!-- Transifex -->
+    <script type="text/javascript">
+      window.liveSettings = {
+        api_key: "bbf87af0641e4bbf89c98088d48e0449",
+      };
+    </script>
+    <script type="text/javascript" src="http://cdn.transifex.com/live.js"></script>
+
+    <!-- title card -->
+    <link  href='../../_static/title-card.css' rel='stylesheet'>
+    <script src='../../_static/script.js'></script>
+    
+    <!-- Sphinx search -->
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Graphene Technical Documentation  documentation"
+          href="../../_static/opensearch.xml"/>
+
+    <!-- Meta -->
+    <meta content="Graphene Documentation" property="og:site_name">
+    <meta content="Graphene Documentation" property="og:title">
+    <meta content="website" property="og:type">
+    <meta content="Graphene Documentation" name="description">
+    <meta content="Graphene Documentation" property="og:description">
+    
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-68381245-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+ </head>
+ <body class='no-literate'>
+
+
+ <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
+   <div class='in'>
+     <div class='headline'>
+       <h1>CLI Wallet FAQ</h1>
+ 
+     </div>
+   </div>
+ </div>
+
+ <div class='header'>
+   <div class='left navlinks'>
+    
+        <div class="prev">
+         <div class="title">previous</div>
+         <span><a href="webwallet.html">Web Wallet</a></span>
+        </div>
+        <div class="top">
+         <div class="title">top</div>
+         <span><a class="uplink" href="../../index.html">Contents</a></span>
+        </div>
+        <div class="next">
+         <div class="title">next</div>
+         <span><a href="witness-faq.html">Witness FAQ</a></span>
+        </div>
+
+   </div>
+   <!--
+    <div class='right'>
+<div id="searchbox" style="display: none" role="search">
+ <form class="search" action="../../search.html" method="get">
+   <input type="text" name="q" />
+   <input type="submit" value="Go" />
+   <input type="hidden" name="check_keywords" value="yes" />
+   <input type="hidden" name="area" value="default" />
+ </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+   </div>
+   -->
+ </div>
+
+ <div class='content-root'>
+  <!-- menu bar -->
+  <div class='menubar'>
+   <div class='section'>
+    <a href="../..//index.html"><img src="../../_static/grphn-logo.svg" height="48" /></a>
+
+    <a href="../..//bitshares/index.html"><img src="../../_static/bitshares-logo.png" height="48" /></a>
+
+    <a href="../..//muse/index.html"><img src="../../_static/MUSE_logo_transp_v1.png" height="48" /></a>
+   </div>
+   <div class='menu section'>
+    <div id="toc">
+      <h3>Table Of Contents</h3>
+      <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../bitshares/index.html">BitShares 2.0</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../bitshares/installation/index.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bitshares/migration/index.html">Migrating from BitShares 1.0 to BitShares 2.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bitshares/papers/index.html">Whitepapers</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../bitshares/user/index.html">User Guide</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../bitshares/user/index.html#for-end-user">For End User</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../bitshares/user/index.html#for-blockchain-employees">For Blockchain &#8220;Employees&#8221;</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../bitshares/user/index.html#frequently-asked-questions">Frequently Asked Questions</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../bitshares/user/assets-faq.html">Assets FAQ</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="">CLI Wallet FAQ</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#why-does-the-cli-client-crash-immediately-when-i-try-to-run-it-for-the-first-time">Why does the CLI client crash immediately when I try to run it for the first time?</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#how-can-i-close-the-cli-client-in-a-clean-way">How can I close the CLI client in a clean way?</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#how-can-i-import-to-my-cli-client-a-wallet-originally-created-in-the-web-gui">How can I import to my CLI client a wallet originally created in the web GUI?</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#how-can-i-create-register-and-upgrade-an-account-to-lifetime-membership">How can I create, register and upgrade an account to Lifetime Membership?</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="witness-faq.html">Witness FAQ</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../bitshares/developers/index.html">Businesses, Developers and Business Developers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../bitshares/tutorials/index.html">Tutorials</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../muse/index.html">MUSE</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Integration Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">Graphene API</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../blockchain/index.html">Blockchain Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../namespaces/index.html">Namespaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../testnet/index.html">Public Graphene Testnet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq/index.html">Frequently Asked Questions</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../meta/index.html">How to Contribute</a></li>
+</ul>
+
+    </div>
+   </div>
+   <div class='bottom section'>
+   <!--
+     <a href='https://github.com/cryptonomex/graphene'>View on GitHub</a><br>
+     <a href='https://github.com/cryptonomex/graphene/blob/master/README.md' target='_blank'>See .md source</a>
+   -->
+   </div>
+  </div>
+  <div class='content'>
+   
+  <div class="section" id="cli-wallet-faq">
+<h1>CLI Wallet FAQ<a class="headerlink" href="#cli-wallet-faq" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="why-does-the-cli-client-crash-immediately-when-i-try-to-run-it-for-the-first-time">
+<h2>Why does the CLI client crash immediately when I try to run it for the first time?<a class="headerlink" href="#why-does-the-cli-client-crash-immediately-when-i-try-to-run-it-for-the-first-time" title="Permalink to this headline">¶</a></h2>
+<p>The CLI client is unable to run on its own, i.e. without being connected
+to the witness node (via a web socket connection). So to successfully
+run the CLI client you need to do this:</p>
+<ul class="simple">
+<li>make sure you have this entry uncommented in the
+<cite>witness_node_data_dir/config.ini</cite> file
+<cite>rpc-endpoint = 127.0.0.1:8090</cite></li>
+<li>before you start the CLI client, you need to start the witness node
+(and wait a while till it&#8217;s up and running)</li>
+</ul>
+</div>
+<div class="section" id="how-can-i-close-the-cli-client-in-a-clean-way">
+<h2>How can I close the CLI client in a clean way?<a class="headerlink" href="#how-can-i-close-the-cli-client-in-a-clean-way" title="Permalink to this headline">¶</a></h2>
+<p>In Windows closing the whole window produces a nasty exception. In
+Windows you can try <cite>ctrl-d</cite> which stops the process but stil produces a
+nasty exception.</p>
+</div>
+<div class="section" id="how-can-i-import-to-my-cli-client-a-wallet-originally-created-in-the-web-gui">
+<h2>How can I import to my CLI client a wallet originally created in the web GUI?<a class="headerlink" href="#how-can-i-import-to-my-cli-client-a-wallet-originally-created-in-the-web-gui" title="Permalink to this headline">¶</a></h2>
+<p>CLI and WEB wallet are two separated applications. They use separated
+ways to represent backups. You can currently only manually import keys
+from the GUI into the CLI.</p>
+</div>
+<div class="section" id="how-can-i-create-register-and-upgrade-an-account-to-lifetime-membership">
+<h2>How can I create, register and upgrade an account to Lifetime Membership?<a class="headerlink" href="#how-can-i-create-register-and-upgrade-an-account-to-lifetime-membership" title="Permalink to this headline">¶</a></h2>
+<p>Without already having an account, or knowing someone that has an
+account, it is not possible. You can&#8217;t create accounts out of nowhere.</p>
+<p>But you can work around it by importing an active key of a <strong>Lifetime
+Member</strong> account that has funds:</p>
+<ol class="arabic simple">
+<li>In the gui, go to the permissions tab of an account that is funded
+and has a LTM status.</li>
+<li>Click on the BTS public key on the ACTIVE tab and copy the private
+key.</li>
+<li>In the cli-wallet run:
+<cite>import_key &lt;account_name&gt; &lt;private_key&gt;</cite></li>
+<li>Then run:
+<cite>suggest_brain_key</cite>
+and copy the brain key. (You might want to make a backup of your
+brain key somewhere.)</li>
+<li>Create a new account with this command:
+<cite>create_account_with_brain_key &lt;brainkey&gt; &lt;new_account_name&gt; &lt;imported_name&gt; &lt;imported_name&gt; true</cite></li>
+</ol>
+<p>This will create a new account called <cite>&lt;new_account_name&gt;</cite> and set the
+registrar and referrer to <cite>&lt;imported_name&gt;</cite>.  The brainkey can be used
+to regenerate the account (even in the GUI wallet).  You can manually
+delete the other active key from the <cite>wallet.json</cite> file.</p>
+</div>
+</div>
+
+
+  </div>
+ </div>
+
+ <script>var HN=[];HN.factory=function(e){return function(){HN.push([e].concat(Array.prototype.slice.call(arguments,0)))};},HN.on=HN.factory("on"),HN.once=HN.factory("once"),HN.off=HN.factory("off"),HN.emit=HN.factory("emit"),HN.load=function(){var e="hn-button.js";if(document.getElementById(e))return;var t=document.createElement("script");t.id=e,t.src="//hn-button.herokuapp.com/hn-button.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)},HN.load();</script>
+ <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+ </body>
+</html>

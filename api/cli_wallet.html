@@ -132,11 +132,10 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../integration/index.html">Integration Guide</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../integration/index.html#skype-group-for-important-announcements">Skype Group for Important Announcements</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../integration/index.html#basic-knowledge">Basic Knowledge</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../integration/what-is-different.html">What is Different</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../integration/what-is-different.html">What is Different in BitShares</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../integration/apps/index.html">Blockchain Interaction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../integration/network-setup.html">Secure Network and Wallet Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../integration/network-setup.html">Network and Wallet Configuration</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../integration/often-used-calls.html">Often used API Calls</a><ul class="current">
 <li class="toctree-l4 current"><a class="reference internal" href="../integration/often-used-calls.html#overview">Overview</a><ul class="current">
 <li class="toctree-l5"><a class="reference internal" href="../blockchain/Objects.html">Objects and IDs</a></li>
@@ -162,11 +161,11 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../blockchain/index.html">Blockchain Specifications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../namespaces/index.html">Namespaces</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../testnet/index.html">Testnets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testnet/index.html">Public Graphene Testnet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../faq/index.html">Frequently Asked Questions</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../meta/index.html">Meta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../meta/index.html">How to Contribute</a></li>
 </ul>
 
     </div>
@@ -284,6 +283,16 @@ not offer P2P or blockchain capabilities.</p>
 <dt id="_CPPv2N8graphene6wallet10wallet_api4infoEv">
 <span id="graphene::wallet::wallet_api::info"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1af68da8c88a5d85ffa0bab63e0bc0a189"></span>variant <code class="descname">info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api4infoEv" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene6wallet10wallet_api5aboutEv">
+<span id="graphene::wallet::wallet_api::about"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1a031e794f42365f2f9bc6fb89eefa7586"></span>variant_object <code class="descname">about</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api5aboutEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns info such as client version, git version of graphene/fc, version of boost, openssl. <dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>compile time info and client and dependencies versions </dd>
+</dl>
+</p>
+</dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N8graphene6wallet10wallet_api9get_blockE8uint32_t">
@@ -587,6 +596,11 @@ not offer P2P or blockchain capabilities.</p>
 <dd></dd></dl>
 
 <dl class="function">
+<dt id="_CPPv2N8graphene6wallet10wallet_api28propose_builder_transaction2E23transaction_handle_type6string14time_point_sec8uint32_tb">
+<span id="graphene::wallet::wallet_api::propose_builder_transaction2__transaction_handle_type.string.time_point_sec.uint32_t.b"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1ad33bc4056cefd13bca5d74f4cc0c017f"></span>signed_transaction <code class="descname">propose_builder_transaction2</code><span class="sig-paren">(</span><a class="reference internal" href="../namespaces/wallet.html#_CPPv2N8graphene6wallet23transaction_handle_typeE" title="graphene::wallet::transaction_handle_type">transaction_handle_type</a> <em>handle</em>, string <em>account_name_or_id</em>, time_point_sec <em>expiration</em>, uint32_t <em>review_period_seconds</em>, bool <em>broadcast</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api28propose_builder_transaction2E23transaction_handle_type6string14time_point_sec8uint32_tb" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
 <dt id="_CPPv2N8graphene6wallet10wallet_api26remove_builder_transactionE23transaction_handle_type">
 <span id="graphene::wallet::wallet_api::remove_builder_transaction__transaction_handle_type"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1a92c1c80c0f7b7176d35a5a910ed7e7f5"></span>void <code class="descname">remove_builder_transaction</code><span class="sig-paren">(</span><a class="reference internal" href="../namespaces/wallet.html#_CPPv2N8graphene6wallet23transaction_handle_typeE" title="graphene::wallet::transaction_handle_type">transaction_handle_type</a> <em>handle</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api26remove_builder_transactionE23transaction_handle_type" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -817,8 +831,8 @@ not offer P2P or blockchain capabilities.</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N8graphene6wallet10wallet_api16register_accountE6string15public_key_type15public_key_type6string6string7uint8_tb">
-<span id="graphene::wallet::wallet_api::register_account__string.public_key_type.public_key_type.string.string.uint8_t.b"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1abacf0448b5c3970f1f374b2016c10c01"></span>signed_transaction <code class="descname">register_account</code><span class="sig-paren">(</span>string <em>name</em>, public_key_type <em>owner</em>, public_key_type <em>active</em>, string <em>registrar_account</em>, string <em>referrer_account</em>, uint8_t <em>referrer_percent</em>, bool <em>broadcast</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api16register_accountE6string15public_key_type15public_key_type6string6string7uint8_tb" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N8graphene6wallet10wallet_api16register_accountE6string15public_key_type15public_key_type6string6string8uint32_tb">
+<span id="graphene::wallet::wallet_api::register_account__string.public_key_type.public_key_type.string.string.uint32_t.b"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1aba1c5e3025f44273fb19e264c2b3ec2f"></span>signed_transaction <code class="descname">register_account</code><span class="sig-paren">(</span>string <em>name</em>, public_key_type <em>owner</em>, public_key_type <em>active</em>, string <em>registrar_account</em>, string <em>referrer_account</em>, uint32_t <em>referrer_percent</em>, bool <em>broadcast</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api16register_accountE6string15public_key_type15public_key_type6string6string8uint32_tb" title="Permalink to this definition">¶</a></dt>
 <dd><p>Registers a third party&#8217;s account on the blockckain.</p>
 <p>This function is used to register an account for which you do not own the private keys. When acting as a registrar, an end user will generate their own private keys and send you the public keys. The registrar will use this function to register the account on behalf of the end user.</p>
 <p><dl class="docutils">
@@ -838,7 +852,7 @@ not offer P2P or blockchain capabilities.</p>
 </li>
 <li><code class="first docutils literal"><span class="pre">referrer_account</span></code> - <p>the account who is acting as a referrer, and may receive a portion of the user&#8217;s transaction fees. This can be the same as the registrar_account if there is no referrer. </p>
 </li>
-<li><code class="first docutils literal"><span class="pre">referrer_percent</span></code> - <p>the percentage (0 - 100) of the new user&#8217;s transaction fees not claimed by the blockchain that will be distributed to the referrer; the rest will be sent to the registrar </p>
+<li><code class="first docutils literal"><span class="pre">referrer_percent</span></code> - <p>the percentage (0 - 100) of the new user&#8217;s transaction fees not claimed by the blockchain that will be distributed to the referrer; the rest will be sent to the registrar. Will be multiplied by GRAPHENE_1_PERCENT when constructing the transaction. </p>
 </li>
 <li><code class="first docutils literal"><span class="pre">broadcast</span></code> - <p>true to broadcast the transaction on the network </p>
 </li>
@@ -864,7 +878,7 @@ not offer P2P or blockchain capabilities.</p>
 <dt><strong>See</strong></dt>
 <dd><a class="reference internal" href="../namespaces/wallet.html#grapheneclassgraphene_1_1wallet_1_1wallet__api_1a3062c701e73acd60c6ffa74ea47c5cc1"><span>suggest_brain_key()</span></a> </dd>
 <dt><strong>See</strong></dt>
-<dd><a class="reference internal" href="../namespaces/wallet.html#grapheneclassgraphene_1_1wallet_1_1wallet__api_1abacf0448b5c3970f1f374b2016c10c01"><span>register_account()</span></a></dd>
+<dd><a class="reference internal" href="../namespaces/wallet.html#grapheneclassgraphene_1_1wallet_1_1wallet__api_1aba1c5e3025f44273fb19e264c2b3ec2f"><span>register_account()</span></a></dd>
 <dt><strong>Return</strong></dt>
 <dd>the signed transaction registering the account </dd>
 <dt><strong>Parameters</strong></dt>
@@ -1031,6 +1045,25 @@ not offer P2P or blockchain capabilities.</p>
 <li><code class="first docutils literal"><span class="pre">asset_symbol</span></code> - <p>the symbol or id of the asset being borrowed. </p>
 </li>
 <li><code class="first docutils literal"><span class="pre">amount_of_collateral</span></code> - <p>the amount of the backing asset to add to your collateral position. Make this negative to claim back some of your collateral. The backing asset is defined in the <code class="docutils literal"><span class="pre">bitasset_options</span></code> for the asset being borrowed. </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">broadcast</span></code> - <p>true to broadcast the transaction on the network </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene6wallet10wallet_api12cancel_orderE14object_id_typeb">
+<span id="graphene::wallet::wallet_api::cancel_order__object_id_type.b"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1ab525bedb82547d7eafb77106fd26e251"></span>signed_transaction <code class="descname">cancel_order</code><span class="sig-paren">(</span>object_id_type <em>order_id</em>, bool <em>broadcast</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api12cancel_orderE14object_id_typeb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cancel an existing order</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>the signed transaction canceling the order </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">order_id</span></code> - <p>the id of order to be cancelled </p>
 </li>
 <li><code class="first docutils literal"><span class="pre">broadcast</span></code> - <p>true to broadcast the transaction on the network </p>
 </li>
