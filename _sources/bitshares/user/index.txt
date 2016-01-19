@@ -54,3 +54,14 @@ distribution) are all examples of things workers may do.
    witness
    worker
    marketer
+
+Frequently Asked Questions
+##########################
+
+.. toctree::
+   :maxdepth: 2
+
+   assets-faq
+   ../../integration/apps/cli-faq
+   ../../integration/apps/witness-faq
+

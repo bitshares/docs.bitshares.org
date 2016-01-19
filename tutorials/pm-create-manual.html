@@ -129,11 +129,11 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../blockchain/index.html">Blockchain Specifications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../namespaces/index.html">Namespaces</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../testnet/index.html">Testnets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../testnet/index.html">Public Graphene Testnet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../faq/index.html">Frequently Asked Questions</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../meta/index.html">Meta</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../meta/index.html">How to Contribute</a></li>
 </ul>
 
     </div>
@@ -151,8 +151,11 @@
 <h1>Creating a Prediction Market<a class="headerlink" href="#creating-a-prediction-market" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="settings">
 <h2>Settings<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h2>
-<p>A new MPA has to be created that has the following <strong>flags</strong> (not
-permissions):</p>
+<p>In order to create a PM, we will need to set a particular parameter when
+creating the asset. This parameter can not be changed after creation of
+the asset.</p>
+<p>Further, A PM-asset should have the following <strong>flags</strong>
+(not permissions):</p>
 <div class="highlight-js"><div class="highlight"><pre><span class="p">{</span>
    <span class="s2">&quot;disable_force_settle&quot;</span> <span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
    <span class="s2">&quot;global_settle&quot;</span> <span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
@@ -278,8 +281,12 @@ identical with the short backing asset&#8217;s precision</p>
     <span class="n">op</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s">&quot;symbol&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">symbol</span>
     <span class="n">op</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s">&quot;precision&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">asset</span><span class="p">[</span><span class="s">&quot;precision&quot;</span><span class="p">]</span>
     <span class="n">op</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s">&quot;common_options&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">options</span>
-    <span class="n">op</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s">&quot;is_prediction_market&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">True</span>
     <span class="n">op</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s">&quot;bitasset_opts&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mpaoptions</span>
+
+    <span class="sd">&quot;&quot;&quot; This flag will declare the asset as a prediction market</span>
+<span class="sd">        asset!</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">op</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s">&quot;is_prediction_market&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">True</span>
 
     <span class="n">handle</span> <span class="o">=</span> <span class="n">graphene</span><span class="o">.</span><span class="n">rpc</span><span class="o">.</span><span class="n">begin_builder_transaction</span><span class="p">()</span>
     <span class="n">graphene</span><span class="o">.</span><span class="n">rpc</span><span class="o">.</span><span class="n">add_operation_to_builder_transaction</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">op</span><span class="p">)</span>

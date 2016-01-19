@@ -1,0 +1,204 @@
+
+
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Create MPAs/UIAs</title>
+
+    <!-- CSS -->
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href='../_static/main.css' rel='stylesheet'>
+    <link href='../_static/style.css' rel='stylesheet'>
+    <link href='../_static/doxygen.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+    <!-- Sphinx search -->
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <!-- Transifex -->
+    <script type="text/javascript">
+      window.liveSettings = {
+        api_key: "bbf87af0641e4bbf89c98088d48e0449",
+      };
+    </script>
+    <script type="text/javascript" src="http://cdn.transifex.com/live.js"></script>
+
+    <!-- title card -->
+    <link  href='../_static/title-card.css' rel='stylesheet'>
+    <script src='../_static/script.js'></script>
+    
+    <!-- Sphinx search -->
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Graphene Technical Documentation  documentation"
+          href="../_static/opensearch.xml"/>
+
+    <!-- Meta -->
+    <meta content="Graphene Documentation" property="og:site_name">
+    <meta content="Graphene Documentation" property="og:title">
+    <meta content="website" property="og:type">
+    <meta content="Graphene Documentation" name="description">
+    <meta content="Graphene Documentation" property="og:description">
+    
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-68381245-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+ </head>
+ <body class='no-literate'>
+
+
+ <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
+   <div class='in'>
+     <div class='headline'>
+       <h1>Create MPAs/UIAs</h1>
+ 
+     </div>
+   </div>
+ </div>
+
+ <div class='header'>
+   <div class='left navlinks'>
+    
+        <div class="prev">
+         <div class="title">previous</div>
+         <span><a href="9-python-library.html">Installation of Python Library</a></span>
+        </div>
+        <div class="top">
+         <div class="title">top</div>
+         <span><a class="uplink" href="../index.html">Contents</a></span>
+        </div>
+        <div class="next">
+         <div class="title">next</div>
+         <span><a href="../faq/index.html">Frequently Asked Questions</a></span>
+        </div>
+
+   </div>
+   <!--
+    <div class='right'>
+<div id="searchbox" style="display: none" role="search">
+ <form class="search" action="../search.html" method="get">
+   <input type="text" name="q" />
+   <input type="submit" value="Go" />
+   <input type="hidden" name="check_keywords" value="yes" />
+   <input type="hidden" name="area" value="default" />
+ </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+   </div>
+   -->
+ </div>
+
+ <div class='content-root'>
+  <!-- menu bar -->
+  <div class='menubar'>
+   <div class='section'>
+    <a href="..//index.html"><img src="../_static/grphn-logo.svg" height="48" /></a>
+
+    <a href="..//bitshares/index.html"><img src="../_static/bitshares-logo.png" height="48" /></a>
+
+    <a href="..//muse/index.html"><img src="../_static/MUSE_logo_transp_v1.png" height="48" /></a>
+   </div>
+   <div class='menu section'>
+    <div id="toc">
+      <h3>Table Of Contents</h3>
+      <ul>
+<li class="toctree-l1"><a class="reference internal" href="../bitshares/index.html">BitShares 2.0</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../muse/index.html">MUSE</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../integration/index.html">Integration Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">Graphene API</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../blockchain/index.html">Blockchain Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../namespaces/index.html">Namespaces</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Public Graphene Testnet</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#public-testnet">Public Testnet</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#how-it-has-been-deployed">How it has been deployed</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="1-install.html">Installation/Confguration of Witness</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2-genesis.html">Genesis Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3-init-blockchain.html">Initializing Blockchain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="4-cli-wallet.html">Connecting a CLI wallet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5-committee.html">Establishing a Committee</a></li>
+<li class="toctree-l3"><a class="reference internal" href="6-webwallet.html">Web Wallet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7-faucet.html">Setting up the Faucet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="8-nginx.html">Nginx Webserver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="9-python-library.html">Installation of Python Library</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Create MPAs/UIAs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">Frequently Asked Questions</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../meta/index.html">How to Contribute</a></li>
+</ul>
+
+    </div>
+   </div>
+   <div class='bottom section'>
+   <!--
+     <a href='https://github.com/cryptonomex/graphene'>View on GitHub</a><br>
+     <a href='https://github.com/cryptonomex/graphene/blob/master/README.md' target='_blank'>See .md source</a>
+   -->
+   </div>
+  </div>
+  <div class='content'>
+   
+  <div class="section" id="create-mpas-uias">
+<h1>Create MPAs/UIAs<a class="headerlink" href="#create-mpas-uias" title="Permalink to this headline">¶</a></h1>
+<p>We now create some Market Pegged assets and construct the price feed.</p>
+<ul class="simple">
+<li>Create Market Pegged Assets:
+<a class="reference external" href="https://github.com/BitSharesEurope/testnet-pythonscripts/blob/master/create_mpa.py">https://github.com/BitSharesEurope/testnet-pythonscripts/blob/master/create_mpa.py</a></li>
+<li>Fund <cite>init*</cite> witnessses:
+<a class="reference external" href="https://github.com/BitSharesEurope/testnet-pythonscripts/blob/master/fund-inits.py">https://github.com/BitSharesEurope/testnet-pythonscripts/blob/master/fund-inits.py</a></li>
+<li>Price feed scripts:<ul>
+<li><a class="reference external" href="https://github.com/BitSharesEurope/testnet-pythonscripts/blob/master/feed.last.py">https://github.com/BitSharesEurope/testnet-pythonscripts/blob/master/feed.last.py</a></li>
+<li><a class="reference external" href="https://github.com/BitSharesEurope/testnet-pythonscripts/blob/master/feed.parity.py">https://github.com/BitSharesEurope/testnet-pythonscripts/blob/master/feed.parity.py</a></li>
+<li><a class="reference external" href="https://github.com/BitSharesEurope/testnet-pythonscripts/blob/master/feed.random.py">https://github.com/BitSharesEurope/testnet-pythonscripts/blob/master/feed.random.py</a></li>
+</ul>
+</li>
+</ul>
+<p>We can use <cite>cron</cite> to runt he price feed script on a regular basis:</p>
+<div class="highlight-cron"><div class="highlight"><pre>*/15 * * * * /usr/bin/python3 /home/gph/testnet-pythonscripts/feed.last.py
+*/15 * * * * /usr/bin/python3 /home/gph/testnet-pythonscripts/feed.random.py
+0    * * * * /usr/bin/python3 /home/gph/testnet-pythonscripts/feed.parity.py
+</pre></div>
+</div>
+</div>
+
+
+  </div>
+ </div>
+
+ <script>var HN=[];HN.factory=function(e){return function(){HN.push([e].concat(Array.prototype.slice.call(arguments,0)))};},HN.on=HN.factory("on"),HN.once=HN.factory("once"),HN.off=HN.factory("off"),HN.emit=HN.factory("emit"),HN.load=function(){var e="hn-button.js";if(document.getElementById(e))return;var t=document.createElement("script");t.id=e,t.src="//hn-button.herokuapp.com/hn-button.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n)},HN.load();</script>
+ <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+ </body>
+</html>
