@@ -187,6 +187,58 @@ markets. Thus, we need to construct our
 identical with the short backing asset&#8217;s precision</p>
 </div>
 </div>
+<div class="section" id="settlement-authorities">
+<h2>Settlement Authorities<a class="headerlink" href="#settlement-authorities" title="Permalink to this headline">¶</a></h2>
+<p>The issue can choose between three parties that are allowed to settle
+the prediction market:</p>
+<ul class="simple">
+<li>Committee</li>
+<li>Witnesses</li>
+<li>Other accounts</li>
+</ul>
+<div class="section" id="committee">
+<h3>Committee<a class="headerlink" href="#committee" title="Permalink to this headline">¶</a></h3>
+<p>If only the committee is supposed to be able to settle the market, you
+need to set the options to::</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+ <span class="s">&quot;witness_fed_asset&quot;</span> <span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+ <span class="s">&quot;committee_fed_asset&quot;</span> <span class="p">:</span> <span class="n">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="witnesses">
+<h3>Witnesses<a class="headerlink" href="#witnesses" title="Permalink to this headline">¶</a></h3>
+<p>If only the witnesses are supposed to be able to settle the market, you
+need to set the options to::</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+ <span class="s">&quot;witness_fed_asset&quot;</span> <span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+ <span class="s">&quot;committee_fed_asset&quot;</span> <span class="p">:</span> <span class="n">false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The idea here is that the median of all price feeds published
+by the witnesses indicates a positive or negative resolution
+of the prediction market.</p>
+</div>
+</div>
+<div class="section" id="other-accounts">
+<h3>Other Accounts<a class="headerlink" href="#other-accounts" title="Permalink to this headline">¶</a></h3>
+<p>Similar to <a class="reference internal" href="../user/privbta.html"><em>Privatized BitAssets</em></a>, the feed can be also published by a
+arbitrary set of accounts. It is important to understand that in order
+to settle a prediction market, only <strong>one price feed</strong> is requried.
+Hence, anyone in the list of allowed settlers can settle the market and
+no consensus needs to be reached. Alternatively, if you want to settle a
+market only if several accounts can reach a consensus, a new resulution
+account can be created that uses <a class="reference internal" href="../user/account-permissions.html"><em>hierarchical multi-signature</em></a> similar to the <cite>committee-account</cite>.</p>
+<p>The list of settlement price producers can be defined with:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">update_asset_feed_producers</span> <span class="o">&lt;</span><span class="n">symbol</span><span class="o">&gt;</span> <span class="p">[</span><span class="s">&quot;account-a&quot;</span><span class="p">,</span> <span class="s">&quot;account-b&quot;</span><span class="p">]</span> <span class="n">true</span>
+</pre></div>
+</div>
+</div>
+</div>
 <div class="section" id="python-example">
 <h2>Python Example<a class="headerlink" href="#python-example" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">grapheneapi</span> <span class="kn">import</span> <span class="n">GrapheneClient</span>
