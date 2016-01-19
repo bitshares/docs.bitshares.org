@@ -38,6 +38,7 @@ Recent Updates
 
 .. r!date +\%y/\%m/\%d
 
+* ``16/01/19`` :doc:`testnet/index`
 * ``16/01/13`` :doc:`bitshares/tutorials/uia-update-manual`, :doc:`bitshares/tutorials/uia-create-manual`, :doc:`bitshares/tutorials/uia-create-gui`, :doc:`integration/network-setup`, :doc:`integration/tutorials/index`
 * ``16/01/12`` :doc:`bitshares/user/assets`, :doc:`bitshares/tutorials/uia-create-manual` :doc:`bitshares/tutorials/mpa-create-manual`, :doc:`bitshares/user/assets-faq`, :doc:`bitshares/user/privbta`, :doc:`bitshares/tutorials/publish-feed`, :doc:`bitshares/user/pm`, :doc:`bitshares/tutorials/pm-create-manual`, :doc:`bitshares/tutorials/pm-close-manual`
 * ``16/01/07`` :doc:`bitshares/user/uia`, :doc:`bitshares/tutorials/uia-create-gui`, :doc:`bitshares/tutorials/uia-create-manual`
