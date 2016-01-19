@@ -15,11 +15,10 @@ nature.
 
 **User Issued Assets (UIAs)**
 
-Freely traded tokens created by individuals used for a variety of use-cases.
-Often UIAs are used as IOUs issued by a bank, exchange or other financial
-institute to represent deposit receipts.
+Freely traded tokens created by individuals used for a variety of
+use-cases, such as stock, miles, event tickets or reputation points.
 
-* :doc:`Read more ... <uia>`
+.. centered:: :doc:`Read more ... <uia>`
 
 :html:`</div><div class="col-md-6">`
 
@@ -30,37 +29,49 @@ U.S. Dollar. Smartcoins can be created by anyone contracting with the
 BitShares ecosystem and putting sufficient BTS (at least 175%) into the so
 called contract for difference as *collateral*.
 
-* :doc:`Read more ... <mpa>`
+.. centered:: :doc:`Read more ... <mpa>`
 
 :html:`</div></div>`
 :html:`<div class="row"><div class="col-md-6">`
+
+**Exchange Backed Assets (EBA)**
+
+This kind of asset is commonly known as *I owe you* (IOU). It represents
+the right to withdraw the *same amount* (minus fees) of a backing asset
+from a *central* entity. Often they are issued by a bank, an exchange or
+an other financial institute to represent deposit receipts.
+
+.. centered:: :doc:`Read more ... <eba>`
+
+:html:`</div><div class="col-md-6">`
 
 **Privatized Bit-Assets**
 
 A flexible mixture between UIA and MPA that allows 3rd parties to create their
 own customized MPAs.
 
-* :doc:`Read more ... <privbta>`
+.. centered:: :doc:`Read more ... <privbta>`
 
-:html:`</div><div class="col-md-6">`
+:html:`</div></div>`
+:html:`<div class="row"><div class="col-md-6">`
 
 **Fee Backed Assets**
 
 An FBA is a token that pays you a fraction of the transaction fees generated
 by a particular feature that has been funded independent of BitShares.
 
-* :doc:`Read more ... <fba>`
+.. centered:: :doc:`Read more ... <fba>`
 
-:html:`</div></div>`
-:html:`<div class="row"><div class="col-md-6">`
+:html:`</div><div class="col-md-6">`
 
 **Prediction Market Asset**
+
 
 A prediction market is similar to a MPA, that trades between 0 and 1,
 only. After an event, a price feed can be used to determine which option
 to take and participants can settle at this price.
 
-* :doc:`Read more ... <pm>`
+.. centered:: :doc:`Read more ... <pm>`
 
 :html:`</div><div class="col-md-6">`
 :html:`</div></div></div>`
