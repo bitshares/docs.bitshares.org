@@ -169,10 +169,13 @@ a:hover {
   font-weight: 400;
   padding: 15px;
 }
-.content p,
+.content p:not(.centered),
 .content ul,
 .content ol {
   text-align: justify;
+}
+.content p .centered {
+  text-align: center;
 }
 .content ul > li {
   list-style-type: disc;
