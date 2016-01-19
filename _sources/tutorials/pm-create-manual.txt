@@ -41,6 +41,58 @@ and these MPA-options:
 .. note:: The precision of the prediction market asset has to be
           identical with the short backing asset's precision
 
+Settlement Authorities
+######################
+
+The issue can choose between three parties that are allowed to settle
+the prediction market:
+
+* Committee
+* Witnesses
+* Other accounts
+
+Committee
+*********
+
+If only the committee is supposed to be able to settle the market, you
+need to set the options to:::
+  {
+   "witness_fed_asset" : false,
+   "committee_fed_asset" : true
+  }
+
+Witnesses
+*********
+
+If only the witnesses are supposed to be able to settle the market, you
+need to set the options to:::
+  {
+   "witness_fed_asset" : true,
+   "committee_fed_asset" : false
+  }
+
+.. note:: The idea here is that the median of all price feeds published
+          by the witnesses indicates a positive or negative resolution
+          of the prediction market.
+
+Other Accounts
+**************
+
+Similar to :doc:`../user/privbta`, the feed can be also published by a
+arbitrary set of accounts. It is important to understand that in order
+to settle a prediction market, only **one price feed** is requried.
+Hence, anyone in the list of allowed settlers can settle the market and
+no consensus needs to be reached. Alternatively, if you want to settle a
+market only if several accounts can reach a consensus, a new resulution
+account can be created that uses :doc:`hierarchical multi-signature
+<../user/account-permissions>` similar to the `committee-account`.
+
+The list of settlement price producers can be defined with:
+
+::
+
+   >>> update_asset_feed_producers <symbol> ["account-a", "account-b"] true
+
 Python Example
 ##############
 
