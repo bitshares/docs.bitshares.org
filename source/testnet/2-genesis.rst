@@ -29,11 +29,6 @@ are only valid for a single chain ID.  So editing the genesis file will
 change your chain ID, and make you unable to sync with all existing
 chains (unless one of them has exactly the same genesis file you do).
 
-For testing purposes, the ``--dbg-init-key`` option will allow you to
-quickly create a new chain against any genesis file, by replacing the
-witnesses' block production keys.
-
-
 Embedding the Genesis block
 ***************************
 
