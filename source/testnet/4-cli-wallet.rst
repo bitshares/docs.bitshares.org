@@ -60,7 +60,7 @@ We can now open a new wallet for ``alpha`` user:::
     >>> upgrade_account alpha true
     >>> create_witness alpha "http://www.alpha" true
 
-The ``get_private_key`` command allows us to obtain the public key corresponding
+The ``get_private_key`` command allows us to obtain the private key corresponding
 to the block signing key:::
 
     >>> get_private_key GPH6viEhYCQr8xKP3Vj8wfHh6WfZeJK7H9uhLPDYWLGCRSj5kHQZM
