@@ -143,7 +143,9 @@
 <li class="toctree-l3"><a class="reference internal" href="1-install.html">Installation/Confguration of Witness</a></li>
 <li class="toctree-l3"><a class="reference internal" href="2-genesis.html">Genesis Configuration</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="">Initializing Blockchain</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#starting-block-production">Starting block production</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#setting-up-block-production">Setting up block production</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#initializing-the-genesis-block">Initializing the genesis block</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#writing-final-genesis">Writing final genesis</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="4-cli-wallet.html">Connecting a CLI wallet</a></li>
@@ -178,24 +180,20 @@
 <h1>Initializing Blockchain<a class="headerlink" href="#initializing-blockchain" title="Permalink to this headline">¶</a></h1>
 <p>Let the witness generate a new data directly <cite>data/testnet</cite>:</p>
 <div class="highlight-sh"><div class="highlight"><pre>programs/witness_node/witness_node --data-dir data/testnet
-CTRL+C
 </pre></div>
 </div>
-<p>Several messages will go to the console.  When you see messages like these::</p>
-<div class="highlight-python"><div class="highlight"><pre>3501235ms th_a main.cpp:165 main ] Started witness node on a chain with 0 blocks.
-3501235ms th_a main.cpp:166 main ] Chain ID is cf307110d029cb882d126bf0488dc4864772f68d9888d86b458d16e6c36aa74b
-</pre></div>
-</div>
-<p>the initialization is complete, and you can press Ctrl+C to quit the witness node.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Initialization will complete nearly instantaneously with the
 tiny example genesis, unless you added a ton of balances.</p>
 </div>
-<p>The reason for running the witness node:  It tells us the chain ID,
-and it initializes the <code class="docutils literal"><span class="pre">data/testnet</span></code> directory.</p>
-<div class="section" id="starting-block-production">
-<h2>Starting block production<a class="headerlink" href="#starting-block-production" title="Permalink to this headline">¶</a></h2>
+<p>The reason for running the witness node:</p>
+<ul class="simple">
+<li>It tells us the chain ID and</li>
+<li>it initializes the <code class="docutils literal"><span class="pre">data/testnet</span></code> directory.</li>
+</ul>
+<div class="section" id="setting-up-block-production">
+<h2>Setting up block production<a class="headerlink" href="#setting-up-block-production" title="Permalink to this headline">¶</a></h2>
 <p>Let&#8217;s edit <cite>data/testnet/config.ini</cite>:</p>
 <div class="highlight-python"><div class="highlight"><pre>p2p-endpoint = 0.0.0.0:11010
 rpc-endpoint = 0.0.0.0:11011
@@ -221,18 +219,6 @@ listed <code class="docutils literal"><span class="pre">witness-id</span></code>
 those blocks.  Normally each witness would be on a different node, but
 for the purposes of this testnet, we will start out with all witnesses
 signing blocks on a single node.</p>
-<div class="highlight-sh"><div class="highlight"><pre>programs/witness_node/witness_node --data-dir data/testnet --enable-stale-production
-</pre></div>
-</div>
-<p>Note that we need not specify <code class="docutils literal"><span class="pre">genesis.json</span></code> on the command line, since
-we now specify it in the config file. The <code class="docutils literal"><span class="pre">--enable-stale-production</span></code>
-flag tells the <code class="docutils literal"><span class="pre">witness_node</span></code> to produce on a chain with zero blocks or
-very old blocks.  We specify the <code class="docutils literal"><span class="pre">--enable-stale-production</span></code> parameter
-on the command line as we will not normally need it (although it can
-also be specified in the config file).</p>
-<p>Subsequent runs which connect to an existing witness node over the p2p
-network, or which get blockchain state from an existing data directory,
-need not have the <code class="docutils literal"><span class="pre">--enable-stale-production</span></code> flag.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The setting <code class="docutils literal"><span class="pre">rpc-endpoint</span> <span class="pre">=</span> <span class="pre">0.0.0.0:11011</span></code> will open up
@@ -240,6 +226,59 @@ the RPC-port <cite>11011</cite> to connect a cli-wallet or web wallet to
 it. With the <code class="docutils literal"><span class="pre">p2p-endpoint</span> <span class="pre">=</span> <span class="pre">0.0.0.0:11010</span></code> being accessible
 from the internet, this node can be used as seed node.</p>
 </div>
+</div>
+<div class="section" id="initializing-the-genesis-block">
+<h2>Initializing the genesis block<a class="headerlink" href="#initializing-the-genesis-block" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-sh"><div class="highlight"><pre>programs/witness_node/witness_node --genesis-timestamp <span class="m">10</span> --genesis-json genesis/my-genesis.json --enable-stale-production --data-dir data/testnet
+</pre></div>
+</div>
+<p>Several messages will go to the console.  When you see messages like these::</p>
+<div class="highlight-python"><div class="highlight"><pre>Started witness node on a chain with 0 blocks.
+Chain ID is cf307110d029cb882d126bf0488dc4864772f68d9888d86b458d16e6c36aa74b
+</pre></div>
+</div>
+<p>the initialization is complete, and you can press Ctrl+C to quit the
+witness node (the chain id will look differently to this example)</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>It is important that you make note of the following line.</p>
+<div class="highlight-python"><div class="highlight"><pre>Used genesis timestamp:  2016-01-20T19:11:30 (PLEASE RECORD THIS)
+WARNING:  GENESIS WAS MODIFIED, YOUR CHAIN ID MAY BE DIFFERENT
+</pre></div>
+</div>
+<p class="last">Write down the timestamp as we will need it to construct a proper
+<cite>genesis.json</cite> file for others to sync with the network!</p>
+</div>
+<p>Essentially the <code class="docutils literal"><span class="pre">--genesis-timestamp</span></code> option in the previous step
+tells the node to overwrite the time in the file with a timestamp after
+startup and use a <em>more recent</em> timestamp for the chainid.</p>
+<p>The <code class="docutils literal"><span class="pre">--enable-stale-production</span></code> flag tells the <code class="docutils literal"><span class="pre">witness_node</span></code> to
+produce on a chain with zero blocks or very old blocks.  We specify the
+<code class="docutils literal"><span class="pre">--enable-stale-production</span></code> parameter on the command line as we will
+not normally need it (although it can also be specified in the config
+file).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Unless no other witness produces blocks and witness
+participation is high enough, subsequent runs which connect to
+an existing witness node over the p2p network, or which get
+blockchain state from an existing data directory, need not
+have the <code class="docutils literal"><span class="pre">--enable-stale-production</span></code> flag.</p>
+</div>
+</div>
+<div class="section" id="writing-final-genesis">
+<h2>Writing final genesis<a class="headerlink" href="#writing-final-genesis" title="Permalink to this headline">¶</a></h2>
+<p>We now copy our gensis template file over to the grapehen root
+directry::</p>
+<div class="highlight-python"><div class="highlight"><pre>$ cp genesis/my-genesis.json genesis.json
+$ vim genesis.json
+$ git add genesis.json
+$ git commit -m &quot;Added genesis.json&quot;
+</pre></div>
+</div>
+<p>The genesis timestamp needs to be pasted into <code class="docutils literal"><span class="pre">genesis.json</span></code> file in
+the initial_timestamp field. If you do not do this, nodes using the
+genesis will have a different chain ID and be unable to connect.</p>
 </div>
 </div>
 
