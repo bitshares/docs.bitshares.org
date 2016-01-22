@@ -230,6 +230,11 @@ http {
 
     gzip  on;
 
+    upstream websockets {
+      ## Put the witness node&#39;s websocket rpc port here:
+      server localhost:11011;
+    }
+
     server {
         listen 80;
         server_name localhost;
@@ -237,6 +242,17 @@ http {
         location ~ ^/[\w\d\.-]+\.(js|css|dat)$ {
             root /www/current/public/;
             try_files $uri /wallet$uri =404;
+        }
+
+        location ~ /ws/? {
+            access_log off;
+            proxy_pass http://websockets;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header Host $host;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection &quot;upgrade&quot;;
         }
 
         location / {
@@ -255,6 +271,10 @@ http {
 different in your setup. Please compare with the default
 <cite>nginx.conf</cite> file to identify the proper directories.</p>
 </div>
+<p>We create an <em>upstream</em> called <code class="docutils literal"><span class="pre">websockets</span></code> which is uses to proxy the
+queries to <code class="docutils literal"><span class="pre">http://host/ws</span></code> directly to the websocket server. This
+allows to have a websocket address be available from the same port as
+the web wallet.</p>
 </div>
 <div class="section" id="running-nginx-as-serice">
 <h2>Running nginx as serice<a class="headerlink" href="#running-nginx-as-serice" title="Permalink to this headline">¶</a></h2>

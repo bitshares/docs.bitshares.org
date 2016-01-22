@@ -143,7 +143,6 @@
 <li class="toctree-l3"><a class="reference internal" href="1-install.html">Installation/Confguration of Witness</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="">Genesis Configuration</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#genesis-editing">Genesis editing</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#embedding-the-genesis-block">Embedding the Genesis block</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="3-init-blockchain.html">Initializing Blockchain</a></li>
@@ -199,33 +198,6 @@ This allows you to control things such as:</p>
 are only valid for a single chain ID.  So editing the genesis file will
 change your chain ID, and make you unable to sync with all existing
 chains (unless one of them has exactly the same genesis file you do).</p>
-</div>
-<div class="section" id="embedding-the-genesis-block">
-<h2>Embedding the Genesis block<a class="headerlink" href="#embedding-the-genesis-block" title="Permalink to this headline">¶</a></h2>
-<p>Embedded genesis is a feature designed to make life easier for consumers
-of pre-compiled binaries, in exchange for slight, optional complication
-of the process for producing binaries.</p>
-<p>We recompile to include the genesis block:</p>
-<div class="highlight-sh"><div class="highlight"><pre>make clean
-find . -name <span class="s2">&quot;CMakeCache.txt&quot;</span> <span class="p">|</span> xargs rm -f
-find . -name <span class="s2">&quot;CMakeFiles&quot;</span> <span class="p">|</span> xargs rm -Rf
-cmake -DGRAPHENE_EGENESIS_JSON<span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span><span class="s2">/genesis/my-genesis.json&quot;</span> -DCMAKE_BUILD_TYPE<span class="o">=</span>Release .
-</pre></div>
-</div>
-<p>Deleting caches will reset all <code class="docutils literal"><span class="pre">cmake</span></code> variables, so if you have used
-instructions like <a class="reference internal" href="../installation/Build.html"><em>Building from Sources</em></a> which tells you to
-set other <code class="docutils literal"><span class="pre">cmake</span></code> variables, you will have to add those variables
-to the <code class="docutils literal"><span class="pre">cmake</span></code> line above.</p>
-<p>Embedding the genesis copies the entire content of genesis block
-into the <code class="docutils literal"><span class="pre">witness_node</span></code> binary, and additionally copies the chain ID
-into the <code class="docutils literal"><span class="pre">cli_wallet</span></code> binary.  Embedded genesis allows the following
-simplifications to the subsequent instructions:</p>
-<ul class="simple">
-<li>You need <strong>not</strong> specify the genesis file on the witness node command
-line, or in the witness node configuration file.</li>
-<li>You need <strong>not</strong> specify the chain ID on the <code class="docutils literal"><span class="pre">cli_wallet</span></code> command line
-when starting a new wallet.</li>
-</ul>
 </div>
 </div>
 

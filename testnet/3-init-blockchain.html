@@ -143,9 +143,12 @@
 <li class="toctree-l3"><a class="reference internal" href="1-install.html">Installation/Confguration of Witness</a></li>
 <li class="toctree-l3"><a class="reference internal" href="2-genesis.html">Genesis Configuration</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="">Initializing Blockchain</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#setting-up-block-production">Setting up block production</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#initializing-the-genesis-block">Initializing the genesis block</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#writing-final-genesis">Writing final genesis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#setting-up-block-production">Setting up block production</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#embedding-the-genesis-block">Embedding the Genesis block</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="4-cli-wallet.html">Connecting a CLI wallet</a></li>
@@ -178,31 +181,72 @@
    
   <div class="section" id="initializing-blockchain">
 <h1>Initializing Blockchain<a class="headerlink" href="#initializing-blockchain" title="Permalink to this headline">¶</a></h1>
-<p>Let the witness generate a new data directly <cite>data/testnet</cite>:</p>
-<div class="highlight-sh"><div class="highlight"><pre>programs/witness_node/witness_node --data-dir data/testnet
+<div class="section" id="initializing-the-genesis-block">
+<h2>Initializing the genesis block<a class="headerlink" href="#initializing-the-genesis-block" title="Permalink to this headline">¶</a></h2>
+<p>We initialize teh blockchain an generate our first blocks.</p>
+<p>The <code class="docutils literal"><span class="pre">--genesis-timestamp</span></code> option in the previous step tells the node
+to overwrite the time in the file with a timestamp after startup and use
+a <em>more recent</em> timestamp for the chainid.</p>
+<p>The <code class="docutils literal"><span class="pre">--enable-stale-production</span></code> flag tells the <code class="docutils literal"><span class="pre">witness_node</span></code> to
+produce on a chain with zero blocks or very old blocks.  We specify the
+<code class="docutils literal"><span class="pre">--enable-stale-production</span></code> parameter on the command line as we will
+not normally need it (although it can also be specified in the config
+file).</p>
+<div class="highlight-sh"><div class="highlight"><pre>programs/witness_node/witness_node --genesis-timestamp <span class="m">10</span> <span class="se">\</span>
+                                   --genesis-json genesis/my-genesis.json <span class="se">\</span>
+                                   --enable-stale-production <span class="se">\</span>
+                                   --data-dir data/testnet
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p>It is important that you make note of the following line.</p>
+<div class="highlight-python"><div class="highlight"><pre>Used genesis timestamp:  2016-01-20T19:11:30 (PLEASE RECORD THIS)
+WARNING:  GENESIS WAS MODIFIED, YOUR CHAIN ID MAY BE DIFFERENT
+</pre></div>
+</div>
+<p class="last">Write down the timestamp as we will need it to construct a proper
+<cite>genesis.json</cite> file for others to sync with the network!</p>
+</div>
+<p>We will already see our chain id::</p>
+<div class="highlight-python"><div class="highlight"><pre>Started witness node on a chain with 0 blocks.
+Chain ID is cf307110d029cb882d126bf0488dc4864772f68d9888d86b458d16e6c36aa74b
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Initialization will complete nearly instantaneously with the
-tiny example genesis, unless you added a ton of balances.</p>
+<p class="last">If other witness produces blocks and witness participation is
+high enough, subsequent runs which connect to an existing
+witness node over the p2p network, or which get blockchain
+state from an existing data directory, need not have the
+<code class="docutils literal"><span class="pre">--enable-stale-production</span></code> flag.</p>
 </div>
-<p>The reason for running the witness node:</p>
-<ul class="simple">
-<li>It tells us the chain ID and</li>
-<li>it initializes the <code class="docutils literal"><span class="pre">data/testnet</span></code> directory.</li>
-</ul>
+</div>
+<div class="section" id="writing-final-genesis">
+<h2>Writing final genesis<a class="headerlink" href="#writing-final-genesis" title="Permalink to this headline">¶</a></h2>
+<p>We now copy our gensis template file over to the grapehen root
+direcotry::</p>
+<div class="highlight-python"><div class="highlight"><pre>$ cp genesis/my-genesis.json genesis.json
+$ vim genesis.json
+$ git add genesis.json
+$ git commit -m &quot;Added genesis.json&quot;
+</pre></div>
+</div>
+<p>The <strong>genesis timestamp</strong> (the notice in the previous step) needs to be
+pasted into <code class="docutils literal"><span class="pre">genesis.json</span></code> file in the initial_timestamp field. If you
+do not do this, nodes using the genesis will have a different chain ID
+and be unable to connect.</p>
+</div>
 <div class="section" id="setting-up-block-production">
 <h2>Setting up block production<a class="headerlink" href="#setting-up-block-production" title="Permalink to this headline">¶</a></h2>
-<p>Let&#8217;s edit <cite>data/testnet/config.ini</cite>:</p>
-<div class="highlight-python"><div class="highlight"><pre>p2p-endpoint = 0.0.0.0:11010
-rpc-endpoint = 0.0.0.0:11011
-
-# private-key = [&lt;pubkey&gt;,&lt;privke&gt;]
-# For each witness, add pubkey and private key:
-private-key = [&quot;GPH6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV&quot;,&quot;5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3&quot;]
-
-witness-id = &quot;1.6.1&quot;
+<p>Let&#8217;s create a very basic configuration file in <cite>data/testnet/config.ini</cite>:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ mkdir -p data/testnet
+$ cim data/testnet/config.ini
+</pre></div>
+</div>
+<p>All we put into the configuration file is the ids and the keys for the
+witnesses so that we can start producing blocks</p>
+<div class="highlight-python"><div class="highlight"><pre>witness-id = &quot;1.6.1&quot;
 witness-id = &quot;1.6.2&quot;
 witness-id = &quot;1.6.3&quot;
 witness-id = &quot;1.6.4&quot;
@@ -212,6 +256,18 @@ witness-id = &quot;1.6.7&quot;
 witness-id = &quot;1.6.8&quot;
 witness-id = &quot;1.6.9&quot;
 witness-id = &quot;1.6.10&quot;
+# For each witness, add pubkey and private key:
+private-key = [&quot;GPH6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV&quot;,&quot;5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3&quot;]
+private-key = [&lt;pubkey&gt;,&lt;privkey&gt;]
+private-key = [&lt;pubkey&gt;,&lt;privkey&gt;]
+private-key = [&lt;pubkey&gt;,&lt;privkey&gt;]
+private-key = [&lt;pubkey&gt;,&lt;privkey&gt;]
+private-key = [&lt;pubkey&gt;,&lt;privkey&gt;]
+private-key = [&lt;pubkey&gt;,&lt;privkey&gt;]
+private-key = [&lt;pubkey&gt;,&lt;privkey&gt;]
+private-key = [&lt;pubkey&gt;,&lt;privkey&gt;]
+private-key = [&lt;pubkey&gt;,&lt;privkey&gt;]
+private-key = [&lt;pubkey&gt;,&lt;privkey&gt;]
 </pre></div>
 </div>
 <p>This authorizes the <code class="docutils literal"><span class="pre">witness_node</span></code> to produce blocks on behalf of the
@@ -226,59 +282,33 @@ the RPC-port <cite>11011</cite> to connect a cli-wallet or web wallet to
 it. With the <code class="docutils literal"><span class="pre">p2p-endpoint</span> <span class="pre">=</span> <span class="pre">0.0.0.0:11010</span></code> being accessible
 from the internet, this node can be used as seed node.</p>
 </div>
-</div>
-<div class="section" id="initializing-the-genesis-block">
-<h2>Initializing the genesis block<a class="headerlink" href="#initializing-the-genesis-block" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-sh"><div class="highlight"><pre>programs/witness_node/witness_node --genesis-timestamp <span class="m">10</span> --genesis-json genesis/my-genesis.json --enable-stale-production --data-dir data/testnet
+<div class="section" id="embedding-the-genesis-block">
+<h3>Embedding the Genesis block<a class="headerlink" href="#embedding-the-genesis-block" title="Permalink to this headline">¶</a></h3>
+<p>Embedded genesis is a feature designed to make life easier for consumers
+of pre-compiled binaries, in exchange for slight, optional complication
+of the process for producing binaries.</p>
+<p>We recompile to include the genesis block:</p>
+<div class="highlight-sh"><div class="highlight"><pre>make clean
+find . -name <span class="s2">&quot;CMakeCache.txt&quot;</span> <span class="p">|</span> xargs rm -f
+find . -name <span class="s2">&quot;CMakeFiles&quot;</span> <span class="p">|</span> xargs rm -Rf
+cmake -DGRAPHENE_EGENESIS_JSON<span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span><span class="s2">/genesis/my-genesis.json&quot;</span> -DCMAKE_BUILD_TYPE<span class="o">=</span>Release .
 </pre></div>
 </div>
-<p>Several messages will go to the console.  When you see messages like these::</p>
-<div class="highlight-python"><div class="highlight"><pre>Started witness node on a chain with 0 blocks.
-Chain ID is cf307110d029cb882d126bf0488dc4864772f68d9888d86b458d16e6c36aa74b
-</pre></div>
+<p>Deleting caches will reset all <code class="docutils literal"><span class="pre">cmake</span></code> variables, so if you have used
+instructions like <a class="reference internal" href="../installation/Build.html"><em>Building from Sources</em></a> which tells you to
+set other <code class="docutils literal"><span class="pre">cmake</span></code> variables, you will have to add those variables
+to the <code class="docutils literal"><span class="pre">cmake</span></code> line above.</p>
+<p>Embedding the genesis copies the entire content of genesis block
+into the <code class="docutils literal"><span class="pre">witness_node</span></code> binary, and additionally copies the chain ID
+into the <code class="docutils literal"><span class="pre">cli_wallet</span></code> binary.  Embedded genesis allows the following
+simplifications to the subsequent instructions:</p>
+<ul class="simple">
+<li>You need <strong>not</strong> specify the genesis file on the witness node command
+line, or in the witness node configuration file.</li>
+<li>You need <strong>not</strong> specify the chain ID on the <code class="docutils literal"><span class="pre">cli_wallet</span></code> command line
+when starting a new wallet.</li>
+</ul>
 </div>
-<p>the initialization is complete, and you can press Ctrl+C to quit the
-witness node (the chain id will look differently to this example)</p>
-<div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p>It is important that you make note of the following line.</p>
-<div class="highlight-python"><div class="highlight"><pre>Used genesis timestamp:  2016-01-20T19:11:30 (PLEASE RECORD THIS)
-WARNING:  GENESIS WAS MODIFIED, YOUR CHAIN ID MAY BE DIFFERENT
-</pre></div>
-</div>
-<p class="last">Write down the timestamp as we will need it to construct a proper
-<cite>genesis.json</cite> file for others to sync with the network!</p>
-</div>
-<p>Essentially the <code class="docutils literal"><span class="pre">--genesis-timestamp</span></code> option in the previous step
-tells the node to overwrite the time in the file with a timestamp after
-startup and use a <em>more recent</em> timestamp for the chainid.</p>
-<p>The <code class="docutils literal"><span class="pre">--enable-stale-production</span></code> flag tells the <code class="docutils literal"><span class="pre">witness_node</span></code> to
-produce on a chain with zero blocks or very old blocks.  We specify the
-<code class="docutils literal"><span class="pre">--enable-stale-production</span></code> parameter on the command line as we will
-not normally need it (although it can also be specified in the config
-file).</p>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Unless no other witness produces blocks and witness
-participation is high enough, subsequent runs which connect to
-an existing witness node over the p2p network, or which get
-blockchain state from an existing data directory, need not
-have the <code class="docutils literal"><span class="pre">--enable-stale-production</span></code> flag.</p>
-</div>
-</div>
-<div class="section" id="writing-final-genesis">
-<h2>Writing final genesis<a class="headerlink" href="#writing-final-genesis" title="Permalink to this headline">¶</a></h2>
-<p>We now copy our gensis template file over to the grapehen root
-directry::</p>
-<div class="highlight-python"><div class="highlight"><pre>$ cp genesis/my-genesis.json genesis.json
-$ vim genesis.json
-$ git add genesis.json
-$ git commit -m &quot;Added genesis.json&quot;
-</pre></div>
-</div>
-<p>The genesis timestamp needs to be pasted into <code class="docutils literal"><span class="pre">genesis.json</span></code> file in
-the initial_timestamp field. If you do not do this, nodes using the
-genesis will have a different chain ID and be unable to connect.</p>
 </div>
 </div>
 
