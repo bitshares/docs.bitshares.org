@@ -49,7 +49,7 @@ Furthermore, we need to tell our web wallet to which witness node to
 connect to. This can be done in the file
 `dl/src/stores/SettingsStore.js`. ::
 
-    connection: "ws://<host>:<port>",
+    connection: "ws://<host>/ws",
     faucet_address: "https://<host>",
 
     # also edit the "default" settings
