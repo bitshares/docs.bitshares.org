@@ -63,6 +63,12 @@ page <./Sources>`, we can run ``cmake`` for configuration and compile with
 Note that the environmental variable ``$BOOST_ROOT`` should point to your
 install directory of boost if you have installed it manually.
 
+Updating BitShares
+#######################
+
+A quick tutorial on updating your BitShares binaries can be found
+:doc:`here <Upgrades>`.
+
 Distribution Specific Settings
 ##############################
 

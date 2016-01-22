@@ -64,6 +64,11 @@ We have set it to be:
 
         gzip  on;
 
+        upstream websockets {
+          ## Put the witness node's websocket rpc port here:
+          server localhost:11011;
+        }
+
         server {
             listen 80;
             server_name localhost;
@@ -71,6 +76,17 @@ We have set it to be:
             location ~ ^/[\w\d\.-]+\.(js|css|dat)$ {
                 root /www/current/public/;
                 try_files $uri /wallet$uri =404;
+            }
+
+            location ~ /ws/? {
+                access_log off;
+                proxy_pass http://websockets;
+                proxy_set_header X-Real-IP $remote_addr;
+                proxy_set_header Host $host;
+                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection "upgrade";
             }
 
             location / {
@@ -85,6 +101,11 @@ We have set it to be:
 .. note:: The parameters `passenger_root` and `passenger_ruby` may be
           different in your setup. Please compare with the default
           `nginx.conf` file to identify the proper directories.
+
+We create an *upstream* called ``websockets`` which is uses to proxy the
+queries to ``http://host/ws`` directly to the websocket server. This
+allows to have a websocket address be available from the same port as
+the web wallet.
 
 Running nginx as serice
 #######################
