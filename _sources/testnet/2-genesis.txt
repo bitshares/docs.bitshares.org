@@ -28,3 +28,18 @@ The chain ID is a hash of the genesis state.  All transaction signatures
 are only valid for a single chain ID.  So editing the genesis file will
 change your chain ID, and make you unable to sync with all existing
 chains (unless one of them has exactly the same genesis file you do).
+
+Writing final genesis
+#####################
+
+We now copy our gensis template file over to the graphene root
+directory:::
+
+    $ cp genesis/my-genesis.json genesis.json
+    $ vim genesis.json
+    $ git add genesis.json
+    $ git commit -m "Added genesis.json"
+
+The **initial timestamp** needs to be pasted into ``genesis.json`` file
+in the initial_timestamp field. Choose it relatively close to the future
+where you can generate the genesis block (e.g. now plus 10 minutes).

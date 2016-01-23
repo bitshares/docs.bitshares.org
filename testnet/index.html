@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <title>Public Graphene Testnet</title>
+    <title>Testnet</title>
 
     <!-- CSS -->
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
@@ -73,7 +73,7 @@
  <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
    <div class='in'>
      <div class='headline'>
-       <h1>Public Graphene Testnet</h1>
+       <h1>Testnet</h1>
  
      </div>
    </div>
@@ -137,8 +137,9 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../blockchain/index.html">Blockchain Specifications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../namespaces/index.html">Namespaces</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Public Graphene Testnet</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#public-testnet">Public Testnet</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Testnet</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#general-information">General Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#assets">Assets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#how-it-has-been-deployed">How it has been deployed</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="1-install.html">Installation/Confguration of Witness</a></li>
 <li class="toctree-l3"><a class="reference internal" href="2-genesis.html">Genesis Configuration</a></li>
@@ -171,30 +172,43 @@
   </div>
   <div class='content'>
    
-  <div class="section" id="public-graphene-testnet">
-<h1>Public Graphene Testnet<a class="headerlink" href="#public-graphene-testnet" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="testnet">
+<h1>Testnet<a class="headerlink" href="#testnet" title="Permalink to this headline">¶</a></h1>
 <p>We produdly present the first <a class="reference external" href="http://testnet.bitshares.eu">public testnet</a> based on graphene and
 took the opportunity to construct a tutorial from the process.</p>
-<div class="section" id="public-testnet">
-<h2>Public Testnet<a class="headerlink" href="#public-testnet" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="general-information">
+<h2>General Information<a class="headerlink" href="#general-information" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><strong>Access</strong>:<ul>
 <li>Web wallet: <a class="reference external" href="http://testnet.bitshares.eu">public testnet</a></li>
 <li>Seed node: <code class="docutils literal"><span class="pre">testnet.bitshares.eu:11010</span></code></li>
 <li>Chain-id: <code class="docutils literal"><span class="pre">39f5e2ede1f8bc1a3a54a7914414e3779e33193f1f5693510e73cb7a87617447</span></code></li>
+<li><a class="reference external" href="https://github.com/BitSharesEurope/graphene-testnet/blob/testnet/genesis.json">Genesis Block</a></li>
 <li>Sources:<ul>
-<li><a class="reference external" href="https://github.com/BitSharesEurope/graphene-testnet">Blockchain</a></li>
+<li><a class="reference external" href="https://github.com/BitSharesEurope/graphene-testnet">Full Node</a></li>
 <li><a class="reference external" href="https://github.com/BitSharesEurope/graphene-ui-testnet">Wallet</a></li>
 <li><a class="reference external" href="https://github.com/BitSharesEurope/faucet-testnet">Faucet</a></li>
 <li><a class="reference external" href="https://github.com/BitSharesEurope/testnet-pythonscripts">Python Scripts</a></li>
 </ul>
 </li>
-<li>Full nodes:<ul>
-<li><code class="docutils literal"><span class="pre">programs/witness_node/witness_node</span> <span class="pre">-s</span> <span class="pre">testnet.bitshares.eu:11010</span></code></li>
+<li>Full nodes:</li>
 </ul>
-</li>
-</ul>
-</li>
+<p>In order to run a full node, get the  <a class="reference external" href="https://github.com/BitSharesEurope/graphene-testnet">sources</a> and compile them
+as described in the <a class="reference external" href="../bitshares/install/Build">build instructions</a>.
+Then run the node with:</p>
+<div class="highlight-python"><div class="highlight"><pre>$ programs/witness_node/witness_node -s testnet.bitshares.eu:11010
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">On this network, <strong>everything</strong> is allowed. As a
+consequence the <em>outside</em> price of any token on this
+blockchain is exactly <strong>zero</strong>. A reset of the blockchain
+may occure at any moment!</p>
+</div>
+</div>
+<div class="section" id="assets">
+<h2>Assets<a class="headerlink" href="#assets" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
 <li><strong>Core Unit</strong>: <code class="docutils literal"><span class="pre">TEST</span></code><ul>
 <li>10k TEST for free upon registration</li>
 </ul>
@@ -218,13 +232,6 @@ took the opportunity to construct a tutorial from the process.</p>
 <li><strong>Witnesses</strong>: currently <code class="docutils literal"><span class="pre">init0</span></code> ... <code class="docutils literal"><span class="pre">init9</span></code></li>
 <li><strong>Committee members</strong>: currently <code class="docutils literal"><span class="pre">committee-member-1</span></code> ... <code class="docutils literal"><span class="pre">committee-member-10</span></code></li>
 </ul>
-<div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">On this network, <strong>everything</strong> is allowed. As a
-consequence the <em>outside</em> price of any token on this
-blockchain is exactly <strong>zero</strong>. A reset of the blockchain
-may occure at any moment!</p>
-</div>
 </div>
 <div class="section" id="how-it-has-been-deployed">
 <h2>How it has been deployed<a class="headerlink" href="#how-it-has-been-deployed" title="Permalink to this headline">¶</a></h2>

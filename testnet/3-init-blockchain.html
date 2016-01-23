@@ -137,16 +137,16 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../blockchain/index.html">Blockchain Specifications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../namespaces/index.html">Namespaces</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Public Graphene Testnet</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="index.html#public-testnet">Public Testnet</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Testnet</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#general-information">General Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#assets">Assets</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#how-it-has-been-deployed">How it has been deployed</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="1-install.html">Installation/Confguration of Witness</a></li>
 <li class="toctree-l3"><a class="reference internal" href="2-genesis.html">Genesis Configuration</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="">Initializing Blockchain</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#initializing-the-genesis-block">Initializing the genesis block</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#writing-final-genesis">Writing final genesis</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#setting-up-block-production">Setting up block production</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#embedding-the-genesis-block">Embedding the Genesis block</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#embedding-the-genesis-block-optional">Embedding the Genesis block (optional)</a></li>
 </ul>
 </li>
 </ul>
@@ -184,29 +184,15 @@
 <div class="section" id="initializing-the-genesis-block">
 <h2>Initializing the genesis block<a class="headerlink" href="#initializing-the-genesis-block" title="Permalink to this headline">¶</a></h2>
 <p>We initialize teh blockchain an generate our first blocks.</p>
-<p>The <code class="docutils literal"><span class="pre">--genesis-timestamp</span></code> option in the previous step tells the node
-to overwrite the time in the file with a timestamp after startup and use
-a <em>more recent</em> timestamp for the chainid.</p>
 <p>The <code class="docutils literal"><span class="pre">--enable-stale-production</span></code> flag tells the <code class="docutils literal"><span class="pre">witness_node</span></code> to
 produce on a chain with zero blocks or very old blocks.  We specify the
 <code class="docutils literal"><span class="pre">--enable-stale-production</span></code> parameter on the command line as we will
 not normally need it (although it can also be specified in the config
 file).</p>
-<div class="highlight-sh"><div class="highlight"><pre>programs/witness_node/witness_node --genesis-timestamp <span class="m">10</span> <span class="se">\</span>
-                                   --genesis-json genesis/my-genesis.json <span class="se">\</span>
+<div class="highlight-sh"><div class="highlight"><pre>programs/witness_node/witness_node --genesis-json genesis.json <span class="se">\</span>
                                    --enable-stale-production <span class="se">\</span>
                                    --data-dir data/testnet
 </pre></div>
-</div>
-<div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p>It is important that you make note of the following line.</p>
-<div class="highlight-python"><div class="highlight"><pre>Used genesis timestamp:  2016-01-20T19:11:30 (PLEASE RECORD THIS)
-WARNING:  GENESIS WAS MODIFIED, YOUR CHAIN ID MAY BE DIFFERENT
-</pre></div>
-</div>
-<p class="last">Write down the timestamp as we will need it to construct a proper
-<cite>genesis.json</cite> file for others to sync with the network!</p>
 </div>
 <p>We will already see our chain id::</p>
 <div class="highlight-python"><div class="highlight"><pre>Started witness node on a chain with 0 blocks.
@@ -221,21 +207,6 @@ witness node over the p2p network, or which get blockchain
 state from an existing data directory, need not have the
 <code class="docutils literal"><span class="pre">--enable-stale-production</span></code> flag.</p>
 </div>
-</div>
-<div class="section" id="writing-final-genesis">
-<h2>Writing final genesis<a class="headerlink" href="#writing-final-genesis" title="Permalink to this headline">¶</a></h2>
-<p>We now copy our gensis template file over to the grapehen root
-direcotry::</p>
-<div class="highlight-python"><div class="highlight"><pre>$ cp genesis/my-genesis.json genesis.json
-$ vim genesis.json
-$ git add genesis.json
-$ git commit -m &quot;Added genesis.json&quot;
-</pre></div>
-</div>
-<p>The <strong>genesis timestamp</strong> (the notice in the previous step) needs to be
-pasted into <code class="docutils literal"><span class="pre">genesis.json</span></code> file in the initial_timestamp field. If you
-do not do this, nodes using the genesis will have a different chain ID
-and be unable to connect.</p>
 </div>
 <div class="section" id="setting-up-block-production">
 <h2>Setting up block production<a class="headerlink" href="#setting-up-block-production" title="Permalink to this headline">¶</a></h2>
@@ -282,16 +253,17 @@ the RPC-port <cite>11011</cite> to connect a cli-wallet or web wallet to
 it. With the <code class="docutils literal"><span class="pre">p2p-endpoint</span> <span class="pre">=</span> <span class="pre">0.0.0.0:11010</span></code> being accessible
 from the internet, this node can be used as seed node.</p>
 </div>
-<div class="section" id="embedding-the-genesis-block">
-<h3>Embedding the Genesis block<a class="headerlink" href="#embedding-the-genesis-block" title="Permalink to this headline">¶</a></h3>
-<p>Embedded genesis is a feature designed to make life easier for consumers
-of pre-compiled binaries, in exchange for slight, optional complication
-of the process for producing binaries.</p>
-<p>We recompile to include the genesis block:</p>
+<div class="section" id="embedding-the-genesis-block-optional">
+<h3>Embedding the Genesis block (optional)<a class="headerlink" href="#embedding-the-genesis-block-optional" title="Permalink to this headline">¶</a></h3>
+<p>Now that we have the blockchain established and the used correct genesis
+block, we can have it embedded into the binaries directly. For that
+reasons we have moved it into the root directory and called it
+<code class="docutils literal"><span class="pre">genesis.json</span></code> for the default compile toolchain to catch it
+automatically. We recompile to include the genesis block with:</p>
 <div class="highlight-sh"><div class="highlight"><pre>make clean
 find . -name <span class="s2">&quot;CMakeCache.txt&quot;</span> <span class="p">|</span> xargs rm -f
 find . -name <span class="s2">&quot;CMakeFiles&quot;</span> <span class="p">|</span> xargs rm -Rf
-cmake -DGRAPHENE_EGENESIS_JSON<span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span><span class="s2">/genesis/my-genesis.json&quot;</span> -DCMAKE_BUILD_TYPE<span class="o">=</span>Release .
+cmake -DCMAKE_BUILD_TYPE<span class="o">=</span>Release .
 </pre></div>
 </div>
 <p>Deleting caches will reset all <code class="docutils literal"><span class="pre">cmake</span></code> variables, so if you have used

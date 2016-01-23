@@ -137,12 +137,16 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../blockchain/index.html">Blockchain Specifications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../namespaces/index.html">Namespaces</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Public Graphene Testnet</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="index.html#public-testnet">Public Testnet</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Testnet</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#general-information">General Information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#assets">Assets</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#how-it-has-been-deployed">How it has been deployed</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="1-install.html">Installation/Confguration of Witness</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="">Genesis Configuration</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#genesis-editing">Genesis editing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#genesis-editing">Genesis editing</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#writing-final-genesis">Writing final genesis</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="3-init-blockchain.html">Initializing Blockchain</a></li>
@@ -198,6 +202,20 @@ This allows you to control things such as:</p>
 are only valid for a single chain ID.  So editing the genesis file will
 change your chain ID, and make you unable to sync with all existing
 chains (unless one of them has exactly the same genesis file you do).</p>
+<div class="section" id="writing-final-genesis">
+<h3>Writing final genesis<a class="headerlink" href="#writing-final-genesis" title="Permalink to this headline">¶</a></h3>
+<p>We now copy our gensis template file over to the graphene root
+directory::</p>
+<div class="highlight-python"><div class="highlight"><pre>$ cp genesis/my-genesis.json genesis.json
+$ vim genesis.json
+$ git add genesis.json
+$ git commit -m &quot;Added genesis.json&quot;
+</pre></div>
+</div>
+<p>The <strong>initial timestamp</strong> needs to be pasted into <code class="docutils literal"><span class="pre">genesis.json</span></code> file
+in the initial_timestamp field. Choose it relatively close to the future
+where you can generate the genesis block (e.g. now plus 10 minutes).</p>
+</div>
 </div>
 </div>
 
