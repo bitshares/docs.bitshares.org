@@ -8,7 +8,7 @@ generate our first transaction on the new blockchain.
 Creating a wallet
 #################
 
-In order to create a wallet, you must specify the previsouly setup
+In order to create a wallet, you must specify the previously setup
 server. With the witness node's default access control settings, a blank
 username and password will suffice:
 
