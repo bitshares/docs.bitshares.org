@@ -2,15 +2,10 @@
 Initializing Blockchain
 ***********************
 
-
 Initializing the genesis block
 ##############################
 
 We initialize teh blockchain an generate our first blocks.
-
-The ``--genesis-timestamp`` option in the previous step tells the node
-to overwrite the time in the file with a timestamp after startup and use
-a *more recent* timestamp for the chainid.
 
 The ``--enable-stale-production`` flag tells the ``witness_node`` to
 produce on a chain with zero blocks or very old blocks.  We specify the
@@ -20,22 +15,9 @@ file).
 
 .. code-block:: sh
 
-   programs/witness_node/witness_node --genesis-timestamp 10 \
-                                      --genesis-json genesis/my-genesis.json \
+   programs/witness_node/witness_node --genesis-json genesis.json \
                                       --enable-stale-production \
                                       --data-dir data/testnet
-
-.. warning::
-
-    It is important that you make note of the following line.
-
-    ::
-
-        Used genesis timestamp:  2016-01-20T19:11:30 (PLEASE RECORD THIS)
-        WARNING:  GENESIS WAS MODIFIED, YOUR CHAIN ID MAY BE DIFFERENT
-
-    Write down the timestamp as we will need it to construct a proper
-    `genesis.json` file for others to sync with the network!
 
 We will already see our chain id:::
 
@@ -47,22 +29,6 @@ We will already see our chain id:::
           witness node over the p2p network, or which get blockchain
           state from an existing data directory, need not have the
           ``--enable-stale-production`` flag.
-
-Writing final genesis
-#####################
-
-We now copy our gensis template file over to the grapehen root
-direcotry:::
-
-    $ cp genesis/my-genesis.json genesis.json
-    $ vim genesis.json
-    $ git add genesis.json
-    $ git commit -m "Added genesis.json"
-
-The **genesis timestamp** (the notice in the previous step) needs to be
-pasted into ``genesis.json`` file in the initial_timestamp field. If you
-do not do this, nodes using the genesis will have a different chain ID
-and be unable to connect. 
 
 Setting up block production
 ###########################
@@ -113,21 +79,21 @@ signing blocks on a single node.
           it. With the ``p2p-endpoint = 0.0.0.0:11010`` being accessible
           from the internet, this node can be used as seed node.
 
-Embedding the Genesis block
-***************************
+Embedding the Genesis block (optional)
+**************************************
 
-Embedded genesis is a feature designed to make life easier for consumers
-of pre-compiled binaries, in exchange for slight, optional complication
-of the process for producing binaries.
-
-We recompile to include the genesis block:
+Now that we have the blockchain established and the used correct genesis
+block, we can have it embedded into the binaries directly. For that
+reasons we have moved it into the root directory and called it
+``genesis.json`` for the default compile toolchain to catch it
+automatically. We recompile to include the genesis block with:
 
 .. code-block:: sh
 
    make clean
    find . -name "CMakeCache.txt" | xargs rm -f
    find . -name "CMakeFiles" | xargs rm -Rf
-   cmake -DGRAPHENE_EGENESIS_JSON="$(pwd)/genesis/my-genesis.json" -DCMAKE_BUILD_TYPE=Release .
+   cmake -DCMAKE_BUILD_TYPE=Release .
 
 Deleting caches will reset all ``cmake`` variables, so if you have used
 instructions like :doc:`../installation/Build` which tells you to
@@ -143,4 +109,3 @@ simplifications to the subsequent instructions:
   line, or in the witness node configuration file.
 * You need **not** specify the chain ID on the ``cli_wallet`` command line
   when starting a new wallet.
-
