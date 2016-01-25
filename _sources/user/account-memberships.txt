@@ -29,6 +29,15 @@ If a lifetime membership is too much you can still get the same cashback for the
 next year by becoming an annual subscriber for a smaller one-time fee which
 lasts for only one year.
 
+.. note:: 
+
+  Technically, the fees that you pay stay the same, but a part of the
+  fees is refunded in the form of a *vesting balance*.Once the fees have
+  vested you can withdraw them. To see your vesting balances, go to your
+  "Account" tab, then click on "vesting balances" at the bottom left.
+  Vesting balances are recalculated hourly, so you might not yet see
+  them right away.
+
 Fees
 ####
 
