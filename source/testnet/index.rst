@@ -60,9 +60,13 @@ Assets
   * maintenance collateral ratio: 120%
   * short squeeze protection: 110%
 
-* **Witnesses**: currently ``init0`` ... ``init9``
-* **Committee members**: currently ``committee-member-1`` ... ``committee-member-10``
+* **Asset**: ``PEG.FAKEUSD``
 
+  * price feed tracks the U.S dollar price of BTS(!)
+  * price feed updated every 15 minutes
+  * force Settlement Delay: 300 seconds
+  * maintenance collateral ratio: 175%
+  * short squeeze protection: 100.1%
 
 How it has been deployed
 ########################
