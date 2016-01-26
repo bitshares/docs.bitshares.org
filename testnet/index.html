@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <title>Testnet</title>
+    <title>Testnets</title>
 
     <!-- CSS -->
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
@@ -73,7 +73,7 @@
  <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
    <div class='in'>
      <div class='headline'>
-       <h1>Testnet</h1>
+       <h1>Testnets</h1>
  
      </div>
    </div>
@@ -92,7 +92,7 @@
         </div>
         <div class="next">
          <div class="title">next</div>
-         <span><a href="1-install.html">Installation/Confguration of Witness</a></span>
+         <span><a href="public-testnet-howto.html">Public Testnet Howto</a></span>
         </div>
 
    </div>
@@ -137,22 +137,9 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../blockchain/index.html">Blockchain Specifications</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../namespaces/index.html">Namespaces</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Testnet</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#general-information">General Information</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#assets">Assets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#how-it-has-been-deployed">How it has been deployed</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="1-install.html">Installation/Confguration of Witness</a></li>
-<li class="toctree-l3"><a class="reference internal" href="2-genesis.html">Genesis Configuration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="3-init-blockchain.html">Initializing Blockchain</a></li>
-<li class="toctree-l3"><a class="reference internal" href="4-cli-wallet.html">Connecting a CLI wallet</a></li>
-<li class="toctree-l3"><a class="reference internal" href="5-committee.html">Establishing a Committee</a></li>
-<li class="toctree-l3"><a class="reference internal" href="6-webwallet.html">Web Wallet</a></li>
-<li class="toctree-l3"><a class="reference internal" href="7-faucet.html">Setting up the Faucet</a></li>
-<li class="toctree-l3"><a class="reference internal" href="8-nginx.html">Nginx Webserver</a></li>
-<li class="toctree-l3"><a class="reference internal" href="9-python-library.html">Installation of Python Library</a></li>
-<li class="toctree-l3"><a class="reference internal" href="10-create-assets.html">Create MPAs/UIAs</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Testnets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="public-testnet-howto.html">Public Testnet Howto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="private-testnet.html">Private Testnet Howto</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../faq/index.html">Frequently Asked Questions</a></li>
@@ -172,92 +159,24 @@
   </div>
   <div class='content'>
    
-  <div class="section" id="testnet">
-<h1>Testnet<a class="headerlink" href="#testnet" title="Permalink to this headline">¶</a></h1>
-<p>We produdly present the first <a class="reference external" href="http://testnet.bitshares.eu">public testnet</a> based on graphene and
-took the opportunity to construct a tutorial from the process.</p>
-<div class="section" id="general-information">
-<h2>General Information<a class="headerlink" href="#general-information" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>Web wallet: <a class="reference external" href="http://testnet.bitshares.eu">public testnet</a></li>
-<li>Seed node: <code class="docutils literal"><span class="pre">testnet.bitshares.eu:11010</span></code></li>
-<li>Chain-id: <code class="docutils literal"><span class="pre">39f5e2ede1f8bc1a3a54a7914414e3779e33193f1f5693510e73cb7a87617447</span></code></li>
-<li><a class="reference external" href="https://github.com/BitSharesEurope/graphene-testnet/blob/testnet/genesis.json">Genesis Block</a></li>
-<li>Sources:<ul>
-<li><a class="reference external" href="https://github.com/BitSharesEurope/graphene-testnet">Full Node</a></li>
-<li><a class="reference external" href="https://github.com/BitSharesEurope/graphene-ui-testnet">Wallet</a></li>
-<li><a class="reference external" href="https://github.com/BitSharesEurope/faucet-testnet">Faucet</a></li>
-<li><a class="reference external" href="https://github.com/BitSharesEurope/testnet-pythonscripts">Python Scripts</a></li>
-</ul>
-</li>
-<li>Full nodes:</li>
-</ul>
-<p>In order to run a full node, get the  <a class="reference external" href="https://github.com/BitSharesEurope/graphene-testnet">sources</a> and compile them
-as described in the <a class="reference external" href="../bitshares/install/Build">build instructions</a>.
-Then run the node with:</p>
-<div class="highlight-python"><div class="highlight"><pre>$ programs/witness_node/witness_node -s testnet.bitshares.eu:11010
-</pre></div>
-</div>
-<div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last">On this network, <strong>everything</strong> is allowed. As a
-consequence the <em>outside</em> price of any token on this
-blockchain is exactly <strong>zero</strong>. A reset of the blockchain
-may occure at any moment!</p>
-</div>
-</div>
-<div class="section" id="assets">
-<h2>Assets<a class="headerlink" href="#assets" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><strong>Core Unit</strong>: <code class="docutils literal"><span class="pre">TEST</span></code><ul>
-<li>10k TEST for free upon registration</li>
-</ul>
-</li>
-<li><strong>Asset</strong>: <code class="docutils literal"><span class="pre">PEG.RANDOM</span></code><ul>
-<li>price feed at a random walk started at 100.0</li>
-<li>price feed updated every 15 minutes</li>
-<li>force Settlement Delay: 300 seconds</li>
-<li>maintenance collateral ratio: 120%</li>
-<li>short squeeze protection: 110%</li>
-</ul>
-</li>
-<li><strong>Asset</strong>: <code class="docutils literal"><span class="pre">PEG.PARITY</span></code><ul>
-<li>price feed at <code class="docutils literal"><span class="pre">1.0</span></code></li>
-<li>price feed updated every full hour (UTC)</li>
-<li>force Settlement Delay: 300 seconds</li>
-<li>maintenance collateral ratio: 120%</li>
-<li>short squeeze protection: 110%</li>
-</ul>
-</li>
-<li><strong>Asset</strong>: <code class="docutils literal"><span class="pre">PEG.FAKEUSD</span></code><ul>
-<li>price feed tracks the U.S dollar price of BTS(!)</li>
-<li>price feed updated every 15 minutes</li>
-<li>force Settlement Delay: 300 seconds</li>
-<li>maintenance collateral ratio: 175%</li>
-<li>short squeeze protection: 100.1%</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="section" id="how-it-has-been-deployed">
-<h2>How it has been deployed<a class="headerlink" href="#how-it-has-been-deployed" title="Permalink to this headline">¶</a></h2>
-<p>We took the opportunity to write the process of customizing and
-deploying a graphene blockchain as well as the faucet, web wallet and
-feed scripts into a tutorial for everyone to use.</p>
+  <div class="section" id="testnets">
+<h1>Testnets<a class="headerlink" href="#testnets" title="Permalink to this headline">¶</a></h1>
+<p>This page is dedicated to <em>testnets</em>. We distinguish between our
+<strong>public testnet</strong> that has been deployed and is fully functional for
+anyone to use and is shared among developers, and <strong>private testnets</strong>
+that every developer could easily deploy at home to benefit from
+extra low latency and additional super powers over the network.</p>
+<p>You can find all the relevant information about the public network on a
+dedicated page:</p>
+<p class="centered">
+<strong><a class="reference external" href="http://testnet.bitshares.eu">Open Public Testnet</a>
+(<a class="reference internal" href="public-testnet.html"><em>technical details</em></a>)</strong></p><p>Tutorials about how to deploy a public, or a private network are
+presented in separated tutorials:</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="1-install.html">Installation/Confguration of Witness</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2-genesis.html">Genesis Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3-init-blockchain.html">Initializing Blockchain</a></li>
-<li class="toctree-l1"><a class="reference internal" href="4-cli-wallet.html">Connecting a CLI wallet</a></li>
-<li class="toctree-l1"><a class="reference internal" href="5-committee.html">Establishing a Committee</a></li>
-<li class="toctree-l1"><a class="reference internal" href="6-webwallet.html">Web Wallet</a></li>
-<li class="toctree-l1"><a class="reference internal" href="7-faucet.html">Setting up the Faucet</a></li>
-<li class="toctree-l1"><a class="reference internal" href="8-nginx.html">Nginx Webserver</a></li>
-<li class="toctree-l1"><a class="reference internal" href="9-python-library.html">Installation of Python Library</a></li>
-<li class="toctree-l1"><a class="reference internal" href="10-create-assets.html">Create MPAs/UIAs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="public-testnet-howto.html">Public Testnet Howto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="private-testnet.html">Private Testnet Howto</a></li>
 </ul>
-</div>
 </div>
 </div>
 
