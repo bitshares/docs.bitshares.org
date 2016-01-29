@@ -130,24 +130,18 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../muse/index.html">MUSE</a></li>
 </ul>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../integration/index.html">Integration Guide</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../api/index.html">Graphene API</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../api/index.html#interfacing-with-graphene">Interfacing with Graphene</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/index.html#cli-wallet-api">Cli Wallet API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/index.html#full-node-apis">Full Node APIs</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../api/index.html#namespaces">Namespaces</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="chain.html">Graphene::Chain</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">Graphene::App</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wallet.html">Graphene::Wallet</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../integration/index.html">Integration Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">Graphene API</a></li>
+</ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../blockchain/index.html">Blockchain Specifications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index.html">Namespaces</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Namespaces</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="">Graphene::App</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chain.html">Graphene::Chain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wallet.html">Graphene::Wallet</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../testnet/index.html">Testnets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../faq/index.html">Frequently Asked Questions</a></li>
 </ul>
@@ -684,6 +678,90 @@ Callback will be passed a variant containing a vector&lt;pair&lt;operation, oper
 </dd></dl>
 
 <dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api10get_tickerERK6stringRK6string">
+<span id="graphene::app::database_api::get_ticker__stringCR.stringCR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a715904866fea33035714eed54df18785"></span>market_ticker <code class="descname">get_ticker</code><span class="sig-paren">(</span><em class="property">const</em> string &amp;<em>base</em>, <em class="property">const</em> string &amp;<em>quote</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api10get_tickerERK6stringRK6string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the ticker for the market assetA:assetB. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The market ticker for the past 24 hours. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">a</span></code> - <p>String name of the first asset </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">b</span></code> - <p>String name of the second asset </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api13get_24_volumeERK6stringRK6string">
+<span id="graphene::app::database_api::get_24_volume__stringCR.stringCR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1ad5216f8cfa3aef4c0bd4b9a0a61ce010"></span>market_volume <code class="descname">get_24_volume</code><span class="sig-paren">(</span><em class="property">const</em> string &amp;<em>base</em>, <em class="property">const</em> string &amp;<em>quote</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api13get_24_volumeERK6stringRK6string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the 24 hour volume for the market assetA:assetB. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The market volume over the past 24 hours </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">a</span></code> - <p>String name of the first asset </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">b</span></code> - <p>String name of the second asset </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api14get_order_bookERK6stringRK6stringj">
+<span id="graphene::app::database_api::get_order_book__stringCR.stringCR.unsigned"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1af259efc0cee2811ca313741cbe392769"></span>order_book <code class="descname">get_order_book</code><span class="sig-paren">(</span><em class="property">const</em> string &amp;<em>base</em>, <em class="property">const</em> string &amp;<em>quote</em>, unsigned <em>limit</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api14get_order_bookERK6stringRK6stringj" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the order book for the market base:quote. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>Order book of the market </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">base</span></code> - <p>String name of the first asset </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">quote</span></code> - <p>String name of the second asset </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">depth</span></code> - <p>of the order book. Up to depth of each asks and bids, capped at 50. Prioritizes most moderate of each </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api17get_trade_historyERK6stringRK6stringN2fc14time_point_secEN2fc14time_point_secEj">
+<span id="graphene::app::database_api::get_trade_history__stringCR.stringCR.fc::time_point_sec.fc::time_point_sec.unsigned"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a66871295a49393411fe6f4879d6b0725"></span>vector&lt;market_trade&gt; <code class="descname">get_trade_history</code><span class="sig-paren">(</span><em class="property">const</em> string &amp;<em>base</em>, <em class="property">const</em> string &amp;<em>quote</em>, fc::time_point_sec <em>start</em>, fc::time_point_sec <em>stop</em>, unsigned <em>limit</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api17get_trade_historyERK6stringRK6stringN2fc14time_point_secEN2fc14time_point_secEj" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns recent trades for the market assetA:assetB Note: Currentlt, timezone offsets are not supported. The time must be UTC. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>Recent transactions in the market </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">a</span></code> - <p>String name of the first asset </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">b</span></code> - <p>String name of the second asset </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">stop</span></code> - <p>Stop time as a UNIX timestamp </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">limit</span></code> - <p>Number of trasactions to retrieve, capped at 100 </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">start</span></code> - <p>Start time as a UNIX timestamp </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
 <dt id="_CPPv2N8graphene3app12database_api13get_witnessesERK6vectorI15witness_id_typeE">
 <span id="graphene::app::database_api::get_witnesses__vector:witness_id_type:CR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a76e3dbaac5fef15d0933ef2223adf4a0"></span>vector&lt;optional&lt;witness_object&gt;&gt; <code class="descname">get_witnesses</code><span class="sig-paren">(</span><em class="property">const</em> vector&lt;witness_id_type&gt; &amp;<em>witness_ids</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api13get_witnessesERK6vectorI15witness_id_typeE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a list of witnesses by ID. </p>
@@ -1020,6 +1098,12 @@ This function has semantics identical to <a class="reference internal" href="#gr
 <dt id="_CPPv2N8graphene3app9login_api12network_nodeEv">
 <span id="graphene::app::login_api::network_node"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1login__api_1a4ecc6b7863f2e09dc49cd8ad88790f70"></span>fc::api&lt;<a class="reference internal" href="../api/network_node.html#_CPPv2N8graphene3app16network_node_apiE" title="graphene::app::network_node_api">network_node_api</a>&gt; <code class="descname">network_node</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app9login_api12network_nodeEv" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve the network node API. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app9login_api6cryptoEv">
+<span id="graphene::app::login_api::crypto"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1login__api_1a4913729d3342ccaacfec9f9d00f4bd7c"></span>fc::api&lt;crypto_api&gt; <code class="descname">crypto</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app9login_api6cryptoEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the cryptography API. </p>
 </dd></dl>
 
 </div>

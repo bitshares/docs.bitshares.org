@@ -22,6 +22,7 @@ their users.
    assets
    dex
    pm
+   governance
 
 For Blockchain "Employees"
 ##########################
