@@ -133,28 +133,17 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../integration/index.html">Integration Guide</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Graphene API</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="index.html#interfacing-with-graphene">Interfacing with Graphene</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="access.html">API Access Restrictions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="rpc.html">Remote Procedure Calls</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="websocket.html">Websocket Calls &amp; Notifications</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="websocket.html#overview">Overview</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="websocket.html#requesting-api-access">Requesting API access</a><ul class="current">
-<li class="toctree-l5"><a class="reference internal" href="login.html">Login API</a></li>
-<li class="toctree-l5 current"><a class="current reference internal" href="">Database API</a></li>
-<li class="toctree-l5"><a class="reference internal" href="history.html">Account History API</a></li>
-<li class="toctree-l5"><a class="reference internal" href="network_broadcast.html">Network Broadcast API</a></li>
-<li class="toctree-l5"><a class="reference internal" href="network_node.html">Network Nodes API</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="websocket.html#notifications">Notifications</a></li>
-<li class="toctree-l4"><a class="reference internal" href="websocket.html#example-session">Example Session</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#interfacing-with-graphene">Interfacing with Graphene</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#cli-wallet-api">Cli Wallet API</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#full-node-apis">Full Node APIs</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="fullnode.html">Full Node</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="fullnode.html">Full Node</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="">Database API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="history.html">Account History API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="login.html">Login API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="network_broadcast.html">Network Broadcast API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="network_node.html">Network Nodes API</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="login.html">Login API</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="">Database API</a></li>
 <li class="toctree-l3"><a class="reference internal" href="history.html">Account History API</a></li>
@@ -577,6 +566,90 @@ Callback will be passed a variant containing a vector&lt;pair&lt;operation, oper
 <li><code class="first docutils literal"><span class="pre">a</span></code> - <p>First asset ID </p>
 </li>
 <li><code class="first docutils literal"><span class="pre">b</span></code> - <p>Second asset ID </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api10get_tickerERK6stringRK6string">
+<span id="graphene::app::database_api::get_ticker__stringCR.stringCR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a715904866fea33035714eed54df18785"></span>market_ticker <code class="descname">get_ticker</code><span class="sig-paren">(</span><em class="property">const</em> string &amp;<em>base</em>, <em class="property">const</em> string &amp;<em>quote</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api10get_tickerERK6stringRK6string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the ticker for the market assetA:assetB. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The market ticker for the past 24 hours. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">a</span></code> - <p>String name of the first asset </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">b</span></code> - <p>String name of the second asset </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api13get_24_volumeERK6stringRK6string">
+<span id="graphene::app::database_api::get_24_volume__stringCR.stringCR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1ad5216f8cfa3aef4c0bd4b9a0a61ce010"></span>market_volume <code class="descname">get_24_volume</code><span class="sig-paren">(</span><em class="property">const</em> string &amp;<em>base</em>, <em class="property">const</em> string &amp;<em>quote</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api13get_24_volumeERK6stringRK6string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the 24 hour volume for the market assetA:assetB. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The market volume over the past 24 hours </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">a</span></code> - <p>String name of the first asset </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">b</span></code> - <p>String name of the second asset </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api14get_order_bookERK6stringRK6stringj">
+<span id="graphene::app::database_api::get_order_book__stringCR.stringCR.unsigned"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1af259efc0cee2811ca313741cbe392769"></span>order_book <code class="descname">get_order_book</code><span class="sig-paren">(</span><em class="property">const</em> string &amp;<em>base</em>, <em class="property">const</em> string &amp;<em>quote</em>, unsigned <em>limit</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api14get_order_bookERK6stringRK6stringj" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the order book for the market base:quote. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>Order book of the market </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">base</span></code> - <p>String name of the first asset </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">quote</span></code> - <p>String name of the second asset </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">depth</span></code> - <p>of the order book. Up to depth of each asks and bids, capped at 50. Prioritizes most moderate of each </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene3app12database_api17get_trade_historyERK6stringRK6stringN2fc14time_point_secEN2fc14time_point_secEj">
+<span id="graphene::app::database_api::get_trade_history__stringCR.stringCR.fc::time_point_sec.fc::time_point_sec.unsigned"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1database__api_1a66871295a49393411fe6f4879d6b0725"></span>vector&lt;market_trade&gt; <code class="descname">get_trade_history</code><span class="sig-paren">(</span><em class="property">const</em> string &amp;<em>base</em>, <em class="property">const</em> string &amp;<em>quote</em>, fc::time_point_sec <em>start</em>, fc::time_point_sec <em>stop</em>, unsigned <em>limit</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app12database_api17get_trade_historyERK6stringRK6stringN2fc14time_point_secEN2fc14time_point_secEj" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns recent trades for the market assetA:assetB Note: Currentlt, timezone offsets are not supported. The time must be UTC. </p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>Recent transactions in the market </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">a</span></code> - <p>String name of the first asset </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">b</span></code> - <p>String name of the second asset </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">stop</span></code> - <p>Stop time as a UNIX timestamp </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">limit</span></code> - <p>Number of trasactions to retrieve, capped at 100 </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">start</span></code> - <p>Start time as a UNIX timestamp </p>
 </li>
 </ul>
 </dd>

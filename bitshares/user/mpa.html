@@ -184,14 +184,56 @@
    
   <div class="section" id="market-pegged-assets">
 <h1>Market Pegged Assets<a class="headerlink" href="#market-pegged-assets" title="Permalink to this headline">¶</a></h1>
-<p>A crypto-currency, with the properties and advantages of Bitcoin, that is
-capable of maintaining price parity with a globally adopted currency (e.g. U.S.
-dollar), has high utility for convenient and censorship resistant commerce. This
-can be achieved by BitShares&#8217; market pegged assets (MPA), a new type of freely
-traded digital asset whose value is meant to track the value of a conventional
-underlying asset by means of contracts for difference (CFD).</p>
-<p>In the User Interface, MPAs are easily distinguishable from UIAs in the asset
-explorer.</p>
+<p>A crypto-currency, with the properties and advantages of Bitcoin, that
+is capable of maintaining price parity with a globally adopted currency
+(e.g. U.S.  dollar), has high utility for convenient and censorship
+resistant commerce. This can be achieved by BitShares&#8217; market pegged
+assets (MPA), a new type of freely traded digital asset whose value is
+meant to track the value of a conventional underlying asset by means of
+contracts for difference (CFD).</p>
+<p>Instead of creating a UIA where the full control over supply is in the
+hands of the issuer, we can also create a <strong>Market Pegged Asset</strong> (MPA)
+and let the market deal with demand and supply. All we need is a <em>fair
+price</em> and another asset that can be used as collateral.</p>
+<p>Why would we need <em>collateral</em> for? Since the issuer of a MPA has no
+control over the supply, the blockchain protocol deals with increasing
+and decreasing supply. In order for a user to get some of the new coins,
+he will need to put collateral into a <strong>smart contract</strong> (technically,
+this contract is a <em>contract for difference</em>).</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line">A simple example would be a MPA that is backed by USD (a stable crypto
+token within BitShares) that requires a collateral ratio of 200%. Then,
+in order to get new coin, we can borrow 100 USD worth of new coins by paying
+200 USD.</div>
+</div>
+</div></blockquote>
+<p>By this, the supply of your coin is increased by 100. But how would it
+be decreased? The USD are locked in the smart contract and can only be
+reclaimed if the debt (here, 100 coins) are returned. Returning them
+will result in the coins being removed from the supply because the are
+no longer backed by any collateral.</p>
+<p>So what for do we need a <em>fair price</em>? Remember that we chose a
+collateral ratio of 200%? That number tells us how well <em>backed</em> your
+coins are by the collateral. But what would happen if the value of your
+coin goes to the moon?  Then your collateral ratio will reduce to say
+150%. At a certain percentage, the blockchain will automatically trigger
+so called <em>Margin Calls</em> which will</p>
+<ol class="arabic simple">
+<li>Take your collateral (here, USD)</li>
+<li>Sell it in the market to buy back the coin you owe</li>
+<li>Close the contract</li>
+<li>Pay your the residual USD</li>
+</ol>
+<p>A <em>fair price</em> thus tells the market what your coin is worth (e.g.
+traded for on external exchanges) and triggers margin calls if
+necessary.</p>
+<p>But there is more! Everyone that holds your (MPA) coin in BitShares can
+convert the coin into the backing asset at a fair price. This procedure
+is called &#8220;settlement&#8221; and ensures that your MPA is always worth <strong>at
+least</strong> the <em>fair price</em>.</p>
+<p>In the User Interface, MPAs are easily distinguishable from UIAs in the
+asset explorer.</p>
 <div class="section" id="smartcoins">
 <h2>SmartCoins<a class="headerlink" href="#smartcoins" title="Permalink to this headline">¶</a></h2>
 <p>BitAssets can be created and owned by anyone on the network. However,
