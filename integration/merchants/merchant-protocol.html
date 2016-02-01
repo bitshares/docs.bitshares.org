@@ -31,6 +31,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="searchindex.js"></script>
     <!-- Transifex -->
     <script type="text/javascript">
       window.liveSettings = {
@@ -96,19 +97,6 @@
         </div>
 
    </div>
-   <!--
-    <div class='right'>
-<div id="searchbox" style="display: none" role="search">
- <form class="search" action="../../search.html" method="get">
-   <input type="text" name="q" />
-   <input type="submit" value="Go" />
-   <input type="hidden" name="check_keywords" value="yes" />
-   <input type="hidden" name="area" value="default" />
- </form>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-   </div>
-   -->
  </div>
 
  <div class='content-root'>
@@ -170,11 +158,20 @@
 
     </div>
    </div>
+   <div class="search section">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+   </div>
    <div class='bottom section'>
-   <!--
-     <a href='https://github.com/cryptonomex/graphene'>View on GitHub</a><br>
-     <a href='https://github.com/cryptonomex/graphene/blob/master/README.md' target='_blank'>See .md source</a>
-   -->
+
    </div>
   </div>
   <div class='content'>
@@ -204,6 +201,7 @@ to the user.</p>
    <span class="s">&quot;to&quot;</span> <span class="p">:</span> <span class="s">&quot;merchant_account_name&quot;</span><span class="p">,</span>
    <span class="s">&quot;to_label&quot;</span> <span class="p">:</span> <span class="s">&quot;Merchant Name&quot;</span><span class="p">,</span>
    <span class="s">&quot;memo&quot;</span> <span class="p">:</span> <span class="s">&quot;Invoice #1234&quot;</span><span class="p">,</span>
+   <span class="s">&quot;currency&quot;</span><span class="p">:</span> <span class="s">&quot;BTS&quot;</span><span class="p">,</span>
    <span class="s">&quot;line_items&quot;</span> <span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span> <span class="s">&quot;label&quot;</span> <span class="p">:</span> <span class="s">&quot;Something to Buy&quot;</span><span class="p">,</span> <span class="s">&quot;quantity&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&quot;price&quot;</span> <span class="p">:</span> <span class="s">&quot;1000.00 SYMBOL&quot;</span> <span class="p">},</span>
         <span class="p">{</span> <span class="s">&quot;label&quot;</span> <span class="p">:</span> <span class="s">&quot;10 things to Buy&quot;</span><span class="p">,</span> <span class="s">&quot;quantity&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s">&quot;price&quot;</span> <span class="p">:</span> <span class="s">&quot;1000.00 SYMBOL&quot;</span> <span class="p">},</span>
@@ -259,6 +257,34 @@ invoice.</p>
 <p>At this point the user has successfully made a payment and the merchant
 has verified the payment has been received without having to maintain a
 full node.</p>
+</div>
+<div class="section" id="example-python-script">
+<h2>Example Python script<a class="headerlink" href="#example-python-script" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">lzma</span>
+<span class="kn">from</span> <span class="nn">graphenebase.base58</span> <span class="kn">import</span> <span class="n">base58encode</span><span class="p">,</span> <span class="n">base58decode</span>
+<span class="kn">from</span> <span class="nn">binascii</span> <span class="kn">import</span> <span class="n">hexlify</span><span class="p">,</span> <span class="n">unhexlify</span>
+
+<span class="n">invoice</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">&quot;to&quot;</span><span class="p">:</span> <span class="s">&quot;bitshareseurope&quot;</span><span class="p">,</span>
+    <span class="s">&quot;to_label&quot;</span><span class="p">:</span> <span class="s">&quot;BitShares Europre&quot;</span><span class="p">,</span>
+    <span class="s">&quot;currency&quot;</span><span class="p">:</span> <span class="s">&quot;EUR&quot;</span><span class="p">,</span>
+    <span class="s">&quot;memo&quot;</span><span class="p">:</span> <span class="s">&quot;Invoice #1234&quot;</span><span class="p">,</span>
+    <span class="s">&quot;line_items&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s">&quot;label&quot;</span><span class="p">:</span> <span class="s">&quot;Something to Buy&quot;</span><span class="p">,</span> <span class="s">&quot;quantity&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&quot;price&quot;</span><span class="p">:</span> <span class="s">&quot;10.00&quot;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s">&quot;label&quot;</span><span class="p">:</span> <span class="s">&quot;10 things to Buy&quot;</span><span class="p">,</span> <span class="s">&quot;quantity&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s">&quot;price&quot;</span><span class="p">:</span> <span class="s">&quot;1.00&quot;</span><span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s">&quot;note&quot;</span><span class="p">:</span> <span class="s">&quot;Payment for reading awesome documentation&quot;</span><span class="p">,</span>
+    <span class="s">&quot;callback&quot;</span><span class="p">:</span> <span class="s">&quot;https://bitshares.eu/complete&quot;</span>
+<span class="p">}</span>
+
+<span class="n">compressed</span> <span class="o">=</span> <span class="n">lzma</span><span class="o">.</span><span class="n">compress</span><span class="p">(</span><span class="nb">bytes</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">invoice</span><span class="p">),</span> <span class="s">&#39;utf-8&#39;</span><span class="p">),</span> <span class="n">format</span><span class="o">=</span><span class="n">lzma</span><span class="o">.</span><span class="n">FORMAT_ALONE</span><span class="p">)</span>
+<span class="n">b58</span> <span class="o">=</span> <span class="n">base58encode</span><span class="p">(</span><span class="n">hexlify</span><span class="p">(</span><span class="n">compressed</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">&#39;utf-8&#39;</span><span class="p">))</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">&quot;https://bitshares.openledger.info/#/invoice/</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">b58</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 </div>
 
