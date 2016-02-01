@@ -28,7 +28,7 @@ Then run the node with:
 
 ::
 
-  $ programs/witness_node/witness_node -s testnet.bitshares.eu:11010
+  $ programs/witness_node/witness_node --genesis-json genesis.json
 
 .. warning:: On this network, **everything** is allowed. As a
              consequence the *outside* price of any token on this

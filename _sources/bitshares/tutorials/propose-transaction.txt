@@ -42,7 +42,7 @@ A proposal can be approved simply by:
 
 ::
 
-    approve_proposal <approving-account> <proposal_id> {"active_approvals_to_add" : ["<account-name-required-for-approval>"]} false
+    approve_proposal <proposing-account> <proposal_id> {"active_approvals_to_add" : ["<account-name-required-for-approval>"]} false
 
 When replacing the final ``false`` with true, the transaction will be
 broadcasted!

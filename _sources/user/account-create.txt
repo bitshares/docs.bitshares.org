@@ -13,7 +13,7 @@ account:
 
 .. include:: /bitshares/register-ref.rst
 
-The identicon at the top cn be used to verify your account name to third
+The identicon at the top can be used to verify your account name to third
 parties. It is derived from your acocunt name and gives a second verification
 factor. And this is how you register your account:
 
