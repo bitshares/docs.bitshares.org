@@ -11,4 +11,5 @@ your funds in MUSE.
 
 .. toctree::
    howto-exporting-wallet
+   howto-create-an-account
    howto-importing-wallet
