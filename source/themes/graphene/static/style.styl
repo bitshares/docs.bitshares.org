@@ -534,12 +534,6 @@ body.no-literate .content pre > code
   z-index: 100
 
 // ----------------------------------------------------------------------------
-// Search field
-#searchbox
-  input
-    font-size 9px
-
-// ----------------------------------------------------------------------------
 // Sidebar
 
 .menubar
@@ -629,6 +623,22 @@ a.big.button
       color: $accent
     &:hover
       color: $accent*0.8
+
+// Search box
+.search
+  h3
+   font-weight: 700
+   text-align: center
+   margin-bottom: 1ex
+   text-transform: uppercase
+
+#searchbox
+  input
+    font-size 11px
+    font-family: $body-font
+    font-weight: 300
+    color:$txt
+    text-align: center
 
 // Menu items
 .menu

@@ -54,6 +54,7 @@
     {%- for scriptfile in script_files %}
     <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
     {%- endfor %}
+    <script type="text/javascript" src="searchindex.js"></script>
     <!-- Transifex -->
     <script type="text/javascript">
       window.liveSettings = {
@@ -64,7 +65,8 @@
 
     <!-- title card -->
     <link  href='{{ pathto( '_static/title-card.css',1 )}}' rel='stylesheet'>
-    {%- if url_root == './' %}
+    {%- if url_root == './' and pagename != "search" %}
+    <!-- {{ pagename }} //-->
     <script src='{{ pathto( '_static/title-card.js',1 )}}'></script>
     {% endif %}
     <script src='{{ pathto( '_static/script.js',1 )}}'></script>
@@ -99,7 +101,7 @@
  <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
    <div class='in'>
      <div class='headline'>
- {%- if url_root == './' %}
+ {%- if url_root == './' and pagename != "search" %}
        <h1>{{ project }}</h1>
        <p>{{ title|striptags|e }}</p>
        <p style="margin-top: 3em;"><img src="{{ pathto( '_static/learn.svg', 1 )}}" width="124" /><p>
@@ -114,13 +116,6 @@
    <div class='left navlinks'>
     {{ nav() }}
    </div>
-   <!--
-    <div class='right'>
-    {%- block sidebarsearch %}
-    {%- include "searchbox.html" %}
-    {%- endblock %}
-   </div>
-   -->
  </div>
 
  <div class='content-root'>
@@ -139,11 +134,13 @@
       {{ toctree(maxdepth=5) }}
     </div>
    </div>
+   <div class="search section">
+    {%- block sidebarsearch %}
+    {%- include "searchbox.html" %}
+    {%- endblock %}
+   </div>
    <div class='bottom section'>
-   <!--
-     <a href='https://github.com/cryptonomex/graphene'>View on GitHub</a><br>
-     <a href='https://github.com/cryptonomex/graphene/blob/master/README.md' target='_blank'>See .md source</a>
-   -->
+
    </div>
   </div>
   <div class='content'>
