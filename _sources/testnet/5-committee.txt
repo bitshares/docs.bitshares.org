@@ -47,6 +47,7 @@ Registering as committee member
 We can apply for committee with `create_committee_member`:
 
 ::
+
     create_committee_member com0 "" true
     create_committee_member com1 "" true
     create_committee_member com2 "" true

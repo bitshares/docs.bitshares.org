@@ -5,7 +5,7 @@ Initializing Blockchain
 Initializing the genesis block
 ##############################
 
-We initialize teh blockchain an generate our first blocks.
+We initialize the blockchain an generate our first blocks.
 
 The ``--enable-stale-production`` flag tells the ``witness_node`` to
 produce on a chain with zero blocks or very old blocks.  We specify the
@@ -38,7 +38,7 @@ Let's create a very basic configuration file in `data/testnet/config.ini`:
 ::
 
     $ mkdir -p data/testnet
-    $ cim data/testnet/config.ini
+    $ vim data/testnet/config.ini
 
 All we put into the configuration file is the ids and the keys for the
 witnesses so that we can start producing blocks 
