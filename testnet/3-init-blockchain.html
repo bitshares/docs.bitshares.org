@@ -170,7 +170,9 @@
 <script type="text/javascript">$('#searchbox').show(0);</script>
    </div>
    <div class='bottom section'>
-
+    <p class="centered">
+     <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
+    </p>
    </div>
   </div>
   <div class='content'>
@@ -179,7 +181,7 @@
 <h1>Initializing Blockchain<a class="headerlink" href="#initializing-blockchain" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="initializing-the-genesis-block">
 <h2>Initializing the genesis block<a class="headerlink" href="#initializing-the-genesis-block" title="Permalink to this headline">¶</a></h2>
-<p>We initialize teh blockchain an generate our first blocks.</p>
+<p>We initialize the blockchain an generate our first blocks.</p>
 <p>The <code class="docutils literal"><span class="pre">--enable-stale-production</span></code> flag tells the <code class="docutils literal"><span class="pre">witness_node</span></code> to
 produce on a chain with zero blocks or very old blocks.  We specify the
 <code class="docutils literal"><span class="pre">--enable-stale-production</span></code> parameter on the command line as we will
@@ -208,7 +210,7 @@ state from an existing data directory, need not have the
 <h2>Setting up block production<a class="headerlink" href="#setting-up-block-production" title="Permalink to this headline">¶</a></h2>
 <p>Let&#8217;s create a very basic configuration file in <cite>data/testnet/config.ini</cite>:</p>
 <div class="highlight-python"><div class="highlight"><pre>$ mkdir -p data/testnet
-$ cim data/testnet/config.ini
+$ vim data/testnet/config.ini
 </pre></div>
 </div>
 <p>All we put into the configuration file is the ids and the keys for the
