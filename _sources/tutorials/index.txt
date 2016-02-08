@@ -13,6 +13,8 @@ General Tutorials
    construct-transaction
    propose-transaction
    confidential-transactions
+   vesting-list
+   vesting-claim
 
 Assets
 ######
@@ -41,9 +43,10 @@ Committee Tutorials
 .. toctree::
    :maxdepth: 1
 
-   committee-fee-change
    committee-member-create
    committee-propose-action
+   committee-approve-proposal
+   committee-fee-change
 
 Worker Tutorials
 ###################

@@ -38,6 +38,7 @@ Recent Updates
 
 .. r!date +\%y/\%m/\%d
 
+* ``16/02/08`` :doc:`bitshares/user/committee`, :doc:`bitshares/tutorials/committee-approve-proposal`, :doc:`bitshares/user/vesting`
 * ``16/02/01`` :doc:`integration/merchants/merchant-protocol`, Added search to the navigation
 * ``16/01/19`` :doc:`testnet/index`, :doc:`bitshares/tutorials/pm-create-manual`, :doc:`bitshares/user/eba`
 * ``16/01/13`` :doc:`bitshares/tutorials/uia-update-manual`, :doc:`bitshares/tutorials/uia-create-manual`, :doc:`bitshares/tutorials/uia-create-gui`, :doc:`integration/network-setup`, :doc:`integration/tutorials/index`

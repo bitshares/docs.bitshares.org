@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <title>Assets/Tokens</title>
+    <title>Vesting Balances</title>
 
     <!-- CSS -->
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
@@ -74,7 +74,7 @@
  <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
    <div class='in'>
      <div class='headline'>
-       <h1>Assets/Tokens</h1>
+       <h1>Vesting Balances</h1>
  
      </div>
    </div>
@@ -85,7 +85,7 @@
     
         <div class="prev">
          <div class="title">previous</div>
-         <span><a href="transactions-confidential.html">Confidential Transactions</a></span>
+         <span><a href="governance.html">Blockchain Governance</a></span>
         </div>
         <div class="top">
          <div class="title">top</div>
@@ -93,7 +93,7 @@
         </div>
         <div class="next">
          <div class="title">next</div>
-         <span><a href="assets-faq.html">Assets FAQ</a></span>
+         <span><a href="../tutorials/vesting-list.html">List Vesting Balances</a></span>
         </div>
 
    </div>
@@ -124,15 +124,15 @@
 <li class="toctree-l4"><a class="reference internal" href="account.html">Accounts</a></li>
 <li class="toctree-l4"><a class="reference internal" href="security.html">Security</a></li>
 <li class="toctree-l4"><a class="reference internal" href="transactions.html">Transactions and Operations</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="">Assets/Tokens</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#frequently-asked-questions">Frequently Asked Questions</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#tutorials">Tutorials</a></li>
-</ul>
-</li>
+<li class="toctree-l4"><a class="reference internal" href="assets.html">Assets/Tokens</a></li>
 <li class="toctree-l4"><a class="reference internal" href="dex.html">Decentralized Exchange</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pm.html">Prediction Markets</a></li>
 <li class="toctree-l4"><a class="reference internal" href="governance.html">Blockchain Governance</a></li>
-<li class="toctree-l4"><a class="reference internal" href="vesting.html">Vesting Balances</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="">Vesting Balances</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#strategies">Strategies</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#tutorials">Tutorials</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="index.html#for-blockchain-employees">For Blockchain &#8220;Employees&#8221;</a></li>
@@ -183,92 +183,47 @@
   </div>
   <div class='content'>
    
-  <div class="section" id="assets-tokens">
-<h1>Assets/Tokens<a class="headerlink" href="#assets-tokens" title="Permalink to this headline">¶</a></h1>
-<p>The BitShares 2.0 network consist of several <em>assets</em>, <em>tokens</em> or <em>currencies</em>.
-All assets are equal from a technological point of view and come with more or
-less the same features, namely, they can be traded against each other and can be
-transfered within seconds. The differences between them are of economical
-nature.</p>
-<p><span class="html"><div class="container-fluid"><div class="row"><div class="col-md-6"></span></p>
-<p><strong>User Issued Assets (UIAs)</strong></p>
-<p>Freely traded tokens created by individuals used for a variety of
-use-cases, such as stock, miles, event tickets or reputation points.</p>
-<p class="centered">
-<strong><a class="reference internal" href="uia.html"><em>Read more ...</em></a></strong></p><p><span class="html"></div><div class="col-md-6"></span></p>
-<p><strong>Market-Pegged Assets (MPA)</strong></p>
-<p>These <em>SmartCoins</em> track the value of an underlaying asset, such as Gold, or
-U.S. Dollar. Smartcoins can be created by anyone contracting with the
-BitShares ecosystem and putting sufficient BTS (at least 175%) into the so
-called contract for difference as <em>collateral</em>.</p>
-<p class="centered">
-<strong><a class="reference internal" href="mpa.html"><em>Read more ...</em></a></strong></p><p><span class="html"></div></div></span>
-<span class="html"><div class="row"><div class="col-md-6"></span></p>
-<p><strong>Exchange Backed Assets (EBA)</strong></p>
-<p>This kind of asset is commonly known as <em>I owe you</em> (IOU). It represents
-the right to withdraw the <em>same amount</em> (minus fees) of a backing asset
-from a <em>central</em> entity. Often they are issued by a bank, an exchange or
-an other financial institute to represent deposit receipts.</p>
-<p class="centered">
-<strong><a class="reference internal" href="eba.html"><em>Read more ...</em></a></strong></p><p><span class="html"></div><div class="col-md-6"></span></p>
-<p><strong>Privatized Bit-Assets</strong></p>
-<p>A flexible mixture between UIA and MPA that allows 3rd parties to create their
-own customized MPAs.</p>
-<p class="centered">
-<strong><a class="reference internal" href="privbta.html"><em>Read more ...</em></a></strong></p><p><span class="html"></div></div></span>
-<span class="html"><div class="row"><div class="col-md-6"></span></p>
-<p><strong>Fee Backed Assets</strong></p>
-<p>An FBA is a token that pays you a fraction of the transaction fees generated
-by a particular feature that has been funded independent of BitShares.</p>
-<p class="centered">
-<strong><a class="reference internal" href="fba.html"><em>Read more ...</em></a></strong></p><p><span class="html"></div><div class="col-md-6"></span></p>
-<p><strong>Prediction Market Asset</strong></p>
-<p>A prediction market is similar to a MPA, that trades between 0 and 1,
-only. After an event, a price feed can be used to determine which option
-to take and participants can settle at this price.</p>
-<p class="centered">
-<strong><a class="reference internal" href="pm.html"><em>Read more ...</em></a></strong></p><p><span class="html"></div><div class="col-md-6"></span>
-<span class="html"></div></div></div></span></p>
-<div class="section" id="frequently-asked-questions">
-<h2>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="assets-faq.html">Assets FAQ</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="assets-faq.html#can-i-change-x-after-creation-of-the-asset">Can I change <cite>x</cite> after creation of the asset</a></li>
-<li class="toctree-l2"><a class="reference internal" href="assets-faq.html#what-about-parent-and-child-assets">What about Parent and Child assets?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="assets-faq.html#market-fees">Market Fees?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="assets-faq.html#what-if-two-different-market-fees-are-involved-in-a-trade">What if two different market fees are involved in a trade?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="assets-faq.html#what-are-asset-flags-and-permissions">What are Asset Flags and Permissions?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="assets-faq.html#what-are-the-permissions">What are the Permissions:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="assets-faq.html#what-are-the-flags">What are the Flags?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="assets-faq.html#what-are-market-pegged-asset-specific-parameters">What are market-pegged-asset-specific parameters</a></li>
+  <div class="section" id="vesting-balances">
+<h1>Vesting Balances<a class="headerlink" href="#vesting-balances" title="Permalink to this headline">¶</a></h1>
+<p>In BitShares 2, some balances are vesting over time. This feature has
+been introduced initially in BitShares 1 when merging several
+blockchain businesses into one blockchain.</p>
+<p>Now, we make even more use of this functionality in such that an
+accounts income in form of</p>
+<ul class="simple">
+<li>worker pay,</li>
+<li>witness pay,</li>
+<li>the referral program, or</li>
+<li>cashback</li>
 </ul>
-</li>
-</ul>
+<p>is vesting over several days with different strategies.</p>
+<p>For instance, a worker can define for how long he would like his pay to
+vest to encourage shareholders to vote for him due to no imminent
+additional sell pressure from the worker.</p>
+<div class="section" id="strategies">
+<h2>Strategies<a class="headerlink" href="#strategies" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ccd-coin-days-destroyed">
+<h3>CCD / Coin Days Destroyed<a class="headerlink" href="#ccd-coin-days-destroyed" title="Permalink to this headline">¶</a></h3>
+<p>The economic effect of this vesting policy is to require a certain
+amount of &#8220;interest&#8221; to accrue before the full balance may be withdrawn.
+Interest accrues as coindays (balance * length held). If some of the
+balance is withdrawn, the remaining balance must be held longer.</p>
+</div>
+<div class="section" id="linear-vesting-with-cliff">
+<h3>Linear Vesting with Cliff<a class="headerlink" href="#linear-vesting-with-cliff" title="Permalink to this headline">¶</a></h3>
+<p>This vesting balance type is used to mimic traditional stock vesting
+contracts where each day a certain amount vests until it is fully
+matured.</p>
 </div>
 </div>
 <div class="section" id="tutorials">
 <h2>Tutorials<a class="headerlink" href="#tutorials" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/uia-create-gui.html">Creating a new UIA</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/uia-create-manual.html">Creating a UIA manually</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/mpa-create-manual.html">Creating a MPA manually</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/pm-create-manual.html">Creating a Prediction Market</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/pm-close-manual.html">Closing/Settling a Prediction Market</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/vesting-list.html">List Vesting Balances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/vesting-claim.html">Claiming A Vesting Balance</a></li>
 </ul>
 </div>
-<p><span class="html"><!-- Adding the toctree</span></p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="uia.html">User Issued Assets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mpa.html">Market Pegged Assets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="fba.html">Fee Backed Asset</a></li>
-<li class="toctree-l1"><a class="reference internal" href="privbta.html">Privatized BitAssets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pm.html">Prediction Markets</a></li>
-</ul>
-</div>
-<p><span class="html">//--></span></p>
 </div>
 </div>
 

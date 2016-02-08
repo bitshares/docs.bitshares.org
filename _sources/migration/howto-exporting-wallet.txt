@@ -20,7 +20,7 @@ upgrade you need to:
 * uninstall your previous version of the BitShares client
 * install the new version
 
-.. _bitshares webpage: http://bitshares.org/download
+.. _bitshares webpage: https://github.com/bitshares/bitshares-0.x/releases
 
 Attempt to sync with the blockchain (this is only necessary with if you think
 that since the last time you did the syncing there have been some new
