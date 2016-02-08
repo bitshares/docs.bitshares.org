@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <title>Committee</title>
+    <title>Claiming A Vesting Balance</title>
 
     <!-- CSS -->
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
@@ -74,7 +74,7 @@
  <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
    <div class='in'>
      <div class='headline'>
-       <h1>Committee</h1>
+       <h1>Claiming A Vesting Balance</h1>
  
      </div>
    </div>
@@ -85,7 +85,7 @@
     
         <div class="prev">
          <div class="title">previous</div>
-         <span><a href="shareholder.html">Shareholder</a></span>
+         <span><a href="vesting-list.html">List Vesting Balances</a></span>
         </div>
         <div class="top">
          <div class="title">top</div>
@@ -93,7 +93,7 @@
         </div>
         <div class="next">
          <div class="title">next</div>
-         <span><a href="../tutorials/committee-member-create.html">Creating a New Committee Member</a></span>
+         <span><a href="uia-create-gui.html">Creating a new UIA</a></span>
         </div>
 
    </div>
@@ -117,24 +117,30 @@
 <li class="toctree-l2"><a class="reference internal" href="../installation/index.html">Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../migration/index.html">Migrating from BitShares 1.0 to BitShares 2.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../papers/index.html">Whitepapers</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">User Guide</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="index.html#for-end-user">For End User</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html#for-blockchain-employees">For Blockchain &#8220;Employees&#8221;</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="shareholder.html">Shareholder</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="">Committee</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#tutorials">Tutorials</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="witness.html">Witnesses</a></li>
-<li class="toctree-l4"><a class="reference internal" href="worker.html">Workers / Budget Items</a></li>
-<li class="toctree-l4"><a class="reference internal" href="marketer.html">Marketer</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#frequently-asked-questions">Frequently Asked Questions</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="../user/index.html">User Guide</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../developers/index.html">Businesses, Developers and Business Developers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Tutorials</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#general-tutorials">General Tutorials</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="full-node-usage.html">How to Run and Use a Full Node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="account-create.html">Account Registration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="construct-transaction.html">Manually Construct Any Transaction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="propose-transaction.html">Proposing a Transaction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="confidential-transactions.html">Confidential Transfers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vesting-list.html">List Vesting Balances</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="">Claiming A Vesting Balance</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#web-wallet">Web Wallet</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#console-wallet">Console Wallet</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#assets">Assets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#prediction-markets">Prediction Markets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#committee-tutorials">Committee Tutorials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#worker-tutorials">Worker Tutorials</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#witness-tutorials">Witness Tutorials</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -177,44 +183,43 @@
   </div>
   <div class='content'>
    
-  <div class="section" id="committee">
-<h1>Committee<a class="headerlink" href="#committee" title="Permalink to this headline">¶</a></h1>
-<p>Since Bitcoin struggled to reach a consensus about the size of their blocks,
-the people in the cryptocurrency space realized that the governance of a DAC
-should not be ignored. Hence, BitShares offers a tools to reach on-chain
-consensus about business management decisions.</p>
-<p>The BitShares blockchain has a set of parameters available that are subject of
-shareholder approval. Shareholders can define their preferred set of parameters
-and thereby create a so called <em>committee member</em> or alternatively vote for an
-existing committee member. The BitShares committee consists of several <em>active</em>
-committee members.</p>
-<p>The BitShares ecosystem has a set of parameters available that are subject of
-shareholder approval. Initially, BitShares has the following blockchain
-parameters:</p>
-<ul class="simple">
-<li><strong>fee structure</strong>:         <em>fess that have to be paid by customers for individual transactions</em></li>
-<li><strong>block interval</strong>:        <em>i.e. block interval, max size of block/transaction</em></li>
-<li><strong>expiration parameters</strong>: <em>i.e. maximum expiration interval</em></li>
-<li><strong>witness parameters</strong>:    <em>i.e. maximum amount of witnesses (block producers)</em></li>
-<li><strong>committee parameters</strong>:  <em>i.e. maximum amount of committee members</em></li>
-<li><strong>witness pay</strong>:           <em>payment for each witnesses per signed block</em></li>
-<li><strong>worker budget</strong>:         <em>available budget available for budget items (e.g. development)</em></li>
-</ul>
-<p>Please note that the given set of parameters serves as an example and that the
-network&#8217;s parameters are subject to change over time.</p>
-<p>Additionally to defining the parameters any active witness can propose a
-protocol or business upgrade (i.e. hard fork) which can be voted on (or against)
-by shareholders. When the total votes for the hard fork are greater than the
-median witness weight <cite>w</cite> then the hard fork takes effect.</p>
-<div class="section" id="tutorials">
-<h2>Tutorials<a class="headerlink" href="#tutorials" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/committee-member-create.html">Creating a New Committee Member</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/committee-propose-action.html">Howto Propose Committee Actions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/committee-approve-proposal.html">How to Approve/Disapprove a Committee Proposal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/committee-fee-change.html">How Committee Proposes a Change in Fee</a></li>
-</ul>
+  <div class="section" id="claiming-a-vesting-balance">
+<h1>Claiming A Vesting Balance<a class="headerlink" href="#claiming-a-vesting-balance" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="web-wallet">
+<h2>Web Wallet<a class="headerlink" href="#web-wallet" title="Permalink to this headline">¶</a></h2>
+<p>Claiming vesting balances using the web wallet (GUI) is quite simple.
+All you need to do is enter your account&#8217;s page, click on <em>Vesting
+Balances</em> and pick the balance you would like to claim. The
+corresponding transaction is constructed automatically and will be
+signed after your confirmation.</p>
+<a class="reference internal image-reference" href="../../_images/vesting-claim.png"><img alt="Claim Vesting Balances" class="align-center" src="../../_images/vesting-claim.png" style="width: 500px;" /></a>
+</div>
+<div class="section" id="console-wallet">
+<h2>Console Wallet<a class="headerlink" href="#console-wallet" title="Permalink to this headline">¶</a></h2>
+<p>From the CLI wallet, vesting balances from witnesses can be claimed by
+using::</p>
+<div class="highlight-python"><div class="highlight"><pre>withdraw_vesting &lt;account&gt; &lt;amount&gt; &lt;asset&gt;
+</pre></div>
+</div>
+<p>Unfortunately, no call exists for non-witness-pay vesting balances, yet
+but a transaction can be <a class="reference internal" href="construct-transaction.html"><em>constructed manually</em></a>
+with the operation <code class="docutils literal"><span class="pre">vesting_balance_withdraw_operation</span></code> and takes the
+form:</p>
+<div class="highlight-js"><div class="highlight"><pre><span class="p">[</span>
+  <span class="mi">33</span><span class="p">,{</span>
+    <span class="s2">&quot;fee&quot;</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">&quot;asset_id&quot;</span><span class="o">:</span> <span class="s2">&quot;1.3.0&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;vesting_balance&quot;</span><span class="o">:</span> <span class="s2">&quot;1.13.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;owner&quot;</span><span class="o">:</span> <span class="s2">&quot;1.2.0&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">&quot;asset_id&quot;</span><span class="o">:</span> <span class="s2">&quot;1.3.0&quot;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
 </div>
 </div>
 </div>

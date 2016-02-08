@@ -23,6 +23,7 @@ their users.
    dex
    pm
    governance
+   vesting
 
 For Blockchain "Employees"
 ##########################

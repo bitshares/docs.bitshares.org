@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <title>Committee</title>
+    <title>Vesting Balances</title>
 
     <!-- CSS -->
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
@@ -74,7 +74,7 @@
  <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
    <div class='in'>
      <div class='headline'>
-       <h1>Committee</h1>
+       <h1>Vesting Balances</h1>
  
      </div>
    </div>
@@ -146,43 +146,45 @@
   </div>
   <div class='content'>
    
-  <div class="section" id="committee">
-<h1>Committee<a class="headerlink" href="#committee" title="Permalink to this headline">¶</a></h1>
-<p>Since Bitcoin struggled to reach a consensus about the size of their blocks,
-the people in the cryptocurrency space realized that the governance of a DAC
-should not be ignored. Hence, BitShares offers a tools to reach on-chain
-consensus about business management decisions.</p>
-<p>The BitShares blockchain has a set of parameters available that are subject of
-shareholder approval. Shareholders can define their preferred set of parameters
-and thereby create a so called <em>committee member</em> or alternatively vote for an
-existing committee member. The BitShares committee consists of several <em>active</em>
-committee members.</p>
-<p>The BitShares ecosystem has a set of parameters available that are subject of
-shareholder approval. Initially, BitShares has the following blockchain
-parameters:</p>
+  <div class="section" id="vesting-balances">
+<h1>Vesting Balances<a class="headerlink" href="#vesting-balances" title="Permalink to this headline">¶</a></h1>
+<p>In BitShares 2, some balances are vesting over time. This feature has
+been introduced initially in BitShares 1 when merging several
+blockchain businesses into one blockchain.</p>
+<p>Now, we make even more use of this functionality in such that an
+accounts income in form of</p>
 <ul class="simple">
-<li><strong>fee structure</strong>:         <em>fess that have to be paid by customers for individual transactions</em></li>
-<li><strong>block interval</strong>:        <em>i.e. block interval, max size of block/transaction</em></li>
-<li><strong>expiration parameters</strong>: <em>i.e. maximum expiration interval</em></li>
-<li><strong>witness parameters</strong>:    <em>i.e. maximum amount of witnesses (block producers)</em></li>
-<li><strong>committee parameters</strong>:  <em>i.e. maximum amount of committee members</em></li>
-<li><strong>witness pay</strong>:           <em>payment for each witnesses per signed block</em></li>
-<li><strong>worker budget</strong>:         <em>available budget available for budget items (e.g. development)</em></li>
+<li>worker pay,</li>
+<li>witness pay,</li>
+<li>the referral program, or</li>
+<li>cashback</li>
 </ul>
-<p>Please note that the given set of parameters serves as an example and that the
-network&#8217;s parameters are subject to change over time.</p>
-<p>Additionally to defining the parameters any active witness can propose a
-protocol or business upgrade (i.e. hard fork) which can be voted on (or against)
-by shareholders. When the total votes for the hard fork are greater than the
-median witness weight <cite>w</cite> then the hard fork takes effect.</p>
+<p>is vesting over several days with different strategies.</p>
+<p>For instance, a worker can define for how long he would like his pay to
+vest to encourage shareholders to vote for him due to no imminent
+additional sell pressure from the worker.</p>
+<div class="section" id="strategies">
+<h2>Strategies<a class="headerlink" href="#strategies" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ccd-coin-days-destroyed">
+<h3>CCD / Coin Days Destroyed<a class="headerlink" href="#ccd-coin-days-destroyed" title="Permalink to this headline">¶</a></h3>
+<p>The economic effect of this vesting policy is to require a certain
+amount of &#8220;interest&#8221; to accrue before the full balance may be withdrawn.
+Interest accrues as coindays (balance * length held). If some of the
+balance is withdrawn, the remaining balance must be held longer.</p>
+</div>
+<div class="section" id="linear-vesting-with-cliff">
+<h3>Linear Vesting with Cliff<a class="headerlink" href="#linear-vesting-with-cliff" title="Permalink to this headline">¶</a></h3>
+<p>This vesting balance type is used to mimic traditional stock vesting
+contracts where each day a certain amount vests until it is fully
+matured.</p>
+</div>
+</div>
 <div class="section" id="tutorials">
 <h2>Tutorials<a class="headerlink" href="#tutorials" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/committee-member-create.html">Creating a New Committee Member</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/committee-propose-action.html">Howto Propose Committee Actions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/committee-approve-proposal.html">How to Approve/Disapprove a Committee Proposal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/committee-fee-change.html">How Committee Proposes a Change in Fee</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/vesting-list.html">List Vesting Balances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/vesting-claim.html">Claiming A Vesting Balance</a></li>
 </ul>
 </div>
 </div>

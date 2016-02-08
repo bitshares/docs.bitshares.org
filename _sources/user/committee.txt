@@ -32,3 +32,14 @@ Additionally to defining the parameters any active witness can propose a
 protocol or business upgrade (i.e. hard fork) which can be voted on (or against)
 by shareholders. When the total votes for the hard fork are greater than the
 median witness weight `w` then the hard fork takes effect.
+
+Tutorials
+=========
+
+.. toctree::
+   :maxdepth: 1
+
+   ../tutorials/committee-member-create
+   ../tutorials/committee-propose-action
+   ../tutorials/committee-approve-proposal
+   ../tutorials/committee-fee-change
