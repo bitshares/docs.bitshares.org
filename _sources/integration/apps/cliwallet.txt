@@ -28,6 +28,7 @@ To enable RPC-HTTP in your wallet you need to run:
 
 .. code-block:: sh
 
+    # recommended for use with python, or curl:
     programs/cli_wallet/cli_wallet --rpc-http-endpoint="127.0.0.1:8092"
     # or
     programs/cli_wallet/cli_wallet --rpc-endpoint="127.0.0.1:8092"

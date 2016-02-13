@@ -85,7 +85,7 @@
     
         <div class="prev">
          <div class="title">previous</div>
-         <span><a href="history.html">Account History API</a></span>
+         <span><a href="crypto.html">Crypto API</a></span>
         </div>
         <div class="top">
          <div class="title">top</div>
@@ -118,36 +118,26 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../muse/index.html">MUSE</a></li>
 </ul>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../integration/index.html">Integration Guide</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Graphene API</a><ul class="current">
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">API Guide</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#interfacing-with-graphene">Interfacing with Graphene</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="access.html">API Access Restrictions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="rpc.html">Remote Procedure Calls</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="websocket.html">Websocket Calls &amp; Notifications</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="websocket.html#overview">Overview</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="websocket.html#requesting-api-access">Requesting API access</a><ul class="current">
-<li class="toctree-l5"><a class="reference internal" href="login.html">Login API</a></li>
-<li class="toctree-l5"><a class="reference internal" href="database.html">Database API</a></li>
-<li class="toctree-l5"><a class="reference internal" href="history.html">Account History API</a></li>
-<li class="toctree-l5 current"><a class="current reference internal" href="">Network Broadcast API</a></li>
-<li class="toctree-l5"><a class="reference internal" href="network_node.html">Network Nodes API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#wallet-api">Wallet API</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#blockchain-api-s">Blockchain API(s)</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="rpc.html">Remote Procedure Calls</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="websocket.html">Websocket Calls &amp; Notifications</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="websocket.html#prerequisits">Prerequisits</a></li>
+<li class="toctree-l5"><a class="reference internal" href="websocket.html#call-format">Call Format</a></li>
+<li class="toctree-l5 current"><a class="reference internal" href="websocket.html#requesting-api-access">Requesting API access</a></li>
+<li class="toctree-l5"><a class="reference internal" href="websocket.html#database-notifications">Database Notifications</a></li>
+<li class="toctree-l5"><a class="reference internal" href="websocket.html#example-session">Example Session</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="websocket.html#notifications">Notifications</a></li>
-<li class="toctree-l4"><a class="reference internal" href="websocket.html#example-session">Example Session</a></li>
+<li class="toctree-l4"><a class="reference internal" href="blockchain-api.html">Blockchain API</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#cli-wallet-api">Cli Wallet API</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html#full-node-apis">Full Node APIs</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="fullnode.html">Full Node</a></li>
-<li class="toctree-l3"><a class="reference internal" href="login.html">Login API</a></li>
-<li class="toctree-l3"><a class="reference internal" href="database.html">Database API</a></li>
-<li class="toctree-l3"><a class="reference internal" href="history.html">Account History API</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">Network Broadcast API</a></li>
-<li class="toctree-l3"><a class="reference internal" href="network_node.html">Network Nodes API</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#namespaces">Namespaces</a></li>
@@ -155,10 +145,8 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../blockchain/index.html">Blockchain Specifications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../namespaces/index.html">Namespaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development/index.html">Development Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../testnet/index.html">Testnets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">Frequently Asked Questions</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../meta/index.html">How to Contribute</a></li>
@@ -187,16 +175,25 @@
   <div class='content'>
    
   <div class="section" id="network-broadcast-api">
-<h1>Network Broadcast API<a class="headerlink" href="#network-broadcast-api" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
-<dt id="_CPPv2N8graphene3app21network_broadcast_apiE">
-<span id="graphene::app::network_broadcast_api"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1network__broadcast__api"></span><em class="property">class </em><code class="descclassname">graphene::app::</code><code class="descname">network_broadcast_api</code><a class="headerlink" href="#_CPPv2N8graphene3app21network_broadcast_apiE" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <a class="reference internal" href="../namespaces/app.html#grapheneclassgraphene_1_1app_1_1network__broadcast__api"><span>network_broadcast_api</span></a> class allows broadcasting of transactions. </p>
-<div class="breathe-sectiondef container">
-<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<h1><a class="toc-backref" href="#id1">Network Broadcast API</a><a class="headerlink" href="#network-broadcast-api" title="Permalink to this headline">¶</a></h1>
+<p>The network broadcast API is available from the full node via websockets.</p>
+<p>If you have not set up your websockets connection, please read <a class="reference internal" href="websocket.html"><em>this
+article</em></a>.</p>
+<div class="contents topic" id="table-of-contents">
+<p class="topic-title first">Table of Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#network-broadcast-api" id="id1">Network Broadcast API</a><ul>
+<li><a class="reference internal" href="#transactions" id="id2">Transactions</a></li>
+<li><a class="reference internal" href="#block" id="id3">Block</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="transactions">
+<h2><a class="toc-backref" href="#id2">Transactions</a><a class="headerlink" href="#transactions" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="_CPPv2N8graphene3app21network_broadcast_api21broadcast_transactionERK18signed_transaction">
-<span id="graphene::app::network_broadcast_api::broadcast_transaction__signed_transactionCR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1network__broadcast__api_1aaaf4e22733a59e28dc7cef6ba5530562"></span>void <code class="descname">broadcast_transaction</code><span class="sig-paren">(</span><em class="property">const</em> signed_transaction &amp;<em>trx</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene3app21network_broadcast_api21broadcast_transactionERK18signed_transaction" title="Permalink to this definition">¶</a></dt>
+<span id="graphene::app::network_broadcast_api::broadcast_transaction__signed_transactionCR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1network__broadcast__api_1aaaf4e22733a59e28dc7cef6ba5530562"></span>void <code class="descclassname">graphene::app::network_broadcast_api::</code><code class="descname">broadcast_transaction</code><span class="sig-paren">(</span><em class="property">const</em> signed_transaction &amp;<em>trx</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene3app21network_broadcast_api21broadcast_transactionERK18signed_transaction" title="Permalink to this definition">¶</a></dt>
 <dd><p>Broadcast a transaction to the network. </p>
 <p>
 The transaction will be checked for validity in the local database prior to broadcasting. If it fails to apply locally, an error will be thrown and the transaction will not be broadcast. <dl class="docutils">
@@ -212,20 +209,19 @@ The transaction will be checked for validity in the local database prior to broa
 
 <dl class="function">
 <dt id="_CPPv2N8graphene3app21network_broadcast_api35broadcast_transaction_with_callbackE21confirmation_callbackRK18signed_transaction">
-<span id="graphene::app::network_broadcast_api::broadcast_transaction_with_callback__confirmation_callback.signed_transactionCR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1network__broadcast__api_1a67737f03620587eed68b91184c753c2e"></span>void <code class="descname">broadcast_transaction_with_callback</code><span class="sig-paren">(</span>confirmation_callback <em>cb</em>, <em class="property">const</em> signed_transaction &amp;<em>trx</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene3app21network_broadcast_api35broadcast_transaction_with_callbackE21confirmation_callbackRK18signed_transaction" title="Permalink to this definition">¶</a></dt>
+<span id="graphene::app::network_broadcast_api::broadcast_transaction_with_callback__confirmation_callback.signed_transactionCR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1network__broadcast__api_1a67737f03620587eed68b91184c753c2e"></span>void <code class="descclassname">graphene::app::network_broadcast_api::</code><code class="descname">broadcast_transaction_with_callback</code><span class="sig-paren">(</span>confirmation_callback <em>cb</em>, <em class="property">const</em> signed_transaction &amp;<em>trx</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene3app21network_broadcast_api35broadcast_transaction_with_callbackE21confirmation_callbackRK18signed_transaction" title="Permalink to this definition">¶</a></dt>
 <dd><p>this version of broadcast transaction registers a callback method that will be called when the transaction is included into a block. The callback method includes the transaction id, block number, and transaction number in the block. </p>
 </dd></dl>
 
+</div>
+<div class="section" id="block">
+<h2><a class="toc-backref" href="#id3">Block</a><a class="headerlink" href="#block" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
-<dt id="_CPPv2N8graphene3app21network_broadcast_api16on_applied_blockERK12signed_block">
-<span id="graphene::app::network_broadcast_api::on_applied_block__signed_blockCR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1network__broadcast__api_1acadde8137fccf6d482ce7f94bb8c0cbe"></span>void <code class="descname">on_applied_block</code><span class="sig-paren">(</span><em class="property">const</em> signed_block &amp;<em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene3app21network_broadcast_api16on_applied_blockERK12signed_block" title="Permalink to this definition">¶</a></dt>
-<dd><p>Not reflected, thus not accessible to API clients. </p>
-<p>This function is registered to receive the applied_block signal from the chain database when a block is received. It then dispatches callbacks to clients who have requested to be notified when a particular txid is included in a block. </p>
-</dd></dl>
+<dt id="_CPPv2N8graphene3app21network_broadcast_api15broadcast_blockERK12signed_block">
+<span id="graphene::app::network_broadcast_api::broadcast_block__signed_blockCR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1network__broadcast__api_1a547818c9883ad1299b9e00cdcf635fed"></span>void <code class="descclassname">graphene::app::network_broadcast_api::</code><code class="descname">broadcast_block</code><span class="sig-paren">(</span><em class="property">const</em> signed_block &amp;<em>block</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene3app21network_broadcast_api15broadcast_blockERK12signed_block" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </div>
-</dd></dl>
-
 </div>
 
 

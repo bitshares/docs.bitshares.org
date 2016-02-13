@@ -142,13 +142,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../index.html#use-cases">Use-Cases</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">Graphene API</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../blockchain/index.html">Blockchain Specifications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../namespaces/index.html">Namespaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API Guide</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../development/index.html">Development Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../testnet/index.html">Testnets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../faq/index.html">Frequently Asked Questions</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../meta/index.html">How to Contribute</a></li>
@@ -196,7 +196,8 @@ specifiy <cite>&#8211;chain-id</cite>.</p>
 can choose between pure RPC or RPC-HTTP requests. In this tutorial, the latter
 is prefered since well established libraries make use of the RPC-HTTP protocol.
 To enable RPC-HTTP in your wallet you need to run:</p>
-<div class="highlight-sh"><div class="highlight"><pre>programs/cli_wallet/cli_wallet --rpc-http-endpoint<span class="o">=</span><span class="s2">&quot;127.0.0.1:8092&quot;</span>
+<div class="highlight-sh"><div class="highlight"><pre><span class="c"># recommended for use with python, or curl:</span>
+programs/cli_wallet/cli_wallet --rpc-http-endpoint<span class="o">=</span><span class="s2">&quot;127.0.0.1:8092&quot;</span>
 <span class="c"># or</span>
 programs/cli_wallet/cli_wallet --rpc-endpoint<span class="o">=</span><span class="s2">&quot;127.0.0.1:8092&quot;</span>
 </pre></div>

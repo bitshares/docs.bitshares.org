@@ -92,6 +92,9 @@ A tutorial to setup this network can be found here:
 
 * :doc:`tutorials/general-network-setup`
 
+
+.. _highsecuritynetworksetup:
+
 High Security Setup
 *******************
 
