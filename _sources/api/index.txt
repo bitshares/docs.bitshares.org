@@ -11,16 +11,21 @@ APIs are separated into two categories, namely
 * the **Blockchain API** which is used to query blockchain data (account, assets, trading history, etc.) and 
 * the **Wallet API** which has your private keys loaded and is required when interacting with the blockchain with new transactions.
 
+.. note:: In order to interface with *the wallet*, you need to run the
+          :doc:`../integration/apps/cliwallet`. Neither the
+          **light-wallet**, nor the **hosted web wallet** will provide
+          you with an API.
+
 In contrast to many existing ecosystems, there is no centralized services that
 let's you access private API calles after successful authentication. Instead,
 your run your wallet (and optionally a full node) **locally** and are with
 **your own API service provider**. This obviously has the advantage that you
 don't need to give access to your funds to any third party but has the slight
-disadvantage that you need to run a local **light weight** wallet appilcation,
-that however does not download the whole blockchain for verification. If you
-run a sensitive business, we recommend to also run a local full node to
-download and verify the blockchain and interface your wallet with your local
-full node.
+disadvantage that you need to run a local :doc:`wallet appilcation
+<../integration/apps/cliwallet>`, that however does not download the
+whole blockchain for verification. If you run a sensitive business, we
+recommend to also run a local full node to download and verify the
+blockchain and interface your wallet with your local full node.
 
 This page will give you a detailed description of both API categories, the
 Remote Procedure Calls and Websockets, and will give an introduction to many
