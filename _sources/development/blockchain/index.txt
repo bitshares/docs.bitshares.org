@@ -7,4 +7,4 @@ part of the following sections.
 
 .. toctree::
    
-   Objects
+   objects

@@ -141,13 +141,13 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">Graphene API</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../blockchain/index.html">Blockchain Specifications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../namespaces/index.html">Namespaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API Guide</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../development/index.html">Development Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../testnet/index.html">Testnets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../faq/index.html">Frequently Asked Questions</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../meta/index.html">How to Contribute</a></li>
@@ -192,9 +192,20 @@ sources according to:</p>
 <p>For security reasons we will run two daemons and a wallet according to these
 diagram:</p>
 <p class="graphviz">
-<img src="../../_images/graphviz-7d9d81c4365a706c191d79f0fdea4ebcdb49b043.svg" alt="digraph foo {
- rankdir=LR
- node [shape=box]
+<img src="../../_images/graphviz-351d386d03191cd0886a1dc08cda77f151a0ff1c.svg" alt="digraph foo {
+ rankdir=LR;
+ ranksep=0.5;
+ nodesep=0.1;
+ overlap=false;
+ splines=ortho;
+
+ node [shape=box];
+ node [fontname=Verdana,fontsize=12]
+ node [style=filled]
+ node [fillcolor=&quot;#EEEEEE&quot;]
+ node [color=&quot;#EEEEEE&quot;]
+ edge [color=&quot;#31CEF0&quot;, dir=back, fontsize=9, fontname=Verdana]
+
  &quot;P2P network&quot; -&gt; &quot;Trusted Full Node&quot; [dir=&quot;both&quot;]
  &quot;Trusted Full Node&quot; -&gt; &quot;Delayed Full Node&quot; -&gt; &quot;Deposit API&quot;
  &quot;Trusted Full Node&quot; -&gt; &quot;Wallet&quot; -&gt; &quot;Withdraw API&quot;

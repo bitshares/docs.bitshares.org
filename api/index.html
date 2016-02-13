@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <title>Graphene API</title>
+    <title>API Guide</title>
 
     <!-- CSS -->
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
@@ -74,7 +74,7 @@
  <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
    <div class='in'>
      <div class='headline'>
-       <h1>Graphene API</h1>
+       <h1>API Guide</h1>
  
      </div>
    </div>
@@ -93,7 +93,7 @@
         </div>
         <div class="next">
          <div class="title">next</div>
-         <span><a href="access.html">API Access Restrictions</a></span>
+         <span><a href="rpc.html">Remote Procedure Calls</a></span>
         </div>
 
    </div>
@@ -118,42 +118,35 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../muse/index.html">MUSE</a></li>
 </ul>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../integration/index.html">Integration Guide</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Graphene API</a><ul>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">API Guide</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#interfacing-with-graphene">Interfacing with Graphene</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="access.html">API Access Restrictions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="rpc.html">Remote Procedure Calls</a></li>
-<li class="toctree-l3"><a class="reference internal" href="websocket.html">Websocket Calls &amp; Notifications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wallet-api">Wallet API</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rpc.html">Remote Procedure Calls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wallet-api.html">Wallet API Calls</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#cli-wallet-api">Cli Wallet API</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="cli_wallet.html">CLI Wallet API Calls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#blockchain-api-s">Blockchain API(s)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rpc.html">Remote Procedure Calls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="websocket.html">Websocket Calls &amp; Notifications</a></li>
+<li class="toctree-l4"><a class="reference internal" href="blockchain-api.html">Blockchain API</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#full-node-apis">Full Node APIs</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="fullnode.html">Full Node</a></li>
-<li class="toctree-l3"><a class="reference internal" href="login.html">Login API</a></li>
-<li class="toctree-l3"><a class="reference internal" href="database.html">Database API</a></li>
-<li class="toctree-l3"><a class="reference internal" href="history.html">Account History API</a></li>
-<li class="toctree-l3"><a class="reference internal" href="network_broadcast.html">Network Broadcast API</a></li>
-<li class="toctree-l3"><a class="reference internal" href="network_node.html">Network Nodes API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#blockchain-objects-and-their-identifiers">Blockchain Objects and their Identifiers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../development/blockchain/objects.html">Objects and IDs</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#namespaces">Namespaces</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../namespaces/chain.html">Graphene::Chain</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../namespaces/app.html">Graphene::App</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../namespaces/wallet.html">Graphene::Wallet</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../blockchain/index.html">Blockchain Specifications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../namespaces/index.html">Namespaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development/index.html">Development Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../testnet/index.html">Testnets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">Frequently Asked Questions</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../meta/index.html">How to Contribute</a></li>
@@ -181,64 +174,112 @@
   </div>
   <div class='content'>
    
-  <div class="section" id="graphene-api">
-<h1>Graphene API<a class="headerlink" href="#graphene-api" title="Permalink to this headline">¶</a></h1>
-<p>This page serves as a comprehensive reference for the Graphene API. Since
-BitShares 2.0 is the first blockchain that makes use of the Graphene technology,
-this documentation is mostly compatible with BitShares 2.0 as well.</p>
+  <div class="section" id="api-guide">
+<h1>API Guide<a class="headerlink" href="#api-guide" title="Permalink to this headline">¶</a></h1>
+<p>This page serves as a comprehensive reference for the Graphene API and
+its blockchain, such as <a class="reference internal" href="../bitshares/index.html"><em>BitShares 2.0</em></a> and
+<a class="reference internal" href="../muse/index.html"><em>MUSE</em></a>.</p>
+<p>APIs are separated into two categories, namely</p>
+<ul class="simple">
+<li>the <strong>Blockchain API</strong> which is used to query blockchain data (account, assets, trading history, etc.) and</li>
+<li>the <strong>Wallet API</strong> which has your private keys loaded and is required when interacting with the blockchain with new transactions.</li>
+</ul>
+<p>In contrast to many existing ecosystems, there is no centralized services that
+let&#8217;s you access private API calles after successful authentication. Instead,
+your run your wallet (and optionally a full node) <strong>locally</strong> and are with
+<strong>your own API service provider</strong>. This obviously has the advantage that you
+don&#8217;t need to give access to your funds to any third party but has the slight
+disadvantage that you need to run a local <strong>light weight</strong> wallet appilcation,
+that however does not download the whole blockchain for verification. If you
+run a sensitive business, we recommend to also run a local full node to
+download and verify the blockchain and interface your wallet with your local
+full node.</p>
+<p>This page will give you a detailed description of both API categories, the
+Remote Procedure Calls and Websockets, and will give an introduction to many
+available calls.</p>
+<div class="section" id="interfacing-with-graphene">
+<h2>Interfacing with Graphene<a class="headerlink" href="#interfacing-with-graphene" title="Permalink to this headline">¶</a></h2>
+<p>The set of available calls depends on whether you connect to a full node
+(<code class="docutils literal"><span class="pre">witness_node</span></code>) or the wallet (<code class="docutils literal"><span class="pre">cli_wallet</span></code>). Both support RPC-JSON. The
+full node also supports the websocket protocol with notifications.</p>
+<p>Which blockchain network you connect to (BitShares, MUSE, ..) depends on the
+configuration of the full node and the wallet. If you run a full node, we
+recommend to connect your wallet to your local full node even though it could
+be connected to any other public full node as well.</p>
+<p class="graphviz">
+<img src="../_images/graphviz-34b4d59996f9573de3d13d6f6d41b4b97d707d44.svg" alt="digraph foo {
+ rankdir=LR;
+ ranksep=0.5;
+ nodesep=0.1;
+ overlap=false;
+ splines=ortho;
+
+ node [shape=box];
+ node [fontname=Verdana,fontsize=12]
+ node [style=filled]
+ node [fillcolor=&quot;#EEEEEE&quot;]
+ node [color=&quot;#EEEEEE&quot;]
+ edge [color=&quot;#31CEF0&quot;, dir=back, fontsize=9, fontname=Verdana]
+
+ &quot;P2P network&quot; -&gt; &quot;Full Node&quot; [dir=&quot;both&quot;]
+ &quot;Full Node&quot; -&gt; &quot;Blockchain API&quot;
+ &quot;Full Node&quot; -&gt; &quot;Wallet&quot; -&gt; &quot;Withdraw API&quot;
+
+ {rank=same &quot;Withdraw API&quot; &quot;Blockchain API&quot;}
+}" />
+</p>
+<p>For sensitive businesses that want to ensure that deposits are irreversible, we
+recommend the use of the <a class="reference internal" href="../integration/network-setup.html#highsecuritynetworksetup"><span>High Security Setup</span></a>.
+That contains a <em>delayed node</em> to pass only irreversible transactions to the API.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">All API calls are formated in JSON and return JSON only.</p>
 </div>
-<div class="section" id="interfacing-with-graphene">
-<h2>Interfacing with Graphene<a class="headerlink" href="#interfacing-with-graphene" title="Permalink to this headline">¶</a></h2>
-<div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The set of available calls depends on whether you connect to a full
-node (<code class="docutils literal"><span class="pre">witness_node</span></code>) or a CLI wallet (<code class="docutils literal"><span class="pre">cli_wallet</span></code>). Both support
-RPC-JSON. The full node also supports the websocket protocol with
-notifications.</p>
-</div>
+<div class="section" id="wallet-api">
+<h3>Wallet API<a class="headerlink" href="#wallet-api" title="Permalink to this headline">¶</a></h3>
+<p>This chapter introduces the calls available via wallet API. If you have not set
+up your wallet yet, you can find more information on the
+<a class="reference internal" href="../integration/apps/cliwallet.html"><em>CLI Wallet</em></a> and the <a class="reference internal" href="../integration/apps/cli-faq.html"><em>CLI Wallet FAQ</em></a>
+pages.</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="access.html">API Access Restrictions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rpc.html">Remote Procedure Calls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wallet-api.html">Wallet API Calls</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="blockchain-api-s">
+<h3>Blockchain API(s)<a class="headerlink" href="#blockchain-api-s" title="Permalink to this headline">¶</a></h3>
+<p>The blockchain API can be used to obtain any kind of data stored in the
+blockchain. Besides data stores in the blockchain itself (blocks, transactions,
+etc. ..), higher level objects (such as accounts, balances, etc. ...) can be
+retrieved through the full node&#8217;s database.</p>
+<p>It is not required to run a local full node if you want to query a particular
+blockchain or database, but you can also query any existing public node for
+information.</p>
+<div class="toctree-wrapper compound">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="rpc.html">Remote Procedure Calls</a></li>
 <li class="toctree-l1"><a class="reference internal" href="websocket.html">Websocket Calls &amp; Notifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="blockchain-api.html">Blockchain API</a></li>
 </ul>
 </div>
 </div>
-<div class="section" id="cli-wallet-api">
-<h2>Cli Wallet API<a class="headerlink" href="#cli-wallet-api" title="Permalink to this headline">¶</a></h2>
-<p>This chapter introduces the calls available to a running CLI wallet. If you
-have not set up your CLI wallet yet please visit our other documentation pages
-aswell.</p>
+<div class="section" id="blockchain-objects-and-their-identifiers">
+<h3>Blockchain Objects and their Identifiers<a class="headerlink" href="#blockchain-objects-and-their-identifiers" title="Permalink to this headline">¶</a></h3>
+<p>In contrast to many other projects, the Graphene technology distinguishes
+different kinds of objects, in the protocol and implementation space.</p>
+<p>In the protocol space, there are raw objects such as, accounts, assets,
+committee members as well as orders, proposals and balances. The implementation
+space is used to gain access to higher abstraction layers for instance content
+of the current database state (these include, current global blockchain
+properties, dynamic asset data, transaction histories as well as account
+statistics and budget records).</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="cli_wallet.html">CLI Wallet API Calls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development/blockchain/objects.html">Objects and IDs</a></li>
 </ul>
 </div>
-</div>
-<div class="section" id="full-node-apis">
-<h2>Full Node APIs<a class="headerlink" href="#full-node-apis" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="fullnode.html">Full Node</a></li>
-<li class="toctree-l1"><a class="reference internal" href="login.html">Login API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="database.html">Database API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="history.html">Account History API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="network_broadcast.html">Network Broadcast API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="network_node.html">Network Nodes API</a></li>
-</ul>
-</div>
-</div>
-<div class="section" id="namespaces">
-<h2>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../namespaces/chain.html">Graphene::Chain</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../namespaces/app.html">Graphene::App</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../namespaces/wallet.html">Graphene::Wallet</a></li>
-</ul>
 </div>
 </div>
 </div>

@@ -52,6 +52,7 @@ instance, exchanges trade ``BTS:BTC`` while bridges exchange ``bitBTC:BTC``.
    :maxdepth: 2
 
    exchanges/index
+   api/index
 
 :html:`</div><div class="col-md-6">`
 
@@ -63,6 +64,7 @@ customers pay using bitUSD, bitEUR, or any other *stable* blockchain asset.
    :maxdepth: 2
 
    merchants/index
+   api/index
 
 :html:`</div></div>`
 :html:`<div class="row"><div class="col-md-6">`
@@ -75,6 +77,7 @@ used to implement automated robots for trading algorithms.
    :maxdepth: 2
 
    traders/index
+   api/index
    traders/python-binding
 
 :html:`</div><div class="col-md-6">`
@@ -88,5 +91,6 @@ introduce the possibilities of
    :maxdepth: 2
 
    businesses/index
+   api/index
 
 :html:`</div></div></div>`
