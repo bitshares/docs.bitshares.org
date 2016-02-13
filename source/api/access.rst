@@ -60,4 +60,10 @@ Since the ``network_node`` API requires login, it is only accessible over the
 websocket RPC. Our `doxygen`_ documentation contains the most up-to-date
 information about APIs.
 
+Login In
+#########
+
+.. doxygenclass:: graphene::app::login_api
+   :members:
+
 .. _doxygen: http://bitshares.org/doxygen

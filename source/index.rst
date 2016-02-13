@@ -38,18 +38,19 @@ Recent Updates
 
 .. r!date +\%y/\%m/\%d
 
+* ``16/02/13`` Huge improvements in the :doc:`api/index`
 * ``16/02/08`` :doc:`bitshares/user/committee`, :doc:`bitshares/tutorials/committee-approve-proposal`, :doc:`bitshares/user/vesting`
 * ``16/02/01`` :doc:`integration/merchants/merchant-protocol`, Added search to the navigation
 * ``16/01/19`` :doc:`testnet/index`, :doc:`bitshares/tutorials/pm-create-manual`, :doc:`bitshares/user/eba`
 * ``16/01/13`` :doc:`bitshares/tutorials/uia-update-manual`, :doc:`bitshares/tutorials/uia-create-manual`, :doc:`bitshares/tutorials/uia-create-gui`, :doc:`integration/network-setup`, :doc:`integration/tutorials/index`
 * ``16/01/12`` :doc:`bitshares/user/assets`, :doc:`bitshares/tutorials/uia-create-manual` :doc:`bitshares/tutorials/mpa-create-manual`, :doc:`bitshares/user/assets-faq`, :doc:`bitshares/user/privbta`, :doc:`bitshares/tutorials/publish-feed`, :doc:`bitshares/user/pm`, :doc:`bitshares/tutorials/pm-create-manual`, :doc:`bitshares/tutorials/pm-close-manual`
-* ``16/01/07`` :doc:`bitshares/user/uia`, :doc:`bitshares/tutorials/uia-create-gui`, :doc:`bitshares/tutorials/uia-create-manual`
-* ``16/01/06`` :doc:`bitshares/tutorials/witness-change-key`
-* ``15/12/21`` :doc:`bitshares/user/worker`, :doc:`bitshares/user/fba`, :doc:`bitshares/developers/funding`, :doc:`bitshares/developers/bsips`
-* ``15/12/18`` :doc:`bitshares/papers/index`: Release Candiate for the *BitShares: General Overview* whitepaper
-* ``15/12/04`` :doc:`bitshares/user/account-permissions`, :doc:`bitshares/user/transactions-proposed`
 
 ..
+ * ``16/01/07`` :doc:`bitshares/user/uia`, :doc:`bitshares/tutorials/uia-create-gui`, :doc:`bitshares/tutorials/uia-create-manual`
+ * ``16/01/06`` :doc:`bitshares/tutorials/witness-change-key`
+ * ``15/12/21`` :doc:`bitshares/user/worker`, :doc:`bitshares/user/fba`, :doc:`bitshares/developers/funding`, :doc:`bitshares/developers/bsips`
+ * ``15/12/18`` :doc:`bitshares/papers/index`: Release Candiate for the *BitShares: General Overview* whitepaper
+ * ``15/12/04`` :doc:`bitshares/user/account-permissions`, :doc:`bitshares/user/transactions-proposed`
  * ``15/12/03`` :doc:`bitshares/tutorials/construct-transaction`, :doc:`bitshares/tutorials/propose-transaction`
  * ``15/12/03`` :doc:`bitshares/tutorials/index`, :doc:`bitshares/tutorials/confidential-transactions`, :doc:`bitshares/user/committee`, :doc:`bitshares/tutorials/worker-budget`, :doc:`bitshares/user/shareholder`, :doc:`bitshares/user/worker`, :doc:`integration/often-used-calls`, :doc:`integration/merchants/merchant-protocol`, :doc:`integration/merchants/login-protocol`
  * ``15/11/30`` :doc:`bitshares/user/dex-margin-mechanics`
@@ -102,6 +103,13 @@ Integration Guide
    :maxdepth: 2
 
    integration/index
+
+API Guide
+#########
+
+.. toctree::
+   :maxdepth: 2
+
    api/index
 
 Development
@@ -110,10 +118,8 @@ Development
 .. toctree::
    :maxdepth: 1
 
-   blockchain/index
-   namespaces/index
+   development/index
    testnet/index
-   faq/index
 
 Contribute
 ##########

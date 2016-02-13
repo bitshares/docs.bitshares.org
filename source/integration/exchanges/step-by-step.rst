@@ -22,8 +22,19 @@ diagram:
 .. graphviz::
 
    digraph foo {
-    rankdir=LR
-    node [shape=box]
+    rankdir=LR;
+    ranksep=0.5;
+    nodesep=0.1;
+    overlap=false;
+    splines=ortho;
+
+    node [shape=box];
+    node [fontname=Verdana,fontsize=12]
+    node [style=filled]
+    node [fillcolor="#EEEEEE"]
+    node [color="#EEEEEE"]
+    edge [color="#31CEF0", dir=back, fontsize=9, fontname=Verdana]
+
     "P2P network" -> "Trusted Full Node" [dir="both"]
     "Trusted Full Node" -> "Delayed Full Node" -> "Deposit API"
     "Trusted Full Node" -> "Wallet" -> "Withdraw API"

@@ -307,3 +307,7 @@ except :
 # Graphiz
 ###############################################################################
 graphviz_output_format = 'svg'
+
+
+
+autodoc_member_order = 'bysource'
