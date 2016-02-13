@@ -85,7 +85,7 @@
     
         <div class="prev">
          <div class="title">previous</div>
-         <span><a href="../integration/libraries/nodejs.html">NodeJS Example</a></span>
+         <span><a href="../development/blockchain/objects.html">Objects and IDs</a></span>
         </div>
         <div class="top">
          <div class="title">top</div>
@@ -118,8 +118,55 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../muse/index.html">MUSE</a></li>
 </ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../integration/index.html">Integration Guide</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../integration/index.html">Integration Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../integration/index.html#basic-knowledge">Basic Knowledge</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../integration/index.html#use-cases">Use-Cases</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../integration/exchanges/index.html">Exchanges, Bridges, and Gateways</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">API Guide</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#interfacing-with-graphene">Interfacing with Graphene</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#wallet-api">Wallet API</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#blockchain-api-s">Blockchain API(s)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#blockchain-objects-and-their-identifiers">Blockchain Objects and their Identifiers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../integration/merchants/index.html">Merchants</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">API Guide</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#interfacing-with-graphene">Interfacing with Graphene</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#wallet-api">Wallet API</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#blockchain-api-s">Blockchain API(s)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#blockchain-objects-and-their-identifiers">Blockchain Objects and their Identifiers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../integration/traders/index.html">Traders</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">API Guide</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#interfacing-with-graphene">Interfacing with Graphene</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#wallet-api">Wallet API</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#blockchain-api-s">Blockchain API(s)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#blockchain-objects-and-their-identifiers">Blockchain Objects and their Identifiers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../integration/traders/python-binding.html">Python Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../integration/businesses/index.html">Businesses</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">API Guide</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#interfacing-with-graphene">Interfacing with Graphene</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#wallet-api">Wallet API</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#blockchain-api-s">Blockchain API(s)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#blockchain-objects-and-their-identifiers">Blockchain Objects and their Identifiers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="">API Guide</a><ul>
@@ -184,16 +231,22 @@ its blockchain, such as <a class="reference internal" href="../bitshares/index.h
 <li>the <strong>Blockchain API</strong> which is used to query blockchain data (account, assets, trading history, etc.) and</li>
 <li>the <strong>Wallet API</strong> which has your private keys loaded and is required when interacting with the blockchain with new transactions.</li>
 </ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In order to interface with <em>the wallet</em>, you need to run the
+<a class="reference internal" href="../integration/apps/cliwallet.html"><em>CLI Wallet</em></a>. Neither the
+<strong>light-wallet</strong>, nor the <strong>hosted web wallet</strong> will provide
+you with an API.</p>
+</div>
 <p>In contrast to many existing ecosystems, there is no centralized services that
 let&#8217;s you access private API calles after successful authentication. Instead,
 your run your wallet (and optionally a full node) <strong>locally</strong> and are with
 <strong>your own API service provider</strong>. This obviously has the advantage that you
 don&#8217;t need to give access to your funds to any third party but has the slight
-disadvantage that you need to run a local <strong>light weight</strong> wallet appilcation,
-that however does not download the whole blockchain for verification. If you
-run a sensitive business, we recommend to also run a local full node to
-download and verify the blockchain and interface your wallet with your local
-full node.</p>
+disadvantage that you need to run a local <a class="reference internal" href="../integration/apps/cliwallet.html"><em>wallet appilcation</em></a>, that however does not download the
+whole blockchain for verification. If you run a sensitive business, we
+recommend to also run a local full node to download and verify the
+blockchain and interface your wallet with your local full node.</p>
 <p>This page will give you a detailed description of both API categories, the
 Remote Procedure Calls and Websockets, and will give an introduction to many
 available calls.</p>
