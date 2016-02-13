@@ -108,7 +108,6 @@ Find below a list of available APIs:
 .. toctree::
    :maxdepth: 1
 
-   login
    database
    history
    network_broadcast

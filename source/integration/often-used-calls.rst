@@ -17,8 +17,8 @@ table above. We recommend to read the following articles:
 
 .. toctree::
 
-   ../blockchain/Objects
-   ../api/cli_wallet
+   ../development/blockchain/objects
+   ../api/wallet-api
 
 ``list_account_balances <account>``
 ###################################
