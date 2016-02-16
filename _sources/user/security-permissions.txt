@@ -4,8 +4,8 @@ Permission Model
 
 We distinguish between two kinds of permissions:
 
-* **Owner Permission**: Owns and controls an account but not its funds
-* **Active Permission**: Owns an account's funds but cannot control the account settings.
+* **Owner Permission**: This permission has administrative powers over the whole account and should be considered for 'backup' strategies.
+* **Active Permission**: Allows to access funds and some account settings, but cannot change the owner permission and is thus considered the "online" permissions.
 
 Both are implemented using `Elliptic Curve Cryptography`_ (ECC) with *public*
 and *private* keys. :doc:`Read more <account-permissions>`.
