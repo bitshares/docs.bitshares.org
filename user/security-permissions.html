@@ -150,8 +150,8 @@
 <h1>Permission Model<a class="headerlink" href="#permission-model" title="Permalink to this headline">¶</a></h1>
 <p>We distinguish between two kinds of permissions:</p>
 <ul class="simple">
-<li><strong>Owner Permission</strong>: Owns and controls an account but not its funds</li>
-<li><strong>Active Permission</strong>: Owns an account&#8217;s funds but cannot control the account settings.</li>
+<li><strong>Owner Permission</strong>: This permission has administrative powers over the whole account and should be considered for &#8216;backup&#8217; strategies.</li>
+<li><strong>Active Permission</strong>: Allows to access funds and some account settings, but cannot change the owner permission and is thus considered the &#8220;online&#8221; permissions.</li>
 </ul>
 <p>Both are implemented using <a class="reference external" href="https://en.wikipedia.org/wiki/Elliptic_curve_cryptography">Elliptic Curve Cryptography</a> (ECC) with <em>public</em>
 and <em>private</em> keys. <a class="reference internal" href="account-permissions.html"><em>Read more</em></a>.</p>
