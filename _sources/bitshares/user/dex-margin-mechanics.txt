@@ -1,5 +1,8 @@
 .. original autor: @svk
 
+.. role:: html(raw)
+   :format: html
+
 *********************
 Margin call mechanics
 *********************
@@ -55,10 +58,11 @@ Execution Conditions
 When will a margin call happen?
 *******************************
 
-This is where it gets complicated. A margin call will happen whenever the
-squeeze protection price goes above the call price of your position. To better
-understand how this works, let's go back to our margin position and look at
-collateral ratios:
+This is where it gets complicated. Margin Call are only possible if the
+feed price is below your call price. A margin call will happen whenever
+the squeeze protection price goes above the call price of your position.
+To better understand how this works, let's go back to our margin
+position and look at collateral ratios:
 
 Say we have the following: 
 
@@ -69,7 +73,7 @@ Say we have the following:
 
 This is also known as the Black Swan level, and we want to perform a margin call
 before the collateral ratio goes this low. This is why we have the Maintenance
-Collateral Ratio, to enforce a buffer zone before a position goes into Black
+Collateral Ratio (MCR), to enforce a buffer zone before a position goes into Black
 Swan territory. So if we apply the MCR of ``1.75`` to this position:
 
 * Debt: ``10 USD``
@@ -78,8 +82,9 @@ Swan territory. So if we apply the MCR of ``1.75`` to this position:
 * Collateral is therefore ``3000 BTS * 1.75 = 5250 BTS``
 
 This is much safer, there is a bit of margin for the position to be closed
-before going into Black Swan levels. The call price of this position is now
-exactly equal to the feed price of ``300 BTS/USD``.
+before going into Black Swan levels. Since in our example, the USD **requires** ``1.75``
+ratio, the call price of this position is now exactly equal to the feed price of ``300
+BTS/USD``.
 
 * Call price: ``5250 / (10 * 1.75) = 300 BTS/USD``
 
@@ -87,8 +92,9 @@ The remaining question then is, at what point should we force the position to
 attempt to close itself? This is where the SQPR comes in. Let's look at two
 scenarios, SQPR of ``1.1`` and SQPR of ``1.5``:
 
-SQPR of ``1.1``
-***************
+:html:`<div class="container-fluid"><div class="row"><div class="col-md-6">`
+
+** SQPR of ``1.1`` **
 
 * Settlement price: ``300 BTS/USD``
 * SQPR: ``1.1``
@@ -98,8 +104,9 @@ In this case, any margin position that has a call price below ``330 BTS/USD``
 will be forced to settle, and therefore be added to the orderbook as an order to
 buy USD for BTS.
 
-SQPR of ``1.5``
-***************
+:html:`</div><div class="col-md-6">`
+
+** SQPR of ``1.5`` **
 
 * Settlement price: ``300 BTS/USD``
 * SQPR: ``1.5``
@@ -108,6 +115,8 @@ SQPR of ``1.5``
 In this case, any margin position that has a call price below ``450 BTS/USD``
 will be forced to settle, and therefore be added to the orderbook as an order to
 buy USD for BTS.
+
+:html:`</div></div></div>`
 
 Discussion
 **********
