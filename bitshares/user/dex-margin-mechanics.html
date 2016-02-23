@@ -231,10 +231,11 @@ price of <code class="docutils literal"><span class="pre">300</span> <span class
 <h2>Execution Conditions<a class="headerlink" href="#execution-conditions" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="when-will-a-margin-call-happen">
 <h3>When will a margin call happen?<a class="headerlink" href="#when-will-a-margin-call-happen" title="Permalink to this headline">¶</a></h3>
-<p>This is where it gets complicated. A margin call will happen whenever the
-squeeze protection price goes above the call price of your position. To better
-understand how this works, let&#8217;s go back to our margin position and look at
-collateral ratios:</p>
+<p>This is where it gets complicated. Margin Call are only possible if the
+feed price is below your call price. A margin call will happen whenever
+the squeeze protection price goes above the call price of your position.
+To better understand how this works, let&#8217;s go back to our margin
+position and look at collateral ratios:</p>
 <p>Say we have the following:</p>
 <ul class="simple">
 <li>Debt: <code class="docutils literal"><span class="pre">10</span> <span class="pre">USD</span></code></li>
@@ -244,7 +245,7 @@ collateral ratios:</p>
 </ul>
 <p>This is also known as the Black Swan level, and we want to perform a margin call
 before the collateral ratio goes this low. This is why we have the Maintenance
-Collateral Ratio, to enforce a buffer zone before a position goes into Black
+Collateral Ratio (MCR), to enforce a buffer zone before a position goes into Black
 Swan territory. So if we apply the MCR of <code class="docutils literal"><span class="pre">1.75</span></code> to this position:</p>
 <ul class="simple">
 <li>Debt: <code class="docutils literal"><span class="pre">10</span> <span class="pre">USD</span></code></li>
@@ -253,17 +254,17 @@ Swan territory. So if we apply the MCR of <code class="docutils literal"><span c
 <li>Collateral is therefore <code class="docutils literal"><span class="pre">3000</span> <span class="pre">BTS</span> <span class="pre">*</span> <span class="pre">1.75</span> <span class="pre">=</span> <span class="pre">5250</span> <span class="pre">BTS</span></code></li>
 </ul>
 <p>This is much safer, there is a bit of margin for the position to be closed
-before going into Black Swan levels. The call price of this position is now
-exactly equal to the feed price of <code class="docutils literal"><span class="pre">300</span> <span class="pre">BTS/USD</span></code>.</p>
+before going into Black Swan levels. Since in our example, the USD <strong>requires</strong> <code class="docutils literal"><span class="pre">1.75</span></code>
+ratio, the call price of this position is now exactly equal to the feed price of <code class="docutils literal"><span class="pre">300</span>
+<span class="pre">BTS/USD</span></code>.</p>
 <ul class="simple">
 <li>Call price: <code class="docutils literal"><span class="pre">5250</span> <span class="pre">/</span> <span class="pre">(10</span> <span class="pre">*</span> <span class="pre">1.75)</span> <span class="pre">=</span> <span class="pre">300</span> <span class="pre">BTS/USD</span></code></li>
 </ul>
 <p>The remaining question then is, at what point should we force the position to
 attempt to close itself? This is where the SQPR comes in. Let&#8217;s look at two
 scenarios, SQPR of <code class="docutils literal"><span class="pre">1.1</span></code> and SQPR of <code class="docutils literal"><span class="pre">1.5</span></code>:</p>
-</div>
-<div class="section" id="sqpr-of-1-1">
-<h3>SQPR of <code class="docutils literal"><span class="pre">1.1</span></code><a class="headerlink" href="#sqpr-of-1-1" title="Permalink to this headline">¶</a></h3>
+<p><span class="html"><div class="container-fluid"><div class="row"><div class="col-md-6"></span></p>
+<p>** SQPR of <code class="docutils literal"><span class="pre">1.1</span></code> **</p>
 <ul class="simple">
 <li>Settlement price: <code class="docutils literal"><span class="pre">300</span> <span class="pre">BTS/USD</span></code></li>
 <li>SQPR: <code class="docutils literal"><span class="pre">1.1</span></code></li>
@@ -272,9 +273,8 @@ scenarios, SQPR of <code class="docutils literal"><span class="pre">1.1</span></
 <p>In this case, any margin position that has a call price below <code class="docutils literal"><span class="pre">330</span> <span class="pre">BTS/USD</span></code>
 will be forced to settle, and therefore be added to the orderbook as an order to
 buy USD for BTS.</p>
-</div>
-<div class="section" id="sqpr-of-1-5">
-<h3>SQPR of <code class="docutils literal"><span class="pre">1.5</span></code><a class="headerlink" href="#sqpr-of-1-5" title="Permalink to this headline">¶</a></h3>
+<p><span class="html"></div><div class="col-md-6"></span></p>
+<p>** SQPR of <code class="docutils literal"><span class="pre">1.5</span></code> **</p>
 <ul class="simple">
 <li>Settlement price: <code class="docutils literal"><span class="pre">300</span> <span class="pre">BTS/USD</span></code></li>
 <li>SQPR: <code class="docutils literal"><span class="pre">1.5</span></code></li>
@@ -283,6 +283,7 @@ buy USD for BTS.</p>
 <p>In this case, any margin position that has a call price below <code class="docutils literal"><span class="pre">450</span> <span class="pre">BTS/USD</span></code>
 will be forced to settle, and therefore be added to the orderbook as an order to
 buy USD for BTS.</p>
+<p><span class="html"></div></div></div></span></p>
 </div>
 <div class="section" id="discussion">
 <h3>Discussion<a class="headerlink" href="#discussion" title="Permalink to this headline">¶</a></h3>
