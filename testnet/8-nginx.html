@@ -183,7 +183,7 @@ requires to compile nginx &#8220;manually&#8221;. Passenger fortunatelly provide
 script that handles all the installation.</p>
 <div class="section" id="setup">
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-sh"><div class="highlight"><pre>sudo apt-get install curl libcurl4-gnutls-dev
+<div class="highlight-sh"><div class="highlight"><pre><span></span>sudo apt-get install curl libcurl4-gnutls-dev
 <span class="nb">cd</span> ~/faucet
 gem install passenger
 sudo passenger-install-nginx-module
@@ -191,7 +191,7 @@ sudo passenger-install-nginx-module
 </div>
 <p>After using the recommended settings and waiting for the script to
 complete, we integrate nginx into our distribution via</p>
-<div class="highlight-sh"><div class="highlight"><pre>sudo ln -s /opt/nginx/ /usr/local/nginx
+<div class="highlight-sh"><div class="highlight"><pre><span></span>sudo ln -s /opt/nginx/ /usr/local/nginx
 sudo ln -s /opt/nginx/conf/ /etc/nginx
 </pre></div>
 </div>
@@ -199,11 +199,11 @@ sudo ln -s /opt/nginx/conf/ /etc/nginx
 <div class="section" id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
 <p>Nginx is configured using the freshly installed <cite>nginx.conf</cite> file:</p>
-<div class="highlight-sh"><div class="highlight"><pre>vi /opt/nginx/conf/nginx.conf
+<div class="highlight-sh"><div class="highlight"><pre><span></span>vi /opt/nginx/conf/nginx.conf
 </pre></div>
 </div>
 <p>We have set it to be:</p>
-<div class="highlight-python"><div class="highlight"><pre>user gph;
+<div class="highlight-python"><div class="highlight"><pre><span></span>user gph;
 worker_processes  4;
 
 events {
@@ -278,13 +278,13 @@ the web wallet.</p>
 <div class="section" id="running-nginx-as-serice">
 <h2>Running nginx as serice<a class="headerlink" href="#running-nginx-as-serice" title="Permalink to this headline">¶</a></h2>
 <p>We use a nginx serice script and can install it according to:</p>
-<div class="highlight-sh"><div class="highlight"><pre>sudo wget https://raw.github.com/JasonGiedymin/nginx-init-ubuntu/master/nginx -O /etc/init.d/nginx
+<div class="highlight-sh"><div class="highlight"><pre><span></span>sudo wget https://raw.github.com/JasonGiedymin/nginx-init-ubuntu/master/nginx -O /etc/init.d/nginx
 sudo chmod +x /etc/init.d/nginx
 sudo update-rc.d -f nginx defaults
 </pre></div>
 </div>
 <p>After that, nginx can be launched with</p>
-<div class="highlight-sh"><div class="highlight"><pre>sudo service nginx start
+<div class="highlight-sh"><div class="highlight"><pre><span></span>sudo service nginx start
 </pre></div>
 </div>
 </div>

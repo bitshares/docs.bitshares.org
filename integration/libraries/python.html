@@ -126,16 +126,16 @@
 <li class="toctree-l3"><a class="reference internal" href="../../api/index.html">API Guide</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../merchants/index.html">Merchants</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/index.html">API Guide</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../traders/index.html">Traders</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../api/index.html">API Guide</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../traders/python-binding.html">Python Interface</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="../businesses/index.html">Businesses</a><ul class="current">
-<li class="toctree-l4 current"><a class="reference internal" href="../businesses/index.html#libraries">Libraries</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../traders/index.html">Traders</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="../traders/index.html#libraries">Libraries</a><ul class="current">
 <li class="toctree-l5 current"><a class="reference internal" href="index.html">Supporting Libraries</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/index.html">API Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../traders/python-binding.html">Python Interface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../businesses/index.html">Businesses</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/index.html">API Guide</a></li>
 </ul>
 </li>
@@ -182,8 +182,8 @@ BitShares 2.0.</p>
 <div class="section" id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>A graphene Python 3.0 library can be installed by issuing</p>
-<div class="highlight-sh"><div class="highlight"><pre>git clone http://github.com/xeroc/python-graphenelib
-<span class="nb">cd </span>python-graphenelib
+<div class="highlight-sh"><div class="highlight"><pre><span></span>git clone http://github.com/xeroc/python-graphenelib
+<span class="nb">cd</span> python-graphenelib
 easy_install-3.4 install autobahn
 python3 setup.py install --user
 </pre></div>
@@ -199,7 +199,7 @@ following example script in more details:</p>
 <p>We first prepare our variables and import all required modules</p>
 <p>Define the <cite>accountID</cite> and the <cite>memo_wif_key</cite> in <cite>examples/monitor.py</cite>.
 The accountID can be obtained from the GUI wallet, or by issuing::</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">get_account</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">get_account</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>If the script exists abnormally, you can continue operations by setting
@@ -216,11 +216,11 @@ key. That way, exposing the memo private key will only expose transaction memos
 (for that key) and not compromise any funds. It is thus safe to store the memo
 private key in 3rd party services and scripts. The memo public key can be
 obtained from the account settings or via command line::</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">get_account</span> <span class="o">&lt;</span><span class="n">myaccount</span><span class="o">&gt;</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">get_account</span> <span class="o">&lt;</span><span class="n">myaccount</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>in the cli wallet. The corresponding private key can be obtain from::</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">dump_private_keys</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">dump_private_keys</span>
 </pre></div>
 </div>
 <p>Note that the latter command exposes all private keys in clear-text wif.</p>
@@ -228,7 +228,7 @@ obtained from the account settings or via command line::</p>
 <div class="section" id="running">
 <h2>Running<a class="headerlink" href="#running" title="Permalink to this headline">¶</a></h2>
 <p>The monitoring script can be executed via</p>
-<div class="highlight-sh"><div class="highlight"><pre>python3 monitor.py
+<div class="highlight-sh"><div class="highlight"><pre><span></span>python3 monitor.py
 </pre></div>
 </div>
 </div>

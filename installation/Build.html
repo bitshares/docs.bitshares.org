@@ -159,7 +159,7 @@
 <h3>Development Toolkit<a class="headerlink" href="#development-toolkit" title="Permalink to this headline">¶</a></h3>
 <p>The following dependencies were necessary for a clean install of Ubuntu 14.04
 LTS:</p>
-<div class="highlight-sh"><div class="highlight"><pre>sudo apt-get install gcc-4.9 g++-4.9 cmake make <span class="se">\</span>
+<div class="highlight-sh"><div class="highlight"><pre><span></span>sudo apt-get install gcc-4.9 g++-4.9 cmake make <span class="se">\</span>
                      libbz2-dev libdb++-dev libdb-dev <span class="se">\</span>
                      libssl-dev openssl libreadline-dev <span class="se">\</span>
                      autoconf libtool git
@@ -171,16 +171,16 @@ LTS:</p>
 <p>The Boost which ships with Ubuntu 15.04 is too old.  You need to download the
 Boost tarball for Boost 1.57.0 (Note, 1.58.0 requires C++14 and will not build
 on Ubuntu LTS; this requirement was an accident, see <a class="reference external" href="http://boost.2283326.n4.nabble.com/1-58-1-bugfix-release-necessary-td4674686.html">this mailing list post</a>).</p>
-<div class="highlight-sh"><div class="highlight"><pre><span class="nb">export </span><span class="nv">BOOST_ROOT</span><span class="o">=</span><span class="nv">$HOME</span>/opt/boost_1_57_0
+<div class="highlight-sh"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">BOOST_ROOT</span><span class="o">=</span><span class="nv">$HOME</span>/opt/boost_1_57_0
 sudo apt-get update
 sudo apt-get install autotools-dev build-essential <span class="se">\</span>
                      g++ libbz2-dev libicu-dev python-dev
 wget -c <span class="s1">&#39;http://sourceforge.net/projects/boost/files/boost/1.57.0/boost_1_57_0.tar.bz2/download&#39;</span><span class="se">\</span>
      -O boost_1_57_0.tar.bz2
 sha256sum boost_1_57_0.tar.bz2
-<span class="c"># &quot;910c8c022a33ccec7f088bd65d4f14b466588dda94ba2124e78b8c57db264967&quot;</span>
+<span class="c1"># &quot;910c8c022a33ccec7f088bd65d4f14b466588dda94ba2124e78b8c57db264967&quot;</span>
 tar xjf boost_1_57_0.tar.bz2
-<span class="nb">cd </span>boost_1_57_0/
+<span class="nb">cd</span> boost_1_57_0/
 ./bootstrap.sh <span class="s2">&quot;--prefix=</span><span class="nv">$BOOST_ROOT</span><span class="s2">&quot;</span>
 ./b2 install
 </pre></div>
@@ -192,7 +192,7 @@ tar xjf boost_1_57_0.tar.bz2
 <p>After downloading the BitShares sources according to <a class="reference internal" href="Sources.html"><em>the download
 page</em></a>, we can run <code class="docutils literal"><span class="pre">cmake</span></code> for configuration and compile with
 <code class="docutils literal"><span class="pre">make</span></code>:</p>
-<div class="highlight-sh"><div class="highlight"><pre>cmake -DBOOST_ROOT<span class="o">=</span><span class="s2">&quot;</span><span class="nv">$BOOST_ROOT</span><span class="s2">&quot;</span> -DCMAKE_BUILD_TYPE<span class="o">=</span>Release .
+<div class="highlight-sh"><div class="highlight"><pre><span></span>cmake -DBOOST_ROOT<span class="o">=</span><span class="s2">&quot;</span><span class="nv">$BOOST_ROOT</span><span class="s2">&quot;</span> -DCMAKE_BUILD_TYPE<span class="o">=</span>Release .
 make
 </pre></div>
 </div>
@@ -209,12 +209,12 @@ install directory of boost if you have installed it manually.</p>
 <div class="section" id="ubuntu-14-04">
 <h3>Ubuntu 14.04<a class="headerlink" href="#ubuntu-14-04" title="Permalink to this headline">¶</a></h3>
 <p>As <code class="docutils literal"><span class="pre">g++-4.9</span></code> isn&#8217;t available in 14.04 LTS, you need to do this first:</p>
-<div class="highlight-sh"><div class="highlight"><pre>sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+<div class="highlight-sh"><div class="highlight"><pre><span></span>sudo add-apt-repository ppa:ubuntu-toolchain-r/test
 sudo apt-get update
 </pre></div>
 </div>
 <p>If you get build failures due to abi incompatibilities, just use gcc 4.9</p>
-<div class="highlight-sh"><div class="highlight"><pre><span class="nv">CC</span><span class="o">=</span>gcc-4.9 <span class="nv">CXX</span><span class="o">=</span>g++-4.9 cmake .
+<div class="highlight-sh"><div class="highlight"><pre><span></span><span class="nv">CC</span><span class="o">=</span>gcc-4.9 <span class="nv">CXX</span><span class="o">=</span>g++-4.9 cmake .
 </pre></div>
 </div>
 </div>
@@ -223,7 +223,7 @@ sudo apt-get update
 <p>Ubuntu 15.04 uses gcc 5, which has the c++11 ABI as default, but the boost
 libraries were compiled with the cxx11 ABI (this is an issue in many distros).
 If you get build failures due to abi incompatibilities, just use gcc 4.9:</p>
-<div class="highlight-sh"><div class="highlight"><pre><span class="nv">CC</span><span class="o">=</span>gcc-4.9 <span class="nv">CXX</span><span class="o">=</span>g++-4.9 cmake .
+<div class="highlight-sh"><div class="highlight"><pre><span></span><span class="nv">CC</span><span class="o">=</span>gcc-4.9 <span class="nv">CXX</span><span class="o">=</span>g++-4.9 cmake .
 </pre></div>
 </div>
 </div>

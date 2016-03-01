@@ -24,6 +24,7 @@ their users.
    pm
    governance
    vesting
+   voting
 
 For Blockchain "Employees"
 ##########################

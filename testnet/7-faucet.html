@@ -191,12 +191,12 @@ we need to setup a faucet. Here, we will also use <cite>mina</cite> as our
 <h2>Installation of Dependencies<a class="headerlink" href="#installation-of-dependencies" title="Permalink to this headline">¶</a></h2>
 <p>we first install every other dependency that is needed and not yet
 installed</p>
-<div class="highlight-sh"><div class="highlight"><pre>sudo apt-get install mysql-server libmysqlclient-dev
-<span class="c"># put a master password for mysql</span>
+<div class="highlight-sh"><div class="highlight"><pre><span></span>sudo apt-get install mysql-server libmysqlclient-dev
+<span class="c1"># put a master password for mysql</span>
 </pre></div>
 </div>
 <p>We also need to install a decently recent version of Ruby:</p>
-<div class="highlight-sh"><div class="highlight"><pre><span class="nb">cd</span>
+<div class="highlight-sh"><div class="highlight"><pre><span></span><span class="nb">cd</span>
 git clone git://github.com/sstephenson/rbenv.git .rbenv
 <span class="nb">echo</span> <span class="s1">&#39;export PATH=&quot;$HOME/.rbenv/bin:$PATH&quot;&#39;</span> &gt;&gt; ~/.bashrc
 <span class="nb">echo</span> <span class="s1">&#39;eval &quot;$(rbenv init -)&quot;&#39;</span> &gt;&gt; ~/.bashrc
@@ -217,9 +217,9 @@ sudo gem install bundler
 <div class="section" id="get-the-source">
 <h2>Get the Source<a class="headerlink" href="#get-the-source" title="Permalink to this headline">¶</a></h2>
 <p>One implementation of a faucet can be downloaded from Cryptonomex:</p>
-<div class="highlight-sh"><div class="highlight"><pre>git clone https://github.com/cryptonomex/faucet
-<span class="nb">cd </span>faucet
-sudo bundle   <span class="c"># ignore warnings</span>
+<div class="highlight-sh"><div class="highlight"><pre><span></span>git clone https://github.com/cryptonomex/faucet
+<span class="nb">cd</span> faucet
+sudo bundle   <span class="c1"># ignore warnings</span>
 </pre></div>
 </div>
 </div>
@@ -236,7 +236,7 @@ sudo bundle   <span class="c"># ignore warnings</span>
 <h3>Faucet<a class="headerlink" href="#faucet" title="Permalink to this headline">¶</a></h3>
 <p>All required settings are in <cite>config/faucet.yml</cite> which has an example
 file:</p>
-<div class="highlight-sh"><div class="highlight"><pre>cp config/faucet-example.yml config/faucet.yml
+<div class="highlight-sh"><div class="highlight"><pre><span></span>cp config/faucet-example.yml config/faucet.yml
 vim config/faucet.yml
 </pre></div>
 </div>
@@ -246,7 +246,7 @@ vim config/faucet.yml
 <p>Rails needs to know a secret for their internals, we can get a new one
 with <cite>rake secret</cite>. Put it into the corresponding lines in the config
 file.</p>
-<div class="highlight-sh"><div class="highlight"><pre>cp config/secrets-example.yml config/secrets.yml
+<div class="highlight-sh"><div class="highlight"><pre><span></span>cp config/secrets-example.yml config/secrets.yml
 rake secret
 vim config/secrets.yml
 </pre></div>
@@ -257,12 +257,12 @@ vim config/secrets.yml
 <p>The default configuration for the database access expects an empty root
 password for MySQL. Hence, if you have set a different password, you
 need to provide it here.</p>
-<div class="highlight-sh"><div class="highlight"><pre>vim config/database.yml
+<div class="highlight-sh"><div class="highlight"><pre><span></span>vim config/database.yml
 </pre></div>
 </div>
 <p>We generate our databases with:</p>
-<div class="highlight-sh"><div class="highlight"><pre>rake db:create<span class="p">;</span> rake db:migrate<span class="p">;</span> rake db:seed
-<span class="nv">RAILS_ENV</span><span class="o">=</span>production bundle <span class="nb">exec </span>rake db:create db:schema:load
+<div class="highlight-sh"><div class="highlight"><pre><span></span>rake db:create<span class="p">;</span> rake db:migrate<span class="p">;</span> rake db:seed
+<span class="nv">RAILS_ENV</span><span class="o">=</span>production bundle <span class="nb">exec</span> rake db:create db:schema:load
 </pre></div>
 </div>
 </div>
@@ -270,7 +270,7 @@ need to provide it here.</p>
 <h3>Mina deployment<a class="headerlink" href="#mina-deployment" title="Permalink to this headline">¶</a></h3>
 <p>Mina is used to deploy the faucet properly and move all the required
 files over to the production machine (may be the same machine).</p>
-<div class="highlight-sh"><div class="highlight"><pre>cp config/deploy-example.yml config/deploy.yml
+<div class="highlight-sh"><div class="highlight"><pre><span></span>cp config/deploy-example.yml config/deploy.yml
 vim config/deploy.yml
 </pre></div>
 </div>
@@ -278,7 +278,7 @@ vim config/deploy.yml
 can deploy to the corrseponding machine.</p>
 <p>Now, all we need to do is create the public directly that is served and
 copy/link the configuration file to the deployment&#8217;s shared files:</p>
-<div class="highlight-sh"><div class="highlight"><pre>sudo mkdir /www
+<div class="highlight-sh"><div class="highlight"><pre><span></span>sudo mkdir /www
 sudo chown -R gph:gph /www
 
 mina setup
@@ -288,7 +288,7 @@ ln -s <span class="nv">$HOME</span>/faucet/config/database.yml /www/shared/confi
 </pre></div>
 </div>
 <p>We deploy mina and the wallet with:</p>
-<div class="highlight-sh"><div class="highlight"><pre>ln -s <span class="nv">$HOME</span>/graphene-ui/web/dist <span class="nv">$HOME</span>/faucet/public/wallet
+<div class="highlight-sh"><div class="highlight"><pre><span></span>ln -s <span class="nv">$HOME</span>/graphene-ui/web/dist <span class="nv">$HOME</span>/faucet/public/wallet
 mina deploy
 mina wallet
 </pre></div>
@@ -298,12 +298,12 @@ mina wallet
 <h3>Update wallet<a class="headerlink" href="#update-wallet" title="Permalink to this headline">¶</a></h3>
 <p>If you have modified something in the wallet, you need to recompile the
 Javascript/HTML files and re-deploy the wallet with:</p>
-<div class="highlight-sh"><div class="highlight"><pre><span class="c"># re-compile</span>
+<div class="highlight-sh"><div class="highlight"><pre><span></span><span class="c1"># re-compile</span>
 <span class="nb">cd</span> ~/graphene-ui/web
-git pull <span class="c"># fetch changes from origin</span>
+git pull <span class="c1"># fetch changes from origin</span>
 npm run build
 
-<span class="c"># deploy</span>
+<span class="c1"># deploy</span>
 <span class="nb">cd</span> ~/faucet
 mina wallet
 </pre></div>

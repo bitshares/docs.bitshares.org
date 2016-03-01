@@ -162,23 +162,23 @@ the websocket connection with callbacks to access API-1:</p>
 <code class="docutils literal"><span class="pre">bytemaster</span></code> with password <code class="docutils literal"><span class="pre">supersecret</span></code> to access four different API&#8217;s, while
 allowing any other user to access the three public API&#8217;s necessary to use the
 wallet::</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
-   <span class="s">&quot;permission_map&quot;</span> <span class="p">:</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+   <span class="s2">&quot;permission_map&quot;</span> <span class="p">:</span>
    <span class="p">[</span>
       <span class="p">[</span>
-         <span class="s">&quot;bytemaster&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;bytemaster&quot;</span><span class="p">,</span>
          <span class="p">{</span>
-            <span class="s">&quot;password_hash_b64&quot;</span> <span class="p">:</span> <span class="s">&quot;9e9GF7ooXVb9k4BoSfNIPTelXeGOZ5DrgOYMj94elaY=&quot;</span><span class="p">,</span>
-            <span class="s">&quot;password_salt_b64&quot;</span> <span class="p">:</span> <span class="s">&quot;INDdM6iCi/8=&quot;</span><span class="p">,</span>
-            <span class="s">&quot;allowed_apis&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="s">&quot;database_api&quot;</span><span class="p">,</span> <span class="s">&quot;network_broadcast_api&quot;</span><span class="p">,</span> <span class="s">&quot;history_api&quot;</span><span class="p">,</span> <span class="s">&quot;network_node_api&quot;</span><span class="p">]</span>
+            <span class="s2">&quot;password_hash_b64&quot;</span> <span class="p">:</span> <span class="s2">&quot;9e9GF7ooXVb9k4BoSfNIPTelXeGOZ5DrgOYMj94elaY=&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;password_salt_b64&quot;</span> <span class="p">:</span> <span class="s2">&quot;INDdM6iCi/8=&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;allowed_apis&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="s2">&quot;database_api&quot;</span><span class="p">,</span> <span class="s2">&quot;network_broadcast_api&quot;</span><span class="p">,</span> <span class="s2">&quot;history_api&quot;</span><span class="p">,</span> <span class="s2">&quot;network_node_api&quot;</span><span class="p">]</span>
          <span class="p">}</span>
       <span class="p">],</span>
       <span class="p">[</span>
-         <span class="s">&quot;*&quot;</span><span class="p">,</span>
+         <span class="s2">&quot;*&quot;</span><span class="p">,</span>
          <span class="p">{</span>
-            <span class="s">&quot;password_hash_b64&quot;</span> <span class="p">:</span> <span class="s">&quot;*&quot;</span><span class="p">,</span>
-            <span class="s">&quot;password_salt_b64&quot;</span> <span class="p">:</span> <span class="s">&quot;*&quot;</span><span class="p">,</span>
-            <span class="s">&quot;allowed_apis&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="s">&quot;database_api&quot;</span><span class="p">,</span> <span class="s">&quot;network_broadcast_api&quot;</span><span class="p">,</span> <span class="s">&quot;history_api&quot;</span><span class="p">]</span>
+            <span class="s2">&quot;password_hash_b64&quot;</span> <span class="p">:</span> <span class="s2">&quot;*&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;password_salt_b64&quot;</span> <span class="p">:</span> <span class="s2">&quot;*&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;allowed_apis&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="s2">&quot;database_api&quot;</span><span class="p">,</span> <span class="s2">&quot;network_broadcast_api&quot;</span><span class="p">,</span> <span class="s2">&quot;history_api&quot;</span><span class="p">]</span>
          <span class="p">}</span>
       <span class="p">]</span>
    <span class="p">]</span>
@@ -191,9 +191,9 @@ password.  A single asterisk <code class="docutils literal"><span class="pre">*<
 hash to accept any value.</p>
 <p>With the above configuration, here is an example of how to call <code class="docutils literal"><span class="pre">add_node</span></code> from
 the <code class="docutils literal"><span class="pre">network_node</span></code> API::</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span><span class="s">&quot;id&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s">&quot;method&quot;</span><span class="p">:</span><span class="s">&quot;call&quot;</span><span class="p">,</span> <span class="s">&quot;params&quot;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;login&quot;</span><span class="p">,[</span><span class="s">&quot;bytemaster&quot;</span><span class="p">,</span> <span class="s">&quot;supersecret&quot;</span><span class="p">]]}</span>
-<span class="p">{</span><span class="s">&quot;id&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="s">&quot;method&quot;</span><span class="p">:</span><span class="s">&quot;call&quot;</span><span class="p">,</span> <span class="s">&quot;params&quot;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="s">&quot;network_node&quot;</span><span class="p">,[]]}</span>
-<span class="p">{</span><span class="s">&quot;id&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s">&quot;method&quot;</span><span class="p">:</span><span class="s">&quot;call&quot;</span><span class="p">,</span> <span class="s">&quot;params&quot;</span><span class="p">:[</span><span class="mi">2</span><span class="p">,</span><span class="s">&quot;add_node&quot;</span><span class="p">,[</span><span class="s">&quot;127.0.0.1:9090&quot;</span><span class="p">]]}</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;method&quot;</span><span class="p">:</span><span class="s2">&quot;call&quot;</span><span class="p">,</span> <span class="s2">&quot;params&quot;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;login&quot;</span><span class="p">,[</span><span class="s2">&quot;bytemaster&quot;</span><span class="p">,</span> <span class="s2">&quot;supersecret&quot;</span><span class="p">]]}</span>
+<span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;method&quot;</span><span class="p">:</span><span class="s2">&quot;call&quot;</span><span class="p">,</span> <span class="s2">&quot;params&quot;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;network_node&quot;</span><span class="p">,[]]}</span>
+<span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;method&quot;</span><span class="p">:</span><span class="s2">&quot;call&quot;</span><span class="p">,</span> <span class="s2">&quot;params&quot;</span><span class="p">:[</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;add_node&quot;</span><span class="p">,[</span><span class="s2">&quot;127.0.0.1:9090&quot;</span><span class="p">]]}</span>
 </pre></div>
 </div>
 <p>Note, the call to <code class="docutils literal"><span class="pre">network_node</span></code> is necessary to obtain the correct API
@@ -207,14 +207,14 @@ information about APIs.</p>
 <h2>Login In<a class="headerlink" href="#login-in" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="_CPPv2N8graphene3app9login_apiE">
-<span id="graphene::app::login_api"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1login__api"></span><em class="property">class </em><code class="descclassname">graphene::app::</code><code class="descname">login_api</code><a class="headerlink" href="#_CPPv2N8graphene3app9login_apiE" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <a class="reference internal" href="../development/namespaces/app.html#grapheneclassgraphene_1_1app_1_1login__api"><span>login_api</span></a> class implements the bottom layer of the RPC API. </p>
+<span id="graphene::app::login_api"></span><span class="target" id="project0classgraphene_1_1app_1_1login__api"></span><em class="property">class </em><code class="descclassname">graphene::app::</code><code class="descname">login_api</code><a class="headerlink" href="#_CPPv2N8graphene3app9login_apiE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference internal" href="../development/namespaces/app.html#project0classgraphene_1_1app_1_1login__api"><span>login_api</span></a> class implements the bottom layer of the RPC API. </p>
 <p>All other APIs must be requested from this API. </p>
 <div class="breathe-sectiondef container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
 <dt id="_CPPv2N8graphene3app9login_api5loginERK6stringRK6string">
-<span id="graphene::app::login_api::login__stringCR.stringCR"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1login__api_1a4e4e3416ce008a51013e184d1dfc8005"></span>bool <code class="descname">login</code><span class="sig-paren">(</span><em class="property">const</em> string &amp;<em>user</em>, <em class="property">const</em> string &amp;<em>password</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene3app9login_api5loginERK6stringRK6string" title="Permalink to this definition">¶</a></dt>
+<span id="graphene::app::login_api::login__stringCR.stringCR"></span><span class="target" id="project0classgraphene_1_1app_1_1login__api_1a4e4e3416ce008a51013e184d1dfc8005"></span>bool <code class="descname">login</code><span class="sig-paren">(</span><em class="property">const</em> string &amp;<em>user</em>, <em class="property">const</em> string &amp;<em>password</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene3app9login_api5loginERK6stringRK6string" title="Permalink to this definition">¶</a></dt>
 <dd><p>Authenticate to the RPC server. </p>
 <p><dl class="docutils">
 <dt><strong>Return</strong></dt>
@@ -235,31 +235,31 @@ information about APIs.</p>
 
 <dl class="function">
 <dt id="_CPPv2N8graphene3app9login_api17network_broadcastEv">
-<span id="graphene::app::login_api::network_broadcast"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1login__api_1aa40a2b6ca850b86e968a6c40dcd06ee2"></span>fc::api&lt;<a class="reference internal" href="../development/namespaces/app.html#_CPPv2N8graphene3app21network_broadcast_apiE" title="graphene::app::network_broadcast_api">network_broadcast_api</a>&gt; <code class="descname">network_broadcast</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app9login_api17network_broadcastEv" title="Permalink to this definition">¶</a></dt>
+<span id="graphene::app::login_api::network_broadcast"></span><span class="target" id="project0classgraphene_1_1app_1_1login__api_1aa40a2b6ca850b86e968a6c40dcd06ee2"></span>fc::api&lt;<a class="reference internal" href="../development/namespaces/app.html#_CPPv2N8graphene3app21network_broadcast_apiE" title="graphene::app::network_broadcast_api">network_broadcast_api</a>&gt; <code class="descname">network_broadcast</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app9login_api17network_broadcastEv" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve the network broadcast API. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N8graphene3app9login_api8databaseEv">
-<span id="graphene::app::login_api::database"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1login__api_1aea85a000fa4b3b08e4ed759fecd7d4ce"></span>fc::api&lt;<a class="reference internal" href="../development/namespaces/app.html#_CPPv2N8graphene3app12database_apiE" title="graphene::app::database_api">database_api</a>&gt; <code class="descname">database</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app9login_api8databaseEv" title="Permalink to this definition">¶</a></dt>
+<span id="graphene::app::login_api::database"></span><span class="target" id="project0classgraphene_1_1app_1_1login__api_1aea85a000fa4b3b08e4ed759fecd7d4ce"></span>fc::api&lt;<a class="reference internal" href="../development/namespaces/app.html#_CPPv2N8graphene3app12database_apiE" title="graphene::app::database_api">database_api</a>&gt; <code class="descname">database</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app9login_api8databaseEv" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve the database API. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N8graphene3app9login_api7historyEv">
-<span id="graphene::app::login_api::history"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1login__api_1a9273e3132428854411de3c208f269086"></span>fc::api&lt;<a class="reference internal" href="../development/namespaces/app.html#_CPPv2N8graphene3app11history_apiE" title="graphene::app::history_api">history_api</a>&gt; <code class="descname">history</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app9login_api7historyEv" title="Permalink to this definition">¶</a></dt>
+<span id="graphene::app::login_api::history"></span><span class="target" id="project0classgraphene_1_1app_1_1login__api_1a9273e3132428854411de3c208f269086"></span>fc::api&lt;<a class="reference internal" href="../development/namespaces/app.html#_CPPv2N8graphene3app11history_apiE" title="graphene::app::history_api">history_api</a>&gt; <code class="descname">history</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app9login_api7historyEv" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve the history API. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N8graphene3app9login_api12network_nodeEv">
-<span id="graphene::app::login_api::network_node"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1login__api_1a4ecc6b7863f2e09dc49cd8ad88790f70"></span>fc::api&lt;<a class="reference internal" href="../development/namespaces/app.html#_CPPv2N8graphene3app16network_node_apiE" title="graphene::app::network_node_api">network_node_api</a>&gt; <code class="descname">network_node</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app9login_api12network_nodeEv" title="Permalink to this definition">¶</a></dt>
+<span id="graphene::app::login_api::network_node"></span><span class="target" id="project0classgraphene_1_1app_1_1login__api_1a4ecc6b7863f2e09dc49cd8ad88790f70"></span>fc::api&lt;<a class="reference internal" href="../development/namespaces/app.html#_CPPv2N8graphene3app16network_node_apiE" title="graphene::app::network_node_api">network_node_api</a>&gt; <code class="descname">network_node</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app9login_api12network_nodeEv" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve the network node API. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N8graphene3app9login_api6cryptoEv">
-<span id="graphene::app::login_api::crypto"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1login__api_1a4913729d3342ccaacfec9f9d00f4bd7c"></span>fc::api&lt;crypto_api&gt; <code class="descname">crypto</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app9login_api6cryptoEv" title="Permalink to this definition">¶</a></dt>
+<span id="graphene::app::login_api::crypto"></span><span class="target" id="project0classgraphene_1_1app_1_1login__api_1a4913729d3342ccaacfec9f9d00f4bd7c"></span>fc::api&lt;crypto_api&gt; <code class="descname">crypto</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app9login_api6cryptoEv" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve the cryptography API. </p>
 </dd></dl>
 

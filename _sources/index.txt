@@ -38,6 +38,7 @@ Recent Updates
 
 .. r!date +\%y/\%m/\%d
 
+* ``16/03/01`` :doc:`bitshares/tutorials/cli-wallet-usage`, :doc:`bitshares/tutorials/transfer-funds-cli`, :doc:`bitshares/user/voting`, :doc:`bitshares/tutorials/voting`
 * ``16/02/13`` Huge improvements in the :doc:`api/index`
 * ``16/02/08`` :doc:`bitshares/user/committee`, :doc:`bitshares/tutorials/committee-approve-proposal`, :doc:`bitshares/user/vesting`
 * ``16/02/01`` :doc:`integration/merchants/merchant-protocol`, Added search to the navigation

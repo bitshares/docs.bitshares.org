@@ -160,7 +160,7 @@ parts:</p>
 <h2>Brain, Private and Public Key Derivation<a class="headerlink" href="#brain-private-and-public-key-derivation" title="Permalink to this headline">¶</a></h2>
 <p>We can derive a new set auf keys using the <code class="docutils literal"><span class="pre">suggest_brain_key</span></code> command in the
 <a class="reference internal" href="../apps/cliwallet.html"><em>CLI Wallet</em></a>. The result will look like this:</p>
-<div class="highlight-js"><div class="highlight"><pre><span class="o">&gt;&gt;&gt;</span> <span class="nx">suggest_brain_key</span>
+<div class="highlight-js"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="nx">suggest_brain_key</span>
 <span class="p">{</span>
   <span class="s2">&quot;brain_priv_key&quot;</span><span class="o">:</span> <span class="s2">&quot;FILINGS THEREOF ENSILE JAW OVERBID RETINAL PILULAR RYPE CHITTY RAFFERY HANDGUN ERANIST UNPILE TWISTER BABYDOM CIBOL&quot;</span><span class="p">,</span>
   <span class="s2">&quot;wif_priv_key&quot;</span><span class="o">:</span> <span class="s2">&quot;5JVrt2921aikA7QP5ZCtR2sJh4wbEnsHsK6qo67Shnk9ArKMzNT&quot;</span><span class="p">,</span>
@@ -169,23 +169,30 @@ parts:</p>
 </pre></div>
 </div>
 <p>The hierarchy for these values goes like this::</p>
-<div class="highlight-python"><div class="highlight"><pre>HASH(brain_priv_key) -&gt; wif_priv_key
+<div class="highlight-python"><div class="highlight"><pre><span></span>HASH(brain_priv_key) -&gt; wif_priv_key
 HASH(HASH(brain_priv_key)) -&gt; pub_key
 </pre></div>
 </div>
 <p>Hence, if you keep the brain key, you will be able to recover your required keys
 to access your account and/or funds.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Even though <code class="docutils literal"><span class="pre">suggest_brain_key</span></code> shows only one private key
+that will be used for the <strong>owner authority</strong> most wallet
+implementations will derive an additional second private key
+to be used for the <strong>active authority</strong>!</p>
+</div>
 </div>
 <div class="section" id="creating-and-registering-an-account">
 <h2>Creating and Registering an account<a class="headerlink" href="#creating-and-registering-an-account" title="Permalink to this headline">¶</a></h2>
 <p>If you want to create and register a new account on your own because you have
 the funds in another account and don&#8217;t want someone else involved, you can make
 use of the command <code class="docutils literal"><span class="pre">create_account_with_brain_key</span></code>::</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">create_account_with_brain_key</span> <span class="o">&lt;</span><span class="n">brain_key</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">account_name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">registrar_account</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">referrer_account</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">broadcast</span><span class="o">&gt;</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">create_account_with_brain_key</span> <span class="o">&lt;</span><span class="n">brain_key</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">account_name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">registrar_account</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">referrer_account</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">broadcast</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>For our example, we would get::</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">create_account_with_brain_key</span> <span class="s">&quot;FILINGS THEREOF ENSILE JAW OVERBID RETINAL PILULAR RYPE CHITTY RAFFERY HANDGUN ERANIST UNPILE TWISTER BABYDOM CIBOL&quot;</span> <span class="n">mywallet</span> <span class="n">myfunds</span> <span class="n">anonymous</span> <span class="mi">100</span> <span class="n">true</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">create_account_with_brain_key</span> <span class="s2">&quot;FILINGS THEREOF ENSILE JAW OVERBID RETINAL PILULAR RYPE CHITTY RAFFERY HANDGUN ERANIST UNPILE TWISTER BABYDOM CIBOL&quot;</span> <span class="n">mywallet</span> <span class="n">myfunds</span> <span class="n">anonymous</span> <span class="mi">100</span> <span class="n">true</span>
 </pre></div>
 </div>
 </div>
@@ -202,12 +209,12 @@ to pay the fee for the registration transaction. This account will be called
 that will get <code class="docutils literal"><span class="pre">referrer_percentage</span></code> of the referral bonus program. Any
 registered account can take the role of the referrer. Hence we here say that
 user <code class="docutils literal"><span class="pre">anonymous</span></code> has referred us. The syntax goes like this::</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">register_account</span> <span class="n">name</span><span class="p">,</span> <span class="n">owner_pubkey</span><span class="p">,</span> <span class="n">active</span> <span class="n">_pubkey</span><span class="p">,</span> <span class="n">registrar_account</span><span class="p">,</span> <span class="n">referrer_account</span><span class="p">,</span> <span class="n">referrer_percent</span><span class="p">,</span> <span class="n">broadcast</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">register_account</span> <span class="n">name</span><span class="p">,</span> <span class="n">owner_pubkey</span><span class="p">,</span> <span class="n">active</span> <span class="n">_pubkey</span><span class="p">,</span> <span class="n">registrar_account</span><span class="p">,</span> <span class="n">referrer_account</span><span class="p">,</span> <span class="n">referrer_percent</span><span class="p">,</span> <span class="n">broadcast</span>
 </pre></div>
 </div>
 <p>For our example we say we register a new user called <code class="docutils literal"><span class="pre">mywallet</span></code>, use the
 pubkey derived above and let our account <code class="docutils literal"><span class="pre">myfunds</span></code> pay the fee::</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">register_account</span> <span class="n">mywallet</span> <span class="n">BTS7D8jpQ2UwaQxqKyGpuhFQ9LBugCNxDhE7UN2jqgjVQgzG7zo9n</span> <span class="n">BTS7D8jpQ2UwaQxqKyGpuhFQ9LBugCNxDhE7UN2jqgjVQgzG7zo9n</span> <span class="n">myfunds</span> <span class="n">anonymous</span> <span class="mi">100</span> <span class="n">true</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">register_account</span> <span class="n">mywallet</span> <span class="n">BTS7D8jpQ2UwaQxqKyGpuhFQ9LBugCNxDhE7UN2jqgjVQgzG7zo9n</span> <span class="n">BTS7D8jpQ2UwaQxqKyGpuhFQ9LBugCNxDhE7UN2jqgjVQgzG7zo9n</span> <span class="n">myfunds</span> <span class="n">anonymous</span> <span class="mi">100</span> <span class="n">true</span>
 </pre></div>
 </div>
 <div class="admonition note">

@@ -155,7 +155,7 @@ creating the asset. This parameter can not be changed after creation of
 the asset.</p>
 <p>Further, A PM-asset should have the following <strong>flags</strong>
 (not permissions):</p>
-<div class="highlight-js"><div class="highlight"><pre><span class="p">{</span>
+<div class="highlight-js"><div class="highlight"><pre><span></span><span class="p">{</span>
    <span class="s2">&quot;disable_force_settle&quot;</span> <span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
    <span class="s2">&quot;global_settle&quot;</span> <span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
    <span class="s2">&quot;witness_fed_asset&quot;</span> <span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
@@ -164,7 +164,7 @@ the asset.</p>
 </pre></div>
 </div>
 <p>and these MPA-options:</p>
-<div class="highlight-js"><div class="highlight"><pre><span class="p">{</span>
+<div class="highlight-js"><div class="highlight"><pre><span></span><span class="p">{</span>
  <span class="s2">&quot;feed_lifetime_sec&quot;</span> <span class="o">:</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">356</span><span class="p">,</span>
  <span class="s2">&quot;minimum_feeds&quot;</span> <span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
  <span class="s2">&quot;force_settlement_delay_sec&quot;</span> <span class="o">:</span> <span class="mi">60</span>
@@ -199,9 +199,9 @@ the prediction market:</p>
 <h3>Committee<a class="headerlink" href="#committee" title="Permalink to this headline">¶</a></h3>
 <p>If only the committee is supposed to be able to settle the market, you
 need to set the options to::</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
- <span class="s">&quot;witness_fed_asset&quot;</span> <span class="p">:</span> <span class="n">false</span><span class="p">,</span>
- <span class="s">&quot;committee_fed_asset&quot;</span> <span class="p">:</span> <span class="n">true</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+ <span class="s2">&quot;witness_fed_asset&quot;</span> <span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+ <span class="s2">&quot;committee_fed_asset&quot;</span> <span class="p">:</span> <span class="n">true</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -210,9 +210,9 @@ need to set the options to::</p>
 <h3>Witnesses<a class="headerlink" href="#witnesses" title="Permalink to this headline">¶</a></h3>
 <p>If only the witnesses are supposed to be able to settle the market, you
 need to set the options to::</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
- <span class="s">&quot;witness_fed_asset&quot;</span> <span class="p">:</span> <span class="n">true</span><span class="p">,</span>
- <span class="s">&quot;committee_fed_asset&quot;</span> <span class="p">:</span> <span class="n">false</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+ <span class="s2">&quot;witness_fed_asset&quot;</span> <span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+ <span class="s2">&quot;committee_fed_asset&quot;</span> <span class="p">:</span> <span class="n">false</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -233,65 +233,65 @@ no consensus needs to be reached. Alternatively, if you want to settle a
 market only if several accounts can reach a consensus, a new resulution
 account can be created that uses <a class="reference internal" href="../user/account-permissions.html"><em>hierarchical multi-signature</em></a> similar to the <cite>committee-account</cite>.</p>
 <p>The list of settlement price producers can be defined with:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">update_asset_feed_producers</span> <span class="o">&lt;</span><span class="n">symbol</span><span class="o">&gt;</span> <span class="p">[</span><span class="s">&quot;account-a&quot;</span><span class="p">,</span> <span class="s">&quot;account-b&quot;</span><span class="p">]</span> <span class="n">true</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">update_asset_feed_producers</span> <span class="o">&lt;</span><span class="n">symbol</span><span class="o">&gt;</span> <span class="p">[</span><span class="s2">&quot;account-a&quot;</span><span class="p">,</span> <span class="s2">&quot;account-b&quot;</span><span class="p">]</span> <span class="n">true</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="python-example">
 <h2>Python Example<a class="headerlink" href="#python-example" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">grapheneapi</span> <span class="kn">import</span> <span class="n">GrapheneClient</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">grapheneapi</span> <span class="kn">import</span> <span class="n">GrapheneClient</span>
 <span class="kn">import</span> <span class="nn">json</span>
 
 <span class="n">perm</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="n">perm</span><span class="p">[</span><span class="s">&quot;charge_market_fee&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0x01</span>
-<span class="n">perm</span><span class="p">[</span><span class="s">&quot;white_list&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0x02</span>
-<span class="n">perm</span><span class="p">[</span><span class="s">&quot;override_authority&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0x04</span>
-<span class="n">perm</span><span class="p">[</span><span class="s">&quot;transfer_restricted&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0x08</span>
-<span class="n">perm</span><span class="p">[</span><span class="s">&quot;disable_force_settle&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0x10</span>
-<span class="n">perm</span><span class="p">[</span><span class="s">&quot;global_settle&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0x20</span>
-<span class="n">perm</span><span class="p">[</span><span class="s">&quot;disable_confidential&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0x40</span>
-<span class="n">perm</span><span class="p">[</span><span class="s">&quot;witness_fed_asset&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0x80</span>
-<span class="n">perm</span><span class="p">[</span><span class="s">&quot;committee_fed_asset&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0x100</span>
+<span class="n">perm</span><span class="p">[</span><span class="s2">&quot;charge_market_fee&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0x01</span>
+<span class="n">perm</span><span class="p">[</span><span class="s2">&quot;white_list&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0x02</span>
+<span class="n">perm</span><span class="p">[</span><span class="s2">&quot;override_authority&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0x04</span>
+<span class="n">perm</span><span class="p">[</span><span class="s2">&quot;transfer_restricted&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0x08</span>
+<span class="n">perm</span><span class="p">[</span><span class="s2">&quot;disable_force_settle&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0x10</span>
+<span class="n">perm</span><span class="p">[</span><span class="s2">&quot;global_settle&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0x20</span>
+<span class="n">perm</span><span class="p">[</span><span class="s2">&quot;disable_confidential&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0x40</span>
+<span class="n">perm</span><span class="p">[</span><span class="s2">&quot;witness_fed_asset&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0x80</span>
+<span class="n">perm</span><span class="p">[</span><span class="s2">&quot;committee_fed_asset&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mh">0x100</span>
 <span class="n">GRAPHENE_100_PERCENT</span> <span class="o">=</span> <span class="mi">10000</span>
 <span class="n">GRAPHENE_1_PERCENT</span> <span class="o">=</span> <span class="n">GRAPHENE_100_PERCENT</span> <span class="o">/</span> <span class="mi">100</span>
 
 
 <span class="k">class</span> <span class="nc">Config</span><span class="p">():</span>
-    <span class="n">wallet_host</span>           <span class="o">=</span> <span class="s">&quot;localhost&quot;</span>
+    <span class="n">wallet_host</span>           <span class="o">=</span> <span class="s2">&quot;localhost&quot;</span>
     <span class="n">wallet_port</span>           <span class="o">=</span> <span class="mi">8092</span>
-    <span class="n">wallet_user</span>           <span class="o">=</span> <span class="s">&quot;&quot;</span>
-    <span class="n">wallet_password</span>       <span class="o">=</span> <span class="s">&quot;&quot;</span>
+    <span class="n">wallet_user</span>           <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">wallet_password</span>       <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">graphene</span> <span class="o">=</span> <span class="n">GrapheneClient</span><span class="p">(</span><span class="n">Config</span><span class="p">)</span>
 
-    <span class="n">issuer</span> <span class="o">=</span> <span class="s">&quot;nathan&quot;</span>
-    <span class="n">symbol</span> <span class="o">=</span> <span class="s">&quot;PMMP&quot;</span>
-    <span class="n">backing</span> <span class="o">=</span> <span class="s">&quot;1.3.0&quot;</span>
+    <span class="n">issuer</span> <span class="o">=</span> <span class="s2">&quot;nathan&quot;</span>
+    <span class="n">symbol</span> <span class="o">=</span> <span class="s2">&quot;PMMP&quot;</span>
+    <span class="n">backing</span> <span class="o">=</span> <span class="s2">&quot;1.3.0&quot;</span>
 
     <span class="n">account</span> <span class="o">=</span> <span class="n">graphene</span><span class="o">.</span><span class="n">rpc</span><span class="o">.</span><span class="n">get_account</span><span class="p">(</span><span class="n">issuer</span><span class="p">)</span>
     <span class="n">asset</span> <span class="o">=</span> <span class="n">graphene</span><span class="o">.</span><span class="n">rpc</span><span class="o">.</span><span class="n">get_asset</span><span class="p">(</span><span class="n">backing</span><span class="p">)</span>
 
-    <span class="n">permissions</span> <span class="o">=</span> <span class="p">{</span><span class="s">&quot;charge_market_fee&quot;</span> <span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
-                   <span class="s">&quot;white_list&quot;</span> <span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
-                   <span class="s">&quot;override_authority&quot;</span> <span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
-                   <span class="s">&quot;transfer_restricted&quot;</span> <span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
-                   <span class="s">&quot;disable_force_settle&quot;</span> <span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
-                   <span class="s">&quot;global_settle&quot;</span> <span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
-                   <span class="s">&quot;disable_confidential&quot;</span> <span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
-                   <span class="s">&quot;witness_fed_asset&quot;</span> <span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
-                   <span class="s">&quot;committee_fed_asset&quot;</span> <span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+    <span class="n">permissions</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;charge_market_fee&quot;</span> <span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+                   <span class="s2">&quot;white_list&quot;</span> <span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+                   <span class="s2">&quot;override_authority&quot;</span> <span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+                   <span class="s2">&quot;transfer_restricted&quot;</span> <span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+                   <span class="s2">&quot;disable_force_settle&quot;</span> <span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+                   <span class="s2">&quot;global_settle&quot;</span> <span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+                   <span class="s2">&quot;disable_confidential&quot;</span> <span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+                   <span class="s2">&quot;witness_fed_asset&quot;</span> <span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+                   <span class="s2">&quot;committee_fed_asset&quot;</span> <span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
                    <span class="p">}</span>
-    <span class="n">flags</span>       <span class="o">=</span> <span class="p">{</span><span class="s">&quot;charge_market_fee&quot;</span> <span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
-                   <span class="s">&quot;white_list&quot;</span> <span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
-                   <span class="s">&quot;override_authority&quot;</span> <span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
-                   <span class="s">&quot;transfer_restricted&quot;</span> <span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
-                   <span class="s">&quot;disable_force_settle&quot;</span> <span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
-                   <span class="s">&quot;global_settle&quot;</span> <span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
-                   <span class="s">&quot;disable_confidential&quot;</span> <span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
-                   <span class="s">&quot;witness_fed_asset&quot;</span> <span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
-                   <span class="s">&quot;committee_fed_asset&quot;</span> <span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
+    <span class="n">flags</span>       <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;charge_market_fee&quot;</span> <span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
+                   <span class="s2">&quot;white_list&quot;</span> <span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
+                   <span class="s2">&quot;override_authority&quot;</span> <span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
+                   <span class="s2">&quot;transfer_restricted&quot;</span> <span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
+                   <span class="s2">&quot;disable_force_settle&quot;</span> <span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+                   <span class="s2">&quot;global_settle&quot;</span> <span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
+                   <span class="s2">&quot;disable_confidential&quot;</span> <span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
+                   <span class="s2">&quot;witness_fed_asset&quot;</span> <span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
+                   <span class="s2">&quot;committee_fed_asset&quot;</span> <span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
                    <span class="p">}</span>
     <span class="n">permissions_int</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">permissions</span> <span class="p">:</span>
@@ -301,47 +301,47 @@ account can be created that uses <a class="reference internal" href="../user/acc
     <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">permissions</span> <span class="p">:</span>
         <span class="k">if</span> <span class="n">flags</span><span class="p">[</span><span class="n">p</span><span class="p">]:</span>
             <span class="n">flags_int</span> <span class="o">+=</span> <span class="n">perm</span><span class="p">[</span><span class="n">p</span><span class="p">]</span>
-    <span class="n">options</span> <span class="o">=</span> <span class="p">{</span><span class="s">&quot;max_supply&quot;</span> <span class="p">:</span> <span class="mi">10000000000</span><span class="p">,</span>
-               <span class="s">&quot;market_fee_percent&quot;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-               <span class="s">&quot;max_market_fee&quot;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-               <span class="s">&quot;issuer_permissions&quot;</span> <span class="p">:</span> <span class="n">permissions_int</span><span class="p">,</span>
-               <span class="s">&quot;flags&quot;</span> <span class="p">:</span> <span class="n">flags_int</span><span class="p">,</span>
-               <span class="s">&quot;core_exchange_rate&quot;</span> <span class="p">:</span> <span class="p">{</span>
-                   <span class="s">&quot;base&quot;</span><span class="p">:</span> <span class="p">{</span>
-                       <span class="s">&quot;amount&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-                       <span class="s">&quot;asset_id&quot;</span><span class="p">:</span> <span class="n">asset</span><span class="p">[</span><span class="s">&quot;id&quot;</span><span class="p">]},</span>
-                   <span class="s">&quot;quote&quot;</span><span class="p">:</span> <span class="p">{</span>
-                       <span class="s">&quot;amount&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-                       <span class="s">&quot;asset_id&quot;</span><span class="p">:</span> <span class="s">&quot;1.3.1&quot;</span><span class="p">}},</span>
-               <span class="s">&quot;whitelist_authorities&quot;</span> <span class="p">:</span> <span class="p">[],</span>
-               <span class="s">&quot;blacklist_authorities&quot;</span> <span class="p">:</span> <span class="p">[],</span>
-               <span class="s">&quot;whitelist_markets&quot;</span> <span class="p">:</span> <span class="p">[],</span>
-               <span class="s">&quot;blacklist_markets&quot;</span> <span class="p">:</span> <span class="p">[],</span>
-               <span class="s">&quot;description&quot;</span> <span class="p">:</span> <span class="s">&quot;Prediction Market&quot;</span>
+    <span class="n">options</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;max_supply&quot;</span> <span class="p">:</span> <span class="mi">10000000000</span><span class="p">,</span>
+               <span class="s2">&quot;market_fee_percent&quot;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+               <span class="s2">&quot;max_market_fee&quot;</span> <span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+               <span class="s2">&quot;issuer_permissions&quot;</span> <span class="p">:</span> <span class="n">permissions_int</span><span class="p">,</span>
+               <span class="s2">&quot;flags&quot;</span> <span class="p">:</span> <span class="n">flags_int</span><span class="p">,</span>
+               <span class="s2">&quot;core_exchange_rate&quot;</span> <span class="p">:</span> <span class="p">{</span>
+                   <span class="s2">&quot;base&quot;</span><span class="p">:</span> <span class="p">{</span>
+                       <span class="s2">&quot;amount&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+                       <span class="s2">&quot;asset_id&quot;</span><span class="p">:</span> <span class="n">asset</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]},</span>
+                   <span class="s2">&quot;quote&quot;</span><span class="p">:</span> <span class="p">{</span>
+                       <span class="s2">&quot;amount&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+                       <span class="s2">&quot;asset_id&quot;</span><span class="p">:</span> <span class="s2">&quot;1.3.1&quot;</span><span class="p">}},</span>
+               <span class="s2">&quot;whitelist_authorities&quot;</span> <span class="p">:</span> <span class="p">[],</span>
+               <span class="s2">&quot;blacklist_authorities&quot;</span> <span class="p">:</span> <span class="p">[],</span>
+               <span class="s2">&quot;whitelist_markets&quot;</span> <span class="p">:</span> <span class="p">[],</span>
+               <span class="s2">&quot;blacklist_markets&quot;</span> <span class="p">:</span> <span class="p">[],</span>
+               <span class="s2">&quot;description&quot;</span> <span class="p">:</span> <span class="s2">&quot;Prediction Market&quot;</span>
                <span class="p">}</span>
-    <span class="n">mpaoptions</span> <span class="o">=</span> <span class="p">{</span><span class="s">&quot;feed_lifetime_sec&quot;</span> <span class="p">:</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">14</span><span class="p">,</span>
-                  <span class="s">&quot;minimum_feeds&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-                  <span class="s">&quot;force_settlement_delay_sec&quot;</span> <span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-                  <span class="s">&quot;force_settlement_offset_percent&quot;</span> <span class="p">:</span> <span class="mi">0</span> <span class="o">*</span> <span class="n">GRAPHENE_1_PERCENT</span><span class="p">,</span>
-                  <span class="s">&quot;maximum_force_settlement_volume&quot;</span> <span class="p">:</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">GRAPHENE_1_PERCENT</span><span class="p">,</span>
-                  <span class="s">&quot;short_backing_asset&quot;</span> <span class="p">:</span> <span class="n">asset</span><span class="p">[</span><span class="s">&quot;id&quot;</span><span class="p">],</span>
+    <span class="n">mpaoptions</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;feed_lifetime_sec&quot;</span> <span class="p">:</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">14</span><span class="p">,</span>
+                  <span class="s2">&quot;minimum_feeds&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                  <span class="s2">&quot;force_settlement_delay_sec&quot;</span> <span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+                  <span class="s2">&quot;force_settlement_offset_percent&quot;</span> <span class="p">:</span> <span class="mi">0</span> <span class="o">*</span> <span class="n">GRAPHENE_1_PERCENT</span><span class="p">,</span>
+                  <span class="s2">&quot;maximum_force_settlement_volume&quot;</span> <span class="p">:</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">GRAPHENE_1_PERCENT</span><span class="p">,</span>
+                  <span class="s2">&quot;short_backing_asset&quot;</span> <span class="p">:</span> <span class="n">asset</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
                   <span class="p">}</span>
 
-    <span class="n">op</span> <span class="o">=</span> <span class="n">graphene</span><span class="o">.</span><span class="n">rpc</span><span class="o">.</span><span class="n">get_prototype_operation</span><span class="p">(</span><span class="s">&quot;asset_create_operation&quot;</span><span class="p">)</span>
-    <span class="n">op</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s">&quot;issuer&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">account</span><span class="p">[</span><span class="s">&quot;id&quot;</span><span class="p">]</span>
-    <span class="n">op</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s">&quot;symbol&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">symbol</span>
-    <span class="n">op</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s">&quot;precision&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">asset</span><span class="p">[</span><span class="s">&quot;precision&quot;</span><span class="p">]</span>
-    <span class="n">op</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s">&quot;common_options&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">options</span>
-    <span class="n">op</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s">&quot;bitasset_opts&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mpaoptions</span>
+    <span class="n">op</span> <span class="o">=</span> <span class="n">graphene</span><span class="o">.</span><span class="n">rpc</span><span class="o">.</span><span class="n">get_prototype_operation</span><span class="p">(</span><span class="s2">&quot;asset_create_operation&quot;</span><span class="p">)</span>
+    <span class="n">op</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s2">&quot;issuer&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">account</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span>
+    <span class="n">op</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s2">&quot;symbol&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">symbol</span>
+    <span class="n">op</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s2">&quot;precision&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">asset</span><span class="p">[</span><span class="s2">&quot;precision&quot;</span><span class="p">]</span>
+    <span class="n">op</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s2">&quot;common_options&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">options</span>
+    <span class="n">op</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s2">&quot;bitasset_opts&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mpaoptions</span>
 
     <span class="sd">&quot;&quot;&quot; This flag will declare the asset as a prediction market</span>
 <span class="sd">        asset!</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">op</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s">&quot;is_prediction_market&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">True</span>
+    <span class="n">op</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="s2">&quot;is_prediction_market&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">True</span>
 
     <span class="n">handle</span> <span class="o">=</span> <span class="n">graphene</span><span class="o">.</span><span class="n">rpc</span><span class="o">.</span><span class="n">begin_builder_transaction</span><span class="p">()</span>
     <span class="n">graphene</span><span class="o">.</span><span class="n">rpc</span><span class="o">.</span><span class="n">add_operation_to_builder_transaction</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">op</span><span class="p">)</span>
-    <span class="n">graphene</span><span class="o">.</span><span class="n">rpc</span><span class="o">.</span><span class="n">set_fees_on_builder_transaction</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="s">&quot;1.3.0&quot;</span><span class="p">)</span>
+    <span class="n">graphene</span><span class="o">.</span><span class="n">rpc</span><span class="o">.</span><span class="n">set_fees_on_builder_transaction</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="s2">&quot;1.3.0&quot;</span><span class="p">)</span>
     <span class="n">tx</span> <span class="o">=</span> <span class="n">graphene</span><span class="o">.</span><span class="n">rpc</span><span class="o">.</span><span class="n">sign_builder_transaction</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
     <span class="k">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">tx</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">))</span>
 </pre></div>

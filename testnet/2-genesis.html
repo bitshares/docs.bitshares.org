@@ -180,7 +180,7 @@
 <h1>Genesis Configuration<a class="headerlink" href="#genesis-configuration" title="Permalink to this headline">¶</a></h1>
 <p>We will create a genesis file named <code class="docutils literal"><span class="pre">my-genesis.json</span></code> that contains
 the genesis block:</p>
-<div class="highlight-sh"><div class="highlight"><pre>mkdir -p genesis
+<div class="highlight-sh"><div class="highlight"><pre><span></span>mkdir -p genesis
 programs/witness_node/witness_node --create-genesis-json genesis/my-genesis.json
 vim genesis/my-genesis.json
 </pre></div>
@@ -204,7 +204,7 @@ chains (unless one of them has exactly the same genesis file you do).</p>
 <h3>Writing final genesis<a class="headerlink" href="#writing-final-genesis" title="Permalink to this headline">¶</a></h3>
 <p>We now copy our gensis template file over to the graphene root
 directory::</p>
-<div class="highlight-python"><div class="highlight"><pre>$ cp genesis/my-genesis.json genesis.json
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ cp genesis/my-genesis.json genesis.json
 $ vim genesis.json
 $ git add genesis.json
 $ git commit -m &quot;Added genesis.json&quot;

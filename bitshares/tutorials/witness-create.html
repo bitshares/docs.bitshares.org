@@ -120,6 +120,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../user/index.html">User Guide</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../developers/index.html">Businesses, Developers and Business Developers</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Tutorials</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#api-usage">API Usage</a></li>
 <li class="toctree-l3"><a class="reference internal" href="index.html#general-tutorials">General Tutorials</a></li>
 <li class="toctree-l3"><a class="reference internal" href="index.html#assets">Assets</a></li>
 <li class="toctree-l3"><a class="reference internal" href="index.html#prediction-markets">Prediction Markets</a></li>
@@ -198,7 +199,7 @@ configure and run a witness node in the following steps:</p>
 <h2>Run the witness/full node on the network<a class="headerlink" href="#run-the-witness-full-node-on-the-network" title="Permalink to this headline">¶</a></h2>
 <p>We first run the <a class="reference internal" href="../../integration/apps/node.html"><em>Full Node</em></a> without block production and
 connect it to the P2P network with the following command:</p>
-<div class="highlight-python"><div class="highlight"><pre>$ programs/witness_node/witness_node --rpc-endpoint 127.0.0.1:8090
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ programs/witness_node/witness_node --rpc-endpoint 127.0.0.1:8090
 </pre></div>
 </div>
 <p>The argument <code class="docutils literal"><span class="pre">--rpc-endpoint</span> <span class="pre">127.0.0.1:8090</span></code> opens up a RPC port <code class="docutils literal"><span class="pre">8090</span></code> for
@@ -208,12 +209,12 @@ connections from localhost.</p>
 <h2>Creating a wallet<a class="headerlink" href="#creating-a-wallet" title="Permalink to this headline">¶</a></h2>
 <p>We now open up the <a class="reference internal" href="../../integration/apps/cliwallet.html"><em>CLI Wallet</em></a> and connect to our
 plain and stupid <a class="reference internal" href="../../integration/apps/node.html"><em>Full Node</em></a>:</p>
-<div class="highlight-sh"><div class="highlight"><pre>programs/cli_wallet/cli_wallet -s ws://127.0.0.1:8090
+<div class="highlight-sh"><div class="highlight"><pre><span></span>programs/cli_wallet/cli_wallet -s ws://127.0.0.1:8090
 </pre></div>
 </div>
 <p>First thing to do is setting up a password for the newly created wallet
 prior to importing any private keys:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">set_password</span> <span class="o">&lt;</span><span class="n">password</span><span class="o">&gt;</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">set_password</span> <span class="o">&lt;</span><span class="n">password</span><span class="o">&gt;</span>
 <span class="go">null</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">unlock</span> <span class="o">&lt;</span><span class="n">password</span><span class="o">&gt;</span>
 <span class="go">null</span>
@@ -225,7 +226,7 @@ prior to importing any private keys:</p>
 <h2>Basic Account Management<a class="headerlink" href="#basic-account-management" title="Permalink to this headline">¶</a></h2>
 <p>We can import the account name (owner and active keys) to be able to access our
 funds in BitShares 2.0:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">import_key</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">owner</span> <span class="n">wif</span> <span class="n">key</span><span class="o">&gt;</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">import_key</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">owner</span> <span class="n">wif</span> <span class="n">key</span><span class="o">&gt;</span>
 <span class="go">true</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">import_key</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">active</span> <span class="n">wif</span> <span class="n">key</span><span class="o">&gt;</span>
 <span class="go">true</span>
@@ -236,7 +237,7 @@ funds in BitShares 2.0:</p>
 <p>Since <strong>only lifetime members can become witnesses</strong>, you must first upgrade to
 a lifetime member. This step costs the lifetime-upgrade fee which will
 eventually cost about $100</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">upgrade_account</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span> <span class="n">true</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">upgrade_account</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span> <span class="n">true</span>
 <span class="go">[a transaction in json format]</span>
 </pre></div>
 </div>
@@ -253,7 +254,7 @@ run <code class="docutils literal"><span class="pre">get_global_properties</span
 witness has been voted in.</p>
 <p>Before we get started, we can see the current list of witnesses voted
 in, which will simply be the ten default witnesses:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">create_witness</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span> <span class="s">&quot;url-to-proposal&quot;</span> <span class="n">true</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">create_witness</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span> <span class="s2">&quot;url-to-proposal&quot;</span> <span class="n">true</span>
 <span class="go">{</span>
 <span class="go">  &quot;ref_block_num&quot;: 139,</span>
 <span class="go">  &quot;ref_block_prefix&quot;: 3692461913,</span>
@@ -282,7 +283,7 @@ has voted it in. You can see the current list of active witnesses with
 <code class="docutils literal"><span class="pre">get_global_properties</span></code>.</p>
 <p>Now, we should vote our witness in. Vote all of the shares in our account
 <code class="docutils literal"><span class="pre">&lt;accountname&gt;</span></code> in favor of your new witness.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">vote_for_witness</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span> <span class="n">true</span> <span class="n">true</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">vote_for_witness</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span> <span class="n">true</span> <span class="n">true</span>
 <span class="go">[a transaction in json format]</span>
 </pre></div>
 </div>
@@ -297,7 +298,7 @@ can look up the correspoinding private key.</p>
 private-key pairs to find the private key.</p>
 <p>Warning: <code class="docutils literal"><span class="pre">dump_private_keys</span></code> will display your keys unencrypted on the
 terminal, don&#8217;t do this with someone looking over your shoulder.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">get_witness</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">get_witness</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span>
 <span class="go">{</span>
 <span class="go">  [...]</span>
 <span class="go">  &quot;id&quot;: &quot;1.6.10&quot;,</span>
@@ -308,7 +309,7 @@ terminal, don&#8217;t do this with someone looking over your shoulder.</p>
 </div>
 <p>The <code class="docutils literal"><span class="pre">id</span></code> and the <code class="docutils literal"><span class="pre">signing_key</span></code> are the two important parameters,
 here. Let&#8217;s get the private key for that signing key with:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">dump_private_keys</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">dump_private_keys</span>
 <span class="go">[[</span>
 <span class="go">  ...</span>
 <span class="go">  ],[</span>
@@ -321,22 +322,22 @@ here. Let&#8217;s get the private key for that signing key with:</p>
 <p>Now we need to start the witness, so shut down the wallet (ctrl-d), and
 shut down the witness (ctrl-c). Re-launch the witness, now mentioning
 the new witness 1.6.10 and its keypair:</p>
-<div class="highlight-python"><div class="highlight"><pre>./witness_node  \
+<div class="highlight-python"><div class="highlight"><pre><span></span>./witness_node  \
        --rpc-endpoint=127.0.0.1:8090 \
        --witness-id &#39;&quot;1.6.10&quot;&#39; \
        --private-key &#39;[&quot;GPH7vQ7GmRSJfDHxKdBmWMeDMFENpmHWKn99J457BNApiX1T5TNM8&quot;, &quot;5JGi7DM7J8fSTizZ4D9roNgd8dUc5pirUe9taxYCUUsnvQ4zCaQ&quot;]&#39;
 </pre></div>
 </div>
 <p>Alternatively, you can also add this line into yout config.ini:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">witness</span><span class="o">-</span><span class="nb">id</span> <span class="o">=</span> <span class="s">&quot;1.6.10&quot;</span>
-<span class="n">private</span><span class="o">-</span><span class="n">key</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;GPH7vQ7GmRSJfDHxKdBmWMeDMFENpmHWKn99J457BNApiX1T5TNM8&quot;</span><span class="p">,</span><span class="s">&quot;5JGi7DM7J8fSTizZ4D9roNgd8dUc5pirUe9taxYCUUsnvQ4zCaQ&quot;</span><span class="p">]</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">witness</span><span class="o">-</span><span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;1.6.10&quot;</span>
+<span class="n">private</span><span class="o">-</span><span class="n">key</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;GPH7vQ7GmRSJfDHxKdBmWMeDMFENpmHWKn99J457BNApiX1T5TNM8&quot;</span><span class="p">,</span><span class="s2">&quot;5JGi7DM7J8fSTizZ4D9roNgd8dUc5pirUe9taxYCUUsnvQ4zCaQ&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>Note: Make sure to use YOUR public/private keys instead of the once
 given above!</p>
 <p>If you monitor the output of the <code class="docutils literal"><span class="pre">witness_node</span></code>, you should see it
 generate blocks signed by your witness:</p>
-<div class="highlight-python"><div class="highlight"><pre>Witness 1.6.10 production slot has arrived; generating a block now...
+<div class="highlight-python"><div class="highlight"><pre><span></span>Witness 1.6.10 production slot has arrived; generating a block now...
 Generated block #367 with timestamp 2015-07-05T20:46:30 at time 2015-07-05T20:46:30
 </pre></div>
 </div>
