@@ -38,6 +38,12 @@ lasts for only one year.
   Vesting balances are recalculated hourly, so you might not yet see
   them right away.
 
+.. warning::
+
+   Due to some discrepancies, the annual membership has been disabled in
+   most web wallets and will be re-enabled after a proper update
+   eventually.
+
 Fees
 ####
 
