@@ -203,19 +203,19 @@ data.</p>
 <h2>Step 1: Define your Invoice via JSON<a class="headerlink" href="#step-1-define-your-invoice-via-json" title="Permalink to this headline">¶</a></h2>
 <p>This invoice provides all of the data needed by the wallet to display an invoice
 to the user.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
-   <span class="s">&quot;to&quot;</span> <span class="p">:</span> <span class="s">&quot;merchant_account_name&quot;</span><span class="p">,</span>
-   <span class="s">&quot;to_label&quot;</span> <span class="p">:</span> <span class="s">&quot;Merchant Name&quot;</span><span class="p">,</span>
-   <span class="s">&quot;memo&quot;</span> <span class="p">:</span> <span class="s">&quot;Invoice #1234&quot;</span><span class="p">,</span>
-   <span class="s">&quot;currency&quot;</span><span class="p">:</span> <span class="s">&quot;BTS&quot;</span><span class="p">,</span>
-   <span class="s">&quot;line_items&quot;</span> <span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span> <span class="s">&quot;label&quot;</span> <span class="p">:</span> <span class="s">&quot;Something to Buy&quot;</span><span class="p">,</span> <span class="s">&quot;quantity&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&quot;price&quot;</span> <span class="p">:</span> <span class="s">&quot;1000.00 SYMBOL&quot;</span> <span class="p">},</span>
-        <span class="p">{</span> <span class="s">&quot;label&quot;</span> <span class="p">:</span> <span class="s">&quot;10 things to Buy&quot;</span><span class="p">,</span> <span class="s">&quot;quantity&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s">&quot;price&quot;</span> <span class="p">:</span> <span class="s">&quot;1000.00 SYMBOL&quot;</span> <span class="p">},</span>
-        <span class="p">{</span> <span class="s">&quot;label&quot;</span> <span class="p">:</span> <span class="s">&quot;User Specified Price&quot;</span><span class="p">,</span> <span class="s">&quot;quantity&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&quot;price&quot;</span> <span class="p">:</span> <span class="s">&quot;CUSTOM SYMBOL&quot;</span> <span class="p">},</span>
-        <span class="p">{</span> <span class="s">&quot;label&quot;</span> <span class="p">:</span> <span class="s">&quot;User Asset and Price&quot;</span><span class="p">,</span> <span class="s">&quot;quantity&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&quot;price&quot;</span> <span class="p">:</span> <span class="s">&quot;CUSTOM&quot;</span> <span class="p">}</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+   <span class="s2">&quot;to&quot;</span> <span class="p">:</span> <span class="s2">&quot;merchant_account_name&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;to_label&quot;</span> <span class="p">:</span> <span class="s2">&quot;Merchant Name&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;memo&quot;</span> <span class="p">:</span> <span class="s2">&quot;Invoice #1234&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;BTS&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;line_items&quot;</span> <span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span> <span class="s2">&quot;label&quot;</span> <span class="p">:</span> <span class="s2">&quot;Something to Buy&quot;</span><span class="p">,</span> <span class="s2">&quot;quantity&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;price&quot;</span> <span class="p">:</span> <span class="s2">&quot;1000.00 SYMBOL&quot;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="s2">&quot;label&quot;</span> <span class="p">:</span> <span class="s2">&quot;10 things to Buy&quot;</span><span class="p">,</span> <span class="s2">&quot;quantity&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;price&quot;</span> <span class="p">:</span> <span class="s2">&quot;1000.00 SYMBOL&quot;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="s2">&quot;label&quot;</span> <span class="p">:</span> <span class="s2">&quot;User Specified Price&quot;</span><span class="p">,</span> <span class="s2">&quot;quantity&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;price&quot;</span> <span class="p">:</span> <span class="s2">&quot;CUSTOM SYMBOL&quot;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="s2">&quot;label&quot;</span> <span class="p">:</span> <span class="s2">&quot;User Asset and Price&quot;</span><span class="p">,</span> <span class="s2">&quot;quantity&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;price&quot;</span> <span class="p">:</span> <span class="s2">&quot;CUSTOM&quot;</span> <span class="p">}</span>
     <span class="p">],</span>
-    <span class="s">&quot;note&quot;</span> <span class="p">:</span> <span class="s">&quot;Something the merchant wants to say to the user&quot;</span><span class="p">,</span>
-    <span class="s">&quot;callback&quot;</span> <span class="p">:</span> <span class="s">&quot;https://merchant.org/complete&quot;</span>
+    <span class="s2">&quot;note&quot;</span> <span class="p">:</span> <span class="s2">&quot;Something the merchant wants to say to the user&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;callback&quot;</span> <span class="p">:</span> <span class="s2">&quot;https://merchant.org/complete&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -242,7 +242,7 @@ invoices.</p>
 <h2>Step 4: Pass to Wallet<a class="headerlink" href="#step-4-pass-to-wallet" title="Permalink to this headline">¶</a></h2>
 <p>Once the Base58 data is known, it can be passed to the wallet with the
 following URL::</p>
-<div class="highlight-python"><div class="highlight"><pre>https://wallet.org/#/invoice/BASE58BLOB
+<div class="highlight-python"><div class="highlight"><pre><span></span>https://wallet.org/#/invoice/BASE58BLOB
 </pre></div>
 </div>
 </div>
@@ -266,27 +266,27 @@ full node.</p>
 </div>
 <div class="section" id="example-python-script">
 <h2>Example Python script<a class="headerlink" href="#example-python-script" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">json</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
 <span class="kn">import</span> <span class="nn">lzma</span>
 <span class="kn">from</span> <span class="nn">graphenebase.base58</span> <span class="kn">import</span> <span class="n">base58encode</span><span class="p">,</span> <span class="n">base58decode</span>
 <span class="kn">from</span> <span class="nn">binascii</span> <span class="kn">import</span> <span class="n">hexlify</span><span class="p">,</span> <span class="n">unhexlify</span>
 
 <span class="n">invoice</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s">&quot;to&quot;</span><span class="p">:</span> <span class="s">&quot;bitshareseurope&quot;</span><span class="p">,</span>
-    <span class="s">&quot;to_label&quot;</span><span class="p">:</span> <span class="s">&quot;BitShares Europre&quot;</span><span class="p">,</span>
-    <span class="s">&quot;currency&quot;</span><span class="p">:</span> <span class="s">&quot;EUR&quot;</span><span class="p">,</span>
-    <span class="s">&quot;memo&quot;</span><span class="p">:</span> <span class="s">&quot;Invoice #1234&quot;</span><span class="p">,</span>
-    <span class="s">&quot;line_items&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span><span class="s">&quot;label&quot;</span><span class="p">:</span> <span class="s">&quot;Something to Buy&quot;</span><span class="p">,</span> <span class="s">&quot;quantity&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s">&quot;price&quot;</span><span class="p">:</span> <span class="s">&quot;10.00&quot;</span><span class="p">},</span>
-        <span class="p">{</span><span class="s">&quot;label&quot;</span><span class="p">:</span> <span class="s">&quot;10 things to Buy&quot;</span><span class="p">,</span> <span class="s">&quot;quantity&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s">&quot;price&quot;</span><span class="p">:</span> <span class="s">&quot;1.00&quot;</span><span class="p">}</span>
+    <span class="s2">&quot;to&quot;</span><span class="p">:</span> <span class="s2">&quot;bitshareseurope&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;to_label&quot;</span><span class="p">:</span> <span class="s2">&quot;BitShares Europre&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;currency&quot;</span><span class="p">:</span> <span class="s2">&quot;EUR&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;memo&quot;</span><span class="p">:</span> <span class="s2">&quot;Invoice #1234&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;line_items&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;Something to Buy&quot;</span><span class="p">,</span> <span class="s2">&quot;quantity&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;10.00&quot;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="s2">&quot;10 things to Buy&quot;</span><span class="p">,</span> <span class="s2">&quot;quantity&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="s2">&quot;price&quot;</span><span class="p">:</span> <span class="s2">&quot;1.00&quot;</span><span class="p">}</span>
     <span class="p">],</span>
-    <span class="s">&quot;note&quot;</span><span class="p">:</span> <span class="s">&quot;Payment for reading awesome documentation&quot;</span><span class="p">,</span>
-    <span class="s">&quot;callback&quot;</span><span class="p">:</span> <span class="s">&quot;https://bitshares.eu/complete&quot;</span>
+    <span class="s2">&quot;note&quot;</span><span class="p">:</span> <span class="s2">&quot;Payment for reading awesome documentation&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;callback&quot;</span><span class="p">:</span> <span class="s2">&quot;https://bitshares.eu/complete&quot;</span>
 <span class="p">}</span>
 
-<span class="n">compressed</span> <span class="o">=</span> <span class="n">lzma</span><span class="o">.</span><span class="n">compress</span><span class="p">(</span><span class="nb">bytes</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">invoice</span><span class="p">),</span> <span class="s">&#39;utf-8&#39;</span><span class="p">),</span> <span class="n">format</span><span class="o">=</span><span class="n">lzma</span><span class="o">.</span><span class="n">FORMAT_ALONE</span><span class="p">)</span>
-<span class="n">b58</span> <span class="o">=</span> <span class="n">base58encode</span><span class="p">(</span><span class="n">hexlify</span><span class="p">(</span><span class="n">compressed</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">&#39;utf-8&#39;</span><span class="p">))</span>
-<span class="n">url</span> <span class="o">=</span> <span class="s">&quot;https://bitshares.openledger.info/#/invoice/</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="n">b58</span>
+<span class="n">compressed</span> <span class="o">=</span> <span class="n">lzma</span><span class="o">.</span><span class="n">compress</span><span class="p">(</span><span class="nb">bytes</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">invoice</span><span class="p">),</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">),</span> <span class="n">format</span><span class="o">=</span><span class="n">lzma</span><span class="o">.</span><span class="n">FORMAT_ALONE</span><span class="p">)</span>
+<span class="n">b58</span> <span class="o">=</span> <span class="n">base58encode</span><span class="p">(</span><span class="n">hexlify</span><span class="p">(</span><span class="n">compressed</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://bitshares.openledger.info/#/invoice/</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">b58</span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
 </pre></div>

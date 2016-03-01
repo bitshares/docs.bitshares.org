@@ -31,6 +31,11 @@ The hierarchy for these values goes like this:::
 Hence, if you keep the brain key, you will be able to recover your required keys
 to access your account and/or funds.
 
+.. note:: Even though ``suggest_brain_key`` shows only one private key
+          that will be used for the **owner authority** most wallet
+          implementations will derive an additional second private key
+          to be used for the **active authority**!
+
 Creating and Registering an account
 ***********************************
 
@@ -69,5 +74,3 @@ pubkey derived above and let our account ``myfunds`` pay the fee:::
 
 .. note:: Note that in order to register an account, the registrar (here:
    ``myfunds``) needs to be a **lifetime member**!
-
-

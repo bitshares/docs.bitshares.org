@@ -118,55 +118,8 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../muse/index.html">MUSE</a></li>
 </ul>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../integration/index.html">Integration Guide</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../integration/index.html#basic-knowledge">Basic Knowledge</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../integration/index.html#use-cases">Use-Cases</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../integration/exchanges/index.html">Exchanges, Bridges, and Gateways</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html">API Guide</a><ul class="current">
-<li class="toctree-l4 current"><a class="reference internal" href="index.html#interfacing-with-graphene">Interfacing with Graphene</a><ul class="current">
-<li class="toctree-l5"><a class="reference internal" href="index.html#wallet-api">Wallet API</a></li>
-<li class="toctree-l5 current"><a class="reference internal" href="index.html#blockchain-api-s">Blockchain API(s)</a></li>
-<li class="toctree-l5"><a class="reference internal" href="index.html#blockchain-objects-and-their-identifiers">Blockchain Objects and their Identifiers</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../integration/merchants/index.html">Merchants</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html">API Guide</a><ul class="current">
-<li class="toctree-l4 current"><a class="reference internal" href="index.html#interfacing-with-graphene">Interfacing with Graphene</a><ul class="current">
-<li class="toctree-l5"><a class="reference internal" href="index.html#wallet-api">Wallet API</a></li>
-<li class="toctree-l5 current"><a class="reference internal" href="index.html#blockchain-api-s">Blockchain API(s)</a></li>
-<li class="toctree-l5"><a class="reference internal" href="index.html#blockchain-objects-and-their-identifiers">Blockchain Objects and their Identifiers</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../integration/traders/index.html">Traders</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html">API Guide</a><ul class="current">
-<li class="toctree-l4 current"><a class="reference internal" href="index.html#interfacing-with-graphene">Interfacing with Graphene</a><ul class="current">
-<li class="toctree-l5"><a class="reference internal" href="index.html#wallet-api">Wallet API</a></li>
-<li class="toctree-l5 current"><a class="reference internal" href="index.html#blockchain-api-s">Blockchain API(s)</a></li>
-<li class="toctree-l5"><a class="reference internal" href="index.html#blockchain-objects-and-their-identifiers">Blockchain Objects and their Identifiers</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../integration/traders/python-binding.html">Python Interface</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../integration/businesses/index.html">Businesses</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html">API Guide</a><ul class="current">
-<li class="toctree-l4 current"><a class="reference internal" href="index.html#interfacing-with-graphene">Interfacing with Graphene</a><ul class="current">
-<li class="toctree-l5"><a class="reference internal" href="index.html#wallet-api">Wallet API</a></li>
-<li class="toctree-l5 current"><a class="reference internal" href="index.html#blockchain-api-s">Blockchain API(s)</a></li>
-<li class="toctree-l5"><a class="reference internal" href="index.html#blockchain-objects-and-their-identifiers">Blockchain Objects and their Identifiers</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../integration/index.html">Integration Guide</a></li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">API Guide</a><ul class="current">
@@ -238,7 +191,7 @@ are only available to the blockchain API.</p>
 <h2>Call Format<a class="headerlink" href="#call-format" title="Permalink to this headline">¶</a></h2>
 <p>In Graphene, Websocket calls are stateful and accessible via regular JSON formated
 websocket connection. The correct structure of the JSON call is</p>
-<div class="highlight-js"><div class="highlight"><pre><span class="p">{</span>
+<div class="highlight-js"><div class="highlight"><pre><span></span><span class="p">{</span>
  <span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
  <span class="s2">&quot;method&quot;</span><span class="o">:</span><span class="s2">&quot;call&quot;</span><span class="p">,</span>
  <span class="s2">&quot;params&quot;</span><span class="o">:</span><span class="p">[</span>
@@ -250,7 +203,7 @@ websocket connection. The correct structure of the JSON call is</p>
 </pre></div>
 </div>
 <p>The parameters <code class="docutils literal"><span class="pre">params</span></code> have the following structure:</p>
-<div class="highlight-js"><div class="highlight"><pre><span class="p">[</span><span class="nx">API</span><span class="o">-</span><span class="nx">identifier</span><span class="p">,</span> <span class="nx">Method</span><span class="o">-</span><span class="nx">to</span><span class="o">-</span><span class="nx">Call</span><span class="p">,</span> <span class="nx">Call</span><span class="o">-</span><span class="nx">Parameters</span><span class="p">]</span>
+<div class="highlight-js"><div class="highlight"><pre><span></span><span class="p">[</span><span class="nx">API</span><span class="o">-</span><span class="nx">identifier</span><span class="p">,</span> <span class="nx">Method</span><span class="o">-</span><span class="nx">to</span><span class="o">-</span><span class="nx">Call</span><span class="p">,</span> <span class="nx">Call</span><span class="o">-</span><span class="nx">Parameters</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>In the example above, we query the <code class="docutils literal"><span class="pre">database</span></code> API which carries the
@@ -259,11 +212,11 @@ identifier <code class="docutils literal"><span class="pre">0</span></code> in o
 <h3>Example Call with <cite>wscat</cite><a class="headerlink" href="#example-call-with-wscat" title="Permalink to this headline">¶</a></h3>
 <p>The following will show the usage of websocket connections. We make use of the
 <code class="docutils literal"><span class="pre">wscat</span></code> application available via <code class="docutils literal"><span class="pre">npm</span></code>:</p>
-<div class="highlight-sh"><div class="highlight"><pre>npm install -g wscat
+<div class="highlight-sh"><div class="highlight"><pre><span></span>npm install -g wscat
 </pre></div>
 </div>
 <p>A non-restricted call against a full-node would take the form:</p>
-<div class="highlight-sh"><div class="highlight"><pre>wscat -c ws://127.0.0.1:8090
+<div class="highlight-sh"><div class="highlight"><pre><span></span>wscat -c ws://127.0.0.1:8090
 &gt; <span class="o">{</span><span class="s2">&quot;id&quot;</span>:1, <span class="s2">&quot;method&quot;</span>:<span class="s2">&quot;call&quot;</span>, <span class="s2">&quot;params&quot;</span>:<span class="o">[</span>0,<span class="s2">&quot;get_accounts&quot;</span>,<span class="o">[[</span><span class="s2">&quot;1.2.0&quot;</span><span class="o">]]]}</span>
 </pre></div>
 </div>
@@ -272,7 +225,7 @@ identifier <code class="docutils literal"><span class="pre">0</span></code> in o
 <h3>Successful Calls<a class="headerlink" href="#successful-calls" title="Permalink to this headline">¶</a></h3>
 <p>The API will return a properly JSON formated response carrying the same <code class="docutils literal"><span class="pre">id</span></code>
 as the request to distinguish subsequent calls.</p>
-<div class="highlight-js"><div class="highlight"><pre><span class="p">{</span>
+<div class="highlight-js"><div class="highlight"><pre><span></span><span class="p">{</span>
  <span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
  <span class="s2">&quot;result&quot;</span><span class="o">:</span>  <span class="p">..</span><span class="nx">data</span><span class="p">..</span>
 <span class="p">}</span>
@@ -283,7 +236,7 @@ as the request to distinguish subsequent calls.</p>
 <h3>Errors<a class="headerlink" href="#errors" title="Permalink to this headline">¶</a></h3>
 <p>In case of an error, the resulting answer will carry an <code class="docutils literal"><span class="pre">error</span></code> attribute and
 a detailed description:</p>
-<div class="highlight-js"><div class="highlight"><pre><span class="p">{</span>
+<div class="highlight-js"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">0</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
@@ -321,7 +274,7 @@ websockets. The procedure works as follows:</p>
 <div class="section" id="login">
 <h3>1. Login<a class="headerlink" href="#login" title="Permalink to this headline">¶</a></h3>
 <p>The first thing we need to do is to <em>login</em>:</p>
-<div class="highlight-python"><div class="highlight"><pre>&gt; {&quot;id&quot;:2,&quot;method&quot;:&quot;call&quot;,&quot;params&quot;:[1,&quot;login&quot;,[&quot;&quot;,&quot;&quot;]]}
+<div class="highlight-python"><div class="highlight"><pre><span></span>&gt; {&quot;id&quot;:2,&quot;method&quot;:&quot;call&quot;,&quot;params&quot;:[1,&quot;login&quot;,[&quot;&quot;,&quot;&quot;]]}
 &lt; {&quot;id&quot;:2,&quot;result&quot;:true}
 </pre></div>
 </div>
@@ -333,7 +286,7 @@ should verify, that the <code class="docutils literal"><span class="pre">result<
 <h3>2. Requesting Access to an API<a class="headerlink" href="#requesting-access-to-an-api" title="Permalink to this headline">¶</a></h3>
 <p>Most data can be queried from the <a class="reference internal" href="database.html"><em>Database API</em></a>-API to which we <em>register</em>
 with the following call::</p>
-<div class="highlight-python"><div class="highlight"><pre>&gt; {&quot;id&quot;:2,&quot;method&quot;:&quot;call&quot;,&quot;params&quot;:[1,&quot;database&quot;,[]]}
+<div class="highlight-python"><div class="highlight"><pre><span></span>&gt; {&quot;id&quot;:2,&quot;method&quot;:&quot;call&quot;,&quot;params&quot;:[1,&quot;database&quot;,[]]}
 </pre></div>
 </div>
 </div>
@@ -341,7 +294,7 @@ with the following call::</p>
 <h3>3. Obtain the API identifier<a class="headerlink" href="#obtain-the-api-identifier" title="Permalink to this headline">¶</a></h3>
 <p>After requesting access, the full node will either deny access or return an
 identifier to be used in future calls:</p>
-<div class="highlight-python"><div class="highlight"><pre>&lt; {&quot;id&quot;:2,&quot;result&quot;:2}
+<div class="highlight-python"><div class="highlight"><pre><span></span>&lt; {&quot;id&quot;:2,&quot;result&quot;:2}
 </pre></div>
 </div>
 <p>The <code class="docutils literal"><span class="pre">result</span></code> will be our identifier for the database API, in the following
@@ -350,7 +303,7 @@ called <code class="docutils literal"><span class="pre">DATABASE_API_ID</span></
 <div class="section" id="call-methods-of-a-specific-api-by-providing-the-identifier">
 <h3>4. Call methods of a specific API by providing the identifier<a class="headerlink" href="#call-methods-of-a-specific-api-by-providing-the-identifier" title="Permalink to this headline">¶</a></h3>
 <p>Now we can call any methods available to the <code class="docutils literal"><span class="pre">database</span></code> API via::</p>
-<div class="highlight-python"><div class="highlight"><pre>&gt; {&quot;id&quot;:1, &quot;method&quot;:&quot;call&quot;, &quot;params&quot;:[DATABASE_API_ID,&quot;get_accounts&quot;,[[&quot;1.2.0&quot;]]]}
+<div class="highlight-python"><div class="highlight"><pre><span></span>&gt; {&quot;id&quot;:1, &quot;method&quot;:&quot;call&quot;, &quot;params&quot;:[DATABASE_API_ID,&quot;get_accounts&quot;,[[&quot;1.2.0&quot;]]]}
 </pre></div>
 </div>
 </div>
@@ -400,7 +353,7 @@ and subscribes to changed to that account if <code class="docutils literal"><spa
 </ul>
 <p>Let&#8217;s first get a global scubscription callback to disctinguish our
 notifications from regular RPC calls::</p>
-<div class="highlight-python"><div class="highlight"><pre>&gt; {&quot;id&quot;:4,&quot;method&quot;:&quot;call&quot;,&quot;params&quot;:[DATABASE_API_ID,&quot;set_subscribe_callback&quot;,[SUBSCRIPTION_ID, true]]}
+<div class="highlight-python"><div class="highlight"><pre><span></span>&gt; {&quot;id&quot;:4,&quot;method&quot;:&quot;call&quot;,&quot;params&quot;:[DATABASE_API_ID,&quot;set_subscribe_callback&quot;,[SUBSCRIPTION_ID, true]]}
 </pre></div>
 </div>
 <p>This call above will register <code class="docutils literal"><span class="pre">SUBSCRIPTION_ID</span></code> as id for notifications.</p>
@@ -408,7 +361,7 @@ notifications from regular RPC calls::</p>
 will automatically subscribe to any future changes of that object.</p>
 <p>After calling <code class="docutils literal"><span class="pre">set_subscribe_callback</span></code> the witness will start to send notices
 every time the object changes::</p>
-<div class="highlight-python"><div class="highlight"><pre>&lt; {
+<div class="highlight-python"><div class="highlight"><pre><span></span>&lt; {
     &quot;method&quot;: &quot;notice&quot;
     &quot;params&quot;: [
         SUBSCRIPTION_ID,
@@ -426,7 +379,7 @@ every time the object changes::</p>
 <div class="section" id="example-session">
 <h2>Example Session<a class="headerlink" href="#example-session" title="Permalink to this headline">¶</a></h2>
 <p>Here is an example of a full session::</p>
-<div class="highlight-python"><div class="highlight"><pre>&gt; {&quot;method&quot;: &quot;call&quot;, &quot;params&quot;: [1, &quot;login&quot;, [&quot;&quot;, &quot;&quot;]], &quot;id&quot;: 2}
+<div class="highlight-python"><div class="highlight"><pre><span></span>&gt; {&quot;method&quot;: &quot;call&quot;, &quot;params&quot;: [1, &quot;login&quot;, [&quot;&quot;, &quot;&quot;]], &quot;id&quot;: 2}
 &lt; {&quot;id&quot;:2,&quot;result&quot;:true}
 &gt; {&quot;method&quot;: &quot;call&quot;, &quot;params&quot;: [1, &quot;database&quot;, []], &quot;id&quot;: 3}
 &lt; {&quot;id&quot;:3,&quot;result&quot;:2}

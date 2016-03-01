@@ -183,7 +183,7 @@ network/blockchain, we need to install the web wallet into nginx.</p>
 <div class="section" id="dependencies">
 <h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h2>
 <p>We first install everything we need to compile the web wallet:</p>
-<div class="highlight-sh"><div class="highlight"><pre>sudo apt-get install git nodejs-legacy npm
+<div class="highlight-sh"><div class="highlight"><pre><span></span>sudo apt-get install git nodejs-legacy npm
 sudo npm install -g webpack coffee-script
 </pre></div>
 </div>
@@ -192,8 +192,8 @@ sudo npm install -g webpack coffee-script
 <h2>Fetching the web wallet<a class="headerlink" href="#fetching-the-web-wallet" title="Permalink to this headline">¶</a></h2>
 <p>Afterwards, we download the <cite>graphene-ui</cite> repository from Cryptonomex
 and install the Node dependencies.</p>
-<div class="highlight-sh"><div class="highlight"><pre>git clone https://github.com/cryptonomex/graphene-ui
-<span class="nb">cd </span>graphene-ui/
+<div class="highlight-sh"><div class="highlight"><pre><span></span>git clone https://github.com/cryptonomex/graphene-ui
+<span class="nb">cd</span> graphene-ui/
 
 <span class="k">for</span> I in dl web<span class="p">;</span> <span class="k">do</span> <span class="nb">cd</span> <span class="nv">$I</span><span class="p">;</span> npm install<span class="p">;</span> <span class="nb">cd</span> ..<span class="p">;</span> <span class="k">done</span>
 </pre></div>
@@ -203,13 +203,13 @@ and install the Node dependencies.</p>
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
 <p>What we need now is the <cite>chain_id</cite> of the chain we have running. We can
 get it by executing::</p>
-<div class="highlight-python"><div class="highlight"><pre>$ curl --data &#39;{&quot;jsonrpc&quot;: &quot;2.0&quot;, &quot;method&quot;: &quot;get_chain_properties&quot;, &quot;params&quot;: [], &quot;id&quot;: 1}&#39; http://127.0.0.1:11011/rpc &amp;&amp; echo
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ curl --data &#39;{&quot;jsonrpc&quot;: &quot;2.0&quot;, &quot;method&quot;: &quot;get_chain_properties&quot;, &quot;params&quot;: [], &quot;id&quot;: 1}&#39; http://127.0.0.1:11011/rpc &amp;&amp; echo
 </pre></div>
 </div>
 <p>The chain id is used to let the web wallet know to which network it
 connects and how to deal with it. For this we modify the file
 <cite>dl/src/chain/config.coffee</cite> and add our blockchain::</p>
-<div class="highlight-python"><div class="highlight"><pre>Test:
+<div class="highlight-python"><div class="highlight"><pre><span></span>Test:
     core_asset: &quot;TEST&quot;
     address_prefix: &quot;TEST&quot;
     chain_id: &quot;&lt;chain-id&gt;&quot;
@@ -218,7 +218,7 @@ connects and how to deal with it. For this we modify the file
 <p>Furthermore, we need to tell our web wallet to which witness node to
 connect to. This can be done in the file
 <cite>dl/src/stores/SettingsStore.js</cite>.</p>
-<div class="highlight-python"><div class="highlight"><pre>connection: &quot;ws://&lt;host&gt;/ws&quot;,
+<div class="highlight-python"><div class="highlight"><pre><span></span>connection: &quot;ws://&lt;host&gt;/ws&quot;,
 faucet_address: &quot;https://&lt;host&gt;&quot;,
 
 # also edit the &quot;default&quot; settings
@@ -228,7 +228,7 @@ faucet_address: &quot;https://&lt;host&gt;&quot;,
 <div class="section" id="compilation">
 <h2>Compilation<a class="headerlink" href="#compilation" title="Permalink to this headline">¶</a></h2>
 <p>We compile the web wallet with</p>
-<div class="highlight-sh"><div class="highlight"><pre><span class="nb">cd </span>web
+<div class="highlight-sh"><div class="highlight"><pre><span></span><span class="nb">cd</span> web
 npm run build
 </pre></div>
 </div>

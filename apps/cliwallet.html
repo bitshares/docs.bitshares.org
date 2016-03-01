@@ -154,7 +154,7 @@
 <p>The <cite>cli_wallet</cite> creates a local <cite>wallet.json</cite> file that contains the encrypted
 private keys required to access the funds in your account. It <strong>requires</strong> a
 running witness node (not necessarily locally) and connects to it on launch:</p>
-<div class="highlight-sh"><div class="highlight"><pre>programs/cli_wallet/cli_wallet -s ws://127.0.0.1:8090
+<div class="highlight-sh"><div class="highlight"><pre><span></span>programs/cli_wallet/cli_wallet -s ws://127.0.0.1:8090
 </pre></div>
 </div>
 <p>Depending on the actual chain that you want to connect to your may need to
@@ -164,17 +164,23 @@ specifiy <cite>&#8211;chain-id</cite>.</p>
 <h2>Enabling Remote Procedure Calls (RPC)<a class="headerlink" href="#enabling-remote-procedure-calls-rpc" title="Permalink to this headline">¶</a></h2>
 <p>In order to allow RPC calls for wallet operations (spend, buy, sell, ...) you
 can choose between pure RPC or RPC-HTTP requests. In this tutorial, the latter
-is prefered since well established libraries make use of the RPC-HTTP protocol.
-To enable RPC-HTTP in your wallet you need to run:</p>
-<div class="highlight-sh"><div class="highlight"><pre><span class="c"># recommended for use with python, or curl:</span>
+is prefered since well established libraries make use of the RPC-HTTP protocol.</p>
+<p>The cli-wallet can open a RPC port so that you can interface your
+application with it. You have the choices of
+* websocket RPC via the <code class="docutils literal"><span class="pre">-r</span></code> parameter, and
+* HTTP RPC via the <code class="docutils literal"><span class="pre">-H</span></code> parameter:</p>
+<p>To enable RPC-HTTP in your wallet you need to run:</p>
+<div class="highlight-sh"><div class="highlight"><pre><span></span><span class="c1"># recommended for use with python, or curl:</span>
 programs/cli_wallet/cli_wallet --rpc-http-endpoint<span class="o">=</span><span class="s2">&quot;127.0.0.1:8092&quot;</span>
-<span class="c"># or</span>
+<span class="c1"># or</span>
 programs/cli_wallet/cli_wallet --rpc-endpoint<span class="o">=</span><span class="s2">&quot;127.0.0.1:8092&quot;</span>
 </pre></div>
 </div>
 <p>depending on the kind of RPC protocol.</p>
 <p>This will open the port 8092 for local queries only. It is not recommended to
 publicly expose your wallet!</p>
+<p>A tutorial for the BitShares cli-wallet can be found in the
+<a class="reference internal" href="../bitshares/tutorials/cli-wallet-usage.html"><em>BitShares tutorials</em></a>.</p>
 </div>
 </div>
 

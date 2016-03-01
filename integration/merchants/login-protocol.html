@@ -198,10 +198,10 @@ provider that will be assisting the user with their login.</p>
 <p>The merchant must provide the user with a login button that links to
 <code class="docutils literal"><span class="pre">https://wallet.org/login#${args}</span></code> where <cite>${args}`</cite> is a JSON object
 containing following information and serialized as described below:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
-   <span class="s">&quot;onetimekey&quot;</span> <span class="p">:</span> <span class="s">&quot;${SERVER_PUBLIC_KEY}&quot;</span><span class="p">,</span>
-   <span class="s">&quot;account&quot;</span>  <span class="p">:</span> <span class="s">&quot;${OPT_ACCOUNT_NAME}&quot;</span><span class="p">,</span>
-   <span class="s">&quot;callback&quot;</span> <span class="p">:</span> <span class="s">&quot;https://merchant.org/login_callback&quot;</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+   <span class="s2">&quot;onetimekey&quot;</span> <span class="p">:</span> <span class="s2">&quot;${SERVER_PUBLIC_KEY}&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;account&quot;</span>  <span class="p">:</span> <span class="s2">&quot;${OPT_ACCOUNT_NAME}&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;callback&quot;</span> <span class="p">:</span> <span class="s2">&quot;https://merchant.org/login_callback&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -242,7 +242,7 @@ multi-factor authentication may be required.</p>
 <p>After gathering all of the signatures the wallet redirects the user to
 <code class="docutils literal"><span class="pre">https://merchant.org/login_callback?a=${result}</span></code> where <code class="docutils literal"><span class="pre">result</span></code> is
 an encoded JSON object containing the following information:</p>
-<div class="highlight-python"><div class="highlight"><pre>{
+<div class="highlight-python"><div class="highlight"><pre><span></span>{
    &quot;account&quot;: &quot;Graphene Account Name&quot;,
    &quot;server_key&quot;: &quot;${SERVER_PUBLIC_KEY}&quot;,
    &quot;account_key&quot;: &quot;${WALLET_ONETIMEKEY}&quot;,
@@ -262,7 +262,7 @@ the public keys that correspond to the provided signatures.</p>
 signatures are sufficient to authorize the account given the current
 state of the graphene blockchain. This can be achieved using the witness
 API call::</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">verify_account_authority</span><span class="p">(</span> <span class="n">account_name_or_id</span><span class="p">,</span> <span class="p">[</span><span class="n">public_keys</span><span class="o">...</span><span class="p">]</span> <span class="p">)</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">verify_account_authority</span><span class="p">(</span> <span class="n">account_name_or_id</span><span class="p">,</span> <span class="p">[</span><span class="n">public_keys</span><span class="o">...</span><span class="p">]</span> <span class="p">)</span>
 </pre></div>
 </div>
 <p>The <code class="docutils literal"><span class="pre">verify_account_authority</span></code> call will return <code class="docutils literal"><span class="pre">true</span></code> if the provided keys

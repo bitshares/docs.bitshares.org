@@ -178,7 +178,7 @@ ports:</p>
 <p>For the trusted full node, the default settings can be used. For later, we
 will need to open the RPC port and listen to an IP address to connect the
 wallet to.</p>
-<div class="highlight-sh"><div class="highlight"><pre>./programs/witness_node/witness_node --rpc-endpoint<span class="o">=</span><span class="s2">&quot;192.168.0.100:8090&quot;</span>
+<div class="highlight-sh"><div class="highlight"><pre><span></span>./programs/witness_node/witness_node --rpc-endpoint<span class="o">=</span><span class="s2">&quot;192.168.0.100:8090&quot;</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -191,7 +191,7 @@ block-signing private key is provided.</p>
 <p>We open up a RPC-JSON-HTTP port to be able to interface with API
 requests. The wallet can be connected to the trusted node and listens
 for RPC requests on port <code class="docutils literal"><span class="pre">8092</span></code> with:</p>
-<div class="highlight-sh"><div class="highlight"><pre>./programs/cli_wallet/cli_wallet --server-rpc-endpoint<span class="o">=</span><span class="s2">&quot;ws://192.168.0.100:8090&quot;</span> <span class="se">\</span>
+<div class="highlight-sh"><div class="highlight"><pre><span></span>./programs/cli_wallet/cli_wallet --server-rpc-endpoint<span class="o">=</span><span class="s2">&quot;ws://192.168.0.100:8090&quot;</span> <span class="se">\</span>
                                  --rpc-http-endpoint<span class="o">=</span><span class="s2">&quot;192.168.0.102:8092&quot;</span>
 </pre></div>
 </div>

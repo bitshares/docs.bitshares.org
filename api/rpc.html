@@ -118,55 +118,8 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../muse/index.html">MUSE</a></li>
 </ul>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../integration/index.html">Integration Guide</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../integration/index.html#basic-knowledge">Basic Knowledge</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../integration/index.html#use-cases">Use-Cases</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../integration/exchanges/index.html">Exchanges, Bridges, and Gateways</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html">API Guide</a><ul class="current">
-<li class="toctree-l4 current"><a class="reference internal" href="index.html#interfacing-with-graphene">Interfacing with Graphene</a><ul class="current">
-<li class="toctree-l5 current"><a class="reference internal" href="index.html#wallet-api">Wallet API</a></li>
-<li class="toctree-l5 current"><a class="reference internal" href="index.html#blockchain-api-s">Blockchain API(s)</a></li>
-<li class="toctree-l5"><a class="reference internal" href="index.html#blockchain-objects-and-their-identifiers">Blockchain Objects and their Identifiers</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../integration/merchants/index.html">Merchants</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html">API Guide</a><ul class="current">
-<li class="toctree-l4 current"><a class="reference internal" href="index.html#interfacing-with-graphene">Interfacing with Graphene</a><ul class="current">
-<li class="toctree-l5 current"><a class="reference internal" href="index.html#wallet-api">Wallet API</a></li>
-<li class="toctree-l5 current"><a class="reference internal" href="index.html#blockchain-api-s">Blockchain API(s)</a></li>
-<li class="toctree-l5"><a class="reference internal" href="index.html#blockchain-objects-and-their-identifiers">Blockchain Objects and their Identifiers</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../integration/traders/index.html">Traders</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html">API Guide</a><ul class="current">
-<li class="toctree-l4 current"><a class="reference internal" href="index.html#interfacing-with-graphene">Interfacing with Graphene</a><ul class="current">
-<li class="toctree-l5 current"><a class="reference internal" href="index.html#wallet-api">Wallet API</a></li>
-<li class="toctree-l5 current"><a class="reference internal" href="index.html#blockchain-api-s">Blockchain API(s)</a></li>
-<li class="toctree-l5"><a class="reference internal" href="index.html#blockchain-objects-and-their-identifiers">Blockchain Objects and their Identifiers</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../integration/traders/python-binding.html">Python Interface</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../integration/businesses/index.html">Businesses</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html">API Guide</a><ul class="current">
-<li class="toctree-l4 current"><a class="reference internal" href="index.html#interfacing-with-graphene">Interfacing with Graphene</a><ul class="current">
-<li class="toctree-l5 current"><a class="reference internal" href="index.html#wallet-api">Wallet API</a></li>
-<li class="toctree-l5 current"><a class="reference internal" href="index.html#blockchain-api-s">Blockchain API(s)</a></li>
-<li class="toctree-l5"><a class="reference internal" href="index.html#blockchain-objects-and-their-identifiers">Blockchain Objects and their Identifiers</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../integration/index.html">Integration Guide</a></li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">API Guide</a><ul class="current">
@@ -243,7 +196,7 @@ listening to port <code class="docutils literal"><span class="pre">8090</span></
 <h2>Call Format<a class="headerlink" href="#call-format" title="Permalink to this headline">¶</a></h2>
 <p>In Graphene, RPC calls are state-less and accessible via regular JSON formated
 RPC-HTTP-calls. The correct structure of the JSON call is</p>
-<div class="highlight-js"><div class="highlight"><pre><span class="p">{</span>
+<div class="highlight-js"><div class="highlight"><pre><span></span><span class="p">{</span>
  <span class="s2">&quot;jsonrpc&quot;</span><span class="o">:</span> <span class="s2">&quot;2.0&quot;</span><span class="p">,</span>
  <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">1</span>
  <span class="s2">&quot;method&quot;</span><span class="o">:</span> <span class="s2">&quot;get_accounts&quot;</span><span class="p">,</span>
@@ -256,7 +209,7 @@ takes only one argument which is an array of account ids (here: <code class="doc
 <div class="section" id="example-call-with-curl">
 <h3>Example Call with <cite>curl</cite><a class="headerlink" href="#example-call-with-curl" title="Permalink to this headline">¶</a></h3>
 <p>Such as call can be submitted via <code class="docutils literal"><span class="pre">curl</span></code>:</p>
-<div class="highlight-sh"><div class="highlight"><pre>curl --data <span class="s1">&#39;{&quot;jsonrpc&quot;: &quot;2.0&quot;, &quot;method&quot;: &quot;get_accounts&quot;, &quot;params&quot;: [[&quot;1.2.0&quot;, &quot;1.2.1&quot;]], &quot;id&quot;: 1}&#39;</span> http://127.0.0.1:8090/rpc
+<div class="highlight-sh"><div class="highlight"><pre><span></span>curl --data <span class="s1">&#39;{&quot;jsonrpc&quot;: &quot;2.0&quot;, &quot;method&quot;: &quot;get_accounts&quot;, &quot;params&quot;: [[&quot;1.2.0&quot;, &quot;1.2.1&quot;]], &quot;id&quot;: 1}&#39;</span> http://127.0.0.1:8090/rpc
 </pre></div>
 </div>
 </div>
@@ -264,7 +217,7 @@ takes only one argument which is an array of account ids (here: <code class="doc
 <h3>Successful Calls<a class="headerlink" href="#successful-calls" title="Permalink to this headline">¶</a></h3>
 <p>The API will return a properly JSON formated response carrying the same <code class="docutils literal"><span class="pre">id</span></code>
 as the request to distinguish subsequent calls.</p>
-<div class="highlight-js"><div class="highlight"><pre><span class="p">{</span>
+<div class="highlight-js"><div class="highlight"><pre><span></span><span class="p">{</span>
  <span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span>
  <span class="s2">&quot;result&quot;</span><span class="o">:</span>  <span class="p">..</span><span class="nx">data</span><span class="p">..</span>
 <span class="p">}</span>
@@ -275,7 +228,7 @@ as the request to distinguish subsequent calls.</p>
 <h3>Errors<a class="headerlink" href="#errors" title="Permalink to this headline">¶</a></h3>
 <p>In case of an error, the resulting answer will carry an <code class="docutils literal"><span class="pre">error</span></code> attribute and
 a detailed description:</p>
-<div class="highlight-js"><div class="highlight"><pre><span class="p">{</span>
+<div class="highlight-js"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">0</span>
   <span class="s2">&quot;error&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>

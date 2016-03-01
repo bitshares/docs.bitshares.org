@@ -2,6 +2,16 @@
 Tutorials
 *********
 
+API Usage
+#########
+
+.. toctree::
+   :maxdepth: 1
+
+   full-node-usage
+   cli-wallet-usage
+   transfer-funds-cli
+
 General Tutorials
 #################
 
@@ -15,6 +25,7 @@ General Tutorials
    confidential-transactions
    vesting-list
    vesting-claim
+   voting
 
 Assets
 ######

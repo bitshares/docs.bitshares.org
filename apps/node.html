@@ -159,7 +159,7 @@ and security reasons.</p>
 <div class="section" id="full-nodes">
 <h2>Full Nodes<a class="headerlink" href="#full-nodes" title="Permalink to this headline">¶</a></h2>
 <p>The full node is launched according to:</p>
-<div class="highlight-sh"><div class="highlight"><pre>./programs/witness_node/witness_node
+<div class="highlight-sh"><div class="highlight"><pre><span></span>./programs/witness_node/witness_node
 </pre></div>
 </div>
 <p>It takes an optional <cite>&#8211;data-dir</cite> parameter to define a working and data
@@ -286,7 +286,7 @@ directory (i.e. the directory from which the executables are launched from)</p>
 <h2>Enabling Remote Procedure Calls (RPC)<a class="headerlink" href="#enabling-remote-procedure-calls-rpc" title="Permalink to this headline">¶</a></h2>
 <p>In order to allow RPC calls for blockchain operations you need to modify the
 following entry in the configuration file::</p>
-<div class="highlight-python"><div class="highlight"><pre>rpc-endpoint = 0.0.0.0:8090
+<div class="highlight-python"><div class="highlight"><pre><span></span>rpc-endpoint = 0.0.0.0:8090
 </pre></div>
 </div>
 <p>This will open the port 8090 for global queries only. Since the witness node
@@ -308,7 +308,7 @@ state.</p>
 <li><code class="docutils literal"><span class="pre">private-key</span></code> as a pair of public key and wif private key.</li>
 </ul>
 <p>The witness-id and public key can be obtain via::</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">get_witness</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">get_witness</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span>
 <span class="go">{</span>
 <span class="go">  [...]</span>
 <span class="go">  &quot;id&quot;: &quot;1.6.10&quot;,</span>
@@ -319,12 +319,12 @@ state.</p>
 </div>
 <p>Assuming we want to maintain the witness with id <code class="docutils literal"><span class="pre">1.6.10</span></code>, the corresponding
 setting would be::</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">witness</span><span class="o">-</span><span class="nb">id</span> <span class="o">=</span> <span class="s">&quot;1.6.10&quot;</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">witness</span><span class="o">-</span><span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;1.6.10&quot;</span>
 </pre></div>
 </div>
 <p>The required private keys can be exported from most wallets (e.g.
 <code class="docutils literal"><span class="pre">dump_private_keys</span></code>) for configuration according to::</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">private</span><span class="o">-</span><span class="n">key</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;BTS7vQ7GmRSJfDHxKdBmWMeDMFENpmHWKn99J457BNApiX1T5TNM8&quot;</span><span class="p">,</span><span class="s">&quot;5JGi7DM7J8fSTizZ4D9roNgd8dUc5pirUe9taxYCUUsnvQ4zCaQ&quot;</span><span class="p">]</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">private</span><span class="o">-</span><span class="n">key</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;BTS7vQ7GmRSJfDHxKdBmWMeDMFENpmHWKn99J457BNApiX1T5TNM8&quot;</span><span class="p">,</span><span class="s2">&quot;5JGi7DM7J8fSTizZ4D9roNgd8dUc5pirUe9taxYCUUsnvQ4zCaQ&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>

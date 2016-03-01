@@ -182,7 +182,7 @@
 new accounts and let them apply as committee member.</p>
 <div class="section" id="creating-members">
 <h2>Creating members<a class="headerlink" href="#creating-members" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre>create_account_with_brain_key com0 com0 faucet faucet true
+<div class="highlight-python"><div class="highlight"><pre><span></span>create_account_with_brain_key com0 com0 faucet faucet true
 create_account_with_brain_key com1 com1 faucet faucet true
 create_account_with_brain_key com2 com2 faucet faucet true
 create_account_with_brain_key com3 com3 faucet faucet true
@@ -196,7 +196,7 @@ create_account_with_brain_key com6 com6 faucet faucet true
 <h2>Upgrading members<a class="headerlink" href="#upgrading-members" title="Permalink to this headline">¶</a></h2>
 <p>Since only lifetime members can be committee members, we need to fund
 these accounts and upgrade them accordingly:</p>
-<div class="highlight-python"><div class="highlight"><pre>transfer faucet com0 100000 CORE &quot;some cash&quot; true
+<div class="highlight-python"><div class="highlight"><pre><span></span>transfer faucet com0 100000 CORE &quot;some cash&quot; true
 transfer faucet com1 100000 CORE &quot;some cash&quot; true
 transfer faucet com2 100000 CORE &quot;some cash&quot; true
 transfer faucet com3 100000 CORE &quot;some cash&quot; true
@@ -216,7 +216,7 @@ upgrade_account com6 true
 <div class="section" id="registering-as-committee-member">
 <h2>Registering as committee member<a class="headerlink" href="#registering-as-committee-member" title="Permalink to this headline">¶</a></h2>
 <p>We can apply for committee with <cite>create_committee_member</cite>:</p>
-<div class="highlight-python"><div class="highlight"><pre>create_committee_member com0 &quot;&quot; true
+<div class="highlight-python"><div class="highlight"><pre><span></span>create_committee_member com0 &quot;&quot; true
 create_committee_member com1 &quot;&quot; true
 create_committee_member com2 &quot;&quot; true
 create_committee_member com3 &quot;&quot; true
@@ -229,7 +229,7 @@ create_committee_member com6 &quot;&quot; true
 <div class="section" id="voting-with-faucet-account">
 <h2>Voting with faucet account<a class="headerlink" href="#voting-with-faucet-account" title="Permalink to this headline">¶</a></h2>
 <p>All we need to do know is vote for our own committee members:</p>
-<div class="highlight-python"><div class="highlight"><pre>vote_for_committee_member faucet com0 true true
+<div class="highlight-python"><div class="highlight"><pre><span></span>vote_for_committee_member faucet com0 true true
 vote_for_committee_member faucet com1 true true
 vote_for_committee_member faucet com2 true true
 vote_for_committee_member faucet com3 true true

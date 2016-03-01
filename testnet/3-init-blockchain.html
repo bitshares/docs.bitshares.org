@@ -187,13 +187,13 @@ produce on a chain with zero blocks or very old blocks.  We specify the
 <code class="docutils literal"><span class="pre">--enable-stale-production</span></code> parameter on the command line as we will
 not normally need it (although it can also be specified in the config
 file).</p>
-<div class="highlight-sh"><div class="highlight"><pre>programs/witness_node/witness_node --genesis-json genesis.json <span class="se">\</span>
+<div class="highlight-sh"><div class="highlight"><pre><span></span>programs/witness_node/witness_node --genesis-json genesis.json <span class="se">\</span>
                                    --enable-stale-production <span class="se">\</span>
                                    --data-dir data/testnet
 </pre></div>
 </div>
 <p>We will already see our chain id::</p>
-<div class="highlight-python"><div class="highlight"><pre>Started witness node on a chain with 0 blocks.
+<div class="highlight-python"><div class="highlight"><pre><span></span>Started witness node on a chain with 0 blocks.
 Chain ID is cf307110d029cb882d126bf0488dc4864772f68d9888d86b458d16e6c36aa74b
 </pre></div>
 </div>
@@ -209,13 +209,13 @@ state from an existing data directory, need not have the
 <div class="section" id="setting-up-block-production">
 <h2>Setting up block production<a class="headerlink" href="#setting-up-block-production" title="Permalink to this headline">¶</a></h2>
 <p>Let&#8217;s create a very basic configuration file in <cite>data/testnet/config.ini</cite>:</p>
-<div class="highlight-python"><div class="highlight"><pre>$ mkdir -p data/testnet
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ mkdir -p data/testnet
 $ vim data/testnet/config.ini
 </pre></div>
 </div>
 <p>All we put into the configuration file is the ids and the keys for the
 witnesses so that we can start producing blocks</p>
-<div class="highlight-python"><div class="highlight"><pre>witness-id = &quot;1.6.1&quot;
+<div class="highlight-python"><div class="highlight"><pre><span></span>witness-id = &quot;1.6.1&quot;
 witness-id = &quot;1.6.2&quot;
 witness-id = &quot;1.6.3&quot;
 witness-id = &quot;1.6.4&quot;
@@ -258,7 +258,7 @@ block, we can have it embedded into the binaries directly. For that
 reasons we have moved it into the root directory and called it
 <code class="docutils literal"><span class="pre">genesis.json</span></code> for the default compile toolchain to catch it
 automatically. We recompile to include the genesis block with:</p>
-<div class="highlight-sh"><div class="highlight"><pre>make clean
+<div class="highlight-sh"><div class="highlight"><pre><span></span>make clean
 find . -name <span class="s2">&quot;CMakeCache.txt&quot;</span> <span class="p">|</span> xargs rm -f
 find . -name <span class="s2">&quot;CMakeFiles&quot;</span> <span class="p">|</span> xargs rm -Rf
 cmake -DCMAKE_BUILD_TYPE<span class="o">=</span>Release .

@@ -228,7 +228,7 @@ use different ports to distinguish them:</p>
 <p>The trusted full node is your entry point to the BitShares P2P network. It will
 hold the blockchain, connect to other peers, and will receive new blocks in
 <em>real-time</em>.</p>
-<div class="highlight-sh"><div class="highlight"><pre>./programs/witness_node/witness_node --data-dir<span class="o">=</span>trusted_node/ --rpc-endpoint<span class="o">=</span><span class="s2">&quot;127.0.0.1:8090&quot;</span>
+<div class="highlight-sh"><div class="highlight"><pre><span></span>./programs/witness_node/witness_node --data-dir<span class="o">=</span>trusted_node/ --rpc-endpoint<span class="o">=</span><span class="s2">&quot;127.0.0.1:8090&quot;</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -249,7 +249,7 @@ connect to the P2P network. (See <a class="reference external" href="https://git
 <p>The delayed full node node will provide us with a delayed and several times
 confirmed and verified blockchain. All transactions that are confirmed by the
 delayed node are <strong>irreversible</strong>.</p>
-<div class="highlight-sh"><div class="highlight"><pre>./programs/delayed_node/delayed_node --trusted-node<span class="o">=</span><span class="s2">&quot;127.0.0.1:8090&quot;</span> <span class="se">\</span>
+<div class="highlight-sh"><div class="highlight"><pre><span></span>./programs/delayed_node/delayed_node --trusted-node<span class="o">=</span><span class="s2">&quot;127.0.0.1:8090&quot;</span> <span class="se">\</span>
                                      --rpc-endpoint<span class="o">=</span><span class="s2">&quot;127.0.0.1:8091&quot;</span>
                                      -d delayed_node <span class="se">\</span>
                                      -s <span class="s2">&quot;0.0.0.0:0&quot;</span> <span class="se">\</span>
@@ -263,7 +263,7 @@ delayed node are <strong>irreversible</strong>.</p>
 <h3>Wallet<a class="headerlink" href="#wallet" title="Permalink to this headline">¶</a></h3>
 <p>The wallet will be used to transfer assets to the customers. It connects to the
 trusted full node and has spending privileges for the hot wallet.</p>
-<div class="highlight-sh"><div class="highlight"><pre>./programs/cli_wallet/cli_wallet --server-rpc-endpoint<span class="o">=</span><span class="s2">&quot;ws://127.0.0.1:8090&quot;</span> <span class="se">\</span>
+<div class="highlight-sh"><div class="highlight"><pre><span></span>./programs/cli_wallet/cli_wallet --server-rpc-endpoint<span class="o">=</span><span class="s2">&quot;ws://127.0.0.1:8090&quot;</span> <span class="se">\</span>
                                  --rpc-http-endpoint<span class="o">=</span><span class="s2">&quot;127.0.0.1:8092&quot;</span>
 </pre></div>
 </div>
@@ -273,7 +273,7 @@ trusted full node and has spending privileges for the hot wallet.</p>
 <h2>Query blockchain for required data<a class="headerlink" href="#query-blockchain-for-required-data" title="Permalink to this headline">¶</a></h2>
 <p>We now use the open <code class="docutils literal"><span class="pre">cli_wallet</span></code> to issue transfers and query the blockchain
 for more information. First of all, we create a new wallet and set a pass phrase::</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">set_password</span> <span class="o">&lt;</span><span class="n">password</span><span class="o">&gt;</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">set_password</span> <span class="o">&lt;</span><span class="n">password</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <div class="section" id="existing-bitshares-1-account">
@@ -283,7 +283,7 @@ how to export it from the BitShares 1 client.</em></p>
 <p>We first get the account statistics ID (<code class="docutils literal"><span class="pre">2.6.*</span></code>) of the deposit account to
 monitor deposits, the memo key for later decoding of memos and the active key
 for being able to spend funds of that accounts::</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">get_account</span> <span class="o">&lt;</span><span class="n">account</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">get_account</span> <span class="o">&lt;</span><span class="n">account</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
 <span class="go">{</span>
 <span class="go"> [...]</span>
 <span class="go"> &quot;active&quot;: {</span>
@@ -301,14 +301,14 @@ for being able to spend funds of that accounts::</p>
 </div>
 <p>We now need to export the corresponding private keys from BitShares 1.0 and
 import the keys into the <code class="docutils literal"><span class="pre">cli_wallet</span></code>::</p>
-<div class="highlight-python"><div class="highlight"><pre>BitShares 1: &gt;&gt;&gt; wallet_dump_private_key &lt;memo_key&gt;
+<div class="highlight-python"><div class="highlight"><pre><span></span>BitShares 1: &gt;&gt;&gt; wallet_dump_private_key &lt;memo_key&gt;
              &quot;&lt;memo_private_key&gt;&quot;
 BitShares 1: &gt;&gt;&gt; wallet_dump_private_key &lt;active_key&gt;
              &quot;&lt;active_private_key&gt;&quot;
 </pre></div>
 </div>
 <p>Import the active key into BitShares 2 wallet::</p>
-<div class="highlight-python"><div class="highlight"><pre>BitShares 2: &gt;&gt;&gt; import_key &lt;account-name&gt; &lt;active_private_key&gt;
+<div class="highlight-python"><div class="highlight"><pre><span></span>BitShares 2: &gt;&gt;&gt; import_key &lt;account-name&gt; &lt;active_private_key&gt;
 </pre></div>
 </div>
 <p>This gives access to the funds stored in <code class="docutils literal"><span class="pre">&lt;account-name&gt;</span></code>. We will need the
@@ -319,7 +319,7 @@ memo private key later when watching deposits.</p>
 <p>We now describe how to claim your funds from the Bitshares 1 blockchain so you
 can use them in BitShares 2.</p>
 <p>For <strong>Coldstorage</strong> and plain private keys, we recommend to use:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">import_balance</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">private_key</span><span class="o">&gt;</span> <span class="n">false</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">import_balance</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">private_key</span><span class="o">&gt;</span> <span class="n">false</span>
 </pre></div>
 </div>
 <p>to import all balances that are locked in the private key into the account named
@@ -339,40 +339,40 @@ configure it for notification on account changes for our deposit account above.<
 <code class="docutils literal"><span class="pre">python-graphenelib</span></code> <a class="reference external" href="http://python-graphenelib.readthedocs.org/en/latest/howto-exchanges-detailed.html">documentations</a>.</p>
 <div class="section" id="id1">
 <h3>Installation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-sh"><div class="highlight"><pre>git clone http://github.com/xeroc/python-graphenelib
-<span class="nb">cd </span>python-graphenelib
+<div class="highlight-sh"><div class="highlight"><pre><span></span>git clone http://github.com/xeroc/python-graphenelib
+<span class="nb">cd</span> python-graphenelib
 easy_install-3.4 install autobahn
 easy_install-3.4 install requests
 python3 setup.py install --user
 
-<span class="nb">cd </span>scripts/monitor-deposits
+<span class="nb">cd</span> scripts/monitor-deposits
 </pre></div>
 </div>
 </div>
 <div class="section" id="configuration">
 <h3>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h3>
 <p>Move <code class="docutils literal"><span class="pre">config-example.py</span></code> to <code class="docutils literal"><span class="pre">config.py</span></code> and modify it accordingly:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">mv</span> <span class="n">config</span><span class="o">-</span><span class="n">example</span><span class="o">.</span><span class="n">py</span> <span class="n">config</span><span class="o">.</span><span class="n">py</span>
-<span class="c"># edit config.py:</span>
-<span class="n">host</span>         <span class="o">=</span> <span class="s">&quot;127.0.0.1:8091&quot;</span> <span class="c"># 8091 is the delayed node</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">mv</span> <span class="n">config</span><span class="o">-</span><span class="n">example</span><span class="o">.</span><span class="n">py</span> <span class="n">config</span><span class="o">.</span><span class="n">py</span>
+<span class="c1"># edit config.py:</span>
+<span class="n">host</span>         <span class="o">=</span> <span class="s2">&quot;127.0.0.1:8091&quot;</span> <span class="c1"># 8091 is the delayed node</span>
 <span class="n">port</span>         <span class="o">=</span> <span class="mi">8091</span>
-<span class="n">user</span>         <span class="o">=</span> <span class="s">&quot;&quot;</span> <span class="c"># keep empty</span>
-<span class="n">password</span>     <span class="o">=</span> <span class="s">&quot;&quot;</span> <span class="c"># keep empty</span>
-<span class="n">accountID</span>    <span class="o">=</span> <span class="s">&quot;&lt;statistics&gt;&quot;</span>
-<span class="n">memo_wif_key</span> <span class="o">=</span> <span class="s">&quot;&lt;memo_private_key&gt;&quot;</span>
-<span class="n">last_op</span>      <span class="o">=</span> <span class="s">&quot;1.11.0&quot;</span> <span class="c">## keep as is</span>
+<span class="n">user</span>         <span class="o">=</span> <span class="s2">&quot;&quot;</span> <span class="c1"># keep empty</span>
+<span class="n">password</span>     <span class="o">=</span> <span class="s2">&quot;&quot;</span> <span class="c1"># keep empty</span>
+<span class="n">accountID</span>    <span class="o">=</span> <span class="s2">&quot;&lt;statistics&gt;&quot;</span>
+<span class="n">memo_wif_key</span> <span class="o">=</span> <span class="s2">&quot;&lt;memo_private_key&gt;&quot;</span>
+<span class="n">last_op</span>      <span class="o">=</span> <span class="s2">&quot;1.11.0&quot;</span> <span class="c1">## keep as is</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="running">
 <h3>Running<a class="headerlink" href="#running" title="Permalink to this headline">¶</a></h3>
 <p>The monitoring script can be executed via</p>
-<div class="highlight-sh"><div class="highlight"><pre>python3 monitor.py
+<div class="highlight-sh"><div class="highlight"><pre><span></span>python3 monitor.py
 </pre></div>
 </div>
 <p>Every time a deposit was made into your account a new line will appear similar
 to::</p>
-<div class="highlight-python"><div class="highlight"><pre>last_op: 1.11.1241 | block:12425 | from xeroc -&gt; to: deposit | fee: 10 BTS | amount: 100 USD | memo: AFCE98ED
+<div class="highlight-python"><div class="highlight"><pre><span></span>last_op: 1.11.1241 | block:12425 | from xeroc -&gt; to: deposit | fee: 10 BTS | amount: 100 USD | memo: AFCE98ED
 </pre></div>
 </div>
 <p>If you run into errors you can continue processing from the last operation
@@ -384,20 +384,20 @@ registered deposit.</p>
 <h2>Executing Transfers for Withdrawals<a class="headerlink" href="#executing-transfers-for-withdrawals" title="Permalink to this headline">¶</a></h2>
 <p>Since we have imported the active key for our account into the wallet we can
 either initiate transfers from the wallet CLI with::</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">transfer</span> <span class="o">&lt;</span><span class="n">account</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">customer</span><span class="o">-</span><span class="n">account</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">amount</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">asset</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">memo</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">broadcast</span><span class="o">&gt;</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">transfer</span> <span class="o">&lt;</span><span class="n">account</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">customer</span><span class="o">-</span><span class="n">account</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">amount</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">asset</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">memo</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">broadcast</span><span class="o">&gt;</span>
 <span class="go">    # e.g.</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">transfer</span> <span class="n">myexchange</span> <span class="n">xeroc</span> <span class="mi">100</span> <span class="n">USD</span> <span class="s">&quot;withdrawal myexchange&quot;</span> <span class="n">true</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">transfer</span> <span class="n">myexchange</span> <span class="n">xeroc</span> <span class="mi">100</span> <span class="n">USD</span> <span class="s2">&quot;withdrawal myexchange&quot;</span> <span class="n">true</span>
 </pre></div>
 </div>
 <p>Make sure to add a <code class="docutils literal"><span class="pre">true</span></code> at the end so that the signed transaction is
 broadcast in the P2P network.</p>
 <p>Alternatively you can interface with the wallet and initiate the transfer via
 API call (example in <code class="docutils literal"><span class="pre">scripts/flood.py</span></code>)</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">grapheneapi</span> <span class="kn">import</span> <span class="n">GrapheneAPI</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">grapheneapi</span> <span class="kn">import</span> <span class="n">GrapheneAPI</span>
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">client</span> <span class="o">=</span> <span class="n">GrapheneAPI</span><span class="p">(</span><span class="s">&quot;localhost&quot;</span><span class="p">,</span> <span class="mi">8092</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">)</span>
-    <span class="n">res</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">transfer</span><span class="p">(</span><span class="s">&quot;myexchange&quot;</span><span class="p">,</span><span class="s">&quot;xeroc&quot;</span><span class="p">,</span><span class="s">&quot;0.00001&quot;</span><span class="p">,</span> <span class="s">&quot;USD&quot;</span><span class="p">,</span> <span class="s">&quot;withdrawal myexchange&quot;</span><span class="p">,</span> <span class="bp">True</span><span class="p">);</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">client</span> <span class="o">=</span> <span class="n">GrapheneAPI</span><span class="p">(</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span> <span class="mi">8092</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">transfer</span><span class="p">(</span><span class="s2">&quot;myexchange&quot;</span><span class="p">,</span><span class="s2">&quot;xeroc&quot;</span><span class="p">,</span><span class="s2">&quot;0.00001&quot;</span><span class="p">,</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span> <span class="s2">&quot;withdrawal myexchange&quot;</span><span class="p">,</span> <span class="bp">True</span><span class="p">);</span>
     <span class="k">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
 </pre></div>
 </div>

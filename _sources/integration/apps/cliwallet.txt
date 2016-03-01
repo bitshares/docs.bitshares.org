@@ -24,6 +24,12 @@ Enabling Remote Procedure Calls (RPC)
 In order to allow RPC calls for wallet operations (spend, buy, sell, ...) you
 can choose between pure RPC or RPC-HTTP requests. In this tutorial, the latter
 is prefered since well established libraries make use of the RPC-HTTP protocol.
+
+The cli-wallet can open a RPC port so that you can interface your
+application with it. You have the choices of
+* websocket RPC via the ``-r`` parameter, and
+* HTTP RPC via the ``-H`` parameter:
+
 To enable RPC-HTTP in your wallet you need to run:
 
 .. code-block:: sh
@@ -37,3 +43,6 @@ depending on the kind of RPC protocol.
 
 This will open the port 8092 for local queries only. It is not recommended to
 publicly expose your wallet!
+
+A tutorial for the BitShares cli-wallet can be found in the
+:doc:`BitShares tutorials <../bitshares/tutorials/cli-wallet-usage>`.

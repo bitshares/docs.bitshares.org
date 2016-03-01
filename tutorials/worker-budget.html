@@ -155,7 +155,7 @@ the <a class="reference external" href="https://github.com/cryptonomex/graphene/
 BTS are available to be distributed and how many BTS will be returned to the
 reserve fund (i.e., &#8220;burnt&#8221;) during the next maintenance interval.</p>
 <p>First find how many BTS have not been distributed:</p>
-<div class="highlight-python"><div class="highlight"><pre># get max_supply from
+<div class="highlight-python"><div class="highlight"><pre><span></span># get max_supply from
 get_object 1.3.0
 # get current_supply from
 get_object 2.3.0
@@ -165,18 +165,18 @@ get_object 2.3.0
 </div>
 <p>Then modify it by adding the accumulated fees and witness budget remaining
 (i.e., 1.5 BTS per block is budgeted, so budget remaining is</p>
-<div class="highlight-python"><div class="highlight"><pre>1.5 BTS * (number of blocks left in maintenance period+blocks missed by witnesses))
+<div class="highlight-python"><div class="highlight"><pre><span></span>1.5 BTS * (number of blocks left in maintenance period+blocks missed by witnesses))
 </pre></div>
 </div>
 <p>in this maintenance cycle (they will be added to the &#8220;reserve fund&#8221; permanently
 at maintenance)</p>
-<div class="highlight-python"><div class="highlight"><pre>get_object 2.13.*
+<div class="highlight-python"><div class="highlight"><pre><span></span>get_object 2.13.*
 
 ==&gt; updated reserve fund = from_initial_reserve +  from_accumulated_fees + from_unused_witness_budget
 </pre></div>
 </div>
 <p>For example:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">get_object</span> <span class="mf">2.13</span><span class="o">.</span><span class="mi">361</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">get_object</span> <span class="mf">2.13</span><span class="o">.</span><span class="mi">361</span>
 <span class="go">get_object 2.13.361</span>
 <span class="go">[{</span>
 <span class="go">    &quot;id&quot;: &quot;2.13.361&quot;,</span>
@@ -198,13 +198,13 @@ at maintenance)</p>
 </pre></div>
 </div>
 <p>Then calculate how much is available to be spent on workers and witnesses is:</p>
-<div class="highlight-python"><div class="highlight"><pre>total_budget = (updated reserve fund)*(time_since_last_budget)*17/(2^32)  #rounded up to the nearest integer
+<div class="highlight-python"><div class="highlight"><pre><span></span>total_budget = (updated reserve fund)*(time_since_last_budget)*17/(2^32)  #rounded up to the nearest integer
 </pre></div>
 </div>
 <p>Ok, now to find how much workers will get in this budget period (1 hour), you
 find the smaller of the available pay AFTER subtracting witness budget from the
 total_budget OR the worker_budget_per_day/24 from &#8220;get_global_properties&#8221;</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">worker_budget</span><span class="o">=</span><span class="nb">min</span><span class="p">(</span><span class="n">total_budget</span><span class="o">-</span><span class="n">witness_budget</span><span class="p">,</span><span class="n">worker_budget_per_day</span><span class="o">/</span><span class="mi">24</span><span class="p">)</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">worker_budget</span><span class="o">=</span><span class="nb">min</span><span class="p">(</span><span class="n">total_budget</span><span class="o">-</span><span class="n">witness_budget</span><span class="p">,</span><span class="n">worker_budget_per_day</span><span class="o">/</span><span class="mi">24</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>That is how much per hour allocated for all workers. NOW you rank each worker

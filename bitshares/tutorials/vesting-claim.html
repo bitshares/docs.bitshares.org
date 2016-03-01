@@ -198,14 +198,14 @@ signed after your confirmation.</p>
 <h2>Console Wallet<a class="headerlink" href="#console-wallet" title="Permalink to this headline">¶</a></h2>
 <p>From the CLI wallet, vesting balances from witnesses can be claimed by
 using::</p>
-<div class="highlight-python"><div class="highlight"><pre>withdraw_vesting &lt;account&gt; &lt;amount&gt; &lt;asset&gt;
+<div class="highlight-python"><div class="highlight"><pre><span></span>withdraw_vesting &lt;account&gt; &lt;amount&gt; &lt;asset&gt;
 </pre></div>
 </div>
 <p>Unfortunately, no call exists for non-witness-pay vesting balances, yet
 but a transaction can be <a class="reference internal" href="construct-transaction.html"><em>constructed manually</em></a>
 with the operation <code class="docutils literal"><span class="pre">vesting_balance_withdraw_operation</span></code> and takes the
 form:</p>
-<div class="highlight-js"><div class="highlight"><pre><span class="p">[</span>
+<div class="highlight-js"><div class="highlight"><pre><span></span><span class="p">[</span>
   <span class="mi">33</span><span class="p">,{</span>
     <span class="s2">&quot;fee&quot;</span><span class="o">:</span> <span class="p">{</span>
       <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>

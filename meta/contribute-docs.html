@@ -168,7 +168,7 @@
   <div class="section" id="contributing-to-the-documentation">
 <h1>Contributing to the Documentation<a class="headerlink" href="#contributing-to-the-documentation" title="Permalink to this headline">¶</a></h1>
 <p>This documentation page is hosted at github and can be cloned with</p>
-<div class="highlight-sh"><div class="highlight"><pre>git clone https://github.com/BitSharesEurope/docs.bitshares.eu
+<div class="highlight-sh"><div class="highlight"><pre><span></span>git clone https://github.com/BitSharesEurope/docs.bitshares.eu
 </pre></div>
 </div>
 <p>Sources are in the <code class="docutils literal"><span class="pre">master</span></code> branch whereas deployment (generated html pages)
@@ -190,7 +190,7 @@ are located in the <code class="docutils literal"><span class="pre">gh-pages</sp
 <div class="section" id="quick-install-in-osx">
 <h3>Quick Install in OSX<a class="headerlink" href="#quick-install-in-osx" title="Permalink to this headline">¶</a></h3>
 <p>It&#8217;s easy to get started on OSX using brew and easy_install.</p>
-<div class="code sh highlight-python"><div class="highlight"><pre>brew install doxygen
+<div class="code sh highlight-python"><div class="highlight"><pre><span></span>brew install doxygen
 brew install graphviz
 
 easy_install sphinx
@@ -203,15 +203,15 @@ easy_install breathe
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
 <p>In <cite>source/conf.py</cite> point the graphene key to the xml folder of the graphene
 sources:</p>
-<div class="code json highlight-python"><div class="highlight"><pre><span class="n">breathe_projects</span> <span class="o">=</span> <span class="p">{</span>
-   <span class="s">&quot;graphene&quot;</span><span class="p">:</span> <span class="s">&quot;../../graphene/doxygen/xml/&quot;</span><span class="p">,</span>
+<div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="n">breathe_projects</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="s2">&quot;graphene&quot;</span><span class="p">:</span> <span class="s2">&quot;../../graphene/doxygen/xml/&quot;</span><span class="p">,</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="building">
 <h2>Building<a class="headerlink" href="#building" title="Permalink to this headline">¶</a></h2>
-<div class="code sh highlight-python"><div class="highlight"><pre>make html
+<div class="code sh highlight-python"><div class="highlight"><pre><span></span>make html
 </pre></div>
 </div>
 </div>
@@ -229,7 +229,7 @@ deployment installs the page simultanisouly at</p>
 <li>docs.bitshares.eu</li>
 </ul>
 </div></blockquote>
-<div class="code sh highlight-python"><div class="highlight"><pre>git remote set-url origin github:BitSharesEurope/docs.bitshares.eu
+<div class="code sh highlight-python"><div class="highlight"><pre><span></span>git remote set-url origin github:BitSharesEurope/docs.bitshares.eu
 git remote     add org    github:BitSharesEurope/docs.bitshares.org
 make deploy
 </pre></div>
