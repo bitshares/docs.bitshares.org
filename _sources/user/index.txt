@@ -25,6 +25,7 @@ their users.
    governance
    vesting
    voting
+   referal-program
 
 For Blockchain "Employees"
 ##########################
