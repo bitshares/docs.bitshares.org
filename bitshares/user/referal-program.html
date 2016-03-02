@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <title>Transactions and Operations</title>
+    <title>Referal Program</title>
 
     <!-- CSS -->
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
@@ -74,7 +74,7 @@
  <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
    <div class='in'>
      <div class='headline'>
-       <h1>Transactions and Operations</h1>
+       <h1>Referal Program</h1>
  
      </div>
    </div>
@@ -85,7 +85,7 @@
     
         <div class="prev">
          <div class="title">previous</div>
-         <span><a href="security-cold.html">Securing &#8220;Cold&#8221; Wallets</a></span>
+         <span><a href="voting.html">Voting</a></span>
         </div>
         <div class="top">
          <div class="title">top</div>
@@ -93,7 +93,7 @@
         </div>
         <div class="next">
          <div class="title">next</div>
-         <span><a href="transactions-transfers.html">Simple Transfers</a></span>
+         <span><a href="shareholder.html">Shareholder</a></span>
         </div>
 
    </div>
@@ -123,18 +123,20 @@
 <li class="toctree-l4"><a class="reference internal" href="you-should-know.html">Things you should know</a></li>
 <li class="toctree-l4"><a class="reference internal" href="account.html">Accounts</a></li>
 <li class="toctree-l4"><a class="reference internal" href="security.html">Security</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="">Transactions and Operations</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="transactions-transfers.html">Simple Transfers</a></li>
-<li class="toctree-l5"><a class="reference internal" href="transactions-proposed.html">Proposed Transactions</a></li>
-<li class="toctree-l5"><a class="reference internal" href="transactions-confidential.html">Confidential Transactions</a></li>
-</ul>
-</li>
+<li class="toctree-l4"><a class="reference internal" href="transactions.html">Transactions and Operations</a></li>
 <li class="toctree-l4"><a class="reference internal" href="assets.html">Assets/Tokens</a></li>
 <li class="toctree-l4"><a class="reference internal" href="dex.html">Decentralized Exchange</a></li>
 <li class="toctree-l4"><a class="reference internal" href="pm.html">Prediction Markets</a></li>
 <li class="toctree-l4"><a class="reference internal" href="governance.html">Blockchain Governance</a></li>
 <li class="toctree-l4"><a class="reference internal" href="vesting.html">Vesting Balances</a></li>
 <li class="toctree-l4"><a class="reference internal" href="voting.html">Voting</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="">Referal Program</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#what-to-do">What to do?</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#examples">Examples</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#terms-conditions">Terms &amp; Conditions</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#claiming-referral-bonus-and-cashback">Claiming Referral Bonus and Cashback</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="index.html#for-blockchain-employees">For Blockchain &#8220;Employees&#8221;</a></li>
@@ -185,17 +187,102 @@
   </div>
   <div class='content'>
    
-  <div class="section" id="transactions-and-operations">
-<h1>Transactions and Operations<a class="headerlink" href="#transactions-and-operations" title="Permalink to this headline">¶</a></h1>
-<p>BitShares 2.0 implements a variety of operations besides simple transfers of
-funds. For instance in order to operate the <a class="reference internal" href="dex.html"><em>decentralized exchange</em></a> we need support for buy, sell orders as well. The technical
-documentation about all operation types can be found in our <a class="reference external" href="https://bitshares.org/doxygen/group__operations.html">doxygen docs</a>.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="transactions-transfers.html">Simple Transfers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="transactions-proposed.html">Proposed Transactions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="transactions-confidential.html">Confidential Transactions</a></li>
+  <div class="section" id="referal-program">
+<h1>Referal Program<a class="headerlink" href="#referal-program" title="Permalink to this headline">¶</a></h1>
+<p>The purpose of the referral program is to incentivize people to bring in
+more people. It compares to a Multi-Level-Marketing (MLM) scheme with
+the difference of having only <strong>1 level</strong> where referred individuals can
+opt-out by upgrading their account to a <a class="reference internal" href="account-memberships.html"><em>Life-Time Member (LTM)</em></a>. Every life time member, can get a cut of the
+fees based on child accounts linked to ours via referral.</p>
+<p>BitShares has several different kinds of accounts:
+* Basic Account,
+* Annual Member, and
+* Lifetime Member.</p>
+<p><strong>Basic Accounts</strong> are free, but do not qualify for the referral
+program, nor any cash back on transaction fees.</p>
+<p><strong>Lifetime Members</strong> pay an upgrade fee and earn <strong>80% cash back on
+every fee they pay</strong>. They also qualify for <strong>80% of the fees paid by
+Basic Accounts they refer</strong> to the network. These 80% can be split among
+the registrar, that actually registers the accounts, and an affiliate
+referrer, that brought in the new user.</p>
+<p>The referral fees are controlled by the blockchain and are distributed like this:</p>
+<ul class="simple">
+<li>20% go to the network</li>
+<li>80% go to the referral program<ul>
+<li>of this 80%, x% go to the registrar</li>
+<li>of this 80%, 100%-x% go to the affiliate referrer</li>
 </ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">For many cases it may make sense to upgrade the account even
+though you don&#8217;t want to participate in marketing at all
+simply for the reasons to get a cashback of 80% of the fees
+you pay for your own transactions!</p>
+</div>
+<div class="section" id="what-to-do">
+<h2>What to do?<a class="headerlink" href="#what-to-do" title="Permalink to this headline">¶</a></h2>
+<p>If you want to participate in the referral program, you need to have a
+life-time member account, first! Then you can bring in new users by</p>
+<ul>
+<li><p class="first">running your own faucet and actually register new accounts (will give you
+80% of all the fees of those minus a fraction that you decide to give
+to affiliates (the referers)</p>
+</li>
+<li><p class="first">referring people to a hosted wallet that offers you a cut of the fees
+as an affiliate.</p>
+<p>In this case, most hosted wallets add your account as affiliate if you
+provide the following link structure to people</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>https://&lt;url&gt;/?r=&lt;your-account&gt;
+</pre></div>
+</div>
+<p>with <code class="docutils literal"><span class="pre">&lt;your-account&gt;</span></code> being the name of your BitShares Lite-Time
+Member account.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>If you want link to pages with in the wallet, e.g. a
+particular decentralized market, you need to have the
+<code class="docutils literal"><span class="pre">?r=</span></code> parameter <strong>before</strong> the <code class="docutils literal"><span class="pre">#</span></code>, e.g.:</p>
+<div class="last highlight-python"><div class="highlight"><pre><span></span>https://&lt;url&gt;/?r=&lt;your-account&gt;#/market/USD_BTC
+</pre></div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>When a user pays a $20 annual subscription fee to become an Annual
+Member, $10 is paid to their Referrer, $6 is paid to the nearest
+Lifetime Member, and $4 is paid to the Network. The Annual Member
+becomes its own Referrer for one year. In one year, the renewal fee is
+divided in a similar manner to the original annual subscription.</p>
+<p>When an Basic Account pays $100 to become a Lifetime Member, $50 is paid
+to their Referrer, $30 is paid to the nearest Lifetime Member, and $20
+is paid to the Network. After this point the Lifetime Member becomes its
+own referrer and nearest Lifetime Member and its prior Referrers no
+longer get any revenue from this user.</p>
+<p>If an account’s Referrer is an Annual Member whose subscription has
+expired, then the Referrer fee goes to the nearest Lifetime Member.</p>
+<p>If an Annual Member decides to upgrade to a Lifetime Member then $50
+goes to his Referrer, $30 to the nearest Lifetime Member and $20 goes to
+the Network. Annual Members do not qualify for a 50% Cashback Referral
+on the upgrade fee.</p>
+</div>
+<div class="section" id="terms-conditions">
+<h2>Terms &amp; Conditions<a class="headerlink" href="#terms-conditions" title="Permalink to this headline">¶</a></h2>
+<p>Please see the <a class="reference external" href="https://bitshares.org/referral-program-terms-and-conditions/">Referral Program - Terms &amp; Conditions</a> for
+more details.</p>
+</div>
+<div class="section" id="claiming-referral-bonus-and-cashback">
+<h2>Claiming Referral Bonus and Cashback<a class="headerlink" href="#claiming-referral-bonus-and-cashback" title="Permalink to this headline">¶</a></h2>
+<p>If you have a life time member account and</p>
+<ul class="simple">
+<li>already paid some fees, or</li>
+<li>have referred people that paid some fees,</li>
+</ul>
+<p>you can withdraw them in the &#8220;Vesting&#8221; tab of your account.</p>
 </div>
 </div>
 
