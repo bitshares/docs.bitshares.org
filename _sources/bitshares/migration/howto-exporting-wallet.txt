@@ -22,9 +22,17 @@ upgrade you need to:
 
 .. _bitshares webpage: https://github.com/bitshares/bitshares-0.x/releases
 
-Attempt to sync with the blockchain (this is only necessary with if you think
-that since the last time you did the syncing there have been some new
-transactions involving any of your accounts).
+Synchronize your Wallet
+***********************
+
+.. note:: If you see all your funds in your wallet, you can safely skip
+          this paragraph.
+
+We now need to sync with the blockchain. This is only necessary with if
+you think that since the last time you did the syncing there have been
+some new transactions involving any of your accounts.
+
+:doc:`legacy-blockchain`
 
 You can see the syncing progress from the status bar or from the ``info``
 command in the console (``account list->advanced settings->console``).
@@ -38,8 +46,8 @@ can be accessed in two ways:
 * by accessing it in the main menu
 * by issuing a command in the console.
 
-Using the main menu
-*******************
+Export via the main menu
+************************
 
 Just select ``File Menu -> Export Wallet``  and you'll be asked to select a
 file location where the keys will be exported. 
@@ -48,8 +56,8 @@ file location where the keys will be exported.
         work for you is the console command - the file exported using the menu will not
         be compatible with BTS 2.0. This refers to Windows only.
 
-Using the console
-*****************
+Export via the console
+**********************
 
 * navigate to the console: Account List -> Advanced Settings -> Console
 * type: wallet_export_keys [full path to the file]/[file name].json

@@ -43,3 +43,26 @@ directory:::
 The **initial timestamp** needs to be pasted into ``genesis.json`` file
 in the initial_timestamp field. Choose it relatively close to the future
 where you can generate the genesis block (e.g. now plus 10 minutes).
+
+Including Genesis into the binaries
+###################################
+
+To let the binaries know about your new genesis block, we need to
+recompile it and provide ``cmake`` with the parameter to identify the
+genesis block properly:
+
+::
+    $ make clean
+    $ find . -name "CMakeCache.txt" | xargs rm -f
+    $ find . -name "CMakeFiles" | xargs rm -Rf
+    $ cmake -DGRAPHENE_EGENESIS_JSON="$(pwd)/genesis.json" .
+
+You can add the ``GRAPHENE_EGENESIS_JSON`` to the default parameters by
+adding:
+
+::
+
+    set(GRAPHENE_EGENESIS_JSON "${CMAKE_CURRENT_SOURCE_DIR}/genesis.json" )
+
+to the ``CMakeLists.txt`` file. This way, you don't need to provide this
+parameter all the time.

@@ -1,0 +1,36 @@
+*********************
+Claim your Investment
+*********************
+
+You are considered as a AngelShare holder if you have donated BTC or BTS
+to one of these addresses:
+
+* **BTC**: ``1ANGELwQwWxMmbdaSWhWLqBEtPTkWb8uDc``
+* **PTS**: ``PaNGELmZgzRQCKeEKM6ifgTqNkC4ceiAWw``
+
+There is also an `AngelShare Explorer <http://www1.agsexplorer.com/>`_
+specifically for these donations
+
+AngelShares have been gifted 50% of the initial BTS shares. The other
+50% went to AngelShares, the other went to holders of PTS.
+
+Claiming your Stake
+###################
+
+In order to claim your BTS, you need to look in your bitcoin wallet and
+search for transactions the the above mentioned address. The keys that
+correspond to the inputs of that transaction are what you need to obtain
+your BTS (`FAQ <http://www1.agsexplorer.com/ags101>`).
+
+If you have located the private keys (in wallet import format - WIF),
+you can safely import them into your BitShares account using the *Import
+Keys* tools in the Wallet Management Console of your BitShares wallet.
+
+If, however, you only have a `wallet.dat` file, you will need to
+
+1. install BitShares 0.9.3
+2. create an account in the BitShares 0.9.3 wallet
+3. import the `wallet.dat` file into your account
+4. :doc:`export a BitShares 2.0 compatible backup file <../migration/howto-exporting-wallet>`
+5. :doc:`import the new backup into BitShares 2.0 <../migration/howto-importing-wallet>`
+6. :doc:`claim you funds from the BitShares 2.0 genesis block <../migration/howto-importing-wallet>`

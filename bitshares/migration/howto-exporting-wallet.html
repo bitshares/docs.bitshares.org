@@ -121,8 +121,9 @@
 <li class="toctree-l3"><a class="reference internal" href="blockchain-transition.html">Blockchain Upgrade</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="">Exporting Your Wallet</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#bitshares-1-0-full-client">BitShares 1.0 Full Client</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#using-the-main-menu">Using the main menu</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#using-the-console">Using the console</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#synchronize-your-wallet">Synchronize your Wallet</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#export-via-the-main-menu">Export via the main menu</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#export-via-the-console">Export via the console</a></li>
 </ul>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="#wallet-bitshares-org">wallet.bitshares.org</a></li>
@@ -195,9 +196,17 @@ upgrade you need to:</p>
 <li>uninstall your previous version of the BitShares client</li>
 <li>install the new version</li>
 </ul>
-<p>Attempt to sync with the blockchain (this is only necessary with if you think
-that since the last time you did the syncing there have been some new
-transactions involving any of your accounts).</p>
+<div class="section" id="synchronize-your-wallet">
+<h3>Synchronize your Wallet<a class="headerlink" href="#synchronize-your-wallet" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you see all your funds in your wallet, you can safely skip
+this paragraph.</p>
+</div>
+<p>We now need to sync with the blockchain. This is only necessary with if
+you think that since the last time you did the syncing there have been
+some new transactions involving any of your accounts.</p>
+<p><a class="reference internal" href="legacy-blockchain.html"><em>Legacy BitShares 0.9.3 Blockchain Download</em></a></p>
 <p>You can see the syncing progress from the status bar or from the <code class="docutils literal"><span class="pre">info</span></code>
 command in the console (<code class="docutils literal"><span class="pre">account</span> <span class="pre">list-&gt;advanced</span> <span class="pre">settings-&gt;console</span></code>).
 After having <em>synced</em> the blockchain, your wallet will automatically attempt to
@@ -209,8 +218,9 @@ can be accessed in two ways:</p>
 <li>by accessing it in the main menu</li>
 <li>by issuing a command in the console.</li>
 </ul>
-<div class="section" id="using-the-main-menu">
-<h3>Using the main menu<a class="headerlink" href="#using-the-main-menu" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="export-via-the-main-menu">
+<h3>Export via the main menu<a class="headerlink" href="#export-via-the-main-menu" title="Permalink to this headline">¶</a></h3>
 <p>Just select <code class="docutils literal"><span class="pre">File</span> <span class="pre">Menu</span> <span class="pre">-&gt;</span> <span class="pre">Export</span> <span class="pre">Wallet</span></code>  and you&#8217;ll be asked to select a
 file location where the keys will be exported.</p>
 <div class="admonition note">
@@ -220,8 +230,8 @@ work for you is the console command - the file exported using the menu will not
 be compatible with BTS 2.0. This refers to Windows only.</p>
 </div>
 </div>
-<div class="section" id="using-the-console">
-<h3>Using the console<a class="headerlink" href="#using-the-console" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="export-via-the-console">
+<h3>Export via the console<a class="headerlink" href="#export-via-the-console" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li>navigate to the console: Account List -&gt; Advanced Settings -&gt; Console</li>
 <li>type: wallet_export_keys [full path to the file]/[file name].json
