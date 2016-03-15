@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <title>Migrating from BitShares 1.0 to BitShares 2.0</title>
+    <title>Claim your Investment</title>
 
     <!-- CSS -->
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
@@ -74,7 +74,7 @@
  <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
    <div class='in'>
      <div class='headline'>
-       <h1>Migrating from BitShares 1.0 to BitShares 2.0</h1>
+       <h1>Claim your Investment</h1>
  
      </div>
    </div>
@@ -146,41 +146,36 @@
   </div>
   <div class='content'>
    
-  <div class="section" id="migrating-from-bitshares-1-0-to-bitshares-2-0">
-<h1>Migrating from BitShares 1.0 to BitShares 2.0<a class="headerlink" href="#migrating-from-bitshares-1-0-to-bitshares-2-0" title="Permalink to this headline">¶</a></h1>
-<p>This migration tutorial is relevant only to those customers and investors that
-have participated in BitShares 1.0. We show improvements, new features and give
-assistance for claiming your funds in BitShares 2.0.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="what-is-new.html">What is New in BitShares 2.0</a></li>
-<li class="toctree-l1"><a class="reference internal" href="what-changed.html">What has Changed since BitShares 0.9?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="blockchain-transition.html">Blockchain Upgrade</a></li>
-<li class="toctree-l1"><a class="reference internal" href="howto-exporting-wallet.html">Exporting Your Wallet</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="howto-exporting-wallet.html#bitshares-1-0-full-client">BitShares 1.0 Full Client</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="howto-exporting-wallet.html#synchronize-your-wallet">Synchronize your Wallet</a></li>
-<li class="toctree-l3"><a class="reference internal" href="howto-exporting-wallet.html#export-via-the-main-menu">Export via the main menu</a></li>
-<li class="toctree-l3"><a class="reference internal" href="howto-exporting-wallet.html#export-via-the-console">Export via the console</a></li>
+  <div class="section" id="claim-your-investment">
+<h1>Claim your Investment<a class="headerlink" href="#claim-your-investment" title="Permalink to this headline">¶</a></h1>
+<p>You are considered as a AngelShare holder if you have donated BTC or BTS
+to one of these addresses:</p>
+<ul class="simple">
+<li><strong>BTC</strong>: <code class="docutils literal"><span class="pre">1ANGELwQwWxMmbdaSWhWLqBEtPTkWb8uDc</span></code></li>
+<li><strong>PTS</strong>: <code class="docutils literal"><span class="pre">PaNGELmZgzRQCKeEKM6ifgTqNkC4ceiAWw</span></code></li>
 </ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="howto-exporting-wallet.html#wallet-bitshares-org">wallet.bitshares.org</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="howto-importing-wallet.html">Importing Your Wallet</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="howto-importing-wallet.html#web-wallet">Web Wallet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="howto-importing-wallet.html#cli-wallet">CLI wallet</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="howto-importing-wallet.html#claiming-balances">Claiming Balances</a></li>
-<li class="toctree-l3"><a class="reference internal" href="howto-importing-wallet.html#manually-claim-balances">Manually claim balances</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="howto-importing-wallet-remarks.html">Migration Remarks</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="howto-importing-wallet-remarks.html#remarks-on-private-keys">Remarks on Private Keys</a></li>
-<li class="toctree-l2"><a class="reference internal" href="howto-importing-wallet-remarks.html#technical-explanation">Technical Explanation</a></li>
-</ul>
-</li>
-</ul>
+<p>There is also an <a class="reference external" href="http://www1.agsexplorer.com/">AngelShare Explorer</a>
+specifically for these donations</p>
+<p>AngelShares have been gifted 50% of the initial BTS shares. The other
+50% went to AngelShares, the other went to holders of PTS.</p>
+<div class="section" id="claiming-your-stake">
+<h2>Claiming your Stake<a class="headerlink" href="#claiming-your-stake" title="Permalink to this headline">¶</a></h2>
+<p>In order to claim your BTS, you need to look in your bitcoin wallet and
+search for transactions the the above mentioned address. The keys that
+correspond to the inputs of that transaction are what you need to obtain
+your BTS (<cite>FAQ &lt;http://www1.agsexplorer.com/ags101&gt;</cite>).</p>
+<p>If you have located the private keys (in wallet import format - WIF),
+you can safely import them into your BitShares account using the <em>Import
+Keys</em> tools in the Wallet Management Console of your BitShares wallet.</p>
+<p>If, however, you only have a <cite>wallet.dat</cite> file, you will need to</p>
+<ol class="arabic simple">
+<li>install BitShares 0.9.3</li>
+<li>create an account in the BitShares 0.9.3 wallet</li>
+<li>import the <cite>wallet.dat</cite> file into your account</li>
+<li><a class="reference internal" href="../migration/howto-exporting-wallet.html"><em>export a BitShares 2.0 compatible backup file</em></a></li>
+<li><code class="xref doc docutils literal"><span class="pre">import</span> <span class="pre">the</span> <span class="pre">new</span> <span class="pre">backup</span> <span class="pre">into</span> <span class="pre">BitShares</span> <span class="pre">2.0</span></code></li>
+<li><code class="xref doc docutils literal"><span class="pre">claim</span> <span class="pre">you</span> <span class="pre">funds</span> <span class="pre">from</span> <span class="pre">the</span> <span class="pre">BitShares</span> <span class="pre">2.0</span> <span class="pre">genesis</span> <span class="pre">block</span></code></li>
+</ol>
 </div>
 </div>
 

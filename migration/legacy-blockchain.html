@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <title>Migrating from BitShares 1.0 to BitShares 2.0</title>
+    <title>Legacy BitShares 0.9.3 Blockchain Download</title>
 
     <!-- CSS -->
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
@@ -74,7 +74,7 @@
  <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
    <div class='in'>
      <div class='headline'>
-       <h1>Migrating from BitShares 1.0 to BitShares 2.0</h1>
+       <h1>Legacy BitShares 0.9.3 Blockchain Download</h1>
  
      </div>
    </div>
@@ -146,41 +146,43 @@
   </div>
   <div class='content'>
    
-  <div class="section" id="migrating-from-bitshares-1-0-to-bitshares-2-0">
-<h1>Migrating from BitShares 1.0 to BitShares 2.0<a class="headerlink" href="#migrating-from-bitshares-1-0-to-bitshares-2-0" title="Permalink to this headline">¶</a></h1>
-<p>This migration tutorial is relevant only to those customers and investors that
-have participated in BitShares 1.0. We show improvements, new features and give
-assistance for claiming your funds in BitShares 2.0.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="what-is-new.html">What is New in BitShares 2.0</a></li>
-<li class="toctree-l1"><a class="reference internal" href="what-changed.html">What has Changed since BitShares 0.9?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="blockchain-transition.html">Blockchain Upgrade</a></li>
-<li class="toctree-l1"><a class="reference internal" href="howto-exporting-wallet.html">Exporting Your Wallet</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="howto-exporting-wallet.html#bitshares-1-0-full-client">BitShares 1.0 Full Client</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="howto-exporting-wallet.html#synchronize-your-wallet">Synchronize your Wallet</a></li>
-<li class="toctree-l3"><a class="reference internal" href="howto-exporting-wallet.html#export-via-the-main-menu">Export via the main menu</a></li>
-<li class="toctree-l3"><a class="reference internal" href="howto-exporting-wallet.html#export-via-the-console">Export via the console</a></li>
+  <div class="section" id="legacy-bitshares-0-9-3-blockchain-download">
+<h1>Legacy BitShares 0.9.3 Blockchain Download<a class="headerlink" href="#legacy-bitshares-0-9-3-blockchain-download" title="Permalink to this headline">¶</a></h1>
+<p>One crucial step in teh migration still takes quite some time and is
+technically invovled for those that do <strong>not</strong> see their funds in
+BitShares 0.9.3: The need to download the blockchain from the legacy
+network. Since only a few nodes still serve the raw blockchain data, we
+here provide the full blockchain to download:</p>
+<p><a class="reference download internal" href="../_downloads/BitShares-0.9.3-full-blockchain1.torrent"><code class="xref download docutils literal"><span class="pre">Blockchain</span> <span class="pre">Torrent</span></code></a></p>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Download the Torrent and use it to obtain a full copy of the <cite>chain/</cite> folder</li>
+<li>Move this chain folder into your BitShares shared directory:<ul>
+<li>Windows: <cite>%APPDATA%/BitShares</cite></li>
+<li>Mac: <cite>~/Library/Application Support/BitShares</cite></li>
+<li>Linux: <cite>~/.BitShares</cite></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="howto-exporting-wallet.html#wallet-bitshares-org">wallet.bitshares.org</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="howto-importing-wallet.html">Importing Your Wallet</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="howto-importing-wallet.html#web-wallet">Web Wallet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="howto-importing-wallet.html#cli-wallet">CLI wallet</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="howto-importing-wallet.html#claiming-balances">Claiming Balances</a></li>
-<li class="toctree-l3"><a class="reference internal" href="howto-importing-wallet.html#manually-claim-balances">Manually claim balances</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="howto-importing-wallet-remarks.html">Migration Remarks</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="howto-importing-wallet-remarks.html#remarks-on-private-keys">Remarks on Private Keys</a></li>
-<li class="toctree-l2"><a class="reference internal" href="howto-importing-wallet-remarks.html#technical-explanation">Technical Explanation</a></li>
-</ul>
-</li>
-</ul>
+<li>Start BitShares 0.9.3 (not older) and let it re-index the database (be patient)</li>
+<li>Provide your Passphrase</li>
+<li>Goto <cite>account list-&gt;advanced settings-&gt;console</cite> and run <cite>rescan</cite>. Depending on the amount of accounts in your wallet, this steps should only take very few minutes. You can see the syncing progress from the status bar or from the info command in the console.</li>
+<li>After completion, you should now see your funds again and can continue with exporting your wallet for BitShares 2</li>
+</ol>
+</div>
+<div class="section" id="verification">
+<h2>Verification<a class="headerlink" href="#verification" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre><span></span>$ md5sum BitShares-0.9.3-full-blockchain.torrent
+bf62712aeb02e7eb3619e4539d1aefcf  BitShares-0.9.3-full-blockchain.torrent
+
+$ sha1sum BitShares-0.9.3-full-blockchain.torrent
+249f52c57c4169ce898fdf3e8848d725e942a581  BitShares-0.9.3-full-blockchain.torrent
+
+$ sha512sum BitShares-0.9.3-full-blockchain.torrent
+7626bc38f722f86e6859332274e3090ce2360c9978a02db0bbdcc7352fbf1df7 \
+924901c3c3c92cdb7a9797e9608a5d0ef5ebfa9ee165d435048bf380c45ec555  BitShares-0.9.3-full-blockchain.torrent
+</pre></div>
+</div>
 </div>
 </div>
 
