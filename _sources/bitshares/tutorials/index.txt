@@ -26,6 +26,7 @@ General Tutorials
    vesting-list
    vesting-claim
    voting
+   dex-trading
 
 Assets
 ######

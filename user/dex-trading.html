@@ -163,6 +163,24 @@ such that pairs are represented as:</p>
 <p>and for instance with <em>base</em> being USD and <em>quote</em> being EUR, denote the EUR:USD
 pair.</p>
 </div>
+<div class="section" id="market-overview">
+<h2>Market Overview<a class="headerlink" href="#market-overview" title="Permalink to this headline">¶</a></h2>
+<p>The market overview that can be access via the explorer, shows a set of
+predefined default markets. Note that the list of default markets may
+vary depending on the wallet provider. Further markets can be added
+using the <em>Find Markets</em> tab. Adding a <em>Star</em> to your favorite
+markets will make it appear in your list of default markets.</p>
+<a class="reference internal image-reference" href="../_images/dex-trading-markets1.png"><img alt="Market overview" class="align-center" src="../_images/dex-trading-markets1.png" style="width: 660px;" /></a>
+</div>
+<div class="section" id="market">
+<h2>Market<a class="headerlink" href="#market" title="Permalink to this headline">¶</a></h2>
+<p>When entering a market, you will presented with either the market depth</p>
+<a class="reference internal image-reference" href="../_images/dex-trading-overview1.png"><img alt="Trading market depth" class="align-center" src="../_images/dex-trading-overview1.png" style="width: 660px;" /></a>
+<p>... or the price chart depending on your settings.</p>
+<a class="reference internal image-reference" href="../_images/dex-trading-price-chart1.png"><img alt="Trading price chart" class="align-center" src="../_images/dex-trading-price-chart1.png" style="width: 660px;" /></a>
+<p>You can switch between your views by pressing the corresponding button as highlighted
+below.</p>
+</div>
 <div class="section" id="order-books">
 <h2>Order Books<a class="headerlink" href="#order-books" title="Permalink to this headline">¶</a></h2>
 <p>The order book consists of an <em>ask</em> and a <em>bid</em> side. Since trading pairs do not
@@ -202,18 +220,22 @@ the <em>bid</em> side (respectively, <em>buy</em> or <em>sell</em> side). You wi
 a <em>price</em> and an <em>amount</em> to sell/buy. The cost for this order will be
 calculated automatically. Note that there will be an additional fee required to
 actually place the order.</p>
+<a class="reference internal image-reference" href="../_images/dex-trading-explained1.png"><img alt="Individual areas of the trading dialog" class="align-center" src="../_images/dex-trading-explained1.png" style="width: 660px;" /></a>
 <p>Once the order is filled (i.e. someone sold/bought your offer), your account
 will be credited by the corresponding asset.</p>
 <p>Unfilled orders can be canceled at any time.</p>
 </div>
 <div class="section" id="order-matching">
 <h2>Order Matching<a class="headerlink" href="#order-matching" title="Permalink to this headline">¶</a></h2>
-<p>BitShares 2.0 matches orders on a first-come, first-serve basis and gives the
-buyer the best price possible up to the limit. Rather than charging
-<em>unpredictable fees</em> from market overlap (as has been in the previous network),
-the network charges a defined fee based upon the size of the order matched and
-the assets involved. Each asset issuer gets an opportunity to configure their
-fees.</p>
+<p>BitShares 2.0 matches orders on a first-come, first-serve basis and gives the buyer the
+best price possible up to the limit (also known as &#8220;walking the book&#8221;). Rather than
+charging <em>unpredictable fees</em> from market overlap (as has been in the previous network),
+the network charges a defined fee based upon the size of the order matched and the assets
+involved. Each asset issuer gets an opportunity to configure their fees.</p>
+</div>
+<div class="section" id="tutorial">
+<h2>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">¶</a></h2>
+<p><code class="xref doc docutils literal"><span class="pre">../tutorials/dex-trading.rst</span></code></p>
 </div>
 </div>
 
