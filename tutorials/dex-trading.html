@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <title>Blockchain API</title>
+    <title>Howto trade in the DEX</title>
 
     <!-- CSS -->
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
@@ -74,7 +74,7 @@
  <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
    <div class='in'>
      <div class='headline'>
-       <h1>Blockchain API</h1>
+       <h1>Howto trade in the DEX</h1>
  
      </div>
    </div>
@@ -83,17 +83,9 @@
  <div class='header'>
    <div class='left navlinks'>
     
-        <div class="prev">
-         <div class="title">previous</div>
-         <span><a href="network_node.html">Network Nodes API</a></span>
-        </div>
         <div class="top">
          <div class="title">top</div>
          <span><a class="uplink" href="../index.html">Contents</a></span>
-        </div>
-        <div class="next">
-         <div class="title">next</div>
-         <span><a href="database.html">Database API</a></span>
         </div>
 
    </div>
@@ -121,28 +113,8 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../integration/index.html">Integration Guide</a></li>
 </ul>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">API Guide</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="index.html#interfacing-with-graphene">Interfacing with Graphene</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="index.html#wallet-api">Wallet API</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html#blockchain-api-s">Blockchain API(s)</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="rpc.html">Remote Procedure Calls</a></li>
-<li class="toctree-l4"><a class="reference internal" href="websocket.html">Websocket Calls &amp; Notifications</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="">Blockchain API</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="database.html">Database API</a></li>
-<li class="toctree-l5"><a class="reference internal" href="history.html">Account History API</a></li>
-<li class="toctree-l5"><a class="reference internal" href="crypto.html">Crypto API</a></li>
-<li class="toctree-l5"><a class="reference internal" href="network_broadcast.html">Network Broadcast API</a></li>
-<li class="toctree-l5"><a class="reference internal" href="network_node.html">Network Nodes API</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#blockchain-objects-and-their-identifiers">Blockchain Objects and their Identifiers</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API Guide</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../development/index.html">Development Guide</a></li>
@@ -174,22 +146,36 @@
   </div>
   <div class='content'>
    
-  <div class="section" id="blockchain-api">
-<h1>Blockchain API<a class="headerlink" href="#blockchain-api" title="Permalink to this headline">¶</a></h1>
-<p>The Graphene full node distinguishes several different APIs that can be
-accessed as described <a class="reference internal" href="websocket.html#requestingapiaccess"><span>the websockets documentation</span></a>.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="database.html">Database API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="history.html">Account History API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="crypto.html">Crypto API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="network_broadcast.html">Network Broadcast API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="network_node.html">Network Nodes API</a></li>
+  <div class="section" id="howto-trade-in-the-dex">
+<h1>Howto trade in the DEX<a class="headerlink" href="#howto-trade-in-the-dex" title="Permalink to this headline">¶</a></h1>
+<p>The decentralized exchange (DEX) of BitShares has a similar look&amp;feel as
+traditional centralized exchanges. However, trading in the DEX can have
+many different appearances, depending on what user-interface is used. We
+here describe the user interface of the official wallet. We recommend to
+also read through:</p>
+<ul class="simple">
+<li><a class="reference internal" href="../user/dex.html"><em>Decentralized Exchange</em></a></li>
+<li><a class="reference internal" href="../user/dex-trading.html"><em>Trading</em></a></li>
 </ul>
+<div class="section" id="playing-orders">
+<h2>Playing Orders<a class="headerlink" href="#playing-orders" title="Permalink to this headline">¶</a></h2>
+<p>Orders can be placed in the same way as everywhere else, by providing</p>
+<ul class="simple">
+<li>the amount to buy/sell</li>
+<li>the price at which to buy/sell</li>
+</ul>
+<a class="reference internal image-reference" href="../_images/dex-buysell1.png"><img alt="Placing orders" class="align-center" src="../_images/dex-buysell1.png" style="width: 660px;" /></a>
 </div>
-<p>Access to some APIs may be <strong>restricted</strong> and requires login with username and
-passphrase. More detailed description about this can be found on the
-<a class="reference internal" href="access.html"><em>API Access Restrictions</em></a> page.</p>
+<div class="section" id="fees">
+<h2>Fees<a class="headerlink" href="#fees" title="Permalink to this headline">¶</a></h2>
+<p>In contrast to other exchanges, BitShares asks for a tiny <strong>flat fee</strong>
+for placing an order. This fee can be payed in USD, BTC, or GOLD and is
+independent of the actual assets that are traded.</p>
+<p>If you cancel an order that has not been fully or partially filled, 90%
+of the fee will be payed back to your account. However, this chargeback
+will be in <code class="docutils literal"><span class="pre">BTS</span></code> and not in the asset you have originally paid the fee
+in.</p>
+</div>
 </div>
 
 

@@ -20,6 +20,40 @@ such that pairs are represented as::
 and for instance with *base* being USD and *quote* being EUR, denote the EUR:USD
 pair.
 
+Market Overview
+###############
+
+The market overview that can be access via the explorer, shows a set of
+predefined default markets. Note that the list of default markets may
+vary depending on the wallet provider. Further markets can be added
+using the *Find Markets* tab. Adding a *Star* to your favorite
+markets will make it appear in your list of default markets.
+
+.. image:: dex-trading-markets.png
+        :alt: Market overview
+        :width: 660px
+        :align: center
+
+Market
+######
+
+When entering a market, you will presented with either the market depth
+
+.. image:: dex-trading-overview.png
+        :alt: Trading market depth
+        :width: 660px
+        :align: center
+
+... or the price chart depending on your settings.
+
+.. image:: dex-trading-price-chart.png
+        :alt: Trading price chart
+        :width: 660px
+        :align: center
+
+You can switch between your views by pressing the corresponding button as highlighted
+below.
+
 Order Books
 ###########
 
@@ -48,6 +82,11 @@ a *price* and an *amount* to sell/buy. The cost for this order will be
 calculated automatically. Note that there will be an additional fee required to
 actually place the order.
 
+.. image:: dex-trading-explained.png
+        :alt: Individual areas of the trading dialog
+        :width: 660px
+        :align: center
+
 Once the order is filled (i.e. someone sold/bought your offer), your account
 will be credited by the corresponding asset.
 
@@ -56,9 +95,13 @@ Unfilled orders can be canceled at any time.
 Order Matching
 ##############
 
-BitShares 2.0 matches orders on a first-come, first-serve basis and gives the
-buyer the best price possible up to the limit. Rather than charging
-*unpredictable fees* from market overlap (as has been in the previous network),
-the network charges a defined fee based upon the size of the order matched and
-the assets involved. Each asset issuer gets an opportunity to configure their
-fees.
+BitShares 2.0 matches orders on a first-come, first-serve basis and gives the buyer the
+best price possible up to the limit (also known as "walking the book"). Rather than
+charging *unpredictable fees* from market overlap (as has been in the previous network),
+the network charges a defined fee based upon the size of the order matched and the assets
+involved. Each asset issuer gets an opportunity to configure their fees.
+
+Tutorial
+########
+
+:doc:`../tutorials/dex-trading.rst`

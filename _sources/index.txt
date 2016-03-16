@@ -18,13 +18,6 @@ systems go beyond mere "checkbook" style payments to offer a broad range of
 financial services distinguished by their transparency and inherent
 incorruptibility.
 
-Graphene technology is already developed and deployed. It will be generating
-profits in multiple industries before the end of 2015. The purpose of this
-round of capital is to scale and proliferate the technology into many more
-applications, industries, partnerships and customer relationships.  We intend
-to capture market share and grow network effect while we continue to extend our
-substantial technical lead in the industry. 
-
 This page documents the `Graphene`_ technology built by `Cryptonomex`_. You can
 see Graphene as a toolkit for real-time blockchains. We separated the
 documentation into smaller parts for convenience and for the sake of easy
