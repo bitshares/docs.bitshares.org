@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <title>Supporting Libraries</title>
+    <title>NodeJS Example</title>
 
     <!-- CSS -->
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
@@ -74,7 +74,7 @@
  <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
    <div class='in'>
      <div class='headline'>
-       <h1>Supporting Libraries</h1>
+       <h1>NodeJS Example</h1>
  
      </div>
    </div>
@@ -83,17 +83,9 @@
  <div class='header'>
    <div class='left navlinks'>
     
-        <div class="prev">
-         <div class="title">previous</div>
-         <span><a href="../businesses/index.html">Businesses</a></span>
-        </div>
         <div class="top">
          <div class="title">top</div>
          <span><a class="uplink" href="../../index.html">Contents</a></span>
-        </div>
-        <div class="next">
-         <div class="title">next</div>
-         <span><a href="python.html">General Python Library</a></span>
         </div>
 
    </div>
@@ -118,29 +110,8 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../muse/index.html">MUSE</a></li>
 </ul>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Integration Guide</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../index.html#basic-knowledge">Basic Knowledge</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html#use-cases">Use-Cases</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="../exchanges/index.html">Exchanges, Bridges, and Gateways</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="../exchanges/index.html#integration-instructions">Integration Instructions</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="../exchanges/index.html#libraries">Libraries</a><ul class="current">
-<li class="toctree-l5 current"><a class="current reference internal" href="">Supporting Libraries</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../api/index.html">API Guide</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../merchants/index.html">Merchants</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../api/index.html">API Guide</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../traders/index.html">Traders</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../api/index.html">API Guide</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../businesses/index.html">Businesses</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../api/index.html">API Guide</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Integration Guide</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API Guide</a></li>
@@ -175,22 +146,76 @@
   </div>
   <div class='content'>
    
-  <div class="section" id="supporting-libraries">
-<h1>Supporting Libraries<a class="headerlink" href="#supporting-libraries" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="python.html">General Python Library</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="python.html#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python.html#usage">Usage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python.html#examples">Examples</a></li>
+  <div class="section" id="nodejs-example">
+<h1>NodeJS Example<a class="headerlink" href="#nodejs-example" title="Permalink to this headline">¶</a></h1>
+<p>This nodejs script monitors the balance history of an account in a
+graphene-based network such as BitShares 2.0.</p>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>A NodeJS library to monitor incoming transactions can be downloaded from</p>
+<div class="highlight-sh"><div class="highlight"><pre><span></span>git clone https://github.com/xeroc/node-graphene-monitor
+<span class="nb">cd</span> node-graphene-monitor
+npm install
+</pre></div>
+</div>
+</div>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<p>To make use of this library, we can instruct any full-node to send
+notifications for all incoming transactions for any account. Let&#8217;s discuss the
+following example script in more details:</p>
+<p>We first prepare our variables and import all required modules</p>
+<p>Define the <cite>accountID</cite> and the <cite>memo_wif_key</cite>.
+The accountID can be obtained from the GUI wallet, or by issuing::</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">get_account</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>If the script exists abnormally, you can continue operations by setting
+<cite>last_op</cite> to the last operation id that you have captured before the
+abnormal exit.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The current implementation has a maxium history size of 100
+transaction. If you have missed more than 100 transaction with the
+current implementation, manual fixing is required.</p>
+</div>
+<p>The settings are located in <cite>config.js</cite> and take</p>
+<blockquote>
+<div><ul class="simple">
+<li>the rpc connection settings</li>
+<li>the memo decoding private key in wif format</li>
+<li>the account ID to monitor</li>
+<li>the last operation that has been logged successfully in your backed in case
+of ungraceful shutdown</li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="python-exchange.html">Python Module for the DEX</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="python-exchange.html#usage">Usage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-exchange.html#example">Example</a></li>
-</ul>
-</li>
-</ul>
+</div></blockquote>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The last operation will show a maximum of 100 most recent
+transactions. If more have been missed due to a down-time. Manual
+intervention is necessary.</p>
+</div>
+<p>Furthermore, in Graphene, memos are usually encrypted using a distinct memo
+key. That way, exposing the memo private key will only expose transaction memos
+(for that key) and not compromise any funds. It is thus safe to store the memo
+private key in 3rd party services and scripts. The memo public key can be
+obtained from the account settings or via command line::</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">get_account</span> <span class="o">&lt;</span><span class="n">myaccount</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>in the cli wallet. The corresponding private key can be obtain from::</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">dump_private_keys</span>
+</pre></div>
+</div>
+<p>Note that the latter command exposes all private keys in clear-text wif.</p>
+</div>
+<div class="section" id="running">
+<h2>Running<a class="headerlink" href="#running" title="Permalink to this headline">¶</a></h2>
+<p>The script can be executed simply by</p>
+<div class="highlight-sh"><div class="highlight"><pre><span></span>npm start
+</pre></div>
+</div>
+<p>and will show all incoming transactions and corresponding (decoded) memo.</p>
 </div>
 </div>
 

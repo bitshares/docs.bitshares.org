@@ -7,3 +7,6 @@ Integration Tutorials
 
    general-network-setup
    secure-network-setup
+   preparing-cli-wallet-trading
+   python-monitor
+   nodejs-monitor
