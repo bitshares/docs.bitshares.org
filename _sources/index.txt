@@ -31,6 +31,7 @@ Recent Updates
 
 .. r!date +\%y/\%m/\%d
 
+* ``16/03/17`` :doc:`integration/traders`, :doc:`integration/libraries`
 * ``16/03/15`` :doc:`bitshares/investor/index`, :doc:`bitshares/investor/claim`, :doc:`bitshares/migration/legacy-blockchain`
 * ``16/03/02`` :doc:`bitshares/user/referal-program`
 * ``16/03/01`` :doc:`bitshares/tutorials/cli-wallet-usage`, :doc:`bitshares/tutorials/transfer-funds-cli`, :doc:`bitshares/user/voting`, :doc:`bitshares/tutorials/voting`

@@ -8,7 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
-    <title>Supporting Libraries</title>
+    <title>Howto prepare a CLI wallet for trading</title>
 
     <!-- CSS -->
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' rel='stylesheet'>
@@ -74,7 +74,7 @@
  <div class='title-area title-card' style='background-image: url(https://bitshares.org/images/bg.jpg)'>
    <div class='in'>
      <div class='headline'>
-       <h1>Supporting Libraries</h1>
+       <h1>Howto prepare a CLI wallet for trading</h1>
  
      </div>
    </div>
@@ -85,7 +85,7 @@
     
         <div class="prev">
          <div class="title">previous</div>
-         <span><a href="../businesses/index.html">Businesses</a></span>
+         <span><a href="../../api/network_node.html">Network Nodes API</a></span>
         </div>
         <div class="top">
          <div class="title">top</div>
@@ -93,7 +93,7 @@
         </div>
         <div class="next">
          <div class="title">next</div>
-         <span><a href="python.html">General Python Library</a></span>
+         <span><a href="../../api/wallet-api.html">Wallet API Calls</a></span>
         </div>
 
    </div>
@@ -122,19 +122,23 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Integration Guide</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../index.html#basic-knowledge">Basic Knowledge</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html#use-cases">Use-Cases</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="../exchanges/index.html">Exchanges, Bridges, and Gateways</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="../exchanges/index.html#integration-instructions">Integration Instructions</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="../exchanges/index.html#libraries">Libraries</a><ul class="current">
-<li class="toctree-l5 current"><a class="current reference internal" href="">Supporting Libraries</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../exchanges/index.html">Exchanges, Bridges, and Gateways</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/index.html">API Guide</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../merchants/index.html">Merchants</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/index.html">API Guide</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../traders/index.html">Traders</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../traders/index.html">Traders</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../traders/index.html#general">General</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../traders/index.html#public-api">Public API</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../traders/index.html#private-api">Private API</a><ul class="current">
+<li class="toctree-l5 current"><a class="current reference internal" href="">Howto prepare a CLI wallet for trading</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../api/wallet-api.html">Wallet API Calls</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../traders/index.html#libraries">Libraries</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/index.html">API Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../traders/python-binding.html">Python Interface</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../businesses/index.html">Businesses</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/index.html">API Guide</a></li>
 </ul>
@@ -175,22 +179,85 @@
   </div>
   <div class='content'>
    
-  <div class="section" id="supporting-libraries">
-<h1>Supporting Libraries<a class="headerlink" href="#supporting-libraries" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="python.html">General Python Library</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="python.html#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python.html#usage">Usage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python.html#examples">Examples</a></li>
+  <div class="section" id="howto-prepare-a-cli-wallet-for-trading">
+<h1>Howto prepare a CLI wallet for trading<a class="headerlink" href="#howto-prepare-a-cli-wallet-for-trading" title="Permalink to this headline">¶</a></h1>
+<p>The CLI wallet is used to interact with the blockchain. Everything that
+adds new data to the blockchain requires a signature from a private key.
+These signed transactions can be produced by the CLI wallet.</p>
+<div class="section" id="download-and-installation">
+<h2>Download and Installation<a class="headerlink" href="#download-and-installation" title="Permalink to this headline">¶</a></h2>
+<p>For most graphene-based blockchain projects, there should be a separated
+<code class="docutils literal"><span class="pre">cli-tools</span></code> download available for many platforms. If not, the
+CLI wallet can be compile manually via</p>
+<div class="highlight-sh"><div class="highlight"><pre><span></span>make cli_wallet
+</pre></div>
+</div>
+</div>
+<div class="section" id="executing-the-cli-wallet">
+<h2>Executing the cli-wallet<a class="headerlink" href="#executing-the-cli-wallet" title="Permalink to this headline">¶</a></h2>
+<p>All it takes for the cli-wallet to run is a trusted <strong>public API
+server</strong> to interface with the blockchain. These public API servers are
+run by businesses and <a class="reference internal" href="../../bitshares/tutorials/full-node-usage.html"><em>individuals</em></a>:</p>
+<p><strong>BitShares Public Full Nodes:</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">wss://bitshares.openledger.info/ws</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">wss://bitshares.dacplay.org:8089/ws</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">wss://dele-puppy.com/ws</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>We can let the wallet know which API server to use by:</p>
+<div class="highlight-sh"><div class="highlight"><pre><span></span>./programs/cli_wallet/cli_wallet --server-rpc-endpoint<span class="o">=</span>&lt;URL&gt; -H 127.0.0.1:8092 -r 127.0.0.1:8093
+</pre></div>
+</div>
+<p>The cli-wallet will open two RPC ports so that you can interface your
+application with it. You have the choices of</p>
+<ul class="simple">
+<li>websocket RPC via the <code class="docutils literal"><span class="pre">-r</span></code> parameter, and</li>
+<li>HTTP RPC via the <code class="docutils literal"><span class="pre">-H</span></code> parameter:</li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="python-exchange.html">Python Module for the DEX</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="python-exchange.html#usage">Usage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python-exchange.html#example">Example</a></li>
-</ul>
-</li>
-</ul>
+<p>The command above will open the cli-wallet and, unless you already have
+a local wallet, will ask you to provide a passphrase for your local
+wallet.  Once a wallet has been created (default wallet file is
+<code class="docutils literal"><span class="pre">wallet.json</span></code>), it will prompt with</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>locked &gt;&gt;&gt;
+</pre></div>
+</div>
+<p>In order for the wallet to be able to sign trading orders, you need to
+unlock it by providing the passphrase:</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The passphrase is given in clear text and is echoed by the
+wallet!</p>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span></span>locked &gt;&gt;&gt; unlock &quot;supersecretpassphrase&quot;
+null
+unlocked &gt;&gt;&gt;
+</pre></div>
+</div>
+<p>After this point, you can issue <a class="reference internal" href="../../api/wallet-api.html"><em>any command available to the
+cli-wallet</em></a> or construct your <a class="reference internal" href="../../bitshares/tutorials/construct-transaction.html"><em>own
+transaction manually</em></a>.</p>
+<p>You can get more detailed information either by pressing <cite>Tab</cite>, twice,
+or by issuing <code class="docutils literal"><span class="pre">help</span></code>.
+Detailed explanations for most calls are available via</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span>unlocked &gt;&gt; gethelp &lt;command&gt;
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Many calls have a obligatory <code class="docutils literal"><span class="pre">broadcast</span></code>-flag as last
+argument. If this flag is <code class="docutils literal"><span class="pre">False</span></code>, the wallet will construct
+and sign, but <strong>not</strong> broadcast the transaction. This can be
+very useful for a cold storage setup or to verify
+transactions.</p>
+</div>
 </div>
 </div>
 

@@ -5,4 +5,4 @@ Supporting Libraries
 .. toctree::
 
    python
-   nodejs
+   python-exchange

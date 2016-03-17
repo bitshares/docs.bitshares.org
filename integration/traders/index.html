@@ -93,7 +93,7 @@
         </div>
         <div class="next">
          <div class="title">next</div>
-         <span><a href="../libraries/index.html">Supporting Libraries</a></span>
+         <span><a href="../../api/websocket.html">Websocket Calls &amp; Notifications</a></span>
         </div>
 
    </div>
@@ -127,6 +127,16 @@
 <li class="toctree-l3"><a class="reference internal" href="../merchants/index.html">Merchants</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/index.html">API Guide</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="">Traders</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#public-api">Public API</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../api/websocket.html">Websocket Calls &amp; Notifications</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../api/blockchain-api.html">Blockchain API</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#private-api">Private API</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../tutorials/preparing-cli-wallet-trading.html">Howto prepare a CLI wallet for trading</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../api/wallet-api.html">Wallet API Calls</a></li>
+</ul>
+</li>
 <li class="toctree-l4"><a class="reference internal" href="#libraries">Libraries</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="../libraries/index.html">Supporting Libraries</a></li>
 </ul>
@@ -134,7 +144,6 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/index.html">API Guide</a></li>
-<li class="toctree-l3"><a class="reference internal" href="python-binding.html">Python Interface</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../businesses/index.html">Businesses</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/index.html">API Guide</a></li>
 </ul>
@@ -177,25 +186,115 @@
    
   <div class="section" id="traders">
 <h1>Traders<a class="headerlink" href="#traders" title="Permalink to this headline">¶</a></h1>
+<p>Blockchain-based decentralized exchanged (DEX) are slightly different to
+centralized exchanges and as a consequence, dealing with the DEX
+programmatically via APIs differs from centralized approaches as well.
+However, our developers have put quite some efforts into making the DEX
+as easy to use as their centralized counterparties and offer an API to
+the <strong>public exchange data</strong> that is very similar. However, <strong>private
+exchange APIs</strong> are different due to the fact that no entity except
+yourself can access your funds. For this reason, trading in the DEX
+requires that you have the private key to your account installed in an
+application that can construct and sign the corresponding transactions
+for you. One of these applications is the <a class="reference internal" href="../apps/cliwallet.html"><em>CLI Wallet</em></a>
+which, after installation and configuration, offers a <strong>your own private
+API</strong>.</p>
 <p>For exchanges we recommend to also read <a class="reference internal" href="../what-is-different.html"><em>What is Different in BitShares</em></a> and
 <a class="reference internal" href="../often-used-calls.html"><em>Often used API Calls</em></a>.</p>
+<div class="section" id="public-api">
+<h2>Public API<a class="headerlink" href="#public-api" title="Permalink to this headline">¶</a></h2>
+<p>The best way to get public data on markets is via websocket connection
+to a public full-node which provides traders with</p>
+<ul class="simple">
+<li>a ticker</li>
+<li>order books</li>
+<li>trade history</li>
+<li>and more.</li>
+</ul>
+<p><strong>BitShares Public Full Nodes:</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">wss://bitshares.openledger.info/ws</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">wss://bitshares.dacplay.org:8089/ws</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">wss://dele-puppy.com/ws</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>A detailed description of how to interface with Graphene-based
+blockchain (e.g. BitShares) and a list of available calls can be found
+here:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api/websocket.html">Websocket Calls &amp; Notifications</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api/websocket.html#prerequisits">Prerequisits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/websocket.html#call-format">Call Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/websocket.html#requesting-api-access">Requesting API access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/websocket.html#database-notifications">Database Notifications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/websocket.html#example-session">Example Session</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/blockchain-api.html">Blockchain API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api/database.html">Database API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/history.html">Account History API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/crypto.html">Crypto API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/network_broadcast.html">Network Broadcast API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/network_node.html">Network Nodes API</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="private-api">
+<h2>Private API<a class="headerlink" href="#private-api" title="Permalink to this headline">¶</a></h2>
+<p>As briefly mentioned above, trading in the DEX programmatically requires
+that you run your own <a class="reference internal" href="../apps/cliwallet.html"><em>CLI Wallet</em></a>. The following tutorials
+gives a brief introduction on how to use the CLI wallet and configure it
+properly so that it can be used as a <strong>private API server</strong>:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/preparing-cli-wallet-trading.html">Howto prepare a CLI wallet for trading</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/preparing-cli-wallet-trading.html#download-and-installation">Download and Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/preparing-cli-wallet-trading.html#executing-the-cli-wallet">Executing the cli-wallet</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>After installation and configuration of the private API, we can use RPC
+to create orders, cancel orders, create and adjust call orders, and
+more.  The CLI wallet offers a wide range of calls that can be used to
+mange your account and trade in the DEX:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api/wallet-api.html">Wallet API Calls</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api/wallet-api.html#general-calls">General Calls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/wallet-api.html#wallet-calls">Wallet Calls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/wallet-api.html#account-calls">Account Calls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/wallet-api.html#trading-calls">Trading Calls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/wallet-api.html#asset-calls">Asset Calls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/wallet-api.html#governance">Governance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/wallet-api.html#privacy-mode">Privacy Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/wallet-api.html#blockchain-inspection">Blockchain Inspection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/wallet-api.html#transaction-builder">Transaction Builder</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
 <div class="section" id="libraries">
 <h2>Libraries<a class="headerlink" href="#libraries" title="Permalink to this headline">¶</a></h2>
+<p>Libraries have been developed that simply the interaction with both, the
+full node and the CLI wallet and make interactions with the blockchain
+and the DEX very easy:</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../libraries/index.html">Supporting Libraries</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../libraries/python.html">Python Example</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../libraries/python.html#installation">Installation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../libraries/python.html#configuration">Configuration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../libraries/python.html#running">Running</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../libraries/nodejs.html">NodeJS Example</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../libraries/nodejs.html#installation">Installation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../libraries/nodejs.html#configuration">Configuration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../libraries/nodejs.html#running">Running</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/python.html">General Python Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../libraries/python-exchange.html">Python Module for the DEX</a></li>
 </ul>
 </li>
 </ul>
