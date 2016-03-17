@@ -1,14 +1,17 @@
-****************
-Python Interface
-****************
+*************************
+Python Module for the DEX
+*************************
 
 To simplify automated trading, we developed a Python Module that close
 re-assembles the trading API of `Poloniex_`.
 
-Further details can be found in the `technical documentation`_.
-
 .. _Poloniex: http://poloniex.com
-.. _technical documentation: http://python-graphenelib.readthedocs.org/en/latest/exchange.html
+
+Usage
+#####
+
+* `Technical documentation: <http://python-graphenelib.readthedocs.org/en/latest/exchange.html>`_
+* `Youtube - Live Coding Sessions <https://bitsharestalk.org/index.php/topic,21816.new.html#new>`_
 
 Example
 #######

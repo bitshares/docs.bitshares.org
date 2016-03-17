@@ -102,3 +102,16 @@ them:
         :alt: Issue shares
         :width: 350px
         :align: center
+
+The asset creation fee
+######################
+
+The asset creation fee depends on the length of your symbol. 3 Character
+Symbols are the shortest and are rather expensive while symbols with 5
+or more characters are significantly cheaper.
+
+50% of the asset creation fee are used to pre-fill the assets fee pool.
+From the other 50%, 20% go to the network and 80% go to the referral
+program. This means, that if you are a life-time member, you get back
+40% of the asset creation fee after the vesting period (currently 90
+days).
