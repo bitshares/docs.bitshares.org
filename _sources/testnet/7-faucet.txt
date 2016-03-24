@@ -101,6 +101,16 @@ We generate our databases with:
     rake db:create; rake db:migrate; rake db:seed
     RAILS_ENV=production bundle exec rake db:create db:schema:load
 
+Database Settings
+*****************
+
+We also need to add an entry to the database so that page loads and
+referrals work properly:
+
+1. Go to ``/www/current``
+2. execute: ``rails db``, a mysql console will open
+3. Execute: ``insert into widgets set allowed_domains='testnet.bitshares.eu';``  (replace the domain with your domain)
+
 Mina deployment
 ***************
 

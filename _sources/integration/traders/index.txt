@@ -6,7 +6,7 @@ Blockchain-based decentralized exchanged (DEX) are slightly different to
 centralized exchanges and as a consequence, dealing with the DEX
 programmatically via APIs differs from centralized approaches as well.
 However, our developers have put quite some efforts into making the DEX
-as easy to use as their centralized counterparties and offer an API to
+as easy to use as their centralized counterparts and offer an API to
 the **public exchange data** that is very similar. However, **private
 exchange APIs** are different due to the fact that no entity except
 yourself can access your funds. For this reason, trading in the DEX

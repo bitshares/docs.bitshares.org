@@ -141,6 +141,7 @@
 <li class="toctree-l5"><a class="reference internal" href="#faucet">Faucet</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#rails-api">Rails API</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#database-access">Database Access</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#database-settings">Database Settings</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#mina-deployment">Mina deployment</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#update-wallet">Update wallet</a></li>
 </ul>
@@ -265,6 +266,16 @@ need to provide it here.</p>
 <span class="nv">RAILS_ENV</span><span class="o">=</span>production bundle <span class="nb">exec</span> rake db:create db:schema:load
 </pre></div>
 </div>
+</div>
+<div class="section" id="database-settings">
+<h3>Database Settings<a class="headerlink" href="#database-settings" title="Permalink to this headline">¶</a></h3>
+<p>We also need to add an entry to the database so that page loads and
+referrals work properly:</p>
+<ol class="arabic simple">
+<li>Go to <code class="docutils literal"><span class="pre">/www/current</span></code></li>
+<li>execute: <code class="docutils literal"><span class="pre">rails</span> <span class="pre">db</span></code>, a mysql console will open</li>
+<li>Execute: <code class="docutils literal"><span class="pre">insert</span> <span class="pre">into</span> <span class="pre">widgets</span> <span class="pre">set</span> <span class="pre">allowed_domains='testnet.bitshares.eu';</span></code>  (replace the domain with your domain)</li>
+</ol>
 </div>
 <div class="section" id="mina-deployment">
 <h3>Mina deployment<a class="headerlink" href="#mina-deployment" title="Permalink to this headline">¶</a></h3>
