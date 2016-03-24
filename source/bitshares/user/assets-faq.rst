@@ -77,8 +77,8 @@ fees can be payed in the native UIA instead of BTS.
           A user, thus, may pay a premium or spare funds by paying in
           BTS.
 
-.. warning:: Make sure your core exchange rate is higher than the higest
-             bid, otherwise, people will buy your token from the market
+.. warning:: Make sure your core exchange rate is higher than the lowest
+             ask, otherwise, people will buy your token from the market
              and drain your fee pool via implicit abitrage.
 
 It is the task of the issuer to keep the fee pool funded and the core
