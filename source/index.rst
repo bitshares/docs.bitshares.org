@@ -26,12 +26,17 @@ location of relevant information.
 .. _Cryptonomex: http://cryptonomex.com
 .. _Graphene: https://github.com/cryptonomex/graphene
 
+If you are hear to find out more about **BitShares** and want to get
+started right away, we recommend that you take a look at the
+:doc:`Getting Started <bitshares/user/first-steps-users>` guide!
+
 Recent Updates
 ##############
 
 .. r!date +\%y/\%m/\%d
 
-* ``16/03/17`` :doc:`integration/traders`, :doc:`integration/libraries`
+* ``16/04/07`` :doc:`Getting Started <bitshares/user/first-steps-users>`
+* ``16/03/17`` :doc:`integration/traders/index`, :doc:`integration/libraries/index`
 * ``16/03/15`` :doc:`bitshares/investor/index`, :doc:`bitshares/investor/claim`, :doc:`bitshares/migration/legacy-blockchain`
 * ``16/03/02`` :doc:`bitshares/user/referal-program`
 * ``16/03/01`` :doc:`bitshares/tutorials/cli-wallet-usage`, :doc:`bitshares/tutorials/transfer-funds-cli`, :doc:`bitshares/user/voting`, :doc:`bitshares/tutorials/voting`
