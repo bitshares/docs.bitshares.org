@@ -11,3 +11,4 @@ users concerns about application and network security serious.
    security-permissions
    security-brainkey
    security-cold
+   recover-from-brainkey

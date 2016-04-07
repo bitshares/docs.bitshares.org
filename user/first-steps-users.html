@@ -151,15 +151,19 @@
 <p>This guide gives a quick introduction of how to use BitShares as an end-user.</p>
 <div class="section" id="learn-about-bitshares">
 <h2>Learn about BitShares<a class="headerlink" href="#learn-about-bitshares" title="Permalink to this headline">¶</a></h2>
-<p>BitShares is different from anything you have experienced yet and as such, a
-user should know about risks and opportunities.
-<a class="reference internal" href="you-should-know.html"><em>Read more ...</em></a>.</p>
+<p>BitShares is different from anything you have experienced yet and as
+such, a user should know about advantages, risks, and opportunities. As
+a starter, we highly recommend to read through the
+<a class="reference internal" href="you-should-know.html"><em>Things you should know</em></a> to get a first impression of what BitShares is
+and how it is different to existing systems.</p>
 </div>
-<div class="section" id="choose-your-wallet">
-<h2>Choose your wallet<a class="headerlink" href="#choose-your-wallet" title="Permalink to this headline">¶</a></h2>
-<p>To interact with the BitShares ecosystem, you can either</p>
+<div class="section" id="choose-your-client">
+<h2>Choose your Client<a class="headerlink" href="#choose-your-client" title="Permalink to this headline">¶</a></h2>
+<p>Several ways existing to enter the BitShares network that focus on
+different aspects. To actually interact with the BitShares ecosystem,
+you can either</p>
 <ul class="simple">
-<li><a class="reference external" href="https://github.com/BitShares/BitShares-2/releases/latest">download the official Light Wallet</a></li>
+<li><a class="reference external" href="http://bitshares.org/download/">download the Official Light Client</a></li>
 <li>or access the network in the browsers via one of our partners:</li>
 </ul>
 <blockquote>
@@ -171,82 +175,135 @@ user should know about risks and opportunities.
 <li><em>more to come</em></li>
 </ul>
 </div></blockquote>
+<p>All of these solutions have one thing in common: <strong>You have sole control
+of your accounts and funds</strong> and they are created on your computer
+(within the light-client or the browser). Hence, you will only be able
+to access your account on the computer that you have used to register
+and create your account, unless you export your wallet and import it
+somewhere else.</p>
+</div>
+<div class="section" id="accounts-wallets-keys-terminology">
+<h2>Accounts, Wallets, Keys: Terminology!<a class="headerlink" href="#accounts-wallets-keys-terminology" title="Permalink to this headline">¶</a></h2>
+<p>Most clients distinguish between accounts from wallets and all of they
+use keys to access funds. Let&#8217;s quickly clarify the terms here:</p>
+<ul class="simple">
+<li><strong>Keys</strong>: Keys refer to the cryptography used to secure access to your
+account and funds. It is of importance to prevent others from gaining
+access to these. This is why you have to provide a passphrase that is
+used to store the keys in an encrypted way.</li>
+<li><strong>Accounts</strong>: Each user has at least one account that can be used to
+interact with the blockchain. In the end, this can be seen as a single
+banking account with an individual balance, transaction history, etc.
+Since these accounts are registered on the blockchain and are open to
+the public, we recommend to pick a pseudonym to achieve some privacy.
+The advantage of using account names is that people can identify you
+by using a readable and memorable word instead of cryptographic
+addresses.</li>
+<li><strong>Wallet</strong>: Since users can (if they have a lifetime membership)
+register multiple accounts in parallel, all of them are stored in a
+single wallet. Hence, a wallet can carry many accounts. Furthermore,
+users can create multiple wallets to organize their accounts properly.</li>
+</ul>
 </div>
 <div class="section" id="create-an-account">
-<h2>Create an account<a class="headerlink" href="#create-an-account" title="Permalink to this headline">¶</a></h2>
-<p>In order to use BitShares, you will need to register an account.  All you need
-to provide is</p>
-<ul class="simple">
-<li>an account name</li>
-<li>a password</li>
-</ul>
-<p>The identicon at the top cn be used to verify your account name to third
-parties. It is derived from your acocunt name and gives a second verification
+<h2>Create an Account<a class="headerlink" href="#create-an-account" title="Permalink to this headline">¶</a></h2>
+<p>In order to use BitShares, you will need to register an account. All you need
+to provide is an account name and a password to secure your wallet:</p>
+<p>The <em>identicon</em> at the top can be used to verify your account name to third
+parties. It is derived from your account name and gives a second verification
 factor. And this is how you register your account:</p>
 <a class="reference internal image-reference" href="../_images/create-account2.png"><img alt="Create new account" class="align-center" src="../_images/create-account2.png" style="width: 350px;" /></a>
-<p>Note that, in contrast to any other platform you have ever used:
-<strong>Creating an account at one of our partners will make your account available at
-all the other partners as well.</strong>
-Hence, your account name can be seen similar to a mail address in such that it
-is <strong>unique</strong> and every participant in the BitShares network can interact with
-you independent of the actual partner providing the wallet.</p>
+<p>In contrast to any other platform you have ever used: <strong>Creating an
+account at one of our partners will make your account available at all
+the other partners as well.</strong>. Hence, your account name can be seen
+similar to a mail address in such that it is <strong>unique</strong> and every
+participant in the BitShares network can interact with you independent
+of the actual partner providing the wallet.</p>
+<p>After creation of your account, you will see an <strong>Account</strong> link in the
+top navigation bar to browse to your account.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Whether you control an account or not can be seen from the
+account&#8217;s overview. If it states <strong>(Your Account)</strong>, you do
+have the requird keys installed in your wallet to access its
+funds. Otherwise, you can only view the account but cannot
+transact from it!</p>
+<a class="last reference internal image-reference" href="../_images/my-account1.png"><img alt="My Account" class="align-center" src="../_images/my-account1.png" style="width: 350px;" /></a>
+</div>
 </div>
 <div class="section" id="backup-your-account">
 <h2>Backup your account<a class="headerlink" href="#backup-your-account" title="Permalink to this headline">¶</a></h2>
 <p>Since you are the only individual that has access to your account and funds, it
-is <strong>your responsibility</strong> to make a secure backup of your registered account.
-We recommend to backup the so called <em>brain key</em> that allows you to regain
-access to your account and funds even if your wallet is destroy, deleted or
-corrupted. <a class="reference internal" href="security-brainkey.html"><em>Read more about how to make a backup</em></a>.</p>
+is <strong>your responsibility</strong> to make a secure backup of your registered account.</p>
+<p>Once you have registered your account, you can click the warning in the
+footer to directly enter the backup page of your wallet:</p>
+<ol class="arabic simple">
+<li>Click the <em>Backup required</em> link in the footer</li>
+</ol>
+<a class="reference internal image-reference" href="../_images/backup_required_footer1.png"><img alt="Create a backup" class="align-center" src="../_images/backup_required_footer1.png" style="width: 350px;" /></a>
+<ol class="arabic simple" start="2">
+<li>Click <strong>Create Backup</strong></li>
+<li>Click <strong>Download</strong> and store the file <strong>safely</strong>.
+Make sure to <strong>remember the passphrase</strong> you provided when you
+created your wallet (above) as the downloaded file is encrypted with
+it.</li>
+<li><em>(optionally but recommended)</em> Note the <code class="docutils literal"><span class="pre">xxxxxx</span> <span class="pre">*</span> <span class="pre">SHA1</span></code> checksum to verify the backup</li>
+</ol>
 </div>
 <div class="section" id="fund-your-account">
 <h2>Fund your account<a class="headerlink" href="#fund-your-account" title="Permalink to this headline">¶</a></h2>
 <p>In order to fund your account you have two options:</p>
-<ul>
-<li><dl class="first docutils">
-<dt>Fund from <strong>outside</strong>: Ask a partner or exchange to send funds to you. To do</dt>
-<dd><p class="first last">so, you will only need to provide him your account
-name.</p>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>Fund from <strong>inside</strong>: By visiting your deposit/withdraw page in your account&#8217;s</dt>
-<dd><p class="first last">navigation, you can use one of our partners to move over
-existing funds into your BitShares account.</p>
-</dd>
-</dl>
-</li>
+<ul class="simple">
+<li><strong>Transfers</strong>: Ask a partner or exchange to send funds to you.
+To do so, you will only need to <strong>provide them with your account name</strong>.</li>
+<li><strong>Deposits</strong>: By visiting your <strong>deposit/withdraw</strong> page in your
+account&#8217;s navigation, you can use one of our partners to move over
+existing funds into your BitShares account.</li>
 </ul>
 <p>In order to understand the meanings of different assets, we recommend you to
 read through our <a class="reference internal" href="assets.html"><em>assets page</em></a>.</p>
 </div>
-<div class="section" id="move-funds">
-<h2>Move funds<a class="headerlink" href="#move-funds" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="commonly-used-features">
+<h2>Commonly used Features<a class="headerlink" href="#commonly-used-features" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="moving-funds">
+<h3>Moving Funds<a class="headerlink" href="#moving-funds" title="Permalink to this headline">¶</a></h3>
 <p>Using the <em>transfer</em> tool available from the main menu bar allows to move funds
 from your account to an arbitrary other account. If you enter the transfer page,
 your account name will be pre-filled into the source field. You will need to
-provide the <strong>recipient&#8217;s</strong> account name, the amount and asset to transfer and
+provide the <strong>recipient&#8217;s account name</strong>, the amount and asset to transfer and
 can optionally add a memo to help the recipient to identify your transfer (the
 memo is encrypted and only you and the recipient can read it).</p>
-<a class="reference internal image-reference" href="../_images/transfer1.png"><img alt="Create new account" class="align-center" src="../_images/transfer1.png" style="width: 350px;" /></a>
+<a class="reference internal image-reference" href="../_images/transfer1.png"><img alt="Transfer assets" class="align-center" src="../_images/transfer1.png" style="width: 550px;" /></a>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">On the BitShares blockchain, people never need to deal with
+<em>addresses</em> or <em>public keys</em> but can instead use account
+names. Your account name becomes the <em>email address</em> for your
+funds.</p>
 </div>
-<div class="section" id="trade-on-the-blockchain">
-<h2>Trade on the blockchain<a class="headerlink" href="#trade-on-the-blockchain" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="trading-in-the-decentralized-exchange-dex">
+<h3>Trading in the Decentralized Exchange (DEX)<a class="headerlink" href="#trading-in-the-decentralized-exchange-dex" title="Permalink to this headline">¶</a></h3>
 <p>To trade your assets into other assets you can use the built-in decentralized
-exchange (often referred to as * the DEX*). It is available using the <strong>Trade</strong>
+exchange (often referred to as <em>the DEX</em>). It is available using the <strong>Trade</strong>
 menu item and shows a list of commonly used markets.</p>
-<a class="reference internal image-reference" href="../_images/dex-main1.png"><img alt="Create new account" class="align-center" src="../_images/dex-main1.png" style="width: 550px;" /></a>
+<a class="reference internal image-reference" href="../_images/dex-main1.png"><img alt="List of Markets" class="align-center" src="../_images/dex-main1.png" style="width: 550px;" /></a>
 <p>By clicking any of the rows, you enter a particular market in which you can
 participate by selling or buying from the market or by placing a orders into the
 order books at <strong>your</strong> price.</p>
-<a class="reference internal image-reference" href="../_images/dex-trade1.png"><img alt="Create new account" class="align-center" src="../_images/dex-trade1.png" style="width: 550px;" /></a>
+<a class="reference internal image-reference" href="../_images/dex-trade1.png"><img alt="Trading view" class="align-center" src="../_images/dex-trade1.png" style="width: 550px;" /></a>
 <p>Once an order is filled, the corresponding asset will appear in your balance
 immediately. In BitShares, clearing and settlement are performed
 instantaneously.</p>
+<a class="reference internal image-reference" href="../_images/buy-sell-dialog1.png"><img alt="Buy/Sell dialog" class="align-center" src="../_images/buy-sell-dialog1.png" style="width: 550px;" /></a>
+<p>Read more:</p>
+<ul class="simple">
+<li><a class="reference internal" href="dex.html"><em>Decentralized Exchange</em></a></li>
+<li><a class="reference internal" href="dex-trading.html"><em>Trading</em></a></li>
+</ul>
 </div>
-<div class="section" id="explore-the-blockchain">
-<h2>Explore the blockchain<a class="headerlink" href="#explore-the-blockchain" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="exploring-the-blockchain">
+<h3>Exploring the Blockchain<a class="headerlink" href="#exploring-the-blockchain" title="Permalink to this headline">¶</a></h3>
 <p>The blockchain and business can be investigated using the built-in explorer from
 the main navigation bar. There you can take a closer look at:</p>
 <ul class="simple">
@@ -258,7 +315,8 @@ the main navigation bar. There you can take a closer look at:</p>
 <li>markets, and</li>
 <li>the fee schedule.</li>
 </ul>
-<a class="reference internal image-reference" href="../_images/explorer-main1.png"><img alt="Create new account" class="align-center" src="../_images/explorer-main1.png" style="width: 550px;" /></a>
+<a class="reference internal image-reference" href="../_images/explorer-main1.png"><img alt="Main explorer" class="align-center" src="../_images/explorer-main1.png" style="width: 350px;" /></a>
+</div>
 </div>
 </div>
 
