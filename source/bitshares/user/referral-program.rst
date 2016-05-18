@@ -10,8 +10,7 @@ opt-out by upgrading their account to a :doc:`Life-Time Member (LTM)
 fees based on child accounts linked to ours via referral.
 
 BitShares has several different kinds of accounts: 
-* Basic Account, 
-* Annual Member, and 
+* Basic Account, and
 * Lifetime Member.
 
 **Basic Accounts** are free, but do not qualify for the referral
@@ -22,6 +21,10 @@ every fee they pay**. They also qualify for **80% of the fees paid by
 Basic Accounts they refer** to the network. These 80% can be split among
 the registrar, that actually registers the accounts, and an affiliate
 referrer, that brought in the new user.
+
+.. note:: In Q1/2016, the *anual membership* has been removed from the
+          code base and no longer exists. References to this kind of
+          memberships can be safely ignored.
 
 The referral fees are controlled by the blockchain and are distributed like this:
 
@@ -44,7 +47,7 @@ life-time member account, first! Then you can bring in new users by
 
 * running your own faucet and actually register new accounts (will give you
   80% of all the fees of those minus a fraction that you decide to give
-  to affiliates (the referers)
+  to affiliates (the referrers)
 * referring people to a hosted wallet that offers you a cut of the fees
   as an affiliate.
 
@@ -66,25 +69,11 @@ life-time member account, first! Then you can bring in new users by
 Examples
 ########
 
-When a user pays a $20 annual subscription fee to become an Annual
-Member, $10 is paid to their Referrer, $6 is paid to the nearest
-Lifetime Member, and $4 is paid to the Network. The Annual Member
-becomes its own Referrer for one year. In one year, the renewal fee is
-divided in a similar manner to the original annual subscription.
-
 When an Basic Account pays $100 to become a Lifetime Member, $50 is paid
 to their Referrer, $30 is paid to the nearest Lifetime Member, and $20
 is paid to the Network. After this point the Lifetime Member becomes its
 own referrer and nearest Lifetime Member and its prior Referrers no
 longer get any revenue from this user.
-
-If an account’s Referrer is an Annual Member whose subscription has
-expired, then the Referrer fee goes to the nearest Lifetime Member.
-
-If an Annual Member decides to upgrade to a Lifetime Member then $50
-goes to his Referrer, $30 to the nearest Lifetime Member and $20 goes to
-the Network. Annual Members do not qualify for a 50% Cashback Referral
-on the upgrade fee.
 
 Terms & Conditions
 ##################
