@@ -203,7 +203,7 @@
 
 <dl class="type">
 <dt id="_CPPv2N8graphene5chain29asset_object_multi_index_typeE">
-<span id="graphene::chain::asset_object_multi_index_type"></span><span class="target" id="project0namespacegraphene_1_1chain_1a11daafac7b9958026e1155673d94ec0b"></span><em class="property">typedef </em>multi_index_container&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain12asset_objectE" title="graphene::chain::asset_object">asset_object</a>, indexed_by&lt;ordered_unique&lt;tag&lt;by_id&gt;, member&lt;object, object_id_type, &amp;object::id&gt;&gt;, ordered_unique&lt;tag&lt;by_symbol&gt;, member&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain12asset_objectE" title="graphene::chain::asset_object">asset_object</a>, string, &amp;asset_object::symbol&gt;&gt;, ordered_non_unique&lt;tag&lt;by_type&gt;, const_mem_fun&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain12asset_objectE" title="graphene::chain::asset_object">asset_object</a>, bool, &amp;asset_object::is_market_issued&gt;&gt;&gt;&gt; <code class="descname">asset_object_multi_index_type</code><a class="headerlink" href="#_CPPv2N8graphene5chain29asset_object_multi_index_typeE" title="Permalink to this definition">¶</a></dt>
+<span id="graphene::chain::asset_object_multi_index_type"></span><span class="target" id="project0namespacegraphene_1_1chain_1a6f3fc4da0d9e28f25c54a97c81bdbe8a"></span><em class="property">typedef </em>multi_index_container&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain12asset_objectE" title="graphene::chain::asset_object">asset_object</a>, indexed_by&lt;ordered_unique&lt;tag&lt;by_id&gt;, member&lt;object, object_id_type, &amp;object::id&gt;&gt;, ordered_unique&lt;tag&lt;by_symbol&gt;, member&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain12asset_objectE" title="graphene::chain::asset_object">asset_object</a>, string, &amp;asset_object::symbol&gt;&gt;, ordered_unique&lt;tag&lt;by_type&gt;, composite_key&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain12asset_objectE" title="graphene::chain::asset_object">asset_object</a>, const_mem_fun&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain12asset_objectE" title="graphene::chain::asset_object">asset_object</a>, bool, &amp;asset_object::is_market_issued&gt;, member&lt;object, object_id_type, &amp;object::id&gt;&gt;&gt;&gt;&gt; <code class="descname">asset_object_multi_index_type</code><a class="headerlink" href="#_CPPv2N8graphene5chain29asset_object_multi_index_typeE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="type">
@@ -219,6 +219,16 @@
 <dl class="type">
 <dt>
 <span class="target" id="project0namespacegraphene_1_1chain_1a6c51205bf5f46c94f5f3f4dd689001a0"></span><em class="property">typedef </em><code class="descname">using graphene::chain::balance_index = typedef generic_index&lt;balance_object, balance_multi_index_type&gt;</code></dt>
+<dd></dd></dl>
+
+<dl class="type">
+<dt id="_CPPv2N8graphene5chain24buyback_multi_index_typeE">
+<span id="graphene::chain::buyback_multi_index_type"></span><span class="target" id="project0namespacegraphene_1_1chain_1a932a9aa2b03888d94ef585a1d2104367"></span><em class="property">typedef </em>multi_index_container&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain14buyback_objectE" title="graphene::chain::buyback_object">buyback_object</a>, indexed_by&lt;ordered_unique&lt;tag&lt;by_id&gt;, member&lt;object, object_id_type, &amp;object::id&gt;&gt;, ordered_unique&lt;tag&lt;by_asset&gt;, member&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain14buyback_objectE" title="graphene::chain::buyback_object">buyback_object</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain13asset_id_typeE" title="graphene::chain::asset_id_type">asset_id_type</a>, &amp;buyback_object::asset_to_buy&gt;&gt;&gt;&gt; <code class="descname">buyback_multi_index_type</code><a class="headerlink" href="#_CPPv2N8graphene5chain24buyback_multi_index_typeE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="type">
+<dt id="_CPPv2N8graphene5chain13buyback_indexE">
+<span id="graphene::chain::buyback_index"></span><span class="target" id="project0namespacegraphene_1_1chain_1a7b63693dcd3b636ec4eee6e5c3578437"></span><em class="property">typedef </em>generic_index&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain14buyback_objectE" title="graphene::chain::buyback_object">buyback_object</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain24buyback_multi_index_typeE" title="graphene::chain::buyback_multi_index_type">buyback_multi_index_type</a>&gt; <code class="descname">buyback_index</code><a class="headerlink" href="#_CPPv2N8graphene5chain13buyback_indexE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="type">
@@ -248,7 +258,7 @@
 
 <dl class="type">
 <dt id="_CPPv2N8graphene5chain28limit_order_multi_index_typeE">
-<span id="graphene::chain::limit_order_multi_index_type"></span><span class="target" id="project0namespacegraphene_1_1chain_1a5ae1f33189249dcfa50cd579bb930df7"></span><em class="property">typedef </em>multi_index_container&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain18limit_order_objectE" title="graphene::chain::limit_order_object">limit_order_object</a>, indexed_by&lt;ordered_unique&lt;tag&lt;by_id&gt;, member&lt;object, object_id_type, &amp;object::id&gt;&gt;, ordered_non_unique&lt;tag&lt;by_expiration&gt;, member&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain18limit_order_objectE" title="graphene::chain::limit_order_object">limit_order_object</a>, time_point_sec, &amp;limit_order_object::expiration&gt;&gt;, ordered_unique&lt;tag&lt;by_price&gt;, composite_key&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain18limit_order_objectE" title="graphene::chain::limit_order_object">limit_order_object</a>, member&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain18limit_order_objectE" title="graphene::chain::limit_order_object">limit_order_object</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain5priceE" title="graphene::chain::price">price</a>, &amp;limit_order_object::sell_price&gt;, member&lt;object, object_id_type, &amp;object::id&gt;&gt;, composite_key_compare&lt;std::greater&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain5priceE" title="graphene::chain::price">price</a>&gt;, std::less&lt;object_id_type&gt;&gt;&gt;, ordered_non_unique&lt;tag&lt;by_account&gt;, member&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain18limit_order_objectE" title="graphene::chain::limit_order_object">limit_order_object</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain15account_id_typeE" title="graphene::chain::account_id_type">account_id_type</a>, &amp;limit_order_object::seller&gt;&gt;&gt;&gt; <code class="descname">limit_order_multi_index_type</code><a class="headerlink" href="#_CPPv2N8graphene5chain28limit_order_multi_index_typeE" title="Permalink to this definition">¶</a></dt>
+<span id="graphene::chain::limit_order_multi_index_type"></span><span class="target" id="project0namespacegraphene_1_1chain_1a275df13929af5fe5f5ce8060d2f79974"></span><em class="property">typedef </em>multi_index_container&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain18limit_order_objectE" title="graphene::chain::limit_order_object">limit_order_object</a>, indexed_by&lt;ordered_unique&lt;tag&lt;by_id&gt;, member&lt;object, object_id_type, &amp;object::id&gt;&gt;, ordered_unique&lt;tag&lt;by_expiration&gt;, composite_key&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain18limit_order_objectE" title="graphene::chain::limit_order_object">limit_order_object</a>, member&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain18limit_order_objectE" title="graphene::chain::limit_order_object">limit_order_object</a>, time_point_sec, &amp;limit_order_object::expiration&gt;, member&lt;object, object_id_type, &amp;object::id&gt;&gt;&gt;, ordered_unique&lt;tag&lt;by_price&gt;, composite_key&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain18limit_order_objectE" title="graphene::chain::limit_order_object">limit_order_object</a>, member&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain18limit_order_objectE" title="graphene::chain::limit_order_object">limit_order_object</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain5priceE" title="graphene::chain::price">price</a>, &amp;limit_order_object::sell_price&gt;, member&lt;object, object_id_type, &amp;object::id&gt;&gt;, composite_key_compare&lt;std::greater&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain5priceE" title="graphene::chain::price">price</a>&gt;, std::less&lt;object_id_type&gt;&gt;&gt;, ordered_unique&lt;tag&lt;by_account&gt;, composite_key&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain18limit_order_objectE" title="graphene::chain::limit_order_object">limit_order_object</a>, member&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain18limit_order_objectE" title="graphene::chain::limit_order_object">limit_order_object</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain15account_id_typeE" title="graphene::chain::account_id_type">account_id_type</a>, &amp;limit_order_object::seller&gt;, member&lt;object, object_id_type, &amp;object::id&gt;&gt;&gt;&gt;&gt; <code class="descname">limit_order_multi_index_type</code><a class="headerlink" href="#_CPPv2N8graphene5chain28limit_order_multi_index_typeE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="type">
@@ -263,7 +273,7 @@
 
 <dl class="type">
 <dt id="_CPPv2N8graphene5chain40force_settlement_object_multi_index_typeE">
-<span id="graphene::chain::force_settlement_object_multi_index_type"></span><span class="target" id="project0namespacegraphene_1_1chain_1a1b7c37dc69596378fd3454f834834381"></span><em class="property">typedef </em>multi_index_container&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain23force_settlement_objectE" title="graphene::chain::force_settlement_object">force_settlement_object</a>, indexed_by&lt;ordered_unique&lt;tag&lt;by_id&gt;, member&lt;object, object_id_type, &amp;object::id&gt;&gt;, ordered_non_unique&lt;tag&lt;by_account&gt;, member&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain23force_settlement_objectE" title="graphene::chain::force_settlement_object">force_settlement_object</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain15account_id_typeE" title="graphene::chain::account_id_type">account_id_type</a>, &amp;force_settlement_object::owner&gt;&gt;, ordered_non_unique&lt;tag&lt;by_expiration&gt;, composite_key&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain23force_settlement_objectE" title="graphene::chain::force_settlement_object">force_settlement_object</a>, const_mem_fun&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain23force_settlement_objectE" title="graphene::chain::force_settlement_object">force_settlement_object</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain13asset_id_typeE" title="graphene::chain::asset_id_type">asset_id_type</a>, &amp;force_settlement_object::settlement_asset_id&gt;, member&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain23force_settlement_objectE" title="graphene::chain::force_settlement_object">force_settlement_object</a>, time_point_sec, &amp;force_settlement_object::settlement_date&gt;&gt;&gt;&gt;&gt; <code class="descname">force_settlement_object_multi_index_type</code><a class="headerlink" href="#_CPPv2N8graphene5chain40force_settlement_object_multi_index_typeE" title="Permalink to this definition">¶</a></dt>
+<span id="graphene::chain::force_settlement_object_multi_index_type"></span><span class="target" id="project0namespacegraphene_1_1chain_1ab8e407c0dd1b68c111f9c852e0b90a7d"></span><em class="property">typedef </em>multi_index_container&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain23force_settlement_objectE" title="graphene::chain::force_settlement_object">force_settlement_object</a>, indexed_by&lt;ordered_unique&lt;tag&lt;by_id&gt;, member&lt;object, object_id_type, &amp;object::id&gt;&gt;, ordered_unique&lt;tag&lt;by_account&gt;, composite_key&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain23force_settlement_objectE" title="graphene::chain::force_settlement_object">force_settlement_object</a>, member&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain23force_settlement_objectE" title="graphene::chain::force_settlement_object">force_settlement_object</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain15account_id_typeE" title="graphene::chain::account_id_type">account_id_type</a>, &amp;force_settlement_object::owner&gt;, member&lt;object, object_id_type, &amp;object::id&gt;&gt;&gt;, ordered_unique&lt;tag&lt;by_expiration&gt;, composite_key&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain23force_settlement_objectE" title="graphene::chain::force_settlement_object">force_settlement_object</a>, const_mem_fun&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain23force_settlement_objectE" title="graphene::chain::force_settlement_object">force_settlement_object</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain13asset_id_typeE" title="graphene::chain::asset_id_type">asset_id_type</a>, &amp;force_settlement_object::settlement_asset_id&gt;, member&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain23force_settlement_objectE" title="graphene::chain::force_settlement_object">force_settlement_object</a>, time_point_sec, &amp;force_settlement_object::settlement_date&gt;, member&lt;object, object_id_type, &amp;object::id&gt;&gt;&gt;&gt;&gt; <code class="descname">force_settlement_object_multi_index_type</code><a class="headerlink" href="#_CPPv2N8graphene5chain40force_settlement_object_multi_index_typeE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="type">
@@ -274,6 +284,16 @@
 <dl class="type">
 <dt id="_CPPv2N8graphene5chain22force_settlement_indexE">
 <span id="graphene::chain::force_settlement_index"></span><span class="target" id="project0namespacegraphene_1_1chain_1a84985695f51d85932ea082806c7c11f3"></span><em class="property">typedef </em>generic_index&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain23force_settlement_objectE" title="graphene::chain::force_settlement_object">force_settlement_object</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain40force_settlement_object_multi_index_typeE" title="graphene::chain::force_settlement_object_multi_index_type">force_settlement_object_multi_index_type</a>&gt; <code class="descname">force_settlement_index</code><a class="headerlink" href="#_CPPv2N8graphene5chain22force_settlement_indexE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="type">
+<dt id="_CPPv2N8graphene5chain44account_transaction_history_multi_index_typeE">
+<span id="graphene::chain::account_transaction_history_multi_index_type"></span><span class="target" id="project0namespacegraphene_1_1chain_1aee9da73392258ae572cbce5f815a801e"></span><em class="property">typedef </em>multi_index_container&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain34account_transaction_history_objectE" title="graphene::chain::account_transaction_history_object">account_transaction_history_object</a>, indexed_by&lt;ordered_unique&lt;tag&lt;by_id&gt;, member&lt;object, object_id_type, &amp;object::id&gt;&gt;, ordered_unique&lt;tag&lt;by_seq&gt;, composite_key&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain34account_transaction_history_objectE" title="graphene::chain::account_transaction_history_object">account_transaction_history_object</a>, member&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain34account_transaction_history_objectE" title="graphene::chain::account_transaction_history_object">account_transaction_history_object</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain15account_id_typeE" title="graphene::chain::account_id_type">account_id_type</a>, &amp;account_transaction_history_object::account&gt;, member&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain34account_transaction_history_objectE" title="graphene::chain::account_transaction_history_object">account_transaction_history_object</a>, uint32_t, &amp;account_transaction_history_object::sequence&gt;&gt;&gt;, ordered_unique&lt;tag&lt;by_op&gt;, composite_key&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain34account_transaction_history_objectE" title="graphene::chain::account_transaction_history_object">account_transaction_history_object</a>, member&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain34account_transaction_history_objectE" title="graphene::chain::account_transaction_history_object">account_transaction_history_object</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain15account_id_typeE" title="graphene::chain::account_id_type">account_id_type</a>, &amp;account_transaction_history_object::account&gt;, member&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain34account_transaction_history_objectE" title="graphene::chain::account_transaction_history_object">account_transaction_history_object</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain25operation_history_id_typeE" title="graphene::chain::operation_history_id_type">operation_history_id_type</a>, &amp;account_transaction_history_object::operation_id&gt;&gt;&gt;&gt;&gt; <code class="descname">account_transaction_history_multi_index_type</code><a class="headerlink" href="#_CPPv2N8graphene5chain44account_transaction_history_multi_index_typeE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="type">
+<dt id="_CPPv2N8graphene5chain33account_transaction_history_indexE">
+<span id="graphene::chain::account_transaction_history_index"></span><span class="target" id="project0namespacegraphene_1_1chain_1a2f5ae5a61a0c45744eebd38df81927fc"></span><em class="property">typedef </em>generic_index&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain34account_transaction_history_objectE" title="graphene::chain::account_transaction_history_object">account_transaction_history_object</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain44account_transaction_history_multi_index_typeE" title="graphene::chain::account_transaction_history_multi_index_type">account_transaction_history_multi_index_type</a>&gt; <code class="descname">account_transaction_history_index</code><a class="headerlink" href="#_CPPv2N8graphene5chain33account_transaction_history_indexE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="type">
@@ -331,7 +351,7 @@
 
 <dl class="type">
 <dt id="_CPPv2N8graphene5chain9operationE">
-<span id="graphene::chain::operation"></span><span class="target" id="project0group__operations_1ga280c56226fcfe002cafd51d58fa433ec"></span><em class="property">typedef </em>fc::static_variant&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain18transfer_operationE" title="graphene::chain::transfer_operation">transfer_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain28limit_order_create_operationE" title="graphene::chain::limit_order_create_operation">limit_order_create_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain28limit_order_cancel_operationE" title="graphene::chain::limit_order_cancel_operation">limit_order_cancel_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain27call_order_update_operationE" title="graphene::chain::call_order_update_operation">call_order_update_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain20fill_order_operationE" title="graphene::chain::fill_order_operation">fill_order_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain24account_create_operationE" title="graphene::chain::account_create_operation">account_create_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain24account_update_operationE" title="graphene::chain::account_update_operation">account_update_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain27account_whitelist_operationE" title="graphene::chain::account_whitelist_operation">account_whitelist_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain25account_upgrade_operationE" title="graphene::chain::account_upgrade_operation">account_upgrade_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain26account_transfer_operationE" title="graphene::chain::account_transfer_operation">account_transfer_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain22asset_create_operationE" title="graphene::chain::asset_create_operation">asset_create_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain22asset_update_operationE" title="graphene::chain::asset_update_operation">asset_update_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain31asset_update_bitasset_operationE" title="graphene::chain::asset_update_bitasset_operation">asset_update_bitasset_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain37asset_update_feed_producers_operationE" title="graphene::chain::asset_update_feed_producers_operation">asset_update_feed_producers_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain21asset_issue_operationE" title="graphene::chain::asset_issue_operation">asset_issue_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain23asset_reserve_operationE" title="graphene::chain::asset_reserve_operation">asset_reserve_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain29asset_fund_fee_pool_operationE" title="graphene::chain::asset_fund_fee_pool_operation">asset_fund_fee_pool_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain22asset_settle_operationE" title="graphene::chain::asset_settle_operation">asset_settle_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain29asset_global_settle_operationE" title="graphene::chain::asset_global_settle_operation">asset_global_settle_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain28asset_publish_feed_operationE" title="graphene::chain::asset_publish_feed_operation">asset_publish_feed_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain24witness_create_operationE" title="graphene::chain::witness_create_operation">witness_create_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain24witness_update_operationE" title="graphene::chain::witness_update_operation">witness_update_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain25proposal_create_operationE" title="graphene::chain::proposal_create_operation">proposal_create_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain25proposal_update_operationE" title="graphene::chain::proposal_update_operation">proposal_update_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain25proposal_delete_operationE" title="graphene::chain::proposal_delete_operation">proposal_delete_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain36withdraw_permission_create_operationE" title="graphene::chain::withdraw_permission_create_operation">withdraw_permission_create_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain36withdraw_permission_update_operationE" title="graphene::chain::withdraw_permission_update_operation">withdraw_permission_update_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain35withdraw_permission_claim_operationE" title="graphene::chain::withdraw_permission_claim_operation">withdraw_permission_claim_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain36withdraw_permission_delete_operationE" title="graphene::chain::withdraw_permission_delete_operation">withdraw_permission_delete_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain33committee_member_create_operationE" title="graphene::chain::committee_member_create_operation">committee_member_create_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain33committee_member_update_operationE" title="graphene::chain::committee_member_update_operation">committee_member_update_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain51committee_member_update_global_parameters_operationE" title="graphene::chain::committee_member_update_global_parameters_operation">committee_member_update_global_parameters_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain32vesting_balance_create_operationE" title="graphene::chain::vesting_balance_create_operation">vesting_balance_create_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain34vesting_balance_withdraw_operationE" title="graphene::chain::vesting_balance_withdraw_operation">vesting_balance_withdraw_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain23worker_create_operationE" title="graphene::chain::worker_create_operation">worker_create_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain16custom_operationE" title="graphene::chain::custom_operation">custom_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain16assert_operationE" title="graphene::chain::assert_operation">assert_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain23balance_claim_operationE" title="graphene::chain::balance_claim_operation">balance_claim_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain27override_transfer_operationE" title="graphene::chain::override_transfer_operation">override_transfer_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain27transfer_to_blind_operationE" title="graphene::chain::transfer_to_blind_operation">transfer_to_blind_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain24blind_transfer_operationE" title="graphene::chain::blind_transfer_operation">blind_transfer_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain29transfer_from_blind_operationE" title="graphene::chain::transfer_from_blind_operation">transfer_from_blind_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain29asset_settle_cancel_operationE" title="graphene::chain::asset_settle_cancel_operation">asset_settle_cancel_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain26asset_claim_fees_operationE" title="graphene::chain::asset_claim_fees_operation">asset_claim_fees_operation</a>&gt; <code class="descname">operation</code><a class="headerlink" href="#_CPPv2N8graphene5chain9operationE" title="Permalink to this definition">¶</a></dt>
+<span id="graphene::chain::operation"></span><span class="target" id="project0group__operations_1ga8b0400e40715f7fd1608ab2dc3d6d401"></span><em class="property">typedef </em>fc::static_variant&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain18transfer_operationE" title="graphene::chain::transfer_operation">transfer_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain28limit_order_create_operationE" title="graphene::chain::limit_order_create_operation">limit_order_create_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain28limit_order_cancel_operationE" title="graphene::chain::limit_order_cancel_operation">limit_order_cancel_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain27call_order_update_operationE" title="graphene::chain::call_order_update_operation">call_order_update_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain20fill_order_operationE" title="graphene::chain::fill_order_operation">fill_order_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain24account_create_operationE" title="graphene::chain::account_create_operation">account_create_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain24account_update_operationE" title="graphene::chain::account_update_operation">account_update_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain27account_whitelist_operationE" title="graphene::chain::account_whitelist_operation">account_whitelist_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain25account_upgrade_operationE" title="graphene::chain::account_upgrade_operation">account_upgrade_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain26account_transfer_operationE" title="graphene::chain::account_transfer_operation">account_transfer_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain22asset_create_operationE" title="graphene::chain::asset_create_operation">asset_create_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain22asset_update_operationE" title="graphene::chain::asset_update_operation">asset_update_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain31asset_update_bitasset_operationE" title="graphene::chain::asset_update_bitasset_operation">asset_update_bitasset_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain37asset_update_feed_producers_operationE" title="graphene::chain::asset_update_feed_producers_operation">asset_update_feed_producers_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain21asset_issue_operationE" title="graphene::chain::asset_issue_operation">asset_issue_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain23asset_reserve_operationE" title="graphene::chain::asset_reserve_operation">asset_reserve_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain29asset_fund_fee_pool_operationE" title="graphene::chain::asset_fund_fee_pool_operation">asset_fund_fee_pool_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain22asset_settle_operationE" title="graphene::chain::asset_settle_operation">asset_settle_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain29asset_global_settle_operationE" title="graphene::chain::asset_global_settle_operation">asset_global_settle_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain28asset_publish_feed_operationE" title="graphene::chain::asset_publish_feed_operation">asset_publish_feed_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain24witness_create_operationE" title="graphene::chain::witness_create_operation">witness_create_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain24witness_update_operationE" title="graphene::chain::witness_update_operation">witness_update_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain25proposal_create_operationE" title="graphene::chain::proposal_create_operation">proposal_create_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain25proposal_update_operationE" title="graphene::chain::proposal_update_operation">proposal_update_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain25proposal_delete_operationE" title="graphene::chain::proposal_delete_operation">proposal_delete_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain36withdraw_permission_create_operationE" title="graphene::chain::withdraw_permission_create_operation">withdraw_permission_create_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain36withdraw_permission_update_operationE" title="graphene::chain::withdraw_permission_update_operation">withdraw_permission_update_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain35withdraw_permission_claim_operationE" title="graphene::chain::withdraw_permission_claim_operation">withdraw_permission_claim_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain36withdraw_permission_delete_operationE" title="graphene::chain::withdraw_permission_delete_operation">withdraw_permission_delete_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain33committee_member_create_operationE" title="graphene::chain::committee_member_create_operation">committee_member_create_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain33committee_member_update_operationE" title="graphene::chain::committee_member_update_operation">committee_member_update_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain51committee_member_update_global_parameters_operationE" title="graphene::chain::committee_member_update_global_parameters_operation">committee_member_update_global_parameters_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain32vesting_balance_create_operationE" title="graphene::chain::vesting_balance_create_operation">vesting_balance_create_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain34vesting_balance_withdraw_operationE" title="graphene::chain::vesting_balance_withdraw_operation">vesting_balance_withdraw_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain23worker_create_operationE" title="graphene::chain::worker_create_operation">worker_create_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain16custom_operationE" title="graphene::chain::custom_operation">custom_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain16assert_operationE" title="graphene::chain::assert_operation">assert_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain23balance_claim_operationE" title="graphene::chain::balance_claim_operation">balance_claim_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain27override_transfer_operationE" title="graphene::chain::override_transfer_operation">override_transfer_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain27transfer_to_blind_operationE" title="graphene::chain::transfer_to_blind_operation">transfer_to_blind_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain24blind_transfer_operationE" title="graphene::chain::blind_transfer_operation">blind_transfer_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain29transfer_from_blind_operationE" title="graphene::chain::transfer_from_blind_operation">transfer_from_blind_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain29asset_settle_cancel_operationE" title="graphene::chain::asset_settle_cancel_operation">asset_settle_cancel_operation</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain26asset_claim_fees_operationE" title="graphene::chain::asset_claim_fees_operation">asset_claim_fees_operation</a>, fba_distribute_operation&gt; <code class="descname">operation</code><a class="headerlink" href="#_CPPv2N8graphene5chain9operationE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Defines the set of valid operations as a discriminated union type. </p>
 </dd></dl>
 
@@ -491,6 +511,16 @@
 <dd></dd></dl>
 
 <dl class="type">
+<dt id="_CPPv2N8graphene5chain15buyback_id_typeE">
+<span id="graphene::chain::buyback_id_type"></span><span class="target" id="project0namespacegraphene_1_1chain_1ab810d1e3d1612634e0ae55ee1c2c2521"></span><em class="property">typedef </em>object_id&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain18implementation_idsE" title="graphene::chain::implementation_ids">implementation_ids</a>, <a class="reference internal" href="../blockchain/objects.html#_CPPv2N8graphene5chain24impl_buyback_object_typeE" title="graphene::chain::impl_buyback_object_type">impl_buyback_object_type</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain14buyback_objectE" title="graphene::chain::buyback_object">buyback_object</a>&gt; <code class="descname">buyback_id_type</code><a class="headerlink" href="#_CPPv2N8graphene5chain15buyback_id_typeE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="type">
+<dt id="_CPPv2N8graphene5chain23fba_accumulator_id_typeE">
+<span id="graphene::chain::fba_accumulator_id_type"></span><span class="target" id="project0namespacegraphene_1_1chain_1ae028c4bc900cad37bb0ae88921582119"></span><em class="property">typedef </em>object_id&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain18implementation_idsE" title="graphene::chain::implementation_ids">implementation_ids</a>, <a class="reference internal" href="../blockchain/objects.html#_CPPv2N8graphene5chain32impl_fba_accumulator_object_typeE" title="graphene::chain::impl_fba_accumulator_object_type">impl_fba_accumulator_object_type</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain22fba_accumulator_objectE" title="graphene::chain::fba_accumulator_object">fba_accumulator_object</a>&gt; <code class="descname">fba_accumulator_id_type</code><a class="headerlink" href="#_CPPv2N8graphene5chain23fba_accumulator_id_typeE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="type">
 <dt id="_CPPv2N8graphene5chain11symbol_typeE">
 <span id="graphene::chain::symbol_type"></span><span class="target" id="project0namespacegraphene_1_1chain_1a986241e0a89e7b8b58d00179f7fb3c0a"></span><em class="property">typedef </em>fc::array&lt;char, GRAPHENE_MAX_ASSET_SYMBOL_LENGTH&gt; <code class="descname">symbol_type</code><a class="headerlink" href="#_CPPv2N8graphene5chain11symbol_typeE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -577,7 +607,7 @@
 
 <dl class="type">
 <dt id="_CPPv2N8graphene5chain43withdraw_permission_object_multi_index_typeE">
-<span id="graphene::chain::withdraw_permission_object_multi_index_type"></span><span class="target" id="project0namespacegraphene_1_1chain_1a1415c780be547b75b7236e41ec003aa9"></span><em class="property">typedef </em>multi_index_container&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain26withdraw_permission_objectE" title="graphene::chain::withdraw_permission_object">withdraw_permission_object</a>, indexed_by&lt;ordered_unique&lt;tag&lt;by_id&gt;, member&lt;object, object_id_type, &amp;object::id&gt;&gt;, ordered_non_unique&lt;tag&lt;by_from&gt;, member&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain26withdraw_permission_objectE" title="graphene::chain::withdraw_permission_object">withdraw_permission_object</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain15account_id_typeE" title="graphene::chain::account_id_type">account_id_type</a>, &amp;withdraw_permission_object::withdraw_from_account&gt;&gt;, ordered_non_unique&lt;tag&lt;by_authorized&gt;, member&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain26withdraw_permission_objectE" title="graphene::chain::withdraw_permission_object">withdraw_permission_object</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain15account_id_typeE" title="graphene::chain::account_id_type">account_id_type</a>, &amp;withdraw_permission_object::authorized_account&gt;&gt;, ordered_non_unique&lt;tag&lt;by_expiration&gt;, member&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain26withdraw_permission_objectE" title="graphene::chain::withdraw_permission_object">withdraw_permission_object</a>, time_point_sec, &amp;withdraw_permission_object::expiration&gt;&gt;&gt;&gt; <code class="descname">withdraw_permission_object_multi_index_type</code><a class="headerlink" href="#_CPPv2N8graphene5chain43withdraw_permission_object_multi_index_typeE" title="Permalink to this definition">¶</a></dt>
+<span id="graphene::chain::withdraw_permission_object_multi_index_type"></span><span class="target" id="project0namespacegraphene_1_1chain_1a30912eb7ae8ddcbc58e6b62c5be237d0"></span><em class="property">typedef </em>multi_index_container&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain26withdraw_permission_objectE" title="graphene::chain::withdraw_permission_object">withdraw_permission_object</a>, indexed_by&lt;ordered_unique&lt;tag&lt;by_id&gt;, member&lt;object, object_id_type, &amp;object::id&gt;&gt;, ordered_unique&lt;tag&lt;by_from&gt;, composite_key&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain26withdraw_permission_objectE" title="graphene::chain::withdraw_permission_object">withdraw_permission_object</a>, member&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain26withdraw_permission_objectE" title="graphene::chain::withdraw_permission_object">withdraw_permission_object</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain15account_id_typeE" title="graphene::chain::account_id_type">account_id_type</a>, &amp;withdraw_permission_object::withdraw_from_account&gt;, member&lt;object, object_id_type, &amp;object::id&gt;&gt;&gt;, ordered_unique&lt;tag&lt;by_authorized&gt;, composite_key&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain26withdraw_permission_objectE" title="graphene::chain::withdraw_permission_object">withdraw_permission_object</a>, member&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain26withdraw_permission_objectE" title="graphene::chain::withdraw_permission_object">withdraw_permission_object</a>, <a class="reference internal" href="#_CPPv2N8graphene5chain15account_id_typeE" title="graphene::chain::account_id_type">account_id_type</a>, &amp;withdraw_permission_object::authorized_account&gt;, member&lt;object, object_id_type, &amp;object::id&gt;&gt;&gt;, ordered_unique&lt;tag&lt;by_expiration&gt;, composite_key&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain26withdraw_permission_objectE" title="graphene::chain::withdraw_permission_object">withdraw_permission_object</a>, member&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain26withdraw_permission_objectE" title="graphene::chain::withdraw_permission_object">withdraw_permission_object</a>, time_point_sec, &amp;withdraw_permission_object::expiration&gt;, member&lt;object, object_id_type, &amp;object::id&gt;&gt;&gt;&gt;&gt; <code class="descname">withdraw_permission_object_multi_index_type</code><a class="headerlink" href="#_CPPv2N8graphene5chain43withdraw_permission_object_multi_index_typeE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="type">
@@ -628,6 +658,33 @@
 </div>
 <div class="breathe-sectiondef container">
 <p class="breathe-sectiondef-title rubric">Enums</p>
+<dl class="type">
+<dt id="_CPPv2N8graphene5chain32graphene_fba_accumulator_id_enumE">
+<span id="graphene::chain::graphene_fba_accumulator_id_enum"></span><span class="target" id="project0namespacegraphene_1_1chain_1acdb82d2f8c178aa11ccb3df23ca32ccd"></span><em class="property">enum </em><code class="descname">graphene_fba_accumulator_id_enum</code><a class="headerlink" href="#_CPPv2N8graphene5chain32graphene_fba_accumulator_id_enumE" title="Permalink to this definition">¶</a></dt>
+<dd><p>An object will be created at genesis for each of these FBA accumulators. </p>
+<p><em>Values:</em></p>
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain36fba_accumulator_id_transfer_to_blindE">
+<span id="graphene::chain::fba_accumulator_id_transfer_to_blind"></span><span class="target" id="project0namespacegraphene_1_1chain_1acdb82d2f8c178aa11ccb3df23ca32ccdae90b1c4cdb81c92695797f50d1243025"></span><code class="descname">fba_accumulator_id_transfer_to_blind</code> = 0<a class="headerlink" href="#_CPPv2N8graphene5chain36fba_accumulator_id_transfer_to_blindE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain33fba_accumulator_id_blind_transferE">
+<span id="graphene::chain::fba_accumulator_id_blind_transfer"></span><span class="target" id="project0namespacegraphene_1_1chain_1acdb82d2f8c178aa11ccb3df23ca32ccdabf42751f9a6dda7ad64f46694ad4c249"></span><code class="descname">fba_accumulator_id_blind_transfer</code><a class="headerlink" href="#_CPPv2N8graphene5chain33fba_accumulator_id_blind_transferE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain38fba_accumulator_id_transfer_from_blindE">
+<span id="graphene::chain::fba_accumulator_id_transfer_from_blind"></span><span class="target" id="project0namespacegraphene_1_1chain_1acdb82d2f8c178aa11ccb3df23ca32ccdaad142486291cf46325fed49a43dadeaa"></span><code class="descname">fba_accumulator_id_transfer_from_blind</code><a class="headerlink" href="#_CPPv2N8graphene5chain38fba_accumulator_id_transfer_from_blindE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain24fba_accumulator_id_countE">
+<span id="graphene::chain::fba_accumulator_id_count"></span><span class="target" id="project0namespacegraphene_1_1chain_1acdb82d2f8c178aa11ccb3df23ca32ccdaadd2b1128df626e02420beb23efe7aaa"></span><code class="descname">fba_accumulator_id_count</code><a class="headerlink" href="#_CPPv2N8graphene5chain24fba_accumulator_id_countE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 <dl class="type">
 <dt id="_CPPv2N8graphene5chain29asset_issuer_permission_flagsE">
 <span id="graphene::chain::asset_issuer_permission_flags"></span><span class="target" id="project0namespacegraphene_1_1chain_1a6a12bfc3745c709e79e6bbcd1fa6c3d2"></span><em class="property">enum </em><code class="descname">asset_issuer_permission_flags</code><a class="headerlink" href="#_CPPv2N8graphene5chain29asset_issuer_permission_flagsE" title="Permalink to this definition">¶</a></dt>
@@ -881,6 +938,16 @@
 <span id="graphene::chain::impl_special_authority_object_type"></span><span class="target" id="project0namespacegraphene_1_1chain_1ad3bef2f100b722a6c30fada38f6dcd73a9d63a3647a2db0610d19742509c51e32"></span><code class="descname">impl_special_authority_object_type</code><a class="headerlink" href="#_CPPv2N8graphene5chain34impl_special_authority_object_typeE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain24impl_buyback_object_typeE">
+<span id="graphene::chain::impl_buyback_object_type"></span><span class="target" id="project0namespacegraphene_1_1chain_1ad3bef2f100b722a6c30fada38f6dcd73a7a94b2d29fe39e6d30d5b3c5eb7ec42b"></span><code class="descname">impl_buyback_object_type</code><a class="headerlink" href="#_CPPv2N8graphene5chain24impl_buyback_object_typeE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain32impl_fba_accumulator_object_typeE">
+<span id="graphene::chain::impl_fba_accumulator_object_type"></span><span class="target" id="project0namespacegraphene_1_1chain_1ad3bef2f100b722a6c30fada38f6dcd73a7734519967f0d47d3613ccfccb4ab0d7"></span><code class="descname">impl_fba_accumulator_object_type</code><a class="headerlink" href="#_CPPv2N8graphene5chain32impl_fba_accumulator_object_typeE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 </div>
@@ -892,8 +959,23 @@
 <dd></dd></dl>
 
 <dl class="function">
+<dt id="_CPPv2N8graphene5chain20verify_account_votesERK8databaseRK15account_options">
+<span id="graphene::chain::verify_account_votes__databaseCR.account_optionsCR"></span><span class="target" id="project0namespacegraphene_1_1chain_1a0da8afb851e982b71efa49ae3f0371f8"></span>void <code class="descname">verify_account_votes</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv2N8graphene5chain8databaseE" title="graphene::chain::database">database</a> &amp;<em>db</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv2N8graphene5chain15account_optionsE" title="graphene::chain::account_options">account_options</a> &amp;<em>options</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene5chain20verify_account_votesERK8databaseRK15account_options" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
 <dt id="_CPPv2N8graphene5chain7cut_feeE10share_type8uint16_t">
 <span id="graphene::chain::cut_fee__share_type.uint16_t"></span><span class="target" id="project0namespacegraphene_1_1chain_1a8239dba8aaa25b29bb29aa103223ec17"></span><a class="reference internal" href="#_CPPv2N8graphene5chain10share_typeE" title="graphene::chain::share_type">share_type</a> <code class="descname">cut_fee</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N8graphene5chain10share_typeE" title="graphene::chain::share_type">share_type</a> <em>a</em>, uint16_t <em>p</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene5chain7cut_feeE10share_type8uint16_t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene5chain32evaluate_buyback_account_optionsERK8databaseRK23buyback_account_options">
+<span id="graphene::chain::evaluate_buyback_account_options__databaseCR.buyback_account_optionsCR"></span><span class="target" id="project0namespacegraphene_1_1chain_1af58d983afb0efae1eb384b67512499ba"></span>void <code class="descname">evaluate_buyback_account_options</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv2N8graphene5chain8databaseE" title="graphene::chain::database">database</a> &amp;<em>db</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv2N8graphene5chain23buyback_account_optionsE" title="graphene::chain::buyback_account_options">buyback_account_options</a> &amp;<em>bbo</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene5chain32evaluate_buyback_account_optionsERK8databaseRK23buyback_account_options" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene5chain18debug_apply_updateER8databaseRKN2fc14variant_objectE">
+<span id="graphene::chain::debug_apply_update__databaseR.fc::variant_objectCR"></span><span class="target" id="project0namespacegraphene_1_1chain_1a181f5eec24db1e1c680de88752cf9c12"></span>void <code class="descname">debug_apply_update</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N8graphene5chain8databaseE" title="graphene::chain::database">database</a> &amp;<em>db</em>, <em class="property">const</em> fc::variant_object &amp;<em>vo</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene5chain18debug_apply_updateER8databaseRKN2fc14variant_objectE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
@@ -906,6 +988,31 @@
 <dl class="function">
 <dt id="_CPPv2N8graphene5chain24update_top_n_authoritiesER8database">
 <span id="graphene::chain::update_top_n_authorities__databaseR"></span><span class="target" id="project0namespacegraphene_1_1chain_1aafe078504bd9675a005078b468843223"></span>void <code class="descname">update_top_n_authorities</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N8graphene5chain8databaseE" title="graphene::chain::database">database</a> &amp;<em>db</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene5chain24update_top_n_authoritiesER8database" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene5chain17split_fba_balanceER8database8uint64_t8uint16_t8uint16_t8uint16_t">
+<span id="graphene::chain::split_fba_balance__databaseR.uint64_t.uint16_t.uint16_t.uint16_t"></span><span class="target" id="project0namespacegraphene_1_1chain_1a1c463857736685f0a10fd056d2b4b85a"></span>void <code class="descname">split_fba_balance</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N8graphene5chain8databaseE" title="graphene::chain::database">database</a> &amp;<em>db</em>, uint64_t <em>fba_id</em>, uint16_t <em>network_pct</em>, uint16_t <em>designated_asset_buyback_pct</em>, uint16_t <em>designated_asset_issuer_pct</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene5chain17split_fba_balanceER8database8uint64_t8uint16_t8uint16_t8uint16_t" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene5chain23distribute_fba_balancesER8database">
+<span id="graphene::chain::distribute_fba_balances__databaseR"></span><span class="target" id="project0namespacegraphene_1_1chain_1a86127c6c883fd8cee0b6c9bc9911da82"></span>void <code class="descname">distribute_fba_balances</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N8graphene5chain8databaseE" title="graphene::chain::database">database</a> &amp;<em>db</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene5chain23distribute_fba_balancesER8database" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene5chain21create_buyback_ordersER8database">
+<span id="graphene::chain::create_buyback_orders__databaseR"></span><span class="target" id="project0namespacegraphene_1_1chain_1a8708850467d84b28bded18bba06d2bca"></span>void <code class="descname">create_buyback_orders</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N8graphene5chain8databaseE" title="graphene::chain::database">database</a> &amp;<em>db</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene5chain21create_buyback_ordersER8database" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene5chain24deprecate_annual_membersER8database">
+<span id="graphene::chain::deprecate_annual_members__databaseR"></span><span class="target" id="project0namespacegraphene_1_1chain_1a519e1c11323acf5f5e2feb9b6b5f85eb"></span>void <code class="descname">deprecate_annual_members</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N8graphene5chain8databaseE" title="graphene::chain::database">database</a> &amp;<em>db</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene5chain24deprecate_annual_membersER8database" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene5chain22maybe_cull_small_orderER8databaseRK18limit_order_object">
+<span id="graphene::chain::maybe_cull_small_order__databaseR.limit_order_objectCR"></span><span class="target" id="project0namespacegraphene_1_1chain_1a908cd1fa664baa7cdbf681f694342223"></span>bool <code class="descname">maybe_cull_small_order</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N8graphene5chain8databaseE" title="graphene::chain::database">database</a> &amp;<em>db</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv2N8graphene5chain18limit_order_objectE" title="graphene::chain::limit_order_object">limit_order_object</a> &amp;<em>order</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene5chain22maybe_cull_small_orderER8databaseRK18limit_order_object" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
@@ -962,6 +1069,16 @@
 <dt>
 <span class="target" id="project0namespacegraphene_1_1chain_1a1bf099a052459d40c14bb77287f595d3"></span><code class="descname">graphene::chain::GRAPHENE_DECLARE_OP_EVALUATE_EXCEPTION(unknown_commitment, blind_transfer, 1, &quot;Attempting to claim an unknown prior commitment&quot;)</code></dt>
 <dd></dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene5chain19is_authorized_assetERK8databaseRK14account_objectRK12asset_object">
+<span id="graphene::chain::is_authorized_asset__databaseCR.account_objectCR.asset_objectCR"></span><span class="target" id="project0namespacegraphene_1_1chain_1a5329db165e64c97305196002b5030bb3"></span>bool <code class="descname">is_authorized_asset</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv2N8graphene5chain8databaseE" title="graphene::chain::database">database</a> &amp;<em>d</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv2N8graphene5chain14account_objectE" title="graphene::chain::account_object">account_object</a> &amp;<em>acct</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv2N8graphene5chain12asset_objectE" title="graphene::chain::asset_object">asset_object</a> &amp;<em>asset_obj</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene5chain19is_authorized_assetERK8databaseRK14account_objectRK12asset_object" title="Permalink to this definition">¶</a></dt>
+<dd><p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>true if the account is whitelisted and not blacklisted to transact in the provided asset; false otherwise. </dd>
+</dl>
+</p>
+</dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N8graphene5chain13is_valid_nameERK6string">
@@ -1143,11 +1260,6 @@
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N8graphene5chain34operation_get_required_authoritiesERK9operationR6vectorI9authorityE">
-<span id="graphene::chain::operation_get_required_authorities__operationCR.vector:authority:R"></span><span class="target" id="project0namespacegraphene_1_1chain_1ab5ea033a409645d1db41777e05c9e184"></span>void <code class="descname">operation_get_required_authorities</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../../bitshares/tutorials/construct-transaction.html#_CPPv2N8graphene5chain9operationE" title="graphene::chain::operation">operation</a> &amp;<em>op</em>, vector&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain9authorityE" title="graphene::chain::authority">authority</a>&gt; &amp;<em>result</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene5chain34operation_get_required_authoritiesERK9operationR6vectorI9authorityE" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="function">
 <dt id="_CPPv2N8graphene5chaineqERK15public_key_typeRKN2fc3ecc10public_keyE">
 <span id="graphene::chain::eq-operator__public_key_typeCR.fc::ecc::public_keyCR"></span><span class="target" id="project0namespacegraphene_1_1chain_1af5f03cbb9c99826dad13583b3c266189"></span>bool <code class="descname">operator==</code><span class="sig-paren">(</span><em class="property">const</em> public_key_type &amp;<em>p1</em>, <em class="property">const</em> fc::ecc::public_key &amp;<em>p2</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene5chaineqERK15public_key_typeRKN2fc3ecc10public_keyE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -1248,6 +1360,11 @@
 <dl class="member">
 <dt id="_CPPv2N8graphene5chain32UIA_ASSET_ISSUER_PERMISSION_MASKE">
 <span id="graphene::chain::UIA_ASSET_ISSUER_PERMISSION_MASK__uint32_tC"></span><span class="target" id="project0namespacegraphene_1_1chain_1a89c7e6c15e86a1bceddc0b17b564fa61"></span><em class="property">const</em> uint32_t <code class="descname">UIA_ASSET_ISSUER_PERMISSION_MASK</code><a class="headerlink" href="#_CPPv2N8graphene5chain32UIA_ASSET_ISSUER_PERMISSION_MASKE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain3tmpE">
+<span id="graphene::chain::tmp__smart_fee_schedule"></span><span class="target" id="project0namespacegraphene_1_1chain_1a33ce1c8f84a7499c51b84f63163e2dd3"></span><a class="reference internal" href="#_CPPv2N8graphene5chain18smart_fee_scheduleE" title="graphene::chain::smart_fee_schedule">smart_fee_schedule</a> <code class="descname">tmp</code><a class="headerlink" href="#_CPPv2N8graphene5chain3tmpE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
@@ -1399,16 +1516,6 @@
 </p>
 </dd></dl>
 
-<dl class="function">
-<dt id="_CPPv2N8graphene5chain14account_object19is_authorized_assetERK12asset_objectRK8database">
-<span id="graphene::chain::account_object::is_authorized_asset__asset_objectCR.databaseCR"></span><span class="target" id="project0classgraphene_1_1chain_1_1account__object_1af7d9d52840c424f595d94f0af920c7aa"></span>bool <code class="descname">is_authorized_asset</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv2N8graphene5chain12asset_objectE" title="graphene::chain::asset_object">asset_object</a> &amp;<em>asset_obj</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv2N8graphene5chain8databaseE" title="graphene::chain::database">database</a> &amp;<em>d</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene5chain14account_object19is_authorized_assetERK12asset_objectRK8database" title="Permalink to this definition">¶</a></dt>
-<dd><p><dl class="docutils">
-<dt><strong>Return</strong></dt>
-<dd>true if this account is whitelisted and not blacklisted to transact in the provided asset; false otherwise. </dd>
-</dl>
-</p>
-</dd></dl>
-
 </div>
 <div class="breathe-sectiondef container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
@@ -1495,6 +1602,18 @@
 <dt id="_CPPv2N8graphene5chain14account_object11cashback_vbE">
 <span id="graphene::chain::account_object::cashback_vb__optional:vesting_balance_id_type:"></span><span class="target" id="project0classgraphene_1_1chain_1_1account__object_1a3b37b7a13d7ac82f5fae1f903cb12063"></span>optional&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain23vesting_balance_id_typeE" title="graphene::chain::vesting_balance_id_type">vesting_balance_id_type</a>&gt; <code class="descname">cashback_vb</code><a class="headerlink" href="#_CPPv2N8graphene5chain14account_object11cashback_vbE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Vesting balance which receives cashback_reward deposits. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain14account_object19top_n_control_flagsE">
+<span id="graphene::chain::account_object::top_n_control_flags__uint8_t"></span><span class="target" id="project0classgraphene_1_1chain_1_1account__object_1a657d9d5d3206edc25b7a9790ad277abc"></span>uint8_t <code class="descname">top_n_control_flags</code><a class="headerlink" href="#_CPPv2N8graphene5chain14account_object19top_n_control_flagsE" title="Permalink to this definition">¶</a></dt>
+<dd><p>This flag is set when the top_n logic sets both authorities, and gets reset when authority or special_authority is set. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain14account_object14allowed_assetsE">
+<span id="graphene::chain::account_object::allowed_assets__optional:flat_set:asset_id_type::"></span><span class="target" id="project0classgraphene_1_1chain_1_1account__object_1a59356089d7ecad86e4ccacdd495da699"></span>optional&lt;flat_set&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain13asset_id_typeE" title="graphene::chain::asset_id_type">asset_id_type</a>&gt;&gt; <code class="descname">allowed_assets</code><a class="headerlink" href="#_CPPv2N8graphene5chain14account_object14allowed_assetsE" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a set of assets which the account is allowed to have. This is utilized to restrict buyback accounts to the assets that trade in their markets. In the future we may expand this to allow accounts to e.g. voluntarily restrict incoming transfers. </p>
 </dd></dl>
 
 </div>
@@ -1616,6 +1735,21 @@
 <p>Account history is important for users and wallets even though it is not part of &#8220;core validation&#8221;. Account history is maintained as a linked list stored on disk in a stack. Each account will point to the most recent account history object by ID. When a new operation relativent to that account is processed a new account history object is allcoated at the end of the stack and intialized to point to the prior object. </p>
 <p>This data is never accessed as part of chain validation and therefore can be kept on disk as a memory mapped file. Using a memory mapped file will help the operating system better manage / cache / page files and also accelerates load time.</p>
 <p>When the transaction history for a particular account is requested the linked list can be traversed with relatively effecient disk access because of the use of a memory mapped stack. </p>
+<div class="breathe-sectiondef container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain34account_transaction_history_object12operation_idE">
+<span id="graphene::chain::account_transaction_history_object::operation_id__operation_history_id_type"></span><span class="target" id="project0classgraphene_1_1chain_1_1account__transaction__history__object_1a1f7e9c887dc4348034d298cfa62e7210"></span><a class="reference internal" href="#_CPPv2N8graphene5chain25operation_history_id_typeE" title="graphene::chain::operation_history_id_type">operation_history_id_type</a> <code class="descname">operation_id</code><a class="headerlink" href="#_CPPv2N8graphene5chain34account_transaction_history_object12operation_idE" title="Permalink to this definition">¶</a></dt>
+<dd><p>the account this operation applies to </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain34account_transaction_history_object4nextE">
+<span id="graphene::chain::account_transaction_history_object::next__account_transaction_history_id_type"></span><span class="target" id="project0classgraphene_1_1chain_1_1account__transaction__history__object_1a4ca3ae08adf59a1a2c99eed82cbc7a49"></span><a class="reference internal" href="#_CPPv2N8graphene5chain35account_transaction_history_id_typeE" title="graphene::chain::account_transaction_history_id_type">account_transaction_history_id_type</a> <code class="descname">next</code><a class="headerlink" href="#_CPPv2N8graphene5chain34account_transaction_history_object4nextE" title="Permalink to this definition">¶</a></dt>
+<dd><p>the operation position within the given account </p>
+</dd></dl>
+
+</div>
 </dd></dl>
 
 <dl class="class">
@@ -1649,7 +1783,7 @@
 <dl class="member">
 <dt id="_CPPv2N8graphene5chain24account_update_operation6activeE">
 <span id="graphene::chain::account_update_operation::active__optional:authority:"></span><span class="target" id="project0structgraphene_1_1chain_1_1account__update__operation_1a2cf75cb8bcda11e699ac4a34ff69a992"></span>optional&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain9authorityE" title="graphene::chain::authority">authority</a>&gt; <code class="descname">active</code><a class="headerlink" href="#_CPPv2N8graphene5chain24account_update_operation6activeE" title="Permalink to this definition">¶</a></dt>
-<dd><p>New active authority. If set, this operation requires owner authority to execute. </p>
+<dd><p>New active authority. This can be updated by the current active authority. </p>
 </dd></dl>
 
 <dl class="member">
@@ -2610,6 +2744,23 @@
 </dd></dl>
 
 <dl class="class">
+<dt id="_CPPv2N8graphene5chain24blind_transfer_evaluatorE">
+<span id="graphene::chain::blind_transfer_evaluator"></span><span class="target" id="project0classgraphene_1_1chain_1_1blind__transfer__evaluator"></span><em class="property">class </em><code class="descname">blind_transfer_evaluator</code><a class="headerlink" href="#_CPPv2N8graphene5chain24blind_transfer_evaluatorE" title="Permalink to this definition">¶</a></dt>
+<dd><em>#include &lt;confidential_evaluator.hpp&gt;</em><div class="breathe-sectiondef container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N8graphene5chain24blind_transfer_evaluator7pay_feeEv">
+<span id="graphene::chain::blind_transfer_evaluator::pay_fee"></span>virtual <span class="target" id="project0classgraphene_1_1chain_1_1blind__transfer__evaluator_1a32d8100705b651906b284f7eadaec37b"></span>void <code class="descname">pay_fee</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene5chain24blind_transfer_evaluator7pay_feeEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Routes the fee to where it needs to go. The default implementation routes the fee to the <a class="reference internal" href="#project0classgraphene_1_1chain_1_1account__statistics__object"><span>account_statistics_object</span></a> of the fee_paying_account.</p>
+<p>Before <a class="reference internal" href="#project0classgraphene_1_1chain_1_1blind__transfer__evaluator_1a32d8100705b651906b284f7eadaec37b"><span>pay_fee()</span></a> is called, the fee is computed by prepare_fee() and has been moved out of the fee_paying_account and (if paid in a non-CORE asset) converted by the asset&#8217;s fee pool.</p>
+<p>Therefore, when <a class="reference internal" href="#project0classgraphene_1_1chain_1_1blind__transfer__evaluator_1a32d8100705b651906b284f7eadaec37b"><span>pay_fee()</span></a> is called, the fee only exists in this-&gt;core_fee_paid. So <a class="reference internal" href="#project0classgraphene_1_1chain_1_1blind__transfer__evaluator_1a32d8100705b651906b284f7eadaec37b"><span>pay_fee()</span></a> need only increment the receiving balance.</p>
+<p>The default implementation simply calls account_statistics_object-&gt;<a class="reference internal" href="#project0classgraphene_1_1chain_1_1blind__transfer__evaluator_1a32d8100705b651906b284f7eadaec37b"><span>pay_fee()</span></a> to increment pending_fees or pending_vested_fees. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="class">
 <dt id="_CPPv2N8graphene5chain24blind_transfer_operationE">
 <span id="graphene::chain::blind_transfer_operation"></span><span class="target" id="project0structgraphene_1_1chain_1_1blind__transfer__operation"></span><em class="property">struct </em><code class="descname">blind_transfer_operation</code><a class="headerlink" href="#_CPPv2N8graphene5chain24blind_transfer_operationE" title="Permalink to this definition">¶</a></dt>
 <dd><em>#include &lt;confidential.hpp&gt;</em><p>Transfers from blind to blind. </p>
@@ -2694,6 +2845,39 @@
 </dd></dl>
 
 </div>
+</dd></dl>
+
+<dl class="class">
+<dt id="_CPPv2N8graphene5chain23buyback_account_optionsE">
+<span id="graphene::chain::buyback_account_options"></span><span class="target" id="project0structgraphene_1_1chain_1_1buyback__account__options"></span><em class="property">struct </em><code class="descname">buyback_account_options</code><a class="headerlink" href="#_CPPv2N8graphene5chain23buyback_account_optionsE" title="Permalink to this definition">¶</a></dt>
+<dd><em>#include &lt;buyback.hpp&gt;</em><div class="breathe-sectiondef container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain23buyback_account_options12asset_to_buyE">
+<span id="graphene::chain::buyback_account_options::asset_to_buy__asset_id_type"></span><span class="target" id="project0structgraphene_1_1chain_1_1buyback__account__options_1aa227c25733aa1c7566659cff793aa53f"></span><a class="reference internal" href="#_CPPv2N8graphene5chain13asset_id_typeE" title="graphene::chain::asset_id_type">asset_id_type</a> <code class="descname">asset_to_buy</code><a class="headerlink" href="#_CPPv2N8graphene5chain23buyback_account_options12asset_to_buyE" title="Permalink to this definition">¶</a></dt>
+<dd><p>The asset to buy. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain23buyback_account_options19asset_to_buy_issuerE">
+<span id="graphene::chain::buyback_account_options::asset_to_buy_issuer__account_id_type"></span><span class="target" id="project0structgraphene_1_1chain_1_1buyback__account__options_1ae5dcd3697b5161e697574a6155b2f604"></span><a class="reference internal" href="#_CPPv2N8graphene5chain15account_id_typeE" title="graphene::chain::account_id_type">account_id_type</a> <code class="descname">asset_to_buy_issuer</code><a class="headerlink" href="#_CPPv2N8graphene5chain23buyback_account_options19asset_to_buy_issuerE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Issuer of the asset. Must sign the transaction, must match issuer of specified asset. </p>
+</dd></dl>
+
+<dl class="member">
+<dt id="_CPPv2N8graphene5chain23buyback_account_options7marketsE">
+<span id="graphene::chain::buyback_account_options::markets__flat_set:asset_id_type:"></span><span class="target" id="project0structgraphene_1_1chain_1_1buyback__account__options_1aa00261c47e3ca745bf6a3cfcaf11c147"></span>flat_set&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain13asset_id_typeE" title="graphene::chain::asset_id_type">asset_id_type</a>&gt; <code class="descname">markets</code><a class="headerlink" href="#_CPPv2N8graphene5chain23buyback_account_options7marketsE" title="Permalink to this definition">¶</a></dt>
+<dd><p>What assets the account is willing to buy with. Other assets will just sit there since the account has null authority. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="_CPPv2N8graphene5chain14buyback_objectE">
+<span id="graphene::chain::buyback_object"></span><span class="target" id="project0classgraphene_1_1chain_1_1buyback__object"></span><em class="property">class </em><code class="descname">buyback_object</code><a class="headerlink" href="#_CPPv2N8graphene5chain14buyback_objectE" title="Permalink to this definition">¶</a></dt>
+<dd><em>#include &lt;buyback_object.hpp&gt;</em><p>buyback_authority_object only exists to help with a specific indexing problem. We want to be able to iterate over all assets that have a buyback program. However, assets which have a buyback program are very rare. So rather than indexing <a class="reference internal" href="#project0classgraphene_1_1chain_1_1asset__object"><span>asset_object</span></a> by the buyback field (requiring additional bookkeeping for every asset), we instead maintain a <a class="reference internal" href="#project0classgraphene_1_1chain_1_1buyback__object"><span>buyback_object</span></a> pointing to each asset which has buyback (requiring additional bookkeeping only for every asset which has buyback).</p>
+<p>This class is an implementation detail. </p>
 </dd></dl>
 
 <dl class="class">
@@ -3327,8 +3511,8 @@ Will close the database before wiping. Database will be closed when this functio
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N8graphene5chain8database10fill_orderERK18limit_order_objectRK5assetRK5asset">
-<span id="graphene::chain::database::fill_order__limit_order_objectCR.assetCR.assetCR"></span><span class="target" id="project0classgraphene_1_1chain_1_1database_1a8eaf53e707013dea7a9d467ce451a362"></span>bool <code class="descname">fill_order</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv2N8graphene5chain18limit_order_objectE" title="graphene::chain::limit_order_object">limit_order_object</a> &amp;<em>order</em>, <em class="property">const</em> asset &amp;<em>pays</em>, <em class="property">const</em> asset &amp;<em>receives</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene5chain8database10fill_orderERK18limit_order_objectRK5assetRK5asset" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N8graphene5chain8database10fill_orderERK18limit_order_objectRK5assetRK5assetb">
+<span id="graphene::chain::database::fill_order__limit_order_objectCR.assetCR.assetCR.b"></span><span class="target" id="project0classgraphene_1_1chain_1_1database_1a9d07012c1ccb4df5e85999681b287f2d"></span>bool <code class="descname">fill_order</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv2N8graphene5chain18limit_order_objectE" title="graphene::chain::limit_order_object">limit_order_object</a> &amp;<em>order</em>, <em class="property">const</em> asset &amp;<em>pays</em>, <em class="property">const</em> asset &amp;<em>receives</em>, bool <em>cull_if_small</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene5chain8database10fill_orderERK18limit_order_objectRK5assetRK5assetb" title="Permalink to this definition">¶</a></dt>
 <dd><p><dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>true if the order was completely filled and thus freed. </dd>
@@ -3439,15 +3623,6 @@ Will close the database before wiping. Database will be closed when this functio
 </dd></dl>
 
 <dl class="class">
-<dt id="_CPPv2N8graphene5chain19evaluation_observerE">
-<span id="graphene::chain::evaluation_observer"></span><span class="target" id="project0classgraphene_1_1chain_1_1evaluation__observer"></span><em class="property">class </em><code class="descname">evaluation_observer</code><a class="headerlink" href="#_CPPv2N8graphene5chain19evaluation_observerE" title="Permalink to this definition">¶</a></dt>
-<dd><em>#include &lt;evaluator.hpp&gt;</em><p>Observes evaluation events, providing pre- and post-evaluation hooks.</p>
-<p>Every call to pre_evaluate() is followed by a call to either post_evaluate() or evaluation_failed().</p>
-<p>A subclass which needs to do a &#8220;diff&#8221; can gather some &#8220;before&#8221; state into its members in pre_evaluate(), then post_evaluate() will have both &#8220;before&#8221; and &#8220;after&#8221; state, and will be able to do the diff.</p>
-<p>evaluation_failed() is a cleanup method which notifies the subclass to &#8220;throw away&#8221; the diff. </p>
-</dd></dl>
-
-<dl class="class">
 <dt>
 <span class="target" id="project0classgraphene_1_1chain_1_1evaluator"></span><em class="property">template </em>&lt;typename <em>DerivedEvaluator</em>&gt;</dt>
 <dt id="_CPPv2N8graphene5chain9evaluatorE">
@@ -3456,7 +3631,7 @@ Will close the database before wiping. Database will be closed when this functio
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
 <dt id="_CPPv2N8graphene5chain9evaluator8evaluateERK9operation">
-<span id="graphene::chain::evaluator::evaluate__operationCR"></span>virtual <span class="target" id="project0classgraphene_1_1chain_1_1evaluator_1ad206096f93b8a944901c2f0cb1bed151"></span><a class="reference internal" href="#_CPPv2N8graphene5chain16operation_resultE" title="graphene::chain::operation_result">operation_result</a> <code class="descname">evaluate</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../../bitshares/tutorials/construct-transaction.html#_CPPv2N8graphene5chain9operationE" title="graphene::chain::operation">operation</a> &amp;<em>op</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene5chain9evaluator8evaluateERK9operation" title="Permalink to this definition">¶</a></dt>
+<span id="graphene::chain::evaluator::evaluate__operationCR"></span>virtual <span class="target" id="project0classgraphene_1_1chain_1_1evaluator_1ae5a0fc97d3883e3ffa2dd641bc0c496c"></span><a class="reference internal" href="#_CPPv2N8graphene5chain16operation_resultE" title="graphene::chain::operation_result">operation_result</a> <code class="descname">evaluate</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="../../bitshares/tutorials/construct-transaction.html#_CPPv2N8graphene5chain9operationE" title="graphene::chain::operation">operation</a> &amp;<em>op</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene5chain9evaluator8evaluateERK9operation" title="Permalink to this definition">¶</a></dt>
 <dd><p><dl class="docutils">
 <dt><strong>Note</strong></dt>
 <dd>derived classes should ASSUME that the default validation that is indepenent of chain state should be performed by op.validate() and should not perform these extra checks. </dd>
@@ -3465,6 +3640,12 @@ Will close the database before wiping. Database will be closed when this functio
 </dd></dl>
 
 </div>
+</dd></dl>
+
+<dl class="class">
+<dt id="_CPPv2N8graphene5chain22fba_accumulator_objectE">
+<span id="graphene::chain::fba_accumulator_object"></span><span class="target" id="project0classgraphene_1_1chain_1_1fba__accumulator__object"></span><em class="property">class </em><code class="descname">fba_accumulator_object</code><a class="headerlink" href="#_CPPv2N8graphene5chain22fba_accumulator_objectE" title="Permalink to this definition">¶</a></dt>
+<dd><em>#include &lt;fba_object.hpp&gt;</em><p><a class="reference internal" href="#project0classgraphene_1_1chain_1_1fba__accumulator__object"><span>fba_accumulator_object</span></a> accumulates fees to be paid out via buyback or other FBA mechanism. </p>
 </dd></dl>
 
 <dl class="class">
@@ -4148,22 +4329,6 @@ Pushes the block into the fork database and caches it if it doesn&#8217;t link <
 </dd></dl>
 
 <dl class="class">
-<dt id="_CPPv2N8graphene5chain21required_auth_visitorE">
-<span id="graphene::chain::required_auth_visitor"></span><span class="target" id="project0structgraphene_1_1chain_1_1required__auth__visitor"></span><em class="property">struct </em><code class="descname">required_auth_visitor</code><a class="headerlink" href="#_CPPv2N8graphene5chain21required_auth_visitorE" title="Permalink to this definition">¶</a></dt>
-<dd><div class="breathe-sectiondef container">
-<p class="breathe-sectiondef-title rubric">Public Functions</p>
-<dl class="function">
-<dt>
-<em class="property">template </em>&lt;<em class="property">typename</em> T&gt;</dt>
-<dt id="_CPPv2N8graphene5chain21required_auth_visitorclERK1T">
-<span id="graphene::chain::required_auth_visitor::call-operator__TCR"></span><span class="target" id="project0structgraphene_1_1chain_1_1required__auth__visitor_1a5f62e67beb6d5e066776522bbbea8455"></span>void <code class="descname">operator()</code><span class="sig-paren">(</span><em class="property">const</em> T&amp;<span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene5chain21required_auth_visitorclERK1T" title="Permalink to this definition">¶</a></dt>
-<dd><p>for most operations this is a no-op </p>
-</dd></dl>
-
-</div>
-</dd></dl>
-
-<dl class="class">
 <dt id="_CPPv2N8graphene5chain10sign_stateE">
 <span id="graphene::chain::sign_state"></span><span class="target" id="project0structgraphene_1_1chain_1_1sign__state"></span><em class="property">struct </em><code class="descname">sign_state</code><a class="headerlink" href="#_CPPv2N8graphene5chain10sign_stateE" title="Permalink to this definition">¶</a></dt>
 <dd><div class="breathe-sectiondef container">
@@ -4313,6 +4478,23 @@ Pushes the block into the fork database and caches it if it doesn&#8217;t link <
 </dd></dl>
 
 <dl class="class">
+<dt id="_CPPv2N8graphene5chain29transfer_from_blind_evaluatorE">
+<span id="graphene::chain::transfer_from_blind_evaluator"></span><span class="target" id="project0classgraphene_1_1chain_1_1transfer__from__blind__evaluator"></span><em class="property">class </em><code class="descname">transfer_from_blind_evaluator</code><a class="headerlink" href="#_CPPv2N8graphene5chain29transfer_from_blind_evaluatorE" title="Permalink to this definition">¶</a></dt>
+<dd><em>#include &lt;confidential_evaluator.hpp&gt;</em><div class="breathe-sectiondef container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N8graphene5chain29transfer_from_blind_evaluator7pay_feeEv">
+<span id="graphene::chain::transfer_from_blind_evaluator::pay_fee"></span>virtual <span class="target" id="project0classgraphene_1_1chain_1_1transfer__from__blind__evaluator_1a616dce9066853f65e721cef8cf78879b"></span>void <code class="descname">pay_fee</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene5chain29transfer_from_blind_evaluator7pay_feeEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Routes the fee to where it needs to go. The default implementation routes the fee to the <a class="reference internal" href="#project0classgraphene_1_1chain_1_1account__statistics__object"><span>account_statistics_object</span></a> of the fee_paying_account.</p>
+<p>Before <a class="reference internal" href="#project0classgraphene_1_1chain_1_1transfer__from__blind__evaluator_1a616dce9066853f65e721cef8cf78879b"><span>pay_fee()</span></a> is called, the fee is computed by prepare_fee() and has been moved out of the fee_paying_account and (if paid in a non-CORE asset) converted by the asset&#8217;s fee pool.</p>
+<p>Therefore, when <a class="reference internal" href="#project0classgraphene_1_1chain_1_1transfer__from__blind__evaluator_1a616dce9066853f65e721cef8cf78879b"><span>pay_fee()</span></a> is called, the fee only exists in this-&gt;core_fee_paid. So <a class="reference internal" href="#project0classgraphene_1_1chain_1_1transfer__from__blind__evaluator_1a616dce9066853f65e721cef8cf78879b"><span>pay_fee()</span></a> need only increment the receiving balance.</p>
+<p>The default implementation simply calls account_statistics_object-&gt;<a class="reference internal" href="#project0classgraphene_1_1chain_1_1transfer__from__blind__evaluator_1a616dce9066853f65e721cef8cf78879b"><span>pay_fee()</span></a> to increment pending_fees or pending_vested_fees. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="class">
 <dt id="_CPPv2N8graphene5chain29transfer_from_blind_operationE">
 <span id="graphene::chain::transfer_from_blind_operation"></span><span class="target" id="project0structgraphene_1_1chain_1_1transfer__from__blind__operation"></span><em class="property">struct </em><code class="descname">transfer_from_blind_operation</code><a class="headerlink" href="#_CPPv2N8graphene5chain29transfer_from_blind_operationE" title="Permalink to this definition">¶</a></dt>
 <dd><em>#include &lt;confidential.hpp&gt;</em><p>Converts blinded/stealth balance to a public account balance. </p>
@@ -4376,6 +4558,23 @@ Pushes the block into the fork database and caches it if it doesn&#8217;t link <
 <dt id="_CPPv2N8graphene5chain18transfer_operation4memoE">
 <span id="graphene::chain::transfer_operation::memo__optional:memo_data:"></span><span class="target" id="project0structgraphene_1_1chain_1_1transfer__operation_1a32eb9713ef1bed77a2e690170e281de2"></span>optional&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain9memo_dataE" title="graphene::chain::memo_data">memo_data</a>&gt; <code class="descname">memo</code><a class="headerlink" href="#_CPPv2N8graphene5chain18transfer_operation4memoE" title="Permalink to this definition">¶</a></dt>
 <dd><p>User provided data encrypted to the memo key of the &#8220;to&#8221; account. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="_CPPv2N8graphene5chain27transfer_to_blind_evaluatorE">
+<span id="graphene::chain::transfer_to_blind_evaluator"></span><span class="target" id="project0classgraphene_1_1chain_1_1transfer__to__blind__evaluator"></span><em class="property">class </em><code class="descname">transfer_to_blind_evaluator</code><a class="headerlink" href="#_CPPv2N8graphene5chain27transfer_to_blind_evaluatorE" title="Permalink to this definition">¶</a></dt>
+<dd><em>#include &lt;confidential_evaluator.hpp&gt;</em><div class="breathe-sectiondef container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N8graphene5chain27transfer_to_blind_evaluator7pay_feeEv">
+<span id="graphene::chain::transfer_to_blind_evaluator::pay_fee"></span>virtual <span class="target" id="project0classgraphene_1_1chain_1_1transfer__to__blind__evaluator_1a8fb4e46e3ead3f434c109c2756ebe077"></span>void <code class="descname">pay_fee</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene5chain27transfer_to_blind_evaluator7pay_feeEv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Routes the fee to where it needs to go. The default implementation routes the fee to the <a class="reference internal" href="#project0classgraphene_1_1chain_1_1account__statistics__object"><span>account_statistics_object</span></a> of the fee_paying_account.</p>
+<p>Before <a class="reference internal" href="#project0classgraphene_1_1chain_1_1transfer__to__blind__evaluator_1a8fb4e46e3ead3f434c109c2756ebe077"><span>pay_fee()</span></a> is called, the fee is computed by prepare_fee() and has been moved out of the fee_paying_account and (if paid in a non-CORE asset) converted by the asset&#8217;s fee pool.</p>
+<p>Therefore, when <a class="reference internal" href="#project0classgraphene_1_1chain_1_1transfer__to__blind__evaluator_1a8fb4e46e3ead3f434c109c2756ebe077"><span>pay_fee()</span></a> is called, the fee only exists in this-&gt;core_fee_paid. So <a class="reference internal" href="#project0classgraphene_1_1chain_1_1transfer__to__blind__evaluator_1a8fb4e46e3ead3f434c109c2756ebe077"><span>pay_fee()</span></a> need only increment the receiving balance.</p>
+<p>The default implementation simply calls account_statistics_object-&gt;<a class="reference internal" href="#project0classgraphene_1_1chain_1_1transfer__to__blind__evaluator_1a8fb4e46e3ead3f434c109c2756ebe077"><span>pay_fee()</span></a> to increment pending_fees or pending_vested_fees. </p>
 </dd></dl>
 
 </div>
@@ -5023,6 +5222,11 @@ Pushes the block into the fork database and caches it if it doesn&#8217;t link <
 <dd><p>Empty pending_transactions, call callback, then reset pending_transactions after callback is done.</p>
 <p>Pending transactions which no longer validate will be culled. </p>
 </dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene5chain6detail20_is_authorized_assetERK8databaseRK14account_objectRK12asset_object">
+<span id="graphene::chain::detail::_is_authorized_asset__databaseCR.account_objectCR.asset_objectCR"></span><span class="target" id="project0namespacegraphene_1_1chain_1_1detail_1a7528055c48b6e603a8f4e15bc9654d57"></span>bool <code class="descname">_is_authorized_asset</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv2N8graphene5chain8databaseE" title="graphene::chain::database">database</a> &amp;<em>d</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv2N8graphene5chain14account_objectE" title="graphene::chain::account_object">account_object</a> &amp;<em>acct</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv2N8graphene5chain12asset_objectE" title="graphene::chain::asset_object">asset_object</a> &amp;<em>asset_obj</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene5chain6detail20_is_authorized_assetERK8databaseRK14account_objectRK12asset_object" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </div>
 <dl class="class">

@@ -120,27 +120,28 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../integration/index.html">Integration Guide</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../integration/index.html#basic-knowledge">Basic Knowledge</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../integration/index.html#use-cases">Use-Cases</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../integration/exchanges/index.html">Exchanges, Bridges, and Gateways</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html">API Guide</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../integration/merchants/index.html">Merchants</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html">API Guide</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="../integration/traders/index.html">Traders</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="../integration/traders/index.html#public-api">Public API</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="../integration/traders/index.html#private-api">Private API</a><ul class="current">
-<li class="toctree-l5"><a class="reference internal" href="../integration/tutorials/preparing-cli-wallet-trading.html">Howto prepare a CLI wallet for trading</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../integration/index.html#basic-knowledge">Basic Knowledge</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../integration/what-is-different.html">What is Different in BitShares</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../integration/apps/index.html">Blockchain Interaction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../integration/network-setup.html">Network and Wallet Configuration</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../integration/often-used-calls.html">Often used API Calls</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="../integration/often-used-calls.html#overview">Overview</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="../development/blockchain/objects.html">Objects and IDs</a></li>
 <li class="toctree-l5 current"><a class="current reference internal" href="">Wallet API Calls</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="../integration/traders/index.html#libraries">Libraries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../integration/often-used-calls.html#list-account-balances-account"><code class="docutils literal"><span class="pre">list_account_balances</span> <span class="pre">&lt;account&gt;</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../integration/often-used-calls.html#transfer-from-to-amount-asset-memo-broadcast"><code class="docutils literal"><span class="pre">transfer</span> <span class="pre">&lt;from&gt;</span> <span class="pre">&lt;to&gt;</span> <span class="pre">&lt;amount&gt;</span> <span class="pre">&lt;asset&gt;</span> <span class="pre">&quot;&lt;memo&gt;&quot;</span> <span class="pre">&lt;broadcast&gt;</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../integration/often-used-calls.html#transfer2-from-to-amount-asset-memo"><code class="docutils literal"><span class="pre">transfer2</span> <span class="pre">&lt;from&gt;</span> <span class="pre">&lt;to&gt;</span> <span class="pre">&lt;amount&gt;</span> <span class="pre">&lt;asset&gt;</span> <span class="pre">&quot;&lt;memo&gt;&quot;</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../integration/often-used-calls.html#get-account-history-account-limit"><code class="docutils literal"><span class="pre">get_account_history</span> <span class="pre">&lt;account&gt;</span> <span class="pre">&lt;limit&gt;</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../integration/often-used-calls.html#get-object-1-11-id"><code class="docutils literal"><span class="pre">get_object</span> <span class="pre">&quot;1.11.&lt;id&gt;&quot;</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../integration/often-used-calls.html#get-asset-usd"><code class="docutils literal"><span class="pre">get_asset</span> <span class="pre">&lt;USD&gt;</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../integration/often-used-calls.html#correspondences-with-bitshares-1-0-calls">Correspondences with BitShares 1.0 Calls</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="index.html">API Guide</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../integration/businesses/index.html">Businesses</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html">API Guide</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../integration/index.html#use-cases">Use-Cases</a></li>
 </ul>
 </li>
 </ul>
@@ -519,7 +520,19 @@ pages.</p>
 <dt id="_CPPv2N8graphene6wallet10wallet_api15upgrade_accountE6stringb">
 <span id="graphene::wallet::wallet_api::upgrade_account__string.b"></span><span class="target" id="project0classgraphene_1_1wallet_1_1wallet__api_1af2145755728919d7e4aaf0f02d7c4e82"></span>signed_transaction <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">upgrade_account</code><span class="sig-paren">(</span>string <em>name</em>, bool <em>broadcast</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api15upgrade_accountE6stringb" title="Permalink to this definition">¶</a></dt>
 <dd><p>Upgrades an account to prime status. This makes the account holder a &#8216;lifetime member&#8217;.</p>
-<p></p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>the signed transaction upgrading the account </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">name</span></code> - <p>the name or id of the account to upgrade </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">broadcast</span></code> - <p>true to broadcast the transaction on the network </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
 </dd></dl>
 
 <dl class="function">
@@ -1534,8 +1547,8 @@ pages.</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N8graphene6wallet10wallet_api17transfer_to_blindE6string6string3mapI6string6stringEb">
-<span id="graphene::wallet::wallet_api::transfer_to_blind__string.string.map:string.string:.b"></span><span class="target" id="project0classgraphene_1_1wallet_1_1wallet__api_1a2d270d1d0cc67d4fda65f165b7e486e7"></span><a class="reference internal" href="../development/namespaces/wallet.html#_CPPv2N8graphene6wallet18blind_confirmationE" title="graphene::wallet::blind_confirmation">blind_confirmation</a> <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">transfer_to_blind</code><span class="sig-paren">(</span>string <em>from_account_id_or_name</em>, string <em>asset_symbol</em>, map&lt;string, string&gt; <em>to_amounts</em>, bool <em>broadcast</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api17transfer_to_blindE6string6string3mapI6string6stringEb" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N8graphene6wallet10wallet_api17transfer_to_blindE6string6string6vectorI4pairI6string6stringEEb">
+<span id="graphene::wallet::wallet_api::transfer_to_blind__string.string.vector:pair:string.string::.b"></span><span class="target" id="project0classgraphene_1_1wallet_1_1wallet__api_1a6209fb37844e23c339c959a7afe996df"></span><a class="reference internal" href="../development/namespaces/wallet.html#_CPPv2N8graphene6wallet18blind_confirmationE" title="graphene::wallet::blind_confirmation">blind_confirmation</a> <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">transfer_to_blind</code><span class="sig-paren">(</span>string <em>from_account_id_or_name</em>, string <em>asset_symbol</em>, vector&lt;pair&lt;string, string&gt;&gt; <em>to_amounts</em>, bool <em>broadcast</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api17transfer_to_blindE6string6string6vectorI4pairI6string6stringEEb" title="Permalink to this definition">¶</a></dt>
 <dd><p><dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last">

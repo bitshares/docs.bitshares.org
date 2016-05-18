@@ -832,7 +832,19 @@
 <dt id="_CPPv2N8graphene6wallet10wallet_api15upgrade_accountE6stringb">
 <span id="graphene::wallet::wallet_api::upgrade_account__string.b"></span><span class="target" id="project0classgraphene_1_1wallet_1_1wallet__api_1af2145755728919d7e4aaf0f02d7c4e82"></span>signed_transaction <code class="descname">upgrade_account</code><span class="sig-paren">(</span>string <em>name</em>, bool <em>broadcast</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api15upgrade_accountE6stringb" title="Permalink to this definition">¶</a></dt>
 <dd><p>Upgrades an account to prime status. This makes the account holder a &#8216;lifetime member&#8217;.</p>
-<p></p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>the signed transaction upgrading the account </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">name</span></code> - <p>the name or id of the account to upgrade </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">broadcast</span></code> - <p>true to broadcast the transaction on the network </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
 </dd></dl>
 
 <dl class="function">
@@ -931,8 +943,8 @@
 </dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N8graphene6wallet10wallet_api17transfer_to_blindE6string6string3mapI6string6stringEb">
-<span id="graphene::wallet::wallet_api::transfer_to_blind__string.string.map:string.string:.b"></span><span class="target" id="project0classgraphene_1_1wallet_1_1wallet__api_1a2d270d1d0cc67d4fda65f165b7e486e7"></span><a class="reference internal" href="#_CPPv2N8graphene6wallet18blind_confirmationE" title="graphene::wallet::blind_confirmation">blind_confirmation</a> <code class="descname">transfer_to_blind</code><span class="sig-paren">(</span>string <em>from_account_id_or_name</em>, string <em>asset_symbol</em>, map&lt;string, string&gt; <em>to_amounts</em>, bool <em>broadcast</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api17transfer_to_blindE6string6string3mapI6string6stringEb" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2N8graphene6wallet10wallet_api17transfer_to_blindE6string6string6vectorI4pairI6string6stringEEb">
+<span id="graphene::wallet::wallet_api::transfer_to_blind__string.string.vector:pair:string.string::.b"></span><span class="target" id="project0classgraphene_1_1wallet_1_1wallet__api_1a6209fb37844e23c339c959a7afe996df"></span><a class="reference internal" href="#_CPPv2N8graphene6wallet18blind_confirmationE" title="graphene::wallet::blind_confirmation">blind_confirmation</a> <code class="descname">transfer_to_blind</code><span class="sig-paren">(</span>string <em>from_account_id_or_name</em>, string <em>asset_symbol</em>, vector&lt;pair&lt;string, string&gt;&gt; <em>to_amounts</em>, bool <em>broadcast</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api17transfer_to_blindE6string6string6vectorI4pairI6string6stringEEb" title="Permalink to this definition">¶</a></dt>
 <dd><p><dl class="docutils">
 <dt><strong>Parameters</strong></dt>
 <dd><ul class="breatheparameterlist first last">
@@ -987,6 +999,62 @@
 <li><code class="first docutils literal"><span class="pre">fill_or_kill</span></code> - <p>if true, the order will only be included in the blockchain if it is filled immediately; if false, an open order will be left on the books to fill any amount that cannot be filled immediately. </p>
 </li>
 <li><code class="first docutils literal"><span class="pre">broadcast</span></code> - <p>true to broadcast the transaction on the network </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene6wallet10wallet_api4sellE6string6string6stringddb">
+<span id="graphene::wallet::wallet_api::sell__string.string.string.double.double.b"></span><span class="target" id="project0classgraphene_1_1wallet_1_1wallet__api_1af7ab2dc13b476136355a327b7a4e60cf"></span>signed_transaction <code class="descname">sell</code><span class="sig-paren">(</span>string <em>seller_account</em>, string <em>base</em>, string <em>quote</em>, double <em>rate</em>, double <em>amount</em>, bool <em>broadcast</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api4sellE6string6string6stringddb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Place a limit order attempting to sell one asset for another.</p>
+<p>This API call abstracts away some of the details of the sell_asset call to be more user friendly. All orders placed with sell never timeout and will not be killed if they cannot be filled immediately. If you wish for one of these parameters to be different, then sell_asset should be used instead.</p>
+<p><dl class="docutils">
+<dt><strong>Return</strong></dt>
+<dd>The signed transaction selling the funds. </dd>
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">seller_account</span></code> - <p>the account providing the asset being sold, and which will receive the processed of the sale. </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">base</span></code> - <p>The name or id of the asset to sell. </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">quote</span></code> - <p>The name or id of the asset to recieve. </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">rate</span></code> - <p>The rate in base:quote at which you want to sell. </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">amount</span></code> - <p>The amount of base you want to sell. </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">broadcast</span></code> - <p>true to broadcast the transaction on the network. </p>
+</li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N8graphene6wallet10wallet_api3buyE6string6string6stringddb">
+<span id="graphene::wallet::wallet_api::buy__string.string.string.double.double.b"></span><span class="target" id="project0classgraphene_1_1wallet_1_1wallet__api_1a16229e03bc23a1abc134c808cffd844a"></span>signed_transaction <code class="descname">buy</code><span class="sig-paren">(</span>string <em>buyer_account</em>, string <em>base</em>, string <em>quote</em>, double <em>rate</em>, double <em>amount</em>, bool <em>broadcast</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api3buyE6string6string6stringddb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Place a limit order attempting to buy one asset with another.</p>
+<p>This API call abstracts away some of the details of the sell_asset call to be more user friendly. All orders placed with buy never timeout and will not be killed if they cannot be filled immediately. If you wish for one of these parameters to be different, then sell_asset should be used instead.</p>
+<p><dl class="docutils">
+<dt><strong>Parameters</strong></dt>
+<dd><ul class="breatheparameterlist first last">
+<li><code class="first docutils literal"><span class="pre">buyer_account</span></code> - <p>The account buying the asset for another asset. </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">base</span></code> - <p>The name or id of the asset to buy. </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">quote</span></code> - <p>The name or id of the assest being offered as payment. </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">rate</span></code> - <p>The rate in base:quote at which you want to buy. </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">amount</span></code> - <p>the amount of base you want to buy. </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">broadcast</span></code> - <p>true to broadcast the transaction on the network. </p>
+</li>
+<li><code class="first docutils literal"><span class="pre">The</span></code> - <p>signed transaction selling the funds. </p>
 </li>
 </ul>
 </dd>
@@ -1824,6 +1892,19 @@
 <dl class="function">
 <dt id="_CPPv2N8graphene6wallet6detail19normalize_brain_keyE6string">
 <span id="graphene::wallet::detail::normalize_brain_key__string"></span><span class="target" id="project0namespacegraphene_1_1wallet_1_1detail_1ab0dc05ce8662a76f8608d0a7adca5013"></span>string <code class="descname">normalize_brain_key</code><span class="sig-paren">(</span>string <em>s</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet6detail19normalize_brain_keyE6string" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="type">
+<dt id="_CPPv2N8graphene6wallet4implE">
+<span id="graphene::wallet::impl"></span><span class="target" id="project0namespacegraphene_1_1wallet_1_1impl"></span><em class="property">namespace </em><code class="descname">impl</code><a class="headerlink" href="#_CPPv2N8graphene6wallet4implE" title="Permalink to this definition">¶</a></dt>
+<dd><div class="breathe-sectiondef container">
+<p class="breathe-sectiondef-title rubric">Functions</p>
+<dl class="function">
+<dt id="_CPPv2N8graphene6wallet4impl10clean_nameERKNSt6stringE">
+<span id="graphene::wallet::impl::clean_name__ssCR"></span><span class="target" id="project0namespacegraphene_1_1wallet_1_1impl_1aec83796865d745f152820e2de0f82209"></span>std::string <code class="descname">clean_name</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet4impl10clean_nameERKNSt6stringE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
