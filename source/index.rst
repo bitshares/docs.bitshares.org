@@ -35,10 +35,11 @@ Recent Updates
 
 .. r!date +\%y/\%m/\%d
 
+* ``16/06/29`` :doc:`bitshares/tutorials/distributed-access-hosting`
 * ``16/04/07`` :doc:`Getting Started <bitshares/user/first-steps-users>`
 * ``16/03/17`` :doc:`integration/traders/index`, :doc:`integration/libraries/index`
 * ``16/03/15`` :doc:`bitshares/investor/index`, :doc:`bitshares/investor/claim`, :doc:`bitshares/migration/legacy-blockchain`
-* ``16/03/02`` :doc:`bitshares/user/referal-program`
+* ``16/03/02`` :doc:`bitshares/user/referral-program`
 * ``16/03/01`` :doc:`bitshares/tutorials/cli-wallet-usage`, :doc:`bitshares/tutorials/transfer-funds-cli`, :doc:`bitshares/user/voting`, :doc:`bitshares/tutorials/voting`
 * ``16/02/13`` Huge improvements in the :doc:`api/index`
 * ``16/02/08`` :doc:`bitshares/user/committee`, :doc:`bitshares/tutorials/committee-approve-proposal`, :doc:`bitshares/user/vesting`

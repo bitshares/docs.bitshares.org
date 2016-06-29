@@ -2,16 +2,6 @@
 Tutorials
 *********
 
-API Usage
-#########
-
-.. toctree::
-   :maxdepth: 1
-
-   full-node-usage
-   cli-wallet-usage
-   transfer-funds-cli
-
 General Tutorials
 #################
 
@@ -27,6 +17,16 @@ General Tutorials
    vesting-claim
    voting
    dex-trading
+
+API Usage
+#########
+
+.. toctree::
+   :maxdepth: 1
+
+   full-node-usage
+   cli-wallet-usage
+   transfer-funds-cli
 
 Assets
 ######
@@ -78,3 +78,11 @@ Witness Tutorials
    witness-howto
    witness-create
    witness-change-key
+
+Developers
+##########
+
+.. toctree::
+   :maxdepth: 1
+
+   distributed-access-hosting
