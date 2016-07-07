@@ -6,7 +6,7 @@ A UIA can be modified by the issuer after creation. For this, a
 separated call ``update_asset`` has been created.
 
 What can and cannot be changed
-######################
+##############################
 
 Except for 
 
