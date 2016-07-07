@@ -167,7 +167,7 @@ following example script in more details:</p>
 <p>We first prepare our variables and import all required modules</p>
 <p>Define the <cite>accountID</cite> and the <cite>memo_wif_key</cite>.
 The accountID can be obtained from the GUI wallet, or by issuing::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">get_account</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">get_account</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>If the script exists abnormally, you can continue operations by setting
@@ -200,11 +200,11 @@ key. That way, exposing the memo private key will only expose transaction memos
 (for that key) and not compromise any funds. It is thus safe to store the memo
 private key in 3rd party services and scripts. The memo public key can be
 obtained from the account settings or via command line::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">get_account</span> <span class="o">&lt;</span><span class="n">myaccount</span><span class="o">&gt;</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">get_account</span> <span class="o">&lt;</span><span class="n">myaccount</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>in the cli wallet. The corresponding private key can be obtain from::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">dump_private_keys</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">dump_private_keys</span>
 </pre></div>
 </div>
 <p>Note that the latter command exposes all private keys in clear-text wif.</p>

@@ -85,7 +85,7 @@
     
         <div class="prev">
          <div class="title">previous</div>
-         <span><a href="merchant-protocol.html">Wallet Merchant Protocol</a></span>
+         <span><a href="index.html">Merchants</a></span>
         </div>
         <div class="top">
          <div class="title">top</div>
@@ -126,12 +126,12 @@
 <li class="toctree-l3"><a class="reference internal" href="../../api/index.html">API Guide</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">Merchants</a><ul class="current">
 <li class="toctree-l4 current"><a class="reference internal" href="index.html#protocols-api">Protocols/API</a><ul class="current">
-<li class="toctree-l5 current"><a class="current reference internal" href="">Wallet Login Protocol</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">Wallet Login Protocol</a></li>
 <li class="toctree-l5"><a class="reference internal" href="merchant-protocol.html">Wallet Merchant Protocol</a></li>
 </ul>
 </li>
 <li class="toctree-l4 current"><a class="reference internal" href="index.html#libraries">Libraries</a><ul class="current">
-<li class="toctree-l5 current"><a class="current reference internal" href="">Wallet Login Protocol</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">Wallet Login Protocol</a></li>
 <li class="toctree-l5"><a class="reference internal" href="merchant-protocol.html">Wallet Merchant Protocol</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../libraries/index.html">Supporting Libraries</a></li>
 </ul>
@@ -197,9 +197,9 @@ provider that will be assisting the user with their login.</p>
 <p>The merchant must provide the user with a login button that links to
 <code class="docutils literal"><span class="pre">https://wallet.org/login#${args}</span></code> where <cite>${args}`</cite> is a JSON object
 containing following information and serialized as described below:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
-   <span class="s2">&quot;onetimekey&quot;</span> <span class="p">:</span> <span class="s2">&quot;${SERVER_PUBLIC_KEY}&quot;</span><span class="p">,</span>
-   <span class="s2">&quot;account&quot;</span>  <span class="p">:</span> <span class="s2">&quot;${OPT_ACCOUNT_NAME}&quot;</span><span class="p">,</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
+   <span class="s2">&quot;onetimekey&quot;</span> <span class="p">:</span> <span class="s2">&quot;$</span><span class="si">{SERVER_PUBLIC_KEY}</span><span class="s2">&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;account&quot;</span>  <span class="p">:</span> <span class="s2">&quot;$</span><span class="si">{OPT_ACCOUNT_NAME}</span><span class="s2">&quot;</span><span class="p">,</span>
    <span class="s2">&quot;callback&quot;</span> <span class="p">:</span> <span class="s2">&quot;https://merchant.org/login_callback&quot;</span>
 <span class="p">}</span>
 </pre></div>
@@ -241,12 +241,12 @@ multi-factor authentication may be required.</p>
 <p>After gathering all of the signatures the wallet redirects the user to
 <code class="docutils literal"><span class="pre">https://merchant.org/login_callback?a=${result}</span></code> where <code class="docutils literal"><span class="pre">result</span></code> is
 an encoded JSON object containing the following information:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>{
-   &quot;account&quot;: &quot;Graphene Account Name&quot;,
-   &quot;server_key&quot;: &quot;${SERVER_PUBLIC_KEY}&quot;,
-   &quot;account_key&quot;: &quot;${WALLET_ONETIMEKEY}&quot;,
-   &quot;signatures&quot; : [ &quot;SIG1&quot;, &quot;SIG2&quot;, .. ]
-}
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
+   <span class="s2">&quot;account&quot;</span><span class="p">:</span> <span class="s2">&quot;Graphene Account Name&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;server_key&quot;</span><span class="p">:</span> <span class="s2">&quot;$</span><span class="si">{SERVER_PUBLIC_KEY}</span><span class="s2">&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;account_key&quot;</span><span class="p">:</span> <span class="s2">&quot;$</span><span class="si">{WALLET_ONETIMEKEY}</span><span class="s2">&quot;</span><span class="p">,</span>
+   <span class="s2">&quot;signatures&quot;</span> <span class="p">:</span> <span class="p">[</span> <span class="s2">&quot;SIG1&quot;</span><span class="p">,</span> <span class="s2">&quot;SIG2&quot;</span><span class="p">,</span> <span class="o">..</span> <span class="p">]</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </div>
@@ -261,7 +261,7 @@ the public keys that correspond to the provided signatures.</p>
 signatures are sufficient to authorize the account given the current
 state of the graphene blockchain. This can be achieved using the witness
 API call::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">verify_account_authority</span><span class="p">(</span> <span class="n">account_name_or_id</span><span class="p">,</span> <span class="p">[</span><span class="n">public_keys</span><span class="o">...</span><span class="p">]</span> <span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">verify_account_authority</span><span class="p">(</span> <span class="n">account_name_or_id</span><span class="p">,</span> <span class="p">[</span><span class="n">public_keys</span><span class="o">...</span><span class="p">]</span> <span class="p">)</span>
 </pre></div>
 </div>
 <p>The <code class="docutils literal"><span class="pre">verify_account_authority</span></code> call will return <code class="docutils literal"><span class="pre">true</span></code> if the provided keys

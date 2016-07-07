@@ -224,7 +224,7 @@ ecosystem.
 
 
 Step 4: Transferring Assets Between Confidential Accounts
-####################################################
+#########################################################
 
 Let's start by creating a second wallet and confidential account we will use as
 our hypothetical final destination. We'll call this account bobby. We've already

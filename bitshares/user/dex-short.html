@@ -209,14 +209,14 @@ occur any time the highest bid is less than the <em>call price</em> and greater 
 <em>SQP</em>.
 The margin position will be forced to sell its collateral anytime the highest
 offer to buy the collateral is less than the call price (x/BTS).:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>SQP        = settlement price / MSQR
-call price = DEBT / COLLATERAL * MCR
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">SQP</span>        <span class="o">=</span> <span class="n">settlement</span> <span class="n">price</span> <span class="o">/</span> <span class="n">MSQR</span>
+<span class="n">call</span> <span class="n">price</span> <span class="o">=</span> <span class="n">DEBT</span> <span class="o">/</span> <span class="n">COLLATERAL</span> <span class="o">*</span> <span class="n">MCR</span>
 </pre></div>
 </div>
 <p>The margin call will take the collateral, buy shares of borrowed bitAsset at
 market rates up to the SQP and close the position. The remaining BTS of the
 collateral are returned to the customer.</p>
-<p>Read more about the <a class="reference internal" href="dex-margin-mechanics.html"><em>margin call mechanics</em></a> before
+<p>Read more about the <a class="reference internal" href="dex-margin-mechanics.html"><span class="doc">margin call mechanics</span></a> before
 trading.</p>
 </div>
 <div class="section" id="settlement">
@@ -225,7 +225,7 @@ trading.</p>
 The settlement closes the borrow/short positions with lowest collateral ratio
 and sells the collateral for the settlement.</p>
 <p>Note, that there is a maximum daily settlement volume (currently 2%) defined by
-the <a class="reference internal" href="committee.html"><em>committee</em></a> to prevent exploitation via external price
+the <a class="reference internal" href="committee.html"><span class="doc">committee</span></a> to prevent exploitation via external price
 movements.</p>
 </div>
 <div class="section" id="selling">

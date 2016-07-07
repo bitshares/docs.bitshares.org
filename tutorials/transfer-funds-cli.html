@@ -148,9 +148,9 @@
    
   <div class="section" id="transfering-funds-using-the-cli-wallet">
 <h1>Transfering Funds using the cli-wallet<a class="headerlink" href="#transfering-funds-using-the-cli-wallet" title="Permalink to this headline">¶</a></h1>
-<p>Once we have the <a class="reference internal" href="cli-wallet-usage.html"><em>cli-wallet set up</em></a>, we can
+<p>Once we have the <a class="reference internal" href="cli-wallet-usage.html"><span class="doc">cli-wallet set up</span></a>, we can
 transfer funds easily with the following syntax:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>unlocked &gt;&gt; transfer &lt;from&gt; &lt;to&gt; &lt;amount&gt; &lt;asset&gt; &lt;memo&gt; &lt;broadcast&gt;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">unlocked</span> <span class="o">&gt;&gt;</span> <span class="n">transfer</span> <span class="o">&lt;</span><span class="n">from</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">to</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">amount</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">asset</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">memo</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">broadcast</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -161,7 +161,7 @@ sign, but <strong>not</strong> broadcast the transaction. This can be very
 useful for a cold storage setup or to verify transactions.</p>
 </div>
 <p>If <cite>alice</cite> wants to send <cite>10 USD</cite> to <cite>bob</cite>, she could call::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>unlocked &gt;&gt; transfer alice bob 10 USD &quot;a gift&quot; true
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">unlocked</span> <span class="o">&gt;&gt;</span> <span class="n">transfer</span> <span class="n">alice</span> <span class="n">bob</span> <span class="mi">10</span> <span class="n">USD</span> <span class="s2">&quot;a gift&quot;</span> <span class="n">true</span>
 </pre></div>
 </div>
 <p>The wallet will return the actual signed transaction.</p>

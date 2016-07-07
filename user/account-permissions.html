@@ -208,8 +208,8 @@ able to construct a valid transaction if only two of those agree. Hence a
 </tr>
 </tbody>
 </table>
-<p class="graphviz">
-<img src="../_images/graphviz-a9975eda24033d32fa0244f2d9106bfcdd2a64e1.svg" alt="digraph G {
+<object data="../_images/graphviz-45542fe322df467cfc8ce1b0b1f04185f70e44c3.svg" type="image/svg+xml">
+            <p class="warning">digraph G {
  ranksep=0.5;
  nodesep=0.1;
  overlap=false;
@@ -224,8 +224,7 @@ able to construct a valid transaction if only two of those agree. Hence a
  proposal -&gt; Bob [label=&quot;33%&quot;];
  proposal -&gt; Charlie [label=&quot;33%&quot;];
  proposal -&gt; Dennis [label=&quot;33%&quot;];
-}" />
-</p>
+}</p></object>
 <p>All four participants have a weight of 33% but the threshold is set to 51%.
 Hence only two out of the four need to agree to validate the transaction.</p>
 <p>Alternatively, to construct a 3-of-4 scheme, we can either decrease the weights
@@ -266,8 +265,8 @@ much control to her friends. Hence, we create an authority similar to:</p>
 </tr>
 </tbody>
 </table>
-<p class="graphviz">
-<img src="../_images/graphviz-66da28d8eb4064ee3a3af67d19f3dac5964b9168.svg" alt="digraph G {
+<object data="../_images/graphviz-51fe0aeab219691f9721a943a0fbb94ffd9b55a9.svg" type="image/svg+xml">
+            <p class="warning">digraph G {
  ranksep=0.5;
  nodesep=0.1;
  overlap=false;
@@ -282,8 +281,7 @@ much control to her friends. Hence, we create an authority similar to:</p>
  proposal -&gt; Bob [label=&quot;25%&quot;];
  proposal -&gt; Charlie [label=&quot;25%&quot;];
  proposal -&gt; Dennis [label=&quot;10%&quot;];
-}" />
-</p>
+}</p></object>
 <p>Now the funds can either be accessed by Alice and a single friend or by all
 three friends together.</p>
 </div>
@@ -316,8 +314,8 @@ privileges. Hence we construct an authority for the funds according to:</p>
 </tr>
 </tbody>
 </table>
-<p class="graphviz">
-<img src="../_images/graphviz-2fb935ac4d3ea3f97a2740b891efc10cac2a845d.svg" alt="digraph G {
+<object data="../_images/graphviz-0a1d373cad282cc5e6e927401c013633ef6d9d37.svg" type="image/svg+xml">
+            <p class="warning">digraph G {
  ranksep=0.5;
  nodesep=0.1;
  overlap=false;
@@ -330,8 +328,7 @@ privileges. Hence we construct an authority for the funds according to:</p>
 
  proposal -&gt; &quot;CEO.COMPANY&quot; [label=&quot;51%&quot;];
  proposal -&gt; &quot;CFO.COMPANY&quot; [label=&quot;51%&quot;];
-}" />
-</p>
+}</p></object>
 <p>whereas CEO.COMPANY and CFO.COMPANY have their own authorities. For instance,
 the CFO.COMPANY account could look like:</p>
 <table border="1" class="docutils">
@@ -365,8 +362,8 @@ the CFO.COMPANY account could look like:</p>
 </tr>
 </tbody>
 </table>
-<p class="graphviz">
-<img src="../_images/graphviz-a4f027dbd98e0031f5fe222376df66e8e605c558.svg" alt="digraph G {
+<object data="../_images/graphviz-7b66010769c7bbdc891f6f8a6b47845760a0dd42.svg" type="image/svg+xml">
+            <p class="warning">digraph G {
  ranksep=0.5;
  nodesep=0.1;
  overlap=false;
@@ -388,8 +385,7 @@ the CFO.COMPANY account could look like:</p>
  &quot;Tax.COMPANY&quot; -&gt; {X1,X2};
  &quot;Accounting.COMPANY&quot; -&gt; {A1,A2,A3,A4,A5};
 
-}" />
-</p>
+}</p></object>
 <p>This scheme allows:</p>
 <ul class="simple">
 <li>the CEO to spend funds</li>

@@ -56,6 +56,7 @@ Committee
 
 If only the committee is supposed to be able to settle the market, you
 need to set the options to:::
+
   {
    "witness_fed_asset" : false,
    "committee_fed_asset" : true
@@ -66,6 +67,7 @@ Witnesses
 
 If only the witnesses are supposed to be able to settle the market, you
 need to set the options to:::
+
   {
    "witness_fed_asset" : true,
    "committee_fed_asset" : false

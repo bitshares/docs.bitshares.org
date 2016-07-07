@@ -133,7 +133,7 @@
 <li class="toctree-l3"><a class="reference internal" href="3-init-blockchain.html">Initializing Blockchain</a></li>
 <li class="toctree-l3"><a class="reference internal" href="4-cli-wallet.html">Connecting a CLI wallet</a></li>
 <li class="toctree-l3"><a class="reference internal" href="5-committee.html">Establishing a Committee</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">Web Wallet</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Web Wallet</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#dependencies">Dependencies</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#fetching-the-web-wallet">Fetching the web wallet</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#configuration">Configuration</a></li>
@@ -203,25 +203,25 @@ and install the Node dependencies.</p>
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
 <p>What we need now is the <cite>chain_id</cite> of the chain we have running. We can
 get it by executing::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>$ curl --data &#39;{&quot;jsonrpc&quot;: &quot;2.0&quot;, &quot;method&quot;: &quot;get_chain_properties&quot;, &quot;params&quot;: [], &quot;id&quot;: 1}&#39; http://127.0.0.1:11011/rpc &amp;&amp; echo
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ curl --data &#39;{&quot;jsonrpc&quot;: &quot;2.0&quot;, &quot;method&quot;: &quot;get_chain_properties&quot;, &quot;params&quot;: [], &quot;id&quot;: 1}&#39; http://127.0.0.1:11011/rpc &amp;&amp; echo
 </pre></div>
 </div>
 <p>The chain id is used to let the web wallet know to which network it
 connects and how to deal with it. For this we modify the file
 <cite>dl/src/chain/config.coffee</cite> and add our blockchain::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>Test:
-    core_asset: &quot;TEST&quot;
-    address_prefix: &quot;TEST&quot;
-    chain_id: &quot;&lt;chain-id&gt;&quot;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Test</span><span class="p">:</span>
+    <span class="n">core_asset</span><span class="p">:</span> <span class="s2">&quot;TEST&quot;</span>
+    <span class="n">address_prefix</span><span class="p">:</span> <span class="s2">&quot;TEST&quot;</span>
+    <span class="n">chain_id</span><span class="p">:</span> <span class="s2">&quot;&lt;chain-id&gt;&quot;</span>
 </pre></div>
 </div>
 <p>Furthermore, we need to tell our web wallet to which witness node to
 connect to. This can be done in the file
 <cite>dl/src/stores/SettingsStore.js</cite>.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>connection: &quot;ws://&lt;host&gt;/ws&quot;,
-faucet_address: &quot;https://&lt;host&gt;&quot;,
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">connection</span><span class="p">:</span> <span class="s2">&quot;ws://&lt;host&gt;/ws&quot;</span><span class="p">,</span>
+<span class="n">faucet_address</span><span class="p">:</span> <span class="s2">&quot;https://&lt;host&gt;&quot;</span><span class="p">,</span>
 
-# also edit the &quot;default&quot; settings
+<span class="c1"># also edit the &quot;default&quot; settings</span>
 </pre></div>
 </div>
 </div>

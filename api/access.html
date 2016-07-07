@@ -162,7 +162,7 @@ the websocket connection with callbacks to access API-1:</p>
 <code class="docutils literal"><span class="pre">bytemaster</span></code> with password <code class="docutils literal"><span class="pre">supersecret</span></code> to access four different API&#8217;s, while
 allowing any other user to access the three public API&#8217;s necessary to use the
 wallet::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
    <span class="s2">&quot;permission_map&quot;</span> <span class="p">:</span>
    <span class="p">[</span>
       <span class="p">[</span>
@@ -191,7 +191,7 @@ password.  A single asterisk <code class="docutils literal"><span class="pre">*<
 hash to accept any value.</p>
 <p>With the above configuration, here is an example of how to call <code class="docutils literal"><span class="pre">add_node</span></code> from
 the <code class="docutils literal"><span class="pre">network_node</span></code> API::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;method&quot;</span><span class="p">:</span><span class="s2">&quot;call&quot;</span><span class="p">,</span> <span class="s2">&quot;params&quot;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;login&quot;</span><span class="p">,[</span><span class="s2">&quot;bytemaster&quot;</span><span class="p">,</span> <span class="s2">&quot;supersecret&quot;</span><span class="p">]]}</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;method&quot;</span><span class="p">:</span><span class="s2">&quot;call&quot;</span><span class="p">,</span> <span class="s2">&quot;params&quot;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;login&quot;</span><span class="p">,[</span><span class="s2">&quot;bytemaster&quot;</span><span class="p">,</span> <span class="s2">&quot;supersecret&quot;</span><span class="p">]]}</span>
 <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;method&quot;</span><span class="p">:</span><span class="s2">&quot;call&quot;</span><span class="p">,</span> <span class="s2">&quot;params&quot;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;network_node&quot;</span><span class="p">,[]]}</span>
 <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;method&quot;</span><span class="p">:</span><span class="s2">&quot;call&quot;</span><span class="p">,</span> <span class="s2">&quot;params&quot;</span><span class="p">:[</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;add_node&quot;</span><span class="p">,[</span><span class="s2">&quot;127.0.0.1:9090&quot;</span><span class="p">]]}</span>
 </pre></div>
@@ -208,7 +208,7 @@ information about APIs.</p>
 <dl class="class">
 <dt id="_CPPv2N8graphene3app9login_apiE">
 <span id="graphene::app::login_api"></span><span class="target" id="project0classgraphene_1_1app_1_1login__api"></span><em class="property">class </em><code class="descclassname">graphene::app::</code><code class="descname">login_api</code><a class="headerlink" href="#_CPPv2N8graphene3app9login_apiE" title="Permalink to this definition">¶</a></dt>
-<dd><p>The <a class="reference internal" href="../development/namespaces/app.html#project0classgraphene_1_1app_1_1login__api"><span>login_api</span></a> class implements the bottom layer of the RPC API. </p>
+<dd><p>The <a class="reference internal" href="../development/namespaces/app.html#project0classgraphene_1_1app_1_1login__api"><span class="std std-ref">login_api</span></a> class implements the bottom layer of the RPC API. </p>
 <p>All other APIs must be requested from this API. </p>
 <div class="breathe-sectiondef container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>

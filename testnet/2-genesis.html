@@ -129,7 +129,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Testnets</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="public-testnet-howto.html">Public Testnet Howto</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="1-install.html">Installation/Confguration of Witness</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">Genesis Configuration</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Genesis Configuration</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#genesis-editing">Genesis editing</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="#writing-final-genesis">Writing final genesis</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#including-genesis-into-the-binaries">Including Genesis into the binaries</a></li>
@@ -205,7 +205,7 @@ chains (unless one of them has exactly the same genesis file you do).</p>
 <h3>Writing final genesis<a class="headerlink" href="#writing-final-genesis" title="Permalink to this headline">¶</a></h3>
 <p>We now copy our gensis template file over to the graphene root
 directory::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>$ cp genesis/my-genesis.json genesis.json
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ cp genesis/my-genesis.json genesis.json
 $ vim genesis.json
 $ git add genesis.json
 $ git commit -m &quot;Added genesis.json&quot;
@@ -229,7 +229,7 @@ $ cmake -DGRAPHENE_EGENESIS_JSON=&#8221;$(pwd)/genesis.json&#8221; .</dd>
 </dl>
 <p>You can add the <code class="docutils literal"><span class="pre">GRAPHENE_EGENESIS_JSON</span></code> to the default parameters by
 adding:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>set(GRAPHENE_EGENESIS_JSON &quot;${CMAKE_CURRENT_SOURCE_DIR}/genesis.json&quot; )
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="p">(</span><span class="n">GRAPHENE_EGENESIS_JSON</span> <span class="s2">&quot;$</span><span class="si">{CMAKE_CURRENT_SOURCE_DIR}</span><span class="s2">/genesis.json&quot;</span> <span class="p">)</span>
 </pre></div>
 </div>
 <p>to the <code class="docutils literal"><span class="pre">CMakeLists.txt</span></code> file. This way, you don&#8217;t need to provide this

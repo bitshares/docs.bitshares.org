@@ -122,18 +122,19 @@
 <li class="toctree-l3"><a class="reference internal" href="../investor/index.html">Investor Guide</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../developers/index.html">Businesses, Developers and Business Developers</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">Tutorials</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="index.html#api-usage">API Usage</a></li>
 <li class="toctree-l4"><a class="reference internal" href="index.html#general-tutorials">General Tutorials</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#api-usage">API Usage</a></li>
 <li class="toctree-l4"><a class="reference internal" href="index.html#assets">Assets</a></li>
 <li class="toctree-l4"><a class="reference internal" href="index.html#prediction-markets">Prediction Markets</a></li>
 <li class="toctree-l4"><a class="reference internal" href="index.html#committee-tutorials">Committee Tutorials</a></li>
 <li class="toctree-l4"><a class="reference internal" href="index.html#worker-tutorials">Worker Tutorials</a></li>
 <li class="toctree-l4 current"><a class="reference internal" href="index.html#witness-tutorials">Witness Tutorials</a><ul class="current">
-<li class="toctree-l5 current"><a class="current reference internal" href="">Howto Run a Block-producing Witness</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">Howto Run a Block-producing Witness</a></li>
 <li class="toctree-l5"><a class="reference internal" href="witness-create.html">Howto Become an Active Witness</a></li>
 <li class="toctree-l5"><a class="reference internal" href="witness-change-key.html">Change the Signing Key of your Witness</a></li>
 </ul>
 </li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#developers">Developers</a></li>
 </ul>
 </li>
 </ul>
@@ -190,9 +191,9 @@ witness node.</p>
 <div class="section" id="requirements">
 <h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>A registered account in the corresponding network (see i.e. <a class="reference internal" href="../user/account.html"><em>Accounts</em></a>)</li>
+<li>A registered account in the corresponding network (see i.e. <a class="reference internal" href="../user/account.html"><span class="doc">Accounts</span></a>)</li>
 <li>Some funds in the account to pay for the registration fee</li>
-<li>Executable binary (see <a class="reference internal" href="../installation/index.html"><em>Installation</em></a>)</li>
+<li>Executable binary (see <a class="reference internal" href="../installation/index.html"><span class="doc">Installation</span></a>)</li>
 </ul>
 </div>
 <div class="section" id="overview">
@@ -212,7 +213,7 @@ witness node.</p>
 <h2>Run the witness as a node in the network<a class="headerlink" href="#run-the-witness-as-a-node-in-the-network" title="Permalink to this headline">¶</a></h2>
 <p>We first run the witness node without block production and connect it to the
 P2P network with the following command::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>$ programs/witness_node/witness_node --rpc-endpoint 127.0.0.1:8090
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ programs/witness_node/witness_node --rpc-endpoint 127.0.0.1:8090
 </pre></div>
 </div>
 <p>We open a RPC port for local host so that we can later connect the CLI wallet
@@ -223,12 +224,12 @@ other participants, we can go on to the next step.</p>
 <h2>Creating a wallet<a class="headerlink" href="#creating-a-wallet" title="Permalink to this headline">¶</a></h2>
 <p>We now open up the cli_wallet and connect to our plain and stupid witness
 node::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>$ programs/cli_wallet/cli_wallet -s ws://127.0.0.1:8090
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ programs/cli_wallet/cli_wallet -s ws://127.0.0.1:8090
 </pre></div>
 </div>
 <p>First thing to do is setting up a password for the newly created wallet prior to
 importing any private keys::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">set_password</span> <span class="o">&lt;</span><span class="n">password</span><span class="o">&gt;</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">set_password</span> <span class="o">&lt;</span><span class="n">password</span><span class="o">&gt;</span>
 <span class="go">null</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">unlock</span> <span class="o">&lt;</span><span class="n">password</span><span class="o">&gt;</span>
 <span class="go">null</span>
@@ -241,7 +242,7 @@ importing any private keys::</p>
 <h2>Basic Account Management<a class="headerlink" href="#basic-account-management" title="Permalink to this headline">¶</a></h2>
 <p>We can import the account name (owner key) and the balance containing (active)
 key into the CLI wallet::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">import_key</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">owner</span> <span class="n">wif</span> <span class="n">key</span><span class="o">&gt;</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">import_key</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">owner</span> <span class="n">wif</span> <span class="n">key</span><span class="o">&gt;</span>
 <span class="go">true</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">import_key</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">active</span> <span class="n">wif</span> <span class="n">key</span><span class="o">&gt;</span>
 <span class="go">true</span>
@@ -259,7 +260,7 @@ key into the CLI wallet::</p>
 <p>Both keys can be exported from the web wallet.</p>
 <p>Since only lifetime members can become witnesses, you must first upgrade to a
 lifetime member. This step costs the lifetime-upgrade fee::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">upgrade_account</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span> <span class="n">true</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">upgrade_account</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span> <span class="n">true</span>
 <span class="go">[a transaction in json format]</span>
 </pre></div>
 </div>
@@ -269,7 +270,7 @@ lifetime member. This step costs the lifetime-upgrade fee::</p>
 <p>To become a witness and be able to produce blocks, you first need to create a
 witness object that can be voted in.</p>
 <p>We create a new witness object by issuing::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">create_witness</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span> <span class="s2">&quot;http://&lt;url-to-proposal&gt;&quot;</span> <span class="n">true</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">create_witness</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span> <span class="s2">&quot;http://&lt;url-to-proposal&gt;&quot;</span> <span class="n">true</span>
 <span class="go">{</span>
 <span class="go">  &quot;ref_block_num&quot;: 139,</span>
 <span class="go">  &quot;ref_block_prefix&quot;: 3692461913,</span>
@@ -296,7 +297,7 @@ witness object that can be voted in.</p>
 <p>Our witness is registered, but it can&#8217;t produce blocks because nobody has voted
 it in. You can see the current list of active witnesses with
 <cite>get_global_properties</cite>::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">get_global_properties</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">get_global_properties</span>
 <span class="go">{</span>
 <span class="go">  &quot;active_witnesses&quot;: [</span>
 <span class="go">&quot;1.6.0&quot;,</span>
@@ -314,7 +315,7 @@ it in. You can see the current list of active witnesses with
 </div>
 <p>Now, we should vote our witness in. Vote all of the shares your account
 <code class="docutils literal"><span class="pre">&lt;accountname&gt;</span></code> in favor of your new witness.:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">vote_for_witness</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span> <span class="n">true</span> <span class="n">true</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">vote_for_witness</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span> <span class="n">true</span> <span class="n">true</span>
 <span class="go">[a transaction in json format]</span>
 </pre></div>
 </div>
@@ -332,7 +333,7 @@ voted in.</p>
 <div class="section" id="configuration-of-the-witness-node">
 <h2>Configuration of the Witness Node<a class="headerlink" href="#configuration-of-the-witness-node" title="Permalink to this headline">¶</a></h2>
 <p>Get the witness object using:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>get_witness &lt;witness-account&gt;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">get_witness</span> <span class="o">&lt;</span><span class="n">witness</span><span class="o">-</span><span class="n">account</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>and take note of two things. The <code class="docutils literal"><span class="pre">id</span></code> is displayed in <code class="docutils literal"><span class="pre">get_global_properties</span></code>
@@ -357,7 +358,7 @@ terminal, don&#8217;t do this with someone looking over your shoulder.</p>
 </div>
 <p>The <code class="docutils literal"><span class="pre">id</span></code> and the <code class="docutils literal"><span class="pre">signing_key</span></code> are the two important parameters, here. Let&#8217;s get
 the private key for that signing key with::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">dump_private_keys</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">dump_private_keys</span>
 <span class="go">[[</span>
 <span class="go">  ...</span>
 <span class="go">  ],[</span>
@@ -370,13 +371,13 @@ the private key for that signing key with::</p>
 <p>Now we need to start the witness, so shut down the wallet (ctrl-d),  and shut
 down the witness (ctrl-c).  Re-launch the witness, now mentioning the new
 witness 1.6.10 and its keypair::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>./witness_node --rpc-endpoint=127.0.0.1:8090 \
-               --witness-id &#39;&quot;1.6.10&quot;&#39; \
-               --private-key &#39;[&quot;GPH7vQ7GmRSJfDHxKdBmWMeDMFENpmHWKn99J457BNApiX1T5TNM8&quot;, &quot;5JGi7DM7J8fSTizZ4D9roNgd8dUc5pirUe9taxYCUUsnvQ4zCaQ&quot;]&#39;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">witness_node</span> <span class="o">--</span><span class="n">rpc</span><span class="o">-</span><span class="n">endpoint</span><span class="o">=</span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">8090</span> \
+               <span class="o">--</span><span class="n">witness</span><span class="o">-</span><span class="nb">id</span> <span class="s1">&#39;&quot;1.6.10&quot;&#39;</span> \
+               <span class="o">--</span><span class="n">private</span><span class="o">-</span><span class="n">key</span> <span class="s1">&#39;[&quot;GPH7vQ7GmRSJfDHxKdBmWMeDMFENpmHWKn99J457BNApiX1T5TNM8&quot;, &quot;5JGi7DM7J8fSTizZ4D9roNgd8dUc5pirUe9taxYCUUsnvQ4zCaQ&quot;]&#39;</span>
 </pre></div>
 </div>
 <p>Alternatively, you can also add this line into yout config.ini::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">witness</span><span class="o">-</span><span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;1.6.10&quot;</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">witness</span><span class="o">-</span><span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;1.6.10&quot;</span>
 <span class="n">private</span><span class="o">-</span><span class="n">key</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;GPH7vQ7GmRSJfDHxKdBmWMeDMFENpmHWKn99J457BNApiX1T5TNM8&quot;</span><span class="p">,</span><span class="s2">&quot;5JGi7DM7J8fSTizZ4D9roNgd8dUc5pirUe9taxYCUUsnvQ4zCaQ&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -390,8 +391,8 @@ above!</p>
 <h2>Verifying Block Production<a class="headerlink" href="#verifying-block-production" title="Permalink to this headline">¶</a></h2>
 <p>If you monitor the output of the <cite>witness_node</cite>, you should see it generate
 blocks signed by your witness::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>Witness 1.6.10 production slot has arrived; generating a block now...
-Generated block #367 with timestamp 2015-07-05T20:46:30 at time 2015-07-05T20:46:30
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Witness</span> <span class="mf">1.6</span><span class="o">.</span><span class="mi">10</span> <span class="n">production</span> <span class="n">slot</span> <span class="n">has</span> <span class="n">arrived</span><span class="p">;</span> <span class="n">generating</span> <span class="n">a</span> <span class="n">block</span> <span class="n">now</span><span class="o">...</span>
+<span class="n">Generated</span> <span class="n">block</span> <span class="c1">#367 with timestamp 2015-07-05T20:46:30 at time 2015-07-05T20:46:30</span>
 </pre></div>
 </div>
 </div>

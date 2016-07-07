@@ -73,7 +73,7 @@ We have set it to be:
             listen 80;
             server_name localhost;
 
-            location ~ ^/[\w\d\.-]+\.(js|css|dat)$ {
+            location ~ ^/[\w\d\.-]+\.(js|css|dat|png|json)$ {
                 root /www/current/public/;
                 try_files $uri /wallet$uri =404;
             }

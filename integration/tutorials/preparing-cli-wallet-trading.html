@@ -85,7 +85,7 @@
     
         <div class="prev">
          <div class="title">previous</div>
-         <span><a href="../../api/network_node.html">Network Nodes API</a></span>
+         <span><a href="../traders/index.html">Traders</a></span>
         </div>
         <div class="top">
          <div class="title">top</div>
@@ -93,7 +93,7 @@
         </div>
         <div class="next">
          <div class="title">next</div>
-         <span><a href="../../api/wallet-api.html">Wallet API Calls</a></span>
+         <span><a href="../businesses/index.html">Businesses</a></span>
         </div>
 
    </div>
@@ -118,31 +118,8 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../muse/index.html">MUSE</a></li>
 </ul>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Integration Guide</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../index.html#basic-knowledge">Basic Knowledge</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html#use-cases">Use-Cases</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../exchanges/index.html">Exchanges, Bridges, and Gateways</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../api/index.html">API Guide</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../merchants/index.html">Merchants</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../api/index.html">API Guide</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="../traders/index.html">Traders</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="../traders/index.html#public-api">Public API</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="../traders/index.html#private-api">Private API</a><ul class="current">
-<li class="toctree-l5 current"><a class="current reference internal" href="">Howto prepare a CLI wallet for trading</a></li>
-<li class="toctree-l5"><a class="reference internal" href="../../api/wallet-api.html">Wallet API Calls</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="../traders/index.html#libraries">Libraries</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../api/index.html">API Guide</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../businesses/index.html">Businesses</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../api/index.html">API Guide</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Integration Guide</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API Guide</a></li>
@@ -195,7 +172,7 @@ CLI wallet can be compile manually via</p>
 <h2>Executing the cli-wallet<a class="headerlink" href="#executing-the-cli-wallet" title="Permalink to this headline">¶</a></h2>
 <p>All it takes for the cli-wallet to run is a trusted <strong>public API
 server</strong> to interface with the blockchain. These public API servers are
-run by businesses and <a class="reference internal" href="../../bitshares/tutorials/full-node-usage.html"><em>individuals</em></a>:</p>
+run by businesses and <a class="reference internal" href="../../bitshares/tutorials/full-node-usage.html"><span class="doc">individuals</span></a>:</p>
 <p><strong>BitShares Public Full Nodes:</strong></p>
 <table border="1" class="docutils">
 <colgroup>
@@ -224,7 +201,7 @@ application with it. You have the choices of</p>
 a local wallet, will ask you to provide a passphrase for your local
 wallet.  Once a wallet has been created (default wallet file is
 <code class="docutils literal"><span class="pre">wallet.json</span></code>), it will prompt with</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>locked &gt;&gt;&gt;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">locked</span> <span class="o">&gt;&gt;&gt;</span>
 </pre></div>
 </div>
 <p>In order for the wallet to be able to sign trading orders, you need to
@@ -234,18 +211,18 @@ unlock it by providing the passphrase:</p>
 <p class="last">The passphrase is given in clear text and is echoed by the
 wallet!</p>
 </div>
-<div class="highlight-python"><div class="highlight"><pre><span></span>locked &gt;&gt;&gt; unlock &quot;supersecretpassphrase&quot;
-null
-unlocked &gt;&gt;&gt;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">locked</span> <span class="o">&gt;&gt;&gt;</span> <span class="n">unlock</span> <span class="s2">&quot;supersecretpassphrase&quot;</span>
+<span class="n">null</span>
+<span class="n">unlocked</span> <span class="o">&gt;&gt;&gt;</span>
 </pre></div>
 </div>
-<p>After this point, you can issue <a class="reference internal" href="../../api/wallet-api.html"><em>any command available to the
-cli-wallet</em></a> or construct your <a class="reference internal" href="../../bitshares/tutorials/construct-transaction.html"><em>own
-transaction manually</em></a>.</p>
+<p>After this point, you can issue <a class="reference internal" href="../../api/wallet-api.html"><span class="doc">any command available to the
+cli-wallet</span></a> or construct your <a class="reference internal" href="../../bitshares/tutorials/construct-transaction.html"><span class="doc">own
+transaction manually</span></a>.</p>
 <p>You can get more detailed information either by pressing <cite>Tab</cite>, twice,
 or by issuing <code class="docutils literal"><span class="pre">help</span></code>.
 Detailed explanations for most calls are available via</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>unlocked &gt;&gt; gethelp &lt;command&gt;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">unlocked</span> <span class="o">&gt;&gt;</span> <span class="n">gethelp</span> <span class="o">&lt;</span><span class="n">command</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <div class="admonition note">

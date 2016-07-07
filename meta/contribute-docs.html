@@ -128,7 +128,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">How to Contribute</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="contribute-bitshares.html">Contribute to BitShares</a></li>
 <li class="toctree-l2"><a class="reference internal" href="contribute-graphene.html">Contribute to Graphene</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Contributing to the Documentation</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Contributing to the Documentation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#quick-install-in-osx">Quick Install in OSX</a></li>
 </ul>
@@ -190,11 +190,11 @@ are located in the <code class="docutils literal"><span class="pre">gh-pages</sp
 <div class="section" id="quick-install-in-osx">
 <h3>Quick Install in OSX<a class="headerlink" href="#quick-install-in-osx" title="Permalink to this headline">¶</a></h3>
 <p>It&#8217;s easy to get started on OSX using brew and easy_install.</p>
-<div class="code sh highlight-python"><div class="highlight"><pre><span></span>brew install doxygen
-brew install graphviz
+<div class="code sh highlight-default"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">doxygen</span>
+<span class="n">brew</span> <span class="n">install</span> <span class="n">graphviz</span>
 
-easy_install sphinx
-easy_install breathe
+<span class="n">easy_install</span> <span class="n">sphinx</span>
+<span class="n">easy_install</span> <span class="n">breathe</span>
 </pre></div>
 </div>
 </div>
@@ -203,7 +203,7 @@ easy_install breathe
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
 <p>In <cite>source/conf.py</cite> point the graphene key to the xml folder of the graphene
 sources:</p>
-<div class="code json highlight-python"><div class="highlight"><pre><span></span><span class="n">breathe_projects</span> <span class="o">=</span> <span class="p">{</span>
+<div class="code json highlight-default"><div class="highlight"><pre><span></span><span class="n">breathe_projects</span> <span class="o">=</span> <span class="p">{</span>
    <span class="s2">&quot;graphene&quot;</span><span class="p">:</span> <span class="s2">&quot;../../graphene/doxygen/xml/&quot;</span><span class="p">,</span>
 <span class="p">}</span>
 </pre></div>
@@ -211,7 +211,7 @@ sources:</p>
 </div>
 <div class="section" id="building">
 <h2>Building<a class="headerlink" href="#building" title="Permalink to this headline">¶</a></h2>
-<div class="code sh highlight-python"><div class="highlight"><pre><span></span>make html
+<div class="code sh highlight-default"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">html</span>
 </pre></div>
 </div>
 </div>
@@ -229,9 +229,9 @@ deployment installs the page simultanisouly at</p>
 <li>docs.bitshares.eu</li>
 </ul>
 </div></blockquote>
-<div class="code sh highlight-python"><div class="highlight"><pre><span></span>git remote set-url origin github:BitSharesEurope/docs.bitshares.eu
-git remote     add org    github:BitSharesEurope/docs.bitshares.org
-make deploy
+<div class="code sh highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">remote</span> <span class="nb">set</span><span class="o">-</span><span class="n">url</span> <span class="n">origin</span> <span class="n">github</span><span class="p">:</span><span class="n">BitSharesEurope</span><span class="o">/</span><span class="n">docs</span><span class="o">.</span><span class="n">bitshares</span><span class="o">.</span><span class="n">eu</span>
+<span class="n">git</span> <span class="n">remote</span>     <span class="n">add</span> <span class="n">org</span>    <span class="n">github</span><span class="p">:</span><span class="n">BitSharesEurope</span><span class="o">/</span><span class="n">docs</span><span class="o">.</span><span class="n">bitshares</span><span class="o">.</span><span class="n">org</span>
+<span class="n">make</span> <span class="n">deploy</span>
 </pre></div>
 </div>
 </div>
