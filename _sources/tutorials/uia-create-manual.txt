@@ -28,7 +28,7 @@ Parameters
 The `precision` can any positive integer starting from `0`.
 As `options` we pass a JSON object that can contain these settings:
 
-.. code-block:: js
+.. code-block:: json
 
    {
       "max_supply" : 10000,    # Integer in satoshi! (100 for precision 1 and max 10)
@@ -54,7 +54,7 @@ As `options` we pass a JSON object that can contain these settings:
    }
 
 The flags are construction as an JSON object containing these
-flags/permissions (see :docs:`../user/assets-faq`):
+flags/permissions (see :doc:`../user/assets-faq`):
 
 .. code-block:: js
 

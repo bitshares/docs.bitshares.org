@@ -85,7 +85,7 @@
     
         <div class="prev">
          <div class="title">previous</div>
-         <span><a href="apps/witness-faq.html">Witness FAQ</a></span>
+         <span><a href="apps/webwallet.html">Web Wallet</a></span>
         </div>
         <div class="top">
          <div class="title">top</div>
@@ -123,7 +123,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#basic-knowledge">Basic Knowledge</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="what-is-different.html">What is Different in BitShares</a></li>
 <li class="toctree-l3"><a class="reference internal" href="apps/index.html">Blockchain Interaction</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">Network and Wallet Configuration</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Network and Wallet Configuration</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#components">Components</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="#p2p-network">P2P network</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#trusted-full-node">Trusted Full Node</a></li>
@@ -219,8 +219,8 @@ the trusted node directly, there will not be any delay on withdrawals.</p>
 <h3>General Setup<a class="headerlink" href="#general-setup" title="Permalink to this headline">¶</a></h3>
 <p>For general purpose setups, we recommend a reduced complexity setup that
 looks as follos</p>
-<p class="graphviz">
-<img src="../_images/graphviz-4d0adfdc787eec3b829516790061548e60f1fcb3.svg" alt="digraph foo {
+<object data="../_images/graphviz-2765f8aff9e55a7a71390f8040190e7dbd4abddb.svg" type="image/svg+xml">
+            <p class="warning">digraph foo {
 
  graph [rankdir=LR,
         splines=ortho,
@@ -259,11 +259,10 @@ looks as follos</p>
  &quot;Trusted Full Node&quot; -&gt; &quot;Wallet&quot;
  &quot;Wallet&quot;            -&gt; &quot;Wallet API&quot;
  &quot;Trusted Full Node&quot; -&gt; &quot;Blockchain API&quot;
-}" />
-</p>
+}</p></object>
 <p>A tutorial to setup this network can be found here:</p>
 <ul class="simple">
-<li><a class="reference internal" href="tutorials/general-network-setup.html"><em>General Network and Wallet Configuration</em></a></li>
+<li><a class="reference internal" href="tutorials/general-network-setup.html"><span class="doc">General Network and Wallet Configuration</span></a></li>
 </ul>
 </div>
 <div class="section" id="high-security-setup">
@@ -275,8 +274,8 @@ connected to the P2P network that works as a proxy. The delayed node
 will delay blocks until they are <strong>irreversible</strong>. Depending on the
 block interval and the number of witnesses, this may lead to a few
 minutes of delay.</p>
-<p class="graphviz">
-<img src="../_images/graphviz-41304fb74173d80261a94f1b63ad3ac6bb93d6ce.svg" alt="digraph foo {
+<object data="../_images/graphviz-ccdace8a29da6c869999903f580fa94e936f13d5.svg" type="image/svg+xml">
+            <p class="warning">digraph foo {
 
  graph [rankdir=LR,
         splines=ortho,
@@ -320,11 +319,10 @@ minutes of delay.</p>
  &quot;Delayed Full Node&quot; -&gt; &quot;Deposit API&quot;
  &quot;Trusted Full Node&quot; -&gt; &quot;Wallet&quot;
  &quot;Wallet&quot;            -&gt; &quot;Withdraw API&quot;
-}" />
-</p>
+}</p></object>
 <p>A tutorial to setup this network can be found here:</p>
 <ul class="simple">
-<li><a class="reference internal" href="tutorials/secure-network-setup.html"><em>Secure Network and Wallet Configuration</em></a></li>
+<li><a class="reference internal" href="tutorials/secure-network-setup.html"><span class="doc">Secure Network and Wallet Configuration</span></a></li>
 </ul>
 </div>
 </div>

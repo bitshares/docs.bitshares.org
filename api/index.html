@@ -85,7 +85,7 @@
     
         <div class="prev">
          <div class="title">previous</div>
-         <span><a href="../development/blockchain/objects.html">Objects and IDs</a></span>
+         <span><a href="../integration/libraries/python-exchange.html">Python Module for the DEX</a></span>
         </div>
         <div class="top">
          <div class="title">top</div>
@@ -118,57 +118,11 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../muse/index.html">MUSE</a></li>
 </ul>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../integration/index.html">Integration Guide</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../integration/index.html#basic-knowledge">Basic Knowledge</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../integration/index.html#use-cases">Use-Cases</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../integration/exchanges/index.html">Exchanges, Bridges, and Gateways</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">API Guide</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#interfacing-with-graphene">Interfacing with Graphene</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#wallet-api">Wallet API</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#blockchain-api-s">Blockchain API(s)</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#blockchain-objects-and-their-identifiers">Blockchain Objects and their Identifiers</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../integration/merchants/index.html">Merchants</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">API Guide</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#interfacing-with-graphene">Interfacing with Graphene</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#wallet-api">Wallet API</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#blockchain-api-s">Blockchain API(s)</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#blockchain-objects-and-their-identifiers">Blockchain Objects and their Identifiers</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../integration/traders/index.html">Traders</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">API Guide</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#interfacing-with-graphene">Interfacing with Graphene</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#wallet-api">Wallet API</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#blockchain-api-s">Blockchain API(s)</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#blockchain-objects-and-their-identifiers">Blockchain Objects and their Identifiers</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../integration/businesses/index.html">Businesses</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">API Guide</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#interfacing-with-graphene">Interfacing with Graphene</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="#wallet-api">Wallet API</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#blockchain-api-s">Blockchain API(s)</a></li>
-<li class="toctree-l5"><a class="reference internal" href="#blockchain-objects-and-their-identifiers">Blockchain Objects and their Identifiers</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../integration/index.html">Integration Guide</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">API Guide</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Guide</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#interfacing-with-graphene">Interfacing with Graphene</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#wallet-api">Wallet API</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="rpc.html">Remote Procedure Calls</a></li>
@@ -223,8 +177,8 @@
   <div class="section" id="api-guide">
 <h1>API Guide<a class="headerlink" href="#api-guide" title="Permalink to this headline">¶</a></h1>
 <p>This page serves as a comprehensive reference for the Graphene API and
-its blockchain, such as <a class="reference internal" href="../bitshares/index.html"><em>BitShares 2.0</em></a> and
-<a class="reference internal" href="../muse/index.html"><em>MUSE</em></a>.</p>
+its blockchain, such as <a class="reference internal" href="../bitshares/index.html"><span class="doc">BitShares 2.0</span></a> and
+<a class="reference internal" href="../muse/index.html"><span class="doc">MUSE</span></a>.</p>
 <p>APIs are separated into two categories, namely</p>
 <ul class="simple">
 <li>the <strong>Blockchain API</strong> which is used to query blockchain data (account, assets, trading history, etc.) and</li>
@@ -233,7 +187,7 @@ its blockchain, such as <a class="reference internal" href="../bitshares/index.h
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">In order to interface with <em>the wallet</em>, you need to run the
-<a class="reference internal" href="../integration/apps/cliwallet.html"><em>CLI Wallet</em></a>. Neither the
+<a class="reference internal" href="../integration/apps/cliwallet.html"><span class="doc">CLI Wallet</span></a>. Neither the
 <strong>light-wallet</strong>, nor the <strong>hosted web wallet</strong> will provide
 you with an API.</p>
 </div>
@@ -242,7 +196,7 @@ let&#8217;s you access private API calles after successful authentication. Inste
 your run your wallet (and optionally a full node) <strong>locally</strong> and are with
 <strong>your own API service provider</strong>. This obviously has the advantage that you
 don&#8217;t need to give access to your funds to any third party but has the slight
-disadvantage that you need to run a local <a class="reference internal" href="../integration/apps/cliwallet.html"><em>wallet appilcation</em></a>, that however does not download the
+disadvantage that you need to run a local <a class="reference internal" href="../integration/apps/cliwallet.html"><span class="doc">wallet appilcation</span></a>, that however does not download the
 whole blockchain for verification. If you run a sensitive business, we
 recommend to also run a local full node to download and verify the
 blockchain and interface your wallet with your local full node.</p>
@@ -258,8 +212,8 @@ full node also supports the websocket protocol with notifications.</p>
 configuration of the full node and the wallet. If you run a full node, we
 recommend to connect your wallet to your local full node even though it could
 be connected to any other public full node as well.</p>
-<p class="graphviz">
-<img src="../_images/graphviz-34b4d59996f9573de3d13d6f6d41b4b97d707d44.svg" alt="digraph foo {
+<object data="../_images/graphviz-452cdd4114f5186d2f7dd3b61ca1911fa80c5ed8.svg" type="image/svg+xml">
+            <p class="warning">digraph foo {
  rankdir=LR;
  ranksep=0.5;
  nodesep=0.1;
@@ -278,10 +232,9 @@ be connected to any other public full node as well.</p>
  &quot;Full Node&quot; -&gt; &quot;Wallet&quot; -&gt; &quot;Withdraw API&quot;
 
  {rank=same &quot;Withdraw API&quot; &quot;Blockchain API&quot;}
-}" />
-</p>
+}</p></object>
 <p>For sensitive businesses that want to ensure that deposits are irreversible, we
-recommend the use of the <a class="reference internal" href="../integration/network-setup.html#highsecuritynetworksetup"><span>High Security Setup</span></a>.
+recommend the use of the <a class="reference internal" href="../integration/network-setup.html#highsecuritynetworksetup"><span class="std std-ref">High Security Setup</span></a>.
 That contains a <em>delayed node</em> to pass only irreversible transactions to the API.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -291,7 +244,7 @@ That contains a <em>delayed node</em> to pass only irreversible transactions to 
 <h3>Wallet API<a class="headerlink" href="#wallet-api" title="Permalink to this headline">¶</a></h3>
 <p>This chapter introduces the calls available via wallet API. If you have not set
 up your wallet yet, you can find more information on the
-<a class="reference internal" href="../integration/apps/cliwallet.html"><em>CLI Wallet</em></a> and the <a class="reference internal" href="../integration/apps/cli-faq.html"><em>CLI Wallet FAQ</em></a>
+<a class="reference internal" href="../integration/apps/cliwallet.html"><span class="doc">CLI Wallet</span></a> and the <a class="reference internal" href="../integration/apps/cli-faq.html"><span class="doc">CLI Wallet FAQ</span></a>
 pages.</p>
 <div class="toctree-wrapper compound">
 <ul>

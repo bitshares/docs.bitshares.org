@@ -129,7 +129,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../blockchain/index.html">Blockchain Specifications</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Namespaces</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="app.html">Graphene::App</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">Graphene::Chain</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Graphene::Chain</a></li>
 <li class="toctree-l3"><a class="reference internal" href="wallet.html">Graphene::Wallet</a></li>
 </ul>
 </li>
@@ -1523,7 +1523,7 @@
 <dt id="_CPPv2N8graphene5chain14account_object26membership_expiration_dateE">
 <span id="graphene::chain::account_object::membership_expiration_date__time_point_sec"></span><span class="target" id="project0classgraphene_1_1chain_1_1account__object_1a901b57f630eaa3f077f8d29e317b70ed"></span>time_point_sec <code class="descname">membership_expiration_date</code><a class="headerlink" href="#_CPPv2N8graphene5chain14account_object26membership_expiration_dateE" title="Permalink to this definition">¶</a></dt>
 <dd><p>The time at which this account&#8217;s membership expires. If set to any time in the past, the account is a basic account. If set to time_point_sec::maximum(), the account is a lifetime member. If set to any time not in the past less than time_point_sec::maximum(), the account is an annual member.</p>
-<p>See <a class="reference internal" href="#project0classgraphene_1_1chain_1_1account__object_1a328fb79dcf289d6973692b63af5c7b75"><span>is_lifetime_member</span></a>, <a class="reference internal" href="#project0classgraphene_1_1chain_1_1account__object_1a6ac081dc1f9ae9f3183d0a40f6937630"><span>is_basic_account</span></a>, <a class="reference internal" href="#project0classgraphene_1_1chain_1_1account__object_1a76619f14f443b6365edab2dfb60a380e"><span>is_annual_member</span></a>, and <a class="reference internal" href="#project0classgraphene_1_1chain_1_1account__object_1a4edcb9d330e5cf1f240296bf954bf461"><span>is_member</span></a> </p>
+<p>See <a class="reference internal" href="#project0classgraphene_1_1chain_1_1account__object_1a328fb79dcf289d6973692b63af5c7b75"><span class="std std-ref">is_lifetime_member</span></a>, <a class="reference internal" href="#project0classgraphene_1_1chain_1_1account__object_1a6ac081dc1f9ae9f3183d0a40f6937630"><span class="std std-ref">is_basic_account</span></a>, <a class="reference internal" href="#project0classgraphene_1_1chain_1_1account__object_1a76619f14f443b6365edab2dfb60a380e"><span class="std std-ref">is_annual_member</span></a>, and <a class="reference internal" href="#project0classgraphene_1_1chain_1_1account__object_1a4edcb9d330e5cf1f240296bf954bf461"><span class="std std-ref">is_member</span></a> </p>
 </dd></dl>
 
 <dl class="member">
@@ -1640,13 +1640,13 @@
 <dl class="member">
 <dt id="_CPPv2N8graphene5chain15account_options11num_witnessE">
 <span id="graphene::chain::account_options::num_witness__uint16_t"></span><span class="target" id="project0structgraphene_1_1chain_1_1account__options_1ab25c1c12ab91ca5ceec2d973f07577e0"></span>uint16_t <code class="descname">num_witness</code><a class="headerlink" href="#_CPPv2N8graphene5chain15account_options11num_witnessE" title="Permalink to this definition">¶</a></dt>
-<dd><p>The number of active witnesses this account votes the blockchain should appoint Must not exceed the actual number of witnesses voted for in <a class="reference internal" href="#project0structgraphene_1_1chain_1_1account__options_1a250da5b498fcda66184f4458989e31f4"><span>votes</span></a> </p>
+<dd><p>The number of active witnesses this account votes the blockchain should appoint Must not exceed the actual number of witnesses voted for in <a class="reference internal" href="#project0structgraphene_1_1chain_1_1account__options_1a250da5b498fcda66184f4458989e31f4"><span class="std std-ref">votes</span></a> </p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv2N8graphene5chain15account_options13num_committeeE">
 <span id="graphene::chain::account_options::num_committee__uint16_t"></span><span class="target" id="project0structgraphene_1_1chain_1_1account__options_1a5e9d8f492680f54c09b73c821cc57970"></span>uint16_t <code class="descname">num_committee</code><a class="headerlink" href="#_CPPv2N8graphene5chain15account_options13num_committeeE" title="Permalink to this definition">¶</a></dt>
-<dd><p>The number of active committee members this account votes the blockchain should appoint Must not exceed the actual number of committee members voted for in <a class="reference internal" href="#project0structgraphene_1_1chain_1_1account__options_1a250da5b498fcda66184f4458989e31f4"><span>votes</span></a> </p>
+<dd><p>The number of active committee members this account votes the blockchain should appoint Must not exceed the actual number of committee members voted for in <a class="reference internal" href="#project0structgraphene_1_1chain_1_1account__options_1a250da5b498fcda66184f4458989e31f4"><span class="std std-ref">votes</span></a> </p>
 </dd></dl>
 
 <dl class="member">
@@ -1682,13 +1682,13 @@
 <dl class="function">
 <dt id="_CPPv2N8graphene5chain25account_statistics_object12process_feesERK14account_objectR8database">
 <span id="graphene::chain::account_statistics_object::process_fees__account_objectCR.databaseR"></span><span class="target" id="project0classgraphene_1_1chain_1_1account__statistics__object_1adbcbae4d6e0c03b35cd69f3eb0ab6784"></span>void <code class="descname">process_fees</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv2N8graphene5chain14account_objectE" title="graphene::chain::account_object">account_object</a> &amp;<em>a</em>, <a class="reference internal" href="#_CPPv2N8graphene5chain8databaseE" title="graphene::chain::database">database</a> &amp;<em>d</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene5chain25account_statistics_object12process_feesERK14account_objectR8database" title="Permalink to this definition">¶</a></dt>
-<dd><p>Split up and pay out <a class="reference internal" href="#project0classgraphene_1_1chain_1_1account__statistics__object_1a6e24bf9caed87ca04ade5361a0b2b818"><span>pending_fees</span></a> and <a class="reference internal" href="#project0classgraphene_1_1chain_1_1account__statistics__object_1a1bf6b14fa88cc2bfac01861c2d896db8"><span>pending_vested_fees</span></a>. </p>
+<dd><p>Split up and pay out <a class="reference internal" href="#project0classgraphene_1_1chain_1_1account__statistics__object_1a6e24bf9caed87ca04ade5361a0b2b818"><span class="std std-ref">pending_fees</span></a> and <a class="reference internal" href="#project0classgraphene_1_1chain_1_1account__statistics__object_1a1bf6b14fa88cc2bfac01861c2d896db8"><span class="std std-ref">pending_vested_fees</span></a>. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N8graphene5chain25account_statistics_object7pay_feeE10share_type10share_type">
 <span id="graphene::chain::account_statistics_object::pay_fee__share_type.share_type"></span><span class="target" id="project0classgraphene_1_1chain_1_1account__statistics__object_1aa09fea72ba6d68dc0b50a823f4fa838b"></span>void <code class="descname">pay_fee</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N8graphene5chain10share_typeE" title="graphene::chain::share_type">share_type</a> <em>core_fee</em>, <a class="reference internal" href="#_CPPv2N8graphene5chain10share_typeE" title="graphene::chain::share_type">share_type</a> <em>cashback_vesting_threshold</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene5chain25account_statistics_object7pay_feeE10share_type10share_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Core fees are paid into the <a class="reference internal" href="#project0classgraphene_1_1chain_1_1account__statistics__object"><span>account_statistics_object</span></a> by this method </p>
+<dd><p>Core fees are paid into the <a class="reference internal" href="#project0classgraphene_1_1chain_1_1account__statistics__object"><span class="std std-ref">account_statistics_object</span></a> by this method </p>
 </dd></dl>
 
 </div>
@@ -1722,7 +1722,7 @@
 <dl class="member">
 <dt id="_CPPv2N8graphene5chain25account_statistics_object19pending_vested_feesE">
 <span id="graphene::chain::account_statistics_object::pending_vested_fees__share_type"></span><span class="target" id="project0classgraphene_1_1chain_1_1account__statistics__object_1a1bf6b14fa88cc2bfac01861c2d896db8"></span><a class="reference internal" href="#_CPPv2N8graphene5chain10share_typeE" title="graphene::chain::share_type">share_type</a> <code class="descname">pending_vested_fees</code><a class="headerlink" href="#_CPPv2N8graphene5chain25account_statistics_object19pending_vested_feesE" title="Permalink to this definition">¶</a></dt>
-<dd><p>Same as <a class="reference internal" href="#project0classgraphene_1_1chain_1_1account__statistics__object_1a6e24bf9caed87ca04ade5361a0b2b818"><span>pending_fees</span></a>, except these fees will be paid out as pre-vested cash-back (immediately available for withdrawal) rather than requiring the normal vesting period. </p>
+<dd><p>Same as <a class="reference internal" href="#project0classgraphene_1_1chain_1_1account__statistics__object_1a6e24bf9caed87ca04ade5361a0b2b818"><span class="std std-ref">pending_fees</span></a>, except these fees will be paid out as pre-vested cash-back (immediately available for withdrawal) rather than requiring the normal vesting period. </p>
 </dd></dl>
 
 </div>
@@ -1799,8 +1799,8 @@
 <dt id="_CPPv2N8graphene5chain25account_upgrade_operationE">
 <span id="graphene::chain::account_upgrade_operation"></span><span class="target" id="project0structgraphene_1_1chain_1_1account__upgrade__operation"></span><em class="property">struct </em><code class="descname">account_upgrade_operation</code><a class="headerlink" href="#_CPPv2N8graphene5chain25account_upgrade_operationE" title="Permalink to this definition">¶</a></dt>
 <dd><em>#include &lt;account.hpp&gt;</em><p>Manage an account&#8217;s membership status</p>
-<p>This operation is used to upgrade an account to a member, or renew its subscription. If an account which is an unexpired annual subscription member publishes this operation with <a class="reference internal" href="#project0structgraphene_1_1chain_1_1account__upgrade__operation_1ae1f636f8599fcd45cb5db5ec4be0f4d8"><span>upgrade_to_lifetime_member</span></a> set to false, the account&#8217;s membership expiration date will be pushed backward one year. If a basic account publishes it with <a class="reference internal" href="#project0structgraphene_1_1chain_1_1account__upgrade__operation_1ae1f636f8599fcd45cb5db5ec4be0f4d8"><span>upgrade_to_lifetime_member</span></a> set to false, the account will be upgraded to a subscription member with an expiration date one year after the processing time of this operation. </p>
-<p>Any account may use this operation to become a lifetime member by setting <a class="reference internal" href="#project0structgraphene_1_1chain_1_1account__upgrade__operation_1ae1f636f8599fcd45cb5db5ec4be0f4d8"><span>upgrade_to_lifetime_member</span></a> to true. Once an account has become a lifetime member, it may not use this operation anymore. </p>
+<p>This operation is used to upgrade an account to a member, or renew its subscription. If an account which is an unexpired annual subscription member publishes this operation with <a class="reference internal" href="#project0structgraphene_1_1chain_1_1account__upgrade__operation_1ae1f636f8599fcd45cb5db5ec4be0f4d8"><span class="std std-ref">upgrade_to_lifetime_member</span></a> set to false, the account&#8217;s membership expiration date will be pushed backward one year. If a basic account publishes it with <a class="reference internal" href="#project0structgraphene_1_1chain_1_1account__upgrade__operation_1ae1f636f8599fcd45cb5db5ec4be0f4d8"><span class="std std-ref">upgrade_to_lifetime_member</span></a> set to false, the account will be upgraded to a subscription member with an expiration date one year after the processing time of this operation. </p>
+<p>Any account may use this operation to become a lifetime member by setting <a class="reference internal" href="#project0structgraphene_1_1chain_1_1account__upgrade__operation_1ae1f636f8599fcd45cb5db5ec4be0f4d8"><span class="std std-ref">upgrade_to_lifetime_member</span></a> to true. Once an account has become a lifetime member, it may not use this operation anymore. </p>
 <div class="breathe-sectiondef container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
 <dl class="member">
@@ -2075,7 +2075,7 @@
 <dt id="_CPPv2N8graphene5chain25asset_dynamic_data_objectE">
 <span id="graphene::chain::asset_dynamic_data_object"></span><span class="target" id="project0classgraphene_1_1chain_1_1asset__dynamic__data__object"></span><em class="property">class </em><code class="descname">asset_dynamic_data_object</code><a class="headerlink" href="#_CPPv2N8graphene5chain25asset_dynamic_data_objectE" title="Permalink to this definition">¶</a></dt>
 <dd><em>#include &lt;asset_object.hpp&gt;</em><p>tracks the asset information that changes frequently</p>
-<p>Because the <a class="reference internal" href="#project0classgraphene_1_1chain_1_1asset__object"><span>asset_object</span></a> is very large it doesn&#8217;t make sense to save an undo state for all of the parameters that never change. This object factors out the parameters of an asset that change in almost every transaction that involves the asset. </p>
+<p>Because the <a class="reference internal" href="#project0classgraphene_1_1chain_1_1asset__object"><span class="std std-ref">asset_object</span></a> is very large it doesn&#8217;t make sense to save an undo state for all of the parameters that never change. This object factors out the parameters of an asset that change in almost every transaction that involves the asset. </p>
 <p>This object exists as an implementation detail and its ID should never be referenced by a blockchain operation. </p>
 <div class="breathe-sectiondef container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
@@ -2294,7 +2294,7 @@
 <dl class="member">
 <dt id="_CPPv2N8graphene5chain12asset_object16bitasset_data_idE">
 <span id="graphene::chain::asset_object::bitasset_data_id__optional:asset_bitasset_data_id_type:"></span><span class="target" id="project0classgraphene_1_1chain_1_1asset__object_1a5a69d1ef467d5eb7163fb4c301937066"></span>optional&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain27asset_bitasset_data_id_typeE" title="graphene::chain::asset_bitasset_data_id_type">asset_bitasset_data_id_type</a>&gt; <code class="descname">bitasset_data_id</code><a class="headerlink" href="#_CPPv2N8graphene5chain12asset_object16bitasset_data_idE" title="Permalink to this definition">¶</a></dt>
-<dd><p>Extra data associated with BitAssets. This field is non-null if and only if <a class="reference internal" href="#project0classgraphene_1_1chain_1_1asset__object_1adebdf0e788fbe2e33510ac7e32aa804e"><span>is_market_issued()</span></a> returns true. </p>
+<dd><p>Extra data associated with BitAssets. This field is non-null if and only if <a class="reference internal" href="#project0classgraphene_1_1chain_1_1asset__object_1adebdf0e788fbe2e33510ac7e32aa804e"><span class="std std-ref">is_market_issued()</span></a> returns true. </p>
 </dd></dl>
 
 </div>
@@ -2316,7 +2316,7 @@
 <dl class="class">
 <dt id="_CPPv2N8graphene5chain13asset_optionsE">
 <span id="graphene::chain::asset_options"></span><span class="target" id="project0structgraphene_1_1chain_1_1asset__options"></span><em class="property">struct </em><code class="descname">asset_options</code><a class="headerlink" href="#_CPPv2N8graphene5chain13asset_optionsE" title="Permalink to this definition">¶</a></dt>
-<dd><em>#include &lt;asset_ops.hpp&gt;</em><p>The <a class="reference internal" href="../../integration/market-whitelist.html#project0structgraphene_1_1chain_1_1asset__options"><span>asset_options</span></a> struct contains options available on all assets in the network. </p>
+<dd><em>#include &lt;asset_ops.hpp&gt;</em><p>The <a class="reference internal" href="../../integration/market-whitelist.html#project0structgraphene_1_1chain_1_1asset__options"><span class="std std-ref">asset_options</span></a> struct contains options available on all assets in the network. </p>
 <p><dl class="docutils">
 <dt><strong>Note</strong></dt>
 <dd>Changes to this struct will break protocol compatibility </dd>
@@ -2356,19 +2356,19 @@
 <dl class="member">
 <dt id="_CPPv2N8graphene5chain13asset_options14max_market_feeE">
 <span id="graphene::chain::asset_options::max_market_fee__share_type"></span><span class="target" id="project0structgraphene_1_1chain_1_1asset__options_1a1316295332120e67582f919f1cb88a41"></span><a class="reference internal" href="#_CPPv2N8graphene5chain10share_typeE" title="graphene::chain::share_type">share_type</a> <code class="descname">max_market_fee</code><a class="headerlink" href="#_CPPv2N8graphene5chain13asset_options14max_market_feeE" title="Permalink to this definition">¶</a></dt>
-<dd><p>Market fees calculated as <a class="reference internal" href="../../integration/market-whitelist.html#project0structgraphene_1_1chain_1_1asset__options_1ace27aedf849e0a01950ec362ffb3c6c8"><span>market_fee_percent</span></a> of the traded volume are capped to this value. </p>
+<dd><p>Market fees calculated as <a class="reference internal" href="../../integration/market-whitelist.html#project0structgraphene_1_1chain_1_1asset__options_1ace27aedf849e0a01950ec362ffb3c6c8"><span class="std std-ref">market_fee_percent</span></a> of the traded volume are capped to this value. </p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv2N8graphene5chain13asset_options18issuer_permissionsE">
 <span id="graphene::chain::asset_options::issuer_permissions__uint16_t"></span><span class="target" id="project0structgraphene_1_1chain_1_1asset__options_1af0e2f972dd6f62147301b79369f74e24"></span>uint16_t <code class="descname">issuer_permissions</code><a class="headerlink" href="#_CPPv2N8graphene5chain13asset_options18issuer_permissionsE" title="Permalink to this definition">¶</a></dt>
-<dd><p>The flags which the issuer has permission to update. See <a class="reference internal" href="../../integration/market-whitelist.html#project0namespacegraphene_1_1chain_1a6a12bfc3745c709e79e6bbcd1fa6c3d2"><span>asset_issuer_permission_flags</span></a>. </p>
+<dd><p>The flags which the issuer has permission to update. See <a class="reference internal" href="../../integration/market-whitelist.html#project0namespacegraphene_1_1chain_1a6a12bfc3745c709e79e6bbcd1fa6c3d2"><span class="std std-ref">asset_issuer_permission_flags</span></a>. </p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv2N8graphene5chain13asset_options5flagsE">
 <span id="graphene::chain::asset_options::flags__uint16_t"></span><span class="target" id="project0structgraphene_1_1chain_1_1asset__options_1af00c8e76afbe6cbc47e3eeb71f456f4c"></span>uint16_t <code class="descname">flags</code><a class="headerlink" href="#_CPPv2N8graphene5chain13asset_options5flagsE" title="Permalink to this definition">¶</a></dt>
-<dd><p>The currently active flags on this permission. See <a class="reference internal" href="../../integration/market-whitelist.html#project0namespacegraphene_1_1chain_1a6a12bfc3745c709e79e6bbcd1fa6c3d2"><span>asset_issuer_permission_flags</span></a>. </p>
+<dd><p>The currently active flags on this permission. See <a class="reference internal" href="../../integration/market-whitelist.html#project0namespacegraphene_1_1chain_1a6a12bfc3745c709e79e6bbcd1fa6c3d2"><span class="std std-ref">asset_issuer_permission_flags</span></a>. </p>
 </dd></dl>
 
 <dl class="member">
@@ -2386,7 +2386,7 @@
 <dl class="member">
 <dt id="_CPPv2N8graphene5chain13asset_options21blacklist_authoritiesE">
 <span id="graphene::chain::asset_options::blacklist_authorities__flat_set:account_id_type:"></span><span class="target" id="project0structgraphene_1_1chain_1_1asset__options_1af04793715b1da8f1b8f9927f6e8d8e9e"></span>flat_set&lt;<a class="reference internal" href="#_CPPv2N8graphene5chain15account_id_typeE" title="graphene::chain::account_id_type">account_id_type</a>&gt; <code class="descname">blacklist_authorities</code><a class="headerlink" href="#_CPPv2N8graphene5chain13asset_options21blacklist_authoritiesE" title="Permalink to this definition">¶</a></dt>
-<dd><p>A set of accounts which maintain blacklists to consult for this asset. If flags &amp; white_list is set, an account may only send, receive, trade, etc. in this asset if none of these accounts appears in its <a class="reference internal" href="#project0classgraphene_1_1chain_1_1account__object_1aa89c8709baa83afd446a8314179b100e"><span>account_object::blacklisting_accounts</span></a> field. If the account is blacklisted, it may not transact in this asset even if it is also whitelisted. </p>
+<dd><p>A set of accounts which maintain blacklists to consult for this asset. If flags &amp; white_list is set, an account may only send, receive, trade, etc. in this asset if none of these accounts appears in its <a class="reference internal" href="#project0classgraphene_1_1chain_1_1account__object_1aa89c8709baa83afd446a8314179b100e"><span class="std std-ref">account_object::blacklisting_accounts</span></a> field. If the account is blacklisted, it may not transact in this asset even if it is also whitelisted. </p>
 </dd></dl>
 
 <dl class="member">
@@ -2469,8 +2469,8 @@
 <dt id="_CPPv2N8graphene5chain22asset_settle_operationE">
 <span id="graphene::chain::asset_settle_operation"></span><span class="target" id="project0structgraphene_1_1chain_1_1asset__settle__operation"></span><em class="property">struct </em><code class="descname">asset_settle_operation</code><a class="headerlink" href="#_CPPv2N8graphene5chain22asset_settle_operationE" title="Permalink to this definition">¶</a></dt>
 <dd><em>#include &lt;asset_ops.hpp&gt;</em><p>Schedules a market-issued asset for automatic settlement</p>
-<p>Holders of market-issued assests may request a forced settlement for some amount of their asset. This means that the specified sum will be locked by the chain and held for the settlement period, after which time the chain will choose a margin posision holder and buy the settled asset using the margin&#8217;s collateral. The price of this sale will be based on the feed price for the market-issued asset being settled. The exact settlement price will be the feed price at the time of settlement with an offset in favor of the margin position, where the offset is a blockchain parameter set in the <a class="reference internal" href="#project0classgraphene_1_1chain_1_1global__property__object"><span>global_property_object</span></a>. </p>
-<p>The fee is paid by <a class="reference internal" href="#project0structgraphene_1_1chain_1_1asset__settle__operation_1ab5fb1bd2e84c79727c30a5eef64bba81"><span>account</span></a>, and <a class="reference internal" href="#project0structgraphene_1_1chain_1_1asset__settle__operation_1ab5fb1bd2e84c79727c30a5eef64bba81"><span>account</span></a> must authorize this operation </p>
+<p>Holders of market-issued assests may request a forced settlement for some amount of their asset. This means that the specified sum will be locked by the chain and held for the settlement period, after which time the chain will choose a margin posision holder and buy the settled asset using the margin&#8217;s collateral. The price of this sale will be based on the feed price for the market-issued asset being settled. The exact settlement price will be the feed price at the time of settlement with an offset in favor of the margin position, where the offset is a blockchain parameter set in the <a class="reference internal" href="#project0classgraphene_1_1chain_1_1global__property__object"><span class="std std-ref">global_property_object</span></a>. </p>
+<p>The fee is paid by <a class="reference internal" href="#project0structgraphene_1_1chain_1_1asset__settle__operation_1ab5fb1bd2e84c79727c30a5eef64bba81"><span class="std std-ref">account</span></a>, and <a class="reference internal" href="#project0structgraphene_1_1chain_1_1asset__settle__operation_1ab5fb1bd2e84c79727c30a5eef64bba81"><span class="std std-ref">account</span></a> must authorize this operation </p>
 <div class="breathe-sectiondef container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
 <dl class="member">
@@ -2525,9 +2525,9 @@
 <p>BitAssets have some options which are not relevant to other asset types. This operation is used to update those options an an existing BitAsset. </p>
 <p><dl class="docutils">
 <dt><strong>Pre</strong></dt>
-<dd>issuer MUST be an existing account and MUST match <a class="reference internal" href="#project0classgraphene_1_1chain_1_1asset__object_1ad5274b71ad420b57da53c3ef80b95577"><span>asset_object::issuer</span></a> on asset_to_update </dd>
+<dd>issuer MUST be an existing account and MUST match <a class="reference internal" href="#project0classgraphene_1_1chain_1_1asset__object_1ad5274b71ad420b57da53c3ef80b95577"><span class="std std-ref">asset_object::issuer</span></a> on asset_to_update </dd>
 <dt><strong>Pre</strong></dt>
-<dd>asset_to_update MUST be a BitAsset, i.e. <a class="reference internal" href="#project0classgraphene_1_1chain_1_1asset__object_1adebdf0e788fbe2e33510ac7e32aa804e"><span>asset_object::is_market_issued()</span></a> returns true </dd>
+<dd>asset_to_update MUST be a BitAsset, i.e. <a class="reference internal" href="#project0classgraphene_1_1chain_1_1asset__object_1adebdf0e788fbe2e33510ac7e32aa804e"><span class="std std-ref">asset_object::is_market_issued()</span></a> returns true </dd>
 <dt><strong>Pre</strong></dt>
 <dd>fee MUST be nonnegative, and issuer MUST have a sufficient balance to pay it </dd>
 <dt><strong>Pre</strong></dt>
@@ -2545,15 +2545,15 @@
 <p>BitAssets have price feeds selected by taking the median values of recommendations from a set of feed producers. This operation is used to specify which accounts may produce feeds for a given BitAsset. </p>
 <p><dl class="docutils">
 <dt><strong>Pre</strong></dt>
-<dd>issuer MUST be an existing account, and MUST match <a class="reference internal" href="#project0classgraphene_1_1chain_1_1asset__object_1ad5274b71ad420b57da53c3ef80b95577"><span>asset_object::issuer</span></a> on asset_to_update </dd>
+<dd>issuer MUST be an existing account, and MUST match <a class="reference internal" href="#project0classgraphene_1_1chain_1_1asset__object_1ad5274b71ad420b57da53c3ef80b95577"><span class="std std-ref">asset_object::issuer</span></a> on asset_to_update </dd>
 <dt><strong>Pre</strong></dt>
 <dd>issuer MUST NOT be the committee account </dd>
 <dt><strong>Pre</strong></dt>
-<dd>asset_to_update MUST be a BitAsset, i.e. <a class="reference internal" href="#project0classgraphene_1_1chain_1_1asset__object_1adebdf0e788fbe2e33510ac7e32aa804e"><span>asset_object::is_market_issued()</span></a> returns true </dd>
+<dd>asset_to_update MUST be a BitAsset, i.e. <a class="reference internal" href="#project0classgraphene_1_1chain_1_1asset__object_1adebdf0e788fbe2e33510ac7e32aa804e"><span class="std std-ref">asset_object::is_market_issued()</span></a> returns true </dd>
 <dt><strong>Pre</strong></dt>
 <dd>fee MUST be nonnegative, and issuer MUST have a sufficient balance to pay it </dd>
 <dt><strong>Pre</strong></dt>
-<dd>Cardinality of new_feed_producers MUST NOT exceed <a class="reference internal" href="#project0structgraphene_1_1chain_1_1chain__parameters_1a8c95903f1f172155f921d167c1a9512b"><span>chain_parameters::maximum_asset_feed_publishers</span></a> </dd>
+<dd>Cardinality of new_feed_producers MUST NOT exceed <a class="reference internal" href="#project0structgraphene_1_1chain_1_1chain__parameters_1a8c95903f1f172155f921d167c1a9512b"><span class="std std-ref">chain_parameters::maximum_asset_feed_publishers</span></a> </dd>
 <dt><strong>Post</strong></dt>
 <dd>asset_to_update will have a set of feed producers matching new_feed_producers </dd>
 <dt><strong>Post</strong></dt>
@@ -2566,12 +2566,12 @@
 <dt id="_CPPv2N8graphene5chain22asset_update_operationE">
 <span id="graphene::chain::asset_update_operation"></span><span class="target" id="project0structgraphene_1_1chain_1_1asset__update__operation"></span><em class="property">struct </em><code class="descname">asset_update_operation</code><a class="headerlink" href="#_CPPv2N8graphene5chain22asset_update_operationE" title="Permalink to this definition">¶</a></dt>
 <dd><em>#include &lt;asset_ops.hpp&gt;</em><p>Update options common to all assets</p>
-<p>There are a number of options which all assets in the network use. These options are enumerated in the <a class="reference internal" href="../../integration/market-whitelist.html#project0structgraphene_1_1chain_1_1asset__options"><span>asset_options</span></a> struct. This operation is used to update these options for an existing asset. </p>
+<p>There are a number of options which all assets in the network use. These options are enumerated in the <a class="reference internal" href="../../integration/market-whitelist.html#project0structgraphene_1_1chain_1_1asset__options"><span class="std std-ref">asset_options</span></a> struct. This operation is used to update these options for an existing asset. </p>
 <p><dl class="docutils">
 <dt><strong>Note</strong></dt>
-<dd>This operation cannot be used to update BitAsset-specific options. For these options, use <a class="reference internal" href="#project0structgraphene_1_1chain_1_1asset__update__bitasset__operation"><span>asset_update_bitasset_operation</span></a> instead.</dd>
+<dd>This operation cannot be used to update BitAsset-specific options. For these options, use <a class="reference internal" href="#project0structgraphene_1_1chain_1_1asset__update__bitasset__operation"><span class="std std-ref">asset_update_bitasset_operation</span></a> instead.</dd>
 <dt><strong>Pre</strong></dt>
-<dd>issuer SHALL be an existing account and MUST match <a class="reference internal" href="#project0classgraphene_1_1chain_1_1asset__object_1ad5274b71ad420b57da53c3ef80b95577"><span>asset_object::issuer</span></a> on asset_to_update </dd>
+<dd>issuer SHALL be an existing account and MUST match <a class="reference internal" href="#project0classgraphene_1_1chain_1_1asset__object_1ad5274b71ad420b57da53c3ef80b95577"><span class="std std-ref">asset_object::issuer</span></a> on asset_to_update </dd>
 <dt><strong>Pre</strong></dt>
 <dd>fee SHALL be nonnegative, and issuer MUST have a sufficient balance to pay it </dd>
 <dt><strong>Pre</strong></dt>
@@ -2634,7 +2634,7 @@
 <dl class="class">
 <dt id="_CPPv2N8graphene5chain16bitasset_optionsE">
 <span id="graphene::chain::bitasset_options"></span><span class="target" id="project0structgraphene_1_1chain_1_1bitasset__options"></span><em class="property">struct </em><code class="descname">bitasset_options</code><a class="headerlink" href="#_CPPv2N8graphene5chain16bitasset_optionsE" title="Permalink to this definition">¶</a></dt>
-<dd><em>#include &lt;asset_ops.hpp&gt;</em><p>The <a class="reference internal" href="#project0structgraphene_1_1chain_1_1bitasset__options"><span>bitasset_options</span></a> struct contains configurable options available only to BitAssets. </p>
+<dd><em>#include &lt;asset_ops.hpp&gt;</em><p>The <a class="reference internal" href="#project0structgraphene_1_1chain_1_1bitasset__options"><span class="std std-ref">bitasset_options</span></a> struct contains configurable options available only to BitAssets. </p>
 <p><dl class="docutils">
 <dt><strong>Note</strong></dt>
 <dd>Changes to this struct will break protocol compatibility </dd>
@@ -2751,10 +2751,10 @@
 <dl class="function">
 <dt id="_CPPv2N8graphene5chain24blind_transfer_evaluator7pay_feeEv">
 <span id="graphene::chain::blind_transfer_evaluator::pay_fee"></span>virtual <span class="target" id="project0classgraphene_1_1chain_1_1blind__transfer__evaluator_1a32d8100705b651906b284f7eadaec37b"></span>void <code class="descname">pay_fee</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene5chain24blind_transfer_evaluator7pay_feeEv" title="Permalink to this definition">¶</a></dt>
-<dd><p>Routes the fee to where it needs to go. The default implementation routes the fee to the <a class="reference internal" href="#project0classgraphene_1_1chain_1_1account__statistics__object"><span>account_statistics_object</span></a> of the fee_paying_account.</p>
-<p>Before <a class="reference internal" href="#project0classgraphene_1_1chain_1_1blind__transfer__evaluator_1a32d8100705b651906b284f7eadaec37b"><span>pay_fee()</span></a> is called, the fee is computed by prepare_fee() and has been moved out of the fee_paying_account and (if paid in a non-CORE asset) converted by the asset&#8217;s fee pool.</p>
-<p>Therefore, when <a class="reference internal" href="#project0classgraphene_1_1chain_1_1blind__transfer__evaluator_1a32d8100705b651906b284f7eadaec37b"><span>pay_fee()</span></a> is called, the fee only exists in this-&gt;core_fee_paid. So <a class="reference internal" href="#project0classgraphene_1_1chain_1_1blind__transfer__evaluator_1a32d8100705b651906b284f7eadaec37b"><span>pay_fee()</span></a> need only increment the receiving balance.</p>
-<p>The default implementation simply calls account_statistics_object-&gt;<a class="reference internal" href="#project0classgraphene_1_1chain_1_1blind__transfer__evaluator_1a32d8100705b651906b284f7eadaec37b"><span>pay_fee()</span></a> to increment pending_fees or pending_vested_fees. </p>
+<dd><p>Routes the fee to where it needs to go. The default implementation routes the fee to the <a class="reference internal" href="#project0classgraphene_1_1chain_1_1account__statistics__object"><span class="std std-ref">account_statistics_object</span></a> of the fee_paying_account.</p>
+<p>Before <a class="reference internal" href="#project0classgraphene_1_1chain_1_1blind__transfer__evaluator_1a32d8100705b651906b284f7eadaec37b"><span class="std std-ref">pay_fee()</span></a> is called, the fee is computed by prepare_fee() and has been moved out of the fee_paying_account and (if paid in a non-CORE asset) converted by the asset&#8217;s fee pool.</p>
+<p>Therefore, when <a class="reference internal" href="#project0classgraphene_1_1chain_1_1blind__transfer__evaluator_1a32d8100705b651906b284f7eadaec37b"><span class="std std-ref">pay_fee()</span></a> is called, the fee only exists in this-&gt;core_fee_paid. So <a class="reference internal" href="#project0classgraphene_1_1chain_1_1blind__transfer__evaluator_1a32d8100705b651906b284f7eadaec37b"><span class="std std-ref">pay_fee()</span></a> need only increment the receiving balance.</p>
+<p>The default implementation simply calls account_statistics_object-&gt;<a class="reference internal" href="#project0classgraphene_1_1chain_1_1blind__transfer__evaluator_1a32d8100705b651906b284f7eadaec37b"><span class="std std-ref">pay_fee()</span></a> to increment pending_fees or pending_vested_fees. </p>
 </dd></dl>
 
 </div>
@@ -2876,7 +2876,7 @@
 <dl class="class">
 <dt id="_CPPv2N8graphene5chain14buyback_objectE">
 <span id="graphene::chain::buyback_object"></span><span class="target" id="project0classgraphene_1_1chain_1_1buyback__object"></span><em class="property">class </em><code class="descname">buyback_object</code><a class="headerlink" href="#_CPPv2N8graphene5chain14buyback_objectE" title="Permalink to this definition">¶</a></dt>
-<dd><em>#include &lt;buyback_object.hpp&gt;</em><p>buyback_authority_object only exists to help with a specific indexing problem. We want to be able to iterate over all assets that have a buyback program. However, assets which have a buyback program are very rare. So rather than indexing <a class="reference internal" href="#project0classgraphene_1_1chain_1_1asset__object"><span>asset_object</span></a> by the buyback field (requiring additional bookkeeping for every asset), we instead maintain a <a class="reference internal" href="#project0classgraphene_1_1chain_1_1buyback__object"><span>buyback_object</span></a> pointing to each asset which has buyback (requiring additional bookkeeping only for every asset which has buyback).</p>
+<dd><em>#include &lt;buyback_object.hpp&gt;</em><p>buyback_authority_object only exists to help with a specific indexing problem. We want to be able to iterate over all assets that have a buyback program. However, assets which have a buyback program are very rare. So rather than indexing <a class="reference internal" href="#project0classgraphene_1_1chain_1_1asset__object"><span class="std std-ref">asset_object</span></a> by the buyback field (requiring additional bookkeeping for every asset), we instead maintain a <a class="reference internal" href="#project0classgraphene_1_1chain_1_1buyback__object"><span class="std std-ref">buyback_object</span></a> pointing to each asset which has buyback (requiring additional bookkeeping only for every asset which has buyback).</p>
 <p>This class is an implementation detail. </p>
 </dd></dl>
 
@@ -2884,7 +2884,7 @@
 <dt id="_CPPv2N8graphene5chain17call_order_objectE">
 <span id="graphene::chain::call_order_object"></span><span class="target" id="project0classgraphene_1_1chain_1_1call__order__object"></span><em class="property">class </em><code class="descname">call_order_object</code><a class="headerlink" href="#_CPPv2N8graphene5chain17call_order_objectE" title="Permalink to this definition">¶</a></dt>
 <dd><em>#include &lt;market_object.hpp&gt;</em><p>tracks debt and call price information </p>
-<p>There should only be one <a class="reference internal" href="#project0classgraphene_1_1chain_1_1call__order__object"><span>call_order_object</span></a> per asset pair per account and they will all have the same call price. </p>
+<p>There should only be one <a class="reference internal" href="#project0classgraphene_1_1chain_1_1call__order__object"><span class="std std-ref">call_order_object</span></a> per asset pair per account and they will all have the same call price. </p>
 <div class="breathe-sectiondef container">
 <p class="breathe-sectiondef-title rubric">Public Members</p>
 <dl class="member">
@@ -3327,7 +3327,7 @@ This function takes a new limit order, and runs the markets attempting to match 
 <dt id="_CPPv2N8graphene5chain8database7reindexEN2fc4pathERK18genesis_state_type">
 <span id="graphene::chain::database::reindex__fc::path.genesis_state_typeCR"></span><span class="target" id="project0classgraphene_1_1chain_1_1database_1a2d0d48f857cb39317ebd129a1edbbb06"></span>void <code class="descname">reindex</code><span class="sig-paren">(</span>fc::path <em>data_dir</em>, <em class="property">const</em> <a class="reference internal" href="#_CPPv2N8graphene5chain18genesis_state_typeE" title="graphene::chain::genesis_state_type">genesis_state_type</a> &amp;<em>initial_allocation</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene5chain8database7reindexEN2fc4pathERK18genesis_state_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Rebuild object graph from block history and open detabase. </p>
-<p>This method may be called after or instead of <a class="reference internal" href="#project0classgraphene_1_1chain_1_1database_1a2a2998715e050b0d98af6244000cbed5"><span>database::open</span></a>, and will rebuild the object graph by replaying blockchain history. When this method exits successfully, the database will be open. </p>
+<p>This method may be called after or instead of <a class="reference internal" href="#project0classgraphene_1_1chain_1_1database_1a2a2998715e050b0d98af6244000cbed5"><span class="std std-ref">database::open</span></a>, and will rebuild the object graph by replaying blockchain history. When this method exits successfully, the database will be open. </p>
 </dd></dl>
 
 <dl class="function">
@@ -3423,7 +3423,7 @@ Will close the database before wiping. Database will be closed when this functio
 <dd><p>Get the witness scheduled for block production in a slot. </p>
 <p>slot_num always corresponds to a time in the future.</p>
 <p>If slot_num == 1, returns the next scheduled witness. If slot_num == 2, returns the next scheduled witness after 1 block gap.</p>
-<p>Use the <a class="reference internal" href="#project0classgraphene_1_1chain_1_1database_1aaaaa95d962f350e23ae9343dd688327e"><span>get_slot_time()</span></a> and <a class="reference internal" href="#project0classgraphene_1_1chain_1_1database_1a2d130b67ea0c0e62b553d5bfdcea2815"><span>get_slot_at_time()</span></a> functions to convert between slot_num and timestamp.</p>
+<p>Use the <a class="reference internal" href="#project0classgraphene_1_1chain_1_1database_1aaaaa95d962f350e23ae9343dd688327e"><span class="std std-ref">get_slot_time()</span></a> and <a class="reference internal" href="#project0classgraphene_1_1chain_1_1database_1a2d130b67ea0c0e62b553d5bfdcea2815"><span class="std std-ref">get_slot_at_time()</span></a> functions to convert between slot_num and timestamp.</p>
 <p>Passing slot_num == 0 returns GRAPHENE_NULL_WITNESS </p>
 </dd></dl>
 
@@ -3645,7 +3645,7 @@ Will close the database before wiping. Database will be closed when this functio
 <dl class="class">
 <dt id="_CPPv2N8graphene5chain22fba_accumulator_objectE">
 <span id="graphene::chain::fba_accumulator_object"></span><span class="target" id="project0classgraphene_1_1chain_1_1fba__accumulator__object"></span><em class="property">class </em><code class="descname">fba_accumulator_object</code><a class="headerlink" href="#_CPPv2N8graphene5chain22fba_accumulator_objectE" title="Permalink to this definition">¶</a></dt>
-<dd><em>#include &lt;fba_object.hpp&gt;</em><p><a class="reference internal" href="#project0classgraphene_1_1chain_1_1fba__accumulator__object"><span>fba_accumulator_object</span></a> accumulates fees to be paid out via buyback or other FBA mechanism. </p>
+<dd><em>#include &lt;fba_object.hpp&gt;</em><p><a class="reference internal" href="#project0classgraphene_1_1chain_1_1fba__accumulator__object"><span class="std std-ref">fba_accumulator_object</span></a> accumulates fees to be paid out via buyback or other FBA mechanism. </p>
 </dd></dl>
 
 <dl class="class">
@@ -3782,10 +3782,10 @@ Pushes the block into the fork database and caches it if it doesn&#8217;t link <
 <dl class="function">
 <dt id="_CPPv2N8graphene5chain17generic_evaluator7pay_feeEv">
 <span id="graphene::chain::generic_evaluator::pay_fee"></span>virtual <span class="target" id="project0classgraphene_1_1chain_1_1generic__evaluator_1a832b9ba03e2d8b1dfb8e3e91d3ec49bc"></span>void <code class="descname">pay_fee</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene5chain17generic_evaluator7pay_feeEv" title="Permalink to this definition">¶</a></dt>
-<dd><p>Routes the fee to where it needs to go. The default implementation routes the fee to the <a class="reference internal" href="#project0classgraphene_1_1chain_1_1account__statistics__object"><span>account_statistics_object</span></a> of the fee_paying_account.</p>
-<p>Before <a class="reference internal" href="#project0classgraphene_1_1chain_1_1generic__evaluator_1a832b9ba03e2d8b1dfb8e3e91d3ec49bc"><span>pay_fee()</span></a> is called, the fee is computed by prepare_fee() and has been moved out of the fee_paying_account and (if paid in a non-CORE asset) converted by the asset&#8217;s fee pool.</p>
-<p>Therefore, when <a class="reference internal" href="#project0classgraphene_1_1chain_1_1generic__evaluator_1a832b9ba03e2d8b1dfb8e3e91d3ec49bc"><span>pay_fee()</span></a> is called, the fee only exists in this-&gt;core_fee_paid. So <a class="reference internal" href="#project0classgraphene_1_1chain_1_1generic__evaluator_1a832b9ba03e2d8b1dfb8e3e91d3ec49bc"><span>pay_fee()</span></a> need only increment the receiving balance.</p>
-<p>The default implementation simply calls account_statistics_object-&gt;<a class="reference internal" href="#project0classgraphene_1_1chain_1_1generic__evaluator_1a832b9ba03e2d8b1dfb8e3e91d3ec49bc"><span>pay_fee()</span></a> to increment pending_fees or pending_vested_fees. </p>
+<dd><p>Routes the fee to where it needs to go. The default implementation routes the fee to the <a class="reference internal" href="#project0classgraphene_1_1chain_1_1account__statistics__object"><span class="std std-ref">account_statistics_object</span></a> of the fee_paying_account.</p>
+<p>Before <a class="reference internal" href="#project0classgraphene_1_1chain_1_1generic__evaluator_1a832b9ba03e2d8b1dfb8e3e91d3ec49bc"><span class="std std-ref">pay_fee()</span></a> is called, the fee is computed by prepare_fee() and has been moved out of the fee_paying_account and (if paid in a non-CORE asset) converted by the asset&#8217;s fee pool.</p>
+<p>Therefore, when <a class="reference internal" href="#project0classgraphene_1_1chain_1_1generic__evaluator_1a832b9ba03e2d8b1dfb8e3e91d3ec49bc"><span class="std std-ref">pay_fee()</span></a> is called, the fee only exists in this-&gt;core_fee_paid. So <a class="reference internal" href="#project0classgraphene_1_1chain_1_1generic__evaluator_1a832b9ba03e2d8b1dfb8e3e91d3ec49bc"><span class="std std-ref">pay_fee()</span></a> need only increment the receiving balance.</p>
+<p>The default implementation simply calls account_statistics_object-&gt;<a class="reference internal" href="#project0classgraphene_1_1chain_1_1generic__evaluator_1a832b9ba03e2d8b1dfb8e3e91d3ec49bc"><span class="std std-ref">pay_fee()</span></a> to increment pending_fees or pending_vested_fees. </p>
 </dd></dl>
 
 </div>
@@ -4022,7 +4022,7 @@ Pushes the block into the fork database and caches it if it doesn&#8217;t link <
 <dl class="member">
 <dt id="_CPPv2N8graphene5chain9memo_data7messageE">
 <span id="graphene::chain::memo_data::message__vector:c:"></span><span class="target" id="project0structgraphene_1_1chain_1_1memo__data_1aba65cbdcd53042a37286fcf704cbc24b"></span>vector&lt;char&gt; <code class="descname">message</code><a class="headerlink" href="#_CPPv2N8graphene5chain9memo_data7messageE" title="Permalink to this definition">¶</a></dt>
-<dd><p>This field contains the AES encrypted packed <a class="reference internal" href="#project0structgraphene_1_1chain_1_1memo__message"><span>memo_message</span></a> </p>
+<dd><p>This field contains the AES encrypted packed <a class="reference internal" href="#project0structgraphene_1_1chain_1_1memo__message"><span class="std std-ref">memo_message</span></a> </p>
 </dd></dl>
 
 </div>
@@ -4045,14 +4045,14 @@ Pushes the block into the fork database and caches it if it doesn&#8217;t link <
 <dl class="class">
 <dt id="_CPPv2N8graphene5chain10op_wrapperE">
 <span id="graphene::chain::op_wrapper"></span><span class="target" id="project0structgraphene_1_1chain_1_1op__wrapper"></span><em class="property">struct </em><code class="descname">op_wrapper</code><a class="headerlink" href="#_CPPv2N8graphene5chain10op_wrapperE" title="Permalink to this definition">¶</a></dt>
-<dd><em>#include &lt;operations.hpp&gt;</em><p>necessary to support nested operations inside the <a class="reference internal" href="#project0structgraphene_1_1chain_1_1proposal__create__operation"><span>proposal_create_operation</span></a> </p>
+<dd><em>#include &lt;operations.hpp&gt;</em><p>necessary to support nested operations inside the <a class="reference internal" href="#project0structgraphene_1_1chain_1_1proposal__create__operation"><span class="std std-ref">proposal_create_operation</span></a> </p>
 </dd></dl>
 
 <dl class="class">
 <dt id="_CPPv2N8graphene5chain24operation_history_objectE">
 <span id="graphene::chain::operation_history_object"></span><span class="target" id="project0classgraphene_1_1chain_1_1operation__history__object"></span><em class="property">class </em><code class="descname">operation_history_object</code><a class="headerlink" href="#_CPPv2N8graphene5chain24operation_history_objectE" title="Permalink to this definition">¶</a></dt>
 <dd><em>#include &lt;operation_history_object.hpp&gt;</em><p>tracks the history of all logical operations on blockchain state</p>
-<p>All operations and virtual operations result in the creation of an <a class="reference internal" href="#project0classgraphene_1_1chain_1_1operation__history__object"><span>operation_history_object</span></a> that is maintained on disk as a stack. Each real or virtual operation is assigned a unique ID / sequence number that it can be referenced by. </p>
+<p>All operations and virtual operations result in the creation of an <a class="reference internal" href="#project0classgraphene_1_1chain_1_1operation__history__object"><span class="std std-ref">operation_history_object</span></a> that is maintained on disk as a stack. Each real or virtual operation is assigned a unique ID / sequence number that it can be referenced by. </p>
 <p><dl class="docutils">
 <dt><strong>Note</strong></dt>
 <dd>by default these objects are not tracked, the account_history_plugin must be loaded fore these objects to be maintained.</dd>
@@ -4123,7 +4123,7 @@ Pushes the block into the fork database and caches it if it doesn&#8217;t link <
 <dl class="member">
 <dt id="_CPPv2N8graphene5chain27override_transfer_operation6amountE">
 <span id="graphene::chain::override_transfer_operation::amount__asset"></span><span class="target" id="project0structgraphene_1_1chain_1_1override__transfer__operation_1a5d8f5b040d535d0dd9ab855b2bf12cdb"></span>asset <code class="descname">amount</code><a class="headerlink" href="#_CPPv2N8graphene5chain27override_transfer_operation6amountE" title="Permalink to this definition">¶</a></dt>
-<dd><p>The amount of asset to transfer from <a class="reference internal" href="#project0structgraphene_1_1chain_1_1override__transfer__operation_1a924f3735c38fdca24b30a187ef67d23b"><span>from</span></a> to <a class="reference internal" href="#project0structgraphene_1_1chain_1_1override__transfer__operation_1ada971efdd8f405810fe06213584907e3"><span>to</span></a>. </p>
+<dd><p>The amount of asset to transfer from <a class="reference internal" href="#project0structgraphene_1_1chain_1_1override__transfer__operation_1a924f3735c38fdca24b30a187ef67d23b"><span class="std std-ref">from</span></a> to <a class="reference internal" href="#project0structgraphene_1_1chain_1_1override__transfer__operation_1ada971efdd8f405810fe06213584907e3"><span class="std std-ref">to</span></a>. </p>
 </dd></dl>
 
 <dl class="member">
@@ -4198,8 +4198,8 @@ Pushes the block into the fork database and caches it if it doesn&#8217;t link <
 <dt id="_CPPv2N8graphene5chain10price_feed23max_short_squeeze_priceEv">
 <span id="graphene::chain::price_feed::max_short_squeeze_price"></span><span class="target" id="project0structgraphene_1_1chain_1_1price__feed_1aea473cfebd743d5b930bb2818b8e9c4b"></span><a class="reference internal" href="#_CPPv2N8graphene5chain5priceE" title="graphene::chain::price">price</a> <code class="descname">max_short_squeeze_price</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene5chain10price_feed23max_short_squeeze_priceEv" title="Permalink to this definition">¶</a></dt>
 <dd><p>When updating a call order the following condition must be maintained:</p>
-<p>debt * maintenance_price() &lt; collateral debt * settlement_price &lt; debt * maintenance debt * maintenance_price() &lt; debt * <a class="reference internal" href="#project0structgraphene_1_1chain_1_1price__feed_1aea473cfebd743d5b930bb2818b8e9c4b"><span>max_short_squeeze_price()</span></a> price maintenance_price()const;When selling collateral to pay off debt, the least amount of debt to receive should be min_usd = <a class="reference internal" href="#project0structgraphene_1_1chain_1_1price__feed_1aea473cfebd743d5b930bb2818b8e9c4b"><span>max_short_squeeze_price()</span></a> * collateral</p>
-<p>This is provided to ensure that a black swan cannot be trigged due to poor liquidity alone, it must be confirmed by having the <a class="reference internal" href="#project0structgraphene_1_1chain_1_1price__feed_1aea473cfebd743d5b930bb2818b8e9c4b"><span>max_short_squeeze_price()</span></a> move below the black swan price. </p>
+<p>debt * maintenance_price() &lt; collateral debt * settlement_price &lt; debt * maintenance debt * maintenance_price() &lt; debt * <a class="reference internal" href="#project0structgraphene_1_1chain_1_1price__feed_1aea473cfebd743d5b930bb2818b8e9c4b"><span class="std std-ref">max_short_squeeze_price()</span></a> price maintenance_price()const;When selling collateral to pay off debt, the least amount of debt to receive should be min_usd = <a class="reference internal" href="#project0structgraphene_1_1chain_1_1price__feed_1aea473cfebd743d5b930bb2818b8e9c4b"><span class="std std-ref">max_short_squeeze_price()</span></a> * collateral</p>
+<p>This is provided to ensure that a black swan cannot be trigged due to poor liquidity alone, it must be confirmed by having the <a class="reference internal" href="#project0structgraphene_1_1chain_1_1price__feed_1aea473cfebd743d5b930bb2818b8e9c4b"><span class="std std-ref">max_short_squeeze_price()</span></a> move below the black swan price. </p>
 </dd></dl>
 
 </div>
@@ -4216,14 +4216,14 @@ Pushes the block into the fork database and caches it if it doesn&#8217;t link <
 <dl class="class">
 <dt id="_CPPv2N8graphene5chain25proposal_create_operationE">
 <span id="graphene::chain::proposal_create_operation"></span><span class="target" id="project0structgraphene_1_1chain_1_1proposal__create__operation"></span><em class="property">struct </em><code class="descname">proposal_create_operation</code><a class="headerlink" href="#_CPPv2N8graphene5chain25proposal_create_operationE" title="Permalink to this definition">¶</a></dt>
-<dd><em>#include &lt;proposal.hpp&gt;</em><p>The <a class="reference internal" href="#project0structgraphene_1_1chain_1_1proposal__create__operation"><span>proposal_create_operation</span></a> creates a transaction proposal, for use in multi-sig scenarios</p>
+<dd><em>#include &lt;proposal.hpp&gt;</em><p>The <a class="reference internal" href="#project0structgraphene_1_1chain_1_1proposal__create__operation"><span class="std std-ref">proposal_create_operation</span></a> creates a transaction proposal, for use in multi-sig scenarios</p>
 <p>Creates a transaction proposal. The operations which compose the transaction are listed in order in proposed_ops, and expiration_time specifies the time by which the proposal must be accepted or it will fail permanently. The expiration_time cannot be farther in the future than the maximum expiration time set in the global properties object. </p>
 <div class="breathe-sectiondef container">
 <p class="breathe-sectiondef-title rubric">Public Static Functions</p>
 <dl class="function">
 <dt id="_CPPv2N8graphene5chain25proposal_create_operation18committee_proposalERK16chain_parametersN2fc14time_point_secE">
 <span id="graphene::chain::proposal_create_operation::committee_proposal__chain_parametersCR.fc::time_point_sec"></span><span class="target" id="project0structgraphene_1_1chain_1_1proposal__create__operation_1ae244ca9ced52e6b775e9ac72921a78b7"></span><a class="reference internal" href="#_CPPv2N8graphene5chain25proposal_create_operationE" title="graphene::chain::proposal_create_operation">proposal_create_operation</a> <code class="descname">committee_proposal</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv2N8graphene5chain16chain_parametersE" title="graphene::chain::chain_parameters">chain_parameters</a> &amp;<em>param</em>, fc::time_point_sec <em>head_block_time</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene5chain25proposal_create_operation18committee_proposalERK16chain_parametersN2fc14time_point_secE" title="Permalink to this definition">¶</a></dt>
-<dd><p>Constructs a <a class="reference internal" href="#project0structgraphene_1_1chain_1_1proposal__create__operation"><span>proposal_create_operation</span></a> suitable for committee proposals, with expiration time and review period set appropriately. No proposed_ops are added. When used to create a proposal to change chain parameters, this method expects to receive the currently effective parameters, not the proposed parameters. (The proposed parameters will go in proposed_ops, and proposed_ops is untouched by this function.) </p>
+<dd><p>Constructs a <a class="reference internal" href="#project0structgraphene_1_1chain_1_1proposal__create__operation"><span class="std std-ref">proposal_create_operation</span></a> suitable for committee proposals, with expiration time and review period set appropriately. No proposed_ops are added. When used to create a proposal to change chain parameters, this method expects to receive the currently effective parameters, not the proposed parameters. (The proposed parameters will go in proposed_ops, and proposed_ops is untouched by this function.) </p>
 </dd></dl>
 
 </div>
@@ -4232,7 +4232,7 @@ Pushes the block into the fork database and caches it if it doesn&#8217;t link <
 <dl class="class">
 <dt id="_CPPv2N8graphene5chain25proposal_delete_operationE">
 <span id="graphene::chain::proposal_delete_operation"></span><span class="target" id="project0structgraphene_1_1chain_1_1proposal__delete__operation"></span><em class="property">struct </em><code class="descname">proposal_delete_operation</code><a class="headerlink" href="#_CPPv2N8graphene5chain25proposal_delete_operationE" title="Permalink to this definition">¶</a></dt>
-<dd><em>#include &lt;proposal.hpp&gt;</em><p>The <a class="reference internal" href="#project0structgraphene_1_1chain_1_1proposal__delete__operation"><span>proposal_delete_operation</span></a> deletes an existing transaction proposal</p>
+<dd><em>#include &lt;proposal.hpp&gt;</em><p>The <a class="reference internal" href="#project0structgraphene_1_1chain_1_1proposal__delete__operation"><span class="std std-ref">proposal_delete_operation</span></a> deletes an existing transaction proposal</p>
 <p>This operation allows the early veto of a proposed transaction. It may be used by any account which is a required authority on the proposed transaction, when that account&#8217;s holder feels the proposal is ill-advised and he decides he will never approve of it and wishes to put an end to all discussion of the issue. Because he is a required authority, he could simply refuse to add his approval, but this would leave the topic open for debate until the proposal expires. Using this operation, he can prevent any further breath from being wasted on such an absurd proposal. </p>
 </dd></dl>
 
@@ -4245,7 +4245,7 @@ Pushes the block into the fork database and caches it if it doesn&#8217;t link <
 <dl class="class">
 <dt id="_CPPv2N8graphene5chain25proposal_update_operationE">
 <span id="graphene::chain::proposal_update_operation"></span><span class="target" id="project0structgraphene_1_1chain_1_1proposal__update__operation"></span><em class="property">struct </em><code class="descname">proposal_update_operation</code><a class="headerlink" href="#_CPPv2N8graphene5chain25proposal_update_operationE" title="Permalink to this definition">¶</a></dt>
-<dd><em>#include &lt;proposal.hpp&gt;</em><p>The <a class="reference internal" href="#project0structgraphene_1_1chain_1_1proposal__update__operation"><span>proposal_update_operation</span></a> updates an existing transaction proposal</p>
+<dd><em>#include &lt;proposal.hpp&gt;</em><p>The <a class="reference internal" href="#project0structgraphene_1_1chain_1_1proposal__update__operation"><span class="std std-ref">proposal_update_operation</span></a> updates an existing transaction proposal</p>
 <p>This operation allows accounts to add or revoke approval of a proposed transaction. Signatures sufficient to satisfy the authority of each account in approvals are required on the transaction containing this operation. </p>
 <p>If an account with a multi-signature authority is listed in approvals_to_add or approvals_to_remove, either all required signatures to satisfy that account&#8217;s authority must be provided in the transaction containing this operation, or a secondary proposal must be created which contains this operation.</p>
 <p>NOTE: If the proposal requires only an account&#8217;s active authority, the account must not update adding its owner authority&#8217;s approval. This is considered an error. An owner approval may only be added if the proposal requires the owner&#8217;s authority.</p>
@@ -4375,7 +4375,7 @@ Pushes the block into the fork database and caches it if it doesn&#8217;t link <
 <dl class="function">
 <dt id="_CPPv2N8graphene5chain18signed_transaction28minimize_required_signaturesERK13chain_id_typeRK8flat_setI15public_key_typeERKNSt8functionIFPK9authority15account_id_typeEEERKNSt8functionIFPK9authority15account_id_typeEEE8uint32_t">
 <span class="target" id="project0structgraphene_1_1chain_1_1signed__transaction_1a7184319b894c7cb0cee83b7558fb7742"></span>set&lt;public_key_type&gt; <code class="descname">minimize_required_signatures</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv2N8graphene5chain13chain_id_typeE" title="graphene::chain::chain_id_type">chain_id_type</a> &amp;<em>chain_id</em>, <em class="property">const</em> flat_set&lt;public_key_type&gt; &amp;<em>available_keys</em>, <em class="property">const</em> std::function&lt;<em class="property">const</em> <a class="reference internal" href="#_CPPv2N8graphene5chain9authorityE" title="graphene::chain::authority">authority</a> *<span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N8graphene5chain15account_id_typeE" title="graphene::chain::account_id_type">account_id_type</a><span class="sig-paren">)</span>&gt; &amp;<em>get_active</em>, <em class="property">const</em> std::function&lt;<em class="property">const</em> <a class="reference internal" href="#_CPPv2N8graphene5chain9authorityE" title="graphene::chain::authority">authority</a> *<span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N8graphene5chain15account_id_typeE" title="graphene::chain::account_id_type">account_id_type</a><span class="sig-paren">)</span>&gt; &amp;<em>get_owner</em>, uint32_t <em>max_recursion</em>, <span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene5chain18signed_transaction28minimize_required_signaturesERK13chain_id_typeRK8flat_setI15public_key_typeERKNSt8functionIFPK9authority15account_id_typeEEERKNSt8functionIFPK9authority15account_id_typeEEE8uint32_t" title="Permalink to this definition">¶</a></dt>
-<dd><p>This is a slower replacement for <a class="reference internal" href="#project0structgraphene_1_1chain_1_1signed__transaction_1ac6398f97c8ed38d3129b06e7a6fa8820"><span>get_required_signatures()</span></a> which returns a minimal set in all cases, including some cases where <a class="reference internal" href="#project0structgraphene_1_1chain_1_1signed__transaction_1ac6398f97c8ed38d3129b06e7a6fa8820"><span>get_required_signatures()</span></a> returns a non-minimal set. </p>
+<dd><p>This is a slower replacement for <a class="reference internal" href="#project0structgraphene_1_1chain_1_1signed__transaction_1ac6398f97c8ed38d3129b06e7a6fa8820"><span class="std std-ref">get_required_signatures()</span></a> which returns a minimal set in all cases, including some cases where <a class="reference internal" href="#project0structgraphene_1_1chain_1_1signed__transaction_1ac6398f97c8ed38d3129b06e7a6fa8820"><span class="std std-ref">get_required_signatures()</span></a> returns a non-minimal set. </p>
 </dd></dl>
 
 <dl class="function">
@@ -4390,7 +4390,7 @@ Pushes the block into the fork database and caches it if it doesn&#8217;t link <
 <dl class="class">
 <dt id="_CPPv2N8graphene5chain24special_authority_objectE">
 <span id="graphene::chain::special_authority_object"></span><span class="target" id="project0classgraphene_1_1chain_1_1special__authority__object"></span><em class="property">class </em><code class="descname">special_authority_object</code><a class="headerlink" href="#_CPPv2N8graphene5chain24special_authority_objectE" title="Permalink to this definition">¶</a></dt>
-<dd><em>#include &lt;special_authority_object.hpp&gt;</em><p><a class="reference internal" href="#project0classgraphene_1_1chain_1_1special__authority__object"><span>special_authority_object</span></a> only exists to help with a specific indexing problem. We want to be able to iterate over all accounts that contain a special authority. However, accounts which have a special_authority are very rare. So rather than indexing <a class="reference internal" href="#project0classgraphene_1_1chain_1_1account__object"><span>account_object</span></a> by the special_authority fields (requiring additional bookkeeping for every account), we instead maintain a <a class="reference internal" href="#project0classgraphene_1_1chain_1_1special__authority__object"><span>special_authority_object</span></a> pointing to each account which has special_authority (requiring additional bookkeeping only for every account which has special_authority).</p>
+<dd><em>#include &lt;special_authority_object.hpp&gt;</em><p><a class="reference internal" href="#project0classgraphene_1_1chain_1_1special__authority__object"><span class="std std-ref">special_authority_object</span></a> only exists to help with a specific indexing problem. We want to be able to iterate over all accounts that contain a special authority. However, accounts which have a special_authority are very rare. So rather than indexing <a class="reference internal" href="#project0classgraphene_1_1chain_1_1account__object"><span class="std std-ref">account_object</span></a> by the special_authority fields (requiring additional bookkeeping for every account), we instead maintain a <a class="reference internal" href="#project0classgraphene_1_1chain_1_1special__authority__object"><span class="std std-ref">special_authority_object</span></a> pointing to each account which has special_authority (requiring additional bookkeeping only for every account which has special_authority).</p>
 <p>This class is an implementation detail. </p>
 </dd></dl>
 
@@ -4453,7 +4453,7 @@ Pushes the block into the fork database and caches it if it doesn&#8217;t link <
 <dl class="member">
 <dt id="_CPPv2N8graphene5chain11transaction16ref_block_prefixE">
 <span id="graphene::chain::transaction::ref_block_prefix__uint32_t"></span><span class="target" id="project0structgraphene_1_1chain_1_1transaction_1afcebf54b05d6254e6ea53aecdd075975"></span>uint32_t <code class="descname">ref_block_prefix</code><a class="headerlink" href="#_CPPv2N8graphene5chain11transaction16ref_block_prefixE" title="Permalink to this definition">¶</a></dt>
-<dd><p>The first non-block-number 32-bits of the reference block ID. Recall that block IDs have 32 bits of block number followed by the actual block hash, so this field should be set using the second 32 bits in the <a class="reference internal" href="#project0namespacegraphene_1_1chain_1a314b030d7a6107c5641fd9945da7f568"><span>block_id_type</span></a> </p>
+<dd><p>The first non-block-number 32-bits of the reference block ID. Recall that block IDs have 32 bits of block number followed by the actual block hash, so this field should be set using the second 32 bits in the <a class="reference internal" href="#project0namespacegraphene_1_1chain_1a314b030d7a6107c5641fd9945da7f568"><span class="std std-ref">block_id_type</span></a> </p>
 </dd></dl>
 
 <dl class="member">
@@ -4474,7 +4474,7 @@ Pushes the block into the fork database and caches it if it doesn&#8217;t link <
 <dl class="class">
 <dt id="_CPPv2N8graphene5chain18transaction_objectE">
 <span id="graphene::chain::transaction_object"></span><span class="target" id="project0classgraphene_1_1chain_1_1transaction__object"></span><em class="property">class </em><code class="descname">transaction_object</code><a class="headerlink" href="#_CPPv2N8graphene5chain18transaction_objectE" title="Permalink to this definition">¶</a></dt>
-<dd><em>#include &lt;transaction_object.hpp&gt;</em><p>The purpose of this object is to enable the detection of duplicate transactions. When a transaction is included in a block a <a class="reference internal" href="#project0classgraphene_1_1chain_1_1transaction__object"><span>transaction_object</span></a> is added. At the end of block processing all transaction_objects that have expired can be removed from the index. </p>
+<dd><em>#include &lt;transaction_object.hpp&gt;</em><p>The purpose of this object is to enable the detection of duplicate transactions. When a transaction is included in a block a <a class="reference internal" href="#project0classgraphene_1_1chain_1_1transaction__object"><span class="std std-ref">transaction_object</span></a> is added. At the end of block processing all transaction_objects that have expired can be removed from the index. </p>
 </dd></dl>
 
 <dl class="class">
@@ -4485,10 +4485,10 @@ Pushes the block into the fork database and caches it if it doesn&#8217;t link <
 <dl class="function">
 <dt id="_CPPv2N8graphene5chain29transfer_from_blind_evaluator7pay_feeEv">
 <span id="graphene::chain::transfer_from_blind_evaluator::pay_fee"></span>virtual <span class="target" id="project0classgraphene_1_1chain_1_1transfer__from__blind__evaluator_1a616dce9066853f65e721cef8cf78879b"></span>void <code class="descname">pay_fee</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene5chain29transfer_from_blind_evaluator7pay_feeEv" title="Permalink to this definition">¶</a></dt>
-<dd><p>Routes the fee to where it needs to go. The default implementation routes the fee to the <a class="reference internal" href="#project0classgraphene_1_1chain_1_1account__statistics__object"><span>account_statistics_object</span></a> of the fee_paying_account.</p>
-<p>Before <a class="reference internal" href="#project0classgraphene_1_1chain_1_1transfer__from__blind__evaluator_1a616dce9066853f65e721cef8cf78879b"><span>pay_fee()</span></a> is called, the fee is computed by prepare_fee() and has been moved out of the fee_paying_account and (if paid in a non-CORE asset) converted by the asset&#8217;s fee pool.</p>
-<p>Therefore, when <a class="reference internal" href="#project0classgraphene_1_1chain_1_1transfer__from__blind__evaluator_1a616dce9066853f65e721cef8cf78879b"><span>pay_fee()</span></a> is called, the fee only exists in this-&gt;core_fee_paid. So <a class="reference internal" href="#project0classgraphene_1_1chain_1_1transfer__from__blind__evaluator_1a616dce9066853f65e721cef8cf78879b"><span>pay_fee()</span></a> need only increment the receiving balance.</p>
-<p>The default implementation simply calls account_statistics_object-&gt;<a class="reference internal" href="#project0classgraphene_1_1chain_1_1transfer__from__blind__evaluator_1a616dce9066853f65e721cef8cf78879b"><span>pay_fee()</span></a> to increment pending_fees or pending_vested_fees. </p>
+<dd><p>Routes the fee to where it needs to go. The default implementation routes the fee to the <a class="reference internal" href="#project0classgraphene_1_1chain_1_1account__statistics__object"><span class="std std-ref">account_statistics_object</span></a> of the fee_paying_account.</p>
+<p>Before <a class="reference internal" href="#project0classgraphene_1_1chain_1_1transfer__from__blind__evaluator_1a616dce9066853f65e721cef8cf78879b"><span class="std std-ref">pay_fee()</span></a> is called, the fee is computed by prepare_fee() and has been moved out of the fee_paying_account and (if paid in a non-CORE asset) converted by the asset&#8217;s fee pool.</p>
+<p>Therefore, when <a class="reference internal" href="#project0classgraphene_1_1chain_1_1transfer__from__blind__evaluator_1a616dce9066853f65e721cef8cf78879b"><span class="std std-ref">pay_fee()</span></a> is called, the fee only exists in this-&gt;core_fee_paid. So <a class="reference internal" href="#project0classgraphene_1_1chain_1_1transfer__from__blind__evaluator_1a616dce9066853f65e721cef8cf78879b"><span class="std std-ref">pay_fee()</span></a> need only increment the receiving balance.</p>
+<p>The default implementation simply calls account_statistics_object-&gt;<a class="reference internal" href="#project0classgraphene_1_1chain_1_1transfer__from__blind__evaluator_1a616dce9066853f65e721cef8cf78879b"><span class="std std-ref">pay_fee()</span></a> to increment pending_fees or pending_vested_fees. </p>
 </dd></dl>
 
 </div>
@@ -4551,7 +4551,7 @@ Pushes the block into the fork database and caches it if it doesn&#8217;t link <
 <dl class="member">
 <dt id="_CPPv2N8graphene5chain18transfer_operation6amountE">
 <span id="graphene::chain::transfer_operation::amount__asset"></span><span class="target" id="project0structgraphene_1_1chain_1_1transfer__operation_1a0f50da74901acd7af97df5eb0c9dd2bb"></span>asset <code class="descname">amount</code><a class="headerlink" href="#_CPPv2N8graphene5chain18transfer_operation6amountE" title="Permalink to this definition">¶</a></dt>
-<dd><p>The amount of asset to transfer from <a class="reference internal" href="#project0structgraphene_1_1chain_1_1transfer__operation_1aef2ea25c2682522b5552afcc04a8b5f9"><span>from</span></a> to <a class="reference internal" href="#project0structgraphene_1_1chain_1_1transfer__operation_1ae3341bdd125d31de62bb5e0956acad65"><span>to</span></a>. </p>
+<dd><p>The amount of asset to transfer from <a class="reference internal" href="#project0structgraphene_1_1chain_1_1transfer__operation_1aef2ea25c2682522b5552afcc04a8b5f9"><span class="std std-ref">from</span></a> to <a class="reference internal" href="#project0structgraphene_1_1chain_1_1transfer__operation_1ae3341bdd125d31de62bb5e0956acad65"><span class="std std-ref">to</span></a>. </p>
 </dd></dl>
 
 <dl class="member">
@@ -4571,10 +4571,10 @@ Pushes the block into the fork database and caches it if it doesn&#8217;t link <
 <dl class="function">
 <dt id="_CPPv2N8graphene5chain27transfer_to_blind_evaluator7pay_feeEv">
 <span id="graphene::chain::transfer_to_blind_evaluator::pay_fee"></span>virtual <span class="target" id="project0classgraphene_1_1chain_1_1transfer__to__blind__evaluator_1a8fb4e46e3ead3f434c109c2756ebe077"></span>void <code class="descname">pay_fee</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene5chain27transfer_to_blind_evaluator7pay_feeEv" title="Permalink to this definition">¶</a></dt>
-<dd><p>Routes the fee to where it needs to go. The default implementation routes the fee to the <a class="reference internal" href="#project0classgraphene_1_1chain_1_1account__statistics__object"><span>account_statistics_object</span></a> of the fee_paying_account.</p>
-<p>Before <a class="reference internal" href="#project0classgraphene_1_1chain_1_1transfer__to__blind__evaluator_1a8fb4e46e3ead3f434c109c2756ebe077"><span>pay_fee()</span></a> is called, the fee is computed by prepare_fee() and has been moved out of the fee_paying_account and (if paid in a non-CORE asset) converted by the asset&#8217;s fee pool.</p>
-<p>Therefore, when <a class="reference internal" href="#project0classgraphene_1_1chain_1_1transfer__to__blind__evaluator_1a8fb4e46e3ead3f434c109c2756ebe077"><span>pay_fee()</span></a> is called, the fee only exists in this-&gt;core_fee_paid. So <a class="reference internal" href="#project0classgraphene_1_1chain_1_1transfer__to__blind__evaluator_1a8fb4e46e3ead3f434c109c2756ebe077"><span>pay_fee()</span></a> need only increment the receiving balance.</p>
-<p>The default implementation simply calls account_statistics_object-&gt;<a class="reference internal" href="#project0classgraphene_1_1chain_1_1transfer__to__blind__evaluator_1a8fb4e46e3ead3f434c109c2756ebe077"><span>pay_fee()</span></a> to increment pending_fees or pending_vested_fees. </p>
+<dd><p>Routes the fee to where it needs to go. The default implementation routes the fee to the <a class="reference internal" href="#project0classgraphene_1_1chain_1_1account__statistics__object"><span class="std std-ref">account_statistics_object</span></a> of the fee_paying_account.</p>
+<p>Before <a class="reference internal" href="#project0classgraphene_1_1chain_1_1transfer__to__blind__evaluator_1a8fb4e46e3ead3f434c109c2756ebe077"><span class="std std-ref">pay_fee()</span></a> is called, the fee is computed by prepare_fee() and has been moved out of the fee_paying_account and (if paid in a non-CORE asset) converted by the asset&#8217;s fee pool.</p>
+<p>Therefore, when <a class="reference internal" href="#project0classgraphene_1_1chain_1_1transfer__to__blind__evaluator_1a8fb4e46e3ead3f434c109c2756ebe077"><span class="std std-ref">pay_fee()</span></a> is called, the fee only exists in this-&gt;core_fee_paid. So <a class="reference internal" href="#project0classgraphene_1_1chain_1_1transfer__to__blind__evaluator_1a8fb4e46e3ead3f434c109c2756ebe077"><span class="std std-ref">pay_fee()</span></a> need only increment the receiving balance.</p>
+<p>The default implementation simply calls account_statistics_object-&gt;<a class="reference internal" href="#project0classgraphene_1_1chain_1_1transfer__to__blind__evaluator_1a8fb4e46e3ead3f434c109c2756ebe077"><span class="std std-ref">pay_fee()</span></a> to increment pending_fees or pending_vested_fees. </p>
 </dd></dl>
 
 </div>
@@ -4608,7 +4608,7 @@ Pushes the block into the fork database and caches it if it doesn&#8217;t link <
 <p>Manual creation of vesting balances can be used by a stakeholder to publicly demonstrate that they are committed to the chain. It can also be used as a building block to create transactions that function like public debt. Finally, it is useful for testing vesting balance functionality.</p>
 <p><dl class="docutils">
 <dt><strong>Return</strong></dt>
-<dd>ID of newly created <a class="reference internal" href="#project0classgraphene_1_1chain_1_1vesting__balance__object"><span>vesting_balance_object</span></a> </dd>
+<dd>ID of newly created <a class="reference internal" href="#project0classgraphene_1_1chain_1_1vesting__balance__object"><span class="std std-ref">vesting_balance_object</span></a> </dd>
 </dl>
 </p>
 <div class="breathe-sectiondef container">
@@ -4740,12 +4740,12 @@ Pushes the block into the fork database and caches it if it doesn&#8217;t link <
 <span id="graphene::chain::vote_id_type"></span><span class="target" id="project0structgraphene_1_1chain_1_1vote__id__type"></span><em class="property">struct </em><code class="descname">vote_id_type</code><a class="headerlink" href="#_CPPv2N8graphene5chain12vote_id_typeE" title="Permalink to this definition">¶</a></dt>
 <dd><em>#include &lt;vote.hpp&gt;</em><p>An ID for some votable object. </p>
 <p>This class stores an ID for a votable object. The ID is comprised of two fields: a type, and an instance. The type field stores which kind of object is being voted on, and the instance stores which specific object of that type is being referenced by this ID.</p>
-<p>A value of <a class="reference internal" href="#project0structgraphene_1_1chain_1_1vote__id__type"><span>vote_id_type</span></a> is implicitly convertible to an unsigned 32-bit integer containing only the instance. It may also be implicitly assigned from a uint32_t, which will update the instance. It may not, however, be implicitly constructed from a uint32_t, as in this case, the type would be unknown.</p>
-<p>On the wire, a <a class="reference internal" href="#project0structgraphene_1_1chain_1_1vote__id__type"><span>vote_id_type</span></a> is represented as a 32-bit integer with the type in the lower 8 bits and the instance in the upper 24 bits. This means that types may never exceed 8 bits, and instances may never exceed 24 bits.</p>
-<p>In JSON, a <a class="reference internal" href="#project0structgraphene_1_1chain_1_1vote__id__type"><span>vote_id_type</span></a> is represented as a string &#8220;type:instance&#8221;, i.e. &#8220;1:5&#8221; would be type 1 and instance 5.</p>
+<p>A value of <a class="reference internal" href="#project0structgraphene_1_1chain_1_1vote__id__type"><span class="std std-ref">vote_id_type</span></a> is implicitly convertible to an unsigned 32-bit integer containing only the instance. It may also be implicitly assigned from a uint32_t, which will update the instance. It may not, however, be implicitly constructed from a uint32_t, as in this case, the type would be unknown.</p>
+<p>On the wire, a <a class="reference internal" href="#project0structgraphene_1_1chain_1_1vote__id__type"><span class="std std-ref">vote_id_type</span></a> is represented as a 32-bit integer with the type in the lower 8 bits and the instance in the upper 24 bits. This means that types may never exceed 8 bits, and instances may never exceed 24 bits.</p>
+<p>In JSON, a <a class="reference internal" href="#project0structgraphene_1_1chain_1_1vote__id__type"><span class="std std-ref">vote_id_type</span></a> is represented as a string &#8220;type:instance&#8221;, i.e. &#8220;1:5&#8221; would be type 1 and instance 5.</p>
 <p><dl class="docutils">
 <dt><strong>Note</strong></dt>
-<dd>In the Graphene protocol, <a class="reference internal" href="#project0structgraphene_1_1chain_1_1vote__id__type"><span>vote_id_type</span></a> instances are unique across types; that is to say, if an object of type 1 has instance 4, an object of type 0 may not also have instance 4. In other words, the type is not a namespace for instances; it is only an informational field. </dd>
+<dd>In the Graphene protocol, <a class="reference internal" href="#project0structgraphene_1_1chain_1_1vote__id__type"><span class="std std-ref">vote_id_type</span></a> instances are unique across types; that is to say, if an object of type 1 has instance 4, an object of type 0 may not also have instance 4. In other words, the type is not a namespace for instances; it is only an informational field. </dd>
 </dl>
 </p>
 <div class="breathe-sectiondef container">
@@ -4759,55 +4759,55 @@ Pushes the block into the fork database and caches it if it doesn&#8217;t link <
 <dl class="function">
 <dt id="_CPPv2N8graphene5chain12vote_id_type12vote_id_typeE9vote_type8uint32_t">
 <span id="graphene::chain::vote_id_type::vote_id_type__vote_type.uint32_t"></span><span class="target" id="project0structgraphene_1_1chain_1_1vote__id__type_1a8eae3ef02cd51f1aa620dc05c323138f"></span><code class="descname">vote_id_type</code><span class="sig-paren">(</span>vote_type <em>type</em>, uint32_t <em>instance</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene5chain12vote_id_type12vote_id_typeE9vote_type8uint32_t" title="Permalink to this definition">¶</a></dt>
-<dd><p>Construct this <a class="reference internal" href="#project0structgraphene_1_1chain_1_1vote__id__type"><span>vote_id_type</span></a> with provided type and instance. </p>
+<dd><p>Construct this <a class="reference internal" href="#project0structgraphene_1_1chain_1_1vote__id__type"><span class="std std-ref">vote_id_type</span></a> with provided type and instance. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N8graphene5chain12vote_id_type12vote_id_typeERKNSt6stringE">
 <span id="graphene::chain::vote_id_type::vote_id_type__ssCR"></span><span class="target" id="project0structgraphene_1_1chain_1_1vote__id__type_1ad6ef3ea1b4e1bd60457704a097b85bb9"></span><code class="descname">vote_id_type</code><span class="sig-paren">(</span><em class="property">const</em> std::string &amp;<em>serial</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene5chain12vote_id_type12vote_id_typeERKNSt6stringE" title="Permalink to this definition">¶</a></dt>
-<dd><p>Construct this <a class="reference internal" href="#project0structgraphene_1_1chain_1_1vote__id__type"><span>vote_id_type</span></a> from a serial string in the form &#8220;type:instance&#8221;. </p>
+<dd><p>Construct this <a class="reference internal" href="#project0structgraphene_1_1chain_1_1vote__id__type"><span class="std std-ref">vote_id_type</span></a> from a serial string in the form &#8220;type:instance&#8221;. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N8graphene5chain12vote_id_type8set_typeE9vote_type">
 <span id="graphene::chain::vote_id_type::set_type__vote_type"></span><span class="target" id="project0structgraphene_1_1chain_1_1vote__id__type_1aa56496f2bfdf9ba4bf666f3811562948"></span>void <code class="descname">set_type</code><span class="sig-paren">(</span>vote_type <em>type</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene5chain12vote_id_type8set_typeE9vote_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the type of this <a class="reference internal" href="#project0structgraphene_1_1chain_1_1vote__id__type"><span>vote_id_type</span></a>. </p>
+<dd><p>Set the type of this <a class="reference internal" href="#project0structgraphene_1_1chain_1_1vote__id__type"><span class="std std-ref">vote_id_type</span></a>. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N8graphene5chain12vote_id_type4typeEv">
 <span id="graphene::chain::vote_id_type::type"></span><span class="target" id="project0structgraphene_1_1chain_1_1vote__id__type_1a944bbda5367c2adc9add009273c496a1"></span>vote_type <code class="descname">type</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene5chain12vote_id_type4typeEv" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the type of this <a class="reference internal" href="#project0structgraphene_1_1chain_1_1vote__id__type"><span>vote_id_type</span></a>. </p>
+<dd><p>Get the type of this <a class="reference internal" href="#project0structgraphene_1_1chain_1_1vote__id__type"><span class="std std-ref">vote_id_type</span></a>. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N8graphene5chain12vote_id_type12set_instanceE8uint32_t">
 <span id="graphene::chain::vote_id_type::set_instance__uint32_t"></span><span class="target" id="project0structgraphene_1_1chain_1_1vote__id__type_1a8550aab05d4c194edb4dbafc7c9785e9"></span>void <code class="descname">set_instance</code><span class="sig-paren">(</span>uint32_t <em>instance</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene5chain12vote_id_type12set_instanceE8uint32_t" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the instance of this <a class="reference internal" href="#project0structgraphene_1_1chain_1_1vote__id__type"><span>vote_id_type</span></a>. </p>
+<dd><p>Set the instance of this <a class="reference internal" href="#project0structgraphene_1_1chain_1_1vote__id__type"><span class="std std-ref">vote_id_type</span></a>. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N8graphene5chain12vote_id_type8instanceEv">
 <span id="graphene::chain::vote_id_type::instance"></span><span class="target" id="project0structgraphene_1_1chain_1_1vote__id__type_1aab500167a727c99adb160123d6c010e3"></span>uint32_t <code class="descname">instance</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene5chain12vote_id_type8instanceEv" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the instance of this <a class="reference internal" href="#project0structgraphene_1_1chain_1_1vote__id__type"><span>vote_id_type</span></a>. </p>
+<dd><p>Get the instance of this <a class="reference internal" href="#project0structgraphene_1_1chain_1_1vote__id__type"><span class="std std-ref">vote_id_type</span></a>. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N8graphene5chain12vote_id_typeaSE8uint32_t">
-<span id="graphene::chain::vote_id_type::assign-operator__uint32_t"></span><span class="target" id="project0structgraphene_1_1chain_1_1vote__id__type_1aafe79dca72f641c4835e651a71efc337"></span><a class="reference internal" href="#_CPPv2N8graphene5chain12vote_id_type12vote_id_typeEv" title="graphene::chain::vote_id_type::vote_id_type">vote_id_type</a> &amp;<code class="descname">operator=</code><span class="sig-paren">(</span>uint32_t <em>instance</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene5chain12vote_id_typeaSE8uint32_t" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the instance of this <a class="reference internal" href="#project0structgraphene_1_1chain_1_1vote__id__type"><span>vote_id_type</span></a>. </p>
+<span id="graphene::chain::vote_id_type::assign-operator__uint32_t"></span><span class="target" id="project0structgraphene_1_1chain_1_1vote__id__type_1aafe79dca72f641c4835e651a71efc337"></span><a class="reference internal" href="#_CPPv2N8graphene5chain12vote_id_typeE" title="graphene::chain::vote_id_type">vote_id_type</a> &amp;<code class="descname">operator=</code><span class="sig-paren">(</span>uint32_t <em>instance</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene5chain12vote_id_typeaSE8uint32_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the instance of this <a class="reference internal" href="#project0structgraphene_1_1chain_1_1vote__id__type"><span class="std std-ref">vote_id_type</span></a>. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N8graphene5chain12vote_id_typecv8uint32_tEv">
 <span id="graphene::chain::vote_id_type::castto-uint32_t-operator"></span><span class="target" id="project0structgraphene_1_1chain_1_1vote__id__type_1a832826b5fe4ccaf6435ededf2e7b3856"></span><code class="descname">operator uint32_t</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene5chain12vote_id_typecv8uint32_tEv" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the instance of this <a class="reference internal" href="#project0structgraphene_1_1chain_1_1vote__id__type"><span>vote_id_type</span></a>. </p>
+<dd><p>Get the instance of this <a class="reference internal" href="#project0structgraphene_1_1chain_1_1vote__id__type"><span class="std std-ref">vote_id_type</span></a>. </p>
 </dd></dl>
 
 <dl class="function">
 <dt id="_CPPv2N8graphene5chain12vote_id_typecvNSt6stringEEv">
 <span id="graphene::chain::vote_id_type::castto-ss-operator"></span><span class="target" id="project0structgraphene_1_1chain_1_1vote__id__type_1a46881e4984e8e83e7ddb8c0ed5f5dcf5"></span><code class="descname">operator std::string</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene5chain12vote_id_typecvNSt6stringEEv" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convert this <a class="reference internal" href="#project0structgraphene_1_1chain_1_1vote__id__type"><span>vote_id_type</span></a> to a serial string in the form &#8220;type:instance&#8221;. </p>
+<dd><p>Convert this <a class="reference internal" href="#project0structgraphene_1_1chain_1_1vote__id__type"><span class="std std-ref">vote_id_type</span></a> to a serial string in the form &#8220;type:instance&#8221;. </p>
 </dd></dl>
 
 </div>
@@ -4951,7 +4951,7 @@ Pushes the block into the fork database and caches it if it doesn&#8217;t link <
 <dt id="_CPPv2N8graphene5chain26withdraw_permission_objectE">
 <span id="graphene::chain::withdraw_permission_object"></span><span class="target" id="project0classgraphene_1_1chain_1_1withdraw__permission__object"></span><em class="property">class </em><code class="descname">withdraw_permission_object</code><a class="headerlink" href="#_CPPv2N8graphene5chain26withdraw_permission_objectE" title="Permalink to this definition">¶</a></dt>
 <dd><em>#include &lt;withdraw_permission_object.hpp&gt;</em><p>Grants another account authority to withdraw a limited amount of funds per interval. </p>
-<p>The primary purpose of this object is to enable recurring payments on the blockchain. An account which wishes to process a recurring payment may use a <a class="reference internal" href="#project0structgraphene_1_1chain_1_1withdraw__permission__claim__operation"><span>withdraw_permission_claim_operation</span></a> to reference an object of this type and withdraw up to <a class="reference internal" href="#project0classgraphene_1_1chain_1_1withdraw__permission__object_1a913df749570eb66da566c0ba830356a7"><span>withdrawal_limit</span></a> from <a class="reference internal" href="#project0classgraphene_1_1chain_1_1withdraw__permission__object_1ad0625fbe1d350edecf66799080675dc6"><span>withdraw_from_account</span></a>. Only <a class="reference internal" href="#project0classgraphene_1_1chain_1_1withdraw__permission__object_1a08e2473a992ea8090180c8a9705abd95"><span>authorized_account</span></a> may do this. Any number of withdrawals may be made so long as the total amount withdrawn per period does not exceed the limit for any given period. </p>
+<p>The primary purpose of this object is to enable recurring payments on the blockchain. An account which wishes to process a recurring payment may use a <a class="reference internal" href="#project0structgraphene_1_1chain_1_1withdraw__permission__claim__operation"><span class="std std-ref">withdraw_permission_claim_operation</span></a> to reference an object of this type and withdraw up to <a class="reference internal" href="#project0classgraphene_1_1chain_1_1withdraw__permission__object_1a913df749570eb66da566c0ba830356a7"><span class="std std-ref">withdrawal_limit</span></a> from <a class="reference internal" href="#project0classgraphene_1_1chain_1_1withdraw__permission__object_1ad0625fbe1d350edecf66799080675dc6"><span class="std std-ref">withdraw_from_account</span></a>. Only <a class="reference internal" href="#project0classgraphene_1_1chain_1_1withdraw__permission__object_1a08e2473a992ea8090180c8a9705abd95"><span class="std std-ref">authorized_account</span></a> may do this. Any number of withdrawals may be made so long as the total amount withdrawn per period does not exceed the limit for any given period. </p>
 <div class="breathe-sectiondef container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="function">
@@ -4966,13 +4966,13 @@ Pushes the block into the fork database and caches it if it doesn&#8217;t link <
 <dl class="member">
 <dt id="_CPPv2N8graphene5chain26withdraw_permission_object21withdraw_from_accountE">
 <span id="graphene::chain::withdraw_permission_object::withdraw_from_account__account_id_type"></span><span class="target" id="project0classgraphene_1_1chain_1_1withdraw__permission__object_1ad0625fbe1d350edecf66799080675dc6"></span><a class="reference internal" href="#_CPPv2N8graphene5chain15account_id_typeE" title="graphene::chain::account_id_type">account_id_type</a> <code class="descname">withdraw_from_account</code><a class="headerlink" href="#_CPPv2N8graphene5chain26withdraw_permission_object21withdraw_from_accountE" title="Permalink to this definition">¶</a></dt>
-<dd><p>The account authorizing <a class="reference internal" href="#project0classgraphene_1_1chain_1_1withdraw__permission__object_1a08e2473a992ea8090180c8a9705abd95"><span>authorized_account</span></a> to withdraw from it. </p>
+<dd><p>The account authorizing <a class="reference internal" href="#project0classgraphene_1_1chain_1_1withdraw__permission__object_1a08e2473a992ea8090180c8a9705abd95"><span class="std std-ref">authorized_account</span></a> to withdraw from it. </p>
 </dd></dl>
 
 <dl class="member">
 <dt id="_CPPv2N8graphene5chain26withdraw_permission_object18authorized_accountE">
 <span id="graphene::chain::withdraw_permission_object::authorized_account__account_id_type"></span><span class="target" id="project0classgraphene_1_1chain_1_1withdraw__permission__object_1a08e2473a992ea8090180c8a9705abd95"></span><a class="reference internal" href="#_CPPv2N8graphene5chain15account_id_typeE" title="graphene::chain::account_id_type">account_id_type</a> <code class="descname">authorized_account</code><a class="headerlink" href="#_CPPv2N8graphene5chain26withdraw_permission_object18authorized_accountE" title="Permalink to this definition">¶</a></dt>
-<dd><p>The account authorized to make withdrawals from <a class="reference internal" href="#project0classgraphene_1_1chain_1_1withdraw__permission__object_1ad0625fbe1d350edecf66799080675dc6"><span>withdraw_from_account</span></a>. </p>
+<dd><p>The account authorized to make withdrawals from <a class="reference internal" href="#project0classgraphene_1_1chain_1_1withdraw__permission__object_1ad0625fbe1d350edecf66799080675dc6"><span class="std std-ref">withdraw_from_account</span></a>. </p>
 </dd></dl>
 
 <dl class="member">
@@ -5191,7 +5191,7 @@ Pushes the block into the fork database and caches it if it doesn&#8217;t link <
 <dl class="class">
 <dt id="_CPPv2N8graphene5chain18worker_pay_visitorE">
 <span id="graphene::chain::worker_pay_visitor"></span><span class="target" id="project0structgraphene_1_1chain_1_1worker__pay__visitor"></span><em class="property">struct </em><code class="descname">worker_pay_visitor</code><a class="headerlink" href="#_CPPv2N8graphene5chain18worker_pay_visitorE" title="Permalink to this definition">¶</a></dt>
-<dd><p>A visitor for <a class="reference internal" href="#project0namespacegraphene_1_1chain_1aff2faab1253f21209aaad5771fdda38c"><span>worker_type</span></a> which calls pay_worker on the worker within. </p>
+<dd><p>A visitor for <a class="reference internal" href="#project0namespacegraphene_1_1chain_1aff2faab1253f21209aaad5771fdda38c"><span class="std std-ref">worker_type</span></a> which calls pay_worker on the worker within. </p>
 </dd></dl>
 
 <dl class="type">

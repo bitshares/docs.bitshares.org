@@ -137,7 +137,7 @@
 <li class="toctree-l3"><a class="reference internal" href="7-faucet.html">Setting up the Faucet</a></li>
 <li class="toctree-l3"><a class="reference internal" href="8-nginx.html">Nginx Webserver</a></li>
 <li class="toctree-l3"><a class="reference internal" href="9-python-library.html">Installation of Python Library</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">Create MPAs/UIAs</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Create MPAs/UIAs</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="private-testnet.html">Private Testnet Howto</a></li>
@@ -186,9 +186,9 @@
 </li>
 </ul>
 <p>We can use <cite>cron</cite> to runt he price feed script on a regular basis:</p>
-<div class="highlight-cron"><div class="highlight"><pre><span></span>*/15 * * * * /usr/bin/python3 /home/gph/testnet-pythonscripts/feed.last.py
-*/15 * * * * /usr/bin/python3 /home/gph/testnet-pythonscripts/feed.random.py
-0    * * * * /usr/bin/python3 /home/gph/testnet-pythonscripts/feed.parity.py
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">*/</span><span class="mi">15</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">python3</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">gph</span><span class="o">/</span><span class="n">testnet</span><span class="o">-</span><span class="n">pythonscripts</span><span class="o">/</span><span class="n">feed</span><span class="o">.</span><span class="n">last</span><span class="o">.</span><span class="n">py</span>
+<span class="o">*/</span><span class="mi">15</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">python3</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">gph</span><span class="o">/</span><span class="n">testnet</span><span class="o">-</span><span class="n">pythonscripts</span><span class="o">/</span><span class="n">feed</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">py</span>
+<span class="mi">0</span>    <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">python3</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">gph</span><span class="o">/</span><span class="n">testnet</span><span class="o">-</span><span class="n">pythonscripts</span><span class="o">/</span><span class="n">feed</span><span class="o">.</span><span class="n">parity</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
 </div>

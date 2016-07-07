@@ -1,6 +1,6 @@
-**********************************
+***********************************
 Howto Run a Block-producing Witness
-**********************************
+***********************************
 
 This document serves as an introduction on how to become an actively block
 producing witness in a Graphene-based network (e.g. the BitShares2.0 network).

@@ -16,7 +16,7 @@ We now create some Market Pegged assets and construct the price feed.
 
 We can use `cron` to runt he price feed script on a regular basis:
 
-.. code-block:: cron
+::
 
     */15 * * * * /usr/bin/python3 /home/gph/testnet-pythonscripts/feed.last.py
     */15 * * * * /usr/bin/python3 /home/gph/testnet-pythonscripts/feed.random.py

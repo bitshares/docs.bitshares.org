@@ -93,7 +93,7 @@
         </div>
         <div class="next">
          <div class="title">next</div>
-         <span><a href="../libraries/index.html">Supporting Libraries</a></span>
+         <span><a href="../traders/index.html">Traders</a></span>
         </div>
 
    </div>
@@ -127,12 +127,12 @@
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">Merchants</a><ul class="current">
 <li class="toctree-l4 current"><a class="reference internal" href="index.html#protocols-api">Protocols/API</a><ul class="current">
 <li class="toctree-l5"><a class="reference internal" href="login-protocol.html">Wallet Login Protocol</a></li>
-<li class="toctree-l5 current"><a class="current reference internal" href="">Wallet Merchant Protocol</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">Wallet Merchant Protocol</a></li>
 </ul>
 </li>
 <li class="toctree-l4 current"><a class="reference internal" href="index.html#libraries">Libraries</a><ul class="current">
 <li class="toctree-l5"><a class="reference internal" href="login-protocol.html">Wallet Login Protocol</a></li>
-<li class="toctree-l5 current"><a class="current reference internal" href="">Wallet Merchant Protocol</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">Wallet Merchant Protocol</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../libraries/index.html">Supporting Libraries</a></li>
 </ul>
 </li>
@@ -202,7 +202,7 @@ data.</p>
 <h2>Step 1: Define your Invoice via JSON<a class="headerlink" href="#step-1-define-your-invoice-via-json" title="Permalink to this headline">¶</a></h2>
 <p>This invoice provides all of the data needed by the wallet to display an invoice
 to the user.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
    <span class="s2">&quot;to&quot;</span> <span class="p">:</span> <span class="s2">&quot;merchant_account_name&quot;</span><span class="p">,</span>
    <span class="s2">&quot;to_label&quot;</span> <span class="p">:</span> <span class="s2">&quot;Merchant Name&quot;</span><span class="p">,</span>
    <span class="s2">&quot;memo&quot;</span> <span class="p">:</span> <span class="s2">&quot;Invoice #1234&quot;</span><span class="p">,</span>
@@ -241,7 +241,7 @@ invoices.</p>
 <h2>Step 4: Pass to Wallet<a class="headerlink" href="#step-4-pass-to-wallet" title="Permalink to this headline">¶</a></h2>
 <p>Once the Base58 data is known, it can be passed to the wallet with the
 following URL::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>https://wallet.org/#/invoice/BASE58BLOB
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">wallet</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="c1">#/invoice/BASE58BLOB</span>
 </pre></div>
 </div>
 </div>

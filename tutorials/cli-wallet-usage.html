@@ -180,10 +180,10 @@ only compile the witness node by running.</p>
 <h2>Executing the cli-wallet<a class="headerlink" href="#executing-the-cli-wallet" title="Permalink to this headline">¶</a></h2>
 <p>All it takes for the cli-wallet to run is a trusted <strong>public API
 server</strong> to interface with the blockchain. These public API servers are
-run by businesses and <a class="reference internal" href="full-node-usage.html"><em>individuals</em></a>. In this
+run by businesses and <a class="reference internal" href="full-node-usage.html"><span class="doc">individuals</span></a>. In this
 example, we use the public API node of OpenLedger and connect via
 secured websocket connection:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>wss://bitshares.openledger.info/ws
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">wss</span><span class="p">:</span><span class="o">//</span><span class="n">bitshares</span><span class="o">.</span><span class="n">openledger</span><span class="o">.</span><span class="n">info</span><span class="o">/</span><span class="n">ws</span>
 </pre></div>
 </div>
 <div class="highlight-sh"><div class="highlight"><pre><span></span>./programs/cli_wallet/cli_wallet -s wss://bitshares.openledger.info/ws
@@ -193,7 +193,7 @@ secured websocket connection:</p>
 wallet, will ask you to provide a passphrase for your local wallet.
 Once a wallet has been created (default wallet file is <code class="docutils literal"><span class="pre">wallet.json</span></code>),
 it will prompt with</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>locked &gt;&gt;&gt;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">locked</span> <span class="o">&gt;&gt;&gt;</span>
 </pre></div>
 </div>
 <p>The wallet can be unlocked by providing the passphrase:</p>
@@ -202,18 +202,18 @@ it will prompt with</p>
 <p class="last">The passphrase is given in clear text and is echoed by the
 wallet!</p>
 </div>
-<div class="highlight-python"><div class="highlight"><pre><span></span>locked &gt;&gt;&gt; unlock &quot;supersecretpassphrase&quot;
-null
-unlocked &gt;&gt;&gt;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">locked</span> <span class="o">&gt;&gt;&gt;</span> <span class="n">unlock</span> <span class="s2">&quot;supersecretpassphrase&quot;</span>
+<span class="n">null</span>
+<span class="n">unlocked</span> <span class="o">&gt;&gt;&gt;</span>
 </pre></div>
 </div>
-<p>After this point, you can issue <a class="reference internal" href="../api/wallet-api.html"><em>any command available to the
-cli-wallet</em></a> or construct your <a class="reference internal" href="construct-transaction.html"><em>own
-transaction manually</em></a>.</p>
+<p>After this point, you can issue <a class="reference internal" href="../api/wallet-api.html"><span class="doc">any command available to the
+cli-wallet</span></a> or construct your <a class="reference internal" href="construct-transaction.html"><span class="doc">own
+transaction manually</span></a>.</p>
 <p>You can get more detailed information either by pressing <cite>Tab</cite>, twice,
 or by issuing <code class="docutils literal"><span class="pre">help</span></code>.
 Detailed explanations for most calls are available via</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>unlocked &gt;&gt; gethelp &lt;command&gt;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">unlocked</span> <span class="o">&gt;&gt;</span> <span class="n">gethelp</span> <span class="o">&lt;</span><span class="n">command</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <div class="admonition note">

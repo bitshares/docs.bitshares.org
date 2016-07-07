@@ -66,6 +66,7 @@ life-time member account, first! Then you can bring in new users by
             ``?r=`` parameter **before** the ``#``, e.g.::
 
               https://<url>/?r=<your-account>#/market/USD_BTC
+
 Examples
 ########
 

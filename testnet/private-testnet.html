@@ -128,7 +128,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../development/index.html">Development Guide</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Testnets</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="public-testnet-howto.html">Public Testnet Howto</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Private Testnet Howto</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Private Testnet Howto</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#folder-structure">Folder structure</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#the-genesis-file">The genesis file</a><ul>
@@ -215,7 +215,7 @@ your own genesis file</p>
 <h3>Customization of the genesis file<a class="headerlink" href="#customization-of-the-genesis-file" title="Permalink to this headline">¶</a></h3>
 <p>We create a new genesis json file named <code class="docutils literal"><span class="pre">my-genesis.json</span></code> by running
 this command:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>$ witness_node --create-genesis-json my-genesis.json
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ witness_node --create-genesis-json my-genesis.json
 </pre></div>
 </div>
 <p>The <code class="docutils literal"><span class="pre">my-genesis.json</span></code> file will be created in the <code class="docutils literal"><span class="pre">[Testnet-Home]</span></code>
@@ -240,13 +240,13 @@ genesis file will change your blockchain id, and make you unable to sync
 with all existing chains (unless one of them has exactly the same
 genesis file you do).</p>
 <p>Run this command:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>witness_node --data-dir data   # to use the default genesis, or
-witness_node --data-dir data --genesis-json my-genesis.json   # your own genesis block
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">witness_node</span> <span class="o">--</span><span class="n">data</span><span class="o">-</span><span class="nb">dir</span> <span class="n">data</span>   <span class="c1"># to use the default genesis, or</span>
+<span class="n">witness_node</span> <span class="o">--</span><span class="n">data</span><span class="o">-</span><span class="nb">dir</span> <span class="n">data</span> <span class="o">--</span><span class="n">genesis</span><span class="o">-</span><span class="n">json</span> <span class="n">my</span><span class="o">-</span><span class="n">genesis</span><span class="o">.</span><span class="n">json</span>   <span class="c1"># your own genesis block</span>
 </pre></div>
 </div>
 <p>and when a message like this shows up:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>3501235ms th_a main.cpp:165 main] Started witness node on a chain with 0 blocks.
-3501235ms th_a main.cpp:166 main] Chain ID is 8b7bd36a146a03d0e5d0a971e286098f41230b209d96f92465cd62bd64294824
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">3501235</span><span class="n">ms</span> <span class="n">th_a</span> <span class="n">main</span><span class="o">.</span><span class="n">cpp</span><span class="p">:</span><span class="mi">165</span> <span class="n">main</span><span class="p">]</span> <span class="n">Started</span> <span class="n">witness</span> <span class="n">node</span> <span class="n">on</span> <span class="n">a</span> <span class="n">chain</span> <span class="k">with</span> <span class="mi">0</span> <span class="n">blocks</span><span class="o">.</span>
+<span class="mi">3501235</span><span class="n">ms</span> <span class="n">th_a</span> <span class="n">main</span><span class="o">.</span><span class="n">cpp</span><span class="p">:</span><span class="mi">166</span> <span class="n">main</span><span class="p">]</span> <span class="n">Chain</span> <span class="n">ID</span> <span class="ow">is</span> <span class="mi">8</span><span class="n">b7bd36a146a03d0e5d0a971e286098f41230b209d96f92465cd62bd64294824</span>
 </pre></div>
 </div>
 <p>... it means the initialization is complete.  Use <code class="docutils literal"><span class="pre">ctrl-c</span></code> to close
@@ -267,17 +267,17 @@ be needing it later on.</p>
 <h2>Witness configuration<a class="headerlink" href="#witness-configuration" title="Permalink to this headline">¶</a></h2>
 <p>Open the <code class="docutils literal"><span class="pre">[Testnet-Home]/data/config.ini</span></code> file in your favorite text
 editor, and set the following settings, uncommenting them if necessary:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>rpc-endpoint = 127.0.0.1:11011
-genesis-json = my-genesis.json
-enable-stale-production = true
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">rpc</span><span class="o">-</span><span class="n">endpoint</span> <span class="o">=</span> <span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">11011</span>
+<span class="n">genesis</span><span class="o">-</span><span class="n">json</span> <span class="o">=</span> <span class="n">my</span><span class="o">-</span><span class="n">genesis</span><span class="o">.</span><span class="n">json</span>
+<span class="n">enable</span><span class="o">-</span><span class="n">stale</span><span class="o">-</span><span class="n">production</span> <span class="o">=</span> <span class="n">true</span>
 </pre></div>
 </div>
 <p>Also, locate this entry in the <code class="docutils literal"><span class="pre">config.ini</span></code> file:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># ID of witness controlled by this node (e.g. &quot;1.6.5&quot;, quotes are required, may specify multiple times)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># ID of witness controlled by this node (e.g. &quot;1.6.5&quot;, quotes are required, may specify multiple times)</span>
 </pre></div>
 </div>
 <p>... and add the following entries:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">witness</span><span class="o">-</span><span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;1.6.1&quot;</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">witness</span><span class="o">-</span><span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;1.6.1&quot;</span>
 <span class="n">witness</span><span class="o">-</span><span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;1.6.2&quot;</span>
 <span class="n">witness</span><span class="o">-</span><span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;1.6.3&quot;</span>
 <span class="n">witness</span><span class="o">-</span><span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;1.6.4&quot;</span>
@@ -296,7 +296,7 @@ node, but for the purpose of this private testnet, we will start out
 with all witnesses signing blocks on a single node. The private keys
 for all those witness ids (needed to sign blocks) are already supplied
 in the <code class="docutils literal"><span class="pre">config.ini</span></code> file:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># Tuple of [PublicKey, WIF private key] (may specify multiple times)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Tuple of [PublicKey, WIF private key] (may specify multiple times)</span>
 <span class="n">private</span><span class="o">-</span><span class="n">key</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;BTS6MRyA...T5GDW5CV&quot;</span><span class="p">,</span><span class="s2">&quot;5KQwrPb...tP79zkvFD3&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -306,12 +306,12 @@ in the <code class="docutils literal"><span class="pre">config.ini</span></code>
 <p>This is the crucial moment - you are about to produce the very first
 blocks of your private blockchain. Just run the witness node with this
 command:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>witness_node --data-dir data
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">witness_node</span> <span class="o">--</span><span class="n">data</span><span class="o">-</span><span class="nb">dir</span> <span class="n">data</span>
 </pre></div>
 </div>
 <p>and your block production should start at this stage. You should see
 this big message:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>********************************
+<div class="highlight-default"><div class="highlight"><pre><span></span>********************************
 *                              *
 *   ------- NEW CHAIN ------   *
 *   - Welcome to Graphene! -   *
@@ -322,20 +322,20 @@ this big message:</p>
 </div>
 <p>and subseqently further messages indicating the successfull creation
 of blocks:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>2322793ms th_a  main.cpp:176     main    ] Started witness node on a chain with 0 blocks.
-2322794ms th_a  main.cpp:177     main    ] Chain ID is 8b7bd36a146a03d0e5d0a971e286098f41230b209d96f92465cd62bd64294824
-2324613ms th_a  witness.cpp:185  block_production_loo ] Generated block #1 with timestamp 2016-01-21T22:38:40 at time 2016-01-21T22:38:40
-2325604ms th_a  witness.cpp:194  block_production_loo ] Not producing block because slot has not yet arrived
-2342604ms th_a  witness.cpp:194  block_production_loo ] Not producing block because slot has not yet arrived
-2343609ms th_a  witness.cpp:194  block_production_loo ] Not producing block because slot has not yet arrived
-2344604ms th_a  witness.cpp:185  block_production_loo ] Generated block #2 with timestamp 2016-01-21T22:39:00 at time 2016-01-21T22:39:00
-2345605ms th_a  witness.cpp:194  block_production_loo ] Not producing block because slot has not yet arrived
-2349616ms th_a  witness.cpp:185  block_production_loo ] Generated block #3 with timestamp 2016-01-21T22:39:05 at time 2016-01-21T22:39:05
-2350602ms th_a  witness.cpp:194  block_production_loo ] Not producing block because slot has not yet arrived
-2353612ms th_a  witness.cpp:194  block_production_loo ] Not producing block because slot has not yet arrived
-2354605ms th_a  witness.cpp:185  block_production_loo ] Generated block #4 with timestamp 2016-01-21T22:39:10 at time 2016-01-21T22:39:10
-2355609ms th_a  witness.cpp:194  block_production_loo ] Not producing block because slot has not yet arrived
-2356609ms th_a  witness.cpp:194  block_production_loo ] Not producing block because slot has not yet arrived
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mi">2322793</span><span class="n">ms</span> <span class="n">th_a</span>  <span class="n">main</span><span class="o">.</span><span class="n">cpp</span><span class="p">:</span><span class="mi">176</span>     <span class="n">main</span>    <span class="p">]</span> <span class="n">Started</span> <span class="n">witness</span> <span class="n">node</span> <span class="n">on</span> <span class="n">a</span> <span class="n">chain</span> <span class="k">with</span> <span class="mi">0</span> <span class="n">blocks</span><span class="o">.</span>
+<span class="mi">2322794</span><span class="n">ms</span> <span class="n">th_a</span>  <span class="n">main</span><span class="o">.</span><span class="n">cpp</span><span class="p">:</span><span class="mi">177</span>     <span class="n">main</span>    <span class="p">]</span> <span class="n">Chain</span> <span class="n">ID</span> <span class="ow">is</span> <span class="mi">8</span><span class="n">b7bd36a146a03d0e5d0a971e286098f41230b209d96f92465cd62bd64294824</span>
+<span class="mi">2324613</span><span class="n">ms</span> <span class="n">th_a</span>  <span class="n">witness</span><span class="o">.</span><span class="n">cpp</span><span class="p">:</span><span class="mi">185</span>  <span class="n">block_production_loo</span> <span class="p">]</span> <span class="n">Generated</span> <span class="n">block</span> <span class="c1">#1 with timestamp 2016-01-21T22:38:40 at time 2016-01-21T22:38:40</span>
+<span class="mi">2325604</span><span class="n">ms</span> <span class="n">th_a</span>  <span class="n">witness</span><span class="o">.</span><span class="n">cpp</span><span class="p">:</span><span class="mi">194</span>  <span class="n">block_production_loo</span> <span class="p">]</span> <span class="n">Not</span> <span class="n">producing</span> <span class="n">block</span> <span class="n">because</span> <span class="n">slot</span> <span class="n">has</span> <span class="ow">not</span> <span class="n">yet</span> <span class="n">arrived</span>
+<span class="mi">2342604</span><span class="n">ms</span> <span class="n">th_a</span>  <span class="n">witness</span><span class="o">.</span><span class="n">cpp</span><span class="p">:</span><span class="mi">194</span>  <span class="n">block_production_loo</span> <span class="p">]</span> <span class="n">Not</span> <span class="n">producing</span> <span class="n">block</span> <span class="n">because</span> <span class="n">slot</span> <span class="n">has</span> <span class="ow">not</span> <span class="n">yet</span> <span class="n">arrived</span>
+<span class="mi">2343609</span><span class="n">ms</span> <span class="n">th_a</span>  <span class="n">witness</span><span class="o">.</span><span class="n">cpp</span><span class="p">:</span><span class="mi">194</span>  <span class="n">block_production_loo</span> <span class="p">]</span> <span class="n">Not</span> <span class="n">producing</span> <span class="n">block</span> <span class="n">because</span> <span class="n">slot</span> <span class="n">has</span> <span class="ow">not</span> <span class="n">yet</span> <span class="n">arrived</span>
+<span class="mi">2344604</span><span class="n">ms</span> <span class="n">th_a</span>  <span class="n">witness</span><span class="o">.</span><span class="n">cpp</span><span class="p">:</span><span class="mi">185</span>  <span class="n">block_production_loo</span> <span class="p">]</span> <span class="n">Generated</span> <span class="n">block</span> <span class="c1">#2 with timestamp 2016-01-21T22:39:00 at time 2016-01-21T22:39:00</span>
+<span class="mi">2345605</span><span class="n">ms</span> <span class="n">th_a</span>  <span class="n">witness</span><span class="o">.</span><span class="n">cpp</span><span class="p">:</span><span class="mi">194</span>  <span class="n">block_production_loo</span> <span class="p">]</span> <span class="n">Not</span> <span class="n">producing</span> <span class="n">block</span> <span class="n">because</span> <span class="n">slot</span> <span class="n">has</span> <span class="ow">not</span> <span class="n">yet</span> <span class="n">arrived</span>
+<span class="mi">2349616</span><span class="n">ms</span> <span class="n">th_a</span>  <span class="n">witness</span><span class="o">.</span><span class="n">cpp</span><span class="p">:</span><span class="mi">185</span>  <span class="n">block_production_loo</span> <span class="p">]</span> <span class="n">Generated</span> <span class="n">block</span> <span class="c1">#3 with timestamp 2016-01-21T22:39:05 at time 2016-01-21T22:39:05</span>
+<span class="mi">2350602</span><span class="n">ms</span> <span class="n">th_a</span>  <span class="n">witness</span><span class="o">.</span><span class="n">cpp</span><span class="p">:</span><span class="mi">194</span>  <span class="n">block_production_loo</span> <span class="p">]</span> <span class="n">Not</span> <span class="n">producing</span> <span class="n">block</span> <span class="n">because</span> <span class="n">slot</span> <span class="n">has</span> <span class="ow">not</span> <span class="n">yet</span> <span class="n">arrived</span>
+<span class="mi">2353612</span><span class="n">ms</span> <span class="n">th_a</span>  <span class="n">witness</span><span class="o">.</span><span class="n">cpp</span><span class="p">:</span><span class="mi">194</span>  <span class="n">block_production_loo</span> <span class="p">]</span> <span class="n">Not</span> <span class="n">producing</span> <span class="n">block</span> <span class="n">because</span> <span class="n">slot</span> <span class="n">has</span> <span class="ow">not</span> <span class="n">yet</span> <span class="n">arrived</span>
+<span class="mi">2354605</span><span class="n">ms</span> <span class="n">th_a</span>  <span class="n">witness</span><span class="o">.</span><span class="n">cpp</span><span class="p">:</span><span class="mi">185</span>  <span class="n">block_production_loo</span> <span class="p">]</span> <span class="n">Generated</span> <span class="n">block</span> <span class="c1">#4 with timestamp 2016-01-21T22:39:10 at time 2016-01-21T22:39:10</span>
+<span class="mi">2355609</span><span class="n">ms</span> <span class="n">th_a</span>  <span class="n">witness</span><span class="o">.</span><span class="n">cpp</span><span class="p">:</span><span class="mi">194</span>  <span class="n">block_production_loo</span> <span class="p">]</span> <span class="n">Not</span> <span class="n">producing</span> <span class="n">block</span> <span class="n">because</span> <span class="n">slot</span> <span class="n">has</span> <span class="ow">not</span> <span class="n">yet</span> <span class="n">arrived</span>
+<span class="mi">2356609</span><span class="n">ms</span> <span class="n">th_a</span>  <span class="n">witness</span><span class="o">.</span><span class="n">cpp</span><span class="p">:</span><span class="mi">194</span>  <span class="n">block_production_loo</span> <span class="p">]</span> <span class="n">Not</span> <span class="n">producing</span> <span class="n">block</span> <span class="n">because</span> <span class="n">slot</span> <span class="n">has</span> <span class="ow">not</span> <span class="n">yet</span> <span class="n">arrived</span>
 </pre></div>
 </div>
 </div>
@@ -344,7 +344,7 @@ of blocks:</p>
 <p>We are now ready to connect the CLI to your testnet witness node.
 Keep your witness node running and in another <em>Command Prompt</em> window
 run this command:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>cli_wallet --wallet-file=my-wallet.json --chain-id 8b7bd36a146a03d0e5d0a971e286098f41230b209d96f92465cd62bd64294824 --server-rpc-endpoint=ws://127.0.0.1:11011
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cli_wallet</span> <span class="o">--</span><span class="n">wallet</span><span class="o">-</span><span class="n">file</span><span class="o">=</span><span class="n">my</span><span class="o">-</span><span class="n">wallet</span><span class="o">.</span><span class="n">json</span> <span class="o">--</span><span class="n">chain</span><span class="o">-</span><span class="nb">id</span> <span class="mi">8</span><span class="n">b7bd36a146a03d0e5d0a971e286098f41230b209d96f92465cd62bd64294824</span> <span class="o">--</span><span class="n">server</span><span class="o">-</span><span class="n">rpc</span><span class="o">-</span><span class="n">endpoint</span><span class="o">=</span><span class="n">ws</span><span class="p">:</span><span class="o">//</span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">11011</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -363,11 +363,11 @@ used to encrypt all the private keys in the wallet. For this tutorial we
 will use the password <code class="docutils literal"><span class="pre">supersecret</span></code> but obviously you are free to come
 up with your own combination of letters and numbers.  Use this command
 to create the password:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">set_password</span> <span class="n">supersecret</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">set_password</span> <span class="n">supersecret</span>
 </pre></div>
 </div>
 <p>Now you can unlock the newly created wallet:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>unlock supersecret
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">unlock</span> <span class="n">supersecret</span>
 </pre></div>
 </div>
 </div>
@@ -377,7 +377,7 @@ to create the password:</p>
 into your wallet, all you need to know its name and its private key.  We
 will now import into the wallet an account called <code class="docutils literal"><span class="pre">nathan</span></code> using the
 <code class="docutils literal"><span class="pre">import_key</span></code> command:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>import_key nathan 5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">import_key</span> <span class="n">nathan</span> <span class="mi">5</span><span class="n">KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -391,18 +391,18 @@ private key defined in the <code class="docutils literal"><span class="pre">conf
 <p>Now we have the private key imported into the wallet but still no funds
 assocciated with it. Funds are stored in genesis balance objects. These
 funds can be claimed, with no fee, using the <code class="docutils literal"><span class="pre">import_balance</span></code> command:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>import_balance nathan [&quot;5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3&quot;] true
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">import_balance</span> <span class="n">nathan</span> <span class="p">[</span><span class="s2">&quot;5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3&quot;</span><span class="p">]</span> <span class="n">true</span>
 </pre></div>
 </div>
 <p>As a result, we have one account (named <code class="docutils literal"><span class="pre">nathan</span></code>) imported into the
 wallet and this account is well funded with BTS as we have claimed the
 funds stored in the genesis file. You can view this account by using
 this command:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>get_account nathan
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">get_account</span> <span class="n">nathan</span>
 </pre></div>
 </div>
 <p>and its balance by using this command:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>list_account_balances nathan
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">list_account_balances</span> <span class="n">nathan</span>
 </pre></div>
 </div>
 </div>
@@ -417,7 +417,7 @@ account to have a lifetime member (LTM) status. Therefore we need to
 upgrade the account <code class="docutils literal"><span class="pre">nathan</span></code> to LTM, before we can proceed with
 creating other accounts. To upgrade to LTM, use the <code class="docutils literal"><span class="pre">upgrade_account</span></code>
 command:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>upgrade_account nathan true
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">upgrade_account</span> <span class="n">nathan</span> <span class="n">true</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -429,11 +429,11 @@ not be aware of <code class="docutils literal"><span class="pre">nathan</span></
 by pressing <code class="docutils literal"><span class="pre">ctrl-c</span></code> and start it again by using exactly the
 same command as before, i.e.</p>
 </div>
-<div class="highlight-python"><div class="highlight"><pre><span></span>cli_wallet --wallet-file=my-wallet.json --chain-id 8b7bd36a146a03d0e5d0a971e286098f41230b209d96f92465cd62bd64294824 --server-rpc-endpoint=ws://127.0.0.1:11011
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cli_wallet</span> <span class="o">--</span><span class="n">wallet</span><span class="o">-</span><span class="n">file</span><span class="o">=</span><span class="n">my</span><span class="o">-</span><span class="n">wallet</span><span class="o">.</span><span class="n">json</span> <span class="o">--</span><span class="n">chain</span><span class="o">-</span><span class="nb">id</span> <span class="mi">8</span><span class="n">b7bd36a146a03d0e5d0a971e286098f41230b209d96f92465cd62bd64294824</span> <span class="o">--</span><span class="n">server</span><span class="o">-</span><span class="n">rpc</span><span class="o">-</span><span class="n">endpoint</span><span class="o">=</span><span class="n">ws</span><span class="p">:</span><span class="o">//</span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">11011</span>
 </pre></div>
 </div>
 <p>Verify that <code class="docutils literal"><span class="pre">nathan</span></code> has now a LTM status:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>get_account nathan
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">get_account</span> <span class="n">nathan</span>
 </pre></div>
 </div>
 <p>In the response, next to <code class="docutils literal"><span class="pre">membership_expiration_date</span></code> you should see
@@ -442,11 +442,11 @@ wrong and <code class="docutils literal"><span class="pre">nathan</span></code> 
 <p>We can now register an account by using <code class="docutils literal"><span class="pre">nathan</span></code> as registrar. But
 first we need to get hold of the public key for the new account. We do
 it by using the <code class="docutils literal"><span class="pre">suggest_brain_key</span></code> command:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">suggest_brain_key</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">suggest_brain_key</span>
 </pre></div>
 </div>
 <p>And the resposne should be something similar to this:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">suggest_brain_key</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">suggest_brain_key</span>
 <span class="p">{</span>
   <span class="s2">&quot;brain_priv_key&quot;</span><span class="p">:</span> <span class="s2">&quot;MYAL SOEVER UNSHARP PHYSIC JOURNEY SHEUGH BEDLAM WLOKA FOOLERY GUAYABA DENTILE RADIATE TIEPIN ARMS FOGYISH COQUET&quot;</span><span class="p">,</span>
   <span class="s2">&quot;wif_priv_key&quot;</span><span class="p">:</span> <span class="s2">&quot;5JDh3XmHK8CDaQSxQZHh5PUV3zwzG68uVcrTfmg9yQ9idNisYnE&quot;</span><span class="p">,</span>
@@ -457,20 +457,20 @@ it by using the <code class="docutils literal"><span class="pre">suggest_brain_k
 <p>The <code class="docutils literal"><span class="pre">create_account_with_brain_key</span></code> command allows you to register an
 account using brain key and will automatically import the corresponding
 private key.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>create_account_with_brain_key &quot;Brain ... key&quot; &lt;accountname&gt; nathan nathan 0 true
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">create_account_with_brain_key</span> <span class="s2">&quot;Brain ... key&quot;</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span> <span class="n">nathan</span> <span class="n">nathan</span> <span class="mi">0</span> <span class="n">true</span>
 </pre></div>
 </div>
 <div class="section" id="transfer-funds-between-accounts">
 <h4>Transfer funds between accounts<a class="headerlink" href="#transfer-funds-between-accounts" title="Permalink to this headline">¶</a></h4>
 <p>As a final step, we will transfer some money from <code class="docutils literal"><span class="pre">nathan</span></code> to
 <code class="docutils literal"><span class="pre">alpha</span></code>. For that we use the <code class="docutils literal"><span class="pre">transfer</span></code> command:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>transfer nathan alpha 2000000000 BTS &quot;here is some cash&quot; true
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">transfer</span> <span class="n">nathan</span> <span class="n">alpha</span> <span class="mi">2000000000</span> <span class="n">BTS</span> <span class="s2">&quot;here is some cash&quot;</span> <span class="n">true</span>
 </pre></div>
 </div>
 <p>The text <code class="docutils literal"><span class="pre">here</span> <span class="pre">is</span> <span class="pre">some</span> <span class="pre">cash</span></code> is an arbitrary memo you can attatch to a
 transfer. If you don&#8217;t need it, just use <code class="docutils literal"><span class="pre">&quot;&quot;</span></code> instead.</p>
 <p>And now you can verify that <code class="docutils literal"><span class="pre">alpha</span></code> has indeed received the money:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>list_account_balances alpha
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">list_account_balances</span> <span class="n">alpha</span>
 </pre></div>
 </div>
 </div>

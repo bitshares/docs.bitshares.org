@@ -1,6 +1,6 @@
-**********************
+***********************
 Contribute to BitShares
-**********************
+***********************
 
 Backend Development
 ####################
@@ -19,4 +19,4 @@ Frontend Development
 A corresponding `frontend`_ implementation is licensed under an Open
 Source license as well and contributions are welcome as well.
 
-.. _fontend: https://github.com/bitshares/bitshares-2-ui
+.. _frontend: https://github.com/bitshares/bitshares-2-ui

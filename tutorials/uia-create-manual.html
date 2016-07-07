@@ -151,15 +151,15 @@
 <div class="section" id="creating-an-asset">
 <h2>Creating an Asset<a class="headerlink" href="#creating-an-asset" title="Permalink to this headline">¶</a></h2>
 <p>Of course a UIA can also be created <em>manually</em> by means of the
-<a class="reference internal" href="../integration/apps/cliwallet.html"><em>CLI Wallet</em></a> command:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">create_asset</span> <span class="o">&lt;</span><span class="n">issuer</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">symbol</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">precision</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">options</span><span class="o">&gt;</span> <span class="p">{}</span> <span class="n">false</span>
+<a class="reference internal" href="../integration/apps/cliwallet.html"><span class="doc">CLI Wallet</span></a> command:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">create_asset</span> <span class="o">&lt;</span><span class="n">issuer</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">symbol</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">precision</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">options</span><span class="o">&gt;</span> <span class="p">{}</span> <span class="n">false</span>
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">A <cite>false</cite> at the end allows to check and verify the
 constructed transaction and does <strong>not</strong> broadcast it.  The
-empty <cite>{}</cite> could be used to construct a <a class="reference internal" href="../user/mpa.html"><em>Market Pegged Assets</em></a> and
+empty <cite>{}</cite> could be used to construct a <a class="reference internal" href="../user/mpa.html"><span class="doc">Market Pegged Assets</span></a> and
 is subject of another tutorial.</p>
 </div>
 </div>
@@ -167,7 +167,7 @@ is subject of another tutorial.</p>
 <h2>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h2>
 <p>The <cite>precision</cite> can any positive integer starting from <cite>0</cite>.
 As <cite>options</cite> we pass a JSON object that can contain these settings:</p>
-<div class="highlight-js"><div class="highlight"><pre><span></span>{
+<div class="highlight-json"><div class="highlight"><pre><span></span>{
    &quot;max_supply&quot; : 10000,    # Integer in satoshi! (100 for precision 1 and max 10)
    &quot;market_fee_percent&quot; : 0.3,
    &quot;max_market_fee&quot; : 1000, # in satoshi
@@ -192,7 +192,7 @@ As <cite>options</cite> we pass a JSON object that can contain these settings:</
 </pre></div>
 </div>
 <p>The flags are construction as an JSON object containing these
-flags/permissions (see <a href="#id1"><span class="problematic" id="id2">:docs:`../user/assets-faq`</span></a>):</p>
+flags/permissions (see <a class="reference internal" href="../user/assets-faq.html"><span class="doc">Assets FAQ</span></a>):</p>
 <div class="highlight-js"><div class="highlight"><pre><span></span><span class="p">{</span>
    <span class="s2">&quot;charge_market_fee&quot;</span> <span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
    <span class="s2">&quot;white_list&quot;</span> <span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
@@ -209,13 +209,13 @@ flags/permissions (see <a href="#id1"><span class="problematic" id="id2">:docs:`
 <p>Permissions and flags are modelled as sum of binary flags (see example
 below)</p>
 <p>White-listing is described in more detail in
-<a class="reference internal" href="../integration/asset-whitelist.html"><em>Asset User Whitelists</em></a>.</p>
+<a class="reference internal" href="../integration/asset-whitelist.html"><span class="doc">Asset User Whitelists</span></a>.</p>
 </div>
 <div class="section" id="issuing-shares">
 <h2>Issuing Shares<a class="headerlink" href="#issuing-shares" title="Permalink to this headline">¶</a></h2>
 <p>After creation of the asset, no shares will be in existence until they
 are issued by the issuer:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>issue_asset &lt;account&gt; &lt;amount&gt; &lt;symbol&gt; &lt;memo&gt; True
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">issue_asset</span> <span class="o">&lt;</span><span class="n">account</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">amount</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">symbol</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">memo</span><span class="o">&gt;</span> <span class="kc">True</span>
 </pre></div>
 </div>
 </div>

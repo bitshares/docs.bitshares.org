@@ -122,7 +122,7 @@
 <li class="toctree-l4"><a class="reference internal" href="what-changed.html">What has Changed since BitShares 0.9?</a></li>
 <li class="toctree-l4"><a class="reference internal" href="blockchain-transition.html">Blockchain Upgrade</a></li>
 <li class="toctree-l4"><a class="reference internal" href="howto-exporting-wallet.html">Exporting Your Wallet</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="">Importing Your Wallet</a><ul>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Importing Your Wallet</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="#web-wallet">Web Wallet</a></li>
 <li class="toctree-l5"><a class="reference internal" href="#cli-wallet">CLI wallet</a></li>
 </ul>
@@ -190,7 +190,7 @@ choose <code class="docutils literal"><span class="pre">Import</span> <span clas
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">If loading the file files with <code class="docutils literal"><span class="pre">invalid</span> <span class="pre">format</span></code> please ensure that
-you have followed the steps described <a class="reference internal" href="howto-exporting-wallet.html"><em>Exporting Your Wallet</em></a> and make
+you have followed the steps described <a class="reference internal" href="howto-exporting-wallet.html"><span class="doc">Exporting Your Wallet</span></a> and make
 sure to click <code class="docutils literal"><span class="pre">Import</span> <span class="pre">Keys</span></code> and <strong>not</strong> <code class="docutils literal"><span class="pre">Restore</span> <span class="pre">Backup</span></code>.</p>
 </div>
 <a class="reference internal image-reference" href="../../_images/wallet-management-console-import-keys.png"><img alt="Wallet Management Console in BitShares 2.0 -- Import Keys" class="align-center" src="../../_images/wallet-management-console-import-keys.png" style="width: 550px;" /></a>
@@ -220,14 +220,14 @@ imported accounts and corresponding balances.</p>
 <div class="section" id="cli-wallet">
 <h2>CLI wallet<a class="headerlink" href="#cli-wallet" title="Permalink to this headline">¶</a></h2>
 <p>The wallet backup file can be imported by</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">import_accounts</span> <span class="o">&lt;</span><span class="n">path</span> <span class="n">to</span> <span class="n">exported</span> <span class="n">json</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">password</span> <span class="n">of</span> <span class="n">wallet</span> <span class="n">you</span> <span class="n">exported</span> <span class="n">from</span><span class="o">&gt;</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">import_accounts</span> <span class="o">&lt;</span><span class="n">path</span> <span class="n">to</span> <span class="n">exported</span> <span class="n">json</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">password</span> <span class="n">of</span> <span class="n">wallet</span> <span class="n">you</span> <span class="n">exported</span> <span class="n">from</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>Note that this doesn&#8217;t automatically claim the balances.</p>
 <div class="section" id="claiming-balances">
 <h3>Claiming Balances<a class="headerlink" href="#claiming-balances" title="Permalink to this headline">¶</a></h3>
 <p>For each account <code class="docutils literal"><span class="pre">&lt;my_account_name&gt;</span></code> in your wallet (run <code class="docutils literal"><span class="pre">list_my_accounts</span></code> to see them)::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">import_account_keys</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">keys</span><span class="o">.</span><span class="n">json</span> <span class="o">&lt;</span><span class="n">my_password</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">my_account_name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">my_account_name</span><span class="o">&gt;</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">import_account_keys</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">keys</span><span class="o">.</span><span class="n">json</span> <span class="o">&lt;</span><span class="n">my_password</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">my_account_name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">my_account_name</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -240,7 +240,7 @@ only saves your wallet after all keys have been imported.</p>
 </div>
 <p>The command above will only import your keys into the wallet and will <strong>not</strong>
 claim your funds. In order to claim the funds you need to execute::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">import_balance</span> <span class="o">&lt;</span><span class="n">my_account_name</span><span class="o">&gt;</span> <span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">]</span> <span class="n">true</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">import_balance</span> <span class="o">&lt;</span><span class="n">my_account_name</span><span class="o">&gt;</span> <span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">]</span> <span class="n">true</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -250,14 +250,14 @@ replace the <code class="docutils literal"><span class="pre">true</span></code> 
 broadcast.</p>
 </div>
 <p>To verify the results, you can run::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">list_account_balances</span> <span class="o">&lt;</span><span class="n">my_account_name</span><span class="o">&gt;</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">list_account_balances</span> <span class="o">&lt;</span><span class="n">my_account_name</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="manually-claim-balances">
 <h3>Manually claim balances<a class="headerlink" href="#manually-claim-balances" title="Permalink to this headline">¶</a></h3>
 <p>Balances can be imported one by one. The proper syntax to do so is:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">import_balance</span> <span class="o">&lt;</span><span class="n">account</span> <span class="n">name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">private</span> <span class="n">key</span><span class="o">&gt;</span> <span class="n">true</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">import_balance</span> <span class="o">&lt;</span><span class="n">account</span> <span class="n">name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">private</span> <span class="n">key</span><span class="o">&gt;</span> <span class="n">true</span>
 </pre></div>
 </div>
 <p>But I always import my accounts and then use the GUI to import my balances cause

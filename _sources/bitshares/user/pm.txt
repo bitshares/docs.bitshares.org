@@ -67,7 +67,7 @@ his borrow position and taking out the collateral:
 * **Settlement in the CLI wallet**:
   ::
 
-    >>> settle_asset <account> <account> <symbol> True
+    >>> settle_asset <account> <amount> <symbol> True
 
 * **Borrowing in the GUI wallet**:
   A settlement button is available when hovering the asset in your

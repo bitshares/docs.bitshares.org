@@ -128,7 +128,7 @@
 <li class="toctree-l3"><a class="reference internal" href="index.html">API Guide</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../integration/traders/index.html">Traders</a><ul class="current">
 <li class="toctree-l4 current"><a class="reference internal" href="../integration/traders/index.html#public-api">Public API</a><ul class="current">
-<li class="toctree-l5 current"><a class="current reference internal" href="">Websocket Calls &amp; Notifications</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">Websocket Calls &amp; Notifications</a></li>
 <li class="toctree-l5"><a class="reference internal" href="blockchain-api.html">Blockchain API</a></li>
 </ul>
 </li>
@@ -277,19 +277,19 @@ websockets. The procedure works as follows:</p>
 <div class="section" id="login">
 <h3>1. Login<a class="headerlink" href="#login" title="Permalink to this headline">¶</a></h3>
 <p>The first thing we need to do is to <em>login</em>:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>&gt; {&quot;id&quot;:2,&quot;method&quot;:&quot;call&quot;,&quot;params&quot;:[1,&quot;login&quot;,[&quot;&quot;,&quot;&quot;]]}
-&lt; {&quot;id&quot;:2,&quot;result&quot;:true}
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;method&quot;</span><span class="p">:</span><span class="s2">&quot;call&quot;</span><span class="p">,</span><span class="s2">&quot;params&quot;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;login&quot;</span><span class="p">,[</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">]]}</span>
+<span class="o">&lt;</span> <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;result&quot;</span><span class="p">:</span><span class="n">true</span><span class="p">}</span>
 </pre></div>
 </div>
-<p>If you have <a class="reference internal" href="access.html"><em>restricted access</em></a> then you may be required to put
+<p>If you have <a class="reference internal" href="access.html"><span class="doc">restricted access</span></a> then you may be required to put
 your <code class="docutils literal"><span class="pre">username</span></code> and <code class="docutils literal"><span class="pre">pasword</span></code> into the quotes, accordingly. Furthermore, you
 should verify, that the <code class="docutils literal"><span class="pre">result</span></code> give positive confirmation about your login.</p>
 </div>
 <div class="section" id="requesting-access-to-an-api">
 <h3>2. Requesting Access to an API<a class="headerlink" href="#requesting-access-to-an-api" title="Permalink to this headline">¶</a></h3>
-<p>Most data can be queried from the <a class="reference internal" href="database.html"><em>Database API</em></a>-API to which we <em>register</em>
+<p>Most data can be queried from the <a class="reference internal" href="database.html"><span class="doc">Database API</span></a>-API to which we <em>register</em>
 with the following call::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>&gt; {&quot;id&quot;:2,&quot;method&quot;:&quot;call&quot;,&quot;params&quot;:[1,&quot;database&quot;,[]]}
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;method&quot;</span><span class="p">:</span><span class="s2">&quot;call&quot;</span><span class="p">,</span><span class="s2">&quot;params&quot;</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;database&quot;</span><span class="p">,[]]}</span>
 </pre></div>
 </div>
 </div>
@@ -297,7 +297,7 @@ with the following call::</p>
 <h3>3. Obtain the API identifier<a class="headerlink" href="#obtain-the-api-identifier" title="Permalink to this headline">¶</a></h3>
 <p>After requesting access, the full node will either deny access or return an
 identifier to be used in future calls:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>&lt; {&quot;id&quot;:2,&quot;result&quot;:2}
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span> <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;result&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span>
 </pre></div>
 </div>
 <p>The <code class="docutils literal"><span class="pre">result</span></code> will be our identifier for the database API, in the following
@@ -306,7 +306,7 @@ called <code class="docutils literal"><span class="pre">DATABASE_API_ID</span></
 <div class="section" id="call-methods-of-a-specific-api-by-providing-the-identifier">
 <h3>4. Call methods of a specific API by providing the identifier<a class="headerlink" href="#call-methods-of-a-specific-api-by-providing-the-identifier" title="Permalink to this headline">¶</a></h3>
 <p>Now we can call any methods available to the <code class="docutils literal"><span class="pre">database</span></code> API via::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>&gt; {&quot;id&quot;:1, &quot;method&quot;:&quot;call&quot;, &quot;params&quot;:[DATABASE_API_ID,&quot;get_accounts&quot;,[[&quot;1.2.0&quot;]]]}
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;method&quot;</span><span class="p">:</span><span class="s2">&quot;call&quot;</span><span class="p">,</span> <span class="s2">&quot;params&quot;</span><span class="p">:[</span><span class="n">DATABASE_API_ID</span><span class="p">,</span><span class="s2">&quot;get_accounts&quot;</span><span class="p">,[[</span><span class="s2">&quot;1.2.0&quot;</span><span class="p">]]]}</span>
 </pre></div>
 </div>
 </div>
@@ -356,7 +356,7 @@ and subscribes to changed to that account if <code class="docutils literal"><spa
 </ul>
 <p>Let&#8217;s first get a global scubscription callback to disctinguish our
 notifications from regular RPC calls::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>&gt; {&quot;id&quot;:4,&quot;method&quot;:&quot;call&quot;,&quot;params&quot;:[DATABASE_API_ID,&quot;set_subscribe_callback&quot;,[SUBSCRIPTION_ID, true]]}
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span><span class="s2">&quot;method&quot;</span><span class="p">:</span><span class="s2">&quot;call&quot;</span><span class="p">,</span><span class="s2">&quot;params&quot;</span><span class="p">:[</span><span class="n">DATABASE_API_ID</span><span class="p">,</span><span class="s2">&quot;set_subscribe_callback&quot;</span><span class="p">,[</span><span class="n">SUBSCRIPTION_ID</span><span class="p">,</span> <span class="n">true</span><span class="p">]]}</span>
 </pre></div>
 </div>
 <p>This call above will register <code class="docutils literal"><span class="pre">SUBSCRIPTION_ID</span></code> as id for notifications.</p>
@@ -364,34 +364,34 @@ notifications from regular RPC calls::</p>
 will automatically subscribe to any future changes of that object.</p>
 <p>After calling <code class="docutils literal"><span class="pre">set_subscribe_callback</span></code> the witness will start to send notices
 every time the object changes::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>&lt; {
-    &quot;method&quot;: &quot;notice&quot;
-    &quot;params&quot;: [
-        SUBSCRIPTION_ID,
-        [[
-            { &quot;id&quot;: &quot;2.1.0&quot;, ...  },
-            { &quot;id&quot;: ...  },
-            { &quot;id&quot;: ...  },
-            { &quot;id&quot;: ...  }
-        ]]
-    ],
-}
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span> <span class="p">{</span>
+    <span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;notice&quot;</span>
+    <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="n">SUBSCRIPTION_ID</span><span class="p">,</span>
+        <span class="p">[[</span>
+            <span class="p">{</span> <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;2.1.0&quot;</span><span class="p">,</span> <span class="o">...</span>  <span class="p">},</span>
+            <span class="p">{</span> <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="o">...</span>  <span class="p">},</span>
+            <span class="p">{</span> <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="o">...</span>  <span class="p">},</span>
+            <span class="p">{</span> <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="o">...</span>  <span class="p">}</span>
+        <span class="p">]]</span>
+    <span class="p">],</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="example-session">
 <h2>Example Session<a class="headerlink" href="#example-session" title="Permalink to this headline">¶</a></h2>
 <p>Here is an example of a full session::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>&gt; {&quot;method&quot;: &quot;call&quot;, &quot;params&quot;: [1, &quot;login&quot;, [&quot;&quot;, &quot;&quot;]], &quot;id&quot;: 2}
-&lt; {&quot;id&quot;:2,&quot;result&quot;:true}
-&gt; {&quot;method&quot;: &quot;call&quot;, &quot;params&quot;: [1, &quot;database&quot;, []], &quot;id&quot;: 3}
-&lt; {&quot;id&quot;:3,&quot;result&quot;:2}
-&gt; {&quot;method&quot;: &quot;call&quot;, &quot;params&quot;: [1, &quot;history&quot;, []], &quot;id&quot;: 4}
-&lt; {&quot;id&quot;:4,&quot;result&quot;:3}
-&gt; {&quot;method&quot;: &quot;call&quot;, &quot;params&quot;: [2, &quot;set_subscribe_callback&quot;, [5, false]], &quot;id&quot;: 6}
-&lt; {&quot;id&quot;:6,&quot;result&quot;:null}
-&gt; {&quot;method&quot;: &quot;call&quot;, &quot;params&quot;: [2, &quot;get_objects&quot;, [[&quot;2.1.0&quot;]]], &quot;id&quot;: 7}
-(plenty of data coming in from this point on)
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="p">{</span><span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;call&quot;</span><span class="p">,</span> <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;login&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">]],</span> <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+<span class="o">&lt;</span> <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;result&quot;</span><span class="p">:</span><span class="n">true</span><span class="p">}</span>
+<span class="o">&gt;</span> <span class="p">{</span><span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;call&quot;</span><span class="p">,</span> <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;database&quot;</span><span class="p">,</span> <span class="p">[]],</span> <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
+<span class="o">&lt;</span> <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="s2">&quot;result&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span>
+<span class="o">&gt;</span> <span class="p">{</span><span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;call&quot;</span><span class="p">,</span> <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;history&quot;</span><span class="p">,</span> <span class="p">[]],</span> <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">}</span>
+<span class="o">&lt;</span> <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span><span class="s2">&quot;result&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">}</span>
+<span class="o">&gt;</span> <span class="p">{</span><span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;call&quot;</span><span class="p">,</span> <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;set_subscribe_callback&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="n">false</span><span class="p">]],</span> <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">}</span>
+<span class="o">&lt;</span> <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span><span class="s2">&quot;result&quot;</span><span class="p">:</span><span class="n">null</span><span class="p">}</span>
+<span class="o">&gt;</span> <span class="p">{</span><span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;call&quot;</span><span class="p">,</span> <span class="s2">&quot;params&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;get_objects&quot;</span><span class="p">,</span> <span class="p">[[</span><span class="s2">&quot;2.1.0&quot;</span><span class="p">]]],</span> <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">}</span>
+<span class="p">(</span><span class="n">plenty</span> <span class="n">of</span> <span class="n">data</span> <span class="n">coming</span> <span class="ow">in</span> <span class="kn">from</span> <span class="nn">this</span> <span class="n">point</span> <span class="n">on</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>

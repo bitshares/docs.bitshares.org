@@ -93,7 +93,7 @@
         </div>
         <div class="next">
          <div class="title">next</div>
-         <span><a href="worker-create.html">How to Create a Worker</a></span>
+         <span><a href="../user/witness.html">Witnesses</a></span>
         </div>
 
    </div>
@@ -118,25 +118,22 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html#guides">Guides</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../installation/index.html">Installation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../migration/index.html">Migrating from BitShares 1.0 to BitShares 2.0</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../user/index.html">User Guide</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../user/index.html">User Guide</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../user/index.html#for-end-user">For End User</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../user/index.html#for-blockchain-employees">For Blockchain &#8220;Employees&#8221;</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="../user/shareholder.html">Shareholder</a></li>
+<li class="toctree-l5 current"><a class="reference internal" href="../user/committee.html">Committee</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../user/witness.html">Witnesses</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../user/worker.html">Workers / Budget Items</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../user/marketer.html">Marketer</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../user/index.html#frequently-asked-questions">Frequently Asked Questions</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../investor/index.html">Investor Guide</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../developers/index.html">Businesses, Developers and Business Developers</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html">Tutorials</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="index.html#api-usage">API Usage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="index.html#general-tutorials">General Tutorials</a></li>
-<li class="toctree-l4"><a class="reference internal" href="index.html#assets">Assets</a></li>
-<li class="toctree-l4"><a class="reference internal" href="index.html#prediction-markets">Prediction Markets</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="index.html#committee-tutorials">Committee Tutorials</a><ul class="current">
-<li class="toctree-l5"><a class="reference internal" href="committee-member-create.html">Creating a New Committee Member</a></li>
-<li class="toctree-l5"><a class="reference internal" href="committee-propose-action.html">Howto Propose Committee Actions</a></li>
-<li class="toctree-l5"><a class="reference internal" href="committee-approve-proposal.html">How to Approve/Disapprove a Committee Proposal</a></li>
-<li class="toctree-l5 current"><a class="current reference internal" href="">How Committee Proposes a Change in Fee</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="index.html#worker-tutorials">Worker Tutorials</a></li>
-<li class="toctree-l4"><a class="reference internal" href="index.html#witness-tutorials">Witness Tutorials</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html">Tutorials</a></li>
 </ul>
 </li>
 </ul>
@@ -197,7 +194,7 @@ a price per kbyte for the account creation transaction can be defined. We get</p
 </pre></div>
 </div>
 <p>We propose the fee change for account <code class="docutils literal"><span class="pre">&lt;committee_member&gt;</span></code> with::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">propose_fee_change</span> <span class="o">&lt;</span><span class="n">committee_member</span><span class="o">&gt;</span> <span class="s2">&quot;2015-10-14T15:29:00&quot;</span> <span class="p">{</span><span class="s2">&quot;account_create_operation&quot;</span> <span class="p">:</span> <span class="p">{</span><span class="s2">&quot;basic_fee&quot;</span><span class="p">:</span> <span class="mi">500000</span><span class="p">,</span> <span class="s2">&quot;premium_fee&quot;</span><span class="p">:</span> <span class="mi">200000000</span><span class="p">,</span> <span class="s2">&quot;price_per_kbyte&quot;</span><span class="p">:</span> <span class="mi">100000</span><span class="p">}}</span> <span class="n">false</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">propose_fee_change</span> <span class="o">&lt;</span><span class="n">committee_member</span><span class="o">&gt;</span> <span class="s2">&quot;2015-10-14T15:29:00&quot;</span> <span class="p">{</span><span class="s2">&quot;account_create_operation&quot;</span> <span class="p">:</span> <span class="p">{</span><span class="s2">&quot;basic_fee&quot;</span><span class="p">:</span> <span class="mi">500000</span><span class="p">,</span> <span class="s2">&quot;premium_fee&quot;</span><span class="p">:</span> <span class="mi">200000000</span><span class="p">,</span> <span class="s2">&quot;price_per_kbyte&quot;</span><span class="p">:</span> <span class="mi">100000</span><span class="p">}}</span> <span class="n">false</span>
 </pre></div>
 </div>
 </div>
@@ -205,7 +202,7 @@ a price per kbyte for the account creation transaction can be defined. We get</p
 <h2>Approve Proposal<a class="headerlink" href="#approve-proposal" title="Permalink to this headline">¶</a></h2>
 <p>Now we need to convince the other committee members to approve. We can do so on
 the blockchain by asking them for approval with</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">approve_proposal</span> <span class="o">&lt;</span><span class="n">committee_member</span><span class="o">&gt;</span> <span class="s2">&quot;1.10.1&quot;</span> <span class="p">{</span><span class="s2">&quot;active_approvals_to_add&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="s2">&quot;&lt;MY-COMMITTEE-MEMBER&gt;&quot;</span><span class="p">]}</span> <span class="n">true</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">approve_proposal</span> <span class="o">&lt;</span><span class="n">committee_member</span><span class="o">&gt;</span> <span class="s2">&quot;1.10.1&quot;</span> <span class="p">{</span><span class="s2">&quot;active_approvals_to_add&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="s2">&quot;&lt;MY-COMMITTEE-MEMBER&gt;&quot;</span><span class="p">]}</span> <span class="n">true</span>
 </pre></div>
 </div>
 <p>where <code class="docutils literal"><span class="pre">1.10.1</span></code> is the id of the proposal in question.</p>

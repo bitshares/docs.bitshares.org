@@ -132,7 +132,7 @@
 <li class="toctree-l3"><a class="reference internal" href="2-genesis.html">Genesis Configuration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="3-init-blockchain.html">Initializing Blockchain</a></li>
 <li class="toctree-l3"><a class="reference internal" href="4-cli-wallet.html">Connecting a CLI wallet</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">Establishing a Committee</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Establishing a Committee</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#creating-members">Creating members</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#upgrading-members">Upgrading members</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#registering-as-committee-member">Registering as committee member</a></li>
@@ -182,13 +182,13 @@
 new accounts and let them apply as committee member.</p>
 <div class="section" id="creating-members">
 <h2>Creating members<a class="headerlink" href="#creating-members" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre><span></span>create_account_with_brain_key com0 com0 faucet faucet true
-create_account_with_brain_key com1 com1 faucet faucet true
-create_account_with_brain_key com2 com2 faucet faucet true
-create_account_with_brain_key com3 com3 faucet faucet true
-create_account_with_brain_key com4 com4 faucet faucet true
-create_account_with_brain_key com5 com5 faucet faucet true
-create_account_with_brain_key com6 com6 faucet faucet true
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">create_account_with_brain_key</span> <span class="n">com0</span> <span class="n">com0</span> <span class="n">faucet</span> <span class="n">faucet</span> <span class="n">true</span>
+<span class="n">create_account_with_brain_key</span> <span class="n">com1</span> <span class="n">com1</span> <span class="n">faucet</span> <span class="n">faucet</span> <span class="n">true</span>
+<span class="n">create_account_with_brain_key</span> <span class="n">com2</span> <span class="n">com2</span> <span class="n">faucet</span> <span class="n">faucet</span> <span class="n">true</span>
+<span class="n">create_account_with_brain_key</span> <span class="n">com3</span> <span class="n">com3</span> <span class="n">faucet</span> <span class="n">faucet</span> <span class="n">true</span>
+<span class="n">create_account_with_brain_key</span> <span class="n">com4</span> <span class="n">com4</span> <span class="n">faucet</span> <span class="n">faucet</span> <span class="n">true</span>
+<span class="n">create_account_with_brain_key</span> <span class="n">com5</span> <span class="n">com5</span> <span class="n">faucet</span> <span class="n">faucet</span> <span class="n">true</span>
+<span class="n">create_account_with_brain_key</span> <span class="n">com6</span> <span class="n">com6</span> <span class="n">faucet</span> <span class="n">faucet</span> <span class="n">true</span>
 </pre></div>
 </div>
 </div>
@@ -196,46 +196,46 @@ create_account_with_brain_key com6 com6 faucet faucet true
 <h2>Upgrading members<a class="headerlink" href="#upgrading-members" title="Permalink to this headline">¶</a></h2>
 <p>Since only lifetime members can be committee members, we need to fund
 these accounts and upgrade them accordingly:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>transfer faucet com0 100000 CORE &quot;some cash&quot; true
-transfer faucet com1 100000 CORE &quot;some cash&quot; true
-transfer faucet com2 100000 CORE &quot;some cash&quot; true
-transfer faucet com3 100000 CORE &quot;some cash&quot; true
-transfer faucet com4 100000 CORE &quot;some cash&quot; true
-transfer faucet com5 100000 CORE &quot;some cash&quot; true
-transfer faucet com6 100000 CORE &quot;some cash&quot; true
-upgrade_account com0 true
-upgrade_account com1 true
-upgrade_account com2 true
-upgrade_account com3 true
-upgrade_account com4 true
-upgrade_account com5 true
-upgrade_account com6 true
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">transfer</span> <span class="n">faucet</span> <span class="n">com0</span> <span class="mi">100000</span> <span class="n">CORE</span> <span class="s2">&quot;some cash&quot;</span> <span class="n">true</span>
+<span class="n">transfer</span> <span class="n">faucet</span> <span class="n">com1</span> <span class="mi">100000</span> <span class="n">CORE</span> <span class="s2">&quot;some cash&quot;</span> <span class="n">true</span>
+<span class="n">transfer</span> <span class="n">faucet</span> <span class="n">com2</span> <span class="mi">100000</span> <span class="n">CORE</span> <span class="s2">&quot;some cash&quot;</span> <span class="n">true</span>
+<span class="n">transfer</span> <span class="n">faucet</span> <span class="n">com3</span> <span class="mi">100000</span> <span class="n">CORE</span> <span class="s2">&quot;some cash&quot;</span> <span class="n">true</span>
+<span class="n">transfer</span> <span class="n">faucet</span> <span class="n">com4</span> <span class="mi">100000</span> <span class="n">CORE</span> <span class="s2">&quot;some cash&quot;</span> <span class="n">true</span>
+<span class="n">transfer</span> <span class="n">faucet</span> <span class="n">com5</span> <span class="mi">100000</span> <span class="n">CORE</span> <span class="s2">&quot;some cash&quot;</span> <span class="n">true</span>
+<span class="n">transfer</span> <span class="n">faucet</span> <span class="n">com6</span> <span class="mi">100000</span> <span class="n">CORE</span> <span class="s2">&quot;some cash&quot;</span> <span class="n">true</span>
+<span class="n">upgrade_account</span> <span class="n">com0</span> <span class="n">true</span>
+<span class="n">upgrade_account</span> <span class="n">com1</span> <span class="n">true</span>
+<span class="n">upgrade_account</span> <span class="n">com2</span> <span class="n">true</span>
+<span class="n">upgrade_account</span> <span class="n">com3</span> <span class="n">true</span>
+<span class="n">upgrade_account</span> <span class="n">com4</span> <span class="n">true</span>
+<span class="n">upgrade_account</span> <span class="n">com5</span> <span class="n">true</span>
+<span class="n">upgrade_account</span> <span class="n">com6</span> <span class="n">true</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="registering-as-committee-member">
 <h2>Registering as committee member<a class="headerlink" href="#registering-as-committee-member" title="Permalink to this headline">¶</a></h2>
 <p>We can apply for committee with <cite>create_committee_member</cite>:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>create_committee_member com0 &quot;&quot; true
-create_committee_member com1 &quot;&quot; true
-create_committee_member com2 &quot;&quot; true
-create_committee_member com3 &quot;&quot; true
-create_committee_member com4 &quot;&quot; true
-create_committee_member com5 &quot;&quot; true
-create_committee_member com6 &quot;&quot; true
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">create_committee_member</span> <span class="n">com0</span> <span class="s2">&quot;&quot;</span> <span class="n">true</span>
+<span class="n">create_committee_member</span> <span class="n">com1</span> <span class="s2">&quot;&quot;</span> <span class="n">true</span>
+<span class="n">create_committee_member</span> <span class="n">com2</span> <span class="s2">&quot;&quot;</span> <span class="n">true</span>
+<span class="n">create_committee_member</span> <span class="n">com3</span> <span class="s2">&quot;&quot;</span> <span class="n">true</span>
+<span class="n">create_committee_member</span> <span class="n">com4</span> <span class="s2">&quot;&quot;</span> <span class="n">true</span>
+<span class="n">create_committee_member</span> <span class="n">com5</span> <span class="s2">&quot;&quot;</span> <span class="n">true</span>
+<span class="n">create_committee_member</span> <span class="n">com6</span> <span class="s2">&quot;&quot;</span> <span class="n">true</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="voting-with-faucet-account">
 <h2>Voting with faucet account<a class="headerlink" href="#voting-with-faucet-account" title="Permalink to this headline">¶</a></h2>
 <p>All we need to do know is vote for our own committee members:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>vote_for_committee_member faucet com0 true true
-vote_for_committee_member faucet com1 true true
-vote_for_committee_member faucet com2 true true
-vote_for_committee_member faucet com3 true true
-vote_for_committee_member faucet com4 true true
-vote_for_committee_member faucet com5 true true
-vote_for_committee_member faucet com6 true true
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">vote_for_committee_member</span> <span class="n">faucet</span> <span class="n">com0</span> <span class="n">true</span> <span class="n">true</span>
+<span class="n">vote_for_committee_member</span> <span class="n">faucet</span> <span class="n">com1</span> <span class="n">true</span> <span class="n">true</span>
+<span class="n">vote_for_committee_member</span> <span class="n">faucet</span> <span class="n">com2</span> <span class="n">true</span> <span class="n">true</span>
+<span class="n">vote_for_committee_member</span> <span class="n">faucet</span> <span class="n">com3</span> <span class="n">true</span> <span class="n">true</span>
+<span class="n">vote_for_committee_member</span> <span class="n">faucet</span> <span class="n">com4</span> <span class="n">true</span> <span class="n">true</span>
+<span class="n">vote_for_committee_member</span> <span class="n">faucet</span> <span class="n">com5</span> <span class="n">true</span> <span class="n">true</span>
+<span class="n">vote_for_committee_member</span> <span class="n">faucet</span> <span class="n">com6</span> <span class="n">true</span> <span class="n">true</span>
 </pre></div>
 </div>
 </div>

@@ -78,7 +78,8 @@ used to implement automated robots for trading algorithms.
 
    traders/index
    ../api/index
-   traders/python-binding
+   libraries/python
+   libraries/python-exchange
 
 :html:`</div><div class="col-md-6">`
 

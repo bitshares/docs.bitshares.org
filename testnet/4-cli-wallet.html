@@ -131,7 +131,7 @@
 <li class="toctree-l3"><a class="reference internal" href="1-install.html">Installation/Confguration of Witness</a></li>
 <li class="toctree-l3"><a class="reference internal" href="2-genesis.html">Genesis Configuration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="3-init-blockchain.html">Initializing Blockchain</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">Connecting a CLI wallet</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Connecting a CLI wallet</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#creating-a-wallet">Creating a wallet</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#gaining-access-to-stake">Gaining access to stake</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#creating-accounts">Creating accounts</a></li>
@@ -196,7 +196,7 @@ port for the Ruby-based faucet.</p>
 <p>Before continuing, we should set a password.  This password is used
 to encrypt the private keys in the wallet.  We will use the word
 <code class="docutils literal"><span class="pre">supersecret</span></code> in this example.:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">set_password</span> <span class="n">supersecret</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">set_password</span> <span class="n">supersecret</span>
 </pre></div>
 </div>
 </div>
@@ -204,13 +204,13 @@ to encrypt the private keys in the wallet.  We will use the word
 <h2>Gaining access to stake<a class="headerlink" href="#gaining-access-to-stake" title="Permalink to this headline">¶</a></h2>
 <p>In Graphene, balances are contained in accounts.  To claim an account
 that exists in the Graphene genesis, use the <code class="docutils literal"><span class="pre">import_key</span></code> command::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">unlock</span> <span class="n">supersecret</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">unlock</span> <span class="n">supersecret</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">import_key</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span> <span class="s2">&quot;&lt;wifkey&gt;&quot;</span>
 </pre></div>
 </div>
 <p>Funds are stored in genesis balance objects.  These funds can be
 claimed, with no fee, using the <code class="docutils literal"><span class="pre">import_balance</span></code> command.:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">import_balance</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span> <span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">]</span> <span class="n">true</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">import_balance</span> <span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span> <span class="p">[</span><span class="s2">&quot;*&quot;</span><span class="p">]</span> <span class="n">true</span>
 </pre></div>
 </div>
 </div>
@@ -218,24 +218,24 @@ claimed, with no fee, using the <code class="docutils literal"><span class="pre"
 <h2>Creating accounts<a class="headerlink" href="#creating-accounts" title="Permalink to this headline">¶</a></h2>
 <p>Creating an account requires lifetime member (LTM) status.  To upgrade
 to LTM, use the <code class="docutils literal"><span class="pre">upgrade_account</span></code> command::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">upgrade_account</span> <span class="n">faucet</span> <span class="n">true</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">upgrade_account</span> <span class="n">faucet</span> <span class="n">true</span>
 </pre></div>
 </div>
 <p>We can now register an account.  The <code class="docutils literal"><span class="pre">register_account</span></code> command
 allows you to register an account using only a public key::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">register_account</span> <span class="n">alpha</span> <span class="n">GPH4zSJHx7D84T1j6HQ7keXWdtabBBWJxvfJw72XmEyqmgdoo1njF</span> <span class="n">GPH4zSJHx7D84T1j6HQ7keXWdtabBBWJxvfJw72XmEyqmgdoo1njF</span> <span class="n">faucet</span> <span class="n">faucet</span> <span class="mi">0</span> <span class="n">true</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">register_account</span> <span class="n">alpha</span> <span class="n">GPH4zSJHx7D84T1j6HQ7keXWdtabBBWJxvfJw72XmEyqmgdoo1njF</span> <span class="n">GPH4zSJHx7D84T1j6HQ7keXWdtabBBWJxvfJw72XmEyqmgdoo1njF</span> <span class="n">faucet</span> <span class="n">faucet</span> <span class="mi">0</span> <span class="n">true</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">transfer</span> <span class="n">faucet</span> <span class="n">alpha</span> <span class="mi">100000</span> <span class="n">CORE</span> <span class="s2">&quot;here is the cash&quot;</span> <span class="n">true</span>
 </pre></div>
 </div>
 <p>We can now open a new wallet for <code class="docutils literal"><span class="pre">alpha</span></code> user::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">import_key</span> <span class="n">alpha</span> <span class="mi">5</span><span class="n">HuCDiMeESd86xrRvTbexLjkVg2BEoKrb7BAA5RLgXizkgV3shs</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">import_key</span> <span class="n">alpha</span> <span class="mi">5</span><span class="n">HuCDiMeESd86xrRvTbexLjkVg2BEoKrb7BAA5RLgXizkgV3shs</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">upgrade_account</span> <span class="n">alpha</span> <span class="n">true</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">create_witness</span> <span class="n">alpha</span> <span class="s2">&quot;http://www.alpha&quot;</span> <span class="n">true</span>
 </pre></div>
 </div>
 <p>The <code class="docutils literal"><span class="pre">get_private_key</span></code> command allows us to obtain the private key corresponding
 to the block signing key::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">get_private_key</span> <span class="n">GPH6viEhYCQr8xKP3Vj8wfHh6WfZeJK7H9uhLPDYWLGCRSj5kHQZM</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">get_private_key</span> <span class="n">GPH6viEhYCQr8xKP3Vj8wfHh6WfZeJK7H9uhLPDYWLGCRSj5kHQZM</span>
 </pre></div>
 </div>
 </div>

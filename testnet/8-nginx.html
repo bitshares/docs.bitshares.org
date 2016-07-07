@@ -135,7 +135,7 @@
 <li class="toctree-l3"><a class="reference internal" href="5-committee.html">Establishing a Committee</a></li>
 <li class="toctree-l3"><a class="reference internal" href="6-webwallet.html">Web Wallet</a></li>
 <li class="toctree-l3"><a class="reference internal" href="7-faucet.html">Setting up the Faucet</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">Nginx Webserver</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Nginx Webserver</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#setup">Setup</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#configuration">Configuration</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#running-nginx-as-serice">Running nginx as serice</a></li>
@@ -203,7 +203,7 @@ sudo ln -s /opt/nginx/conf/ /etc/nginx
 </pre></div>
 </div>
 <p>We have set it to be:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>user gph;
+<div class="highlight-default"><div class="highlight"><pre><span></span>user gph;
 worker_processes  4;
 
 events {
@@ -238,7 +238,7 @@ http {
         listen 80;
         server_name localhost;
 
-        location ~ ^/[\w\d\.-]+\.(js|css|dat)$ {
+        location ~ ^/[\w\d\.-]+\.(js|css|dat|png|json)$ {
             root /www/current/public/;
             try_files $uri /wallet$uri =404;
         }

@@ -124,7 +124,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html#use-cases">Use-Cases</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">Exchanges, Bridges, and Gateways</a><ul class="current">
 <li class="toctree-l4 current"><a class="reference internal" href="index.html#integration-instructions">Integration Instructions</a><ul class="current">
-<li class="toctree-l5 current"><a class="current reference internal" href="">Step-By-Step Instructions for Exchanges</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">Step-By-Step Instructions for Exchanges</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../supporting-features.html">Supporting Features</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../whitelist.html">Using White- and Black-lists</a></li>
 <li class="toctree-l5"><a class="reference internal" href="../securing-funds.html">Securing Funds</a></li>
@@ -187,15 +187,15 @@ will link to a more detailed description where appropriate.</p>
 <p>In this step-by-step instruction we assume you have successfully built from the
 sources according to:</p>
 <ul class="simple">
-<li><a class="reference internal" href="../../bitshares/installation/Build.html"><em>Building from Sources</em></a></li>
+<li><a class="reference internal" href="../../bitshares/installation/Build.html"><span class="doc">Building from Sources</span></a></li>
 </ul>
 </div>
 <div class="section" id="running-daemons-and-wallet">
 <h2>Running Daemons and Wallet<a class="headerlink" href="#running-daemons-and-wallet" title="Permalink to this headline">¶</a></h2>
 <p>For security reasons we will run two daemons and a wallet according to these
 diagram:</p>
-<p class="graphviz">
-<img src="../../_images/graphviz-351d386d03191cd0886a1dc08cda77f151a0ff1c.svg" alt="digraph foo {
+<object data="../../_images/graphviz-6582060b94c2938b4825d229f689ad44c8d8b0e5.svg" type="image/svg+xml">
+            <p class="warning">digraph foo {
  rankdir=LR;
  ranksep=0.5;
  nodesep=0.1;
@@ -212,8 +212,7 @@ diagram:</p>
  &quot;P2P network&quot; -&gt; &quot;Trusted Full Node&quot; [dir=&quot;both&quot;]
  &quot;Trusted Full Node&quot; -&gt; &quot;Delayed Full Node&quot; -&gt; &quot;Deposit API&quot;
  &quot;Trusted Full Node&quot; -&gt; &quot;Wallet&quot; -&gt; &quot;Withdraw API&quot;
-}" />
-</p>
+}</p></object>
 <p>In this tutorial we will run all deamons and the wallet on the same machine and
 use different ports to distinguish them:</p>
 <ul class="simple">
@@ -221,7 +220,7 @@ use different ports to distinguish them:</p>
 <li>port <code class="docutils literal"><span class="pre">8091</span></code>: delayed node</li>
 <li>port <code class="docutils literal"><span class="pre">8092</span></code>: wallet</li>
 </ul>
-<p><a class="reference internal" href="../network-setup.html"><em>Read more details</em></a></p>
+<p><a class="reference internal" href="../network-setup.html"><span class="doc">Read more details</span></a></p>
 <div class="section" id="trusted-full-node">
 <h3>Trusted Full Node<a class="headerlink" href="#trusted-full-node" title="Permalink to this headline">¶</a></h3>
 <p>The trusted full node is your entry point to the BitShares P2P network. It will
@@ -272,7 +271,7 @@ trusted full node and has spending privileges for the hot wallet.</p>
 <h2>Query blockchain for required data<a class="headerlink" href="#query-blockchain-for-required-data" title="Permalink to this headline">¶</a></h2>
 <p>We now use the open <code class="docutils literal"><span class="pre">cli_wallet</span></code> to issue transfers and query the blockchain
 for more information. First of all, we create a new wallet and set a pass phrase::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">set_password</span> <span class="o">&lt;</span><span class="n">password</span><span class="o">&gt;</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">set_password</span> <span class="o">&lt;</span><span class="n">password</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <div class="section" id="existing-bitshares-1-account">
@@ -282,7 +281,7 @@ how to export it from the BitShares 1 client.</em></p>
 <p>We first get the account statistics ID (<code class="docutils literal"><span class="pre">2.6.*</span></code>) of the deposit account to
 monitor deposits, the memo key for later decoding of memos and the active key
 for being able to spend funds of that accounts::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">get_account</span> <span class="o">&lt;</span><span class="n">account</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">get_account</span> <span class="o">&lt;</span><span class="n">account</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
 <span class="go">{</span>
 <span class="go"> [...]</span>
 <span class="go"> &quot;active&quot;: {</span>
@@ -300,14 +299,14 @@ for being able to spend funds of that accounts::</p>
 </div>
 <p>We now need to export the corresponding private keys from BitShares 1.0 and
 import the keys into the <code class="docutils literal"><span class="pre">cli_wallet</span></code>::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>BitShares 1: &gt;&gt;&gt; wallet_dump_private_key &lt;memo_key&gt;
-             &quot;&lt;memo_private_key&gt;&quot;
-BitShares 1: &gt;&gt;&gt; wallet_dump_private_key &lt;active_key&gt;
-             &quot;&lt;active_private_key&gt;&quot;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">BitShares</span> <span class="mi">1</span><span class="p">:</span> <span class="o">&gt;&gt;&gt;</span> <span class="n">wallet_dump_private_key</span> <span class="o">&lt;</span><span class="n">memo_key</span><span class="o">&gt;</span>
+             <span class="s2">&quot;&lt;memo_private_key&gt;&quot;</span>
+<span class="n">BitShares</span> <span class="mi">1</span><span class="p">:</span> <span class="o">&gt;&gt;&gt;</span> <span class="n">wallet_dump_private_key</span> <span class="o">&lt;</span><span class="n">active_key</span><span class="o">&gt;</span>
+             <span class="s2">&quot;&lt;active_private_key&gt;&quot;</span>
 </pre></div>
 </div>
 <p>Import the active key into BitShares 2 wallet::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>BitShares 2: &gt;&gt;&gt; import_key &lt;account-name&gt; &lt;active_private_key&gt;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">BitShares</span> <span class="mi">2</span><span class="p">:</span> <span class="o">&gt;&gt;&gt;</span> <span class="n">import_key</span> <span class="o">&lt;</span><span class="n">account</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">active_private_key</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>This gives access to the funds stored in <code class="docutils literal"><span class="pre">&lt;account-name&gt;</span></code>. We will need the
@@ -318,7 +317,7 @@ memo private key later when watching deposits.</p>
 <p>We now describe how to claim your funds from the Bitshares 1 blockchain so you
 can use them in BitShares 2.</p>
 <p>For <strong>Coldstorage</strong> and plain private keys, we recommend to use:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">import_balance</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">private_key</span><span class="o">&gt;</span> <span class="n">false</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">import_balance</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">private_key</span><span class="o">&gt;</span> <span class="n">false</span>
 </pre></div>
 </div>
 <p>to import all balances that are locked in the private key into the account named
@@ -327,7 +326,7 @@ only be printed for audit and not be broadcasted or executed. <strong>Only</stro
 changing <code class="docutils literal"><span class="pre">false</span></code> to <code class="docutils literal"><span class="pre">true</span></code> will the balances be claimed!</p>
 <p>For your hot wallet (or any other active wallet running in the BitShares 1
 client) we recommend to use the GUI to claim your funds from hot wallet as
-described <a class="reference internal" href="../../bitshares/migration/howto-importing-wallet.html"><em>here</em></a>.</p>
+described <a class="reference internal" href="../../bitshares/migration/howto-importing-wallet.html"><span class="doc">here</span></a>.</p>
 </div>
 </div>
 <div class="section" id="watching-deposits-with-python">
@@ -371,7 +370,7 @@ python3 setup.py install --user
 </div>
 <p>Every time a deposit was made into your account a new line will appear similar
 to::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>last_op: 1.11.1241 | block:12425 | from xeroc -&gt; to: deposit | fee: 10 BTS | amount: 100 USD | memo: AFCE98ED
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">last_op</span><span class="p">:</span> <span class="mf">1.11</span><span class="o">.</span><span class="mi">1241</span> <span class="o">|</span> <span class="n">block</span><span class="p">:</span><span class="mi">12425</span> <span class="o">|</span> <span class="kn">from</span> <span class="nn">xeroc</span> <span class="o">-&gt;</span> <span class="n">to</span><span class="p">:</span> <span class="n">deposit</span> <span class="o">|</span> <span class="n">fee</span><span class="p">:</span> <span class="mi">10</span> <span class="n">BTS</span> <span class="o">|</span> <span class="n">amount</span><span class="p">:</span> <span class="mi">100</span> <span class="n">USD</span> <span class="o">|</span> <span class="n">memo</span><span class="p">:</span> <span class="n">AFCE98ED</span>
 </pre></div>
 </div>
 <p>If you run into errors you can continue processing from the last operation
@@ -383,7 +382,7 @@ registered deposit.</p>
 <h2>Executing Transfers for Withdrawals<a class="headerlink" href="#executing-transfers-for-withdrawals" title="Permalink to this headline">¶</a></h2>
 <p>Since we have imported the active key for our account into the wallet we can
 either initiate transfers from the wallet CLI with::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">transfer</span> <span class="o">&lt;</span><span class="n">account</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">customer</span><span class="o">-</span><span class="n">account</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">amount</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">asset</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">memo</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">broadcast</span><span class="o">&gt;</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">transfer</span> <span class="o">&lt;</span><span class="n">account</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">customer</span><span class="o">-</span><span class="n">account</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">amount</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">asset</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">memo</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">broadcast</span><span class="o">&gt;</span>
 <span class="go">    # e.g.</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">transfer</span> <span class="n">myexchange</span> <span class="n">xeroc</span> <span class="mi">100</span> <span class="n">USD</span> <span class="s2">&quot;withdrawal myexchange&quot;</span> <span class="n">true</span>
 </pre></div>

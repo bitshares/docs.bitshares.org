@@ -41,7 +41,7 @@ form of the data. After running the compression the example JSON was
 reduced to 281 bytes from 579 bytes.
 
 Step 3 - Convert to Base58
-=========================
+==========================
 
 Using the `bs58 <http://cryptocoinjs.com/modules/misc/bs58/>`__ library
 encode the compressed data in base58. Base58 is URL friendly and size

@@ -130,7 +130,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="public-testnet-howto.html">Public Testnet Howto</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="1-install.html">Installation/Confguration of Witness</a></li>
 <li class="toctree-l3"><a class="reference internal" href="2-genesis.html">Genesis Configuration</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">Initializing Blockchain</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Initializing Blockchain</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#initializing-the-genesis-block">Initializing the genesis block</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#setting-up-block-production">Setting up block production</a><ul>
 <li class="toctree-l5"><a class="reference internal" href="#embedding-the-genesis-block-optional">Embedding the Genesis block (optional)</a></li>
@@ -193,8 +193,8 @@ file).</p>
 </pre></div>
 </div>
 <p>We will already see our chain id::</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>Started witness node on a chain with 0 blocks.
-Chain ID is cf307110d029cb882d126bf0488dc4864772f68d9888d86b458d16e6c36aa74b
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Started</span> <span class="n">witness</span> <span class="n">node</span> <span class="n">on</span> <span class="n">a</span> <span class="n">chain</span> <span class="k">with</span> <span class="mi">0</span> <span class="n">blocks</span><span class="o">.</span>
+<span class="n">Chain</span> <span class="n">ID</span> <span class="ow">is</span> <span class="n">cf307110d029cb882d126bf0488dc4864772f68d9888d86b458d16e6c36aa74b</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -209,34 +209,34 @@ state from an existing data directory, need not have the
 <div class="section" id="setting-up-block-production">
 <h2>Setting up block production<a class="headerlink" href="#setting-up-block-production" title="Permalink to this headline">¶</a></h2>
 <p>Let&#8217;s create a very basic configuration file in <cite>data/testnet/config.ini</cite>:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>$ mkdir -p data/testnet
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ mkdir -p data/testnet
 $ vim data/testnet/config.ini
 </pre></div>
 </div>
 <p>All we put into the configuration file is the ids and the keys for the
 witnesses so that we can start producing blocks</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span>witness-id = &quot;1.6.1&quot;
-witness-id = &quot;1.6.2&quot;
-witness-id = &quot;1.6.3&quot;
-witness-id = &quot;1.6.4&quot;
-witness-id = &quot;1.6.5&quot;
-witness-id = &quot;1.6.6&quot;
-witness-id = &quot;1.6.7&quot;
-witness-id = &quot;1.6.8&quot;
-witness-id = &quot;1.6.9&quot;
-witness-id = &quot;1.6.10&quot;
-# For each witness, add pubkey and private key:
-private-key = [&quot;GPH6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV&quot;,&quot;5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3&quot;]
-private-key = [&lt;pubkey&gt;,&lt;privkey&gt;]
-private-key = [&lt;pubkey&gt;,&lt;privkey&gt;]
-private-key = [&lt;pubkey&gt;,&lt;privkey&gt;]
-private-key = [&lt;pubkey&gt;,&lt;privkey&gt;]
-private-key = [&lt;pubkey&gt;,&lt;privkey&gt;]
-private-key = [&lt;pubkey&gt;,&lt;privkey&gt;]
-private-key = [&lt;pubkey&gt;,&lt;privkey&gt;]
-private-key = [&lt;pubkey&gt;,&lt;privkey&gt;]
-private-key = [&lt;pubkey&gt;,&lt;privkey&gt;]
-private-key = [&lt;pubkey&gt;,&lt;privkey&gt;]
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">witness</span><span class="o">-</span><span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;1.6.1&quot;</span>
+<span class="n">witness</span><span class="o">-</span><span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;1.6.2&quot;</span>
+<span class="n">witness</span><span class="o">-</span><span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;1.6.3&quot;</span>
+<span class="n">witness</span><span class="o">-</span><span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;1.6.4&quot;</span>
+<span class="n">witness</span><span class="o">-</span><span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;1.6.5&quot;</span>
+<span class="n">witness</span><span class="o">-</span><span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;1.6.6&quot;</span>
+<span class="n">witness</span><span class="o">-</span><span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;1.6.7&quot;</span>
+<span class="n">witness</span><span class="o">-</span><span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;1.6.8&quot;</span>
+<span class="n">witness</span><span class="o">-</span><span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;1.6.9&quot;</span>
+<span class="n">witness</span><span class="o">-</span><span class="nb">id</span> <span class="o">=</span> <span class="s2">&quot;1.6.10&quot;</span>
+<span class="c1"># For each witness, add pubkey and private key:</span>
+<span class="n">private</span><span class="o">-</span><span class="n">key</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;GPH6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV&quot;</span><span class="p">,</span><span class="s2">&quot;5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3&quot;</span><span class="p">]</span>
+<span class="n">private</span><span class="o">-</span><span class="n">key</span> <span class="o">=</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">pubkey</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="n">privkey</span><span class="o">&gt;</span><span class="p">]</span>
+<span class="n">private</span><span class="o">-</span><span class="n">key</span> <span class="o">=</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">pubkey</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="n">privkey</span><span class="o">&gt;</span><span class="p">]</span>
+<span class="n">private</span><span class="o">-</span><span class="n">key</span> <span class="o">=</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">pubkey</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="n">privkey</span><span class="o">&gt;</span><span class="p">]</span>
+<span class="n">private</span><span class="o">-</span><span class="n">key</span> <span class="o">=</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">pubkey</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="n">privkey</span><span class="o">&gt;</span><span class="p">]</span>
+<span class="n">private</span><span class="o">-</span><span class="n">key</span> <span class="o">=</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">pubkey</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="n">privkey</span><span class="o">&gt;</span><span class="p">]</span>
+<span class="n">private</span><span class="o">-</span><span class="n">key</span> <span class="o">=</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">pubkey</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="n">privkey</span><span class="o">&gt;</span><span class="p">]</span>
+<span class="n">private</span><span class="o">-</span><span class="n">key</span> <span class="o">=</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">pubkey</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="n">privkey</span><span class="o">&gt;</span><span class="p">]</span>
+<span class="n">private</span><span class="o">-</span><span class="n">key</span> <span class="o">=</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">pubkey</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="n">privkey</span><span class="o">&gt;</span><span class="p">]</span>
+<span class="n">private</span><span class="o">-</span><span class="n">key</span> <span class="o">=</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">pubkey</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="n">privkey</span><span class="o">&gt;</span><span class="p">]</span>
+<span class="n">private</span><span class="o">-</span><span class="n">key</span> <span class="o">=</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">pubkey</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="n">privkey</span><span class="o">&gt;</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>This authorizes the <code class="docutils literal"><span class="pre">witness_node</span></code> to produce blocks on behalf of the
@@ -265,7 +265,7 @@ cmake -DCMAKE_BUILD_TYPE<span class="o">=</span>Release .
 </pre></div>
 </div>
 <p>Deleting caches will reset all <code class="docutils literal"><span class="pre">cmake</span></code> variables, so if you have used
-instructions like <a class="reference internal" href="../installation/Build.html"><em>Building from Sources</em></a> which tells you to
+instructions like <a class="reference internal" href="../installation/Build.html"><span class="doc">Building from Sources</span></a> which tells you to
 set other <code class="docutils literal"><span class="pre">cmake</span></code> variables, you will have to add those variables
 to the <code class="docutils literal"><span class="pre">cmake</span></code> line above.</p>
 <p>Embedding the genesis copies the entire content of genesis block
