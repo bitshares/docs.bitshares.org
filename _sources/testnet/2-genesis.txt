@@ -52,6 +52,7 @@ recompile it and provide ``cmake`` with the parameter to identify the
 genesis block properly:
 
 ::
+
     $ make clean
     $ find . -name "CMakeCache.txt" | xargs rm -f
     $ find . -name "CMakeFiles" | xargs rm -Rf

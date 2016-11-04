@@ -220,13 +220,12 @@ where you can generate the genesis block (e.g. now plus 10 minutes).</p>
 <p>To let the binaries know about your new genesis block, we need to
 recompile it and provide <code class="docutils literal"><span class="pre">cmake</span></code> with the parameter to identify the
 genesis block properly:</p>
-<dl class="docutils">
-<dt>::</dt>
-<dd>$ make clean
-$ find . -name &#8220;CMakeCache.txt&#8221; | xargs rm -f
-$ find . -name &#8220;CMakeFiles&#8221; | xargs rm -Rf
-$ cmake -DGRAPHENE_EGENESIS_JSON=&#8221;$(pwd)/genesis.json&#8221; .</dd>
-</dl>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ make clean
+$ find . -name &quot;CMakeCache.txt&quot; | xargs rm -f
+$ find . -name &quot;CMakeFiles&quot; | xargs rm -Rf
+$ cmake -DGRAPHENE_EGENESIS_JSON=&quot;$(pwd)/genesis.json&quot; .
+</pre></div>
+</div>
 <p>You can add the <code class="docutils literal"><span class="pre">GRAPHENE_EGENESIS_JSON</span></code> to the default parameters by
 adding:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">set</span><span class="p">(</span><span class="n">GRAPHENE_EGENESIS_JSON</span> <span class="s2">&quot;$</span><span class="si">{CMAKE_CURRENT_SOURCE_DIR}</span><span class="s2">/genesis.json&quot;</span> <span class="p">)</span>
