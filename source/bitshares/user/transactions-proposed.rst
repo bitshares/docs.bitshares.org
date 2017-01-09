@@ -63,6 +63,6 @@ scheme can be used to acquire approval for an arbitrarily deep authority tree.
 
     }
 
-Note that each each in the figure can carry a **different weight**. An example
+Note that each account in the figure can carry a **different weight**. An example
 of how to setup your permissions accordingly is given in
 :doc:`account-permissions`.
