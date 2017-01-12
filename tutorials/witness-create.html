@@ -96,9 +96,7 @@
   <div class='menubar'>
    <div class='section'>
     <a href="..//index.html"><img src="../_static/grphn-logo.svg" height="48" /></a>
-
     <a href="..//bitshares/index.html"><img src="../_static/bitshares-logo.png" height="48" /></a>
-
     <a href="..//muse/index.html"><img src="../_static/MUSE_logo_transp_v1.png" height="48" /></a>
    </div>
    <div class='menu section'>
@@ -139,6 +137,10 @@
 <script type="text/javascript">$('#searchbox').show(0);</script>
    </div>
    <div class='bottom section'>
+    <p class="centered">
+     This page is proudly presented by <br />
+     <a href="http://chainsquad.com">ChainSquad GmbH</a>
+    </p>
     <p class="centered">
      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
     </p>
@@ -258,10 +260,6 @@ things. The <code class="docutils literal"><span class="pre">id</span></code> is
 witness is voted in, and we will need it on the <code class="docutils literal"><span class="pre">witness_node</span></code> command
 line to produce blocks. We&#8217;ll also need the public <code class="docutils literal"><span class="pre">signing_key</span></code> so we
 can look up the correspoinding private key.</p>
-<p>Once we have that, run <code class="docutils literal"><span class="pre">dump_private_keys</span></code> which lists the public-key
-private-key pairs to find the private key.</p>
-<p>Warning: <code class="docutils literal"><span class="pre">dump_private_keys</span></code> will display your keys unencrypted on the
-terminal, don&#8217;t do this with someone looking over your shoulder.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">get_witness</span> <span class="o">&lt;</span><span class="n">accountname</span><span class="o">&gt;</span>
 <span class="go">{</span>
 <span class="go">  [...]</span>
@@ -271,6 +269,10 @@ terminal, don&#8217;t do this with someone looking over your shoulder.</p>
 <span class="go">}</span>
 </pre></div>
 </div>
+<p>Once we have that, run <code class="docutils literal"><span class="pre">dump_private_keys</span></code> which lists the public-key
+private-key pairs to find the private key.</p>
+<p>Warning: <code class="docutils literal"><span class="pre">dump_private_keys</span></code> will display your keys unencrypted on the
+terminal, don&#8217;t do this with someone looking over your shoulder.</p>
 <p>The <code class="docutils literal"><span class="pre">id</span></code> and the <code class="docutils literal"><span class="pre">signing_key</span></code> are the two important parameters,
 here. Let&#8217;s get the private key for that signing key with:</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">dump_private_keys</span>

@@ -26,7 +26,7 @@ location of relevant information.
 .. _Cryptonomex: http://cryptonomex.com
 .. _Graphene: https://github.com/cryptonomex/graphene
 
-If you are hear to find out more about **BitShares** and want to get
+If you are here to find out more about **BitShares** and want to get
 started right away, we recommend that you take a look at the
 :doc:`Getting Started <bitshares/user/first-steps-users>` guide!
 

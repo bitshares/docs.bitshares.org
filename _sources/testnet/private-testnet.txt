@@ -331,7 +331,7 @@ private key.
 
 ::
 
-    create_account_with_brain_key "Brain ... key" <accountname> nathan nathan 0 true
+    create_account_with_brain_key "Brain ... key" <accountname> nathan nathan true
 
 Transfer funds between accounts
 -------------------------------
