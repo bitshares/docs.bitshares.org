@@ -134,12 +134,6 @@ witness is voted in, and we will need it on the ``witness_node`` command
 line to produce blocks. We'll also need the public ``signing_key`` so we
 can look up the correspoinding private key.
 
-Once we have that, run ``dump_private_keys`` which lists the public-key
-private-key pairs to find the private key.
-
-Warning: ``dump_private_keys`` will display your keys unencrypted on the
-terminal, don't do this with someone looking over your shoulder.
-
 ::
 
     >>> get_witness <accountname>
@@ -149,6 +143,12 @@ terminal, don't do this with someone looking over your shoulder.
       "signing_key": "GPH7vQ7GmRSJfDHxKdBmWMeDMFENpmHWKn99J457BNApiX1T5TNM8",
       [...]
     }
+
+Once we have that, run ``dump_private_keys`` which lists the public-key
+private-key pairs to find the private key.
+
+Warning: ``dump_private_keys`` will display your keys unencrypted on the
+terminal, don't do this with someone looking over your shoulder.
 
 The ``id`` and the ``signing_key`` are the two important parameters,
 here. Let's get the private key for that signing key with:

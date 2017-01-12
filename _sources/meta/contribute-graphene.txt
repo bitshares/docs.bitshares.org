@@ -5,7 +5,7 @@ Contribute to Graphene
 Backend Development
 ####################
 
-The *Grapehen* toolkit has been released under MIT license and is thus
+The *Graphene* toolkit has been released under MIT license and is thus
 open for anyone to contribute and improve.
 
 Due to the decentralized nature of development in combination with the

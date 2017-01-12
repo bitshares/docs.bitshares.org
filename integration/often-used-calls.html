@@ -104,9 +104,7 @@
   <div class='menubar'>
    <div class='section'>
     <a href="..//index.html"><img src="../_static/grphn-logo.svg" height="48" /></a>
-
     <a href="..//bitshares/index.html"><img src="../_static/bitshares-logo.png" height="48" /></a>
-
     <a href="..//muse/index.html"><img src="../_static/MUSE_logo_transp_v1.png" height="48" /></a>
    </div>
    <div class='menu section'>
@@ -201,6 +199,10 @@
 <script type="text/javascript">$('#searchbox').show(0);</script>
    </div>
    <div class='bottom section'>
+    <p class="centered">
+     This page is proudly presented by <br />
+     <a href="http://chainsquad.com">ChainSquad GmbH</a>
+    </p>
     <p class="centered">
      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
     </p>
@@ -517,7 +519,7 @@ the transaction ID along with the signed transaction.</p>
 <h3>Reference<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
 <dl class="function">
 <dt id="_CPPv2N8graphene6wallet10wallet_api19get_account_historyE6stringi">
-<span id="graphene::wallet::wallet_api::get_account_history__string.i"></span><span class="target" id="project0classgraphene_1_1wallet_1_1wallet__api_1a61434b0b141c6237e6dd89c0346885ee"></span>vector&lt;operation_detail&gt; <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">get_account_history</code><span class="sig-paren">(</span>string <em>name</em>, int <em>limit</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api19get_account_historyE6stringi" title="Permalink to this definition">¶</a></dt>
+<span id="graphene::wallet::wallet_api::get_account_history__string.i"></span><span class="target" id="project0classgraphene_1_1wallet_1_1wallet__api_1a30435c40b79d7a7cad036d3486902db3"></span>vector&lt;operation_detail&gt; <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">get_account_history</code><span class="sig-paren">(</span>string <em>name</em>, int <em>limit</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api19get_account_historyE6stringi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the most recent operations on the named account.</p>
 <p>This returns a list of operation history objects, which describe activity on the account.</p>
 <p><dl class="docutils">
@@ -590,9 +592,9 @@ the transaction ID along with the signed transaction.</p>
 <h3>Reference<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
 <dl class="function">
 <dt id="_CPPv2N8graphene6wallet10wallet_api10get_objectE14object_id_type">
-<span id="graphene::wallet::wallet_api::get_object__object_id_type"></span><span class="target" id="project0classgraphene_1_1wallet_1_1wallet__api_1a986966705420db7db5b7744956f763fe"></span>variant <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">get_object</code><span class="sig-paren">(</span>object_id_type <em>id</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api10get_objectE14object_id_type" title="Permalink to this definition">¶</a></dt>
+<span id="graphene::wallet::wallet_api::get_object__object_id_type"></span><span class="target" id="project0classgraphene_1_1wallet_1_1wallet__api_1a12d4903dfb4f111e7aff4ca03c1c526d"></span>variant <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">get_object</code><span class="sig-paren">(</span>object_id_type <em>id</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api10get_objectE14object_id_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the blockchain object corresponding to the given id.</p>
-<p>This generic function can be used to retrieve any object from the blockchain that is assigned an ID. Certain types of objects have specialized convenience functions to return their objects  e.g., assets have <code class="docutils literal"><a class="reference internal" href="#project0classgraphene_1_1wallet_1_1wallet__api_1adeba50e052ff409fe1d19cc9e50e9a8f"><span class="std std-ref"><span class="pre">get_asset()</span></span></a></code>, accounts have <code class="docutils literal"><a class="reference internal" href="../development/namespaces/wallet.html#project0classgraphene_1_1wallet_1_1wallet__api_1a479f699f7b704636e80a44bf8397d341"><span class="std std-ref"><span class="pre">get_account()</span></span></a></code>, but this function will work for any object.</p>
+<p>This generic function can be used to retrieve any object from the blockchain that is assigned an ID. Certain types of objects have specialized convenience functions to return their objects  e.g., assets have <code class="docutils literal"><a class="reference internal" href="#project0classgraphene_1_1wallet_1_1wallet__api_1a12dcc7308bd4277d83f62ebcdbe51596"><span class="std std-ref"><span class="pre">get_asset()</span></span></a></code>, accounts have <code class="docutils literal"><a class="reference internal" href="../development/namespaces/wallet.html#project0classgraphene_1_1wallet_1_1wallet__api_1ae4133a2fe8f63695385c20d327a88ff9"><span class="std std-ref"><span class="pre">get_account()</span></span></a></code>, but this function will work for any object.</p>
 <p><dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>the requested object </dd>
@@ -660,7 +662,7 @@ the transaction ID along with the signed transaction.</p>
 <h3>Reference<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
 <dl class="function">
 <dt id="_CPPv2N8graphene6wallet10wallet_api9get_assetE6string">
-<span id="graphene::wallet::wallet_api::get_asset__string"></span><span class="target" id="project0classgraphene_1_1wallet_1_1wallet__api_1adeba50e052ff409fe1d19cc9e50e9a8f"></span>asset_object <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">get_asset</code><span class="sig-paren">(</span>string <em>asset_name_or_id</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api9get_assetE6string" title="Permalink to this definition">¶</a></dt>
+<span id="graphene::wallet::wallet_api::get_asset__string"></span><span class="target" id="project0classgraphene_1_1wallet_1_1wallet__api_1a12dcc7308bd4277d83f62ebcdbe51596"></span>asset_object <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">get_asset</code><span class="sig-paren">(</span>string <em>asset_name_or_id</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api9get_assetE6string" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns information about the given asset. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>the information about the asset stored in the block chain </dd>
