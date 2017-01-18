@@ -46,16 +46,22 @@ able to construct a valid transaction if only two of those agree. Hence a
 +----------------+--------+ 
 | Account        | Weight | 
 +================+========+ 
-| Alice          | 33%    | 
+| Alice          | 1      | 
 +----------------+--------+ 
-| Bob            | 33%    | 
+| Bob            | 1      | 
 +----------------+--------+ 
-| Charlie        | 33%    | 
+| Charlie        | 1      | 
 +----------------+--------+ 
-| Dennis         | 33%    | 
+| Dennis         | 1      | 
 +----------------+--------+ 
-| **Threshold:** | 51%    | 
+| **Threshold:** | 3      | 
 +----------------+--------+ 
+
+This means that each party has the same weight of 1 while 3 parties need
+to sign the transaction/proposal.
+
+In other words: Alice, Bobe, Charlie and Dennis, each have 33% weight
+while 100% must be reached.
 
 .. graphviz::
 
