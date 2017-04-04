@@ -116,31 +116,36 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../muse/index.html">MUSE</a></li>
 </ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../integration/index.html">Integration Guide</a></li>
-</ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">API Guide</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="index.html#interfacing-with-graphene">Interfacing with Graphene</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="index.html#wallet-api">Wallet API</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html#blockchain-api-s">Blockchain API(s)</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="rpc.html">Remote Procedure Calls</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="websocket.html">Websocket Calls &amp; Notifications</a><ul class="current">
-<li class="toctree-l5"><a class="reference internal" href="websocket.html#prerequisits">Prerequisits</a></li>
-<li class="toctree-l5"><a class="reference internal" href="websocket.html#call-format">Call Format</a></li>
-<li class="toctree-l5 current"><a class="reference internal" href="websocket.html#requesting-api-access">Requesting API access</a></li>
-<li class="toctree-l5"><a class="reference internal" href="websocket.html#database-notifications">Database Notifications</a></li>
-<li class="toctree-l5"><a class="reference internal" href="websocket.html#example-session">Example Session</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../integration/index.html">Integration Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../integration/index.html#basic-knowledge">Basic Knowledge</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../integration/index.html#use-cases">Use-Cases</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../integration/exchanges/index.html">Exchanges, Bridges, and Gateways</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html">API Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../integration/merchants/index.html">Merchants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html">API Guide</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../integration/traders/index.html">Traders</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="../integration/traders/index.html#public-api">Public API</a><ul class="current">
+<li class="toctree-l5 current"><a class="reference internal" href="websocket.html">Websocket Calls &amp; Notifications</a></li>
+<li class="toctree-l5"><a class="reference internal" href="blockchain-api.html">Blockchain API</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="blockchain-api.html">Blockchain API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../integration/traders/index.html#private-api">Private API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../integration/traders/index.html#libraries">Libraries</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#blockchain-objects-and-their-identifiers">Blockchain Objects and their Identifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html">API Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../integration/libraries/python.html">General Python Library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../integration/libraries/python-exchange.html">Python Module for the DEX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../integration/businesses/index.html">Businesses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html">API Guide</a></li>
 </ul>
 </li>
 </ul>
 </li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">API Guide</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../development/index.html">Development Guide</a></li>
@@ -194,22 +199,18 @@ article</span></a>.</p>
 <div class="section" id="account-history">
 <h2><a class="toc-backref" href="#id2">Account History</a><a class="headerlink" href="#account-history" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
-<dt id="_CPPv2N8graphene3app11history_api19get_account_historyE15account_id_type25operation_history_id_typej25operation_history_id_type">
-<span id="graphene::app::history_api::get_account_history__account_id_type.operation_history_id_type.unsigned.operation_history_id_type"></span><span class="target" id="project0classgraphene_1_1app_1_1history__api_1a4b8555a66749ee9a33180c1d666da323"></span>vector&lt;operation_history_object&gt; <code class="descclassname">graphene::app::history_api::</code><code class="descname">get_account_history</code><span class="sig-paren">(</span>account_id_type <em>account</em>, operation_history_id_type <em>stop</em>, unsigned <em>limit</em>, operation_history_id_type <em>start</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app11history_api19get_account_historyE15account_id_type25operation_history_id_typej25operation_history_id_type" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK8graphene3app11history_api19get_account_historyE15account_id_type25operation_history_id_typej25operation_history_id_type">
+<span id="graphene::app::history_api::get_account_history__account_id_type.operation_history_id_type.unsigned.operation_history_id_typeC"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1history__api_1a4b8555a66749ee9a33180c1d666da323"></span>vector&lt;operation_history_object&gt; <code class="descclassname">graphene::app::history_api::</code><code class="descname">get_account_history</code><span class="sig-paren">(</span>account_id_type <em>account</em>, operation_history_id_type <em>stop</em> = operation_history_id_type (), unsigned <em>limit</em> = 100, operation_history_id_type <em>start</em> = operation_history_id_type ()<span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK8graphene3app11history_api19get_account_historyE15account_id_type25operation_history_id_typej25operation_history_id_type" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get operations relevant to the specificed account. </p>
 <p><dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>A list of operations performed by account, ordered from most recent to oldest. </dd>
 <dt><strong>Parameters</strong></dt>
-<dd><ul class="breatheparameterlist first last">
-<li><code class="first docutils literal"><span class="pre">account</span></code> - <p>The account whose history should be queried </p>
-</li>
-<li><code class="first docutils literal"><span class="pre">stop</span></code> - <p>ID of the earliest operation to retrieve </p>
-</li>
-<li><code class="first docutils literal"><span class="pre">limit</span></code> - <p>Maximum number of operations to retrieve (must not exceed 100) </p>
-</li>
-<li><code class="first docutils literal"><span class="pre">start</span></code> - <p>ID of the most recent operation to retrieve </p>
-</li>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">account</span></code>: The account whose history should be queried </li>
+<li><code class="docutils literal"><span class="pre">stop</span></code>: ID of the earliest operation to retrieve </li>
+<li><code class="docutils literal"><span class="pre">limit</span></code>: Maximum number of operations to retrieve (must not exceed 100) </li>
+<li><code class="docutils literal"><span class="pre">start</span></code>: ID of the most recent operation to retrieve </li>
 </ul>
 </dd>
 </dl>
@@ -220,18 +221,18 @@ article</span></a>.</p>
 <div class="section" id="market-history">
 <h2><a class="toc-backref" href="#id3">Market History</a><a class="headerlink" href="#market-history" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
-<dt id="_CPPv2N8graphene3app11history_api22get_fill_order_historyE13asset_id_type13asset_id_type8uint32_t">
-<span id="graphene::app::history_api::get_fill_order_history__asset_id_type.asset_id_type.uint32_t"></span><span class="target" id="project0classgraphene_1_1app_1_1history__api_1a1574597fa10804bf328b89c12f6f7a9f"></span>vector&lt;order_history_object&gt; <code class="descclassname">graphene::app::history_api::</code><code class="descname">get_fill_order_history</code><span class="sig-paren">(</span>asset_id_type <em>a</em>, asset_id_type <em>b</em>, uint32_t <em>limit</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app11history_api22get_fill_order_historyE13asset_id_type13asset_id_type8uint32_t" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK8graphene3app11history_api22get_fill_order_historyE13asset_id_type13asset_id_type8uint32_t">
+<span id="graphene::app::history_api::get_fill_order_history__asset_id_type.asset_id_type.uint32_tC"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1history__api_1a1574597fa10804bf328b89c12f6f7a9f"></span>vector&lt;order_history_object&gt; <code class="descclassname">graphene::app::history_api::</code><code class="descname">get_fill_order_history</code><span class="sig-paren">(</span>asset_id_type <em>a</em>, asset_id_type <em>b</em>, uint32_t <em>limit</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK8graphene3app11history_api22get_fill_order_historyE13asset_id_type13asset_id_type8uint32_t" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N8graphene3app11history_api18get_market_historyE13asset_id_type13asset_id_type8uint32_tN2fc14time_point_secEN2fc14time_point_secE">
-<span id="graphene::app::history_api::get_market_history__asset_id_type.asset_id_type.uint32_t.fc::time_point_sec.fc::time_point_sec"></span><span class="target" id="project0classgraphene_1_1app_1_1history__api_1ab5e379a09632a3e215554cd9ef37dcd9"></span>vector&lt;bucket_object&gt; <code class="descclassname">graphene::app::history_api::</code><code class="descname">get_market_history</code><span class="sig-paren">(</span>asset_id_type <em>a</em>, asset_id_type <em>b</em>, uint32_t <em>bucket_seconds</em>, fc::time_point_sec <em>start</em>, fc::time_point_sec <em>end</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app11history_api18get_market_historyE13asset_id_type13asset_id_type8uint32_tN2fc14time_point_secEN2fc14time_point_secE" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK8graphene3app11history_api18get_market_historyE13asset_id_type13asset_id_type8uint32_tN2fc14time_point_secEN2fc14time_point_secE">
+<span id="graphene::app::history_api::get_market_history__asset_id_type.asset_id_type.uint32_t.fc::time_point_sec.fc::time_point_secC"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1history__api_1ab5e379a09632a3e215554cd9ef37dcd9"></span>vector&lt;bucket_object&gt; <code class="descclassname">graphene::app::history_api::</code><code class="descname">get_market_history</code><span class="sig-paren">(</span>asset_id_type <em>a</em>, asset_id_type <em>b</em>, uint32_t <em>bucket_seconds</em>, fc::time_point_sec <em>start</em>, fc::time_point_sec <em>end</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK8graphene3app11history_api18get_market_historyE13asset_id_type13asset_id_type8uint32_tN2fc14time_point_secEN2fc14time_point_secE" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 <dl class="function">
-<dt id="_CPPv2N8graphene3app11history_api26get_market_history_bucketsEv">
-<span id="graphene::app::history_api::get_market_history_buckets"></span><span class="target" id="project0classgraphene_1_1app_1_1history__api_1a3cb82a7bb879b9f967665d69fd90c67d"></span>flat_set&lt;uint32_t&gt; <code class="descclassname">graphene::app::history_api::</code><code class="descname">get_market_history_buckets</code><span class="sig-paren">(</span><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene3app11history_api26get_market_history_bucketsEv" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK8graphene3app11history_api26get_market_history_bucketsEv">
+<span id="graphene::app::history_api::get_market_history_bucketsC"></span><span class="target" id="grapheneclassgraphene_1_1app_1_1history__api_1a3cb82a7bb879b9f967665d69fd90c67d"></span>flat_set&lt;uint32_t&gt; <code class="descclassname">graphene::app::history_api::</code><code class="descname">get_market_history_buckets</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK8graphene3app11history_api26get_market_history_bucketsEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </div>

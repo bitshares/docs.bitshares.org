@@ -304,14 +304,13 @@ table above. We recommend to read the following articles:</p>
 <h3>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h3>
 <dl class="function">
 <dt id="_CPPv2N8graphene6wallet10wallet_api21list_account_balancesERK6string">
-<span id="graphene::wallet::wallet_api::list_account_balances__stringCR"></span><span class="target" id="project0classgraphene_1_1wallet_1_1wallet__api_1a36320ec4d8646bf2149bb4e383b291b5"></span>vector&lt;asset&gt; <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">list_account_balances</code><span class="sig-paren">(</span><em class="property">const</em> string &amp;<em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api21list_account_balancesERK6string" title="Permalink to this definition">¶</a></dt>
+<span id="graphene::wallet::wallet_api::list_account_balances__stringCR"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1a36320ec4d8646bf2149bb4e383b291b5"></span>vector&lt;asset&gt; <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">list_account_balances</code><span class="sig-paren">(</span><em class="property">const</em> string &amp;<em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api21list_account_balancesERK6string" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>List the balances of an account. Each account can have multiple balances, one for each type of asset owned by that account. The returned list will only contain assets for which the account has a nonzero balance <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>a list of the given account&#8217;s balances </dd>
 <dt><strong>Parameters</strong></dt>
-<dd><ul class="breatheparameterlist first last">
-<li><code class="first docutils literal"><span class="pre">id</span></code> - <p>the name or id of the account whose balances you want </p>
-</li>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">id</span></code>: the name or id of the account whose balances you want </li>
 </ul>
 </dd>
 </dl>
@@ -375,24 +374,18 @@ not broadcast, hence not executed.</p>
 <h3>Reference<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <dl class="function">
 <dt id="_CPPv2N8graphene6wallet10wallet_api8transferE6string6string6string6string6stringb">
-<span id="graphene::wallet::wallet_api::transfer__string.string.string.string.string.b"></span><span class="target" id="project0classgraphene_1_1wallet_1_1wallet__api_1a338fc74bb723d9c649f161b5279e41f0"></span>signed_transaction <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">transfer</code><span class="sig-paren">(</span>string <em>from</em>, string <em>to</em>, string <em>amount</em>, string <em>asset_symbol</em>, string <em>memo</em>, bool <em>broadcast</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api8transferE6string6string6string6string6stringb" title="Permalink to this definition">¶</a></dt>
+<span id="graphene::wallet::wallet_api::transfer__string.string.string.string.string.b"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1a338fc74bb723d9c649f161b5279e41f0"></span>signed_transaction <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">transfer</code><span class="sig-paren">(</span>string <em>from</em>, string <em>to</em>, string <em>amount</em>, string <em>asset_symbol</em>, string <em>memo</em>, bool <em>broadcast</em> = false<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api8transferE6string6string6string6string6stringb" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Transfer an amount from one account to another. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>the signed transaction transferring funds </dd>
 <dt><strong>Parameters</strong></dt>
-<dd><ul class="breatheparameterlist first last">
-<li><code class="first docutils literal"><span class="pre">from</span></code> - <p>the name or id of the account sending the funds </p>
-</li>
-<li><code class="first docutils literal"><span class="pre">to</span></code> - <p>the name or id of the account receiving the funds </p>
-</li>
-<li><code class="first docutils literal"><span class="pre">amount</span></code> - <p>the amount to send (in nominal units  to send half of a BTS, specify 0.5) </p>
-</li>
-<li><code class="first docutils literal"><span class="pre">asset_symbol</span></code> - <p>the symbol or id of the asset to send </p>
-</li>
-<li><code class="first docutils literal"><span class="pre">memo</span></code> - <p>a memo to attach to the transaction. The memo will be encrypted in the transaction and readable for the receiver. There is no length limit other than the limit imposed by maximum transaction size, but transaction increase with transaction size </p>
-</li>
-<li><code class="first docutils literal"><span class="pre">broadcast</span></code> - <p>true to broadcast the transaction on the network </p>
-</li>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">from</span></code>: the name or id of the account sending the funds </li>
+<li><code class="docutils literal"><span class="pre">to</span></code>: the name or id of the account receiving the funds </li>
+<li><code class="docutils literal"><span class="pre">amount</span></code>: the amount to send (in nominal units  to send half of a BTS, specify 0.5) </li>
+<li><code class="docutils literal"><span class="pre">asset_symbol</span></code>: the symbol or id of the asset to send </li>
+<li><code class="docutils literal"><span class="pre">memo</span></code>: a memo to attach to the transaction. The memo will be encrypted in the transaction and readable for the receiver. There is no length limit other than the limit imposed by maximum transaction size, but transaction increase with transaction size </li>
+<li><code class="docutils literal"><span class="pre">broadcast</span></code>: true to broadcast the transaction on the network </li>
 </ul>
 </dd>
 </dl>
@@ -456,7 +449,7 @@ the transaction ID along with the signed transaction.</p>
 <h3>Reference<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
 <dl class="function">
 <dt id="_CPPv2N8graphene6wallet10wallet_api9transfer2E6string6string6string6string6string">
-<span id="graphene::wallet::wallet_api::transfer2__string.string.string.string.string"></span><span class="target" id="project0classgraphene_1_1wallet_1_1wallet__api_1a52bd06d61575ff4cfc208d887db3d8ff"></span>pair&lt;transaction_id_type, signed_transaction&gt; <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">transfer2</code><span class="sig-paren">(</span>string <em>from</em>, string <em>to</em>, string <em>amount</em>, string <em>asset_symbol</em>, string <em>memo</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api9transfer2E6string6string6string6string6string" title="Permalink to this definition">¶</a></dt>
+<span id="graphene::wallet::wallet_api::transfer2__string.string.string.string.string"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1a52bd06d61575ff4cfc208d887db3d8ff"></span>pair&lt;transaction_id_type, signed_transaction&gt; <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">transfer2</code><span class="sig-paren">(</span>string <em>from</em>, string <em>to</em>, string <em>amount</em>, string <em>asset_symbol</em>, string <em>memo</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api9transfer2E6string6string6string6string6string" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>This method works just like transfer, except it always broadcasts and returns the transaction ID along with the signed transaction. </p>
 </dd></dl>
 
@@ -518,8 +511,8 @@ the transaction ID along with the signed transaction.</p>
 <div class="section" id="id9">
 <h3>Reference<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
 <dl class="function">
-<dt id="_CPPv2N8graphene6wallet10wallet_api19get_account_historyE6stringi">
-<span id="graphene::wallet::wallet_api::get_account_history__string.i"></span><span class="target" id="project0classgraphene_1_1wallet_1_1wallet__api_1a30435c40b79d7a7cad036d3486902db3"></span>vector&lt;operation_detail&gt; <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">get_account_history</code><span class="sig-paren">(</span>string <em>name</em>, int <em>limit</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api19get_account_historyE6stringi" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK8graphene6wallet10wallet_api19get_account_historyE6stringi">
+<span id="graphene::wallet::wallet_api::get_account_history__string.iC"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1a30435c40b79d7a7cad036d3486902db3"></span>vector&lt;operation_detail&gt; <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">get_account_history</code><span class="sig-paren">(</span>string <em>name</em>, int <em>limit</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK8graphene6wallet10wallet_api19get_account_historyE6stringi" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Returns the most recent operations on the named account.</p>
 <p>This returns a list of operation history objects, which describe activity on the account.</p>
 <p><dl class="docutils">
@@ -528,11 +521,9 @@ the transaction ID along with the signed transaction.</p>
 <dt><strong>Return</strong></dt>
 <dd>a list of <code class="docutils literal"><span class="pre">operation_history_objects</span></code> </dd>
 <dt><strong>Parameters</strong></dt>
-<dd><ul class="breatheparameterlist first last">
-<li><code class="first docutils literal"><span class="pre">name</span></code> - <p>the name or id of the account </p>
-</li>
-<li><code class="first docutils literal"><span class="pre">limit</span></code> - <p>the number of entries to return (starting from the most recent) (max 100) </p>
-</li>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">name</span></code>: the name or id of the account </li>
+<li><code class="docutils literal"><span class="pre">limit</span></code>: the number of entries to return (starting from the most recent) (max 100) </li>
 </ul>
 </dd>
 </dl>
@@ -591,17 +582,16 @@ the transaction ID along with the signed transaction.</p>
 <div class="section" id="id12">
 <h3>Reference<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
 <dl class="function">
-<dt id="_CPPv2N8graphene6wallet10wallet_api10get_objectE14object_id_type">
-<span id="graphene::wallet::wallet_api::get_object__object_id_type"></span><span class="target" id="project0classgraphene_1_1wallet_1_1wallet__api_1a12d4903dfb4f111e7aff4ca03c1c526d"></span>variant <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">get_object</code><span class="sig-paren">(</span>object_id_type <em>id</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api10get_objectE14object_id_type" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK8graphene6wallet10wallet_api10get_objectE14object_id_type">
+<span id="graphene::wallet::wallet_api::get_object__object_id_typeC"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1a12d4903dfb4f111e7aff4ca03c1c526d"></span>variant <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">get_object</code><span class="sig-paren">(</span>object_id_type <em>id</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK8graphene6wallet10wallet_api10get_objectE14object_id_type" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Returns the blockchain object corresponding to the given id.</p>
-<p>This generic function can be used to retrieve any object from the blockchain that is assigned an ID. Certain types of objects have specialized convenience functions to return their objects  e.g., assets have <code class="docutils literal"><a class="reference internal" href="#project0classgraphene_1_1wallet_1_1wallet__api_1a12dcc7308bd4277d83f62ebcdbe51596"><span class="std std-ref"><span class="pre">get_asset()</span></span></a></code>, accounts have <code class="docutils literal"><a class="reference internal" href="../development/namespaces/wallet.html#project0classgraphene_1_1wallet_1_1wallet__api_1ae4133a2fe8f63695385c20d327a88ff9"><span class="std std-ref"><span class="pre">get_account()</span></span></a></code>, but this function will work for any object.</p>
+<p>This generic function can be used to retrieve any object from the blockchain that is assigned an ID. Certain types of objects have specialized convenience functions to return their objects  e.g., assets have <code class="docutils literal"><a class="reference internal" href="#grapheneclassgraphene_1_1wallet_1_1wallet__api_1a12dcc7308bd4277d83f62ebcdbe51596"><span class="std std-ref"><span class="pre">get_asset()</span></span></a></code>, accounts have <code class="docutils literal"><a class="reference internal" href="../development/namespaces/wallet.html#grapheneclassgraphene_1_1wallet_1_1wallet__api_1ae4133a2fe8f63695385c20d327a88ff9"><span class="std std-ref"><span class="pre">get_account()</span></span></a></code>, but this function will work for any object.</p>
 <p><dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>the requested object </dd>
 <dt><strong>Parameters</strong></dt>
-<dd><ul class="breatheparameterlist first last">
-<li><code class="first docutils literal"><span class="pre">id</span></code> - <p>the id of the object to return </p>
-</li>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">id</span></code>: the id of the object to return </li>
 </ul>
 </dd>
 </dl>
@@ -661,15 +651,14 @@ the transaction ID along with the signed transaction.</p>
 <div class="section" id="id15">
 <h3>Reference<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
 <dl class="function">
-<dt id="_CPPv2N8graphene6wallet10wallet_api9get_assetE6string">
-<span id="graphene::wallet::wallet_api::get_asset__string"></span><span class="target" id="project0classgraphene_1_1wallet_1_1wallet__api_1a12dcc7308bd4277d83f62ebcdbe51596"></span>asset_object <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">get_asset</code><span class="sig-paren">(</span>string <em>asset_name_or_id</em><span class="sig-paren">)</span> const<a class="headerlink" href="#_CPPv2N8graphene6wallet10wallet_api9get_assetE6string" title="Permalink to this definition">¶</a></dt>
+<dt id="_CPPv2NK8graphene6wallet10wallet_api9get_assetE6string">
+<span id="graphene::wallet::wallet_api::get_asset__stringC"></span><span class="target" id="grapheneclassgraphene_1_1wallet_1_1wallet__api_1a12dcc7308bd4277d83f62ebcdbe51596"></span>asset_object <code class="descclassname">graphene::wallet::wallet_api::</code><code class="descname">get_asset</code><span class="sig-paren">(</span>string <em>asset_name_or_id</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv2NK8graphene6wallet10wallet_api9get_assetE6string" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Returns information about the given asset. <dl class="docutils">
 <dt><strong>Return</strong></dt>
 <dd>the information about the asset stored in the block chain </dd>
 <dt><strong>Parameters</strong></dt>
-<dd><ul class="breatheparameterlist first last">
-<li><code class="first docutils literal"><span class="pre">asset_name_or_id</span></code> - <p>the symbol or id of the asset in question </p>
-</li>
+<dd><ul class="breatheparameterlist first last simple">
+<li><code class="docutils literal"><span class="pre">asset_name_or_id</span></code>: the symbol or id of the asset in question </li>
 </ul>
 </dd>
 </dl>

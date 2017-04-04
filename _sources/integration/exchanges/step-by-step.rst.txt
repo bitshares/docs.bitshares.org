@@ -177,82 +177,14 @@ described :doc:`here </bitshares/migration/howto-importing-wallet>`.
 Watching Deposits with Python
 #############################
 
-We will make use of the Python-Graphene library available at github and
-configure it for notification on account changes for our deposit account above.
-
-A detailed descriptions about the python library can be found in the
-``python-graphenelib`` `documentations`_.
-
-.. _documentations: http://python-graphenelib.readthedocs.org/en/latest/howto-exchanges-detailed.html
-
-Installation
-************
-
-.. code-block:: sh
-
-    git clone http://github.com/xeroc/python-graphenelib
-    cd python-graphenelib
-    easy_install-3.4 install autobahn
-    easy_install-3.4 install requests
-    python3 setup.py install --user
-
-    cd scripts/monitor-deposits
-
-Configuration
-*************
-Move ``config-example.py`` to ``config.py`` and modify it accordingly:
-
-.. code-block:: python
-
-    mv config-example.py config.py
-    # edit config.py:
-    host         = "127.0.0.1:8091" # 8091 is the delayed node
-    port         = 8091
-    user         = "" # keep empty
-    password     = "" # keep empty
-    accountID    = "<statistics>"
-    memo_wif_key = "<memo_private_key>"
-    last_op      = "1.11.0" ## keep as is
-
-Running
-*******
-
-The monitoring script can be executed via
-
-.. code-block:: sh
-
-    python3 monitor.py
-
-Every time a deposit was made into your account a new line will appear similar
-to:::
-
-   last_op: 1.11.1241 | block:12425 | from xeroc -> to: deposit | fee: 10 BTS | amount: 100 USD | memo: AFCE98ED
-
-If you run into errors you can continue processing from the last operation
-(first column) by defining ``last_op`` in ``config.py`` according to your last
-registered deposit.
+For watching deposits, we recommend pybitshares' *Notify* module. The
+full documentation is available on `pybitshares.com
+<http://pybitshares.com>`_.
 
 Executing Transfers for Withdrawals
 ###################################
 
-Since we have imported the active key for our account into the wallet we can
-either initiate transfers from the wallet CLI with:::
-
-   >>> transfer <account-name> <customer-account-name> <amount> <asset> <memo> <broadcast>
-       # e.g.
-   >>> transfer myexchange xeroc 100 USD "withdrawal myexchange" true
-
-Make sure to add a ``true`` at the end so that the signed transaction is
-broadcast in the P2P network.
-
-Alternatively you can interface with the wallet and initiate the transfer via
-API call (example in ``scripts/flood.py``)
-
-.. code-block:: python
-
-     from grapheneapi import GrapheneAPI
-
-     if __name__ == '__main__':
-         client = GrapheneAPI("localhost", 8092, "", "")
-         res = client.transfer("myexchange","xeroc","0.00001", "USD", "withdrawal myexchange", True);
-         print(res)
+For transfering funds, we recommend pybitshares. This python module
+enables all features required to operated on/with BitShares. The full
+documentation is available on `pybitshares.com
+<http://pybitshares.com>`_.

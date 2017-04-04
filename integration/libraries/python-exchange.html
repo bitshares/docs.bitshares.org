@@ -124,21 +124,19 @@
 <li class="toctree-l3"><a class="reference internal" href="../../api/index.html">API Guide</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../merchants/index.html">Merchants</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/index.html">API Guide</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../traders/index.html">Traders</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../api/index.html">API Guide</a></li>
-<li class="toctree-l3"><a class="reference internal" href="python.html">General Python Library</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Python Module for the DEX</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#usage">Usage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
-</ul>
-</li>
-<li class="toctree-l3 current"><a class="reference internal" href="../businesses/index.html">Businesses</a><ul class="current">
-<li class="toctree-l4 current"><a class="reference internal" href="../businesses/index.html#libraries">Libraries</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../traders/index.html">Traders</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../traders/index.html#public-api">Public API</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../traders/index.html#private-api">Private API</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../traders/index.html#libraries">Libraries</a><ul class="current">
 <li class="toctree-l5 current"><a class="reference internal" href="index.html">Supporting Libraries</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../../api/index.html">API Guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python.html">General Python Library</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Python Module for the DEX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../businesses/index.html">Businesses</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../api/index.html">API Guide</a></li>
 </ul>
 </li>
@@ -184,52 +182,9 @@
    
   <div class="section" id="python-module-for-the-dex">
 <h1>Python Module for the DEX<a class="headerlink" href="#python-module-for-the-dex" title="Permalink to this headline">¶</a></h1>
-<p>To simplify automated trading, we developed a Python Module that close
-re-assembles the trading API of <cite>Poloniex_</cite>.</p>
-<div class="section" id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><a class="reference external" href="http://python-graphenelib.readthedocs.org/en/latest/exchange.html">Technical documentation:</a></li>
-<li><a class="reference external" href="https://bitsharestalk.org/index.php/topic,21816.new.html#new">Youtube - Live Coding Sessions</a></li>
-</ul>
-</div>
-<div class="section" id="example">
-<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">grapheneexchange</span> <span class="kn">import</span> <span class="n">GrapheneExchange</span>
-<span class="kn">import</span> <span class="nn">config</span>
-<span class="n">dex</span> <span class="o">=</span> <span class="n">GrapheneExchange</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">safe_mode</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
-<span class="c1">#: Close all orders that have been put in those markets previously</span>
-<span class="n">orders</span> <span class="o">=</span> <span class="n">dex</span><span class="o">.</span><span class="n">returnOpenOrders</span><span class="p">()</span>
-<span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">orders</span><span class="p">:</span>
-    <span class="k">for</span> <span class="n">o</span> <span class="ow">in</span> <span class="n">orders</span><span class="p">[</span><span class="n">m</span><span class="p">]:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot; - </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">o</span><span class="p">[</span><span class="s2">&quot;orderNumber&quot;</span><span class="p">])</span>
-        <span class="n">dex</span><span class="o">.</span><span class="n">cancel</span><span class="p">(</span><span class="n">o</span><span class="p">[</span><span class="s2">&quot;orderNumber&quot;</span><span class="p">])</span>
-<span class="c1">#: Buy and Sell Prices</span>
-<span class="n">buy_price</span>  <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">config</span><span class="o">.</span><span class="n">bridge_spread_percent</span> <span class="o">/</span> <span class="mi">200</span>
-<span class="n">sell_price</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">config</span><span class="o">.</span><span class="n">bridge_spread_percent</span> <span class="o">/</span> <span class="mi">200</span>
-<span class="c1">#: Amount of Funds available for trading (per asset)</span>
-<span class="n">balances</span> <span class="o">=</span> <span class="n">dex</span><span class="o">.</span><span class="n">returnBalances</span><span class="p">()</span>
-<span class="n">asset_ids</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">amounts</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="k">for</span> <span class="n">market</span> <span class="ow">in</span> <span class="n">config</span><span class="o">.</span><span class="n">watch_markets</span> <span class="p">:</span>
-    <span class="n">quote</span><span class="p">,</span> <span class="n">base</span> <span class="o">=</span> <span class="n">market</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">market_separator</span><span class="p">)</span>
-    <span class="n">asset_ids</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">base</span><span class="p">)</span>
-    <span class="n">asset_ids</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">quote</span><span class="p">)</span>
-<span class="n">assets_unique</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">asset_ids</span><span class="p">))</span>
-<span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">assets_unique</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">balances</span> <span class="p">:</span>
-        <span class="n">amounts</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">=</span> <span class="n">balances</span><span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">*</span> <span class="n">config</span><span class="o">.</span><span class="n">bridge_amount_percent</span> <span class="o">/</span> <span class="mi">100</span> <span class="o">/</span> <span class="n">asset_ids</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">config</span><span class="o">.</span><span class="n">watch_markets</span><span class="p">:</span>
-    <span class="n">quote</span><span class="p">,</span> <span class="n">base</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">market_separator</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">quote</span> <span class="ow">in</span> <span class="n">amounts</span> <span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot; - Selling </span><span class="si">%f</span><span class="s2"> </span><span class="si">%s</span><span class="s2"> for </span><span class="si">%s</span><span class="s2"> @</span><span class="si">%f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">amounts</span><span class="p">[</span><span class="n">quote</span><span class="p">],</span> <span class="n">quote</span><span class="p">,</span> <span class="n">base</span><span class="p">,</span> <span class="n">sell_price</span><span class="p">))</span>
-        <span class="n">dex</span><span class="o">.</span><span class="n">sell</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">sell_price</span><span class="p">,</span> <span class="n">amounts</span><span class="p">[</span><span class="n">quote</span><span class="p">])</span>
-    <span class="k">if</span> <span class="n">base</span> <span class="ow">in</span> <span class="n">amounts</span> <span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot; - Buying </span><span class="si">%f</span><span class="s2"> </span><span class="si">%s</span><span class="s2"> with </span><span class="si">%s</span><span class="s2"> @</span><span class="si">%f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">amounts</span><span class="p">[</span><span class="n">base</span><span class="p">],</span> <span class="n">base</span><span class="p">,</span> <span class="n">quote</span><span class="p">,</span> <span class="n">buy_price</span><span class="p">))</span>
-        <span class="n">dex</span><span class="o">.</span><span class="n">buy</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">buy_price</span><span class="p">,</span> <span class="n">amounts</span><span class="p">[</span><span class="n">base</span><span class="p">]</span> <span class="o">*</span> <span class="n">buy_price</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
+<p><a class="reference external" href="http://pybitshares.com">pybitshares</a> offers a Trading module
+specifically for the decentralized exchange (DEX). It is well documented
+and has it&#8217;s own <a class="reference external" href="http://pybitshares.com">documentation page</a>.</p>
 </div>
 
 
