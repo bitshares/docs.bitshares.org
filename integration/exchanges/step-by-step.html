@@ -198,25 +198,6 @@ sources according to:</p>
 <h2>Running Daemons and Wallet<a class="headerlink" href="#running-daemons-and-wallet" title="Permalink to this headline">¶</a></h2>
 <p>For security reasons we will run two daemons and a wallet according to these
 diagram:</p>
-<object data="../../_images/graphviz-6582060b94c2938b4825d229f689ad44c8d8b0e5.svg" type="image/svg+xml">
-            <p class="warning">digraph foo {
- rankdir=LR;
- ranksep=0.5;
- nodesep=0.1;
- overlap=false;
- splines=ortho;
-
- node [shape=box];
- node [fontname=Verdana,fontsize=12]
- node [style=filled]
- node [fillcolor=&quot;#EEEEEE&quot;]
- node [color=&quot;#EEEEEE&quot;]
- edge [color=&quot;#31CEF0&quot;, dir=back, fontsize=9, fontname=Verdana]
-
- &quot;P2P network&quot; -&gt; &quot;Trusted Full Node&quot; [dir=&quot;both&quot;]
- &quot;Trusted Full Node&quot; -&gt; &quot;Delayed Full Node&quot; -&gt; &quot;Deposit API&quot;
- &quot;Trusted Full Node&quot; -&gt; &quot;Wallet&quot; -&gt; &quot;Withdraw API&quot;
-}</p></object>
 <p>In this tutorial we will run all deamons and the wallet on the same machine and
 use different ports to distinguish them:</p>
 <ul class="simple">
@@ -335,74 +316,14 @@ described <a class="reference internal" href="../../bitshares/migration/howto-im
 </div>
 <div class="section" id="watching-deposits-with-python">
 <h2>Watching Deposits with Python<a class="headerlink" href="#watching-deposits-with-python" title="Permalink to this headline">¶</a></h2>
-<p>We will make use of the Python-Graphene library available at github and
-configure it for notification on account changes for our deposit account above.</p>
-<p>A detailed descriptions about the python library can be found in the
-<code class="docutils literal"><span class="pre">python-graphenelib</span></code> <a class="reference external" href="http://python-graphenelib.readthedocs.org/en/latest/howto-exchanges-detailed.html">documentations</a>.</p>
-<div class="section" id="id1">
-<h3>Installation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-sh"><div class="highlight"><pre><span></span>git clone http://github.com/xeroc/python-graphenelib
-<span class="nb">cd</span> python-graphenelib
-easy_install-3.4 install autobahn
-easy_install-3.4 install requests
-python3 setup.py install --user
-
-<span class="nb">cd</span> scripts/monitor-deposits
-</pre></div>
-</div>
-</div>
-<div class="section" id="configuration">
-<h3>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h3>
-<p>Move <code class="docutils literal"><span class="pre">config-example.py</span></code> to <code class="docutils literal"><span class="pre">config.py</span></code> and modify it accordingly:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">mv</span> <span class="n">config</span><span class="o">-</span><span class="n">example</span><span class="o">.</span><span class="n">py</span> <span class="n">config</span><span class="o">.</span><span class="n">py</span>
-<span class="c1"># edit config.py:</span>
-<span class="n">host</span>         <span class="o">=</span> <span class="s2">&quot;127.0.0.1:8091&quot;</span> <span class="c1"># 8091 is the delayed node</span>
-<span class="n">port</span>         <span class="o">=</span> <span class="mi">8091</span>
-<span class="n">user</span>         <span class="o">=</span> <span class="s2">&quot;&quot;</span> <span class="c1"># keep empty</span>
-<span class="n">password</span>     <span class="o">=</span> <span class="s2">&quot;&quot;</span> <span class="c1"># keep empty</span>
-<span class="n">accountID</span>    <span class="o">=</span> <span class="s2">&quot;&lt;statistics&gt;&quot;</span>
-<span class="n">memo_wif_key</span> <span class="o">=</span> <span class="s2">&quot;&lt;memo_private_key&gt;&quot;</span>
-<span class="n">last_op</span>      <span class="o">=</span> <span class="s2">&quot;1.11.0&quot;</span> <span class="c1">## keep as is</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="running">
-<h3>Running<a class="headerlink" href="#running" title="Permalink to this headline">¶</a></h3>
-<p>The monitoring script can be executed via</p>
-<div class="highlight-sh"><div class="highlight"><pre><span></span>python3 monitor.py
-</pre></div>
-</div>
-<p>Every time a deposit was made into your account a new line will appear similar
-to::</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">last_op</span><span class="p">:</span> <span class="mf">1.11</span><span class="o">.</span><span class="mi">1241</span> <span class="o">|</span> <span class="n">block</span><span class="p">:</span><span class="mi">12425</span> <span class="o">|</span> <span class="kn">from</span> <span class="nn">xeroc</span> <span class="o">-&gt;</span> <span class="n">to</span><span class="p">:</span> <span class="n">deposit</span> <span class="o">|</span> <span class="n">fee</span><span class="p">:</span> <span class="mi">10</span> <span class="n">BTS</span> <span class="o">|</span> <span class="n">amount</span><span class="p">:</span> <span class="mi">100</span> <span class="n">USD</span> <span class="o">|</span> <span class="n">memo</span><span class="p">:</span> <span class="n">AFCE98ED</span>
-</pre></div>
-</div>
-<p>If you run into errors you can continue processing from the last operation
-(first column) by defining <code class="docutils literal"><span class="pre">last_op</span></code> in <code class="docutils literal"><span class="pre">config.py</span></code> according to your last
-registered deposit.</p>
-</div>
+<p>For watching deposits, we recommend pybitshares&#8217; <em>Notify</em> module. The
+full documentation is available on <a class="reference external" href="http://pybitshares.com">pybitshares.com</a>.</p>
 </div>
 <div class="section" id="executing-transfers-for-withdrawals">
 <h2>Executing Transfers for Withdrawals<a class="headerlink" href="#executing-transfers-for-withdrawals" title="Permalink to this headline">¶</a></h2>
-<p>Since we have imported the active key for our account into the wallet we can
-either initiate transfers from the wallet CLI with::</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">transfer</span> <span class="o">&lt;</span><span class="n">account</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">customer</span><span class="o">-</span><span class="n">account</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">amount</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">asset</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">memo</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">broadcast</span><span class="o">&gt;</span>
-<span class="go">    # e.g.</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">transfer</span> <span class="n">myexchange</span> <span class="n">xeroc</span> <span class="mi">100</span> <span class="n">USD</span> <span class="s2">&quot;withdrawal myexchange&quot;</span> <span class="n">true</span>
-</pre></div>
-</div>
-<p>Make sure to add a <code class="docutils literal"><span class="pre">true</span></code> at the end so that the signed transaction is
-broadcast in the P2P network.</p>
-<p>Alternatively you can interface with the wallet and initiate the transfer via
-API call (example in <code class="docutils literal"><span class="pre">scripts/flood.py</span></code>)</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">grapheneapi</span> <span class="kn">import</span> <span class="n">GrapheneAPI</span>
-
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">client</span> <span class="o">=</span> <span class="n">GrapheneAPI</span><span class="p">(</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span> <span class="mi">8092</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
-    <span class="n">res</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">transfer</span><span class="p">(</span><span class="s2">&quot;myexchange&quot;</span><span class="p">,</span><span class="s2">&quot;xeroc&quot;</span><span class="p">,</span><span class="s2">&quot;0.00001&quot;</span><span class="p">,</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span> <span class="s2">&quot;withdrawal myexchange&quot;</span><span class="p">,</span> <span class="bp">True</span><span class="p">);</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
-</pre></div>
-</div>
+<p>For transfering funds, we recommend pybitshares. This python module
+enables all features required to operated on/with BitShares. The full
+documentation is available on <a class="reference external" href="http://pybitshares.com">pybitshares.com</a>.</p>
 </div>
 </div>
 

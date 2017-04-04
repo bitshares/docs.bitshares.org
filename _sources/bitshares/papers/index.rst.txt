@@ -54,9 +54,34 @@ discussed in detail in this paper.
     </a>
    </center>
 
+
+BitShares 2.0: Stress-Test Results
+##################################
+
+**Abstract**: BitShares 2.0 is an industrial-grade decentralized
+platform built for high-performance financial smart contracts. In order
+to show its capabilities in the field, we have conducted a stress test
+on the public testnet. The testnet has been deployed with the same code
+base that is used for the BitShares network and has nodes around the
+globe. Only margin changes have been made to distinguish the testnet
+from the productive network, properly. A multi-phase stress-test has
+been proposed and accepted that modifies the maximum transaction size,
+maximum block size and block confirmation times in the live network
+during the stress test. Validators have been kept up to date by means of
+stake-weighted voting.
+
+.. raw:: html
+
+   <center>
+    <a href="/_downloads/bitshares-stresstest.pdf" type="button" class="btn btn-info" onclick="ga('set', 'nonInteraction', false);ga('send', 'event', { eventCategory: 'download', eventAction: 'click', eventLabel: 'BitShares 2.0: Stress-Test Results'});">
+     BitShares 2.0: Stress-Test Results
+    </a>
+   </center>
+
 :html:`<!-- Adding the downloads in Sphinx syntax to be sure it is moved to _downloads properly`
 
 * :download:`BitShares 2.0: Financial Smart Contract Platform <bitshares-financial-platform.pdf>`
 * :download:`BitShares 2.0: General Overview                  <bitshares-general.pdf>`
+* :download:`BitShares 2.0: Stress-Test Results               <bitshares-stresstest.pdf>`
 
 :html:`//-->`

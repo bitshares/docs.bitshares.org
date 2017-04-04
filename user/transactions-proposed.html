@@ -177,34 +177,6 @@ second proposal can be used to grant the nested authority&#8217;s approval. That
 second proposal can be created which, when sufficiently approved, adds the
 approval of a nested authority to the first proposal. This multiple-proposal
 scheme can be used to acquire approval for an arbitrarily deep authority tree.</p>
-<object data="../_images/graphviz-c1ded0ac04f34ed44cdb9b08a963c949cec14b1c.svg" type="image/svg+xml">
-            <p class="warning">digraph G {
-  ranksep=0.5;
-  nodesep=0.1;
-  overlap=false;
-
-  node [fontname=Verdana,fontsize=12]
-  node [style=filled]
-  node [fillcolor=&quot;#EEEEEE&quot;]
-  node [color=&quot;#EEEEEE&quot;]
-  edge [color=&quot;#31CEF0&quot;, dir=back, fontsize=9, fontname=Verdana]
-
-  proposal -&gt; { Level_1a, Level_1b, Level_1c };
-
-  Level_1b -&gt; { Level_2a, Level_2b, Level_2c }
-  Level_1c -&gt; { Level_2d, Level_2e, Level_2f };
-
-  Level_2a -&gt; { Level_3a, Level_3b };
-  Level_2b -&gt; { Level_3b, Level_3c };
-  Level_2e -&gt; { Level_3e, Level_3d };
-  Level_2f -&gt; { Level_3f, Level_3e };
-
-  Level_3d -&gt; { Level_4a, Level_4b };
-  Level_3e -&gt; { Level_4b, Level_4c };
-
-  Level_2c -&gt; Level_4a;
-
- }</p></object>
 <p>Note that each account in the figure can carry a <strong>different weight</strong>. An example
 of how to setup your permissions accordingly is given in
 <a class="reference internal" href="account-permissions.html"><span class="doc">Permissions</span></a>.</p>

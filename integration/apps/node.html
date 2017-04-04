@@ -206,108 +206,91 @@ settings if they don&#8217;t exist locally set.</p>
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
 <p>The configuration file <code class="docutils literal"><span class="pre">config.ini</span></code> in your data directory is commented and
 contains the following essential settings:</p>
-<ul>
+<ul class="simple">
 <li><dl class="first docutils">
 <dt><code class="docutils literal"><span class="pre">p2p-endpoint</span></code></dt>
-<dd><p class="first last">Endpoint for P2P node to listen on</p>
-</dd>
+<dd>Endpoint for P2P node to listen on</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt><code class="docutils literal"><span class="pre">seed-node</span></code></dt>
-<dd><p class="first last">P2P nodes to connect to on startup (may specify multiple times)</p>
-</dd>
+<dd>P2P nodes to connect to on startup (may specify multiple times)</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt><code class="docutils literal"><span class="pre">checkpoint</span></code></dt>
-<dd><p class="first last">Pairs of [BLOCK_NUM,BLOCK_ID] that should be enforced as checkpoints.</p>
-</dd>
+<dd>Pairs of [BLOCK_NUM,BLOCK_ID] that should be enforced as checkpoints.</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt><code class="docutils literal"><span class="pre">rpc-endpoint</span></code></dt>
-<dd><p class="first last">Endpoint for websocket RPC to listen on (e.g. <code class="docutils literal"><span class="pre">0.0.0.0:8090</span></code>)</p>
-</dd>
+<dd>Endpoint for websocket RPC to listen on (e.g. <code class="docutils literal"><span class="pre">0.0.0.0:8090</span></code>)</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt><code class="docutils literal"><span class="pre">rpc-tls-endpoint</span></code></dt>
-<dd><p class="first last">Endpoint for TLS websocket RPC to listen on</p>
-</dd>
+<dd>Endpoint for TLS websocket RPC to listen on</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt><code class="docutils literal"><span class="pre">server-pem</span></code></dt>
-<dd><p class="first last">The TLS certificate file for this server</p>
-</dd>
+<dd>The TLS certificate file for this server</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt><code class="docutils literal"><span class="pre">server-pem-password</span></code></dt>
-<dd><p class="first last">Password for this certificate</p>
-</dd>
+<dd>Password for this certificate</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt><code class="docutils literal"><span class="pre">genesis-json</span></code></dt>
-<dd><p class="first last">File to read Genesis State from</p>
-</dd>
+<dd>File to read Genesis State from</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt><code class="docutils literal"><span class="pre">api-access</span></code></dt>
-<dd><p class="first last">JSON file specifying API permissions</p>
-</dd>
+<dd>JSON file specifying API permissions</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt><code class="docutils literal"><span class="pre">enable-stale-production</span></code></dt>
-<dd><p class="first last">Enable block production, even if the chain is stale. (unless for private testnets should be <code class="docutils literal"><span class="pre">false</span></code>)</p>
-</dd>
+<dd>Enable block production, even if the chain is stale. (unless for private testnets should be <code class="docutils literal"><span class="pre">false</span></code>)</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt><code class="docutils literal"><span class="pre">required-participation</span></code></dt>
-<dd><p class="first last">Percent of witnesses (0-99) that must be participating in order to produce blocks</p>
-</dd>
+<dd>Percent of witnesses (0-99) that must be participating in order to produce blocks</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt><code class="docutils literal"><span class="pre">allow-consecutive</span></code></dt>
-<dd><p class="first last">Allow block production, even if the last block was produced by the same witness.</p>
-</dd>
+<dd>Allow block production, even if the last block was produced by the same witness.</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt><code class="docutils literal"><span class="pre">witness-id</span></code></dt>
-<dd><p class="first last">ID of witness controlled by this node (e.g. &#8220;1.6.5&#8221;, quotes are required, may specify multiple times)</p>
-</dd>
+<dd>ID of witness controlled by this node (e.g. &#8220;1.6.5&#8221;, quotes are required, may specify multiple times)</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt><code class="docutils literal"><span class="pre">private-key</span></code></dt>
-<dd><p class="first last">Tuple of <code class="docutils literal"><span class="pre">[PublicKey,</span> <span class="pre">WIF</span> <span class="pre">private</span> <span class="pre">key]</span></code> (may specify multiple times)</p>
-</dd>
+<dd>Tuple of <code class="docutils literal"><span class="pre">[PublicKey,</span> <span class="pre">WIF</span> <span class="pre">private</span> <span class="pre">key]</span></code> (may specify multiple times)</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt><code class="docutils literal"><span class="pre">track-account</span></code></dt>
-<dd><p class="first last">Account ID to track history for (may specify multiple times)</p>
-</dd>
+<dd>Account ID to track history for (may specify multiple times)</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt><code class="docutils literal"><span class="pre">bucket-size</span></code></dt>
-<dd><p class="first last">Track market history by grouping orders into buckets of equal size measured
-in seconds specified as a JSON array of numbers</p>
-</dd>
+<dd>Track market history by grouping orders into buckets of equal size measured
+in seconds specified as a JSON array of numbers</dd>
 </dl>
 </li>
 <li><dl class="first docutils">
 <dt><code class="docutils literal"><span class="pre">history-per-size</span></code></dt>
-<dd><p class="first last">How far back in time to track history for each bucket size, measured in the number of buckets (default: 1000)</p>
-</dd>
+<dd>How far back in time to track history for each bucket size, measured in the number of buckets (default: 1000)</dd>
 </dl>
 </li>
 </ul>
