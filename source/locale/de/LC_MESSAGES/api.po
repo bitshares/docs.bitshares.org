@@ -1,0 +1,755 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Fabian Schuh
+# This file is distributed under the same license as the Graphene Technical
+# Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Graphene Technical Documentation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-03 11:56+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/api/access.rst:3
+msgid "API Access Restrictions"
+msgstr ""
+
+#: ../../source/api/access.rst:5
+msgid ""
+"In order to access the unrestricted API-0, we call make use of usual "
+"*stateless* RPC-calls. To access the restricted API-1 we are required to "
+"use the websocket connection with callbacks to access API-1:"
+msgstr ""
+
+#: ../../source/api/access.rst:9
+msgid "API-0: *state-less* querying"
+msgstr ""
+
+#: ../../source/api/access.rst:10
+msgid "API-1: *authencitated* interaction"
+msgstr ""
+
+#: ../../source/api/access.rst:13
+msgid "Authorization Scheme"
+msgstr ""
+
+#: ../../source/api/access.rst:15
+msgid ""
+"You can restrict API's to particular users by specifying an ``apiaccess``"
+" file in ``config.ini``.  Here is an example ``apiaccess`` file which "
+"allows user ``bytemaster`` with password ``supersecret`` to access four "
+"different API's, while allowing any other user to access the three public"
+" API's necessary to use the wallet:::"
+msgstr ""
+
+#: ../../source/api/access.rst:43
+msgid ""
+"Passwords are stored in ``base64`` as as salted ``sha256`` hashes.  A "
+"simple Python script, ``saltpass.py`` is avaliable to obtain hash and "
+"salt values from a password.  A single asterisk ``*`` may be specified as"
+" username or password hash to accept any value."
+msgstr ""
+
+#: ../../source/api/access.rst:48
+msgid ""
+"With the above configuration, here is an example of how to call "
+"``add_node`` from the ``network_node`` API:::"
+msgstr ""
+
+#: ../../source/api/access.rst:55
+msgid ""
+"Note, the call to ``network_node`` is necessary to obtain the correct API"
+" identifier for the network API.  It is not guaranteed that the network "
+"API identifier will always be ``2``."
+msgstr ""
+
+#: ../../source/api/access.rst:59
+msgid ""
+"Since the ``network_node`` API requires login, it is only accessible over"
+" the websocket RPC. Our `doxygen`_ documentation contains the most up-to-"
+"date information about APIs."
+msgstr ""
+
+#: ../../source/api/access.rst:64
+msgid "Login In"
+msgstr ""
+
+#: ../../source/api/access.rst
+msgid "Public Functions"
+msgstr ""
+
+#: ../../source/api/blockchain-api.rst:3
+msgid "Blockchain API"
+msgstr ""
+
+#: ../../source/api/blockchain-api.rst:5
+msgid ""
+"The Graphene full node distinguishes several different APIs that can be "
+"accessed as described :ref:`the websockets "
+"documentation<requestingAPIaccess>`."
+msgstr ""
+
+#: ../../source/api/blockchain-api.rst:17
+msgid ""
+"Access to some APIs may be **restricted** and requires login with "
+"username and passphrase. More detailed description about this can be "
+"found on the :doc:`access` page."
+msgstr ""
+
+#: ../../source/api/crypto.rst:3
+msgid "Crypto API"
+msgstr ""
+
+#: ../../source/api/crypto.rst:5
+msgid "The crypto API is available from the full node via websockets."
+msgstr ""
+
+#: ../../source/api/crypto.rst:7 ../../source/api/database.rst:7
+#: ../../source/api/history.rst:7 ../../source/api/network_broadcast.rst:7
+#: ../../source/api/network_node.rst:7
+msgid ""
+"If you have not set up your websockets connection, please read :doc:`this"
+" article <websocket>`."
+msgstr ""
+
+#: ../../source/api/crypto.rst:14
+msgid "Blinding and Un-Blinding"
+msgstr ""
+
+#: ../../source/api/crypto.rst:21
+msgid "Rage Proofs"
+msgstr ""
+
+#: ../../source/api/crypto.rst:26
+msgid "Verification"
+msgstr ""
+
+#: ../../source/api/database.rst:3
+msgid "Database API"
+msgstr ""
+
+#: ../../source/api/database.rst:5
+msgid "The database API is available from the full node via websockets."
+msgstr ""
+
+#: ../../source/api/database.rst:14
+msgid "Objects"
+msgstr ""
+
+#: ../../source/api/database.rst:18
+msgid "Subscriptions"
+msgstr ""
+
+#: ../../source/api/database.rst:25
+msgid "Blocks and transactions"
+msgstr ""
+
+#: ../../source/api/database.rst:32
+msgid "Globals"
+msgstr ""
+
+#: ../../source/api/database.rst:40
+msgid "Keys"
+msgstr ""
+
+#: ../../source/api/database.rst:44
+msgid "Accounts"
+msgstr ""
+
+#: ../../source/api/database.rst:54
+msgid "Balances"
+msgstr ""
+
+#: ../../source/api/database.rst:62
+msgid "Assets"
+msgstr ""
+
+#: ../../source/api/database.rst:68
+msgid "Markets / feeds"
+msgstr ""
+
+#: ../../source/api/database.rst:81
+msgid "Witnesses"
+msgstr ""
+
+#: ../../source/api/database.rst:88
+msgid "Committee members"
+msgstr ""
+
+#: ../../source/api/database.rst:94
+msgid "Workers"
+msgstr ""
+
+#: ../../source/api/database.rst:98
+msgid "Votes"
+msgstr ""
+
+#: ../../source/api/database.rst:102
+msgid "Authority / Validation"
+msgstr ""
+
+#: ../../source/api/database.rst:113
+msgid "Proposed Transactions"
+msgstr ""
+
+#: ../../source/api/database.rst:117
+msgid "Blinded balances"
+msgstr ""
+
+#: ../../source/api/history.rst:3
+msgid "Account History API"
+msgstr ""
+
+#: ../../source/api/history.rst:5
+msgid "The history API is available from the full node via websockets."
+msgstr ""
+
+#: ../../source/api/history.rst:14
+msgid "Account History"
+msgstr ""
+
+#: ../../source/api/history.rst:18
+msgid "Market History"
+msgstr ""
+
+#: ../../source/api/index.rst:3
+msgid "API Guide"
+msgstr ""
+
+#: ../../source/api/index.rst:5
+msgid ""
+"This page serves as a comprehensive reference for the Graphene API and "
+"its blockchain, such as :doc:`../bitshares/index` and "
+":doc:`../muse/index`."
+msgstr ""
+
+#: ../../source/api/index.rst:9
+msgid "APIs are separated into two categories, namely"
+msgstr ""
+
+#: ../../source/api/index.rst:11
+msgid ""
+"the **Blockchain API** which is used to query blockchain data (account, "
+"assets, trading history, etc.) and"
+msgstr ""
+
+#: ../../source/api/index.rst:12
+msgid ""
+"the **Wallet API** which has your private keys loaded and is required "
+"when interacting with the blockchain with new transactions."
+msgstr ""
+
+#: ../../source/api/index.rst:14
+msgid ""
+"In order to interface with *the wallet*, you need to run the "
+":doc:`../integration/apps/cliwallet`. Neither the **light-wallet**, nor "
+"the **hosted web wallet** will provide you with an API."
+msgstr ""
+
+#: ../../source/api/index.rst:19
+msgid ""
+"In contrast to many existing ecosystems, there is no centralized services"
+" that let's you access private API calles after successful "
+"authentication. Instead, your run your wallet (and optionally a full "
+"node) **locally** and are with **your own API service provider**. This "
+"obviously has the advantage that you don't need to give access to your "
+"funds to any third party but has the slight disadvantage that you need to"
+" run a local :doc:`wallet appilcation <../integration/apps/cliwallet>`, "
+"that however does not download the whole blockchain for verification. If "
+"you run a sensitive business, we recommend to also run a local full node "
+"to download and verify the blockchain and interface your wallet with your"
+" local full node."
+msgstr ""
+
+#: ../../source/api/index.rst:30
+msgid ""
+"This page will give you a detailed description of both API categories, "
+"the Remote Procedure Calls and Websockets, and will give an introduction "
+"to many available calls."
+msgstr ""
+
+#: ../../source/api/index.rst:35
+msgid "Interfacing with Graphene"
+msgstr ""
+
+#: ../../source/api/index.rst:37
+msgid ""
+"The set of available calls depends on whether you connect to a full node "
+"(``witness_node``) or the wallet (``cli_wallet``). Both support RPC-JSON."
+" The full node also supports the websocket protocol with notifications."
+msgstr ""
+
+#: ../../source/api/index.rst:41
+msgid ""
+"Which blockchain network you connect to (BitShares, MUSE, ..) depends on "
+"the configuration of the full node and the wallet. If you run a full "
+"node, we recommend to connect your wallet to your local full node even "
+"though it could be connected to any other public full node as well."
+msgstr ""
+
+#: ../../source/api/index.rst:69
+msgid ""
+"For sensitive businesses that want to ensure that deposits are "
+"irreversible, we recommend the use of the :ref:`High Security Setup "
+"<highsecuritynetworksetup>`. That contains a *delayed node* to pass only "
+"irreversible transactions to the API."
+msgstr ""
+
+#: ../../source/api/index.rst:73
+msgid "All API calls are formated in JSON and return JSON only."
+msgstr ""
+
+#: ../../source/api/index.rst:76
+msgid "Wallet API"
+msgstr ""
+
+#: ../../source/api/index.rst:78
+msgid ""
+"This chapter introduces the calls available via wallet API. If you have "
+"not set up your wallet yet, you can find more information on the "
+":doc:`../integration/apps/cliwallet` and the :doc:`../integration/apps"
+"/cli-faq` pages."
+msgstr ""
+
+#: ../../source/api/index.rst:90
+msgid "Blockchain API(s)"
+msgstr ""
+
+#: ../../source/api/index.rst:92
+msgid ""
+"The blockchain API can be used to obtain any kind of data stored in the "
+"blockchain. Besides data stores in the blockchain itself (blocks, "
+"transactions, etc. ..), higher level objects (such as accounts, balances,"
+" etc. ...) can be retrieved through the full node's database."
+msgstr ""
+
+#: ../../source/api/index.rst:97
+msgid ""
+"It is not required to run a local full node if you want to query a "
+"particular blockchain or database, but you can also query any existing "
+"public node for information."
+msgstr ""
+
+#: ../../source/api/index.rst:109
+msgid "Blockchain Objects and their Identifiers"
+msgstr ""
+
+#: ../../source/api/index.rst:111
+msgid ""
+"In contrast to many other projects, the Graphene technology distinguishes"
+" different kinds of objects, in the protocol and implementation space."
+msgstr ""
+
+#: ../../source/api/index.rst:114
+msgid ""
+"In the protocol space, there are raw objects such as, accounts, assets, "
+"committee members as well as orders, proposals and balances. The "
+"implementation space is used to gain access to higher abstraction layers "
+"for instance content of the current database state (these include, "
+"current global blockchain properties, dynamic asset data, transaction "
+"histories as well as account statistics and budget records)."
+msgstr ""
+
+#: ../../source/api/network_broadcast.rst:3
+msgid "Network Broadcast API"
+msgstr ""
+
+#: ../../source/api/network_broadcast.rst:5
+msgid "The network broadcast API is available from the full node via websockets."
+msgstr ""
+
+#: ../../source/api/network_broadcast.rst:14
+msgid "Transactions"
+msgstr ""
+
+#: ../../source/api/network_broadcast.rst:19
+msgid "Block"
+msgstr ""
+
+#: ../../source/api/network_node.rst:3
+msgid "Network Nodes API"
+msgstr ""
+
+#: ../../source/api/network_node.rst:5
+msgid "The network node API is available from the full node via websockets."
+msgstr ""
+
+#: ../../source/api/network_node.rst:14
+msgid "Obtain Network Information"
+msgstr ""
+
+#: ../../source/api/network_node.rst:21
+msgid "Change Network Settings"
+msgstr ""
+
+#: ../../source/api/rpc.rst:3
+msgid "Remote Procedure Calls"
+msgstr ""
+
+#: ../../source/api/rpc.rst:6 ../../source/api/websocket.rst:6
+msgid "Prerequisits"
+msgstr ""
+
+#: ../../source/api/rpc.rst:8
+msgid ""
+"This page assumes that you either have a full node or a wallet running "
+"and listening to port ``8090``, locally."
+msgstr ""
+
+#: ../../source/api/rpc.rst:11
+msgid "The set of available commands depends on application you connect to."
+msgstr ""
+
+#: ../../source/api/rpc.rst:14 ../../source/api/websocket.rst:16
+msgid "Call Format"
+msgstr ""
+
+#: ../../source/api/rpc.rst:16
+msgid ""
+"In Graphene, RPC calls are state-less and accessible via regular JSON "
+"formated RPC-HTTP-calls. The correct structure of the JSON call is"
+msgstr ""
+
+#: ../../source/api/rpc.rst:28
+msgid ""
+"The ``get_accounts`` call is available in the Full Node's ``database`` "
+"API and takes only one argument which is an array of account ids (here: "
+"``[\"1.2.0\", \"1.2.1\"]``)."
+msgstr ""
+
+#: ../../source/api/rpc.rst:32
+msgid "Example Call with `curl`"
+msgstr ""
+
+#: ../../source/api/rpc.rst:34
+msgid "Such as call can be submitted via ``curl``:"
+msgstr ""
+
+#: ../../source/api/rpc.rst:41 ../../source/api/websocket.rst:60
+msgid "Successful Calls"
+msgstr ""
+
+#: ../../source/api/rpc.rst:43 ../../source/api/websocket.rst:62
+msgid ""
+"The API will return a properly JSON formated response carrying the same "
+"``id`` as the request to distinguish subsequent calls."
+msgstr ""
+
+#: ../../source/api/rpc.rst:54 ../../source/api/websocket.rst:73
+msgid "Errors"
+msgstr ""
+
+#: ../../source/api/rpc.rst:56 ../../source/api/websocket.rst:75
+msgid ""
+"In case of an error, the resulting answer will carry an ``error`` "
+"attribute and a detailed description:"
+msgstr ""
+
+#: ../../source/api/rpc.rst:75
+msgid "Remarks"
+msgstr ""
+
+#: ../../source/api/rpc.rst:77
+msgid ""
+"Wallet specific commands, such as ``transfer`` and market orders, are "
+"only available if connecting to ``cli_wallet`` because only the wallet "
+"has the private keys and signing capabilities and some calls will only "
+"execute of the wallet is unlocked."
+msgstr ""
+
+#: ../../source/api/rpc.rst:82
+msgid ""
+"The full node offers a set of API(s), of which only the ``database`` "
+"calls are avaiable via RPC. Calls that are restricted by default (i.e. "
+"``network_node_api``) or have been restricted by configuration are not "
+"accessible via RPC because a statefull protocol (websocket) is required "
+"for login."
+msgstr ""
+
+#: ../../source/api/wallet-api.rst:3
+msgid "Wallet API Calls"
+msgstr ""
+
+#: ../../source/api/wallet-api.rst:5
+msgid ""
+"The wallet (``cli_wallet``) requires a running full node to connect to "
+"because it does not offer P2P or blockchain capabilities directly."
+msgstr ""
+
+#: ../../source/api/wallet-api.rst:8
+msgid ""
+"If you have not set up your wallet yet, you can find more information on "
+"the :doc:`../integration/apps/cliwallet` and the "
+":doc:`../integration/apps/cli-faq` pages."
+msgstr ""
+
+#: ../../source/api/wallet-api.rst:16
+msgid "General Calls"
+msgstr ""
+
+#: ../../source/api/wallet-api.rst:25
+msgid "Wallet Calls"
+msgstr ""
+
+#: ../../source/api/wallet-api.rst:44
+msgid "Account Calls"
+msgstr ""
+
+#: ../../source/api/wallet-api.rst:62
+msgid "Trading Calls"
+msgstr ""
+
+#: ../../source/api/wallet-api.rst:73
+msgid "Asset Calls"
+msgstr ""
+
+#: ../../source/api/wallet-api.rst:88
+msgid "Governance"
+msgstr ""
+
+#: ../../source/api/wallet-api.rst:106
+msgid "Privacy Mode"
+msgstr ""
+
+#: ../../source/api/wallet-api.rst:121
+msgid "Blockchain Inspection"
+msgstr ""
+
+#: ../../source/api/wallet-api.rst:129
+msgid "Transaction Builder"
+msgstr ""
+
+#: ../../source/api/websocket.rst:3
+msgid "Websocket Calls & Notifications"
+msgstr ""
+
+#: ../../source/api/websocket.rst:8
+msgid ""
+"This page assumes that you have a full node running and listening to port"
+" ``8090``, locally."
+msgstr ""
+
+#: ../../source/api/websocket.rst:11
+msgid ""
+"If you also want to run a wallet, please pick reasonable different ports "
+"and make sure you do not try to call methods at the wallet that are only "
+"available to the blockchain API."
+msgstr ""
+
+#: ../../source/api/websocket.rst:18
+msgid ""
+"In Graphene, Websocket calls are stateful and accessible via regular JSON"
+" formated websocket connection. The correct structure of the JSON call is"
+msgstr ""
+
+#: ../../source/api/websocket.rst:33
+msgid "The parameters ``params`` have the following structure:"
+msgstr ""
+
+#: ../../source/api/websocket.rst:39
+msgid ""
+"In the example above, we query the ``database`` API which carries the "
+"identifier ``0`` in our example (see more details below)."
+msgstr ""
+
+#: ../../source/api/websocket.rst:43
+msgid "Example Call with `wscat`"
+msgstr ""
+
+#: ../../source/api/websocket.rst:45
+msgid ""
+"The following will show the usage of websocket connections. We make use "
+"of the ``wscat`` application available via ``npm``:"
+msgstr ""
+
+#: ../../source/api/websocket.rst:52
+msgid "A non-restricted call against a full-node would take the form:"
+msgstr ""
+
+#: ../../source/api/websocket.rst:96
+msgid "Requesting API access"
+msgstr ""
+
+#: ../../source/api/websocket.rst:98
+msgid ""
+"The Graphene full node offers a wide range of APIs that can be accessed "
+"via websockets. The procedure works as follows:"
+msgstr ""
+
+#: ../../source/api/websocket.rst:101
+msgid "Login to the Full Node"
+msgstr ""
+
+#: ../../source/api/websocket.rst:102
+msgid "Request access to an API"
+msgstr ""
+
+#: ../../source/api/websocket.rst:103
+msgid "Obtain the API identifier"
+msgstr ""
+
+#: ../../source/api/websocket.rst:104
+msgid "Call methods of a specific API by providing the identifier"
+msgstr ""
+
+#: ../../source/api/websocket.rst:106
+msgid "Find below a list of available APIs:"
+msgstr ""
+
+#: ../../source/api/websocket.rst:117
+msgid "1. Login"
+msgstr ""
+
+#: ../../source/api/websocket.rst:119
+msgid "The first thing we need to do is to *login*::"
+msgstr ""
+
+#: ../../source/api/websocket.rst:124
+msgid ""
+"If you have :doc:`restricted access <./access>` then you may be required "
+"to put your ``username`` and ``pasword`` into the quotes, accordingly. "
+"Furthermore, you should verify, that the ``result`` give positive "
+"confirmation about your login."
+msgstr ""
+
+#: ../../source/api/websocket.rst:129
+msgid "2. Requesting Access to an API"
+msgstr ""
+
+#: ../../source/api/websocket.rst:131
+msgid ""
+"Most data can be queried from the :doc:`database`-API to which we "
+"*register* with the following call:::"
+msgstr ""
+
+#: ../../source/api/websocket.rst:137
+msgid "3. Obtain the API identifier"
+msgstr ""
+
+#: ../../source/api/websocket.rst:139
+msgid ""
+"After requesting access, the full node will either deny access or return "
+"an identifier to be used in future calls::"
+msgstr ""
+
+#: ../../source/api/websocket.rst:144
+msgid ""
+"The ``result`` will be our identifier for the database API, in the "
+"following called ``DATABASE_API_ID``!"
+msgstr ""
+
+#: ../../source/api/websocket.rst:148
+msgid "4. Call methods of a specific API by providing the identifier"
+msgstr ""
+
+#: ../../source/api/websocket.rst:150
+msgid "Now we can call any methods available to the ``database`` API via:::"
+msgstr ""
+
+#: ../../source/api/websocket.rst:155
+msgid "Database Notifications"
+msgstr ""
+
+#: ../../source/api/websocket.rst:157
+msgid ""
+"In Graphene, the websocket connection is used for notifications when "
+"objects in the database change or a particular event (such as filled "
+"orders) occur."
+msgstr ""
+
+#: ../../source/api/websocket.rst:160
+msgid "We have the following subscriptions available:"
+msgstr ""
+
+#: ../../source/api/websocket.rst:165
+msgid "``set_subscribe_callback( int identifier, bool clear_filter )``:"
+msgstr ""
+
+#: ../../source/api/websocket.rst:163
+msgid "To simplify development a global subscription callback can be registered."
+msgstr ""
+
+#: ../../source/api/websocket.rst:165
+msgid ""
+"Every notification initiated by the full node will carry a particular "
+"``id`` as defined by the user with the ``identifier`` parameter."
+msgstr ""
+
+#: ../../source/api/websocket.rst:167
+msgid "``set_pending_transaction_callback(int identifier)``:"
+msgstr ""
+
+#: ../../source/api/websocket.rst:168
+msgid "Notifications for incoming *unconfirmed* transactions."
+msgstr ""
+
+#: ../../source/api/websocket.rst:170
+msgid "``set_block_applied_callback(blockid)``:"
+msgstr ""
+
+#: ../../source/api/websocket.rst:170
+msgid ""
+"Gives a notification whenever the block ``blockid`` is applied to the "
+"blockchain."
+msgstr ""
+
+#: ../../source/api/websocket.rst:173
+msgid "``subscribe_to_market(int identifier, asset_id a, asset_id b))``:"
+msgstr ""
+
+#: ../../source/api/websocket.rst:173
+msgid ""
+"Subscribes to market changes in market ``a:b`` and sends notifications "
+"with id ``identifier``."
+msgstr ""
+
+#: ../../source/api/websocket.rst:178
+msgid "``get_full_accounts(array account_ids, bool subscribe)``:"
+msgstr ""
+
+#: ../../source/api/websocket.rst:176
+msgid ""
+"Returns the full account object for the accounts in array ``account_ids``"
+" and subscribes to changed to that account if ``subscribe`` is set to "
+"``True``."
+msgstr ""
+
+#: ../../source/api/websocket.rst:180
+msgid ""
+"Let's first get a global scubscription callback to disctinguish our "
+"notifications from regular RPC calls:::"
+msgstr ""
+
+#: ../../source/api/websocket.rst:185
+msgid "This call above will register ``SUBSCRIPTION_ID`` as id for notifications."
+msgstr ""
+
+#: ../../source/api/websocket.rst:187
+msgid ""
+"Now, whenever you get an object from the witness (e.g. via "
+"``get_objects``) you will automatically subscribe to any future changes "
+"of that object."
+msgstr ""
+
+#: ../../source/api/websocket.rst:190
+msgid ""
+"After calling ``set_subscribe_callback`` the witness will start to send "
+"notices every time the object changes:::"
+msgstr ""
+
+#: ../../source/api/websocket.rst:207
+msgid "Example Session"
+msgstr ""
+
+#: ../../source/api/websocket.rst:209
+msgid "Here is an example of a full session:::"
+msgstr ""
+

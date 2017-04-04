@@ -1,0 +1,2572 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Fabian Schuh
+# This file is distributed under the same license as the Graphene Technical
+# Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Graphene Technical Documentation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-03 11:56+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/tutorials/account-create.rst:3
+msgid "Account Registration"
+msgstr ""
+
+#: ../../source/tutorials/account-create.rst:5
+msgid ""
+"The process of registering a new account on the blockchain consists of "
+"two parts:"
+msgstr ""
+
+#: ../../source/tutorials/account-create.rst:8
+msgid "Picking a random brain key and deriving a *priate/public key* pair"
+msgstr ""
+
+#: ../../source/tutorials/account-create.rst:9
+msgid "Create the corresponding account and registering it on the blockchain"
+msgstr ""
+
+#: ../../source/tutorials/account-create.rst:12
+msgid "Brain, Private and Public Key Derivation"
+msgstr ""
+
+#: ../../source/tutorials/account-create.rst:14
+msgid ""
+"We can derive a new set auf keys using the ``suggest_brain_key`` command "
+"in the :doc:`/apps/cliwallet`. The result will look like this:"
+msgstr ""
+
+#: ../../source/tutorials/account-create.rst:26
+msgid "The hierarchy for these values goes like this:::"
+msgstr ""
+
+#: ../../source/tutorials/account-create.rst:31
+msgid ""
+"Hence, if you keep the brain key, you will be able to recover your "
+"required keys to access your account and/or funds."
+msgstr ""
+
+#: ../../source/tutorials/account-create.rst:34
+msgid ""
+"Even though ``suggest_brain_key`` shows only one private key that will be"
+" used for the **owner authority** most wallet implementations will derive"
+" an additional second private key to be used for the **active "
+"authority**!"
+msgstr ""
+
+#: ../../source/tutorials/account-create.rst:40
+msgid "Creating and Registering an account"
+msgstr ""
+
+#: ../../source/tutorials/account-create.rst:42
+msgid ""
+"If you want to create and register a new account on your own because you "
+"have the funds in another account and don't want someone else involved, "
+"you can make use of the command ``create_account_with_brain_key``:::"
+msgstr ""
+
+#: ../../source/tutorials/account-create.rst:48
+msgid "For our example, we would get:::"
+msgstr ""
+
+#: ../../source/tutorials/account-create.rst:53
+msgid "Registering an Account"
+msgstr ""
+
+#: ../../source/tutorials/account-create.rst:55
+msgid ""
+"If you want to register the account of someone else, all you need is the "
+"public key. In theory, the BitShares blockchain distinguishes three keys "
+"for each account, namely the **owner**, **active**, and the **memo** key."
+"  However, for the sake of simplicity, we here make use of only one "
+"public key (see example above)."
+msgstr ""
+
+#: ../../source/tutorials/account-create.rst:61
+msgid ""
+"In order to register an account, we need an other account that has enough"
+" funds to pay the fee for the registration transaction. This account will"
+" be called ``registrar_account``. Another account ``referrer_account`` "
+"can be registered that will get ``referrer_percentage`` of the referral "
+"bonus program. Any registered account can take the role of the referrer. "
+"Hence we here say that user ``anonymous`` has referred us. The syntax "
+"goes like this:::"
+msgstr ""
+
+#: ../../source/tutorials/account-create.rst:70
+msgid ""
+"For our example we say we register a new user called ``mywallet``, use "
+"the pubkey derived above and let our account ``myfunds`` pay the fee:::"
+msgstr ""
+
+#: ../../source/tutorials/account-create.rst:75
+msgid ""
+"Note that in order to register an account, the registrar (here: "
+"``myfunds``) needs to be a **lifetime member**!"
+msgstr ""
+
+#: ../../source/tutorials/cli-wallet-usage.rst:3
+msgid "How to Run and Use the Cli-Wallet"
+msgstr ""
+
+#: ../../source/tutorials/cli-wallet-usage.rst:5
+msgid ""
+"The Cli-Wallet is used to interact with the blockchain. Everything that "
+"adds new data to the blockchain requires a signature from a private key. "
+"These signed transactions can be produced by the cli-wallet."
+msgstr ""
+
+#: ../../source/tutorials/cli-wallet-usage.rst:10
+#: ../../source/tutorials/full-node-usage.rst:10
+msgid "Download and Install the Witness Node"
+msgstr ""
+
+#: ../../source/tutorials/cli-wallet-usage.rst:12
+msgid ""
+"We first need to download, (compile) and install the cli-wallet. All that"
+" is needed is described here:"
+msgstr ""
+
+#: ../../source/tutorials/cli-wallet-usage.rst:20
+#: ../../source/tutorials/full-node-usage.rst:20
+msgid ""
+"To reduce compilation time, you can tell the compile infrastructure to "
+"only compile the witness node by running."
+msgstr ""
+
+#: ../../source/tutorials/cli-wallet-usage.rst:27
+#: ../../source/tutorials/full-node-usage.rst:27
+msgid "instead of"
+msgstr ""
+
+#: ../../source/tutorials/cli-wallet-usage.rst:34
+msgid "Executing the cli-wallet"
+msgstr ""
+
+#: ../../source/tutorials/cli-wallet-usage.rst:36
+msgid ""
+"All it takes for the cli-wallet to run is a trusted **public API server**"
+" to interface with the blockchain. These public API servers are run by "
+"businesses and :doc:`individuals <full-node-usage>`. In this example, we "
+"use the public API node of OpenLedger and connect via secured websocket "
+"connection:"
+msgstr ""
+
+#: ../../source/tutorials/cli-wallet-usage.rst:50
+msgid ""
+"This will open the cli-wallet and unless you already have a local wallet,"
+" will ask you to provide a passphrase for your local wallet. Once a "
+"wallet has been created (default wallet file is ``wallet.json``), it will"
+" prompt with"
+msgstr ""
+
+#: ../../source/tutorials/cli-wallet-usage.rst:59
+msgid "The wallet can be unlocked by providing the passphrase:"
+msgstr ""
+
+#: ../../source/tutorials/cli-wallet-usage.rst:61
+msgid "The passphrase is given in clear text and is echoed by the wallet!"
+msgstr ""
+
+#: ../../source/tutorials/cli-wallet-usage.rst:70
+msgid ""
+"After this point, you can issue :doc:`any command available to the cli-"
+"wallet <../../api/wallet-api>` or construct your :doc:`own transaction "
+"manually <construct-transaction>`."
+msgstr ""
+
+#: ../../source/tutorials/cli-wallet-usage.rst:74
+msgid ""
+"You can get more detailed information either by pressing `Tab`, twice, or"
+" by issuing ``help``. Detailed explanations for most calls are available "
+"via"
+msgstr ""
+
+#: ../../source/tutorials/cli-wallet-usage.rst:82
+msgid ""
+"Many calls have a obligatory ``broadcast``-flag as last argument. If this"
+" flag is ``False``, the wallet will construct and sign, but **not** "
+"broadcast the transaction. This can be very useful for a cold storage "
+"setup or to verify transactions."
+msgstr ""
+
+#: ../../source/tutorials/cli-wallet-usage.rst:89
+msgid "Opening RPC port"
+msgstr ""
+
+#: ../../source/tutorials/cli-wallet-usage.rst:91
+msgid ""
+"The cli-wallet can open a RPC port so that you can interface your "
+"application with it. You have the choices of"
+msgstr ""
+
+#: ../../source/tutorials/cli-wallet-usage.rst:94
+msgid "websocket RPC via the ``-r`` parameter, and"
+msgstr ""
+
+#: ../../source/tutorials/cli-wallet-usage.rst:95
+msgid "HTTP RPC via the ``-H`` parameter:"
+msgstr ""
+
+#: ../../source/tutorials/committee-approve-proposal.rst:3
+msgid "How to Approve/Disapprove a Committee Proposal"
+msgstr ""
+
+#: ../../source/tutorials/committee-approve-proposal.rst:6
+#: ../../source/tutorials/committee-fee-change.rst:26
+msgid "Approve Proposal"
+msgstr ""
+
+#: ../../source/tutorials/committee-approve-proposal.rst:8
+#: ../../source/tutorials/committee-fee-change.rst:28
+msgid ""
+"Now we need to convince the other committee members to approve. We can do"
+" so on the blockchain by asking them for approval with ::"
+msgstr ""
+
+#: ../../source/tutorials/committee-approve-proposal.rst:13
+msgid ""
+"where ``<proposal-id>`` takes the form ``1.10.xxx`` and identifies the "
+"actual proposal to approve."
+msgstr ""
+
+#: ../../source/tutorials/committee-approve-proposal.rst:17
+msgid "Removeing Approval"
+msgstr ""
+
+#: ../../source/tutorials/committee-approve-proposal.rst:19
+msgid ""
+"A previous approval can also be removed if the proposal is not yet "
+"expired, executed or within the preview period. This is done by:::"
+msgstr ""
+
+#: ../../source/tutorials/committee-approve-proposal.rst:24
+msgid ""
+"Note that we now use ``active_approvals_to_remove`` instead of "
+"``active_approvals_to_add``."
+msgstr ""
+
+#: ../../source/tutorials/committee-fee-change.rst:3
+msgid "How Committee Proposes a Change in Fee"
+msgstr ""
+
+#: ../../source/tutorials/committee-fee-change.rst:6
+msgid "Create an Proposal"
+msgstr ""
+
+#: ../../source/tutorials/committee-fee-change.rst:8
+msgid ""
+"Let's assume we want to propose a new fee for the account creation "
+"operation. We want 5 BTS as basic fee and want premium names to cost 2000"
+" BTS. Additionally, a price per kbyte for the account creation "
+"transaction can be defined. We get"
+msgstr ""
+
+#: ../../source/tutorials/committee-fee-change.rst:21
+msgid "We propose the fee change for account ``<committee_member>`` with:::"
+msgstr ""
+
+#: ../../source/tutorials/committee-fee-change.rst:33
+msgid "where ``1.10.1`` is the id of the proposal in question."
+msgstr ""
+
+#: ../../source/tutorials/committee-member-create.rst:3
+msgid "Creating a New Committee Member"
+msgstr ""
+
+#: ../../source/tutorials/committee-member-create.rst:5
+msgid "We can create a new committee member with:::"
+msgstr ""
+
+#: ../../source/tutorials/committee-propose-action.rst:3
+msgid "Howto Propose Committee Actions"
+msgstr ""
+
+#: ../../source/tutorials/committee-propose-action.rst:6
+msgid "Setting Smartcoin Parameters"
+msgstr ""
+
+#: ../../source/tutorials/committee-propose-action.rst:8
+msgid ""
+"This paragraph shows how the committee account can act using the proposed"
+" transaction system. Specifically, as an example I'm using the creation "
+"of BitShares proposal 1.10.21, a proposal to update a committee-"
+"controlled BitAsset to reduce ``maximum_force_settlement_volume`` for "
+"asset ``CNY`` from 2000 (20%) to 200 (2%)."
+msgstr ""
+
+#: ../../source/tutorials/committee-propose-action.rst:14
+msgid "First check the asset to see what its current configuration is:"
+msgstr ""
+
+#: ../../source/tutorials/committee-propose-action.rst:24
+msgid "Then check its bitasset object to get the currently active options:"
+msgstr ""
+
+#: ../../source/tutorials/committee-propose-action.rst:43
+msgid ""
+"Then do ``update_bitasset`` to update the options. Note we copy-paste "
+"other fields from above; there is no way to selectively update only one "
+"field."
+msgstr ""
+
+#: ../../source/tutorials/committee-propose-action.rst:51
+msgid ""
+"If this was a privatized BitAsset (i.e. a user-issued asset with feed), "
+"you could simply set the ``broadcast`` parameter of the above command to "
+"``true`` and be done."
+msgstr ""
+
+#: ../../source/tutorials/committee-propose-action.rst:55
+msgid ""
+"However this is a committee-issued asset, so we have to use a proposed "
+"transaction to update it. To create the proposed transaction, we use the "
+"transaction builder API. Create a transaction builder transaction with "
+"``begin_builder_transaction`` command:"
+msgstr ""
+
+#: ../../source/tutorials/committee-propose-action.rst:64
+msgid ""
+"This returns a numeric handle used to refer to the transaction being "
+"built. In the following commands you need to replace ``$HANDLE`` with the"
+" number returned by ``begin_builder_transaction`` above."
+msgstr ""
+
+#: ../../source/tutorials/committee-propose-action.rst:78
+msgid ""
+"The ``propose_builder_transaction`` command is broken and deprecated. You"
+" need to recompile with `this patch "
+"<https://github.com/cryptonomex/graphene/commit/7a5c5c476d9762cbba1d745447191523ca5cd601>`__"
+" in order to use the new ``propose_builder_transaction2`` command which "
+"allows you to set the proposing account."
+msgstr ""
+
+#: ../../source/tutorials/committee-propose-action.rst:84
+msgid "Then set fees, sign and broadcast the transaction:"
+msgstr ""
+
+#: ../../source/tutorials/committee-propose-action.rst:91
+msgid "Notes:"
+msgstr ""
+
+#: ../../source/tutorials/committee-propose-action.rst:93
+msgid ""
+"``propose_builder_transaction2`` modifies builder transaction in place. "
+"It is not idempotent, running it once will get you a proposal to execute "
+"the transaction, running it twice will cause you to get a proposal to "
+"propose the transaction!"
+msgstr ""
+
+#: ../../source/tutorials/committee-propose-action.rst:97
+msgid ""
+"Remember to transfer enough to cover the fee to committee account and set"
+" review period to at least ``committee_proposal_review_period``"
+msgstr ""
+
+#: ../../source/tutorials/committee-propose-action.rst:99
+msgid "Much of this could be automated by a better wallet command."
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:5
+msgid "Confidential Transfers"
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:7
+msgid ""
+"This tutorial shows how to use the CLI wallet to perform confidential "
+"transfers in BitShares. A confidential transfer is one that hides both "
+"the amount being sent and the parties involved in the trade. Confidential"
+" transfers are also referred to as blinded transfers. When privacy is "
+"important no account should ever be used twice, and coupled with diligent"
+" measures to backup and protect the wallet and document the cryptograhic "
+"keys used it is impossible for any third party to identify how money is "
+"moving by using blockchain analysis alone."
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:15
+msgid ""
+"It is important to realize that the current implementation of Steath "
+"functionality requires careful attention to detail and entails a higher "
+"level of risk for loosing your account balance if the steps followed "
+"herein are followed casually and without regard to such potential loss. "
+"However, by following this guide you can rest assured your balance will "
+"be held in the blockchain but remain totally and completely hidden from "
+"everyone but you. With that staunch admonition out of the way let's get "
+"started."
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:23
+msgid ""
+"We will illustrate the CLI commands required to complete every step in "
+"this tutorial. You must be familiar with the witness_node and cli_wallet "
+"software to follow this guide. For further information on how to build "
+"and use that software consult the `readme file`_ on github or the "
+"BitShares wiki. I will be using simple passwords and account names to "
+"simplify the presentation. You should change these to more secure values "
+"to provide a higher level of security. Also note that the CLI wallet "
+"echos the command entered which is not reflected in the quoted session "
+"logs in the examples that follow."
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:35
+msgid "Step 1: Create a Blind Account"
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:37
+msgid ""
+"Blind Accounts are not registered on the blockchain like the named "
+"accounts of BitShares. Instead a blind account is nothing more than a "
+"labeled public key. The label assigned to the key is only known to your "
+"*wallet*. Thus it is crucial that you create a new wallet for the blind "
+"account and back it up after completing the balance transfer."
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:43
+msgid ""
+"The first step in creating a blind account is to create a new wallet and "
+"set a good quality password for it that would be difficult to crack. "
+"Then, using this wallet we'll create a labeled account and protect it "
+"with a \"brainkey\". The \"brainkey\" is effectively the private key used"
+" by your account. All BitShares cryptography is based on public / private"
+" key pairs, one public which can be shared the other private known only "
+"to you."
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:50
+msgid ""
+"For confidential accounts the \"brainkey\" is only stored in the wallet, "
+"so if the wallet file is lost or destroyed and you have not recorded the "
+"\"brainkey\" on paper or some other place there will be no way to recover"
+" your confidential account balance. Even if you do record your "
+"\"brainkey\" elsewhere outside of the wallet, I do not believe any "
+"recovery methods yet exist to import your \"public key / brainkey\" pair "
+"into a wallet so you could access your confidential balance. At least it "
+"would be possible to do so at some future date, unlike the impossibility "
+"it would be if you lost the wallet and failed to record the \"brainkey\"."
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:67
+msgid ""
+"The result of the create_blind_account command is to print out the Public"
+" Key associated with the blind account named alice and the command "
+"success or failure (true). Note that the CLI interface will update the "
+"wallet file you specified on the command line following the -w when you "
+"started the cli_wallet. The CLI wallet has no command to quit or exit the"
+" interface so we terminate the session with a control-C (shown as ^C), "
+"which returns us to the operating system shell."
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:75
+msgid ""
+"Step 2: Transferring a Balance From a Standard Public Account to a Blind "
+"Account"
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:77
+msgid ""
+"Now that we've created a new, unregistered blind account named alice we "
+"can transfer assets into it from any source, public or not. We'll "
+"describe the steps to transfer a balance from one blind account to "
+"another momentarily, which is essential to fully obscure a balance from "
+"public view, but for now we'll illustrate a transfer from a publicly "
+"registered account to our newly created blind account."
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:84
+msgid ""
+"To begin, we need a wallet that has an account with assets. It can be any"
+" account with assets, so we'll use Peter's Public account and transfer "
+"funds from that into the alice account. We will also need to have the "
+"public key handy that was printed for the alice account when it was "
+"created. Since the alice account is not registered we need a way to refer"
+" to it before we can do the transfer. So in this CLI session we'll also "
+"show you how to create a label to do that and then we'll use that label "
+"to transfer assets into the alice blind account."
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:110
+msgid ""
+"The above 2 steps transmit BTS assets from a public, registered account "
+"named \"peters-public-registered-account\" into a single unregistered "
+"blind account named alice using a label to refer to it named \"Alice-is-"
+"Blind\".  It is important to note that these labels are NOT persistent "
+"from one CLI session to the next, so every time you transfer assets from "
+"a source account such as \"peters-public-registered-account\" used here "
+"to a blind account you will need to set a label to refer to the blind "
+"account."
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:119
+msgid "Adding a Contact"
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:121
+msgid ""
+"There is currently no facility to transfer assets to a blind account from"
+" the light wallet or the OpenLedger web wallet. They only support the WIF"
+" (Wallet Import Format) and thus will not accept your blind account's "
+"\"brainkey\" as a valid private key. In the future you may be able to "
+"avoid setting labels each time you transfer from a public to a blind "
+"account by defining a contact. However, keep in mind that every "
+"association you establish in the path between a public account and a "
+"confidential account may make it that much easier to trace your steps, so"
+" think twice about the tradeoffs you make for the sake of convenience. "
+"They just might circumvent the measures you are taking to hide your "
+"balance. This is also true if you transfer assets directly between a "
+"public account to a confidential account and leave them in the "
+"confidential account. To totally obscure where your balance is held you "
+"need to transfer to at least 2 different confidential accounts. We will "
+"cover this in a bit more detail later. In the next step we'll look at how"
+" to receive the transmitted assets into alice's blind account."
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:138
+msgid "Step 3: Receiving an Asset Balance Transmitted From Another Account"
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:140
+msgid ""
+"Transferring assets from one account to a confidential account involves "
+"at least 2 steps, the first to transmit the assets and the second to "
+"receive them into the confidential account. We covered the process "
+"required to transmit assets in Step 2, now lets see what it takes to "
+"complete the transfer and verify we have the correct balance:"
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:151
+msgid ""
+"Using the balance receipt value returned from the transfer_to_blind "
+"command in Step 2 we can receive (i.e. import) the balance into alice's "
+"bliind account. Note that the source of the balance must be labeled which"
+" is the parameter that follows the long balance receipt key. It is meant "
+"to represent to source account from which the assets are being "
+"transferred, however it need not be. The last of the 3 parameters is a "
+"memo text field which is an arbitrary text value. Note that all 3 "
+"parameters are required. In the next section we will describe how to list"
+" the confidential accounts and their balances so that we can verify our "
+"transfer is correct and complete."
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:162
+msgid "Listing Blind Accounts and Their Balances"
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:164
+msgid ""
+"For any wallet in which you have created confidential accounts you can "
+"list the accounts present using the \"get_my_blind_accounts\" CLI "
+"command, and use the accounts returned from that to obtain their "
+"balances:"
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:179
+msgid "To review, you have learned how to:"
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:181
+msgid "create a new CLI wallet and add a blind account to it"
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:182
+msgid "create a label to refer to a blind account"
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:183
+msgid "send assets from a public account to a blind account"
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:184
+msgid "receive or import assets sent from another account into a blind account"
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:185
+msgid "list the blind accounts contained in a cli wallet"
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:186
+msgid "list the asset balances of blind accounts"
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:188
+msgid ""
+"These are the basic steps for a simple unidirectional transfer of a "
+"single asset from a public account to a single blind account. Next we "
+"will examine how to cover our trail to obscure our balance by using a "
+"second blind account and finally we will see how to transfer from a blind"
+" account back into a public account to wrap up our look into protecting "
+"your assets with confidential accounts using the CLI wallet."
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:195
+msgid ""
+"The first part was a basic demonstration of how to use the BitShares CLI "
+"wallet to transfer an asset from a registered, public account to a "
+"confidential (i.e. blind) account. It explained the steps involved and "
+"the current limitations of using confidential features. Here in part 2 we"
+" will show how to transfer assets from one confidential account to "
+"another, and conclude our look at confidential by describing how to "
+"transfer assets from a confidential account back into a registered public"
+" account."
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:203
+msgid ""
+"The first part mentioned that to truly hide an account balance and "
+"eliminate any public tractability of how the assets arrived there, at "
+"least 2 confidential accounts should be used in the path from public "
+"source to final confidential destination. This is due to the fact that "
+"the destination address of transfers from a public account are visible. "
+"There may be no way for the public to query the holdings of confidential "
+"accounts but it would not be wise to leave assets in such an obvious "
+"hiding place either."
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:211
+msgid ""
+"However, if those assets are moved to yet another confidential account "
+"there is no way their whereabouts can be traced through blockchain "
+"analysis alone. Because transfers between confidential addresses cannot "
+"be traced, even the inference that assets remain in the first "
+"confidential address (the destination out of the public registered "
+"account) is highly questionable. Additional layers of confidential to "
+"confidential transfers would provide even greater security that assets "
+"cannot be found for those with a higher sense of paranoia. It should go "
+"without saying that disbursing assets to multiple confidential accounts "
+"is an important security strategy for large balances. Lastly, be aware "
+"that the assets held in confidential accounts are not counted for "
+"purposes of voting. Thus you should consider how the use of confidential "
+"accounts will affect your participation and influence in the policies and"
+" proposals of the BitShares ecosystem."
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:227
+msgid "Step 4: Transferring Assets Between Confidential Accounts"
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:229
+msgid ""
+"Let's start by creating a second wallet and confidential account we will "
+"use as our hypothetical final destination. We'll call this account bobby."
+" We've already shown how to do this in part 1, but you may wish to review"
+" those basic steps before you continue."
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:241
+msgid ""
+"We need to restart the CLI wallet with the alice account, where we have a"
+" 100 BTS balance. We will create a label to refer to Bob's confidential "
+"account (bobby) and transfer some BTS assets from alice to bobby. Note "
+"that the process is the same as before, and we need to set a label for "
+"the bobby (destination) account to do the transfer."
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:261
+msgid ""
+"There is a bit more output printed than what is shown above, but the "
+"important results are provided. From this you can see we first set a "
+"label to refer to the newly created \"bobby\" account, and the "
+"blind_transfer command fee was 15 BTS, which sent 80 BTS of the balance "
+"(100 BTS was transferred to the alice account in Part 1) to the bobby "
+"confidential account and provided 2 balance receipts: the first for 5 BTS"
+" coming back to the alice account as returned change (leftover funds), "
+"and the second which is the receipt for the 80 BTS being sent to the "
+"bobby account, which we will need in order to receive the transfer in the"
+" bobby account contained in the blindBobWallet file."
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:271
+msgid ""
+"As you can see using confidential in the CLI wallet is a rather tedious "
+"\"manual\" process. Do note however that you do not need to do a "
+"\"receive_blind_transfer\" to import the 5 BTS change back into the alice"
+" account, at least that is taken care of. Also important to note is as "
+"far as the outside world can see alice sent some amount less than 100 BTS"
+" to two new outputs, one of which is the change returned, which makes it "
+"yet that much more difficult to track what is going on, especially since "
+"the amounts of each output are invisible."
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:281
+msgid ""
+"Step 5: Transferring Assets From a Confidential Account Back to a Public "
+"Account"
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:283
+msgid ""
+"In this final step of our round-trip process we will transfer some of the"
+" BTS from the bobby confidential account back to original public account "
+"named peter we started out with. There is nothing new required to "
+"accomplish for this step, but a couple of points are worth mentioning. "
+"First, keep in mind that the source address for transfers coming into a "
+"public account may be visible, so consider using one or more intermediary"
+" confidential accounts to add layers of insulation between the public "
+"account and the resting place for your confidential assets. Second, "
+"although you are sending to a registered, public account which one might "
+"think needs no label to access, that isn't the case."
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:293
+msgid ""
+"A label must be assigned to the public destination address to return "
+"assets from a blind (confidential) account. The public key value for the "
+"account is readily available using the account's permission page "
+"explorer. Use the account/key shown under the Active Permissions heading."
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:319
+msgid ""
+"The explanation for this CLI session is essentially the same as it was "
+"for step 4. Although the account information is different the commands "
+"used and their role in the transfer process are the same."
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:323
+msgid ""
+"One last example demonstrates how to split a balance between multiple "
+"confidential accounts. This is very useful because it not only saves on "
+"transfer fees it also obscures what amounts end up where. The point of "
+"showing this is primarily to illustrate the syntax of the command."
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:353
+msgid ""
+"In this case the only thing the public sees is that account 'peter' sent "
+"4800 BTS to four different places. Note that although 800 and 2000 BTS "
+"were sent to the alice confidential account they do not show up that way "
+"on the blockchain."
+msgstr ""
+
+#: ../../source/tutorials/confidential-transactions.rst:357
+msgid ""
+"**Conclusion**: The outside world has no idea *how much* is in each "
+"output, only that they all add up to 4800 BTS."
+msgstr ""
+
+#: ../../source/tutorials/construct-transaction.rst:3
+msgid "Manually Construct Any Transaction"
+msgstr ""
+
+#: ../../source/tutorials/construct-transaction.rst:6
+msgid "General Procedure"
+msgstr ""
+
+#: ../../source/tutorials/construct-transaction.rst:8
+msgid ""
+"The general principle for generating, singing and broadcasting an "
+"arbitrary transactions works as follows:"
+msgstr ""
+
+#: ../../source/tutorials/construct-transaction.rst:11
+msgid "Create an instance of the transaction builder"
+msgstr ""
+
+#: ../../source/tutorials/construct-transaction.rst:12
+msgid "Add arbitrary operation types"
+msgstr ""
+
+#: ../../source/tutorials/construct-transaction.rst:13
+msgid "Add the required amount of fees"
+msgstr ""
+
+#: ../../source/tutorials/construct-transaction.rst:14
+msgid "Sign and broadcast your transaction"
+msgstr ""
+
+#: ../../source/tutorials/construct-transaction.rst:16
+msgid ""
+"The corresponding API calls in the "
+":doc:`../../integration/apps/cliwallet` are:"
+msgstr ""
+
+#: ../../source/tutorials/construct-transaction.rst:25
+msgid ""
+"The `begin_builder_transaction` call returns a number we call ``$HANDLE``"
+" It allows to construct several transactions in parallel and identify "
+"them individually!"
+msgstr ""
+
+#: ../../source/tutorials/construct-transaction.rst:29
+msgid "The `opId` and the JSON structure of the `operation` can be obtained with:"
+msgstr ""
+
+#: ../../source/tutorials/construct-transaction.rst:35
+msgid "The operation types available are:"
+msgstr ""
+
+#: ../../source/tutorials/construct-transaction.rst:40
+msgid ""
+"In practise, each operation has to pay a fee, and hence, each operation "
+"has to carry a ``fee`` member. When crafting a transaction, you now have "
+"the choice between either defining each fee for your operations "
+"individually, or you use ``set_fees_on_builder_transaction`` that sets "
+"the fee for each operation automatically to the chosen asset."
+msgstr ""
+
+#: ../../source/tutorials/construct-transaction.rst:47
+msgid "Example: Transfer"
+msgstr ""
+
+#: ../../source/tutorials/construct-transaction.rst:49
+msgid "A simple *transfer* takes the following form:"
+msgstr ""
+
+#: ../../source/tutorials/construct-transaction.rst:70
+msgid ""
+"The operation id for the ``transfer_operation`` is thus ``0`` (third "
+"line) and the core elements (removing fee) of this operation take the "
+"form:"
+msgstr ""
+
+#: ../../source/tutorials/construct-transaction.rst:84
+#: ../../source/tutorials/propose-transaction.rst:115
+msgid ""
+"We add an operation to a transaction as follows (line breaks inserted for"
+" readability):"
+msgstr ""
+
+#: ../../source/tutorials/construct-transaction.rst:102
+msgid ""
+"The corresponding ``id`` can be obtained with ``get_account``, and "
+"``get_asset``."
+msgstr ""
+
+#: ../../source/tutorials/construct-transaction.rst:105
+#: ../../source/tutorials/propose-transaction.rst:147
+msgid "We add a fee payed in BTS, sign and broadcast the transaction (if valid):"
+msgstr ""
+
+#: ../../source/tutorials/dex-trading.rst:3
+msgid "Howto trade in the DEX"
+msgstr ""
+
+#: ../../source/tutorials/dex-trading.rst:5
+msgid ""
+"The decentralized exchange (DEX) of BitShares has a similar look&feel as "
+"traditional centralized exchanges. However, trading in the DEX can have "
+"many different appearances, depending on what user-interface is used. We "
+"here describe the user interface of the official wallet. We recommend to "
+"also read through:"
+msgstr ""
+
+#: ../../source/tutorials/dex-trading.rst:11
+msgid ":doc:`../user/dex`"
+msgstr ""
+
+#: ../../source/tutorials/dex-trading.rst:12
+msgid ":doc:`../user/dex-trading`"
+msgstr ""
+
+#: ../../source/tutorials/dex-trading.rst:15
+msgid "Playing Orders"
+msgstr ""
+
+#: ../../source/tutorials/dex-trading.rst:17
+msgid "Orders can be placed in the same way as everywhere else, by providing"
+msgstr ""
+
+#: ../../source/tutorials/dex-trading.rst:19
+msgid "the amount to buy/sell"
+msgstr ""
+
+#: ../../source/tutorials/dex-trading.rst:20
+msgid "the price at which to buy/sell"
+msgstr ""
+
+#: ../../source/tutorials/dex-trading.rst:28
+msgid "Fees"
+msgstr ""
+
+#: ../../source/tutorials/dex-trading.rst:30
+msgid ""
+"In contrast to other exchanges, BitShares asks for a tiny **flat fee** "
+"for placing an order. This fee can be payed in USD, BTC, or GOLD and is "
+"independent of the actual assets that are traded."
+msgstr ""
+
+#: ../../source/tutorials/dex-trading.rst:34
+#, python-format
+msgid ""
+"If you cancel an order that has not been fully or partially filled, 90% "
+"of the fee will be payed back to your account. However, this chargeback "
+"will be in ``BTS`` and not in the asset you have originally paid the fee "
+"in."
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:3
+msgid "Distributed Access to the BitShares Decentralised Exchange"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:5
+msgid ""
+"I hope to encourage and promote more access points and backup WebSocket "
+"(wss) gateways for BitShares. This is the logical progression from `Run "
+"your own decentralised exchange <https://steemit.com/bitshares/@ihashfury"
+"/run-your-own-decentralised-exchange>`__ post. |BitShares| ###Distributed"
+" Access to the BitShares Network"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:12
+msgid "BitShares node setup"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:14
+msgid ""
+"`Run your own decentralised exchange "
+"<https://steemit.com/bitshares/@ihashfury/run-your-own-decentralised-"
+"exchange>`__"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:16
+msgid ""
+"Once you have a full node setup, you can allow BitShares shareholders "
+"secure access to your server to trade and check their accounts by "
+"following these steps. >A DNS Alias (CNAME) is required to point to your "
+"server ip address. >See `dyn.com <http://dyn.com>`__ for DNS Alias setup."
+" >You may have to wait a few days for the DNS to work through the "
+"internet. >Please change `altcap.io <http://altcap.io>`__ to your DNS "
+"alias in the examples below."
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:24
+msgid "**Table of Contents**"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:26
+msgid "[TOC]"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:29
+msgid "Create a New User"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:31
+msgid ""
+"I recommend creating a new user on your server to run the Bitshares gui "
+"and give the user sudo access. >You can use any name - I have used "
+"bitshares in this example"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:42
+msgid "Install Nginx"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:44
+msgid "Install Nginx web server"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:58
+msgid ""
+"This will start Nginx default web server. Check it by typing the ip "
+"address of your server in a web browser or your alias `altcap.io "
+"<http://altcap.io>`__"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:63
+#: ../../source/tutorials/distributed-access-hosting.rst:79
+msgid "Configure Nginx"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:65
+msgid ""
+"To configure the web server, edit the default site and save as new DNS "
+"alias name using http port 80 only until you setup `letsencrypt.org "
+"<https://letsencrypt.org/>`__ SSL Certificate."
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:70
+msgid "Create your web folder"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:86
+msgid "Point to your new virtual host"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:111
+msgid "Update Virtual Host File"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:118
+msgid "Activate sim link and disable default web server"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:126
+msgid "Link local folder to www root and add a simple index.html"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:133
+msgid "Add some text to index.html"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:152
+msgid ""
+"Now you have setup a simple web server. DigitalOcean has a great `article"
+" <https://www.digitalocean.com/community/articles/how-to-set-up-nginx-"
+"virtual-hosts-server-blocks-on-ubuntu-12-04-lts--3>`__ for more "
+"information on Virtual Host setup."
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:157
+msgid "Install letsencrypt"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:164
+msgid "Obtain your SSL certificate"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:170
+msgid "Follow the instructions and add an email address"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:173
+msgid "Check your certificate"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:183
+msgid "Setup a renew cronjob for your new SSL certificate"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:189
+msgid "Add this line to run the job every 6 hours on the 16th minute"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:203
+msgid "Generate Strong Diffie-Hellman Group cert"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:210
+msgid "Add SSL to Nginx settings"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:212
+msgid "Make a copy of altcap.io just in case."
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:219
+msgid "Edit altcap.io"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:308
+msgid ""
+"You have now setup an SSL secured web server with a WebSocket connected "
+"to your local BitShares witness\\_node (listening on port 8090 - see "
+"`this post <https://steemit.com/bitshares/@ihashfury/run-your-own-"
+"decentralised-exchange>`__ for more information) ###Update altcap.io www "
+"virtual host"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:319
+msgid "Restart Nginx"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:325
+msgid ""
+"Now you have setup an SSL web server. More information on SSL setup can "
+"be found here. `DigitalOcean letsencrypt SSL "
+"<https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-"
+"with-let-s-encrypt-on-ubuntu-14-04>`__ `LetsEncrypt "
+"<https://letsencrypt.org/>`__ `CertBot <https://certbot.eff.org/>`__"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:332
+msgid "Install BitShares web gui"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:335
+msgid "Install NVM (Node Version Manager)"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:341
+msgid "exit bash (terminal) and reconnect"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:350
+msgid "Download BitShares gui"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:357
+msgid "Setup light wallet"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:363
+msgid ""
+"Before building the light wallet, you need to edit **SettingsStore.js** "
+"line 19 and 99 wss WebSocket."
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:370
+msgid "Change line 19"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:376
+msgid "Add your new wss WebSocket to line 99"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:396
+msgid "Link web root to gui build folder"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:403
+msgid "Build light wallet"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:409
+msgid ""
+"You have now created another Access point to the BitShares Decentralised "
+"Exchange. **The more the merrier.** Please remember to check your "
+"firewall and SSH is up-to-date and configured correctly. DigitalOcean has"
+" `firewall "
+"<https://www.digitalocean.com/community/tags/firewall?type=tutorials>`__ "
+"and `Secure SSH <https://www.digitalocean.com/community/tutorials/how-to-"
+"set-up-ssh-keys--2>`__ tutorials for more help."
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:419
+msgid "SSL test"
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:421
+msgid ""
+"You can also check how secure your new web server is compared to your "
+"bank. Add this link to a web browser and wait for the results."
+msgstr ""
+
+#: ../../source/tutorials/distributed-access-hosting.rst:428
+msgid ""
+"Now change altcap.io to your local bank's domain name in the link and "
+"post the results below. >\\ **Thank you `svk "
+"<https://steemit.com/@svk>`__ for your advice and guidance.**"
+msgstr ""
+
+#: ../../source/tutorials/full-node-usage.rst:3
+msgid "How to Run and Use a Full Node"
+msgstr ""
+
+#: ../../source/tutorials/full-node-usage.rst:5
+msgid ""
+"In order to improve decentralization of service, every user can run his "
+"own full node (often referred to *non-block-producing* witness node) and "
+"we here show how to do so."
+msgstr ""
+
+#: ../../source/tutorials/full-node-usage.rst:12
+msgid ""
+"We first need to download, (compile) and install the witness node. All "
+"that is needed is described here:"
+msgstr ""
+
+#: ../../source/tutorials/full-node-usage.rst:34
+msgid "Running the Full Node"
+msgstr ""
+
+#: ../../source/tutorials/full-node-usage.rst:36
+msgid ""
+"In order to run a full node that we can connect to, we need to open the "
+"RPC interface, this can be done by:"
+msgstr ""
+
+#: ../../source/tutorials/full-node-usage.rst:43
+msgid ""
+"This will open port `8090` and make it available over the internet "
+"(unless you run behind a router/firewall). If you want it to be open for "
+"your machine only, replace `0.0.0.0` by `localhost`."
+msgstr ""
+
+#: ../../source/tutorials/full-node-usage.rst:48
+msgid ""
+"Note, that the full node needs to synchronize the blockchain with the "
+"network first, which may take a few minutes."
+msgstr ""
+
+#: ../../source/tutorials/full-node-usage.rst:52
+msgid "Connecting to your own Full Node"
+msgstr ""
+
+#: ../../source/tutorials/full-node-usage.rst:54
+msgid ""
+"In your wallet (may it be the light wallet or a hosted wallet) you can "
+"can define the full node to which is should connect to in the "
+"preferences:"
+msgstr ""
+
+#: ../../source/tutorials/full-node-usage.rst:63
+msgid "For your own full nodes, type:"
+msgstr ""
+
+#: ../../source/tutorials/full-node-usage.rst:69
+msgid "and confirm."
+msgstr ""
+
+#: ../../source/tutorials/full-node-usage.rst:71
+msgid ""
+"Congratulation, you are now connected to the network via your own full "
+"node."
+msgstr ""
+
+#: ../../source/tutorials/index.rst:3
+msgid "Tutorials"
+msgstr ""
+
+#: ../../source/tutorials/index.rst:6
+msgid "General Tutorials"
+msgstr ""
+
+#: ../../source/tutorials/index.rst:22
+msgid "API Usage"
+msgstr ""
+
+#: ../../source/tutorials/index.rst:32
+msgid "Assets"
+msgstr ""
+
+#: ../../source/tutorials/index.rst:44
+msgid "Prediction Markets"
+msgstr ""
+
+#: ../../source/tutorials/index.rst:53
+msgid "Committee Tutorials"
+msgstr ""
+
+#: ../../source/tutorials/index.rst:64
+msgid "Worker Tutorials"
+msgstr ""
+
+#: ../../source/tutorials/index.rst:73
+msgid "Witness Tutorials"
+msgstr ""
+
+#: ../../source/tutorials/index.rst:83
+msgid "Developers"
+msgstr ""
+
+#: ../../source/tutorials/mpa-create-manual.rst:3
+msgid "Creating a MPA manually"
+msgstr ""
+
+#: ../../source/tutorials/mpa-create-manual.rst:5
+msgid ""
+"We can create a MPA manually by means of the "
+":doc:`../../integration/apps/cliwallet` command:"
+msgstr ""
+
+#: ../../source/tutorials/mpa-create-manual.rst:10
+msgid ""
+"A `false` at the end allows to check and verify the constructed "
+"transaction and does **not** broadcast it. The main difference between "
+"create a UIA and a MPA is ``<mpaoptions>``!"
+msgstr ""
+
+#: ../../source/tutorials/mpa-create-manual.rst:15
+msgid ""
+"All options (except for ``mpaoptions`` are similar to creating a UIA as "
+"described in a separate tutorial (:doc:`uia-create-manual`)."
+msgstr ""
+
+#: ../../source/tutorials/mpa-create-manual.rst:19
+msgid "MPA-specific settings"
+msgstr ""
+
+#: ../../source/tutorials/mpa-create-manual.rst:21
+msgid "In order to create a MPA, we need to define some MPA-specific parameters:"
+msgstr ""
+
+#: ../../source/tutorials/mpa-create-manual.rst:35
+msgid "See a detailed explanation of the parameters in :doc:`../user/assets-faq`."
+msgstr ""
+
+#: ../../source/tutorials/mpa-create-manual.rst:39
+#: ../../source/tutorials/pm-create-manual.rst:99
+#: ../../source/tutorials/uia-create-manual.rst:91
+#: ../../source/tutorials/uia-update-manual.rst:21
+msgid "Python Example"
+msgstr ""
+
+#: ../../source/tutorials/pm-close-manual.rst:3
+msgid "Closing/Settling a Prediction Market"
+msgstr ""
+
+#: ../../source/tutorials/pm-close-manual.rst:5
+msgid ""
+"All the issuer needs to do is publish a valid price feed for the asset. "
+"The `global_settle` option will be set automatically and borrow positions"
+" can settle at the price feed."
+msgstr ""
+
+#: ../../source/tutorials/pm-close-manual.rst:10
+#: ../../source/tutorials/publish-feed.rst:41
+msgid "Python Script"
+msgstr ""
+
+#: ../../source/tutorials/pm-create-manual.rst:3
+msgid "Creating a Prediction Market"
+msgstr ""
+
+#: ../../source/tutorials/pm-create-manual.rst:6
+msgid "Settings"
+msgstr ""
+
+#: ../../source/tutorials/pm-create-manual.rst:8
+msgid ""
+"In order to create a PM, we will need to set a particular parameter when "
+"creating the asset. This parameter can not be changed after creation of "
+"the asset."
+msgstr ""
+
+#: ../../source/tutorials/pm-create-manual.rst:12
+msgid "Further, A PM-asset should have the following **flags** (not permissions):"
+msgstr ""
+
+#: ../../source/tutorials/pm-create-manual.rst:24
+msgid "and these MPA-options:"
+msgstr ""
+
+#: ../../source/tutorials/pm-create-manual.rst:37
+msgid ""
+"Unfortunatelly, ``create_asset`` cannot create prediction markets. Thus, "
+"we need to construct our ``asser_create_operation`` manually (see below)"
+msgstr ""
+
+#: ../../source/tutorials/pm-create-manual.rst:41
+msgid ""
+"The precision of the prediction market asset has to be identical with the"
+" short backing asset's precision"
+msgstr ""
+
+#: ../../source/tutorials/pm-create-manual.rst:45
+msgid "Settlement Authorities"
+msgstr ""
+
+#: ../../source/tutorials/pm-create-manual.rst:47
+msgid ""
+"The issue can choose between three parties that are allowed to settle the"
+" prediction market:"
+msgstr ""
+
+#: ../../source/tutorials/pm-create-manual.rst:50
+#: ../../source/tutorials/pm-create-manual.rst:55
+msgid "Committee"
+msgstr ""
+
+#: ../../source/tutorials/pm-create-manual.rst:51
+#: ../../source/tutorials/pm-create-manual.rst:66
+msgid "Witnesses"
+msgstr ""
+
+#: ../../source/tutorials/pm-create-manual.rst:52
+msgid "Other accounts"
+msgstr ""
+
+#: ../../source/tutorials/pm-create-manual.rst:57
+msgid ""
+"If only the committee is supposed to be able to settle the market, you "
+"need to set the options to:::"
+msgstr ""
+
+#: ../../source/tutorials/pm-create-manual.rst:68
+msgid ""
+"If only the witnesses are supposed to be able to settle the market, you "
+"need to set the options to:::"
+msgstr ""
+
+#: ../../source/tutorials/pm-create-manual.rst:76
+msgid ""
+"The idea here is that the median of all price feeds published by the "
+"witnesses indicates a positive or negative resolution of the prediction "
+"market."
+msgstr ""
+
+#: ../../source/tutorials/pm-create-manual.rst:81
+msgid "Other Accounts"
+msgstr ""
+
+#: ../../source/tutorials/pm-create-manual.rst:83
+msgid ""
+"Similar to :doc:`../user/privbta`, the feed can be also published by a "
+"arbitrary set of accounts. It is important to understand that in order to"
+" settle a prediction market, only **one price feed** is requried. Hence, "
+"anyone in the list of allowed settlers can settle the market and no "
+"consensus needs to be reached. Alternatively, if you want to settle a "
+"market only if several accounts can reach a consensus, a new resulution "
+"account can be created that uses :doc:`hierarchical multi-signature "
+"<../user/account-permissions>` similar to the `committee-account`."
+msgstr ""
+
+#: ../../source/tutorials/pm-create-manual.rst:92
+msgid "The list of settlement price producers can be defined with:"
+msgstr ""
+
+#: ../../source/tutorials/propose-transaction.rst:3
+#: ../../source/tutorials/propose-transaction.rst:16
+msgid "Proposing a Transaction"
+msgstr ""
+
+#: ../../source/tutorials/propose-transaction.rst:5
+msgid ""
+"Proposed transactions can be used everywhere multiple parties have to "
+"agree for a transaction to become valid."
+msgstr ""
+
+#: ../../source/tutorials/propose-transaction.rst:9
+msgid "Crafting a Transaction"
+msgstr ""
+
+#: ../../source/tutorials/propose-transaction.rst:11
+msgid ""
+"If is recommended that the reader first reads through the following "
+"tutorial:"
+msgstr ""
+
+#: ../../source/tutorials/propose-transaction.rst:13
+msgid ":doc:`construct-transaction`"
+msgstr ""
+
+#: ../../source/tutorials/propose-transaction.rst:18
+msgid ""
+"A proposed transaction is encapsulated within another operation type. We "
+"can achieve this by slightly modifying our procedure:"
+msgstr ""
+
+#: ../../source/tutorials/propose-transaction.rst:33
+#: ../../source/tutorials/propose-transaction.rst:60
+msgid "Definition"
+msgstr ""
+
+#: ../../source/tutorials/propose-transaction.rst:39
+msgid "Approving a Proposal"
+msgstr ""
+
+#: ../../source/tutorials/propose-transaction.rst:41
+msgid "A proposal can be approved simply by:"
+msgstr ""
+
+#: ../../source/tutorials/propose-transaction.rst:47
+msgid ""
+"When replacing the final ``false`` with true, the transaction will be "
+"broadcasted!"
+msgstr ""
+
+#: ../../source/tutorials/propose-transaction.rst:50
+msgid "Available approval options are:"
+msgstr ""
+
+#: ../../source/tutorials/propose-transaction.rst:52
+msgid "``active_approvals_to_add``"
+msgstr ""
+
+#: ../../source/tutorials/propose-transaction.rst:53
+msgid "``active_approvals_to_remove``"
+msgstr ""
+
+#: ../../source/tutorials/propose-transaction.rst:54
+msgid "``owner_approvals_to_add``"
+msgstr ""
+
+#: ../../source/tutorials/propose-transaction.rst:55
+msgid "``owner_approvals_to_remove``"
+msgstr ""
+
+#: ../../source/tutorials/propose-transaction.rst:56
+msgid "``key_approvals_to_add``"
+msgstr ""
+
+#: ../../source/tutorials/propose-transaction.rst:57
+msgid "``key_approvals_to_remove``"
+msgstr ""
+
+#: ../../source/tutorials/propose-transaction.rst:65
+msgid "Example: Setting Smartcoin parameter"
+msgstr ""
+
+#: ../../source/tutorials/propose-transaction.rst:67
+msgid "A simple *asset_update* takes the following form:"
+msgstr ""
+
+#: ../../source/tutorials/propose-transaction.rst:93
+msgid ""
+"The operation id for the ``asset_update_bitasset_operation`` is thus "
+"``12`` (third line) and the core elements (removing fee) of this "
+"operation take the form:"
+msgstr ""
+
+#: ../../source/tutorials/propose-transaction.rst:139
+msgid "The corresponding asset ``id`` can be obtained with ``get_asset``."
+msgstr ""
+
+#: ../../source/tutorials/propose-transaction.rst:141
+msgid "Now let's make it a proposal for the committee members to sign:"
+msgstr ""
+
+#: ../../source/tutorials/publish-feed.rst:3
+msgid "Publishing a Feed"
+msgstr ""
+
+#: ../../source/tutorials/publish-feed.rst:5
+msgid "A price feed operation takes the following form:"
+msgstr ""
+
+#: ../../source/tutorials/publish-feed.rst:34
+msgid ""
+"It contains the `publisher` name, the `asset_id` for which the feed has "
+"been generated the `feed` as a structure of `base` and `quote` ratio, the"
+" maintenance collateral ratio (`1750 = 175%`), the short squeeze ratio "
+"(`1200 = 120%`) and the core exchange rate for implicit exchange of the "
+"fee."
+msgstr ""
+
+#: ../../source/tutorials/transfer-funds-cli.rst:3
+msgid "Transfering Funds using the cli-wallet"
+msgstr ""
+
+#: ../../source/tutorials/transfer-funds-cli.rst:5
+msgid ""
+"Once we have the :doc:`cli-wallet set up <cli-wallet-usage>`, we can "
+"transfer funds easily with the following syntax:"
+msgstr ""
+
+#: ../../source/tutorials/transfer-funds-cli.rst:12
+msgid ""
+"In order to transfer, the wallet must be unlocked. If the broadcast flag "
+"is ``False``, the wallet will construct and sign, but **not** broadcast "
+"the transaction. This can be very useful for a cold storage setup or to "
+"verify transactions."
+msgstr ""
+
+#: ../../source/tutorials/transfer-funds-cli.rst:17
+msgid "If `alice` wants to send `10 USD` to `bob`, she could call:::"
+msgstr ""
+
+#: ../../source/tutorials/transfer-funds-cli.rst:21
+msgid "The wallet will return the actual signed transaction."
+msgstr ""
+
+#: ../../source/tutorials/uia-create-gui.rst:3
+msgid "Creating a new UIA"
+msgstr ""
+
+#: ../../source/tutorials/uia-create-gui.rst:5
+msgid ""
+"In order to create a new asset, we first need to enter our account's "
+"asset page and click `CREATE ASSET`:"
+msgstr ""
+
+#: ../../source/tutorials/uia-create-gui.rst:13
+msgid ""
+"We will enter the asset creation page that will allow us to define the "
+"assets parameters."
+msgstr ""
+
+#: ../../source/tutorials/uia-create-gui.rst:17
+msgid "Primary Settings"
+msgstr ""
+
+#: ../../source/tutorials/uia-create-gui.rst:19
+msgid "The most important settings are listed in the primary settings."
+msgstr ""
+
+#: ../../source/tutorials/uia-create-gui.rst:26
+msgid ""
+"The **Symbol** defined here will be reserved in the system for your "
+"assets. One the asset is created, the symbol cannot be changed again!"
+msgstr ""
+
+#: ../../source/tutorials/uia-create-gui.rst:29
+msgid ""
+"Smybols with less than **5** characters are very expense. Please consult "
+"the Networks fees in the explorer!"
+msgstr ""
+
+#: ../../source/tutorials/uia-create-gui.rst:32
+msgid ""
+"The **maximum supply** is also a permanent setting and denotes the "
+"maximum amount of shares that can ever exist at the same time."
+msgstr ""
+
+#: ../../source/tutorials/uia-create-gui.rst:35
+msgid ""
+"The *precision* is used to denoted the number of decimal places. A `0` "
+"will result in an asset that cannot be separated below integer amounts "
+"(e.g. 1, 2, ..)"
+msgstr ""
+
+#: ../../source/tutorials/uia-create-gui.rst:39
+msgid ""
+"To allow transaction fees to be paid in the native asset, a core exchange"
+" rate is required at which a customer can implicitly trade the UIA into "
+"BTS from the asset's *fee pool*. This also requires that the fee pool is "
+"funded (e.g. by the issuer). Since all prices in BitShares are internally"
+" represented as *fractions* (i.e. `a/b`), we need to define a ratio "
+"between quote (the UIA) and base (BTS), i.e. the numerator and "
+"denominator for `price = a/b`."
+msgstr ""
+
+#: ../../source/tutorials/uia-create-gui.rst:47
+msgid ""
+"Finally, a **description** can be used to let everyone know the purpose "
+"of the asset, or an internet address for further information."
+msgstr ""
+
+#: ../../source/tutorials/uia-create-gui.rst:51
+msgid "Permissions (optional)"
+msgstr ""
+
+#: ../../source/tutorials/uia-create-gui.rst:53
+msgid ""
+"Even though the default settings should be fine for most UIAs, we have "
+"the option to **opt-out** of some available features. (By default, or "
+"permissions are *enabled*)."
+msgstr ""
+
+#: ../../source/tutorials/uia-create-gui.rst:57
+msgid ""
+"Once a permission has been set to *false*, the permission cannot be "
+"reactivated!"
+msgstr ""
+
+#: ../../source/tutorials/uia-create-gui.rst:65
+msgid "We have the options to opt-out of:"
+msgstr ""
+
+#: ../../source/tutorials/uia-create-gui.rst:67
+msgid "Enabling Market Fees"
+msgstr ""
+
+#: ../../source/tutorials/uia-create-gui.rst:68
+msgid "Requiring holders to be white-listed"
+msgstr ""
+
+#: ../../source/tutorials/uia-create-gui.rst:69
+msgid "Allow Issuer to withdraw from any account"
+msgstr ""
+
+#: ../../source/tutorials/uia-create-gui.rst:70
+msgid "Require all transfers to be approved by the issuer"
+msgstr ""
+
+#: ../../source/tutorials/uia-create-gui.rst:71
+msgid "Allow to disable confidential transactions"
+msgstr ""
+
+#: ../../source/tutorials/uia-create-gui.rst:73
+msgid ""
+"Note that setting these permissions does not imply that the features is "
+"enabled. To do so, we would also require to enable the corresponding "
+"flag(s). (See below)"
+msgstr ""
+
+#: ../../source/tutorials/uia-create-gui.rst:78
+msgid "Flags and Market Fees (optional)"
+msgstr ""
+
+#: ../../source/tutorials/uia-create-gui.rst:80
+msgid ""
+"The flags are used to *actually enable* a particular features, such as "
+"market fees or confidential transfers."
+msgstr ""
+
+#: ../../source/tutorials/uia-create-gui.rst:88
+msgid ""
+"If we have set the permission to have a market fee, we can enable the "
+"market fees here and set a percentage and max. fee."
+msgstr ""
+
+#: ../../source/tutorials/uia-create-gui.rst:91
+msgid ""
+"We here also can enable the requirements for users to be white-listed, "
+"enable confidential transfers and give the issuer the power to withdraw "
+"its asset from customer accounts."
+msgstr ""
+
+#: ../../source/tutorials/uia-create-gui.rst:96
+#: ../../source/tutorials/uia-create-manual.rst:80
+msgid "Issuing Shares"
+msgstr ""
+
+#: ../../source/tutorials/uia-create-gui.rst:98
+msgid ""
+"After creating the asset, no shares will exist until the issuer *issues* "
+"them:"
+msgstr ""
+
+#: ../../source/tutorials/uia-create-gui.rst:107
+msgid "The asset creation fee"
+msgstr ""
+
+#: ../../source/tutorials/uia-create-gui.rst:109
+msgid ""
+"The asset creation fee depends on the length of your symbol. 3 Character "
+"Symbols are the shortest and are rather expensive while symbols with 5 or"
+" more characters are significantly cheaper."
+msgstr ""
+
+#: ../../source/tutorials/uia-create-gui.rst:113
+#, python-format
+msgid ""
+"50% of the asset creation fee are used to pre-fill the assets fee pool. "
+"From the other 50%, 20% go to the network and 80% go to the referral "
+"program. This means, that if you are a life-time member, you get back 40%"
+" of the asset creation fee after the vesting period (currently 90 days)."
+msgstr ""
+
+#: ../../source/tutorials/uia-create-manual.rst:3
+msgid "Creating a UIA manually"
+msgstr ""
+
+#: ../../source/tutorials/uia-create-manual.rst:6
+msgid "Creating an Asset"
+msgstr ""
+
+#: ../../source/tutorials/uia-create-manual.rst:8
+msgid ""
+"Of course a UIA can also be created *manually* by means of the "
+":doc:`../../integration/apps/cliwallet` command:"
+msgstr ""
+
+#: ../../source/tutorials/uia-create-manual.rst:20
+msgid ""
+"A `false` at the end allows to check and verify the constructed "
+"transaction and does **not** broadcast it.  The empty `{}` could be used "
+"to construct a :doc:`../user/mpa` and is subject of another tutorial."
+msgstr ""
+
+#: ../../source/tutorials/uia-create-manual.rst:26
+msgid "Parameters"
+msgstr ""
+
+#: ../../source/tutorials/uia-create-manual.rst:28
+msgid ""
+"The `precision` can any positive integer starting from `0`. As `options` "
+"we pass a JSON object that can contain these settings:"
+msgstr ""
+
+#: ../../source/tutorials/uia-create-manual.rst:56
+msgid ""
+"The flags are construction as an JSON object containing these "
+"flags/permissions (see :doc:`../user/assets-faq`):"
+msgstr ""
+
+#: ../../source/tutorials/uia-create-manual.rst:73
+msgid ""
+"Permissions and flags are modelled as sum of binary flags (see example "
+"below)"
+msgstr ""
+
+#: ../../source/tutorials/uia-create-manual.rst:76
+msgid ""
+"White-listing is described in more detail in :doc:`../../integration"
+"/asset-whitelist`."
+msgstr ""
+
+#: ../../source/tutorials/uia-create-manual.rst:82
+msgid ""
+"After creation of the asset, no shares will be in existence until they "
+"are issued by the issuer:"
+msgstr ""
+
+#: ../../source/tutorials/uia-update-manual.rst:3
+msgid "Update/Change an existing UIA"
+msgstr ""
+
+#: ../../source/tutorials/uia-update-manual.rst:5
+msgid ""
+"A UIA can be modified by the issuer after creation. For this, a separated"
+" call ``update_asset`` has been created."
+msgstr ""
+
+#: ../../source/tutorials/uia-update-manual.rst:9
+msgid "What can and cannot be changed"
+msgstr ""
+
+#: ../../source/tutorials/uia-update-manual.rst:11
+msgid "Except for"
+msgstr ""
+
+#: ../../source/tutorials/uia-update-manual.rst:13
+msgid "Symbol"
+msgstr ""
+
+#: ../../source/tutorials/uia-update-manual.rst:14
+msgid "Precision,"
+msgstr ""
+
+#: ../../source/tutorials/uia-update-manual.rst:16
+msgid "every parameter, option or setting can be updates."
+msgstr ""
+
+#: ../../source/tutorials/uia-update-manual.rst:18
+msgid "Once a persmission is removed, it can not be re-enabled again!"
+msgstr ""
+
+#: ../../source/tutorials/vesting-claim.rst:3
+msgid "Claiming A Vesting Balance"
+msgstr ""
+
+#: ../../source/tutorials/vesting-claim.rst:6
+msgid "Web Wallet"
+msgstr ""
+
+#: ../../source/tutorials/vesting-claim.rst:8
+msgid ""
+"Claiming vesting balances using the web wallet (GUI) is quite simple. All"
+" you need to do is enter your account's page, click on *Vesting Balances*"
+" and pick the balance you would like to claim. The corresponding "
+"transaction is constructed automatically and will be signed after your "
+"confirmation."
+msgstr ""
+
+#: ../../source/tutorials/vesting-claim.rst:20
+msgid "Console Wallet"
+msgstr ""
+
+#: ../../source/tutorials/vesting-claim.rst:21
+msgid ""
+"From the CLI wallet, vesting balances from witnesses can be claimed by "
+"using:::"
+msgstr ""
+
+#: ../../source/tutorials/vesting-claim.rst:26
+msgid ""
+"Unfortunately, no call exists for non-witness-pay vesting balances, yet "
+"but a transaction can be :doc:`constructed manually <construct-"
+"transaction>` with the operation ``vesting_balance_withdraw_operation`` "
+"and takes the form:"
+msgstr ""
+
+#: ../../source/tutorials/vesting-list.rst:3
+msgid "List Vesting Balances"
+msgstr ""
+
+#: ../../source/tutorials/vesting-list.rst:5
+msgid "The vesting balances of an account can be seen from:::"
+msgstr ""
+
+#: ../../source/tutorials/vesting-list.rst:9
+msgid "and takes the form:"
+msgstr ""
+
+#: ../../source/tutorials/vesting-list.rst:36
+msgid ""
+"The ``balance`` gives the total vesting balance (amount plus asset), "
+"whereas ``allowed_withdraw`` shows the balance that can be withdrawn "
+"already. The object also tells us that the vesting policy is in terms of "
+"coin-days accrued (in contrast to linear vesting)."
+msgstr ""
+
+#: ../../source/tutorials/voting.rst:3
+msgid "Voting"
+msgstr ""
+
+#: ../../source/tutorials/voting.rst:5
+msgid ""
+"Casting your vote or setting your proxy is very simply using the user "
+"interface (e.g. hosted wallet or light wallet)."
+msgstr ""
+
+#: ../../source/tutorials/voting.rst:9
+msgid "Setting a proxy"
+msgstr ""
+
+#: ../../source/tutorials/voting.rst:11
+msgid "The picture below shows how to set your trusted proxy:"
+msgstr ""
+
+#: ../../source/tutorials/voting.rst:18
+msgid ""
+"The proxy ``xeroc`` is owned by the author of the documentation articles "
+"you are currently reading and has a `discussion thread avaiable "
+"<https://bitsharestalk.org/index.php/topic,20792.0.html>`_."
+msgstr ""
+
+#: ../../source/tutorials/voting.rst:23
+msgid "Voting for Witness, Committee Member or Worker"
+msgstr ""
+
+#: ../../source/tutorials/voting.rst:25
+msgid ""
+"If you have not set a proxy, you can cast your own vote for witnesses, "
+"committee members or workers and publish your vote as shown in the "
+"picture below."
+msgstr ""
+
+#: ../../source/tutorials/voting.rst:34
+msgid ""
+"If you already have a proxy defined and want to start voting on your own,"
+" you need to first click ``Remove proxy``!"
+msgstr ""
+
+#: ../../source/tutorials/witness-change-key.rst:3
+msgid "Change the Signing Key of your Witness"
+msgstr ""
+
+#: ../../source/tutorials/witness-change-key.rst:5
+msgid ""
+"As a witness you may want to change your key occasionally or on a regular"
+" basis. You can do so by calling ``update_witness``::"
+msgstr ""
+
+#: ../../source/tutorials/witness-change-key.rst:10
+msgid ""
+"By replacing ``false`` with ``true``, the signed transaction will be "
+"broadcast and executed otherwise it will only print the signed "
+"transaction for review."
+msgstr ""
+
+#: ../../source/tutorials/witness-change-key.rst:14
+msgid "You can get a new public key by calling::"
+msgstr ""
+
+#: ../../source/tutorials/witness-create.rst:3
+msgid "Howto Become an Active Witness"
+msgstr ""
+
+#: ../../source/tutorials/witness-create.rst:5
+msgid ""
+"This document serves as an introduction on how to become an actively "
+"block producing witness in in the BitShares2.0 network. We will create, "
+"configure and run a witness node in the following steps:"
+msgstr ""
+
+#: ../../source/tutorials/witness-create.rst:9
+msgid "create a wallet for the testnet"
+msgstr ""
+
+#: ../../source/tutorials/witness-create.rst:10
+msgid "import an account and funds"
+msgstr ""
+
+#: ../../source/tutorials/witness-create.rst:11
+#: ../../source/tutorials/witness-howto.rst:27
+msgid "upgrade our account to a lifetime member"
+msgstr ""
+
+#: ../../source/tutorials/witness-create.rst:12
+#: ../../source/tutorials/witness-howto.rst:28
+msgid "register a new witness"
+msgstr ""
+
+#: ../../source/tutorials/witness-create.rst:13
+#: ../../source/tutorials/witness-howto.rst:29
+msgid "upvote the witness with our funds"
+msgstr ""
+
+#: ../../source/tutorials/witness-create.rst:14
+#: ../../source/tutorials/witness-howto.rst:30
+msgid "sign blocks"
+msgstr ""
+
+#: ../../source/tutorials/witness-create.rst:17
+msgid "Run the witness/full node on the network"
+msgstr ""
+
+#: ../../source/tutorials/witness-create.rst:19
+msgid ""
+"We first run the :doc:`../../integration/apps/node` without block "
+"production and connect it to the P2P network with the following command:"
+msgstr ""
+
+#: ../../source/tutorials/witness-create.rst:26
+msgid ""
+"The argument ``--rpc-endpoint 127.0.0.1:8090`` opens up a RPC port "
+"``8090`` for connections from localhost."
+msgstr ""
+
+#: ../../source/tutorials/witness-create.rst:30
+#: ../../source/tutorials/witness-howto.rst:45
+msgid "Creating a wallet"
+msgstr ""
+
+#: ../../source/tutorials/witness-create.rst:32
+msgid ""
+"We now open up the :doc:`../../integration/apps/cliwallet` and connect to"
+" our plain and stupid :doc:`../../integration/apps/node`:"
+msgstr ""
+
+#: ../../source/tutorials/witness-create.rst:39
+msgid ""
+"First thing to do is setting up a password for the newly created wallet "
+"prior to importing any private keys:"
+msgstr ""
+
+#: ../../source/tutorials/witness-create.rst:49
+#: ../../source/tutorials/witness-howto.rst:61
+msgid "Wallet creation is now done."
+msgstr ""
+
+#: ../../source/tutorials/witness-create.rst:52
+#: ../../source/tutorials/witness-howto.rst:64
+msgid "Basic Account Management"
+msgstr ""
+
+#: ../../source/tutorials/witness-create.rst:54
+msgid ""
+"We can import the account name (owner and active keys) to be able to "
+"access our funds in BitShares 2.0:"
+msgstr ""
+
+#: ../../source/tutorials/witness-create.rst:66
+msgid ""
+"Since **only lifetime members can become witnesses**, you must first "
+"upgrade to a lifetime member. This step costs the lifetime-upgrade fee "
+"which will eventually cost about $100"
+msgstr ""
+
+#: ../../source/tutorials/witness-create.rst:76
+msgid "Becoming a Witness"
+msgstr ""
+
+#: ../../source/tutorials/witness-create.rst:78
+#: ../../source/tutorials/witness-howto.rst:96
+msgid ""
+"To become a witness and be able to produce blocks, you first need to "
+"create a witness object that can be voted in."
+msgstr ""
+
+#: ../../source/tutorials/witness-create.rst:81
+msgid ""
+"Note: If you want to experiment with things that require voting, be aware"
+" that votes are only tallied once per day at the maintenance interval. "
+"``get_dynamic_global_properties`` tells us when that will be in "
+"``next_maintenance_time``. Once the next maintenance interval passes, run"
+" ``get_global_properties`` again and you should see that your new witness"
+" has been voted in."
+msgstr ""
+
+#: ../../source/tutorials/witness-create.rst:88
+msgid ""
+"Before we get started, we can see the current list of witnesses voted in,"
+" which will simply be the ten default witnesses:"
+msgstr ""
+
+#: ../../source/tutorials/witness-create.rst:116
+msgid ""
+"Our witness is registered, but it can't produce blocks because nobody has"
+" voted it in. You can see the current list of active witnesses with "
+"``get_global_properties``."
+msgstr ""
+
+#: ../../source/tutorials/witness-create.rst:120
+msgid ""
+"Now, we should vote our witness in. Vote all of the shares in our account"
+" ``<accountname>`` in favor of your new witness."
+msgstr ""
+
+#: ../../source/tutorials/witness-create.rst:128
+msgid ""
+"We need wait until the next maintenance interval until we can see votes "
+"casted for our witness."
+msgstr ""
+
+#: ../../source/tutorials/witness-create.rst:131
+msgid ""
+"Get the witness object using ``get_witness`` and take note of two things."
+" The ``id`` is displayed in ``get_global_properties`` when the witness is"
+" voted in, and we will need it on the ``witness_node`` command line to "
+"produce blocks. We'll also need the public ``signing_key`` so we can look"
+" up the correspoinding private key."
+msgstr ""
+
+#: ../../source/tutorials/witness-create.rst:147
+#: ../../source/tutorials/witness-howto.rst:170
+msgid ""
+"Once we have that, run ``dump_private_keys`` which lists the public-key "
+"private-key pairs to find the private key."
+msgstr ""
+
+#: ../../source/tutorials/witness-create.rst:150
+msgid ""
+"Warning: ``dump_private_keys`` will display your keys unencrypted on the "
+"terminal, don't do this with someone looking over your shoulder."
+msgstr ""
+
+#: ../../source/tutorials/witness-create.rst:153
+msgid ""
+"The ``id`` and the ``signing_key`` are the two important parameters, "
+"here. Let's get the private key for that signing key with:"
+msgstr ""
+
+#: ../../source/tutorials/witness-create.rst:167
+msgid ""
+"Now we need to start the witness, so shut down the wallet (ctrl-d), and "
+"shut down the witness (ctrl-c). Re-launch the witness, now mentioning the"
+" new witness 1.6.10 and its keypair:"
+msgstr ""
+
+#: ../../source/tutorials/witness-create.rst:178
+msgid "Alternatively, you can also add this line into yout config.ini:"
+msgstr ""
+
+#: ../../source/tutorials/witness-create.rst:185
+msgid ""
+"Note: Make sure to use YOUR public/private keys instead of the once given"
+" above!"
+msgstr ""
+
+#: ../../source/tutorials/witness-create.rst:188
+msgid ""
+"If you monitor the output of the ``witness_node``, you should see it "
+"generate blocks signed by your witness:"
+msgstr ""
+
+#: ../../source/tutorials/witness-howto.rst:3
+msgid "Howto Run a Block-producing Witness"
+msgstr ""
+
+#: ../../source/tutorials/witness-howto.rst:5
+msgid ""
+"This document serves as an introduction on how to become an actively "
+"block producing witness in a Graphene-based network (e.g. the "
+"BitShares2.0 network)."
+msgstr ""
+
+#: ../../source/tutorials/witness-howto.rst:8
+msgid ""
+"We will have to register a new account from the and add some initial "
+"funds for the witness registration fee. After that, we will create, "
+"configure and run a witness node."
+msgstr ""
+
+#: ../../source/tutorials/witness-howto.rst:13
+msgid "Requirements"
+msgstr ""
+
+#: ../../source/tutorials/witness-howto.rst:15
+msgid ""
+"A registered account in the corresponding network (see i.e. "
+":doc:`../user/account`)"
+msgstr ""
+
+#: ../../source/tutorials/witness-howto.rst:16
+msgid "Some funds in the account to pay for the registration fee"
+msgstr ""
+
+#: ../../source/tutorials/witness-howto.rst:17
+msgid "Executable binary (see :doc:`../installation/index`)"
+msgstr ""
+
+#: ../../source/tutorials/witness-howto.rst:20
+msgid "Overview"
+msgstr ""
+
+#: ../../source/tutorials/witness-howto.rst:22
+msgid "We will now perform the following steps:"
+msgstr ""
+
+#: ../../source/tutorials/witness-howto.rst:24
+msgid "run a local (non block producing) full node"
+msgstr ""
+
+#: ../../source/tutorials/witness-howto.rst:25
+msgid "create a CLI wallet for the network"
+msgstr ""
+
+#: ../../source/tutorials/witness-howto.rst:26
+msgid "import your account (and funds) into CLI wallet"
+msgstr ""
+
+#: ../../source/tutorials/witness-howto.rst:33
+msgid "Run the witness as a node in the network"
+msgstr ""
+
+#: ../../source/tutorials/witness-howto.rst:35
+msgid ""
+"We first run the witness node without block production and connect it to "
+"the P2P network with the following command:::"
+msgstr ""
+
+#: ../../source/tutorials/witness-howto.rst:40
+msgid ""
+"We open a RPC port for local host so that we can later connect the CLI "
+"wallet with it. After the network was synced and periodically receives "
+"new blocks from other participants, we can go on to the next step."
+msgstr ""
+
+#: ../../source/tutorials/witness-howto.rst:47
+msgid ""
+"We now open up the cli_wallet and connect to our plain and stupid witness"
+" node:::"
+msgstr ""
+
+#: ../../source/tutorials/witness-howto.rst:52
+msgid ""
+"First thing to do is setting up a password for the newly created wallet "
+"prior to importing any private keys:::"
+msgstr ""
+
+#: ../../source/tutorials/witness-howto.rst:66
+msgid ""
+"We can import the account name (owner key) and the balance containing "
+"(active) key into the CLI wallet:::"
+msgstr ""
+
+#: ../../source/tutorials/witness-howto.rst:83
+msgid "Both keys can be exported from the web wallet."
+msgstr ""
+
+#: ../../source/tutorials/witness-howto.rst:87
+msgid ""
+"Since only lifetime members can become witnesses, you must first upgrade "
+"to a lifetime member. This step costs the lifetime-upgrade fee:::"
+msgstr ""
+
+#: ../../source/tutorials/witness-howto.rst:94
+msgid "Registering a Witness Object"
+msgstr ""
+
+#: ../../source/tutorials/witness-howto.rst:99
+msgid "We create a new witness object by issuing:::"
+msgstr ""
+
+#: ../../source/tutorials/witness-howto.rst:124
+msgid ""
+"Our witness is registered, but it can't produce blocks because nobody has"
+" voted it in. You can see the current list of active witnesses with "
+"`get_global_properties`:::"
+msgstr ""
+
+#: ../../source/tutorials/witness-howto.rst:143
+msgid ""
+"Now, we should vote our witness in. Vote all of the shares your account "
+"``<accountname>`` in favor of your new witness.::"
+msgstr ""
+
+#: ../../source/tutorials/witness-howto.rst:149
+msgid ""
+"If you want to experiment with things that require voting, be aware that "
+"votes are only tallied once per day at the maintenance interval. "
+"``get_dynamic_global_properties`` tells us when that will be in "
+"``next_maintenance_time``. Once the next maintenance interval passes, run"
+" ``get_global_properties`` again and you should see that your new witness"
+" has been voted in."
+msgstr ""
+
+#: ../../source/tutorials/witness-howto.rst:156
+msgid "Now we wait until the next maintenance interval."
+msgstr ""
+
+#: ../../source/tutorials/witness-howto.rst:159
+msgid "Configuration of the Witness Node"
+msgstr ""
+
+#: ../../source/tutorials/witness-howto.rst:161
+msgid "Get the witness object using::"
+msgstr ""
+
+#: ../../source/tutorials/witness-howto.rst:165
+msgid ""
+"and take note of two things. The ``id`` is displayed in "
+"``get_global_properties`` when the witness is voted in, and we will need "
+"it on the ``witness_node`` command line to produce blocks. We'll also "
+"need the public ``signing_key`` so we can look up the correspoinding "
+"private key."
+msgstr ""
+
+#: ../../source/tutorials/witness-howto.rst:173
+msgid ""
+"``dump_private_keys`` will display your keys unencrypted on the terminal,"
+" don't do this with someone looking over your shoulder."
+msgstr ""
+
+#: ../../source/tutorials/witness-howto.rst:186
+msgid ""
+"The ``id`` and the ``signing_key`` are the two important parameters, "
+"here. Let's get the private key for that signing key with:::"
+msgstr ""
+
+#: ../../source/tutorials/witness-howto.rst:198
+msgid ""
+"Now we need to start the witness, so shut down the wallet (ctrl-d),  and "
+"shut down the witness (ctrl-c).  Re-launch the witness, now mentioning "
+"the new witness 1.6.10 and its keypair:::"
+msgstr ""
+
+#: ../../source/tutorials/witness-howto.rst:206
+msgid "Alternatively, you can also add this line into yout config.ini:::"
+msgstr ""
+
+#: ../../source/tutorials/witness-howto.rst:211
+msgid "Make sure to use YOUR public/private keys instead of the once given above!"
+msgstr ""
+
+#: ../../source/tutorials/witness-howto.rst:215
+msgid "Verifying Block Production"
+msgstr ""
+
+#: ../../source/tutorials/witness-howto.rst:217
+msgid ""
+"If you monitor the output of the `witness_node`, you should see it "
+"generate blocks signed by your witness:::"
+msgstr ""
+
+#: ../../source/tutorials/witness-howto.rst:224
+msgid "Price Feeds"
+msgstr ""
+
+#: ../../source/tutorials/witness-howto.rst:226
+msgid ""
+"Besides producing new blocks another very important task of the witness "
+"is to feed prices into the blockchain. Educational material on how this "
+"can be implemented is available in ``scripts/pricefeed`` at `github`_ "
+"together with the corresponding documentation."
+msgstr ""
+
+#: ../../source/tutorials/worker-budget.rst:5
+msgid "Claim Worker Pay"
+msgstr ""
+
+#: ../../source/tutorials/worker-budget.rst:7
+msgid ""
+"Every second, `[ 17/(2^32) * reserve fund ]` is allocated for witnesses "
+"and workers where reserve fund is how many BTS are currently not "
+"distributed (see the `source code`_)."
+msgstr ""
+
+#: ../../source/tutorials/worker-budget.rst:13
+#: ../../source/tutorials/worker-create.rst:130
+msgid ""
+"Every hour the total available reserve fund is calculated by finding how "
+"many BTS are available to be distributed and how many BTS will be "
+"returned to the reserve fund (i.e., \"burnt\") during the next "
+"maintenance interval."
+msgstr ""
+
+#: ../../source/tutorials/worker-budget.rst:17
+msgid "First find how many BTS have not been distributed:"
+msgstr ""
+
+#: ../../source/tutorials/worker-budget.rst:28
+msgid ""
+"Then modify it by adding the accumulated fees and witness budget "
+"remaining (i.e., 1.5 BTS per block is budgeted, so budget remaining is"
+msgstr ""
+
+#: ../../source/tutorials/worker-budget.rst:35
+msgid ""
+"in this maintenance cycle (they will be added to the \"reserve fund\" "
+"permanently at maintenance)"
+msgstr ""
+
+#: ../../source/tutorials/worker-budget.rst:44
+msgid "For example:"
+msgstr ""
+
+#: ../../source/tutorials/worker-budget.rst:68
+msgid ""
+"Then calculate how much is available to be spent on workers and witnesses"
+" is:"
+msgstr ""
+
+#: ../../source/tutorials/worker-budget.rst:74
+msgid ""
+"Ok, now to find how much workers will get in this budget period (1 hour),"
+" you find the smaller of the available pay AFTER subtracting witness "
+"budget from the total_budget OR the worker_budget_per_day/24 from "
+"\"get_global_properties\""
+msgstr ""
+
+#: ../../source/tutorials/worker-budget.rst:82
+#: ../../source/tutorials/worker-create.rst:168
+msgid ""
+"That is how much per hour allocated for all workers. NOW you rank each "
+"worker and pay them one hours worth of pay in order or # votes."
+msgstr ""
+
+#: ../../source/tutorials/worker-budget.rst:86
+msgid "References:"
+msgstr ""
+
+#: ../../source/tutorials/worker-budget.rst:87
+msgid "https://github.com/cryptonomex/graphene/blob/4c09d6b8ed350ff5c7546e2c3fd15d0e6699daf2/libraries/chain/db_maint.cpp"
+msgstr ""
+
+#: ../../source/tutorials/worker-create.rst:3
+msgid "How to Create a Worker"
+msgstr ""
+
+#: ../../source/tutorials/worker-create.rst:5
+msgid ""
+"Workers are currently created with the cli_wallet with the following "
+"command syntax:::"
+msgstr ""
+
+#: ../../source/tutorials/worker-create.rst:10
+msgid ""
+"example, ``owner_account`` is creating a one day worker starting Oct 28 "
+"and will get paid 1 BTS/day (vesting in 1 day, 1 BTS = 100,000 'satoshi')"
+" to make an android app. The first command won't broadcast, this will "
+"just check:::"
+msgstr ""
+
+#: ../../source/tutorials/worker-create.rst:16
+msgid ""
+"The URL should point to something describing your proposal. We recommend "
+"to answer the following questions:"
+msgstr ""
+
+#: ../../source/tutorials/worker-create.rst:18
+msgid "What will you do with the funds?"
+msgstr ""
+
+#: ../../source/tutorials/worker-create.rst:19
+msgid "By when will you be done?"
+msgstr ""
+
+#: ../../source/tutorials/worker-create.rst:20
+msgid "For how much?"
+msgstr ""
+
+#: ../../source/tutorials/worker-create.rst:22
+msgid "The variable ``type`` can be"
+msgstr ""
+
+#: ../../source/tutorials/worker-create.rst:24
+msgid ""
+"``refund`` to return your pay back to the pool to be used for future "
+"projects,"
+msgstr ""
+
+#: ../../source/tutorials/worker-create.rst:25
+msgid "``vesting`` to pay that you pay yourself, or"
+msgstr ""
+
+#: ../../source/tutorials/worker-create.rst:26
+msgid ""
+"``burn`` to destroys your pay thus reducing share supply, equivalent to "
+"share buy-back of a company stock"
+msgstr ""
+
+#: ../../source/tutorials/worker-create.rst:28
+msgid ""
+"The variable ``pay_vesting_period_days`` is the integer number of days "
+"you set for vesting. Some people don't want workers to withdraw and sell "
+"large sums of BTS immediately, as it puts sell pressure on BTS. Also, if "
+"you require vesting, you have \"skin in the game\" and thus an incentive "
+"to improve BTS value. Pay is pay per day (not hour or maintenance period)"
+" and is in units of 1/100,000 BTS (the precision of BTS)"
+msgstr ""
+
+#: ../../source/tutorials/worker-create.rst:35
+msgid ""
+"To **actually** generate a worker proposal, replace the last ``false`` by"
+" ``true``."
+msgstr ""
+
+#: ../../source/tutorials/worker-create.rst:38
+msgid "How to see proposals on the chain"
+msgstr ""
+
+#: ../../source/tutorials/worker-create.rst:40
+msgid ""
+"Since there is no support in the UI yet, go to http://cryptofresh.com/ "
+"and look at the worker proposal chart. You also can inspect all the "
+"objects 1.4.*:::"
+msgstr ""
+
+#: ../../source/tutorials/worker-create.rst:66
+msgid "How to Vote for a Worker"
+msgstr ""
+
+#: ../../source/tutorials/worker-create.rst:68
+msgid ""
+"Currently the GUI doesn't have an interface, but you an vote using the "
+"CLI:::"
+msgstr ""
+
+#: ../../source/tutorials/worker-create.rst:72
+msgid "for example:::"
+msgstr ""
+
+#: ../../source/tutorials/worker-create.rst:76
+msgid "you can also vote against or abstain (remove your vote for or against)::"
+msgstr ""
+
+#: ../../source/tutorials/worker-create.rst:82
+msgid "How Workers Get Paid"
+msgstr ""
+
+#: ../../source/tutorials/worker-create.rst:84
+msgid ""
+"Every hour the worker budget is processed and workers are paid in full "
+"order of the number of votes for minus the number of votes against. The "
+"last worker to get paid will be paid with whatever is left, so may "
+"receive partial payment. The daily budget can be estimated by inspecting "
+"the most recent budget object 2.13.* for example:::"
+msgstr ""
+
+#: ../../source/tutorials/worker-create.rst:111
+msgid "So the daily budget is::"
+msgstr ""
+
+#: ../../source/tutorials/worker-create.rst:115
+msgid ""
+"There is currently a maximum daily worker pay of 500k BTS, and this can "
+"be found using the ``get_global_properties`` command in the cli_wallet"
+msgstr ""
+
+#: ../../source/tutorials/worker-create.rst:119
+msgid "Technical Details"
+msgstr ""
+
+#: ../../source/tutorials/worker-create.rst:121
+msgid "Every second, ::"
+msgstr ""
+
+#: ../../source/tutorials/worker-create.rst:125
+msgid ""
+"is allocated for witnesses and workers. The reserve fund is maximum "
+"number of BTS available less those currently in circulation (`source`_)"
+msgstr ""
+
+#: ../../source/tutorials/worker-create.rst:134
+msgid "First find how many BTS have not been distributed:::"
+msgstr ""
+
+#: ../../source/tutorials/worker-create.rst:138
+msgid "The max_supply can be obtained by::"
+msgstr ""
+
+#: ../../source/tutorials/worker-create.rst:142
+msgid "and the current_supply is given in::"
+msgstr ""
+
+#: ../../source/tutorials/worker-create.rst:146
+msgid ""
+"Modify it by adding the accumulated fees and witness budget remaining "
+"(i.e., 1.5 BTS per block is budgeted, so budget remaining is 1.5 BTS * "
+"(number of blocks left in maintenance period+blocks missed by witnesses))"
+" in this maintenance cycle (they will be added to the \"reserve fund\" "
+"permanently at maintenance)::"
+msgstr ""
+
+#: ../../source/tutorials/worker-create.rst:154
+msgid ""
+"variables all from: ``get_object 2.13.*`` (choose the most recent one, "
+"for example)"
+msgstr ""
+
+#: ../../source/tutorials/worker-create.rst:156
+msgid ""
+"Next calculate how much is available to be spent on workers and witnesses"
+" is:::"
+msgstr ""
+
+#: ../../source/tutorials/worker-create.rst:160
+msgid "rounded up to the nearest integer"
+msgstr ""
+
+#: ../../source/tutorials/worker-create.rst:162
+msgid ""
+"Ok, now to find how much workers will get in this budget period (1 hour),"
+" you find the smaller of the available pay AFTER subtracting witness "
+"budget from the ``total_budget`` OR the ``worker_budget_per_day/24`` from"
+" ``get_global_properties``::"
+msgstr ""
+

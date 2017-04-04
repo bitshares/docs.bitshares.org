@@ -1,0 +1,759 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Fabian Schuh
+# This file is distributed under the same license as the Graphene Technical
+# Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Graphene Technical Documentation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-03 11:56+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/migration/blockchain-transition.rst:3
+msgid "Blockchain Upgrade"
+msgstr ""
+
+#: ../../source/migration/blockchain-transition.rst:5
+msgid ""
+"BitShares 2.0 will be initialized with what is called a *Genesis Block*. "
+"That genesis block will be constructed from the balances of BitShares "
+"1.0. BitShares 1.0 offers many features that need to be migrated into "
+"BitShares 2.0. To simplify the process and reduce the risk of errors, the"
+" following conditions will be met:"
+msgstr ""
+
+#: ../../source/migration/blockchain-transition.rst:11
+msgid "**Funds**:"
+msgstr ""
+
+#: ../../source/migration/blockchain-transition.rst:13
+msgid ""
+"**BTS Tokens**: All BTS balances will be migrated 1:1. The supply not "
+"change!"
+msgstr ""
+
+#: ../../source/migration/blockchain-transition.rst:14
+msgid "**User-Issed-Assets**: All UAI tokens will be migrated 1:1"
+msgstr ""
+
+#: ../../source/migration/blockchain-transition.rst:15
+msgid ""
+"**BitAssets**: Because the new chain is a simple migration and should "
+"retain all the same \"perceived value\", all BitAssets and short "
+"positions are migrated 1:1."
+msgstr ""
+
+#: ../../source/migration/blockchain-transition.rst:19
+msgid "**Account Names**:"
+msgstr ""
+
+#: ../../source/migration/blockchain-transition.rst:21
+msgid ""
+"Under BitShares 2.0, accounts are transferable and have different prices "
+"based upon the \"quality\" of the account name. Any \"premium\" names "
+"registered on or after 2015-06-08 (US Eastern time) will be given the "
+"prefix “bts-“ or similar after the migration. All account names "
+"registered on or after 2015-06-18 (US Eastern time) will be prefixed with"
+" \"bts-\" unless they were registered using the BitShares Faucet."
+msgstr ""
+
+#: ../../source/migration/blockchain-transition.rst:28
+msgid "**Premium Name**:  No numbers and has vowles"
+msgstr ""
+
+#: ../../source/migration/blockchain-transition.rst:29
+msgid "**Cheap Name**:    Has numbers or no vowels"
+msgstr ""
+
+#: ../../source/migration/blockchain-transition.rst:31
+msgid ""
+"All other account names will be migrated with their corresponding "
+"owner/active keys."
+msgstr ""
+
+#: ../../source/migration/blockchain-transition.rst:34
+msgid ""
+"**Open Orders**: Open orders (except open short positions) will **not** "
+"migrate and the funds will be credited to the corresponding owners."
+msgstr ""
+
+#: ../../source/migration/blockchain-transition.rst:37
+msgid ""
+"**Open Shorts**: Short orders will be migrated to BitShares 2.0 on a 1:1 "
+"ratio. You collateral will be imported as a separated account (e.g. "
+"``usd-collateral-holder-124``) under your control."
+msgstr ""
+
+#: ../../source/migration/blockchain-transition.rst:41
+msgid ""
+"**Transaction History**: Transaction histories of BitShares 1.0 will be "
+"inaccessible in BitShares 2.0."
+msgstr ""
+
+#: ../../source/migration/blockchain-transition.rst:43
+msgid ""
+"**Vesting Balances**: Vesting balances will migrate under the existing "
+"terms, if two or more vesting balances were partially claimed as part of "
+"the same transaction prior to the snapshot the vesting balances may be "
+"merged into a single balance."
+msgstr ""
+
+#: ../../source/migration/blockchain-transition.rst:47
+msgid ""
+"**Unclaimed Delegate Pay**: Delegates that did not claim their pay prior "
+"to the snapshot will be able to claim their pay by importing their "
+"corresponding keys similar to any other balance."
+msgstr ""
+
+#: ../../source/migration/blockchain-transition.rst:51
+msgid ""
+"**Assets**: User issued assets and market pegged assets will migrated "
+"with their corresponding issuer and holders."
+msgstr ""
+
+#: ../../source/migration/blockchain-transition.rst:54
+msgid ""
+"**Deprecated Features**: Some features have turned out to be unreliable "
+"or impractical and will thus deprecate:"
+msgstr ""
+
+#: ../../source/migration/blockchain-transition.rst:58
+msgid "**Wall Messages** will not be migrated as the feature is now deprecated"
+msgstr ""
+
+#: ../../source/migration/blockchain-transition.rst:59
+msgid ""
+"Asset **description information** is no longer part of the blockchain "
+"state and will not be migrated"
+msgstr ""
+
+#: ../../source/migration/blockchain-transition.rst:61
+msgid ""
+"Account **public data** is deprecated and is no longer part of the "
+"blockchain state"
+msgstr ""
+
+#: ../../source/migration/blockchain-transition.rst:62
+msgid ""
+"BitShares URL scheme: `bts://` will be deprecated due to migration to "
+"hosted web wallets"
+msgstr ""
+
+#: ../../source/migration/howto-exporting-wallet.rst:3
+msgid "Exporting Your Wallet"
+msgstr ""
+
+#: ../../source/migration/howto-exporting-wallet.rst:5
+msgid ""
+"In this tutorial, we will export you wallet including all keys to access "
+"your accounts and funds, into a single JSON-formated file. Note that your"
+" private keys will be encrypted and you will be required to provide the "
+"corresponding pass phrase when importing your funds into BitShares 2.0."
+msgstr ""
+
+#: ../../source/migration/howto-exporting-wallet.rst:11
+msgid "BitShares 1.0 Full Client"
+msgstr ""
+
+#: ../../source/migration/howto-exporting-wallet.rst:13
+msgid ""
+"Since the snapshot has taken place already, all you need to do now to get"
+" access to your funds in BitShares 2.0 is described in the following."
+msgstr ""
+
+#: ../../source/migration/howto-exporting-wallet.rst:16
+msgid ""
+"Firstly, you need to upgrade your BitShares client to version 0.9.3c. To "
+"do the upgrade you need to:"
+msgstr ""
+
+#: ../../source/migration/howto-exporting-wallet.rst:19
+msgid "download the installation file from the `bitshares webpage`_"
+msgstr ""
+
+#: ../../source/migration/howto-exporting-wallet.rst:20
+msgid "uninstall your previous version of the BitShares client"
+msgstr ""
+
+#: ../../source/migration/howto-exporting-wallet.rst:21
+msgid "install the new version"
+msgstr ""
+
+#: ../../source/migration/howto-exporting-wallet.rst:26
+msgid "Synchronize your Wallet"
+msgstr ""
+
+#: ../../source/migration/howto-exporting-wallet.rst:28
+msgid ""
+"If you see all your funds in your wallet, you can safely skip this "
+"paragraph."
+msgstr ""
+
+#: ../../source/migration/howto-exporting-wallet.rst:31
+msgid ""
+"We now need to sync with the blockchain. This is only necessary with if "
+"you think that since the last time you did the syncing there have been "
+"some new transactions involving any of your accounts."
+msgstr ""
+
+#: ../../source/migration/howto-exporting-wallet.rst:35
+msgid ":doc:`legacy-blockchain`"
+msgstr ""
+
+#: ../../source/migration/howto-exporting-wallet.rst:37
+msgid ""
+"You can see the syncing progress from the status bar or from the ``info``"
+" command in the console (``account list->advanced settings->console``). "
+"After having *synced* the blockchain, your wallet will automatically "
+"attempt to rescan the blockchain for new transcations. Depending on the "
+"amount of accounts in your wallet, this steps should only take very few "
+"minutes."
+msgstr ""
+
+#: ../../source/migration/howto-exporting-wallet.rst:43
+msgid ""
+"Since BitShares 0.9.3c, we have a Graphene compatible Export Keys "
+"function that can be accessed in two ways:"
+msgstr ""
+
+#: ../../source/migration/howto-exporting-wallet.rst:46
+msgid "by accessing it in the main menu"
+msgstr ""
+
+#: ../../source/migration/howto-exporting-wallet.rst:47
+msgid "by issuing a command in the console."
+msgstr ""
+
+#: ../../source/migration/howto-exporting-wallet.rst:50
+msgid "Export via the main menu"
+msgstr ""
+
+#: ../../source/migration/howto-exporting-wallet.rst:52
+msgid ""
+"Just select ``File Menu -> Export Wallet``  and you'll be asked to select"
+" a file location where the keys will be exported."
+msgstr ""
+
+#: ../../source/migration/howto-exporting-wallet.rst:55
+msgid ""
+"Due to a known bug, if you are on Windows the only option that will work "
+"for you is the console command - the file exported using the menu will "
+"not be compatible with BTS 2.0. This refers to Windows only."
+msgstr ""
+
+#: ../../source/migration/howto-exporting-wallet.rst:60
+msgid "Export via the console"
+msgstr ""
+
+#: ../../source/migration/howto-exporting-wallet.rst:62
+msgid "navigate to the console: Account List -> Advanced Settings -> Console"
+msgstr ""
+
+#: ../../source/migration/howto-exporting-wallet.rst:63
+msgid ""
+"type: wallet_export_keys [full path to the file]/[file name].json e.g. on"
+" Windows: ``wallet_export_keys C:\\Users\\[your user "
+"name]\\Desktop\\keys.json`` e.g. on Mac: ``wallet_export_keys "
+"/Users/[your user name]/Desktop/keys.json`` e.g. on Linux: "
+"``wallet_export_keys /home/[your user name]/Desktop/keys.json``"
+msgstr ""
+
+#: ../../source/migration/howto-exporting-wallet.rst:67
+msgid "Please replace ``[your user name]`` with your Windows account name."
+msgstr ""
+
+#: ../../source/migration/howto-exporting-wallet.rst:68
+msgid "and hit Enter"
+msgstr ""
+
+#: ../../source/migration/howto-exporting-wallet.rst:70
+msgid ""
+"The exported wallet file will be encrypted with your pass phrase! Make "
+"sure to remember it when trying to use that file again!"
+msgstr ""
+
+#: ../../source/migration/howto-exporting-wallet.rst:72
+msgid ""
+"If you are on Windows and your file path tries to access the C drive "
+"directly (e.g. C:\\keys.json) you might need to run the BitShares client "
+"as an administrator. So the least complicated option will be to aim for "
+"the desktop as in the example above."
+msgstr ""
+
+#: ../../source/migration/howto-exporting-wallet.rst:83
+msgid "wallet.bitshares.org"
+msgstr ""
+
+#: ../../source/migration/howto-exporting-wallet.rst:85
+msgid ""
+"The keys of the `web wallet`_ can be exported simply by downloading a "
+"backup wallet. It can be obtained from the web wallet's preferences: "
+"(`Account List->Advanced Settings->Wallet`)."
+msgstr ""
+
+#: ../../source/migration/howto-importing-wallet.rst:3
+msgid "Importing Your Wallet"
+msgstr ""
+
+#: ../../source/migration/howto-importing-wallet.rst:6
+msgid "Web Wallet"
+msgstr ""
+
+#: ../../source/migration/howto-importing-wallet.rst:8
+msgid ""
+"The web wallet of BitShares 2.0 has a **Wallet management Console.** that"
+" will help you import your funds. It can be access via `BitShares 2.0: "
+"Settings -> Wallets`"
+msgstr ""
+
+#: ../../source/migration/howto-importing-wallet.rst:16
+msgid ""
+"In order to import your existing accounts and claim all your funds you "
+"need to choose ``Import Keys``."
+msgstr ""
+
+#: ../../source/migration/howto-importing-wallet.rst:19
+msgid ""
+"If loading the file files with ``invalid format`` please ensure that you "
+"have followed the steps described :doc:`howto-exporting-wallet` and make "
+"sure to click ``Import Keys`` and **not** ``Restore Backup``."
+msgstr ""
+
+#: ../../source/migration/howto-importing-wallet.rst:28
+msgid ""
+"Here you can provide the wallet backup file produced from BitShares "
+"0.9.3c and the pass phrase. Depending on the size of your import file, "
+"this step may take some time to auto-complete. Please be patient."
+msgstr ""
+
+#: ../../source/migration/howto-importing-wallet.rst:37
+msgid ""
+"The wallet will list all of your accounts including the number of private"
+" keys stored in the account names accordingly. The more often you have "
+"used your account, the higher this number should be. Confirm by pressing "
+"``Import``."
+msgstr ""
+
+#: ../../source/migration/howto-importing-wallet.rst:46
+msgid ""
+"The wallet management console will now give an overview over unclaimed "
+"balances."
+msgstr ""
+
+#: ../../source/migration/howto-importing-wallet.rst:53
+msgid "If you click on ``Balance Claim`` you will be brought to this screen."
+msgstr ""
+
+#: ../../source/migration/howto-importing-wallet.rst:60
+msgid ""
+"You are asked to define where to put your individual balances if you have"
+" multiple accounts."
+msgstr ""
+
+#: ../../source/migration/howto-importing-wallet.rst:63
+msgid ""
+"After confirming all required steps, your accounts and the balances "
+"should appear accordingly."
+msgstr ""
+
+#: ../../source/migration/howto-importing-wallet.rst:66
+msgid ""
+"After importing your accounts and balances, we recommend to make a new "
+"backup of your wallet that will then contain access to your newly "
+"imported accounts and corresponding balances."
+msgstr ""
+
+#: ../../source/migration/howto-importing-wallet.rst:71
+msgid "CLI wallet"
+msgstr ""
+
+#: ../../source/migration/howto-importing-wallet.rst:73
+msgid "The wallet backup file can be imported by ::"
+msgstr ""
+
+#: ../../source/migration/howto-importing-wallet.rst:77
+msgid "Note that this doesn't automatically claim the balances."
+msgstr ""
+
+#: ../../source/migration/howto-importing-wallet.rst:80
+msgid "Claiming Balances"
+msgstr ""
+
+#: ../../source/migration/howto-importing-wallet.rst:82
+msgid ""
+"For each account ``<my_account_name>`` in your wallet (run "
+"``list_my_accounts`` to see them):::"
+msgstr ""
+
+#: ../../source/migration/howto-importing-wallet.rst:86
+msgid ""
+"In the release tag, this will create a full backup of the wallet after "
+"every key it imports. If you have thousands of keys, this is quite slow "
+"and also takes up a lot of disk space. Monitor your free disk space "
+"during the import and, if necessary, periodically erase the backups to "
+"avoid filling your disk. The latest code only saves your wallet after all"
+" keys have been imported."
+msgstr ""
+
+#: ../../source/migration/howto-importing-wallet.rst:92
+msgid ""
+"The command above will only import your keys into the wallet and will "
+"**not** claim your funds. In order to claim the funds you need to "
+"execute:::"
+msgstr ""
+
+#: ../../source/migration/howto-importing-wallet.rst:97
+msgid ""
+"If you would like to preview this claiming transaction, you can replace "
+"the ``true`` with a ``false``. That way, the transaction will not be "
+"broadcast."
+msgstr ""
+
+#: ../../source/migration/howto-importing-wallet.rst:101
+msgid "To verify the results, you can run:::"
+msgstr ""
+
+#: ../../source/migration/howto-importing-wallet.rst:106
+msgid "Manually claim balances"
+msgstr ""
+
+#: ../../source/migration/howto-importing-wallet.rst:108
+msgid "Balances can be imported one by one. The proper syntax to do so is::"
+msgstr ""
+
+#: ../../source/migration/howto-importing-wallet.rst:112
+msgid ""
+"But I always import my accounts and then use the GUI to import my "
+"balances cause it's way easier."
+msgstr ""
+
+#: ../../source/migration/howto-importing-wallet-remarks.rst:2
+msgid "Migration Remarks"
+msgstr ""
+
+#: ../../source/migration/howto-importing-wallet-remarks.rst:14
+msgid "Remarks on Private Keys"
+msgstr ""
+
+#: ../../source/migration/howto-importing-wallet-remarks.rst:15
+msgid ""
+"Depending on the users (trade) activity and investors behavior please "
+"also note the following:"
+msgstr ""
+
+#: ../../source/migration/howto-importing-wallet-remarks.rst:18
+msgid ""
+"**TITAN Transactions**: If there is a chance that you might have received"
+" a TITAN transaction (default transaction format) since you last opened "
+"your wallet, you are required to completely synchronize with the "
+"BitShares 1.0 blockchain to catch that transaction and generate the "
+"corresponding private key. After that, you can use the graphene-"
+"compatible wallet export function."
+msgstr ""
+
+#: ../../source/migration/howto-importing-wallet-remarks.rst:25
+msgid ""
+"**Market transactions**: Each market order is associated a key that is "
+"derived when placing your order and is hence part of your wallet. Please "
+"note that for the transition to BitShares 2.0, all open orders (except "
+"short orders) will be closed and the funds returned to their owners."
+msgstr ""
+
+#: ../../source/migration/howto-importing-wallet-remarks.rst:31
+msgid ""
+"**Cold Storage Funds**: You cold storage funds can be claimed by simply "
+"importing your cold private key into BitShares 2.0. This will result in a"
+" transaction that claims your funds and puts them into your account."
+msgstr ""
+
+#: ../../source/migration/howto-importing-wallet-remarks.rst:36
+msgid ""
+"**PTS/AGS donators**: You can import your corresponding private keys into"
+" BitShares 2.0 directly to claim your funds. Note that, since the web "
+"wallet cannot parse your `wallet.dat` file, you may be required to "
+"manually dump your private keys. with a 3rd party tool. If you feel not "
+"comfortable with this, we recommend you import your `wallet.dat` file "
+"into the BitShares 1.0 client and export a graphene-compatible wallet "
+"file that can be imported in the BitShares 2.0 web wallet."
+msgstr ""
+
+#: ../../source/migration/howto-importing-wallet-remarks.rst:46
+msgid "Technical Explanation"
+msgstr ""
+
+#: ../../source/migration/howto-importing-wallet-remarks.rst:47
+msgid ""
+"The BitShares 2.0 wallet architecture is vastly different than BitShares "
+"1.0. In BitShares 1.0, each account consists of dozens or even thousands "
+"of keys, each of which is controlling a small portion of your balance and"
+" for TITAN users, none of the balances associated with your account use "
+"the same key as your account.  Under BitShares 2.0, all of these "
+"\"balances\" become unique accounts rather than a single logical account."
+" The BitShares 2.0 wallet has an \"import\" interface that allows you to "
+"specify a set of private keys and the name of an account that you would "
+"like to receive all of the funds associated with those keys. Then it "
+"generates a transaction that spends the full balances from all accounts "
+"associated with those keys to your new unified BitShares 2.0 account. The"
+" BitShares 0.9.x wallet provides a utility to dump all private keys "
+"associated with a given account to make the migration process easy."
+msgstr ""
+
+#: ../../source/migration/index.rst:3
+msgid "Migrating from BitShares 1.0 to BitShares 2.0"
+msgstr ""
+
+#: ../../source/migration/index.rst:5
+msgid ""
+"This migration tutorial is relevant only to those customers and investors"
+" that have participated in BitShares 1.0. We show improvements, new "
+"features and give assistance for claiming your funds in BitShares 2.0."
+msgstr ""
+
+#: ../../source/migration/legacy-blockchain.rst:3
+msgid "Legacy BitShares 0.9.3 Blockchain Download"
+msgstr ""
+
+#: ../../source/migration/legacy-blockchain.rst:5
+msgid ""
+"One crucial step in teh migration still takes quite some time and is "
+"technically invovled for those that do **not** see their funds in "
+"BitShares 0.9.3: The need to download the blockchain from the legacy "
+"network. Since only a few nodes still serve the raw blockchain data, we "
+"here provide the full blockchain to download:"
+msgstr ""
+
+#: ../../source/migration/legacy-blockchain.rst:11
+msgid ":download:`Blockchain Torrent <BitShares-0.9.3-full-blockchain.torrent>`"
+msgstr ""
+
+#: ../../source/migration/legacy-blockchain.rst:14
+msgid "Usage"
+msgstr ""
+
+#: ../../source/migration/legacy-blockchain.rst:16
+msgid ""
+"Download the Torrent and use it to obtain a full copy of the `chain/` "
+"folder"
+msgstr ""
+
+#: ../../source/migration/legacy-blockchain.rst:17
+msgid "Move this chain folder into your BitShares shared directory:"
+msgstr ""
+
+#: ../../source/migration/legacy-blockchain.rst:19
+msgid "Windows: `%APPDATA%/BitShares`"
+msgstr ""
+
+#: ../../source/migration/legacy-blockchain.rst:20
+msgid "Mac: `~/Library/Application Support/BitShares`"
+msgstr ""
+
+#: ../../source/migration/legacy-blockchain.rst:21
+msgid "Linux: `~/.BitShares`"
+msgstr ""
+
+#: ../../source/migration/legacy-blockchain.rst:23
+msgid ""
+"Start BitShares 0.9.3 (not older) and let it re-index the database (be "
+"patient)"
+msgstr ""
+
+#: ../../source/migration/legacy-blockchain.rst:24
+msgid "Provide your Passphrase"
+msgstr ""
+
+#: ../../source/migration/legacy-blockchain.rst:25
+msgid ""
+"Goto `account list->advanced settings->console` and run `rescan`. "
+"Depending on the amount of accounts in your wallet, this steps should "
+"only take very few minutes. You can see the syncing progress from the "
+"status bar or from the info command in the console."
+msgstr ""
+
+#: ../../source/migration/legacy-blockchain.rst:26
+msgid ""
+"After completion, you should now see your funds again and can continue "
+"with exporting your wallet for BitShares 2"
+msgstr ""
+
+#: ../../source/migration/legacy-blockchain.rst:29
+msgid "Verification"
+msgstr ""
+
+#: ../../source/migration/what-changed.rst:3
+msgid "What has Changed since BitShares 0.9?"
+msgstr ""
+
+#: ../../source/migration/what-changed.rst:5
+msgid ""
+"**BitAssets are Contracts-For-Difference**: Our research has identified "
+"an improved mechanism to achieve a solid *peg* of bitAssets to its "
+"underlay. BitAssets like the bitUSD in BitShares 2.0 will always trade "
+"for *at least* the value of its underlying asset, i.e. $1. We have "
+"summarized the economical analysis and incentives for market participants"
+" here: `bitAssets 2.0`_"
+msgstr ""
+
+#: ../../source/migration/what-changed.rst:12
+msgid ""
+"**Faster Blocks**: Initially, the BitShares 2.0 blockchain will come with"
+" 3 seconds block interval with the option to reduce down to 1 second if "
+"shareholders agree."
+msgstr ""
+
+#: ../../source/migration/what-changed.rst:16
+msgid ""
+"**Industrial Performance**: BitShares 2.0 can support massive load and "
+"works well beyond 100k transactions per second. Find out how we achieve "
+"`industrial performance and scalability`_."
+msgstr ""
+
+#: ../../source/migration/what-changed.rst:20
+msgid ""
+"**New Reactive UI**: The BitShares 1.0 user interface was powerful but "
+"lacking in responsiveness and perfomance. For Bitshares 2.0 we've "
+"reimplemented the whole wallet using the React.js framework developed by "
+"Facebook, which is well-known for having excellent performance. The new "
+"BitShares UI is an entirely browser-based wallet, with private keys "
+"maintained in the browser. We expect a flourishing ecosystem of forked "
+"and tweaked wallets based off of our UI."
+msgstr ""
+
+#: ../../source/migration/what-changed.rst:25
+msgid ""
+"**Accounts must be registered**: In BitShares 2.0 we have separated "
+"*authorities* from transaction partners. Hence, if Alice wants to send "
+"funds to Bob, it may be required that only Celine signs for that "
+"transaction. Also, BitShares 2.0 has `a referral program`_. Both features"
+" combined make it necessary that participants *register* an account on "
+"the blockchain."
+msgstr ""
+
+#: ../../source/migration/what-changed.rst:32
+msgid ""
+"**No more Hierarchies in Account Names**: In BitShares 1, there have been"
+" hierarchies in account names. Namely, you could only create a sub-"
+"account ``home.wallet`` if you also owned ``wallet``. In BitShares 2.0, "
+"these hierarchies no longer exist and to register ``home.wallet`` you "
+"don't need to own ``wallet``."
+msgstr ""
+
+#: ../../source/migration/what-changed.rst:38
+msgid ""
+"**Explicit Privacy**: The *TITAN* technology in BitShares 2.0 slowed down"
+" blockchain processing significantly. Because of this and because TITAN "
+"did not really offer good privacy, we eliminated TITAN as a default "
+"transaction feature. Hence: **Account transactions are public now as "
+"well.** However, since we recognize the value of financial privacy, we "
+"offer *blinded* transactions that hide the transferred *amount*, and "
+"*stealth* transactions that hide the sender and receiver. A combination "
+"of both is also possible."
+msgstr ""
+
+#: ../../source/migration/what-changed.rst:48
+msgid ""
+"**Prices are Fractions**: To circumvent rounding errors, all prices in "
+"BitShares 2.0 are represented as fractions."
+msgstr ""
+
+#: ../../source/migration/what-changed.rst:52
+msgid ""
+"**Delegates are now Witnesses and Payed Positions are now Budget Items**:"
+" Since we have separated the business part from the block producing part,"
+" we now call block producers (formerly known as *delegates*) witnesses, "
+"while the additional payed position for workers are called budget items."
+msgstr ""
+
+#: ../../source/migration/what-is-new.rst:3
+msgid "What is New in BitShares 2.0"
+msgstr ""
+
+#: ../../source/migration/what-is-new.rst:5
+msgid ""
+"**Votable Network Parameters**: BitShares 2.0 will allow its shareholders"
+" to fine-tune any parameter available to the protocol. This includes, "
+"block size, block interval, but also the payment for block producers and "
+"transaction fees."
+msgstr ""
+
+#: ../../source/migration/what-is-new.rst:10
+msgid ""
+"**Flexible and Dynamic Access Control**: BitShares 2.0 allows customers "
+"and participants a flexible and dynamic access to its funds or account "
+"handle. A so called *Authority* can consist of a flat hierarchy similar "
+"to *multi-signature* in Bitcoin, but could also support tree hierarchies "
+"never to be seen before. Read more about this about `dynamic account "
+"permissions`_."
+msgstr ""
+
+#: ../../source/migration/what-is-new.rst:17
+msgid ""
+"**Transferable Account Names**: Since Control over Funds is separated "
+"from the control over an account, we can have transferable account names "
+"that are registered on the blockchain. Named accounts allows for much "
+"easier transfers because no cryptic strings needs to be handed out. Read "
+"more about `transferable named accounts`_."
+msgstr ""
+
+#: ../../source/migration/what-is-new.rst:23
+msgid ""
+"**On-Chain Proposed Transactions**: In traditional crypto currencies, a "
+"multi-signature transaction has to be transfered to its corresponding "
+"signers on separated communication channels (off-chain). BitShares 2.0 "
+"allows to propose transactions on the chain and have the signers be "
+"notified for their required signature automatically. No more manual "
+"communications are required."
+msgstr ""
+
+#: ../../source/migration/what-is-new.rst:30
+msgid ""
+"**New Full-Node/Client Concept**: We recognize the hassles some people "
+"had when synchronizing the BitShares 1.0 blockchain with the heavy-"
+"weighted BitShares full client. In order to offer more comfort and a "
+"faster trading experience, we decided to separated the user-interface "
+"from the block syncing core component that connects to the peer-to-peer "
+"network. Of course, both are open source and a full node can run easily, "
+"we understand that some users mainly prefer to use the frontend not "
+"bothering about the blockchain."
+msgstr ""
+
+#: ../../source/migration/what-is-new.rst:39
+msgid ""
+"**Referral Program**: PayPal and Dwolla showed the success of referral "
+"programs, a program that could easily and cheaper be implemented in a "
+"decentralized software protocol. Hence we took our chance and implemented"
+" a blockchain based referral program. From every transaction fee, paid by"
+" a customer you referred, you will get a fraction. Of course, this "
+"fraction can be tuned by shareholders! Read more about the `referral "
+"program`_."
+msgstr ""
+
+#: ../../source/migration/what-is-new.rst:47
+msgid ""
+"**Recurring & Scheduled Payments**: We wanted to offer a way to have our "
+"rent payed automatically. So we implemented it in the blockchain. In "
+"BitShares 2.0, participants are capable of allowing others to withdraw "
+"funds from your account. Of course, you can define a daily/weekly or "
+"monthly limit. Read more about `recurring and scheduled payments`_."
+msgstr ""
+
+#: ../../source/migration/what-is-new.rst:54
+msgid ""
+"**Additional Privatized BitAssets**: In contrast to Market Pegged Assets "
+"(also known as BitAssets) that have a price feed published by witnesses "
+"that have approval of shareholders, a *privatized* bitasset allows to "
+"create market pegged assets that have an individual set of price feed "
+"publishers that do not need shareholders' approval. Hence, everyone can "
+"create a privatized bitAsset to track an individual value, such as "
+"indices, or binary predictions."
+msgstr ""
+

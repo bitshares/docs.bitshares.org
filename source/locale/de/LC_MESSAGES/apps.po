@@ -1,0 +1,714 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Fabian Schuh
+# This file is distributed under the same license as the Graphene Technical
+# Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Graphene Technical Documentation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-03 11:56+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/apps/cli-faq.rst:3
+msgid "CLI Wallet FAQ"
+msgstr ""
+
+#: ../../source/apps/cli-faq.rst:6
+msgid ""
+"Why does the CLI client crash immediately when I try to run it for the "
+"first time?"
+msgstr ""
+
+#: ../../source/apps/cli-faq.rst:7
+msgid ""
+"The CLI client is unable to run on its own, i.e. without being connected "
+"to the witness node (via a web socket connection). So to successfully run"
+" the CLI client you need to do this:"
+msgstr ""
+
+#: ../../source/apps/cli-faq.rst:11
+msgid ""
+"make sure you have this entry uncommented in the "
+"`witness_node_data_dir/config.ini` file `rpc-endpoint = 127.0.0.1:8090`"
+msgstr ""
+
+#: ../../source/apps/cli-faq.rst:14
+msgid ""
+"before you start the CLI client, you need to start the witness node (and "
+"wait a while till it's up and running)"
+msgstr ""
+
+#: ../../source/apps/cli-faq.rst:18
+msgid "How can I close the CLI client in a clean way?"
+msgstr ""
+
+#: ../../source/apps/cli-faq.rst:19
+msgid ""
+"In Windows closing the whole window produces a nasty exception. In "
+"Windows you can try `ctrl-d` which stops the process but stil produces a "
+"nasty exception."
+msgstr ""
+
+#: ../../source/apps/cli-faq.rst:24
+msgid ""
+"How can I import to my CLI client a wallet originally created in the web "
+"GUI?"
+msgstr ""
+
+#: ../../source/apps/cli-faq.rst:25
+msgid ""
+"CLI and WEB wallet are two separated applications. They use separated "
+"ways to represent backups. You can currently only manually import keys "
+"from the GUI into the CLI."
+msgstr ""
+
+#: ../../source/apps/cli-faq.rst:30
+msgid "How can I create, register and upgrade an account to Lifetime Membership?"
+msgstr ""
+
+#: ../../source/apps/cli-faq.rst:31
+msgid ""
+"Without already having an account, or knowing someone that has an "
+"account, it is not possible. You can't create accounts out of nowhere."
+msgstr ""
+
+#: ../../source/apps/cli-faq.rst:34
+msgid ""
+"But you can work around it by importing an active key of a **Lifetime "
+"Member** account that has funds:"
+msgstr ""
+
+#: ../../source/apps/cli-faq.rst:37
+msgid ""
+"In the gui, go to the permissions tab of an account that is funded and "
+"has a LTM status."
+msgstr ""
+
+#: ../../source/apps/cli-faq.rst:39
+msgid "Click on the BTS public key on the ACTIVE tab and copy the private key."
+msgstr ""
+
+#: ../../source/apps/cli-faq.rst:41
+msgid "In the cli-wallet run: `import_key <account_name> <private_key>`"
+msgstr ""
+
+#: ../../source/apps/cli-faq.rst:43
+msgid ""
+"Then run: `suggest_brain_key` and copy the brain key. (You might want to "
+"make a backup of your brain key somewhere.)"
+msgstr ""
+
+#: ../../source/apps/cli-faq.rst:47
+msgid ""
+"Create a new account with this command: `create_account_with_brain_key "
+"<brainkey> <new_account_name> <imported_name> <imported_name> true`"
+msgstr ""
+
+#: ../../source/apps/cli-faq.rst:50
+msgid ""
+"This will create a new account called `<new_account_name>` and set the "
+"registrar and referrer to `<imported_name>`.  The brainkey can be used to"
+" regenerate the account (even in the GUI wallet).  You can manually "
+"delete the other active key from the `wallet.json` file."
+msgstr ""
+
+#: ../../source/apps/cliwallet.rst:3
+msgid "CLI Wallet"
+msgstr ""
+
+#: ../../source/apps/cliwallet.rst:5
+msgid "The following will explain how to use the console wallet (not GUI)."
+msgstr ""
+
+#: ../../source/apps/cliwallet.rst:8
+msgid "Launching"
+msgstr ""
+
+#: ../../source/apps/cliwallet.rst:10
+msgid ""
+"The `cli_wallet` creates a local `wallet.json` file that contains the "
+"encrypted private keys required to access the funds in your account. It "
+"**requires** a running witness node (not necessarily locally) and "
+"connects to it on launch:"
+msgstr ""
+
+#: ../../source/apps/cliwallet.rst:18
+msgid ""
+"Depending on the actual chain that you want to connect to your may need "
+"to specifiy `--chain-id`."
+msgstr ""
+
+#: ../../source/apps/cliwallet.rst:22 ../../source/apps/node.rst:74
+msgid "Enabling Remote Procedure Calls (RPC)"
+msgstr ""
+
+#: ../../source/apps/cliwallet.rst:24
+msgid ""
+"In order to allow RPC calls for wallet operations (spend, buy, sell, ...)"
+" you can choose between pure RPC or RPC-HTTP requests. In this tutorial, "
+"the latter is prefered since well established libraries make use of the "
+"RPC-HTTP protocol."
+msgstr ""
+
+#: ../../source/apps/cliwallet.rst:28
+msgid ""
+"The cli-wallet can open a RPC port so that you can interface your "
+"application with it. You have the choices of * websocket RPC via the "
+"``-r`` parameter, and * HTTP RPC via the ``-H`` parameter:"
+msgstr ""
+
+#: ../../source/apps/cliwallet.rst:33
+msgid "To enable RPC-HTTP in your wallet you need to run:"
+msgstr ""
+
+#: ../../source/apps/cliwallet.rst:42
+msgid "depending on the kind of RPC protocol."
+msgstr ""
+
+#: ../../source/apps/cliwallet.rst:44
+msgid ""
+"This will open the port 8092 for local queries only. It is not "
+"recommended to publicly expose your wallet!"
+msgstr ""
+
+#: ../../source/apps/cliwallet.rst:47
+msgid ""
+"A tutorial for the BitShares cli-wallet can be found in the "
+":doc:`BitShares tutorials <../bitshares/tutorials/cli-wallet-usage>`."
+msgstr ""
+
+#: ../../source/apps/delayednode.rst:3
+msgid "Delayed Full Node"
+msgstr ""
+
+#: ../../source/apps/delayednode.rst:5
+msgid ""
+"The delayed full node node will provide us with a delayed and several "
+"times confirmed and verified blockchain. Even though DPOS is more "
+"resistant against forks than most other blockchain consensus schemes, we "
+"delay the blockchain here to reduces the risk of forks even more. In the "
+"end, the delayed full node is supposed to never enter an invalid fork."
+msgstr ""
+
+#: ../../source/apps/delayednode.rst:11
+msgid ""
+"The delayed full node will need the IP address and port of the p2p-"
+"endpoint from the trusted full node and the number of blocks that should "
+"be delayed.  We also need to open the RPC/Websocket port (to the local "
+"network!) so that we can interface using RPC-JSON calls."
+msgstr ""
+
+#: ../../source/apps/delayednode.rst:16
+msgid ""
+"For our example and for 10 blocks delaye (i.e. 30 seconds for 3 second "
+"block intervals), we need:"
+msgstr ""
+
+#: ../../source/apps/index.rst:3
+msgid "Blockchain Interaction"
+msgstr ""
+
+#: ../../source/apps/index.rst:5
+msgid ""
+"To interface your existing platform with BitShares, you can make use of "
+":doc:`/api/rpc` and :doc:`/api/websocket` to either a :doc:`full node "
+"</apps/node>` (for monitoring only) or the :doc:`CLI wallet "
+"</apps/cliwallet>` (for accessing funds)."
+msgstr ""
+
+#: ../../source/apps/index.rst:10
+msgid ""
+"All API calls are formated in JSON and return JSON only. You can read "
+"more about the API in the separated :doc:`API documentation "
+"</api/index>`."
+msgstr ""
+
+#: ../../source/apps/index.rst:13
+msgid ""
+"The Graphene toolkit comprises several tools that allow interaction with "
+"the blockchain on different levels and shall thus be briefly described in"
+" the following sections."
+msgstr ""
+
+#: ../../source/apps/node.rst:3
+msgid "Full Node"
+msgstr ""
+
+#: ../../source/apps/node.rst:4
+msgid ""
+"We here distringuish between full nodes (a.k.a. *non-block producing* "
+"witness nodes) and *block producing* witness nodes. Both are implemented "
+"by the same executable but the latter requires some additional parameters"
+" to be defined and the corresponding witness voted active by the "
+"shareholders."
+msgstr ""
+
+#: ../../source/apps/node.rst:9
+msgid ""
+"Both represent nodes in the network that verify all transactions and "
+"blocks against the current state of the overall network. Hence, we "
+"recommend all service providers to run an maintain their own **full "
+"nodes** for reliability and security reasons."
+msgstr ""
+
+#: ../../source/apps/node.rst:15
+msgid "Full Nodes"
+msgstr ""
+
+#: ../../source/apps/node.rst:17
+msgid "The full node is launched according to:"
+msgstr ""
+
+#: ../../source/apps/node.rst:23
+msgid ""
+"It takes an optional `--data-dir` parameter to define a working and data "
+"directory to store the configuration, blockchain and local databases "
+"(defaults to ``witness_node_data_dir``. Those will be automatically "
+"created with default settings if they don't exist locally set."
+msgstr ""
+
+#: ../../source/apps/node.rst:29
+msgid "Configuration"
+msgstr ""
+
+#: ../../source/apps/node.rst:31
+msgid ""
+"The configuration file ``config.ini`` in your data directory is commented"
+" and contains the following essential settings:"
+msgstr ""
+
+#: ../../source/apps/node.rst:34
+msgid "``p2p-endpoint``"
+msgstr ""
+
+#: ../../source/apps/node.rst:35
+msgid "Endpoint for P2P node to listen on"
+msgstr ""
+
+#: ../../source/apps/node.rst:36
+msgid "``seed-node``"
+msgstr ""
+
+#: ../../source/apps/node.rst:37
+msgid "P2P nodes to connect to on startup (may specify multiple times)"
+msgstr ""
+
+#: ../../source/apps/node.rst:38
+msgid "``checkpoint``"
+msgstr ""
+
+#: ../../source/apps/node.rst:39
+msgid "Pairs of [BLOCK_NUM,BLOCK_ID] that should be enforced as checkpoints."
+msgstr ""
+
+#: ../../source/apps/node.rst:40
+msgid "``rpc-endpoint``"
+msgstr ""
+
+#: ../../source/apps/node.rst:41
+msgid "Endpoint for websocket RPC to listen on (e.g. ``0.0.0.0:8090``)"
+msgstr ""
+
+#: ../../source/apps/node.rst:42
+msgid "``rpc-tls-endpoint``"
+msgstr ""
+
+#: ../../source/apps/node.rst:43
+msgid "Endpoint for TLS websocket RPC to listen on"
+msgstr ""
+
+#: ../../source/apps/node.rst:44
+msgid "``server-pem``"
+msgstr ""
+
+#: ../../source/apps/node.rst:45
+msgid "The TLS certificate file for this server"
+msgstr ""
+
+#: ../../source/apps/node.rst:46
+msgid "``server-pem-password``"
+msgstr ""
+
+#: ../../source/apps/node.rst:47
+msgid "Password for this certificate"
+msgstr ""
+
+#: ../../source/apps/node.rst:48
+msgid "``genesis-json``"
+msgstr ""
+
+#: ../../source/apps/node.rst:49
+msgid "File to read Genesis State from"
+msgstr ""
+
+#: ../../source/apps/node.rst:50
+msgid "``api-access``"
+msgstr ""
+
+#: ../../source/apps/node.rst:51
+msgid "JSON file specifying API permissions"
+msgstr ""
+
+#: ../../source/apps/node.rst:52
+msgid "``enable-stale-production``"
+msgstr ""
+
+#: ../../source/apps/node.rst:53
+msgid ""
+"Enable block production, even if the chain is stale. (unless for private "
+"testnets should be ``false``)"
+msgstr ""
+
+#: ../../source/apps/node.rst:54
+msgid "``required-participation``"
+msgstr ""
+
+#: ../../source/apps/node.rst:55
+msgid ""
+"Percent of witnesses (0-99) that must be participating in order to "
+"produce blocks"
+msgstr ""
+
+#: ../../source/apps/node.rst:56
+msgid "``allow-consecutive``"
+msgstr ""
+
+#: ../../source/apps/node.rst:57
+msgid ""
+"Allow block production, even if the last block was produced by the same "
+"witness."
+msgstr ""
+
+#: ../../source/apps/node.rst:58
+msgid "``witness-id``"
+msgstr ""
+
+#: ../../source/apps/node.rst:59
+msgid ""
+"ID of witness controlled by this node (e.g. \"1.6.5\", quotes are "
+"required, may specify multiple times)"
+msgstr ""
+
+#: ../../source/apps/node.rst:60
+msgid "``private-key``"
+msgstr ""
+
+#: ../../source/apps/node.rst:61
+msgid "Tuple of ``[PublicKey, WIF private key]`` (may specify multiple times)"
+msgstr ""
+
+#: ../../source/apps/node.rst:62
+msgid "``track-account``"
+msgstr ""
+
+#: ../../source/apps/node.rst:63
+msgid "Account ID to track history for (may specify multiple times)"
+msgstr ""
+
+#: ../../source/apps/node.rst:65
+msgid "``bucket-size``"
+msgstr ""
+
+#: ../../source/apps/node.rst:65
+msgid ""
+"Track market history by grouping orders into buckets of equal size "
+"measured in seconds specified as a JSON array of numbers"
+msgstr ""
+
+#: ../../source/apps/node.rst:68
+msgid "``history-per-size``"
+msgstr ""
+
+#: ../../source/apps/node.rst:68
+msgid ""
+"How far back in time to track history for each bucket size, measured in "
+"the number of buckets (default: 1000)"
+msgstr ""
+
+#: ../../source/apps/node.rst:70
+msgid ""
+"Folders and files are considered to be relative to the working directory "
+"(i.e. the directory from which the executables are launched from)"
+msgstr ""
+
+#: ../../source/apps/node.rst:76
+msgid ""
+"In order to allow RPC calls for blockchain operations you need to modify "
+"the following entry in the configuration file:::"
+msgstr ""
+
+#: ../../source/apps/node.rst:81
+msgid ""
+"This will open the port 8090 for global queries only. Since the witness "
+"node only maintains the blockchain and (unless you are an actively block "
+"producing witness) no private keys are involved, it is safe to expose "
+"your witness to the internet."
+msgstr ""
+
+#: ../../source/apps/node.rst:87
+msgid "Restarting the witness node"
+msgstr ""
+
+#: ../../source/apps/node.rst:89
+msgid ""
+"When restarting the witness node, it may be required to append the "
+"`--replay-blockchain` parameter to regenerate the local (in-memory) "
+"blockchain state."
+msgstr ""
+
+#: ../../source/apps/node.rst:94
+msgid "Enabling Block Production"
+msgstr ""
+
+#: ../../source/apps/node.rst:96
+msgid "For block production, the required parameters to be defined are"
+msgstr ""
+
+#: ../../source/apps/node.rst:98
+msgid "``witness-id`` and"
+msgstr ""
+
+#: ../../source/apps/node.rst:99
+msgid "``private-key`` as a pair of public key and wif private key."
+msgstr ""
+
+#: ../../source/apps/node.rst:101
+msgid "The witness-id and public key can be obtain via:::"
+msgstr ""
+
+#: ../../source/apps/node.rst:111
+msgid ""
+"Assuming we want to maintain the witness with id ``1.6.10``, the "
+"corresponding setting would be:::"
+msgstr ""
+
+#: ../../source/apps/node.rst:116
+msgid ""
+"The required private keys can be exported from most wallets (e.g. "
+"``dump_private_keys``) for configuration according to:::"
+msgstr ""
+
+#: ../../source/apps/webwallet.rst:3
+msgid "Web Wallet"
+msgstr ""
+
+#: ../../source/apps/webwallet.rst:5
+msgid ""
+"The web wallet is a wallet implemented solely in Javascript. It makes use"
+" of modern Web development tools and libraries -- to just a few:"
+msgstr ""
+
+#: ../../source/apps/webwallet.rst:8
+msgid "Coffee-Script"
+msgstr ""
+
+#: ../../source/apps/webwallet.rst:9
+msgid "LESS"
+msgstr ""
+
+#: ../../source/apps/webwallet.rst:10
+msgid "React-JS"
+msgstr ""
+
+#: ../../source/apps/webwallet.rst:11
+msgid "WebPack"
+msgstr ""
+
+#: ../../source/apps/webwallet.rst:12
+msgid "LoDash"
+msgstr ""
+
+#: ../../source/apps/webwallet.rst:13
+msgid "Foundation"
+msgstr ""
+
+#: ../../source/apps/webwallet.rst:14
+msgid "Highcharts"
+msgstr ""
+
+#: ../../source/apps/webwallet.rst:15
+msgid "Mocha"
+msgstr ""
+
+#: ../../source/apps/webwallet.rst:16
+msgid "..."
+msgstr ""
+
+#: ../../source/apps/webwallet.rst:18
+msgid ""
+"The webwallet (per default) connects to a full node (non-block-producing "
+"witness node) on the same host via websockets."
+msgstr ""
+
+#: ../../source/apps/webwallet.rst:22
+msgid "Download"
+msgstr ""
+
+#: ../../source/apps/webwallet.rst:24
+msgid "The sources can be downloaded from github."
+msgstr ""
+
+#: ../../source/apps/webwallet.rst:30
+msgid ""
+"They consist of libraries, a JS-console, and the wallet, as well as other"
+" tools."
+msgstr ""
+
+#: ../../source/apps/webwallet.rst:34
+msgid "Installing Dependencies"
+msgstr ""
+
+#: ../../source/apps/webwallet.rst:36
+msgid "First, we need to install the dependencies via `npm`:"
+msgstr ""
+
+#: ../../source/apps/webwallet.rst:43
+msgid "Bundling"
+msgstr ""
+
+#: ../../source/apps/webwallet.rst:45
+msgid "We now bundle the web wallet into JavaScript, CSS, and HTML assets."
+msgstr ""
+
+#: ../../source/apps/webwallet.rst:52
+msgid "The resulting assets can be found in the `dist` folder."
+msgstr ""
+
+#: ../../source/apps/webwallet.rst:55
+msgid "Testing Bundle"
+msgstr ""
+
+#: ../../source/apps/webwallet.rst:62
+msgid "Live Development"
+msgstr ""
+
+#: ../../source/apps/witness-faq.rst:3
+msgid "Witness FAQ"
+msgstr ""
+
+#: ../../source/apps/witness-faq.rst:6
+msgid "What is the best way to interact with the witness node?"
+msgstr ""
+
+#: ../../source/apps/witness-faq.rst:7
+msgid ""
+"The only way you can interact with the witness node is through the CLI "
+"client by using its API.  You can also use the GUI (i.e. the light "
+"client). In the GUI, change `Settings -> API connection`, add "
+"`ws://127.0.0.1:8090/ws` (according to settings of your witness node) and"
+" select it."
+msgstr ""
+
+#: ../../source/apps/witness-faq.rst:14
+msgid "How do I check whether the witness node is already synced?"
+msgstr ""
+
+#: ../../source/apps/witness-faq.rst:15
+msgid ""
+"Run the `info` command in the CLI client and check the `head_block_age` "
+"value."
+msgstr ""
+
+#: ../../source/apps/witness-faq.rst:18
+msgid "If it seems to be unable to sync beyond a certain date"
+msgstr ""
+
+#: ../../source/apps/witness-faq.rst:19
+msgid ""
+"You should always make sure you use the newest build available `here_` as"
+" earlier releases will get stuck due to hard-forks."
+msgstr ""
+
+#: ../../source/apps/witness-faq.rst:25
+msgid ""
+"Whose private key is `[\"BTS6MRyAjQ..\",\"5KQwrPbwdL..\"]`? Why is it "
+"predefined ion the `config.ini`?"
+msgstr ""
+
+#: ../../source/apps/witness-faq.rst:26
+msgid ""
+"It's a shared key for some special purpose. But I don't remember what it "
+"is. If I remember BM or someone else has ever explained it in the forum, "
+"but I can't find the post right now. Just let it be there. I think if you"
+" comment it out, it will appear again automatically, it's generated by "
+"the code of witness_node."
+msgstr ""
+
+#: ../../source/apps/witness-faq.rst:33
+msgid ""
+"What is the meaning of all those different text colors in the witness "
+"node console?"
+msgstr ""
+
+#: ../../source/apps/witness-faq.rst:35
+msgid "green - debug"
+msgstr ""
+
+#: ../../source/apps/witness-faq.rst:36
+msgid "white - info/default"
+msgstr ""
+
+#: ../../source/apps/witness-faq.rst:37
+msgid "yellow/brown - warning"
+msgstr ""
+
+#: ../../source/apps/witness-faq.rst:38
+msgid "red - error"
+msgstr ""
+
+#: ../../source/apps/witness-faq.rst:39
+msgid "blue - some kind of info, I don't know"
+msgstr ""
+
+#: ../../source/apps/witness-faq.rst:41
+msgid ""
+"Related source files are in `libraries/fc/include/fc/log/` and "
+"`libraries/fc/src/log/`."
+msgstr ""
+
+#: ../../source/apps/witness-faq.rst:45
+msgid "How can I close the witness node in a clean way?"
+msgstr ""
+
+#: ../../source/apps/witness-faq.rst:46
+msgid "In windows use `ctrl-c`."
+msgstr ""
+
+#: ../../source/apps/witness-faq.rst:49
+msgid "Is it safe to delete logs stored in `witness_node_data_dir\\logs\\p2p`?"
+msgstr ""
+
+#: ../../source/apps/witness-faq.rst:50
+msgid "Yes, but"
+msgstr ""
+
+#: ../../source/apps/witness-faq.rst:52
+msgid "they're rotated automatically after 24 hours anyway"
+msgstr ""
+
+#: ../../source/apps/witness-faq.rst:53
+msgid ""
+"if you don't use them you should probably modify `config.ini` so they "
+"aren't written to disk in the first place."
+msgstr ""
+
+#: ../../source/apps/witness-faq.rst:57
+msgid "What is the difference between public and private testnet?"
+msgstr ""
+
+#: ../../source/apps/witness-faq.rst:58
+msgid ""
+"Not much. The biggest difference is that public testnet are intended for "
+"wider audience and has fixed (not easy to change parameters), while "
+"private testnets can be setup with arbitrary settings."
+msgstr ""
+

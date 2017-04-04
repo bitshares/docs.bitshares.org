@@ -1,0 +1,2626 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Fabian Schuh
+# This file is distributed under the same license as the Graphene Technical
+# Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Graphene Technical Documentation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-03 11:56+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/integration/apps/cli-faq.rst:3
+msgid "CLI Wallet FAQ"
+msgstr ""
+
+#: ../../source/integration/apps/cli-faq.rst:6
+msgid ""
+"Why does the CLI client crash immediately when I try to run it for the "
+"first time?"
+msgstr ""
+
+#: ../../source/integration/apps/cli-faq.rst:7
+msgid ""
+"The CLI client is unable to run on its own, i.e. without being connected "
+"to the witness node (via a web socket connection). So to successfully run"
+" the CLI client you need to do this:"
+msgstr ""
+
+#: ../../source/integration/apps/cli-faq.rst:11
+msgid ""
+"make sure you have this entry uncommented in the "
+"`witness_node_data_dir/config.ini` file `rpc-endpoint = 127.0.0.1:8090`"
+msgstr ""
+
+#: ../../source/integration/apps/cli-faq.rst:14
+msgid ""
+"before you start the CLI client, you need to start the witness node (and "
+"wait a while till it's up and running)"
+msgstr ""
+
+#: ../../source/integration/apps/cli-faq.rst:18
+msgid "How can I close the CLI client in a clean way?"
+msgstr ""
+
+#: ../../source/integration/apps/cli-faq.rst:19
+msgid ""
+"In Windows closing the whole window produces a nasty exception. In "
+"Windows you can try `ctrl-d` which stops the process but stil produces a "
+"nasty exception."
+msgstr ""
+
+#: ../../source/integration/apps/cli-faq.rst:24
+msgid ""
+"How can I import to my CLI client a wallet originally created in the web "
+"GUI?"
+msgstr ""
+
+#: ../../source/integration/apps/cli-faq.rst:25
+msgid ""
+"CLI and WEB wallet are two separated applications. They use separated "
+"ways to represent backups. You can currently only manually import keys "
+"from the GUI into the CLI."
+msgstr ""
+
+#: ../../source/integration/apps/cli-faq.rst:30
+msgid "How can I create, register and upgrade an account to Lifetime Membership?"
+msgstr ""
+
+#: ../../source/integration/apps/cli-faq.rst:31
+msgid ""
+"Without already having an account, or knowing someone that has an "
+"account, it is not possible. You can't create accounts out of nowhere."
+msgstr ""
+
+#: ../../source/integration/apps/cli-faq.rst:34
+msgid ""
+"But you can work around it by importing an active key of a **Lifetime "
+"Member** account that has funds:"
+msgstr ""
+
+#: ../../source/integration/apps/cli-faq.rst:37
+msgid ""
+"In the gui, go to the permissions tab of an account that is funded and "
+"has a LTM status."
+msgstr ""
+
+#: ../../source/integration/apps/cli-faq.rst:39
+msgid "Click on the BTS public key on the ACTIVE tab and copy the private key."
+msgstr ""
+
+#: ../../source/integration/apps/cli-faq.rst:41
+msgid "In the cli-wallet run: `import_key <account_name> <private_key>`"
+msgstr ""
+
+#: ../../source/integration/apps/cli-faq.rst:43
+msgid ""
+"Then run: `suggest_brain_key` and copy the brain key. (You might want to "
+"make a backup of your brain key somewhere.)"
+msgstr ""
+
+#: ../../source/integration/apps/cli-faq.rst:47
+msgid ""
+"Create a new account with this command: `create_account_with_brain_key "
+"<brainkey> <new_account_name> <imported_name> <imported_name> true`"
+msgstr ""
+
+#: ../../source/integration/apps/cli-faq.rst:50
+msgid ""
+"This will create a new account called `<new_account_name>` and set the "
+"registrar and referrer to `<imported_name>`.  The brainkey can be used to"
+" regenerate the account (even in the GUI wallet).  You can manually "
+"delete the other active key from the `wallet.json` file."
+msgstr ""
+
+#: ../../source/integration/apps/cliwallet.rst:3
+msgid "CLI Wallet"
+msgstr ""
+
+#: ../../source/integration/apps/cliwallet.rst:5
+msgid "The following will explain how to use the console wallet (not GUI)."
+msgstr ""
+
+#: ../../source/integration/apps/cliwallet.rst:8
+msgid "Launching"
+msgstr ""
+
+#: ../../source/integration/apps/cliwallet.rst:10
+msgid ""
+"The `cli_wallet` creates a local `wallet.json` file that contains the "
+"encrypted private keys required to access the funds in your account. It "
+"**requires** a running witness node (not necessarily locally) and "
+"connects to it on launch:"
+msgstr ""
+
+#: ../../source/integration/apps/cliwallet.rst:18
+msgid ""
+"Depending on the actual chain that you want to connect to your may need "
+"to specifiy `--chain-id`."
+msgstr ""
+
+#: ../../source/integration/apps/cliwallet.rst:22
+#: ../../source/integration/apps/node.rst:74
+msgid "Enabling Remote Procedure Calls (RPC)"
+msgstr ""
+
+#: ../../source/integration/apps/cliwallet.rst:24
+msgid ""
+"In order to allow RPC calls for wallet operations (spend, buy, sell, ...)"
+" you can choose between pure RPC or RPC-HTTP requests. In this tutorial, "
+"the latter is prefered since well established libraries make use of the "
+"RPC-HTTP protocol."
+msgstr ""
+
+#: ../../source/integration/apps/cliwallet.rst:28
+msgid ""
+"The cli-wallet can open a RPC port so that you can interface your "
+"application with it. You have the choices of * websocket RPC via the "
+"``-r`` parameter, and * HTTP RPC via the ``-H`` parameter:"
+msgstr ""
+
+#: ../../source/integration/apps/cliwallet.rst:33
+msgid "To enable RPC-HTTP in your wallet you need to run:"
+msgstr ""
+
+#: ../../source/integration/apps/cliwallet.rst:42
+msgid "depending on the kind of RPC protocol."
+msgstr ""
+
+#: ../../source/integration/apps/cliwallet.rst:44
+msgid ""
+"This will open the port 8092 for local queries only. It is not "
+"recommended to publicly expose your wallet!"
+msgstr ""
+
+#: ../../source/integration/apps/cliwallet.rst:47
+msgid ""
+"A tutorial for the BitShares cli-wallet can be found in the "
+":doc:`BitShares tutorials <../bitshares/tutorials/cli-wallet-usage>`."
+msgstr ""
+
+#: ../../source/integration/apps/delayednode.rst:3
+#: ../../source/integration/tutorials/secure-network-setup.rst:41
+msgid "Delayed Full Node"
+msgstr ""
+
+#: ../../source/integration/apps/delayednode.rst:5
+msgid ""
+"The delayed full node node will provide us with a delayed and several "
+"times confirmed and verified blockchain. Even though DPOS is more "
+"resistant against forks than most other blockchain consensus schemes, we "
+"delay the blockchain here to reduces the risk of forks even more. In the "
+"end, the delayed full node is supposed to never enter an invalid fork."
+msgstr ""
+
+#: ../../source/integration/apps/delayednode.rst:11
+#: ../../source/integration/tutorials/secure-network-setup.rst:43
+msgid ""
+"The delayed full node will need the IP address and port of the p2p-"
+"endpoint from the trusted full node and the number of blocks that should "
+"be delayed.  We also need to open the RPC/Websocket port (to the local "
+"network!) so that we can interface using RPC-JSON calls."
+msgstr ""
+
+#: ../../source/integration/apps/delayednode.rst:16
+#: ../../source/integration/tutorials/secure-network-setup.rst:48
+msgid ""
+"For our example and for 10 blocks delaye (i.e. 30 seconds for 3 second "
+"block intervals), we need:"
+msgstr ""
+
+#: ../../source/integration/apps/index.rst:3
+msgid "Blockchain Interaction"
+msgstr ""
+
+#: ../../source/integration/apps/index.rst:5
+msgid ""
+"To interface your existing platform with BitShares, you can make use of "
+":doc:`/api/rpc` and :doc:`/api/websocket` to either a :doc:`full node "
+"</apps/node>` (for monitoring only) or the :doc:`CLI wallet "
+"</apps/cliwallet>` (for accessing funds)."
+msgstr ""
+
+#: ../../source/integration/apps/index.rst:10
+msgid ""
+"All API calls are formated in JSON and return JSON only. You can read "
+"more about the API in the separated :doc:`API documentation "
+"</api/index>`."
+msgstr ""
+
+#: ../../source/integration/apps/index.rst:13
+msgid ""
+"The Graphene toolkit comprises several tools that allow interaction with "
+"the blockchain on different levels and shall thus be briefly described in"
+" the following sections."
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:3
+msgid "Full Node"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:4
+msgid ""
+"We here distringuish between full nodes (a.k.a. *non-block producing* "
+"witness nodes) and *block producing* witness nodes. Both are implemented "
+"by the same executable but the latter requires some additional parameters"
+" to be defined and the corresponding witness voted active by the "
+"shareholders."
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:9
+msgid ""
+"Both represent nodes in the network that verify all transactions and "
+"blocks against the current state of the overall network. Hence, we "
+"recommend all service providers to run an maintain their own **full "
+"nodes** for reliability and security reasons."
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:15
+msgid "Full Nodes"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:17
+msgid "The full node is launched according to:"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:23
+msgid ""
+"It takes an optional `--data-dir` parameter to define a working and data "
+"directory to store the configuration, blockchain and local databases "
+"(defaults to ``witness_node_data_dir``. Those will be automatically "
+"created with default settings if they don't exist locally set."
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:29
+#: ../../source/integration/exchanges/step-by-step.rst:202
+#: ../../source/integration/tutorials/nodejs-monitor.rst:20
+#: ../../source/integration/tutorials/python-monitor.rst:24
+msgid "Configuration"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:31
+msgid ""
+"The configuration file ``config.ini`` in your data directory is commented"
+" and contains the following essential settings:"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:34
+msgid "``p2p-endpoint``"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:35
+msgid "Endpoint for P2P node to listen on"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:36
+msgid "``seed-node``"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:37
+msgid "P2P nodes to connect to on startup (may specify multiple times)"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:38
+msgid "``checkpoint``"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:39
+msgid "Pairs of [BLOCK_NUM,BLOCK_ID] that should be enforced as checkpoints."
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:40
+msgid "``rpc-endpoint``"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:41
+msgid "Endpoint for websocket RPC to listen on (e.g. ``0.0.0.0:8090``)"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:42
+msgid "``rpc-tls-endpoint``"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:43
+msgid "Endpoint for TLS websocket RPC to listen on"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:44
+msgid "``server-pem``"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:45
+msgid "The TLS certificate file for this server"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:46
+msgid "``server-pem-password``"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:47
+msgid "Password for this certificate"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:48
+msgid "``genesis-json``"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:49
+msgid "File to read Genesis State from"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:50
+msgid "``api-access``"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:51
+msgid "JSON file specifying API permissions"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:52
+msgid "``enable-stale-production``"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:53
+msgid ""
+"Enable block production, even if the chain is stale. (unless for private "
+"testnets should be ``false``)"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:54
+msgid "``required-participation``"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:55
+msgid ""
+"Percent of witnesses (0-99) that must be participating in order to "
+"produce blocks"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:56
+msgid "``allow-consecutive``"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:57
+msgid ""
+"Allow block production, even if the last block was produced by the same "
+"witness."
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:58
+msgid "``witness-id``"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:59
+msgid ""
+"ID of witness controlled by this node (e.g. \"1.6.5\", quotes are "
+"required, may specify multiple times)"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:60
+msgid "``private-key``"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:61
+msgid "Tuple of ``[PublicKey, WIF private key]`` (may specify multiple times)"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:62
+msgid "``track-account``"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:63
+msgid "Account ID to track history for (may specify multiple times)"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:65
+msgid "``bucket-size``"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:65
+msgid ""
+"Track market history by grouping orders into buckets of equal size "
+"measured in seconds specified as a JSON array of numbers"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:68
+msgid "``history-per-size``"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:68
+msgid ""
+"How far back in time to track history for each bucket size, measured in "
+"the number of buckets (default: 1000)"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:70
+msgid ""
+"Folders and files are considered to be relative to the working directory "
+"(i.e. the directory from which the executables are launched from)"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:76
+msgid ""
+"In order to allow RPC calls for blockchain operations you need to modify "
+"the following entry in the configuration file:::"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:81
+msgid ""
+"This will open the port 8090 for global queries only. Since the witness "
+"node only maintains the blockchain and (unless you are an actively block "
+"producing witness) no private keys are involved, it is safe to expose "
+"your witness to the internet."
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:87
+msgid "Restarting the witness node"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:89
+msgid ""
+"When restarting the witness node, it may be required to append the "
+"`--replay-blockchain` parameter to regenerate the local (in-memory) "
+"blockchain state."
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:94
+msgid "Enabling Block Production"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:96
+msgid "For block production, the required parameters to be defined are"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:98
+msgid "``witness-id`` and"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:99
+msgid "``private-key`` as a pair of public key and wif private key."
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:101
+msgid "The witness-id and public key can be obtain via:::"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:111
+msgid ""
+"Assuming we want to maintain the witness with id ``1.6.10``, the "
+"corresponding setting would be:::"
+msgstr ""
+
+#: ../../source/integration/apps/node.rst:116
+msgid ""
+"The required private keys can be exported from most wallets (e.g. "
+"``dump_private_keys``) for configuration according to:::"
+msgstr ""
+
+#: ../../source/integration/apps/webwallet.rst:3
+msgid "Web Wallet"
+msgstr ""
+
+#: ../../source/integration/apps/webwallet.rst:5
+msgid ""
+"The web wallet is a wallet implemented solely in Javascript. It makes use"
+" of modern Web development tools and libraries -- to just a few:"
+msgstr ""
+
+#: ../../source/integration/apps/webwallet.rst:8
+msgid "Coffee-Script"
+msgstr ""
+
+#: ../../source/integration/apps/webwallet.rst:9
+msgid "LESS"
+msgstr ""
+
+#: ../../source/integration/apps/webwallet.rst:10
+msgid "React-JS"
+msgstr ""
+
+#: ../../source/integration/apps/webwallet.rst:11
+msgid "WebPack"
+msgstr ""
+
+#: ../../source/integration/apps/webwallet.rst:12
+msgid "LoDash"
+msgstr ""
+
+#: ../../source/integration/apps/webwallet.rst:13
+msgid "Foundation"
+msgstr ""
+
+#: ../../source/integration/apps/webwallet.rst:14
+msgid "Highcharts"
+msgstr ""
+
+#: ../../source/integration/apps/webwallet.rst:15
+msgid "Mocha"
+msgstr ""
+
+#: ../../source/integration/apps/webwallet.rst:16
+msgid "..."
+msgstr ""
+
+#: ../../source/integration/apps/webwallet.rst:18
+msgid ""
+"The webwallet (per default) connects to a full node (non-block-producing "
+"witness node) on the same host via websockets."
+msgstr ""
+
+#: ../../source/integration/apps/webwallet.rst:22
+msgid "Download"
+msgstr ""
+
+#: ../../source/integration/apps/webwallet.rst:24
+msgid "The sources can be downloaded from github."
+msgstr ""
+
+#: ../../source/integration/apps/webwallet.rst:30
+msgid ""
+"They consist of libraries, a JS-console, and the wallet, as well as other"
+" tools."
+msgstr ""
+
+#: ../../source/integration/apps/webwallet.rst:34
+msgid "Installing Dependencies"
+msgstr ""
+
+#: ../../source/integration/apps/webwallet.rst:36
+msgid "First, we need to install the dependencies via `npm`:"
+msgstr ""
+
+#: ../../source/integration/apps/webwallet.rst:43
+msgid "Bundling"
+msgstr ""
+
+#: ../../source/integration/apps/webwallet.rst:45
+msgid "We now bundle the web wallet into JavaScript, CSS, and HTML assets."
+msgstr ""
+
+#: ../../source/integration/apps/webwallet.rst:52
+msgid "The resulting assets can be found in the `dist` folder."
+msgstr ""
+
+#: ../../source/integration/apps/webwallet.rst:55
+msgid "Testing Bundle"
+msgstr ""
+
+#: ../../source/integration/apps/webwallet.rst:62
+msgid "Live Development"
+msgstr ""
+
+#: ../../source/integration/apps/witness-faq.rst:3
+msgid "Witness FAQ"
+msgstr ""
+
+#: ../../source/integration/apps/witness-faq.rst:6
+msgid "What is the best way to interact with the witness node?"
+msgstr ""
+
+#: ../../source/integration/apps/witness-faq.rst:7
+msgid ""
+"The only way you can interact with the witness node is through the CLI "
+"client by using its API.  You can also use the GUI (i.e. the light "
+"client). In the GUI, change `Settings -> API connection`, add "
+"`ws://127.0.0.1:8090/ws` (according to settings of your witness node) and"
+" select it."
+msgstr ""
+
+#: ../../source/integration/apps/witness-faq.rst:14
+msgid "How do I check whether the witness node is already synced?"
+msgstr ""
+
+#: ../../source/integration/apps/witness-faq.rst:15
+msgid ""
+"Run the `info` command in the CLI client and check the `head_block_age` "
+"value."
+msgstr ""
+
+#: ../../source/integration/apps/witness-faq.rst:18
+msgid "If it seems to be unable to sync beyond a certain date"
+msgstr ""
+
+#: ../../source/integration/apps/witness-faq.rst:19
+msgid ""
+"You should always make sure you use the newest build available `here_` as"
+" earlier releases will get stuck due to hard-forks."
+msgstr ""
+
+#: ../../source/integration/apps/witness-faq.rst:25
+msgid ""
+"Whose private key is `[\"BTS6MRyAjQ..\",\"5KQwrPbwdL..\"]`? Why is it "
+"predefined ion the `config.ini`?"
+msgstr ""
+
+#: ../../source/integration/apps/witness-faq.rst:26
+msgid ""
+"It's a shared key for some special purpose. But I don't remember what it "
+"is. If I remember BM or someone else has ever explained it in the forum, "
+"but I can't find the post right now. Just let it be there. I think if you"
+" comment it out, it will appear again automatically, it's generated by "
+"the code of witness_node."
+msgstr ""
+
+#: ../../source/integration/apps/witness-faq.rst:33
+msgid ""
+"What is the meaning of all those different text colors in the witness "
+"node console?"
+msgstr ""
+
+#: ../../source/integration/apps/witness-faq.rst:35
+msgid "green - debug"
+msgstr ""
+
+#: ../../source/integration/apps/witness-faq.rst:36
+msgid "white - info/default"
+msgstr ""
+
+#: ../../source/integration/apps/witness-faq.rst:37
+msgid "yellow/brown - warning"
+msgstr ""
+
+#: ../../source/integration/apps/witness-faq.rst:38
+msgid "red - error"
+msgstr ""
+
+#: ../../source/integration/apps/witness-faq.rst:39
+msgid "blue - some kind of info, I don't know"
+msgstr ""
+
+#: ../../source/integration/apps/witness-faq.rst:41
+msgid ""
+"Related source files are in `libraries/fc/include/fc/log/` and "
+"`libraries/fc/src/log/`."
+msgstr ""
+
+#: ../../source/integration/apps/witness-faq.rst:45
+msgid "How can I close the witness node in a clean way?"
+msgstr ""
+
+#: ../../source/integration/apps/witness-faq.rst:46
+msgid "In windows use `ctrl-c`."
+msgstr ""
+
+#: ../../source/integration/apps/witness-faq.rst:49
+msgid "Is it safe to delete logs stored in `witness_node_data_dir\\logs\\p2p`?"
+msgstr ""
+
+#: ../../source/integration/apps/witness-faq.rst:50
+msgid "Yes, but"
+msgstr ""
+
+#: ../../source/integration/apps/witness-faq.rst:52
+msgid "they're rotated automatically after 24 hours anyway"
+msgstr ""
+
+#: ../../source/integration/apps/witness-faq.rst:53
+msgid ""
+"if you don't use them you should probably modify `config.ini` so they "
+"aren't written to disk in the first place."
+msgstr ""
+
+#: ../../source/integration/apps/witness-faq.rst:57
+msgid "What is the difference between public and private testnet?"
+msgstr ""
+
+#: ../../source/integration/apps/witness-faq.rst:58
+msgid ""
+"Not much. The biggest difference is that public testnet are intended for "
+"wider audience and has fixed (not easy to change parameters), while "
+"private testnets can be setup with arbitrary settings."
+msgstr ""
+
+#: ../../source/integration/asset-whitelist.rst:3
+msgid "Asset User Whitelists"
+msgstr ""
+
+#: ../../source/integration/asset-whitelist.rst:5
+msgid ""
+"Asset User white- and black-lists serve the need for companies to "
+"restrict service to a subset of accounts. For instance, a fiat gateway "
+"may require to follow KYC/AML regulations and can hence only deal with "
+"those customers that have been verified accordingly. If the issuer of an "
+"user-issued asset desires, he may set a restriction so that only users on"
+" the white-list (and/or **not** on the blacklist) are allowed to hold his"
+" token."
+msgstr ""
+
+#: ../../source/integration/asset-whitelist.rst:12
+msgid ""
+"Instead of putting all verified accounts into the respective asset's "
+"white-list directly, BitShares 2.0 allows to define one or several white-"
+"list *authorities*. In practice, the white- and black-lists of these "
+"accounts are combined and serve as white- and black-lists for the asset."
+msgstr ""
+
+#: ../../source/integration/asset-whitelist.rst:17
+msgid ""
+"This allows for easy out-sourcing of KYC/AML verification to 3rd-party "
+"providers."
+msgstr ""
+
+#: ../../source/integration/asset-whitelist.rst:20
+msgid "By removing a user from the whitelist, funds can effectively be frozen."
+msgstr ""
+
+#: ../../source/integration/asset-whitelist.rst:24
+#: ../../source/integration/libraries/python-exchange.rst:17
+#: ../../source/integration/market-whitelist.rst:12
+msgid "Example"
+msgstr ""
+
+#: ../../source/integration/asset-whitelist.rst:26
+msgid ""
+"Let's assume user ``alice`` wants to own a gateways IOUs called ``G.USD``"
+" which are restricted by a whitelists. Before being able to own "
+"``G.USD``, ``alice`` needs to be white-listed by one of the authorities "
+"of ``G.USD``."
+msgstr ""
+
+#: ../../source/integration/asset-whitelist.rst:31
+msgid "Defining an asset's list authorities"
+msgstr ""
+
+#: ../../source/integration/asset-whitelist.rst:32
+msgid ""
+"We now define the authorities (i.e. accounts) that define the white- and "
+"blacklist of the asset ``G.USD``. We add ``g-issuer`` and ``kycprovider``"
+" to the white- and black-list:::"
+msgstr ""
+
+#: ../../source/integration/asset-whitelist.rst:38
+#: ../../source/integration/market-whitelist.rst:25
+msgid ""
+"The third argument for ``update_asset`` replaces the existing settings. "
+"Make sure to have all desired settings present."
+msgstr ""
+
+#: ../../source/integration/asset-whitelist.rst:42
+msgid "Adding ``alice`` to a whitelist"
+msgstr ""
+
+#: ../../source/integration/asset-whitelist.rst:43
+msgid ""
+"Let's assume the only authority is the issuer ``g-issuer`` himself for "
+"simplicity. The issuer now needs to add ``alice`` to ``g-issuer``'s "
+"account whitelist:::"
+msgstr ""
+
+#: ../../source/integration/asset-whitelist.rst:51
+#: ../../source/integration/user-whitelist.rst:26
+msgid "Definition"
+msgstr ""
+
+#: ../../source/integration/asset-whitelist.rst:52
+msgid "White- and Black-listing of assets works with the following API call:"
+msgstr ""
+
+#: ../../source/integration/asset-whitelist.rst
+#: ../../source/integration/market-whitelist.rst
+msgid "Public Functions"
+msgstr ""
+
+#: ../../source/integration/asset-whitelist.rst
+#: ../../source/integration/market-whitelist.rst
+msgid "Public Members"
+msgstr ""
+
+#: ../../source/integration/businesses/index.rst:3
+msgid "Businesses"
+msgstr ""
+
+#: ../../source/integration/businesses/index.rst:5
+msgid ""
+"Since BitShares allows everyone to establish their coin or business on "
+"the same blockchain, they can benefit from synergies. Every customer of a"
+" competing business or coin that is part of BitShares already has an "
+"account capable of dealing with your business or holding your coins. "
+"Besides a shared user base, we also have shared markets. You can think of"
+" shared markets like a market that trades BitStampUSD versus KrakenUSD, "
+"both being IOUs for fiat USD at the corresponding platform. Suddenly, "
+"every user of one exchange can be a potential user for a competing "
+"business, not just for the exchange business."
+msgstr ""
+
+#: ../../source/integration/businesses/index.rst:16
+#: ../../source/integration/exchanges/index.rst:30
+#: ../../source/integration/merchants/index.rst:24
+#: ../../source/integration/traders/index.rst:69
+msgid "Libraries"
+msgstr ""
+
+#: ../../source/integration/exchanges/index.rst:3
+msgid "Exchanges, Bridges, and Gateways"
+msgstr ""
+
+#: ../../source/integration/exchanges/index.rst:5
+msgid ""
+"We here illustrate the steps necessary to securely operate as exchange or"
+" gateway. Gateways take Fiat and convert them to their corresponding "
+"bitAsset at a fee and vice versa. For instance:"
+msgstr ""
+
+#: ../../source/integration/exchanges/index.rst:9
+msgid "A customer requests 100 bitUSD from a gateway"
+msgstr ""
+
+#: ../../source/integration/exchanges/index.rst:10
+msgid "The gateway sends an invoice with bank account details"
+msgstr ""
+
+#: ../../source/integration/exchanges/index.rst:11
+msgid ""
+"When the funds arrive at the gateway a percentage is taken as a fee and "
+"the rest is transfered as bitUSD directly into the BitShares wallet of "
+"the customer."
+msgstr ""
+
+#: ../../source/integration/exchanges/index.rst:15
+#: ../../source/integration/merchants/index.rst:11
+#: ../../source/integration/traders/index.rst:19
+msgid ""
+"For exchanges we recommend to also read :doc:`../what-is-different` and "
+":doc:`../often-used-calls`."
+msgstr ""
+
+#: ../../source/integration/exchanges/index.rst:19
+msgid "Integration Instructions"
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:3
+msgid "Step-By-Step Instructions for Exchanges"
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:5
+msgid ""
+"We here describe how to interface your exchange with BitShares step-by-"
+"step. We will link to a more detailed description where appropriate."
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:9
+#: ../../source/integration/exchanges/step-by-step.rst:189
+#: ../../source/integration/libraries/python.rst:9
+#: ../../source/integration/tutorials/nodejs-monitor.rst:9
+#: ../../source/integration/tutorials/python-monitor.rst:9
+msgid "Installation"
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:11
+msgid ""
+"In this step-by-step instruction we assume you have successfully built "
+"from the sources according to:"
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:14
+msgid ":doc:`/bitshares/installation/Build`"
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:17
+msgid "Running Daemons and Wallet"
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:19
+msgid ""
+"For security reasons we will run two daemons and a wallet according to "
+"these diagram:"
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:43
+msgid ""
+"In this tutorial we will run all deamons and the wallet on the same "
+"machine and use different ports to distinguish them:"
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:46
+msgid "port ``8090``: trusted full node"
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:47
+msgid "port ``8091``: delayed node"
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:48
+msgid "port ``8092``: wallet"
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:50
+msgid ":doc:`Read more details <../network-setup>`"
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:53
+#: ../../source/integration/network-setup.rst:20
+#: ../../source/integration/tutorials/general-network-setup.rst:21
+#: ../../source/integration/tutorials/secure-network-setup.rst:27
+msgid "Trusted Full Node"
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:55
+msgid ""
+"The trusted full node is your entry point to the BitShares P2P network. "
+"It will hold the blockchain, connect to other peers, and will receive new"
+" blocks in *real-time*."
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:63
+msgid ""
+"Until the genesis block is integrated into the binary/souces, you may "
+"additionally need to download the genesis block from github and add the "
+"parameter ``--genesis-json <genesis.json>``. (See `Release Page`_)"
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:67
+msgid ""
+"Unless the seed nodes are encoded into the binary, you may need to add a "
+"known seed node with ``-s xxx.xxx.xxx.xxx:yyy`` in order to initially "
+"connect to the P2P network. (See `Release Page`_)"
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:74
+msgid "Delayed Node"
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:76
+msgid ""
+"The delayed full node node will provide us with a delayed and several "
+"times confirmed and verified blockchain. All transactions that are "
+"confirmed by the delayed node are **irreversible**."
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:89
+msgid "We will use this node for notifications of customer deposits."
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:92
+#: ../../source/integration/network-setup.rst:25
+#: ../../source/integration/tutorials/general-network-setup.rst:35
+#: ../../source/integration/tutorials/secure-network-setup.rst:75
+msgid "Wallet"
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:94
+msgid ""
+"The wallet will be used to transfer assets to the customers. It connects "
+"to the trusted full node and has spending privileges for the hot wallet."
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:103
+msgid "Query blockchain for required data"
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:105
+msgid ""
+"We now use the open ``cli_wallet`` to issue transfers and query the "
+"blockchain for more information. First of all, we create a new wallet and"
+" set a pass phrase:::"
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:121
+msgid "Existing BitShares 1 Account"
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:122
+msgid ""
+"*We assume that you already have an account on the BitShares blockchain "
+"and show how to export it from the BitShares 1 client.*"
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:125
+msgid ""
+"We first get the account statistics ID (``2.6.*``) of the deposit account"
+" to monitor deposits, the memo key for later decoding of memos and the "
+"active key for being able to spend funds of that accounts:::"
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:144
+msgid ""
+"We now need to export the corresponding private keys from BitShares 1.0 "
+"and import the keys into the ``cli_wallet``:::"
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:152
+msgid "Import the active key into BitShares 2 wallet:::"
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:156
+msgid ""
+"This gives access to the funds stored in ``<account-name>``. We will need"
+" the memo private key later when watching deposits."
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:160
+msgid "Claiming BitShares 1.0 funds"
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:161
+msgid ""
+"We now describe how to claim your funds from the Bitshares 1 blockchain "
+"so you can use them in BitShares 2."
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:164
+msgid "For **Coldstorage** and plain private keys, we recommend to use::"
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:168
+msgid ""
+"to import all balances that are locked in the private key into the "
+"account named ``<accountname``. As long as the last argument is ``false``"
+" the transaction will only be printed for audit and not be broadcasted or"
+" executed. **Only** after changing ``false`` to ``true`` will the "
+"balances be claimed!"
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:173
+msgid ""
+"For your hot wallet (or any other active wallet running in the BitShares "
+"1 client) we recommend to use the GUI to claim your funds from hot wallet"
+" as described :doc:`here </bitshares/migration/howto-importing-wallet>`."
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:178
+msgid "Watching Deposits with Python"
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:180
+msgid ""
+"We will make use of the Python-Graphene library available at github and "
+"configure it for notification on account changes for our deposit account "
+"above."
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:183
+msgid ""
+"A detailed descriptions about the python library can be found in the "
+"``python-graphenelib`` `documentations`_."
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:203
+msgid "Move ``config-example.py`` to ``config.py`` and modify it accordingly:"
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:218
+#: ../../source/integration/tutorials/nodejs-monitor.rst:68
+#: ../../source/integration/tutorials/python-monitor.rst:60
+msgid "Running"
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:220
+#: ../../source/integration/tutorials/python-monitor.rst:62
+msgid "The monitoring script can be executed via"
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:226
+msgid ""
+"Every time a deposit was made into your account a new line will appear "
+"similar to:::"
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:231
+msgid ""
+"If you run into errors you can continue processing from the last "
+"operation (first column) by defining ``last_op`` in ``config.py`` "
+"according to your last registered deposit."
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:236
+msgid "Executing Transfers for Withdrawals"
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:238
+msgid ""
+"Since we have imported the active key for our account into the wallet we "
+"can either initiate transfers from the wallet CLI with:::"
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:245
+msgid ""
+"Make sure to add a ``true`` at the end so that the signed transaction is "
+"broadcast in the P2P network."
+msgstr ""
+
+#: ../../source/integration/exchanges/step-by-step.rst:248
+msgid ""
+"Alternatively you can interface with the wallet and initiate the transfer"
+" via API call (example in ``scripts/flood.py``)"
+msgstr ""
+
+#: ../../source/integration/index.rst:6
+msgid "Integration Guide"
+msgstr ""
+
+#: ../../source/integration/index.rst:8
+msgid ""
+"Banks, exchanges and merchants are integrating with the Graphene "
+"technology already to power instant cross-border remittance, corporate "
+"payments, voting, and decentralized trading. This page serves as a "
+"technical documentation for integrating **any** Graphene based technology"
+" to profiting from"
+msgstr ""
+
+#: ../../source/integration/index.rst:13
+msgid "its real-time blockchain technology,"
+msgstr ""
+
+#: ../../source/integration/index.rst:14
+msgid "existing user base,"
+msgstr ""
+
+#: ../../source/integration/index.rst:15
+msgid "its network effect, and"
+msgstr ""
+
+#: ../../source/integration/index.rst:16
+msgid "existing ecosystem."
+msgstr ""
+
+#: ../../source/integration/index.rst:19
+msgid ""
+"We offer a *low noise* skype group for important announcements for our "
+"partners, including exchanges, merchants and integrated businesses. If "
+"you would like to be added, please send a short mail to `Fabian`_ "
+"describing your service."
+msgstr ""
+
+#: ../../source/integration/index.rst:27
+msgid "Basic Knowledge"
+msgstr ""
+
+#: ../../source/integration/index.rst:29
+msgid ""
+"We here illustrate the steps necessary to securely operate as a merchant,"
+" trader, exchange, or fiat-gateway. Some basic knowledge should be known "
+"to all of them before starting to integrate."
+msgstr ""
+
+#: ../../source/integration/index.rst:42
+msgid "Use-Cases"
+msgstr ""
+
+#: ../../source/integration/index.rst:44
+msgid ""
+":html:`<div class=\"container-fluid\"><div class=\"row\"><div class"
+"=\"col-md-6\">`"
+msgstr ""
+
+#: ../../source/integration/index.rst:46
+msgid ""
+"**Exchange**, **Bridges**, and **Gateways** represent business that trade"
+" or exchange assets that are located **inside** a Graphene network (e.g. "
+"BitShares) against assets that are **located** outside the blockchain "
+"network. For instance, exchanges trade ``BTS:BTC`` while bridges exchange"
+" ``bitBTC:BTC``."
+msgstr ""
+
+#: ../../source/integration/index.rst:57 ../../source/integration/index.rst:84
+msgid ":html:`</div><div class=\"col-md-6\">`"
+msgstr ""
+
+#: ../../source/integration/index.rst:59
+msgid ""
+"**Merchants** make use of the currency-denomintated assets of a Graphene "
+"network (e.g. BitShares). Similar to traditional payment solutions they "
+"let their customers pay using bitUSD, bitEUR, or any other *stable* "
+"blockchain asset."
+msgstr ""
+
+#: ../../source/integration/index.rst:69
+msgid ":html:`</div></div>` :html:`<div class=\"row\"><div class=\"col-md-6\">`"
+msgstr ""
+
+#: ../../source/integration/index.rst:72
+msgid ""
+"**Traders** make use of the API provided to interact with a Graphene "
+"network (e.g. BitShares) and provide market makers and liqudity. The APIs"
+" can be easily used to implement automated robots for trading algorithms."
+msgstr ""
+
+#: ../../source/integration/index.rst:86
+msgid ""
+"For **businesses**, a Graphene network (e.g. BitShares) can be used to "
+"issue their own token and let customers trade their shares either against"
+" predefined assets, or freely against any other asset. This guide serves "
+"the purpose to introduce the possibilities of"
+msgstr ""
+
+#: ../../source/integration/index.rst:97
+msgid ":html:`</div></div></div>`"
+msgstr ""
+
+#: ../../source/integration/libraries/index.rst:3
+msgid "Supporting Libraries"
+msgstr ""
+
+#: ../../source/integration/libraries/python.rst:3
+msgid "General Python Library"
+msgstr ""
+
+#: ../../source/integration/libraries/python.rst:5
+#: ../../source/integration/tutorials/python-monitor.rst:5
+msgid ""
+"This python library assists interfacing with a graphene-based network "
+"such as BitShares 2.0."
+msgstr ""
+
+#: ../../source/integration/libraries/python.rst:11
+#: ../../source/integration/tutorials/python-monitor.rst:11
+msgid "A graphene Python 3.0 library can be installed by issuing"
+msgstr ""
+
+#: ../../source/integration/libraries/python.rst:20
+#: ../../source/integration/tutorials/python-monitor.rst:20
+msgid ""
+"As you can see, this library requires Python3 and will **not** work "
+"properly with Python2."
+msgstr ""
+
+#: ../../source/integration/libraries/python-exchange.rst:11
+#: ../../source/integration/libraries/python.rst:24
+msgid "Usage"
+msgstr ""
+
+#: ../../source/integration/libraries/python.rst:26
+msgid ""
+"`Technical documentation: <http://python-"
+"graphenelib.readthedocs.org/en/latest>`_"
+msgstr ""
+
+#: ../../source/integration/libraries/python-exchange.rst:14
+#: ../../source/integration/libraries/python.rst:27
+msgid ""
+"`Youtube - Live Coding Sessions "
+"<https://bitsharestalk.org/index.php/topic,21816.new.html#new>`_"
+msgstr ""
+
+#: ../../source/integration/libraries/python.rst:30
+#: ../../source/integration/user-whitelist.rst:10
+msgid "Examples"
+msgstr ""
+
+#: ../../source/integration/libraries/python-exchange.rst:3
+msgid "Python Module for the DEX"
+msgstr ""
+
+#: ../../source/integration/libraries/python-exchange.rst:5
+msgid ""
+"To simplify automated trading, we developed a Python Module that close "
+"re-assembles the trading API of `Poloniex_`."
+msgstr ""
+
+#: ../../source/integration/libraries/python-exchange.rst:13
+msgid ""
+"`Technical documentation: <http://python-"
+"graphenelib.readthedocs.org/en/latest/exchange.html>`_"
+msgstr ""
+
+#: ../../source/integration/market-whitelist.rst:3
+msgid "Asset Market Whitelists"
+msgstr ""
+
+#: ../../source/integration/market-whitelist.rst:5
+msgid ""
+"An issuer of an user-issued-asset may want to restrict trading partners "
+"for his assets for legal reasons. For instance, a gateway for US dollar "
+"may not be allowed to let his customers trade USD against CNY because "
+"additional licenses would be required. Hence, in BitShares 2.0 we let "
+"issuers chose to restrict trading partners with white- and black-lists."
+msgstr ""
+
+#: ../../source/integration/market-whitelist.rst:14
+msgid ""
+"A gateway with IOU ``G.USD`` that wants to prevent his customers from "
+"trading ``G.USD`` against ``bitCNY`` can do so by adding ``bitCNY`` to "
+"the blacklist of ``G.USD`` by issuing:::"
+msgstr ""
+
+#: ../../source/integration/market-whitelist.rst:20
+msgid ""
+"Alternatively, if an issuer may want to only open the market ``G.USD : "
+"bitUSD`` with his asset, he can do so as well with:::"
+msgstr ""
+
+#: ../../source/integration/market-whitelist.rst:29
+msgid "Defintion"
+msgstr ""
+
+#: ../../source/integration/market-whitelist.rst:30
+msgid "Asset Market white-lists work with the following API call:"
+msgstr ""
+
+#: ../../source/integration/merchants/index.rst:3
+msgid "Merchants"
+msgstr ""
+
+#: ../../source/integration/merchants/index.rst:5
+msgid ""
+"We here illustrate the steps necessary to securely operate as merchant. "
+"Merchants take funds from customers on the blockchain and deliver a good."
+" Hence, a merchant should monitor the blockchain and be notified on "
+"incoming transactions. Thanks to (encrypted) transaction memos attachable"
+" to each transfer the merchant can easily distinguish different "
+"customers."
+msgstr ""
+
+#: ../../source/integration/merchants/index.rst:15
+msgid "Protocols/API"
+msgstr ""
+
+#: ../../source/integration/merchants/login-protocol.rst:3
+msgid "Wallet Login Protocol"
+msgstr ""
+
+#: ../../source/integration/merchants/login-protocol.rst:5
+msgid ""
+"The idea behind the login protocol is to allow another party to verify "
+"that you are are the owner of a particular account. Traditionally login "
+"is performed via a password that sent to the server, but this method is "
+"subject to `Phishing Attacks <https://en.wikipedia.org/wiki/Phishing>`__."
+" Instead of a password, Graphene uses a cryptographic challenge/response "
+"to verify that a user controls a particular account."
+msgstr ""
+
+#: ../../source/integration/merchants/login-protocol.rst:12
+msgid ""
+"For the purpose of this document, we will assume https://merchant.org is "
+"the service that will be logged into and that https://wallet.org is the "
+"wallet provider that will be assisting the user with their login."
+msgstr ""
+
+#: ../../source/integration/merchants/login-protocol.rst:17
+msgid "Step 1 - Merchant Login Button"
+msgstr ""
+
+#: ../../source/integration/merchants/login-protocol.rst:19
+msgid ""
+"The merchant must provide the user with a login button that links to "
+"``https://wallet.org/login#${args}`` where `${args}`` is a JSON object "
+"containing following information and serialized as described below:"
+msgstr ""
+
+#: ../../source/integration/merchants/login-protocol.rst:31
+msgid ""
+"The merchant server will need to save the ``${SERVER_PRIVATE_KEY}`` "
+"associated with the ``${SERVER_PUBLIC_KEY}`` in the user's web session in"
+" order to verify the login."
+msgstr ""
+
+#: ../../source/integration/merchants/login-protocol.rst:36
+msgid "Step 2 - Compress your JSON representation"
+msgstr ""
+
+#: ../../source/integration/merchants/login-protocol.rst:38
+#: ../../source/integration/merchants/merchant-protocol.rst:53
+msgid ""
+"Using `LZMA-JS <https://github.com/nmrugg/LZMA-JS/>`__ library to "
+"compress the JSON into a binary array. This will be the most compact form"
+" of the data. After running the compression the example JSON was reduced "
+"to 281 bytes from 579 bytes."
+msgstr ""
+
+#: ../../source/integration/merchants/login-protocol.rst:44
+msgid "Step 3 - Convert to Base58"
+msgstr ""
+
+#: ../../source/integration/merchants/login-protocol.rst:46
+#: ../../source/integration/merchants/merchant-protocol.rst:61
+msgid ""
+"Using the `bs58 <http://cryptocoinjs.com/modules/misc/bs58/>`__ library "
+"encode the compressed data in base58. Base58 is URL friendly and size "
+"efficient. After converting to base58 the string will be 385 characters "
+"which can easily be passed in a URL and easily support much larger "
+"invoices."
+msgstr ""
+
+#: ../../source/integration/merchants/login-protocol.rst:53
+msgid "Step 4 - Wallet Confirmation"
+msgstr ""
+
+#: ../../source/integration/merchants/login-protocol.rst:55
+msgid ""
+"When the user loads ``https://wallet.org/login#${args}`` they will be "
+"prompted to confirm the login request by selecting an account that they "
+"wish to login with. If \"account\" was specified in the ``${args}`` then "
+"it will default to that account."
+msgstr ""
+
+#: ../../source/integration/merchants/login-protocol.rst:60
+msgid ""
+"After the account is identified enough keys to authorize a account must "
+"participate in the login process in the following way."
+msgstr ""
+
+#: ../../source/integration/merchants/login-protocol.rst:63
+msgid ""
+"The wallet generates a ``WALLET_ONETIMEKEY`` and derives a ``shared "
+"secret`` with the ``SERVER_PUBLIC_KEY`` provided by the "
+"``https://merchant.org`` via ``${args}``. This shared secret is a "
+"provably \"random\" 512 bits of data that is only known to the wallet at "
+"this point in time. The wallet then gathers signatures on the shared "
+"secret from enough keys to authorize the account. In the simple case this"
+" will be a single signature, but in more complex cases multi-factor "
+"authentication may be required."
+msgstr ""
+
+#: ../../source/integration/merchants/login-protocol.rst:71
+msgid ""
+"After gathering all of the signatures the wallet redirects the user to "
+"``https://merchant.org/login_callback?a=${result}`` where ``result`` is "
+"an encoded JSON object containing the following information:"
+msgstr ""
+
+#: ../../source/integration/merchants/login-protocol.rst:85
+msgid "Step 5 - Server Verifies Authority"
+msgstr ""
+
+#: ../../source/integration/merchants/login-protocol.rst:87
+msgid ""
+"Upon receiving the ``result`` from the wallet, https://merchant.org will "
+"lookup ``{SERVER_PRIVATE_KEY}`` in the user's session data and then "
+"combine it with ``{WALLET_ONETIMEKEY}`` to generate the *shared secret* "
+"that was used by the wallet. Once this shared secret has been recovered, "
+"it can be used to recover the public keys that correspond to the provided"
+" signatures."
+msgstr ""
+
+#: ../../source/integration/merchants/login-protocol.rst:93
+msgid ""
+"The last step is to verify that the public keys provided by the "
+"signatures are sufficient to authorize the account given the current "
+"state of the graphene blockchain. This can be achieved using the witness "
+"API call:::"
+msgstr ""
+
+#: ../../source/integration/merchants/login-protocol.rst:100
+msgid ""
+"The ``verify_account_authority`` call will return ``true`` if the "
+"provided keys have sufficient authority to authorize the account, "
+"otherwise it will return ``false``"
+msgstr ""
+
+#: ../../source/integration/merchants/merchant-protocol.rst:3
+msgid "Wallet Merchant Protocol"
+msgstr ""
+
+#: ../../source/integration/merchants/merchant-protocol.rst:5
+msgid ""
+"The purpose of this protocol is to enable a merchant to request payment "
+"from the user via a hosted wallet provider or via a browser plugin. We "
+"will assume that the wallet is hosted at ``https://wallet.org`` and that "
+"the merchant is hosted at ``https://merchant.org``."
+msgstr ""
+
+#: ../../source/integration/merchants/merchant-protocol.rst:11
+msgid "Privacy Concerns"
+msgstr ""
+
+#: ../../source/integration/merchants/merchant-protocol.rst:13
+msgid ""
+"The goal of this protocol is to maintain user and merchant privacy from "
+"the wallet provider which should never have direct access to the invoice "
+"data."
+msgstr ""
+
+#: ../../source/integration/merchants/merchant-protocol.rst:17
+msgid ""
+"To securely pass data from ``https://merchant.org`` to the javascript "
+"wallet hosted at ``https://wallet.org``, the data will have to be passed "
+"after the ``#``. Assuming the wallet provider is not serving up pages "
+"designed to compromise your privacy, only your web browser will have "
+"access to the invoice data."
+msgstr ""
+
+#: ../../source/integration/merchants/merchant-protocol.rst:24
+msgid "Step 1: Define your Invoice via JSON"
+msgstr ""
+
+#: ../../source/integration/merchants/merchant-protocol.rst:26
+msgid ""
+"This invoice provides all of the data needed by the wallet to display an "
+"invoice to the user."
+msgstr ""
+
+#: ../../source/integration/merchants/merchant-protocol.rst:46
+msgid ""
+"By itself this data is 579 characters which after URL encoding is 916 "
+"characters, with a 2000 character limit this approach doesn't scale as "
+"well as we would like."
+msgstr ""
+
+#: ../../source/integration/merchants/merchant-protocol.rst:51
+msgid "Step 2: Compress your JSON representation"
+msgstr ""
+
+#: ../../source/integration/merchants/merchant-protocol.rst:59
+msgid "Step 3: Convert to Base58"
+msgstr ""
+
+#: ../../source/integration/merchants/merchant-protocol.rst:68
+msgid "Step 4: Pass to Wallet"
+msgstr ""
+
+#: ../../source/integration/merchants/merchant-protocol.rst:70
+msgid ""
+"Once the Base58 data is known, it can be passed to the wallet with the "
+"following URL:::"
+msgstr ""
+
+#: ../../source/integration/merchants/merchant-protocol.rst:76
+msgid "Step 5: Receive Callback from Wallet"
+msgstr ""
+
+#: ../../source/integration/merchants/merchant-protocol.rst:78
+msgid ""
+"After the wallet has signed a transaction, broadcast it, and gotten "
+"confirmation from https://wallet.org that the transaction was included in"
+" ``block 12345`` as ``transaction 4`` wallet will direct the user to "
+"``https://merchant.org/complete?block=12345&trx=4``"
+msgstr ""
+
+#: ../../source/integration/merchants/merchant-protocol.rst:83
+msgid ""
+"The merchant will then request that transaction from "
+"``https://wallet.org/api?block=12345&trx=4`` which will respond with the "
+"transaction that was included in the blockchain. The merchant will "
+"decrypt the memo from the transaction and use memo content to confirm "
+"payment for the invoice."
+msgstr ""
+
+#: ../../source/integration/merchants/merchant-protocol.rst:90
+msgid "Step 6: Payment Complete"
+msgstr ""
+
+#: ../../source/integration/merchants/merchant-protocol.rst:92
+msgid ""
+"At this point the user has successfully made a payment and the merchant "
+"has verified the payment has been received without having to maintain a "
+"full node."
+msgstr ""
+
+#: ../../source/integration/merchants/merchant-protocol.rst:97
+msgid "Example Python script"
+msgstr ""
+
+#: ../../source/integration/network-setup.rst:3
+msgid "Network and Wallet Configuration"
+msgstr ""
+
+#: ../../source/integration/network-setup.rst:5
+msgid ""
+"Similar to other crypto currencies, it is recommended to wait for several"
+" confirmations of a transcation. Even though the consensus scheme of "
+"Graphene is alot more secure than regular proof-of-work or other proof-"
+"of-stake schemes, we still support exchanges that require more "
+"confirmations for deposits."
+msgstr ""
+
+#: ../../source/integration/network-setup.rst:11
+msgid "Components"
+msgstr ""
+
+#: ../../source/integration/network-setup.rst:14
+msgid "P2P network"
+msgstr ""
+
+#: ../../source/integration/network-setup.rst:15
+msgid ""
+"The BitShares client uses a peer-to-peer network to connect and "
+"broadcasts transactions there. A block producing full node will "
+"eventually catch your transcaction and validates it by adding it into a "
+"new block."
+msgstr ""
+
+#: ../../source/integration/network-setup.rst:21
+msgid ""
+"We will use a Full node to connect to the network directly. We call it "
+"*trusted* since it is supposed to be under our control."
+msgstr ""
+
+#: ../../source/integration/network-setup.rst:26
+msgid ""
+"The wallet is used to initiate transfers (customer withdrawals) and "
+"connects to the trusted full node."
+msgstr ""
+
+#: ../../source/integration/network-setup.rst:30
+msgid "Wallet API"
+msgstr ""
+
+#: ../../source/integration/network-setup.rst:31
+msgid ""
+"Since we have a delayed full node that we can fully trust, we will "
+"interface with this node to query the blockchain and receive "
+"notifications from it one balance changes. Hence, we use this API to "
+"watch deposits of users into the exchange's account. Because the delayed "
+"node only knows about irreversible blocks all transactions are at this "
+"point irreversible as well. For customer withdrawals, we will interface "
+"with the wallet to initiate transfers to the accounts of the customers on"
+" request. As we are connected to the trusted node directly, there will "
+"not be any delay on withdrawals."
+msgstr ""
+
+#: ../../source/integration/network-setup.rst:40
+msgid "Network Setups"
+msgstr ""
+
+#: ../../source/integration/network-setup.rst:43
+msgid "General Setup"
+msgstr ""
+
+#: ../../source/integration/network-setup.rst:45
+msgid ""
+"For general purpose setups, we recommend a reduced complexity setup that "
+"looks as follos"
+msgstr ""
+
+#: ../../source/integration/network-setup.rst:91
+#: ../../source/integration/network-setup.rst:157
+msgid "A tutorial to setup this network can be found here:"
+msgstr ""
+
+#: ../../source/integration/network-setup.rst:93
+msgid ":doc:`tutorials/general-network-setup`"
+msgstr ""
+
+#: ../../source/integration/network-setup.rst:99
+msgid "High Security Setup"
+msgstr ""
+
+#: ../../source/integration/network-setup.rst:101
+msgid ""
+"For high security, we provide a so called *delayed* full node which "
+"accepts the parameter ``trusted-node`` for an RPC endpoint of a trusted "
+"validating node.  The trusted-node is a regular full node directly "
+"connected to the P2P network that works as a proxy. The delayed node will"
+" delay blocks until they are **irreversible**. Depending on the block "
+"interval and the number of witnesses, this may lead to a few minutes of "
+"delay."
+msgstr ""
+
+#: ../../source/integration/network-setup.rst:159
+msgid ":doc:`tutorials/secure-network-setup`"
+msgstr ""
+
+#: ../../source/integration/often-used-calls.rst:3
+msgid "Often used API Calls"
+msgstr ""
+
+#: ../../source/integration/often-used-calls.rst:9
+msgid "Overview"
+msgstr ""
+
+#: ../../source/integration/often-used-calls.rst:11
+msgid ""
+"Some API calls that are most interesting for exchanges and gateways are "
+"listed in the following table. They are compared to their corresponding "
+"API calls in BitShares 1.0."
+msgstr ""
+
+#: ../../source/integration/often-used-calls.rst:15
+msgid ""
+"We will now take a look at some sample ouputs for some of the API calls "
+"in the table above. We recommend to read the following articles:"
+msgstr ""
+
+#: ../../source/integration/often-used-calls.rst:24
+#: ../../source/integration/often-used-calls.rst:369
+msgid "``list_account_balances <account>``"
+msgstr ""
+
+#: ../../source/integration/often-used-calls.rst:27
+#: ../../source/integration/often-used-calls.rst:70
+#: ../../source/integration/often-used-calls.rst:130
+#: ../../source/integration/often-used-calls.rst:191
+#: ../../source/integration/often-used-calls.rst:252
+#: ../../source/integration/often-used-calls.rst:307
+msgid "Script"
+msgstr ""
+
+#: ../../source/integration/often-used-calls.rst:38
+#: ../../source/integration/often-used-calls.rst:85
+#: ../../source/integration/often-used-calls.rst:144
+#: ../../source/integration/often-used-calls.rst:202
+#: ../../source/integration/often-used-calls.rst:263
+#: ../../source/integration/often-used-calls.rst:318
+msgid "Result"
+msgstr ""
+
+#: ../../source/integration/often-used-calls.rst:62
+#: ../../source/integration/often-used-calls.rst:122
+#: ../../source/integration/often-used-calls.rst:182
+#: ../../source/integration/often-used-calls.rst:244
+#: ../../source/integration/often-used-calls.rst:299
+#: ../../source/integration/often-used-calls.rst:355
+msgid "Reference"
+msgstr ""
+
+#: ../../source/integration/often-used-calls.rst:67
+msgid "``transfer <from> <to> <amount> <asset> \"<memo>\" <broadcast>``"
+msgstr ""
+
+#: ../../source/integration/often-used-calls.rst:80
+msgid ""
+"The final parameter ``True`` states that the signed transaction will be "
+"broadcast. If this parameter is ``False`` the transaction will be signed "
+"but not broadcast, hence not executed."
+msgstr ""
+
+#: ../../source/integration/often-used-calls.rst:127
+msgid "``transfer2 <from> <to> <amount> <asset> \"<memo>\"``"
+msgstr ""
+
+#: ../../source/integration/often-used-calls.rst:140
+msgid ""
+"This method works just like transfer, except it always broadcasts and "
+"returns the transaction ID along with the signed transaction."
+msgstr ""
+
+#: ../../source/integration/often-used-calls.rst:188
+#: ../../source/integration/often-used-calls.rst:373
+msgid "``get_account_history <account> <limit>``"
+msgstr ""
+
+#: ../../source/integration/often-used-calls.rst:249
+msgid "``get_object \"1.11.<id>\"``"
+msgstr ""
+
+#: ../../source/integration/often-used-calls.rst:304
+msgid "``get_asset <USD>``"
+msgstr ""
+
+#: ../../source/integration/often-used-calls.rst:360
+msgid "Correspondences with BitShares 1.0 Calls"
+msgstr ""
+
+#: ../../source/integration/often-used-calls.rst:363
+msgid "BitShares 1.0 Calls"
+msgstr ""
+
+#: ../../source/integration/often-used-calls.rst:363
+msgid "BitShares 2.0 Calls"
+msgstr ""
+
+#: ../../source/integration/often-used-calls.rst:365
+msgid "``wallet_open``"
+msgstr ""
+
+#: ../../source/integration/often-used-calls.rst:365
+msgid "n.A. (default ``wallet.json``)"
+msgstr ""
+
+#: ../../source/integration/often-used-calls.rst:367
+msgid "``wallet_unlock``"
+msgstr ""
+
+#: ../../source/integration/often-used-calls.rst:367
+msgid "``unlock <password>``"
+msgstr ""
+
+#: ../../source/integration/often-used-calls.rst:369
+msgid "``wallet_account_balance``"
+msgstr ""
+
+#: ../../source/integration/often-used-calls.rst:371
+msgid "``wallet_address_create``"
+msgstr ""
+
+#: ../../source/integration/often-used-calls.rst:371
+msgid "n.A. no addresses available for sending"
+msgstr ""
+
+#: ../../source/integration/often-used-calls.rst:373
+msgid "``wallet_account_transaction_history``"
+msgstr ""
+
+#: ../../source/integration/often-used-calls.rst:375
+msgid "``wallet_transfer``"
+msgstr ""
+
+#: ../../source/integration/often-used-calls.rst:375
+msgid ""
+"``transfer <from> <to> <amount> <asset> \"<memo>\" <broadcast>`` "
+"``transfer2 <from> <to> <amount> <asset> \"<memo>\"``"
+msgstr ""
+
+#: ../../source/integration/often-used-calls.rst:378
+msgid "n.A."
+msgstr ""
+
+#: ../../source/integration/often-used-calls.rst:378
+msgid "``get_transaction_id(const signed_transaction & trx)``"
+msgstr ""
+
+#: ../../source/integration/often-used-calls.rst:380
+msgid "``blockchain_get_transaction``"
+msgstr ""
+
+#: ../../source/integration/often-used-calls.rst:380
+msgid "``get_object 1.11.<id>`` (``<id>`` integer)"
+msgstr ""
+
+#: ../../source/integration/often-used-calls.rst:382
+msgid "``blockchain_get_asset``"
+msgstr ""
+
+#: ../../source/integration/often-used-calls.rst:382
+msgid "``get_asset <symbol>`` or ``get_object 1.3.<id>`` (``<id>`` integer)"
+msgstr ""
+
+#: ../../source/integration/often-used-calls.rst:384
+msgid "``info``"
+msgstr ""
+
+#: ../../source/integration/public-full-nodes.rst:1
+msgid "**BitShares Public Full Nodes:**"
+msgstr ""
+
+#: ../../source/integration/public-full-nodes.rst:4
+msgid "``wss://bitshares.openledger.info/ws``"
+msgstr ""
+
+#: ../../source/integration/public-full-nodes.rst:6
+msgid "``wss://bitshares.dacplay.org:8089/ws``"
+msgstr ""
+
+#: ../../source/integration/public-full-nodes.rst:8
+msgid "``wss://dele-puppy.com/ws``"
+msgstr ""
+
+#: ../../source/integration/securing-funds.rst:3
+#: ../../source/integration/what-is-different.rst:46
+msgid "Securing Funds"
+msgstr ""
+
+#: ../../source/integration/securing-funds.rst:5
+msgid ""
+"Since BitShares 2.0 offers hierarchical corporate accounts to secure your"
+" account name and your funds. With this, you can build hierarchies of "
+"accounts (so called *authorities*) and a condition that has to be "
+"fulfilled in order for a transaction to become valid."
+msgstr ""
+
+#: ../../source/integration/securing-funds.rst:10
+msgid "(under construction)"
+msgstr ""
+
+#: ../../source/integration/supporting-features.rst:3
+msgid "Supporting Features"
+msgstr ""
+
+#: ../../source/integration/supporting-features.rst:5
+msgid ""
+"BitShares 2.0 offers some features that will make your integration easier"
+" and more secure:"
+msgstr ""
+
+#: ../../source/integration/supporting-features.rst:9
+msgid "User Issued Assets"
+msgstr ""
+
+#: ../../source/integration/supporting-features.rst:11
+msgid ""
+"Any participant can create and issue new (user-issued) assets. The "
+"potential use cases for so called user-issued assets (UIA) are "
+"innumerable. On the one hand, UIAs can be used as simple event tickets "
+"deposited on the customers mobile phone to pass the entrance of a "
+"concert. On the other hand, they can be used for crowd funding, ownership"
+" tracking or even to sell equity of a company in form of stock."
+msgstr ""
+
+#: ../../source/integration/supporting-features.rst:18
+msgid ""
+"Obviously, the regulations that apply to each kind of token vary widely "
+"and are often different in every jurisdiction. Hence, BitShares comes "
+"with tools that allow issuers to remain compliant with all applicable "
+"regulations when issuing assets assuming regulators allow such assets in "
+"the first place. We will discuss the tools and optional administrative "
+"rights given to the issuers of a given UIA and provide a subset of "
+"possible use-cases in more detail."
+msgstr ""
+
+#: ../../source/integration/supporting-features.rst:26
+msgid "Whitelists and Blacklists"
+msgstr ""
+
+#: ../../source/integration/supporting-features.rst:28
+msgid ""
+"Some 3rd party service providers may want to select which customers are "
+"allowed to hold their assets , e.g. after verified their identity for "
+"KYC/AML. Those services can use so called `whitelists` (or, "
+"alternatively, `blacklists`) of their assets that will prevent "
+"unauthorized participants to use this particular asset."
+msgstr ""
+
+#: ../../source/integration/supporting-features.rst:34
+msgid ""
+"In BitShares 2.0, account names (life-time members only) and also user-"
+"issued assets have their individual whitelists. Hence, if you issue an "
+"IOU on the blockchain, you can define who can hold and trade your tokens,"
+" if you wish."
+msgstr ""
+
+#: ../../source/integration/supporting-features.rst:38
+msgid ""
+"User whitelists on contrast can be used by independent KYC/AML providers "
+"to state proper verification. An asset issuer may then use those "
+"providers to oursource identity verification completely."
+msgstr ""
+
+#: ../../source/integration/supporting-features.rst:43
+msgid "Hierarchical Corporate Accounts"
+msgstr ""
+
+#: ../../source/integration/supporting-features.rst:45
+msgid ""
+"BitShares designs permissions around people, rather than around "
+"cryptography, making it easy to use. Every account can be controlled by "
+"any weighted combination of other accounts and private keys. This creates"
+" a hierarchical structure that reflects how permissions are organized in "
+"real life, and makes multi-user control over funds easier than ever. "
+"Multi-user control is the single biggest contributor to security, and, "
+"when used properly, it can virtually eliminate the risk of theft due to "
+"hacking."
+msgstr ""
+
+#: ../../source/integration/supporting-features.rst:53
+msgid ""
+"In BitShares 2.0 there is no real need for cold storage solutions. Just "
+"construct your spending authority using a set of people in your company "
+"such as CFO, CTO, and members of accounting and freely chose how much "
+"they can do."
+msgstr ""
+
+#: ../../source/integration/traders/index.rst:3
+msgid "Traders"
+msgstr ""
+
+#: ../../source/integration/traders/index.rst:5
+msgid ""
+"Blockchain-based decentralized exchanged (DEX) are slightly different to "
+"centralized exchanges and as a consequence, dealing with the DEX "
+"programmatically via APIs differs from centralized approaches as well. "
+"However, our developers have put quite some efforts into making the DEX "
+"as easy to use as their centralized counterparts and offer an API to the "
+"**public exchange data** that is very similar. However, **private "
+"exchange APIs** are different due to the fact that no entity except "
+"yourself can access your funds. For this reason, trading in the DEX "
+"requires that you have the private key to your account installed in an "
+"application that can construct and sign the corresponding transactions "
+"for you. One of these applications is the :doc:`../apps/cliwallet` which,"
+" after installation and configuration, offers a **your own private API**."
+msgstr ""
+
+#: ../../source/integration/traders/index.rst:23
+msgid "Public API"
+msgstr ""
+
+#: ../../source/integration/traders/index.rst:25
+msgid ""
+"The best way to get public data on markets is via websocket connection to"
+" a public full-node which provides traders with"
+msgstr ""
+
+#: ../../source/integration/traders/index.rst:28
+msgid "a ticker"
+msgstr ""
+
+#: ../../source/integration/traders/index.rst:29
+msgid "order books"
+msgstr ""
+
+#: ../../source/integration/traders/index.rst:30
+msgid "trade history"
+msgstr ""
+
+#: ../../source/integration/traders/index.rst:31
+msgid "and more."
+msgstr ""
+
+#: ../../source/integration/traders/index.rst:35
+msgid ""
+"A detailed description of how to interface with Graphene-based blockchain"
+" (e.g. BitShares) and a list of available calls can be found here:"
+msgstr ""
+
+#: ../../source/integration/traders/index.rst:46
+msgid "Private API"
+msgstr ""
+
+#: ../../source/integration/traders/index.rst:48
+msgid ""
+"As briefly mentioned above, trading in the DEX programmatically requires "
+"that you run your own :doc:`../apps/cliwallet`. The following tutorials "
+"gives a brief introduction on how to use the CLI wallet and configure it "
+"properly so that it can be used as a **private API server**:"
+msgstr ""
+
+#: ../../source/integration/traders/index.rst:58
+msgid ""
+"After installation and configuration of the private API, we can use RPC "
+"to create orders, cancel orders, create and adjust call orders, and more."
+"  The CLI wallet offers a wide range of calls that can be used to mange "
+"your account and trade in the DEX:"
+msgstr ""
+
+#: ../../source/integration/traders/index.rst:71
+msgid ""
+"Libraries have been developed that simply the interaction with both, the "
+"full node and the CLI wallet and make interactions with the blockchain "
+"and the DEX very easy:"
+msgstr ""
+
+#: ../../source/integration/tutorials/general-network-setup.rst:3
+msgid "General Network and Wallet Configuration"
+msgstr ""
+
+#: ../../source/integration/tutorials/general-network-setup.rst:5
+msgid "We will work with the following IPs and open the corresponding RPC ports:"
+msgstr ""
+
+#: ../../source/integration/tutorials/general-network-setup.rst:11
+#: ../../source/integration/tutorials/secure-network-setup.rst:12
+msgid "Trusted Full Node:"
+msgstr ""
+
+#: ../../source/integration/tutorials/general-network-setup.rst:9
+#: ../../source/integration/tutorials/secure-network-setup.rst:10
+msgid "extern: internet access **required**"
+msgstr ""
+
+#: ../../source/integration/tutorials/general-network-setup.rst:10
+#: ../../source/integration/tutorials/secure-network-setup.rst:11
+msgid "intern: ``192.168.0.100``"
+msgstr ""
+
+#: ../../source/integration/tutorials/general-network-setup.rst:11
+#: ../../source/integration/tutorials/secure-network-setup.rst:12
+#: ../../source/integration/tutorials/secure-network-setup.rst:17
+msgid "port: ``8090``"
+msgstr ""
+
+#: ../../source/integration/tutorials/general-network-setup.rst:16
+#: ../../source/integration/tutorials/secure-network-setup.rst:22
+msgid "Wallet:"
+msgstr ""
+
+#: ../../source/integration/tutorials/general-network-setup.rst:14
+#: ../../source/integration/tutorials/secure-network-setup.rst:15
+#: ../../source/integration/tutorials/secure-network-setup.rst:20
+msgid "extern: **no** internet access required"
+msgstr ""
+
+#: ../../source/integration/tutorials/general-network-setup.rst:15
+#: ../../source/integration/tutorials/secure-network-setup.rst:21
+msgid "intern: ``192.168.0.102``"
+msgstr ""
+
+#: ../../source/integration/tutorials/general-network-setup.rst:16
+#: ../../source/integration/tutorials/secure-network-setup.rst:22
+msgid "port: ``8092``"
+msgstr ""
+
+#: ../../source/integration/tutorials/general-network-setup.rst:18
+#: ../../source/integration/tutorials/secure-network-setup.rst:24
+msgid "Let's go into more detail how to set these up."
+msgstr ""
+
+#: ../../source/integration/tutorials/general-network-setup.rst:23
+msgid ""
+"For the trusted full node, the default settings can be used. For later, "
+"we will need to open the RPC port and listen to an IP address to connect "
+"the wallet to."
+msgstr ""
+
+#: ../../source/integration/tutorials/general-network-setup.rst:31
+#: ../../source/integration/tutorials/secure-network-setup.rst:37
+msgid ""
+"A *witness* node is identical to a full node if no authorized block-"
+"signing private key is provided."
+msgstr ""
+
+#: ../../source/integration/tutorials/general-network-setup.rst:37
+msgid ""
+"We open up a RPC-JSON-HTTP port to be able to interface with API "
+"requests. The wallet can be connected to the trusted node and listens for"
+" RPC requests on port ``8092`` with:"
+msgstr ""
+
+#: ../../source/integration/tutorials/general-network-setup.rst:46
+#: ../../source/integration/tutorials/secure-network-setup.rst:88
+msgid ""
+"For security reasons, the wallet should only listen to localhost or the "
+"local network and should **NEVER** be exposed to the internet."
+msgstr ""
+
+#: ../../source/integration/tutorials/general-network-setup.rst:49
+#: ../../source/integration/tutorials/secure-network-setup.rst:91
+msgid ""
+"For customer withdrawals, we will interface to the wallet's API using "
+"`192.168.0.102:8092`."
+msgstr ""
+
+#: ../../source/integration/tutorials/index.rst:3
+msgid "Integration Tutorials"
+msgstr ""
+
+#: ../../source/integration/tutorials/nodejs-monitor.rst:3
+msgid "NodeJS Example"
+msgstr ""
+
+#: ../../source/integration/tutorials/nodejs-monitor.rst:5
+msgid ""
+"This nodejs script monitors the balance history of an account in a "
+"graphene-based network such as BitShares 2.0."
+msgstr ""
+
+#: ../../source/integration/tutorials/nodejs-monitor.rst:11
+msgid "A NodeJS library to monitor incoming transactions can be downloaded from"
+msgstr ""
+
+#: ../../source/integration/tutorials/nodejs-monitor.rst:22
+#: ../../source/integration/tutorials/python-monitor.rst:26
+msgid ""
+"To make use of this library, we can instruct any full-node to send "
+"notifications for all incoming transactions for any account. Let's "
+"discuss the following example script in more details:"
+msgstr ""
+
+#: ../../source/integration/tutorials/nodejs-monitor.rst:26
+#: ../../source/integration/tutorials/python-monitor.rst:30
+msgid "We first prepare our variables and import all required modules"
+msgstr ""
+
+#: ../../source/integration/tutorials/nodejs-monitor.rst:28
+msgid ""
+"Define the `accountID` and the `memo_wif_key`. The accountID can be "
+"obtained from the GUI wallet, or by issuing:::"
+msgstr ""
+
+#: ../../source/integration/tutorials/nodejs-monitor.rst:33
+#: ../../source/integration/tutorials/python-monitor.rst:37
+msgid ""
+"If the script exists abnormally, you can continue operations by setting "
+"`last_op` to the last operation id that you have captured before the "
+"abnormal exit."
+msgstr ""
+
+#: ../../source/integration/tutorials/nodejs-monitor.rst:37
+#: ../../source/integration/tutorials/python-monitor.rst:41
+msgid ""
+"The current implementation has a maxium history size of 100 transaction. "
+"If you have missed more than 100 transaction with the current "
+"implementation, manual fixing is required."
+msgstr ""
+
+#: ../../source/integration/tutorials/nodejs-monitor.rst:41
+msgid "The settings are located in `config.js` and take"
+msgstr ""
+
+#: ../../source/integration/tutorials/nodejs-monitor.rst:43
+msgid "the rpc connection settings"
+msgstr ""
+
+#: ../../source/integration/tutorials/nodejs-monitor.rst:44
+msgid "the memo decoding private key in wif format"
+msgstr ""
+
+#: ../../source/integration/tutorials/nodejs-monitor.rst:45
+msgid "the account ID to monitor"
+msgstr ""
+
+#: ../../source/integration/tutorials/nodejs-monitor.rst:46
+msgid ""
+"the last operation that has been logged successfully in your backed in "
+"case of ungraceful shutdown"
+msgstr ""
+
+#: ../../source/integration/tutorials/nodejs-monitor.rst:49
+msgid ""
+"The last operation will show a maximum of 100 most recent transactions. "
+"If more have been missed due to a down-time. Manual intervention is "
+"necessary."
+msgstr ""
+
+#: ../../source/integration/tutorials/nodejs-monitor.rst:53
+#: ../../source/integration/tutorials/python-monitor.rst:45
+msgid ""
+"Furthermore, in Graphene, memos are usually encrypted using a distinct "
+"memo key. That way, exposing the memo private key will only expose "
+"transaction memos (for that key) and not compromise any funds. It is thus"
+" safe to store the memo private key in 3rd party services and scripts. "
+"The memo public key can be obtained from the account settings or via "
+"command line:::"
+msgstr ""
+
+#: ../../source/integration/tutorials/nodejs-monitor.rst:61
+#: ../../source/integration/tutorials/python-monitor.rst:53
+msgid "in the cli wallet. The corresponding private key can be obtain from:::"
+msgstr ""
+
+#: ../../source/integration/tutorials/nodejs-monitor.rst:65
+#: ../../source/integration/tutorials/python-monitor.rst:57
+msgid "Note that the latter command exposes all private keys in clear-text wif."
+msgstr ""
+
+#: ../../source/integration/tutorials/nodejs-monitor.rst:70
+msgid "The script can be executed simply by"
+msgstr ""
+
+#: ../../source/integration/tutorials/nodejs-monitor.rst:76
+msgid "and will show all incoming transactions and corresponding (decoded) memo."
+msgstr ""
+
+#: ../../source/integration/tutorials/preparing-cli-wallet-trading.rst:3
+msgid "Howto prepare a CLI wallet for trading"
+msgstr ""
+
+#: ../../source/integration/tutorials/preparing-cli-wallet-trading.rst:5
+msgid ""
+"The CLI wallet is used to interact with the blockchain. Everything that "
+"adds new data to the blockchain requires a signature from a private key. "
+"These signed transactions can be produced by the CLI wallet."
+msgstr ""
+
+#: ../../source/integration/tutorials/preparing-cli-wallet-trading.rst:10
+msgid "Download and Installation"
+msgstr ""
+
+#: ../../source/integration/tutorials/preparing-cli-wallet-trading.rst:12
+msgid ""
+"For most graphene-based blockchain projects, there should be a separated "
+"``cli-tools`` download available for many platforms. If not, the CLI "
+"wallet can be compile manually via"
+msgstr ""
+
+#: ../../source/integration/tutorials/preparing-cli-wallet-trading.rst:21
+msgid "Executing the cli-wallet"
+msgstr ""
+
+#: ../../source/integration/tutorials/preparing-cli-wallet-trading.rst:23
+msgid ""
+"All it takes for the cli-wallet to run is a trusted **public API server**"
+" to interface with the blockchain. These public API servers are run by "
+"businesses and :doc:`individuals <../../bitshares/tutorials/full-node-"
+"usage>`:"
+msgstr ""
+
+#: ../../source/integration/tutorials/preparing-cli-wallet-trading.rst:29
+msgid "We can let the wallet know which API server to use by:"
+msgstr ""
+
+#: ../../source/integration/tutorials/preparing-cli-wallet-trading.rst:35
+msgid ""
+"The cli-wallet will open two RPC ports so that you can interface your "
+"application with it. You have the choices of"
+msgstr ""
+
+#: ../../source/integration/tutorials/preparing-cli-wallet-trading.rst:38
+msgid "websocket RPC via the ``-r`` parameter, and"
+msgstr ""
+
+#: ../../source/integration/tutorials/preparing-cli-wallet-trading.rst:39
+msgid "HTTP RPC via the ``-H`` parameter:"
+msgstr ""
+
+#: ../../source/integration/tutorials/preparing-cli-wallet-trading.rst:41
+msgid ""
+"The command above will open the cli-wallet and, unless you already have a"
+" local wallet, will ask you to provide a passphrase for your local "
+"wallet.  Once a wallet has been created (default wallet file is "
+"``wallet.json``), it will prompt with"
+msgstr ""
+
+#: ../../source/integration/tutorials/preparing-cli-wallet-trading.rst:51
+msgid ""
+"In order for the wallet to be able to sign trading orders, you need to "
+"unlock it by providing the passphrase:"
+msgstr ""
+
+#: ../../source/integration/tutorials/preparing-cli-wallet-trading.rst:54
+msgid "The passphrase is given in clear text and is echoed by the wallet!"
+msgstr ""
+
+#: ../../source/integration/tutorials/preparing-cli-wallet-trading.rst:63
+msgid ""
+"After this point, you can issue :doc:`any command available to the cli-"
+"wallet <../../api/wallet-api>` or construct your :doc:`own transaction "
+"manually <../../bitshares/tutorials/construct-transaction>`."
+msgstr ""
+
+#: ../../source/integration/tutorials/preparing-cli-wallet-trading.rst:67
+msgid ""
+"You can get more detailed information either by pressing `Tab`, twice, or"
+" by issuing ``help``. Detailed explanations for most calls are available "
+"via"
+msgstr ""
+
+#: ../../source/integration/tutorials/preparing-cli-wallet-trading.rst:75
+msgid ""
+"Many calls have a obligatory ``broadcast``-flag as last argument. If this"
+" flag is ``False``, the wallet will construct and sign, but **not** "
+"broadcast the transaction. This can be very useful for a cold storage "
+"setup or to verify transactions."
+msgstr ""
+
+#: ../../source/integration/tutorials/python-monitor.rst:3
+msgid "Monitoring Account Deposits with Python"
+msgstr ""
+
+#: ../../source/integration/tutorials/python-monitor.rst:32
+msgid ""
+"Define the `accountID` and the `memo_wif_key` in `examples/monitor.py`. "
+"The accountID can be obtained from the GUI wallet, or by issuing:::"
+msgstr ""
+
+#: ../../source/integration/tutorials/secure-network-setup.rst:3
+msgid "Secure Network and Wallet Configuration"
+msgstr ""
+
+#: ../../source/integration/tutorials/secure-network-setup.rst:5
+msgid ""
+"The delayed full node should be in the same *local* network as the "
+"trusted full node is in the same network and has internet access. Hence "
+"we will work with the following IPs and open the corresponding RPC ports:"
+msgstr ""
+
+#: ../../source/integration/tutorials/secure-network-setup.rst:17
+msgid "Delayed Full Node:"
+msgstr ""
+
+#: ../../source/integration/tutorials/secure-network-setup.rst:16
+msgid "intern: ``192.168.0.101``"
+msgstr ""
+
+#: ../../source/integration/tutorials/secure-network-setup.rst:29
+msgid ""
+"For the trusted full node, the default settings can be used.  For later, "
+"we will need to open the RPC port and listen to an IP address to connect "
+"the delayed full node to."
+msgstr ""
+
+#: ../../source/integration/tutorials/secure-network-setup.rst:60
+msgid "We could now connect via RPC:"
+msgstr ""
+
+#: ../../source/integration/tutorials/secure-network-setup.rst:62
+msgid "``192.168.0.100:8090`` : The trusted full node exposed to the internet"
+msgstr ""
+
+#: ../../source/integration/tutorials/secure-network-setup.rst:63
+msgid "``192.168.0.101:8090`` : The delayed full node not exposed to the internet"
+msgstr ""
+
+#: ../../source/integration/tutorials/secure-network-setup.rst:65
+msgid ""
+"For security reasons, an exchange should only interface with the delayed "
+"full node."
+msgstr ""
+
+#: ../../source/integration/tutorials/secure-network-setup.rst:68
+msgid ""
+"For obvious reasons, the trusted full node is should be running before "
+"attempting to start the delayed full node."
+msgstr ""
+
+#: ../../source/integration/tutorials/secure-network-setup.rst:71
+msgid ""
+"For customer deposits, we will interface to the delayed node's API using "
+"`192.168.0.101:8090`."
+msgstr ""
+
+#: ../../source/integration/tutorials/secure-network-setup.rst:77
+msgid ""
+"The wallet initiates outgoing transfers and has to connect to your "
+"trusted node because the *delayed* node has no P2P connections. We "
+"furthermore open up a RPC-JSON-HTTP port to be able to interface with API"
+" requests. The wallet can be connected to the trusted node and listens "
+"for RPC requests on port ``8092`` with:"
+msgstr ""
+
+#: ../../source/integration/user-whitelist.rst:3
+msgid "User Whitelists"
+msgstr ""
+
+#: ../../source/integration/user-whitelist.rst:5
+msgid ""
+"Any live-time member can cast an opinion about other accounts using "
+"white- and black-lists. They **do not** prevent anyone from interacting "
+"with your account but serve as a basis for *list authorities*."
+msgstr ""
+
+#: ../../source/integration/user-whitelist.rst:12
+msgid ""
+"A user ``white`` can be added to the white-list of account ``provider`` "
+"with:::"
+msgstr ""
+
+#: ../../source/integration/user-whitelist.rst:16
+msgid "In contrast a ``black`` user can be added to its blacklist with:::"
+msgstr ""
+
+#: ../../source/integration/user-whitelist.rst:20
+msgid "Both can be removed from their lists with:::"
+msgstr ""
+
+#: ../../source/integration/user-whitelist.rst:27
+msgid "White- and Black-listing of accounts works with the following API call:"
+msgstr ""
+
+#: ../../source/integration/user-whitelist.rst:31
+msgid "It expects a `new_listing_status` from"
+msgstr ""
+
+#: ../../source/integration/what-is-different.rst:3
+msgid "What is Different in BitShares"
+msgstr ""
+
+#: ../../source/integration/what-is-different.rst:5
+msgid ""
+"Here we give a brief overview of what is different in BitShares 2.0 when "
+"compared to satoshi-based blockchains such as Bitcoin, Litecoin, etc.. "
+"from the perspective of an exchange."
+msgstr ""
+
+#: ../../source/integration/what-is-different.rst:10
+msgid "Several Tokens"
+msgstr ""
+
+#: ../../source/integration/what-is-different.rst:12
+msgid ""
+"In contrast to all satoshi-based clients, BitShares 2.0 offers a variety "
+"of blockchain tokens. There is not just the BTS (core token) but many "
+"others. Hence, as an exchange you need to distinguish different assets, "
+"either by their id (1.3.0 (BTS), 1.3.1 (USD), ...) or by there symbol."
+msgstr ""
+
+#: ../../source/integration/what-is-different.rst:18
+msgid "Registered Identities"
+msgstr ""
+
+#: ../../source/integration/what-is-different.rst:20
+msgid ""
+"All participants in BitShares 2.0 are required to have a registered "
+"unique name. This is similar to mail addresses and are used to address "
+"recipients for transfers. As an exchange you will only ever need to tell "
+"your customers your BitShares account name and they will be able to send "
+"you funds."
+msgstr ""
+
+#: ../../source/integration/what-is-different.rst:26
+msgid "No More Addresses"
+msgstr ""
+
+#: ../../source/integration/what-is-different.rst:28
+msgid ""
+"In BitShares 2.0, we have separated the permissions from the identity. "
+"Hence, as an exchange you don't need to ever deal with addresses again. "
+"In fact, you actually cannot possibly use an address because they only "
+"define so called *authorities* that can control the funds (or the account"
+" name). This should greatly simplify integration as you don't need to "
+"store thousands of addresses and their corresponding private keys."
+msgstr ""
+
+#: ../../source/integration/what-is-different.rst:36
+msgid "Memos"
+msgstr ""
+
+#: ../../source/integration/what-is-different.rst:38
+msgid ""
+"In order to distinguish customers, we make use of so called *memos* "
+"similar to BitShares 1, which are encrypted. In contrast to BitShares "
+"1.0, we now have a separated memo key that is only capable of decoding "
+"your memo and cannot spend funds. Hence, in order to monitor deposits to "
+"the exchange you no longer need to expose the private key to an internet "
+"connected machine. Instead you only decode the memo and leave the funds "
+"where they are."
+msgstr ""
+
+#: ../../source/integration/what-is-different.rst:48
+msgid ""
+"Funds can be secured by *hierarchical cooperate accounts*. In practise, "
+"they are (Threshold) Multi-Signature accounts from which funds can only "
+"be spend if several signatures are valid. In contrast to mostly every "
+"other crypto currency, you can propose a transaction on the blockchain "
+"and don't need other means of communications to add your approval to a "
+"certain transactions. You can find more details about these account types"
+" in"
+msgstr ""
+
+#: ../../source/integration/what-is-different.rst:55
+msgid ":doc:`../user/account-memberships`"
+msgstr ""
+
+#: ../../source/integration/what-is-different.rst:56
+msgid ":doc:`securing-funds`"
+msgstr ""
+
+#: ../../source/integration/what-is-different.rst:59
+msgid "Full Nodes and Clients"
+msgstr ""
+
+#: ../../source/integration/what-is-different.rst:61
+msgid ""
+"We have rewritten the core components from scratch and separated the core"
+" P2P and blockchain components from the wallet. Hence, you can run a full"
+" node without a wallet and connect your wallet to any public (or non-"
+"public) full-node (executable `witness_node`). The communication can be "
+"established securely but the private keys never leave the wallet."
+msgstr ""
+
+#: ../../source/integration/what-is-different.rst:68
+msgid "Object IDs"
+msgstr ""
+
+#: ../../source/integration/what-is-different.rst:70
+msgid ""
+"Since BitShares 2.0 offers a variety of features to its users that are "
+"different in many ways, we have decided to address them using *object "
+"ids*. For instance:"
+msgstr ""
+
+#: ../../source/integration/what-is-different.rst:75
+msgid "Object ID     | translates to"
+msgstr ""
+
+#: ../../source/integration/what-is-different.rst:77
+msgid "``1.3.1``"
+msgstr ""
+
+#: ../../source/integration/what-is-different.rst:77
+msgid "asset USD"
+msgstr ""
+
+#: ../../source/integration/what-is-different.rst:79
+msgid "``1.3.0``"
+msgstr ""
+
+#: ../../source/integration/what-is-different.rst:79
+msgid "asset BTS"
+msgstr ""
+
+#: ../../source/integration/what-is-different.rst:81
+msgid "``1.2.<id>``"
+msgstr ""
+
+#: ../../source/integration/what-is-different.rst:81
+msgid "user with id ``<id>``"
+msgstr ""
+
+#: ../../source/integration/what-is-different.rst:83
+msgid "``1.6.<id>``"
+msgstr ""
+
+#: ../../source/integration/what-is-different.rst:83
+msgid "block signer ``<id>``"
+msgstr ""
+
+#: ../../source/integration/what-is-different.rst:85
+msgid "``1.11.<id>``"
+msgstr ""
+
+#: ../../source/integration/what-is-different.rst:85
+msgid "operation with id ``<id>``"
+msgstr ""
+
+#: ../../source/integration/what-is-different.rst:88
+msgid "Read more in the distinct :doc:`../blockchain/Objects` page."
+msgstr ""
+
+#: ../../source/integration/whitelist.rst:3
+msgid "Using White- and Black-lists"
+msgstr ""
+
+#: ../../source/integration/whitelist.rst:5
+msgid ""
+"White- Black-Lists exist for assets and for (lifetime member) accounts. "
+"While the latter can only be used to cast an opinion about another "
+"account, lists for assets serve a very practical need."
+msgstr ""
+

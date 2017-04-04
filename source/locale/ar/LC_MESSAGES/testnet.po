@@ -1,0 +1,1300 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015, Fabian Schuh
+# This file is distributed under the same license as the Graphene Technical
+# Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Graphene Technical Documentation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-03 11:56+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../source/testnet/1-install.rst:3
+msgid "Installation/Confguration of Witness"
+msgstr ""
+
+#: ../../source/testnet/1-install.rst:6
+msgid "Fork CNX's code base"
+msgstr ""
+
+#: ../../source/testnet/1-install.rst:17
+msgid "Installation according to :doc:`../installation/Build`"
+msgstr ""
+
+#: ../../source/testnet/1-install.rst:20
+#: ../../source/testnet/6-webwallet.rst:32 ../../source/testnet/7-faucet.rst:53
+#: ../../source/testnet/8-nginx.rst:29
+msgid "Configuration"
+msgstr ""
+
+#: ../../source/testnet/1-install.rst:23
+msgid "Blockchain Parameters"
+msgstr ""
+
+#: ../../source/testnet/1-install.rst:25
+msgid ""
+"The blockchain parameters can be modified in the "
+"`libraries/chain/include/graphene/chain/config.hpp "
+"<https://github.com/cryptonomex/graphene/blob/master/libraries/chain/include/graphene/chain/config.hpp>`_"
+" file:"
+msgstr ""
+
+#: ../../source/testnet/1-install.rst:35
+msgid "Default Seed Node List"
+msgstr ""
+
+#: ../../source/testnet/1-install.rst:37
+msgid ""
+"We can add a default list of seed nodes that the witness is supposed to "
+"try to connect to in `libraries/app/application.cpp "
+"<https://github.com/cryptonomex/graphene/blob/master/libraries/app/application.cpp>`_"
+" and will add the IP/Address and port of the machine we are going to "
+"setup later already:"
+msgstr ""
+
+#: ../../source/testnet/1-install.rst:43
+msgid "testnet.bitshares.eu:11010"
+msgstr ""
+
+#: ../../source/testnet/1-install.rst:45
+msgid ""
+"The full changeset can be seen in the corresponding `git commit "
+"<https://github.com/BitSharesEurope/graphene-"
+"testnet/commit/94f0a95be6f80cb5a7926ba6cc920dd795eb3a19>`_"
+msgstr ""
+
+#: ../../source/testnet/1-install.rst:49
+msgid "Initial Compilation"
+msgstr ""
+
+#: ../../source/testnet/1-install.rst:56
+msgid ""
+"We first need to compile the graphene toolkit so that we can let it "
+"generate a plain genesis file in the proper format."
+msgstr ""
+
+#: ../../source/testnet/10-create-assets.rst:3
+msgid "Create MPAs/UIAs"
+msgstr ""
+
+#: ../../source/testnet/10-create-assets.rst:5
+msgid "We now create some Market Pegged assets and construct the price feed."
+msgstr ""
+
+#: ../../source/testnet/10-create-assets.rst:7
+msgid ""
+"Create Market Pegged Assets: https://github.com/BitSharesEurope/testnet-"
+"pythonscripts/blob/master/create_mpa.py"
+msgstr ""
+
+#: ../../source/testnet/10-create-assets.rst:9
+msgid ""
+"Fund `init*` witnessses: https://github.com/BitSharesEurope/testnet-"
+"pythonscripts/blob/master/fund-inits.py"
+msgstr ""
+
+#: ../../source/testnet/10-create-assets.rst:11
+msgid "Price feed scripts:"
+msgstr ""
+
+#: ../../source/testnet/10-create-assets.rst:13
+msgid ""
+"https://github.com/BitSharesEurope/testnet-"
+"pythonscripts/blob/master/feed.last.py"
+msgstr ""
+
+#: ../../source/testnet/10-create-assets.rst:14
+msgid ""
+"https://github.com/BitSharesEurope/testnet-"
+"pythonscripts/blob/master/feed.parity.py"
+msgstr ""
+
+#: ../../source/testnet/10-create-assets.rst:15
+msgid ""
+"https://github.com/BitSharesEurope/testnet-"
+"pythonscripts/blob/master/feed.random.py"
+msgstr ""
+
+#: ../../source/testnet/10-create-assets.rst:17
+msgid "We can use `cron` to runt he price feed script on a regular basis:"
+msgstr ""
+
+#: ../../source/testnet/2-genesis.rst:3
+msgid "Genesis Configuration"
+msgstr ""
+
+#: ../../source/testnet/2-genesis.rst:5
+msgid ""
+"We will create a genesis file named ``my-genesis.json`` that contains the"
+" genesis block:"
+msgstr ""
+
+#: ../../source/testnet/2-genesis.rst:14
+msgid "The ``my-genesis.json`` is the initial state of the network."
+msgstr ""
+
+#: ../../source/testnet/2-genesis.rst:17
+msgid "Genesis editing"
+msgstr ""
+
+#: ../../source/testnet/2-genesis.rst:19
+msgid ""
+"If you want to customize the network's initial state, edit ``my-"
+"genesis.json``. This allows you to control things such as:"
+msgstr ""
+
+#: ../../source/testnet/2-genesis.rst:22
+#: ../../source/testnet/private-testnet.rst:61
+msgid "The accounts that exist at genesis, their names and public keys"
+msgstr ""
+
+#: ../../source/testnet/2-genesis.rst:23
+#: ../../source/testnet/private-testnet.rst:62
+msgid "Assets and their initial distribution (including core asset)"
+msgstr ""
+
+#: ../../source/testnet/2-genesis.rst:24
+msgid "The initial values of chain parameters"
+msgstr ""
+
+#: ../../source/testnet/2-genesis.rst:25
+msgid ""
+"The account / signing keys of the ``init`` witnesses (or in fact any "
+"account at all)."
+msgstr ""
+
+#: ../../source/testnet/2-genesis.rst:27
+msgid ""
+"The chain ID is a hash of the genesis state.  All transaction signatures "
+"are only valid for a single chain ID.  So editing the genesis file will "
+"change your chain ID, and make you unable to sync with all existing "
+"chains (unless one of them has exactly the same genesis file you do)."
+msgstr ""
+
+#: ../../source/testnet/2-genesis.rst:33
+msgid "Writing final genesis"
+msgstr ""
+
+#: ../../source/testnet/2-genesis.rst:35
+msgid ""
+"We now copy our gensis template file over to the graphene root "
+"directory:::"
+msgstr ""
+
+#: ../../source/testnet/2-genesis.rst:43
+msgid ""
+"The **initial timestamp** needs to be pasted into ``genesis.json`` file "
+"in the initial_timestamp field. Choose it relatively close to the future "
+"where you can generate the genesis block (e.g. now plus 10 minutes)."
+msgstr ""
+
+#: ../../source/testnet/2-genesis.rst:48
+msgid "Including Genesis into the binaries"
+msgstr ""
+
+#: ../../source/testnet/2-genesis.rst:50
+msgid ""
+"To let the binaries know about your new genesis block, we need to "
+"recompile it and provide ``cmake`` with the parameter to identify the "
+"genesis block properly:"
+msgstr ""
+
+#: ../../source/testnet/2-genesis.rst:61
+msgid ""
+"You can add the ``GRAPHENE_EGENESIS_JSON`` to the default parameters by "
+"adding:"
+msgstr ""
+
+#: ../../source/testnet/2-genesis.rst:68
+msgid ""
+"to the ``CMakeLists.txt`` file. This way, you don't need to provide this "
+"parameter all the time."
+msgstr ""
+
+#: ../../source/testnet/3-init-blockchain.rst:3
+msgid "Initializing Blockchain"
+msgstr ""
+
+#: ../../source/testnet/3-init-blockchain.rst:6
+msgid "Initializing the genesis block"
+msgstr ""
+
+#: ../../source/testnet/3-init-blockchain.rst:8
+msgid "We initialize the blockchain an generate our first blocks."
+msgstr ""
+
+#: ../../source/testnet/3-init-blockchain.rst:10
+msgid ""
+"The ``--enable-stale-production`` flag tells the ``witness_node`` to "
+"produce on a chain with zero blocks or very old blocks.  We specify the "
+"``--enable-stale-production`` parameter on the command line as we will "
+"not normally need it (although it can also be specified in the config "
+"file)."
+msgstr ""
+
+#: ../../source/testnet/3-init-blockchain.rst:22
+msgid "We will already see our chain id:::"
+msgstr ""
+
+#: ../../source/testnet/3-init-blockchain.rst:27
+msgid ""
+"If other witness produces blocks and witness participation is high "
+"enough, subsequent runs which connect to an existing witness node over "
+"the p2p network, or which get blockchain state from an existing data "
+"directory, need not have the ``--enable-stale-production`` flag."
+msgstr ""
+
+#: ../../source/testnet/3-init-blockchain.rst:34
+msgid "Setting up block production"
+msgstr ""
+
+#: ../../source/testnet/3-init-blockchain.rst:36
+msgid "Let's create a very basic configuration file in `data/testnet/config.ini`:"
+msgstr ""
+
+#: ../../source/testnet/3-init-blockchain.rst:43
+msgid ""
+"All we put into the configuration file is the ids and the keys for the "
+"witnesses so that we can start producing blocks"
+msgstr ""
+
+#: ../../source/testnet/3-init-blockchain.rst:71
+msgid ""
+"This authorizes the ``witness_node`` to produce blocks on behalf of the "
+"listed ``witness-id``'s, and specifies the private key needed to sign "
+"those blocks.  Normally each witness would be on a different node, but "
+"for the purposes of this testnet, we will start out with all witnesses "
+"signing blocks on a single node."
+msgstr ""
+
+#: ../../source/testnet/3-init-blockchain.rst:77
+msgid ""
+"The setting ``rpc-endpoint = 0.0.0.0:11011`` will open up the RPC-port "
+"`11011` to connect a cli-wallet or web wallet to it. With the ``p2p-"
+"endpoint = 0.0.0.0:11010`` being accessible from the internet, this node "
+"can be used as seed node."
+msgstr ""
+
+#: ../../source/testnet/3-init-blockchain.rst:83
+msgid "Embedding the Genesis block (optional)"
+msgstr ""
+
+#: ../../source/testnet/3-init-blockchain.rst:85
+msgid ""
+"Now that we have the blockchain established and the used correct genesis "
+"block, we can have it embedded into the binaries directly. For that "
+"reasons we have moved it into the root directory and called it "
+"``genesis.json`` for the default compile toolchain to catch it "
+"automatically. We recompile to include the genesis block with:"
+msgstr ""
+
+#: ../../source/testnet/3-init-blockchain.rst:98
+msgid ""
+"Deleting caches will reset all ``cmake`` variables, so if you have used "
+"instructions like :doc:`../installation/Build` which tells you to set "
+"other ``cmake`` variables, you will have to add those variables to the "
+"``cmake`` line above."
+msgstr ""
+
+#: ../../source/testnet/3-init-blockchain.rst:103
+msgid ""
+"Embedding the genesis copies the entire content of genesis block into the"
+" ``witness_node`` binary, and additionally copies the chain ID into the "
+"``cli_wallet`` binary.  Embedded genesis allows the following "
+"simplifications to the subsequent instructions:"
+msgstr ""
+
+#: ../../source/testnet/3-init-blockchain.rst:108
+msgid ""
+"You need **not** specify the genesis file on the witness node command "
+"line, or in the witness node configuration file."
+msgstr ""
+
+#: ../../source/testnet/3-init-blockchain.rst:110
+msgid ""
+"You need **not** specify the chain ID on the ``cli_wallet`` command line "
+"when starting a new wallet."
+msgstr ""
+
+#: ../../source/testnet/4-cli-wallet.rst:3
+msgid "Connecting a CLI wallet"
+msgstr ""
+
+#: ../../source/testnet/4-cli-wallet.rst:5
+msgid ""
+"We will now show how to connect a cli-wallet to the new blockchain and "
+"generate our first transaction on the new blockchain."
+msgstr ""
+
+#: ../../source/testnet/4-cli-wallet.rst:9
+msgid "Creating a wallet"
+msgstr ""
+
+#: ../../source/testnet/4-cli-wallet.rst:11
+msgid ""
+"In order to create a wallet, you must specify the previously setup "
+"server. With the witness node's default access control settings, a blank "
+"username and password will suffice:"
+msgstr ""
+
+#: ../../source/testnet/4-cli-wallet.rst:19
+msgid ""
+"The parameter `-H` is required so that we can interface with the cli "
+"wallet via RPC-HTTP-JSON, later while `-r` will open a port for the Ruby-"
+"based faucet."
+msgstr ""
+
+#: ../../source/testnet/4-cli-wallet.rst:23
+msgid ""
+"Before continuing, we should set a password.  This password is used to "
+"encrypt the private keys in the wallet.  We will use the word "
+"``supersecret`` in this example.::"
+msgstr ""
+
+#: ../../source/testnet/4-cli-wallet.rst:30
+msgid "Gaining access to stake"
+msgstr ""
+
+#: ../../source/testnet/4-cli-wallet.rst:32
+msgid ""
+"In Graphene, balances are contained in accounts.  To claim an account "
+"that exists in the Graphene genesis, use the ``import_key`` command:::"
+msgstr ""
+
+#: ../../source/testnet/4-cli-wallet.rst:38
+msgid ""
+"Funds are stored in genesis balance objects.  These funds can be claimed,"
+" with no fee, using the ``import_balance`` command.::"
+msgstr ""
+
+#: ../../source/testnet/4-cli-wallet.rst:44
+msgid "Creating accounts"
+msgstr ""
+
+#: ../../source/testnet/4-cli-wallet.rst:46
+msgid ""
+"Creating an account requires lifetime member (LTM) status.  To upgrade to"
+" LTM, use the ``upgrade_account`` command:::"
+msgstr ""
+
+#: ../../source/testnet/4-cli-wallet.rst:51
+msgid ""
+"We can now register an account.  The ``register_account`` command allows "
+"you to register an account using only a public key:::"
+msgstr ""
+
+#: ../../source/testnet/4-cli-wallet.rst:57
+msgid "We can now open a new wallet for ``alpha`` user:::"
+msgstr ""
+
+#: ../../source/testnet/4-cli-wallet.rst:63
+msgid ""
+"The ``get_private_key`` command allows us to obtain the private key "
+"corresponding to the block signing key:::"
+msgstr ""
+
+#: ../../source/testnet/5-committee.rst:3
+msgid "Establishing a Committee"
+msgstr ""
+
+#: ../../source/testnet/5-committee.rst:5
+msgid ""
+"Our network, of course, needs a committee. We need to initialy create new"
+" accounts and let them apply as committee member."
+msgstr ""
+
+#: ../../source/testnet/5-committee.rst:9
+msgid "Creating members"
+msgstr ""
+
+#: ../../source/testnet/5-committee.rst:22
+msgid "Upgrading members"
+msgstr ""
+
+#: ../../source/testnet/5-committee.rst:24
+msgid ""
+"Since only lifetime members can be committee members, we need to fund "
+"these accounts and upgrade them accordingly:"
+msgstr ""
+
+#: ../../source/testnet/5-committee.rst:45
+msgid "Registering as committee member"
+msgstr ""
+
+#: ../../source/testnet/5-committee.rst:47
+msgid "We can apply for committee with `create_committee_member`:"
+msgstr ""
+
+#: ../../source/testnet/5-committee.rst:60
+msgid "Voting with faucet account"
+msgstr ""
+
+#: ../../source/testnet/5-committee.rst:62
+msgid "All we need to do know is vote for our own committee members:"
+msgstr ""
+
+#: ../../source/testnet/6-webwallet.rst:3
+msgid "Web Wallet"
+msgstr ""
+
+#: ../../source/testnet/6-webwallet.rst:5
+msgid ""
+"Since we need to provide a way for people to enter the "
+"network/blockchain, we need to install the web wallet into nginx."
+msgstr ""
+
+#: ../../source/testnet/6-webwallet.rst:9
+msgid "Dependencies"
+msgstr ""
+
+#: ../../source/testnet/6-webwallet.rst:11
+msgid "We first install everything we need to compile the web wallet:"
+msgstr ""
+
+#: ../../source/testnet/6-webwallet.rst:19
+msgid "Fetching the web wallet"
+msgstr ""
+
+#: ../../source/testnet/6-webwallet.rst:21
+msgid ""
+"Afterwards, we download the `graphene-ui` repository from Cryptonomex and"
+" install the Node dependencies."
+msgstr ""
+
+#: ../../source/testnet/6-webwallet.rst:34
+msgid ""
+"What we need now is the `chain_id` of the chain we have running. We can "
+"get it by executing:::"
+msgstr ""
+
+#: ../../source/testnet/6-webwallet.rst:39
+msgid ""
+"The chain id is used to let the web wallet know to which network it "
+"connects and how to deal with it. For this we modify the file "
+"`dl/src/chain/config.coffee` and add our blockchain:::"
+msgstr ""
+
+#: ../../source/testnet/6-webwallet.rst:48
+msgid ""
+"Furthermore, we need to tell our web wallet to which witness node to "
+"connect to. This can be done in the file "
+"`dl/src/stores/SettingsStore.js`. ::"
+msgstr ""
+
+#: ../../source/testnet/6-webwallet.rst:58
+msgid "Compilation"
+msgstr ""
+
+#: ../../source/testnet/6-webwallet.rst:60
+msgid "We compile the web wallet with"
+msgstr ""
+
+#: ../../source/testnet/6-webwallet.rst:67
+msgid "which will generate the static files in the `dist/` folder."
+msgstr ""
+
+#: ../../source/testnet/7-faucet.rst:3
+msgid "Setting up the Faucet"
+msgstr ""
+
+#: ../../source/testnet/7-faucet.rst:5
+msgid ""
+"In order to allow people that do not have funds yet to enter the system, "
+"we need to setup a faucet. Here, we will also use `mina` as our "
+"**deployment tool** for a productive installation."
+msgstr ""
+
+#: ../../source/testnet/7-faucet.rst:10
+msgid "Installation of Dependencies"
+msgstr ""
+
+#: ../../source/testnet/7-faucet.rst:12
+msgid ""
+"we first install every other dependency that is needed and not yet "
+"installed"
+msgstr ""
+
+#: ../../source/testnet/7-faucet.rst:20
+msgid "We also need to install a decently recent version of Ruby:"
+msgstr ""
+
+#: ../../source/testnet/7-faucet.rst:41
+msgid "Get the Source"
+msgstr ""
+
+#: ../../source/testnet/7-faucet.rst:43
+msgid "One implementation of a faucet can be downloaded from Cryptonomex:"
+msgstr ""
+
+#: ../../source/testnet/7-faucet.rst:55
+msgid "We need to configure"
+msgstr ""
+
+#: ../../source/testnet/7-faucet.rst:57
+msgid "the faucet itself,"
+msgstr ""
+
+#: ../../source/testnet/7-faucet.rst:58
+msgid "rails API secrets,"
+msgstr ""
+
+#: ../../source/testnet/7-faucet.rst:59
+msgid "database access,"
+msgstr ""
+
+#: ../../source/testnet/7-faucet.rst:60
+msgid "and the deployment tool, mina."
+msgstr ""
+
+#: ../../source/testnet/7-faucet.rst:63
+msgid "Faucet"
+msgstr ""
+
+#: ../../source/testnet/7-faucet.rst:65
+msgid ""
+"All required settings are in `config/faucet.yml` which has an example "
+"file:"
+msgstr ""
+
+#: ../../source/testnet/7-faucet.rst:74
+msgid "Rails API"
+msgstr ""
+
+#: ../../source/testnet/7-faucet.rst:76
+msgid ""
+"Rails needs to know a secret for their internals, we can get a new one "
+"with `rake secret`. Put it into the corresponding lines in the config "
+"file."
+msgstr ""
+
+#: ../../source/testnet/7-faucet.rst:87
+msgid "Database Access"
+msgstr ""
+
+#: ../../source/testnet/7-faucet.rst:89
+msgid ""
+"The default configuration for the database access expects an empty root "
+"password for MySQL. Hence, if you have set a different password, you need"
+" to provide it here."
+msgstr ""
+
+#: ../../source/testnet/7-faucet.rst:97
+msgid "We generate our databases with:"
+msgstr ""
+
+#: ../../source/testnet/7-faucet.rst:105
+msgid "Database Settings"
+msgstr ""
+
+#: ../../source/testnet/7-faucet.rst:107
+msgid ""
+"We also need to add an entry to the database so that page loads and "
+"referrals work properly:"
+msgstr ""
+
+#: ../../source/testnet/7-faucet.rst:110
+msgid "Go to ``/www/current``"
+msgstr ""
+
+#: ../../source/testnet/7-faucet.rst:111
+msgid "execute: ``rails db``, a mysql console will open"
+msgstr ""
+
+#: ../../source/testnet/7-faucet.rst:112
+msgid ""
+"Execute: ``insert into widgets set "
+"allowed_domains='testnet.bitshares.eu';``  (replace the domain with your "
+"domain)"
+msgstr ""
+
+#: ../../source/testnet/7-faucet.rst:115
+msgid "Mina deployment"
+msgstr ""
+
+#: ../../source/testnet/7-faucet.rst:117
+msgid ""
+"Mina is used to deploy the faucet properly and move all the required "
+"files over to the production machine (may be the same machine)."
+msgstr ""
+
+#: ../../source/testnet/7-faucet.rst:125
+msgid ""
+"Make sure to add your ssh-pub key to your authorized file so that mina "
+"can deploy to the corrseponding machine."
+msgstr ""
+
+#: ../../source/testnet/7-faucet.rst:128
+msgid ""
+"Now, all we need to do is create the public directly that is served and "
+"copy/link the configuration file to the deployment's shared files:"
+msgstr ""
+
+#: ../../source/testnet/7-faucet.rst:141
+msgid "We deploy mina and the wallet with:"
+msgstr ""
+
+#: ../../source/testnet/7-faucet.rst:150
+msgid "Update wallet"
+msgstr ""
+
+#: ../../source/testnet/7-faucet.rst:152
+msgid ""
+"If you have modified something in the wallet, you need to recompile the "
+"Javascript/HTML files and re-deploy the wallet with:"
+msgstr ""
+
+#: ../../source/testnet/8-nginx.rst:3
+msgid "Nginx Webserver"
+msgstr ""
+
+#: ../../source/testnet/8-nginx.rst:5
+msgid ""
+"We here use Nginx to deal with Ruby and provide access to the wallet "
+"files and the faucet. We use `passenger` to do so which unfortunatelly "
+"requires to compile nginx \"manually\". Passenger fortunatelly provides a"
+" script that handles all the installation."
+msgstr ""
+
+#: ../../source/testnet/8-nginx.rst:11
+msgid "Setup"
+msgstr ""
+
+#: ../../source/testnet/8-nginx.rst:20
+msgid ""
+"After using the recommended settings and waiting for the script to "
+"complete, we integrate nginx into our distribution via"
+msgstr ""
+
+#: ../../source/testnet/8-nginx.rst:31
+msgid "Nginx is configured using the freshly installed `nginx.conf` file:"
+msgstr ""
+
+#: ../../source/testnet/8-nginx.rst:37
+msgid "We have set it to be:"
+msgstr ""
+
+#: ../../source/testnet/8-nginx.rst:101
+msgid ""
+"The parameters `passenger_root` and `passenger_ruby` may be different in "
+"your setup. Please compare with the default `nginx.conf` file to identify"
+" the proper directories."
+msgstr ""
+
+#: ../../source/testnet/8-nginx.rst:105
+msgid ""
+"We create an *upstream* called ``websockets`` which is uses to proxy the "
+"queries to ``http://host/ws`` directly to the websocket server. This "
+"allows to have a websocket address be available from the same port as the"
+" web wallet."
+msgstr ""
+
+#: ../../source/testnet/8-nginx.rst:111
+msgid "Running nginx as serice"
+msgstr ""
+
+#: ../../source/testnet/8-nginx.rst:113
+msgid "We use a nginx serice script and can install it according to:"
+msgstr ""
+
+#: ../../source/testnet/8-nginx.rst:121
+msgid "After that, nginx can be launched with"
+msgstr ""
+
+#: ../../source/testnet/9-python-library.rst:3
+msgid "Installation of Python Library"
+msgstr ""
+
+#: ../../source/testnet/9-python-library.rst:6
+msgid "Requirements"
+msgstr ""
+
+#: ../../source/testnet/9-python-library.rst:8
+msgid ""
+"First, we need to install `pip3` which will deal with the packages "
+"dependencies:"
+msgstr ""
+
+#: ../../source/testnet/9-python-library.rst:16
+msgid "Installation"
+msgstr ""
+
+#: ../../source/testnet/9-python-library.rst:18
+msgid ""
+"Afterwards, we can fetch the python libraries from github and install it:"
+" .. code-block:: sh"
+msgstr ""
+
+#: ../../source/testnet/9-python-library.rst:22
+msgid ""
+"git clone https://github.com/xeroc/python-graphenelib cd python-"
+"graphenelib/"
+msgstr ""
+
+#: ../../source/testnet/9-python-library.rst:25
+msgid "pip3 install --user -r requirements.txt python3 setup.py install --user"
+msgstr ""
+
+#: ../../source/testnet/9-python-library.rst:29
+msgid "Usage"
+msgstr ""
+
+#: ../../source/testnet/9-python-library.rst:31
+msgid "The usage of this library is well documented on"
+msgstr ""
+
+#: ../../source/testnet/9-python-library.rst:33
+msgid "https://readthedocs.org/projects/python-graphenelib/"
+msgstr ""
+
+#: ../../source/testnet/index.rst:3
+msgid "Testnets"
+msgstr ""
+
+#: ../../source/testnet/index.rst:5
+msgid ""
+"This page is dedicated to *testnets*. We distinguish between our **public"
+" testnet** that has been deployed and is fully functional for anyone to "
+"use and is shared among developers, and **private testnets** that every "
+"developer could easily deploy at home to benefit from extra low latency "
+"and additional super powers over the network."
+msgstr ""
+
+#: ../../source/testnet/index.rst:11
+msgid ""
+"You can find all the relevant information about the public network on a "
+"dedicated page:"
+msgstr ""
+
+#: ../../source/testnet/index.rst:16
+msgid "Open Public Testnet (technical details)"
+msgstr ""
+
+#: ../../source/testnet/index.rst:17
+msgid ""
+"Tutorials about how to deploy a public, or a private network are "
+"presented in separated tutorials:"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:3
+msgid "Private Testnet Howto"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:5
+msgid ""
+"Some developers may want to deploy their own graphene blockchain locally "
+"for governance, and speed reasons. This page shows how this can be done."
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:9
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:11
+msgid ""
+"We assume that you have both ``witness_node`` and ``cli_wallet`` already "
+"compliled (or downloaded from `the offical respository "
+"<https://github.com/bitshares/bitshares-2/releases/latest>`__)."
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:16
+msgid "Folder structure"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:18
+msgid ""
+"Create a new folder (we will refer to it as ``[Testnet-Home]``) in any "
+"location you like and copy ``witness_node`` and ``cli_wallet`` there. The"
+" ``[Testnet-Home]`` folder will contain all files and folders related to "
+"the testnet."
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:23
+msgid ""
+"Open a *Command Prompt* window and switch the current directory to "
+"``[Testnet-Home]``."
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:27
+msgid "The genesis file"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:29
+msgid "The genesis file defines the initial state of the network."
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:32
+msgid "Default genesis"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:34
+msgid ""
+"The graphene code base has a default genesis block integrated that has "
+"all witnesses, committee members and funds and a single account called "
+"``nathan`` available from a single private key:"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:38
+msgid "5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:40
+msgid ""
+"See below how to use this key, or go ahead to learn about how to define "
+"your own genesis file"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:44
+msgid "Customization of the genesis file"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:46
+msgid ""
+"We create a new genesis json file named ``my-genesis.json`` by running "
+"this command:"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:53
+msgid ""
+"The ``my-genesis.json`` file will be created in the ``[Testnet-Home]`` "
+"folder. Once this task is done, the witness node will terminate on its "
+"own."
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:57
+msgid ""
+"If you want to customize the network's initial state, edit the newly "
+"created ``my-genesis.json`` file. This allows you to control things such "
+"as:"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:63
+msgid "The initial values of chain parameters (including fees)"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:64
+msgid ""
+"The account signing keys of the init witnesses (or in fact any account at"
+" all)."
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:67
+msgid "Get the blockchain id"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:69
+msgid ""
+"The blockchain id is a hash of the genesis state. All transaction "
+"signatures are only valid for a single blockchain id. So editing the "
+"genesis file will change your blockchain id, and make you unable to sync "
+"with all existing chains (unless one of them has exactly the same genesis"
+" file you do)."
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:75
+msgid "Run this command:"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:82
+msgid "and when a message like this shows up:"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:89
+msgid ""
+"... it means the initialization is complete.  Use ``ctrl-c`` to close the"
+" witness node."
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:92
+msgid "As a result, you should get two items:"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:94
+msgid ""
+"A directory named ``data`` has been created with a file named "
+"``config.ini`` located in it."
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:95
+msgid "Your blockchain id is now known - it's displayed in the message above."
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:97
+msgid ""
+"Note that your blockchain id will be different than the one used in the "
+"above example. Copy this id somewhere as you will be needing it later on."
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:102
+msgid "Witness configuration"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:104
+msgid ""
+"Open the ``[Testnet-Home]/data/config.ini`` file in your favorite text "
+"editor, and set the following settings, uncommenting them if necessary:"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:113
+msgid "Also, locate this entry in the ``config.ini`` file:"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:119
+msgid "... and add the following entries:"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:135
+msgid ""
+"The above list authorizes the witness node to produce blocks on behalf of"
+" the listed witness ids. Normally each witness would be on a different "
+"node, but for the purpose of this private testnet, we will start out with"
+" all witnesses signing blocks on a single node. The private keys for all "
+"those witness ids (needed to sign blocks) are already supplied in the "
+"``config.ini`` file:"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:148
+msgid "Start block production"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:150
+msgid ""
+"This is the crucial moment - you are about to produce the very first "
+"blocks of your private blockchain. Just run the witness node with this "
+"command:"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:158
+msgid ""
+"and your block production should start at this stage. You should see this"
+" big message:"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:171
+msgid ""
+"and subseqently further messages indicating the successfull creation of "
+"blocks:"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:192
+msgid "CLI Usage"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:194
+msgid ""
+"We are now ready to connect the CLI to your testnet witness node. Keep "
+"your witness node running and in another *Command Prompt* window run this"
+" command:"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:202
+msgid ""
+"Make sure to replace the above blockchain id ``8b7bd36a...4294824`` with "
+"your own blockchain id. The blockchain id passed to the CLI needs to "
+"match the id generated and used by the witness node."
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:207
+msgid ""
+"If you get the ``set_password`` prompt, it means your CLI has "
+"successfully conected to the testnet witness node."
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:211
+msgid "Create a new wallet"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:213
+msgid ""
+"Fist you need to create a new password for your wallet. This password is "
+"used to encrypt all the private keys in the wallet. For this tutorial we "
+"will use the password ``supersecret`` but obviously you are free to come "
+"up with your own combination of letters and numbers.  Use this command to"
+" create the password:"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:223
+msgid "Now you can unlock the newly created wallet:"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:230
+msgid "Gain access to the genesis stake"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:232
+msgid ""
+"In Graphene, balances are contained in accounts. To import an account "
+"into your wallet, all you need to know its name and its private key.  We "
+"will now import into the wallet an account called ``nathan`` using the "
+"``import_key`` command:"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:241
+msgid ""
+"Note that ``nathan`` happens to be the account name defined in the "
+"genesis file. If you had edited your ``my-genesies.json`` file just after"
+" it was created, you could have put a different name there.  Also, note "
+"that ``5KQwrPbwdL...P79zkvFD3`` is the private key defined in the "
+"``config.ini`` file."
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:247
+msgid ""
+"Now we have the private key imported into the wallet but still no funds "
+"assocciated with it. Funds are stored in genesis balance objects. These "
+"funds can be claimed, with no fee, using the ``import_balance`` command:"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:255
+msgid ""
+"As a result, we have one account (named ``nathan``) imported into the "
+"wallet and this account is well funded with BTS as we have claimed the "
+"funds stored in the genesis file. You can view this account by using this"
+" command:"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:264
+msgid "and its balance by using this command:"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:271
+msgid "Create another account"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:273
+msgid ""
+"We will now create another account (named ``alpha``) so that we can "
+"transfer funds back and forth between ``nathan`` and ``alpha``."
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:276
+msgid ""
+"Creating a new account is always done by using an existing account - we "
+"need it because someone (i.e. the registrar) has to fund the registration"
+" fee. Also, there is the requirement for the registrar account to have a "
+"lifetime member (LTM) status. Therefore we need to upgrade the account "
+"``nathan`` to LTM, before we can proceed with creating other accounts. To"
+" upgrade to LTM, use the ``upgrade_account`` command:"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:288
+msgid ""
+"Due to a known `caching issue "
+"<https://github.com/cryptonomex/graphene/issues/530>`__, you need to "
+"restart the CLI at this stage as otherwise it will not be aware of "
+"``nathan`` having been upgraded. Stop the CLI by pressing ``ctrl-c`` and "
+"start it again by using exactly the same command as before, i.e."
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:299
+msgid "Verify that ``nathan`` has now a LTM status:"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:305
+msgid ""
+"In the response, next to ``membership_expiration_date`` you should see "
+"``1969-12-31T23:59:59``. If you get ``1970-01-01T00:00:00`` something is "
+"wrong and ``nathan`` has not been successfully upgraded."
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:309
+msgid ""
+"We can now register an account by using ``nathan`` as registrar. But "
+"first we need to get hold of the public key for the new account. We do it"
+" by using the ``suggest_brain_key`` command:"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:317
+msgid "And the resposne should be something similar to this:"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:328
+msgid ""
+"The ``create_account_with_brain_key`` command allows you to register an "
+"account using brain key and will automatically import the corresponding "
+"private key."
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:337
+msgid "Transfer funds between accounts"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:339
+msgid ""
+"As a final step, we will transfer some money from ``nathan`` to "
+"``alpha``. For that we use the ``transfer`` command:"
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:346
+msgid ""
+"The text ``here is some cash`` is an arbitrary memo you can attatch to a "
+"transfer. If you don't need it, just use ``\"\"`` instead."
+msgstr ""
+
+#: ../../source/testnet/private-testnet.rst:349
+msgid "And now you can verify that ``alpha`` has indeed received the money:"
+msgstr ""
+
+#: ../../source/testnet/public-testnet.rst:3
+msgid "Public Testnet Details"
+msgstr ""
+
+#: ../../source/testnet/public-testnet.rst:5
+msgid ""
+"We produdly present the first `public testnet`_ based on graphene and "
+"took the opportunity to construct a tutorial from the process."
+msgstr ""
+
+#: ../../source/testnet/public-testnet.rst:9
+msgid "General Information"
+msgstr ""
+
+#: ../../source/testnet/public-testnet.rst:11
+msgid "Web wallet: `public testnet`_"
+msgstr ""
+
+#: ../../source/testnet/public-testnet.rst:12
+msgid "Seed node: ``testnet.bitshares.eu:11010``"
+msgstr ""
+
+#: ../../source/testnet/public-testnet.rst:13
+msgid ""
+"Chain-id: "
+"``39f5e2ede1f8bc1a3a54a7914414e3779e33193f1f5693510e73cb7a87617447``"
+msgstr ""
+
+#: ../../source/testnet/public-testnet.rst:14
+msgid ""
+"`Genesis Block <https://github.com/BitSharesEurope/graphene-"
+"testnet/blob/testnet/genesis.json>`_"
+msgstr ""
+
+#: ../../source/testnet/public-testnet.rst:15
+msgid "Sources:"
+msgstr ""
+
+#: ../../source/testnet/public-testnet.rst:17
+msgid "`Full Node <https://github.com/BitSharesEurope/graphene-testnet>`_"
+msgstr ""
+
+#: ../../source/testnet/public-testnet.rst:18
+msgid "`Wallet <https://github.com/BitSharesEurope/graphene-ui-testnet>`_"
+msgstr ""
+
+#: ../../source/testnet/public-testnet.rst:19
+msgid "`Faucet <https://github.com/BitSharesEurope/faucet-testnet>`_"
+msgstr ""
+
+#: ../../source/testnet/public-testnet.rst:20
+msgid ""
+"`Python Scripts <https://github.com/BitSharesEurope/testnet-"
+"pythonscripts>`_"
+msgstr ""
+
+#: ../../source/testnet/public-testnet.rst:22
+msgid "Full nodes:"
+msgstr ""
+
+#: ../../source/testnet/public-testnet.rst:24
+msgid ""
+"In order to run a full node, get the  `sources "
+"<https://github.com/BitSharesEurope/graphene-testnet>`_ and compile them "
+"as described in the `build instructions <../bitshares/install/Build>`_. "
+"Then run the node with:"
+msgstr ""
+
+#: ../../source/testnet/public-testnet.rst:33
+msgid ""
+"On this network, **everything** is allowed. As a consequence the "
+"*outside* price of any token on this blockchain is exactly **zero**. A "
+"reset of the blockchain may occure at any moment!"
+msgstr ""
+
+#: ../../source/testnet/public-testnet.rst:41
+msgid "Assets"
+msgstr ""
+
+#: ../../source/testnet/public-testnet.rst:43
+msgid "**Core Unit**: ``TEST``"
+msgstr ""
+
+#: ../../source/testnet/public-testnet.rst:45
+msgid "10k TEST for free upon registration"
+msgstr ""
+
+#: ../../source/testnet/public-testnet.rst:47
+msgid "**Asset**: ``PEG.RANDOM``"
+msgstr ""
+
+#: ../../source/testnet/public-testnet.rst:49
+msgid "price feed at a random walk started at 100.0"
+msgstr ""
+
+#: ../../source/testnet/public-testnet.rst:50
+#: ../../source/testnet/public-testnet.rst:66
+msgid "price feed updated every 15 minutes"
+msgstr ""
+
+#: ../../source/testnet/public-testnet.rst:51
+#: ../../source/testnet/public-testnet.rst:59
+#: ../../source/testnet/public-testnet.rst:67
+msgid "force Settlement Delay: 300 seconds"
+msgstr ""
+
+#: ../../source/testnet/public-testnet.rst:52
+#: ../../source/testnet/public-testnet.rst:60
+msgid "maintenance collateral ratio: 120%"
+msgstr ""
+
+#: ../../source/testnet/public-testnet.rst:53
+#: ../../source/testnet/public-testnet.rst:61
+msgid "short squeeze protection: 110%"
+msgstr ""
+
+#: ../../source/testnet/public-testnet.rst:55
+msgid "**Asset**: ``PEG.PARITY``"
+msgstr ""
+
+#: ../../source/testnet/public-testnet.rst:57
+msgid "price feed at ``1.0``"
+msgstr ""
+
+#: ../../source/testnet/public-testnet.rst:58
+msgid "price feed updated every full hour (UTC)"
+msgstr ""
+
+#: ../../source/testnet/public-testnet.rst:63
+msgid "**Asset**: ``PEG.FAKEUSD``"
+msgstr ""
+
+#: ../../source/testnet/public-testnet.rst:65
+msgid "price feed tracks the U.S dollar price of BTS(!)"
+msgstr ""
+
+#: ../../source/testnet/public-testnet.rst:68
+msgid "maintenance collateral ratio: 175%"
+msgstr ""
+
+#: ../../source/testnet/public-testnet.rst:69
+msgid "short squeeze protection: 100.1%"
+msgstr ""
+
+#: ../../source/testnet/public-testnet-howto.rst:3
+msgid "Public Testnet Howto"
+msgstr ""
+
+#: ../../source/testnet/public-testnet-howto.rst:5
+msgid ""
+"We took the opportunity to write the process of customizing and deploying"
+" a graphene blockchain as well as the faucet, web wallet and feed scripts"
+" into a tutorial for everyone to use."
+msgstr ""
+
