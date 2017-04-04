@@ -35,6 +35,7 @@ Recent Updates
 
 .. r!date +\%y/\%m/\%d
 
+* ``17/04/04`` Stress Test results available in :doc:`bitshares/papers/index`
 * ``16/06/29`` :doc:`bitshares/tutorials/distributed-access-hosting`
 * ``16/04/07`` :doc:`Getting Started <bitshares/user/first-steps-users>`
 * ``16/03/17`` :doc:`integration/traders/index`, :doc:`integration/libraries/index`
