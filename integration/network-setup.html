@@ -18,13 +18,6 @@
     <link href='../_static/doxygen.css' rel='stylesheet'>
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
 
-    <!-- Crowdin -->
-    <script type="text/javascript">
-      var _jipt = [];
-      _jipt.push(['project', 'docs-bitshares-org']);
-    </script>
-    <script type="text/javascript" src="//cdn.crowdin.com/jipt/jipt.js"></script>
-
     <!-- Sphinx search -->
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
@@ -39,6 +32,13 @@
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="searchindex.js"></script>
+    <!-- Transifex -->
+    <script type="text/javascript">
+      window.liveSettings = {
+        api_key: "bbf87af0641e4bbf89c98088d48e0449",
+      };
+    </script>
+    <script type="text/javascript" src="http://cdn.transifex.com/live.js"></script>
 
     <!-- title card -->
     <link  href='../_static/title-card.css' rel='stylesheet'>
@@ -221,6 +221,47 @@ the trusted node directly, there will not be any delay on withdrawals.</p>
 <h3>General Setup<a class="headerlink" href="#general-setup" title="Permalink to this headline">¶</a></h3>
 <p>For general purpose setups, we recommend a reduced complexity setup that
 looks as follos</p>
+<object data="../_images/graphviz-2765f8aff9e55a7a71390f8040190e7dbd4abddb.svg" type="image/svg+xml">
+            <p class="warning">digraph foo {
+
+ graph [rankdir=LR,
+        splines=ortho,
+        ranksep=0.5,
+        nodesep=0,
+        overlap=false,
+        ]
+
+ node [fontname=Verdana,
+       fontsize=12,
+       style=filled,
+       fillcolor=&quot;#EEEEEE&quot;,
+       color=&quot;#EEEEEE&quot;,
+       shape=record,
+       ]
+ edge [color=&quot;#31CEF0&quot;,
+       fontsize=9,
+       fontname=Verdana,
+       dir=both
+       ]
+
+ &quot;Wallet API&quot;[style=&quot;&quot;,
+              color=&quot;#FFFFFF&quot;
+              ]
+ &quot;Blockchain API&quot;[style=&quot;&quot;,
+                  color=&quot;#FFFFFF&quot;
+                  ]
+ &quot;P2P network&quot;[style=&quot;&quot;,
+               color=&quot;#999999&quot;,
+               shape=ellipse
+               ]
+
+ {rank=same &quot;Blockchain API&quot; &quot;Wallet API&quot;}
+
+ &quot;P2P network&quot;       -&gt; &quot;Trusted Full Node&quot;
+ &quot;Trusted Full Node&quot; -&gt; &quot;Wallet&quot;
+ &quot;Wallet&quot;            -&gt; &quot;Wallet API&quot;
+ &quot;Trusted Full Node&quot; -&gt; &quot;Blockchain API&quot;
+}</p></object>
 <p>A tutorial to setup this network can be found here:</p>
 <ul class="simple">
 <li><a class="reference internal" href="tutorials/general-network-setup.html"><span class="doc">General Network and Wallet Configuration</span></a></li>
@@ -235,6 +276,52 @@ connected to the P2P network that works as a proxy. The delayed node
 will delay blocks until they are <strong>irreversible</strong>. Depending on the
 block interval and the number of witnesses, this may lead to a few
 minutes of delay.</p>
+<object data="../_images/graphviz-ccdace8a29da6c869999903f580fa94e936f13d5.svg" type="image/svg+xml">
+            <p class="warning">digraph foo {
+
+ graph [rankdir=LR,
+        splines=ortho,
+        ranksep=0.5,
+        nodesep=0,
+        overlap=false,
+        ]
+
+ node [fontname=Verdana,
+       fontsize=12,
+       style=filled,
+       fillcolor=&quot;#EEEEEE&quot;,
+       color=&quot;#EEEEEE&quot;,
+       shape=record,
+       ]
+ edge [color=&quot;#31CEF0&quot;,
+       fontsize=9,
+       fontname=Verdana,
+       dir=both
+       ]
+
+ &quot;Deposit API&quot;[style=&quot;&quot;,
+              color=&quot;#FFFFFF&quot;
+              ]
+ &quot;Withdraw API&quot;[style=&quot;&quot;,
+              color=&quot;#FFFFFF&quot;
+              ]
+ &quot;Blockchain API&quot;[style=&quot;&quot;,
+                  color=&quot;#FFFFFF&quot;
+                  ]
+ &quot;P2P network&quot;[style=&quot;&quot;,
+               color=&quot;#999999&quot;,
+               shape=ellipse
+               ]
+
+ {rank=same &quot;Blockchain API&quot; &quot;Deposit API&quot; &quot;Withdraw API&quot;}
+
+ &quot;P2P network&quot;       -&gt; &quot;Trusted Full Node&quot;
+ &quot;Trusted Full Node&quot; -&gt; &quot;Blockchain API&quot;
+ &quot;Trusted Full Node&quot; -&gt; &quot;Delayed Full Node&quot;
+ &quot;Delayed Full Node&quot; -&gt; &quot;Deposit API&quot;
+ &quot;Trusted Full Node&quot; -&gt; &quot;Wallet&quot;
+ &quot;Wallet&quot;            -&gt; &quot;Withdraw API&quot;
+}</p></object>
 <p>A tutorial to setup this network can be found here:</p>
 <ul class="simple">
 <li><a class="reference internal" href="tutorials/secure-network-setup.html"><span class="doc">Secure Network and Wallet Configuration</span></a></li>

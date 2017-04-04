@@ -18,13 +18,6 @@
     <link href='../../_static/doxygen.css' rel='stylesheet'>
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
 
-    <!-- Crowdin -->
-    <script type="text/javascript">
-      var _jipt = [];
-      _jipt.push(['project', 'docs-bitshares-org']);
-    </script>
-    <script type="text/javascript" src="//cdn.crowdin.com/jipt/jipt.js"></script>
-
     <!-- Sphinx search -->
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
@@ -39,6 +32,13 @@
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <script type="text/javascript" src="searchindex.js"></script>
+    <!-- Transifex -->
+    <script type="text/javascript">
+      window.liveSettings = {
+        api_key: "bbf87af0641e4bbf89c98088d48e0449",
+      };
+    </script>
+    <script type="text/javascript" src="http://cdn.transifex.com/live.js"></script>
 
     <!-- title card -->
     <link  href='../../_static/title-card.css' rel='stylesheet'>
@@ -198,6 +198,25 @@ sources according to:</p>
 <h2>Running Daemons and Wallet<a class="headerlink" href="#running-daemons-and-wallet" title="Permalink to this headline">¶</a></h2>
 <p>For security reasons we will run two daemons and a wallet according to these
 diagram:</p>
+<object data="../../_images/graphviz-6582060b94c2938b4825d229f689ad44c8d8b0e5.svg" type="image/svg+xml">
+            <p class="warning">digraph foo {
+ rankdir=LR;
+ ranksep=0.5;
+ nodesep=0.1;
+ overlap=false;
+ splines=ortho;
+
+ node [shape=box];
+ node [fontname=Verdana,fontsize=12]
+ node [style=filled]
+ node [fillcolor=&quot;#EEEEEE&quot;]
+ node [color=&quot;#EEEEEE&quot;]
+ edge [color=&quot;#31CEF0&quot;, dir=back, fontsize=9, fontname=Verdana]
+
+ &quot;P2P network&quot; -&gt; &quot;Trusted Full Node&quot; [dir=&quot;both&quot;]
+ &quot;Trusted Full Node&quot; -&gt; &quot;Delayed Full Node&quot; -&gt; &quot;Deposit API&quot;
+ &quot;Trusted Full Node&quot; -&gt; &quot;Wallet&quot; -&gt; &quot;Withdraw API&quot;
+}</p></object>
 <p>In this tutorial we will run all deamons and the wallet on the same machine and
 use different ports to distinguish them:</p>
 <ul class="simple">
