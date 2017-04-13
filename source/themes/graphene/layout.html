@@ -41,13 +41,6 @@
     <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
     {%- endfor %}
 
-    <!-- Crowdin -->
-    <script type="text/javascript">
-     var _jipt = [];
-     _jipt.push(['project', 'docs-bitshares-org']);
-    </script>
-    <script type="text/javascript" src="//cdn.crowdin.com/jipt/jipt.js"></script>
-
     <!-- Sphinx search -->
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
@@ -62,6 +55,13 @@
     <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
     {%- endfor %}
     <script type="text/javascript" src="searchindex.js"></script>
+    <!-- Transifex -->
+    <script type="text/javascript">
+      window.liveSettings = {
+        api_key: "bbf87af0641e4bbf89c98088d48e0449",
+      };
+    </script>
+    <script type="text/javascript" src="http://cdn.transifex.com/live.js"></script>
 
     <!-- title card -->
     <link  href='{{ pathto( '_static/title-card.css',1 )}}' rel='stylesheet'>
