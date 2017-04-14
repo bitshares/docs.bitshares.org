@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Graphene Technical Documentation \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-03 11:56+0200\n"
+"POT-Creation-Date: 2017-04-14 11:20+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -281,7 +281,6 @@ msgid ""
 msgstr ""
 
 #: ../../source/integration/apps/node.rst:29
-#: ../../source/integration/exchanges/step-by-step.rst:202
 #: ../../source/integration/tutorials/nodejs-monitor.rst:20
 #: ../../source/integration/tutorials/python-monitor.rst:24
 msgid "Configuration"
@@ -753,7 +752,6 @@ msgid "By removing a user from the whitelist, funds can effectively be frozen."
 msgstr ""
 
 #: ../../source/integration/asset-whitelist.rst:24
-#: ../../source/integration/libraries/python-exchange.rst:17
 #: ../../source/integration/market-whitelist.rst:12
 msgid "Example"
 msgstr ""
@@ -887,8 +885,6 @@ msgid ""
 msgstr ""
 
 #: ../../source/integration/exchanges/step-by-step.rst:9
-#: ../../source/integration/exchanges/step-by-step.rst:189
-#: ../../source/integration/libraries/python.rst:9
 #: ../../source/integration/tutorials/nodejs-monitor.rst:9
 #: ../../source/integration/tutorials/python-monitor.rst:9
 msgid "Installation"
@@ -1072,65 +1068,21 @@ msgstr ""
 
 #: ../../source/integration/exchanges/step-by-step.rst:180
 msgid ""
-"We will make use of the Python-Graphene library available at github and "
-"configure it for notification on account changes for our deposit account "
-"above."
+"For watching deposits, we recommend pybitshares' *Notify* module. The "
+"full documentation is available on `pybitshares.com "
+"<http://pybitshares.com>`_."
 msgstr ""
 
-#: ../../source/integration/exchanges/step-by-step.rst:183
-msgid ""
-"A detailed descriptions about the python library can be found in the "
-"``python-graphenelib`` `documentations`_."
-msgstr ""
-
-#: ../../source/integration/exchanges/step-by-step.rst:203
-msgid "Move ``config-example.py`` to ``config.py`` and modify it accordingly:"
-msgstr ""
-
-#: ../../source/integration/exchanges/step-by-step.rst:218
-#: ../../source/integration/tutorials/nodejs-monitor.rst:68
-#: ../../source/integration/tutorials/python-monitor.rst:60
-msgid "Running"
-msgstr ""
-
-#: ../../source/integration/exchanges/step-by-step.rst:220
-#: ../../source/integration/tutorials/python-monitor.rst:62
-msgid "The monitoring script can be executed via"
-msgstr ""
-
-#: ../../source/integration/exchanges/step-by-step.rst:226
-msgid ""
-"Every time a deposit was made into your account a new line will appear "
-"similar to:::"
-msgstr ""
-
-#: ../../source/integration/exchanges/step-by-step.rst:231
-msgid ""
-"If you run into errors you can continue processing from the last "
-"operation (first column) by defining ``last_op`` in ``config.py`` "
-"according to your last registered deposit."
-msgstr ""
-
-#: ../../source/integration/exchanges/step-by-step.rst:236
+#: ../../source/integration/exchanges/step-by-step.rst:185
 msgid "Executing Transfers for Withdrawals"
 msgstr ""
 
-#: ../../source/integration/exchanges/step-by-step.rst:238
+#: ../../source/integration/exchanges/step-by-step.rst:187
 msgid ""
-"Since we have imported the active key for our account into the wallet we "
-"can either initiate transfers from the wallet CLI with:::"
-msgstr ""
-
-#: ../../source/integration/exchanges/step-by-step.rst:245
-msgid ""
-"Make sure to add a ``true`` at the end so that the signed transaction is "
-"broadcast in the P2P network."
-msgstr ""
-
-#: ../../source/integration/exchanges/step-by-step.rst:248
-msgid ""
-"Alternatively you can interface with the wallet and initiate the transfer"
-" via API call (example in ``scripts/flood.py``)"
+"For transfering funds, we recommend pybitshares. This python module "
+"enables all features required to operated on/with BitShares. The full "
+"documentation is available on `pybitshares.com "
+"<http://pybitshares.com>`_."
 msgstr ""
 
 #: ../../source/integration/index.rst:6
@@ -1244,45 +1196,10 @@ msgid "General Python Library"
 msgstr ""
 
 #: ../../source/integration/libraries/python.rst:5
-#: ../../source/integration/tutorials/python-monitor.rst:5
 msgid ""
-"This python library assists interfacing with a graphene-based network "
-"such as BitShares 2.0."
-msgstr ""
-
-#: ../../source/integration/libraries/python.rst:11
-#: ../../source/integration/tutorials/python-monitor.rst:11
-msgid "A graphene Python 3.0 library can be installed by issuing"
-msgstr ""
-
-#: ../../source/integration/libraries/python.rst:20
-#: ../../source/integration/tutorials/python-monitor.rst:20
-msgid ""
-"As you can see, this library requires Python3 and will **not** work "
-"properly with Python2."
-msgstr ""
-
-#: ../../source/integration/libraries/python-exchange.rst:11
-#: ../../source/integration/libraries/python.rst:24
-msgid "Usage"
-msgstr ""
-
-#: ../../source/integration/libraries/python.rst:26
-msgid ""
-"`Technical documentation: <http://python-"
-"graphenelib.readthedocs.org/en/latest>`_"
-msgstr ""
-
-#: ../../source/integration/libraries/python-exchange.rst:14
-#: ../../source/integration/libraries/python.rst:27
-msgid ""
-"`Youtube - Live Coding Sessions "
-"<https://bitsharestalk.org/index.php/topic,21816.new.html#new>`_"
-msgstr ""
-
-#: ../../source/integration/libraries/python.rst:30
-#: ../../source/integration/user-whitelist.rst:10
-msgid "Examples"
+"`pybitshares <http://pybitshares.com>`_ offers many modules specifically "
+"for BitShares. It is well documented and has it's own `documentation page"
+" <http://pybitshares.com>`_."
 msgstr ""
 
 #: ../../source/integration/libraries/python-exchange.rst:3
@@ -1291,14 +1208,9 @@ msgstr ""
 
 #: ../../source/integration/libraries/python-exchange.rst:5
 msgid ""
-"To simplify automated trading, we developed a Python Module that close "
-"re-assembles the trading API of `Poloniex_`."
-msgstr ""
-
-#: ../../source/integration/libraries/python-exchange.rst:13
-msgid ""
-"`Technical documentation: <http://python-"
-"graphenelib.readthedocs.org/en/latest/exchange.html>`_"
+"`pybitshares <http://pybitshares.com>`_ offers a Trading module "
+"specifically for the decentralized exchange (DEX). It is well documented "
+"and has it's own `documentation page <http://pybitshares.com>`_."
 msgstr ""
 
 #: ../../source/integration/market-whitelist.rst:3
@@ -2249,6 +2161,11 @@ msgstr ""
 msgid "Note that the latter command exposes all private keys in clear-text wif."
 msgstr ""
 
+#: ../../source/integration/tutorials/nodejs-monitor.rst:68
+#: ../../source/integration/tutorials/python-monitor.rst:60
+msgid "Running"
+msgstr ""
+
 #: ../../source/integration/tutorials/nodejs-monitor.rst:70
 msgid "The script can be executed simply by"
 msgstr ""
@@ -2353,10 +2270,30 @@ msgstr ""
 msgid "Monitoring Account Deposits with Python"
 msgstr ""
 
+#: ../../source/integration/tutorials/python-monitor.rst:5
+msgid ""
+"This python library assists interfacing with a graphene-based network "
+"such as BitShares 2.0."
+msgstr ""
+
+#: ../../source/integration/tutorials/python-monitor.rst:11
+msgid "A graphene Python 3.0 library can be installed by issuing"
+msgstr ""
+
+#: ../../source/integration/tutorials/python-monitor.rst:20
+msgid ""
+"As you can see, this library requires Python3 and will **not** work "
+"properly with Python2."
+msgstr ""
+
 #: ../../source/integration/tutorials/python-monitor.rst:32
 msgid ""
 "Define the `accountID` and the `memo_wif_key` in `examples/monitor.py`. "
 "The accountID can be obtained from the GUI wallet, or by issuing:::"
+msgstr ""
+
+#: ../../source/integration/tutorials/python-monitor.rst:62
+msgid "The monitoring script can be executed via"
 msgstr ""
 
 #: ../../source/integration/tutorials/secure-network-setup.rst:3
@@ -2433,6 +2370,10 @@ msgid ""
 "Any live-time member can cast an opinion about other accounts using "
 "white- and black-lists. They **do not** prevent anyone from interacting "
 "with your account but serve as a basis for *list authorities*."
+msgstr ""
+
+#: ../../source/integration/user-whitelist.rst:10
+msgid "Examples"
 msgstr ""
 
 #: ../../source/integration/user-whitelist.rst:12
@@ -2623,4 +2564,80 @@ msgid ""
 "While the latter can only be used to cast an opinion about another "
 "account, lists for assets serve a very practical need."
 msgstr ""
+
+#~ msgid ""
+#~ "We will make use of the Python-"
+#~ "Graphene library available at github and"
+#~ " configure it for notification on "
+#~ "account changes for our deposit account"
+#~ " above."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A detailed descriptions about the python"
+#~ " library can be found in the "
+#~ "``python-graphenelib`` `documentations`_."
+#~ msgstr ""
+
+#~ msgid "Move ``config-example.py`` to ``config.py`` and modify it accordingly:"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Every time a deposit was made into"
+#~ " your account a new line will "
+#~ "appear similar to:::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you run into errors you can "
+#~ "continue processing from the last "
+#~ "operation (first column) by defining "
+#~ "``last_op`` in ``config.py`` according to "
+#~ "your last registered deposit."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Since we have imported the active "
+#~ "key for our account into the "
+#~ "wallet we can either initiate transfers"
+#~ " from the wallet CLI with:::"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Make sure to add a ``true`` at "
+#~ "the end so that the signed "
+#~ "transaction is broadcast in the P2P "
+#~ "network."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Alternatively you can interface with the"
+#~ " wallet and initiate the transfer via"
+#~ " API call (example in ``scripts/flood.py``)"
+#~ msgstr ""
+
+#~ msgid "Usage"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`Technical documentation: <http://python-"
+#~ "graphenelib.readthedocs.org/en/latest>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`Youtube - Live Coding Sessions "
+#~ "<https://bitsharestalk.org/index.php/topic,21816.new.html#new>`_"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "To simplify automated trading, we "
+#~ "developed a Python Module that close "
+#~ "re-assembles the trading API of "
+#~ "`Poloniex_`."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "`Technical documentation: <http://python-"
+#~ "graphenelib.readthedocs.org/en/latest/exchange.html>`_"
+#~ msgstr ""
 
