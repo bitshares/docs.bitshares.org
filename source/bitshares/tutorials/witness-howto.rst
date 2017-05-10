@@ -19,7 +19,7 @@ Requirements
 Hardware Advice
 ###############
 
-* Dedicated servers with minimum 32 GB Ram, SSD disks advised. 
+* Dedicated servers with minimum 16 GB (32 GB advised) Ram, SSD disks advised. 
 
 Active Witness Duties
 #####################
