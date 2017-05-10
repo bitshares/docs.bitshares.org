@@ -238,6 +238,7 @@ Backup Server
 To stay a reliable block producer it is recommend you have a 'hot swappable' backup server with same specs as the live server running an instance of `witness_node`. ***IT IS IMPORTANT THAT THIS BACKUP SHOULD _NOT_ HAVE THE SAME SIGNING KEY PAIR in the config.ini as your main node!*** 
 
 How it works: 
+
 1. Your 'live' witness node is signing blocks with the private key which is stated in the config.ini.
 2. Your 'backup' witness node is running a copy of the software with another private key in the config.ini (generate a new public/private keypair with `cli_wallet` command: `suggest_brain_key`).
 3. On a third server you monitor your 'live' node on regular intervals with an automated script (e.g.: https://github.com/roelandp/Bitshares-Witness-Monitor).
@@ -255,6 +256,7 @@ the corresponding documentation.
 Only active witnesses are allowed to publish pricefeeds for the 'official' currency / smartcoin markets. For any other asset you need to be whitelisted by the creator of the market to be able to publish pricefeeds. 
 
 A couple of price feed scripts in various stages of development and for you to code-inspect and try. (You can always setup a testnet node and test the publishing of pricefeeds).
+
 * Wackou's BTS tools includes a pricefeed publishing script: https://github.com/wackou/bts_tools
 * Alt's BTS Price: https://github.com/pch957/btsprice
 * Xeroc's Bitshares Pricefeed: https://github.com/xeroc/bitshares-pricefeed
