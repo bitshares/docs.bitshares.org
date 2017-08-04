@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1vote__counter" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::vote_counter</compoundname>
+    <includes refid="vote__count_8hpp" local="no">vote_count.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1vote__counter_1ae6819bf7130489f65ac6f995700bb8b2" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t graphene::chain::vote_counter::last_votes</definition>
+        <argsstring></argsstring>
+        <name>last_votes</name>
+        <initializer>= std::numeric_limits&lt;uint64_t&gt;::max()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vote_count.hpp" line="71" column="1" bodyfile="libraries/chain/include/graphene/chain/vote_count.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1vote__counter_1ad4ef4de5aa845db2fbd3cf8f0a5fcd17" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t graphene::chain::vote_counter::total_votes</definition>
+        <argsstring></argsstring>
+        <name>total_votes</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vote_count.hpp" line="72" column="1" bodyfile="libraries/chain/include/graphene/chain/vote_count.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1vote__counter_1a737fa8aa84dc4703c469d201f6109eca" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t graphene::chain::vote_counter::bitshift</definition>
+        <argsstring></argsstring>
+        <name>bitshift</name>
+        <initializer>= -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vote_count.hpp" line="73" column="1" bodyfile="libraries/chain/include/graphene/chain/vote_count.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1vote__counter_1af696bd52942fc3ea33528c5d8efd66c7" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1authority" kindref="compound">authority</ref></type>
+        <definition>authority graphene::chain::vote_counter::auth</definition>
+        <argsstring></argsstring>
+        <name>auth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vote_count.hpp" line="74" column="1" bodyfile="libraries/chain/include/graphene/chain/vote_count.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1vote__counter_1ac61afc71b6136a0f64ab794b282fa9ea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Component</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void graphene::chain::vote_counter::add</definition>
+        <argsstring>(Component who, uint64_t votes)</argsstring>
+        <name>add</name>
+        <param>
+          <type>Component</type>
+          <declname>who</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>votes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vote_count.hpp" line="37" column="1" bodyfile="libraries/chain/include/graphene/chain/vote_count.hpp" bodystart="37" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1vote__counter_1a84ce733549afa48c85b141f2bea649ad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::vote_counter::finish</definition>
+        <argsstring>(authority &amp;out_auth)</argsstring>
+        <name>finish</name>
+        <param>
+          <type><ref refid="structgraphene_1_1chain_1_1authority" kindref="compound">authority</ref> &amp;</type>
+          <declname>out_auth</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write into out_auth, but only if we have at least one member. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vote_count.hpp" line="55" column="1" bodyfile="libraries/chain/include/graphene/chain/vote_count.hpp" bodystart="55" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1vote__counter_1a3874e8c6aea3ff63842fc7cd634e6cfe" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::vote_counter::is_empty</definition>
+        <argsstring>() const</argsstring>
+        <name>is_empty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vote_count.hpp" line="66" column="1" bodyfile="libraries/chain/include/graphene/chain/vote_count.hpp" bodystart="66" bodyend="69"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Keep track of vote totals in internal authority object. See #533. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="3020">
+        <label>flat_map&lt; graphene::chain::address, weight_type &gt;</label>
+      </node>
+      <node id="3016">
+        <label>graphene::chain::vote_counter</label>
+        <link refid="structgraphene_1_1chain_1_1vote__counter"/>
+        <childnode refid="3017" relation="usage">
+          <edgelabel>auth</edgelabel>
+        </childnode>
+      </node>
+      <node id="3017">
+        <label>graphene::chain::authority</label>
+        <link refid="structgraphene_1_1chain_1_1authority"/>
+        <childnode refid="3018" relation="usage">
+          <edgelabel>key_auths</edgelabel>
+        </childnode>
+        <childnode refid="3019" relation="usage">
+          <edgelabel>account_auths</edgelabel>
+        </childnode>
+        <childnode refid="3020" relation="usage">
+          <edgelabel>address_auths</edgelabel>
+        </childnode>
+      </node>
+      <node id="3018">
+        <label>flat_map&lt; graphene::chain::public_key_type, weight_type &gt;</label>
+      </node>
+      <node id="3019">
+        <label>flat_map&lt; account_id_type, weight_type &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/vote_count.hpp" line="35" column="1" bodyfile="libraries/chain/include/graphene/chain/vote_count.hpp" bodystart="34" bodyend="75"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1vote__counter_1ac61afc71b6136a0f64ab794b282fa9ea" prot="public" virt="non-virtual"><scope>graphene::chain::vote_counter</scope><name>add</name></member>
+      <member refid="structgraphene_1_1chain_1_1vote__counter_1af696bd52942fc3ea33528c5d8efd66c7" prot="public" virt="non-virtual"><scope>graphene::chain::vote_counter</scope><name>auth</name></member>
+      <member refid="structgraphene_1_1chain_1_1vote__counter_1a737fa8aa84dc4703c469d201f6109eca" prot="public" virt="non-virtual"><scope>graphene::chain::vote_counter</scope><name>bitshift</name></member>
+      <member refid="structgraphene_1_1chain_1_1vote__counter_1a84ce733549afa48c85b141f2bea649ad" prot="public" virt="non-virtual"><scope>graphene::chain::vote_counter</scope><name>finish</name></member>
+      <member refid="structgraphene_1_1chain_1_1vote__counter_1a3874e8c6aea3ff63842fc7cd634e6cfe" prot="public" virt="non-virtual"><scope>graphene::chain::vote_counter</scope><name>is_empty</name></member>
+      <member refid="structgraphene_1_1chain_1_1vote__counter_1ae6819bf7130489f65ac6f995700bb8b2" prot="public" virt="non-virtual"><scope>graphene::chain::vote_counter</scope><name>last_votes</name></member>
+      <member refid="structgraphene_1_1chain_1_1vote__counter_1ad4ef4de5aa845db2fbd3cf8f0a5fcd17" prot="public" virt="non-virtual"><scope>graphene::chain::vote_counter</scope><name>total_votes</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

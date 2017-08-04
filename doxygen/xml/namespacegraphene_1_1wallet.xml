@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacegraphene_1_1wallet" kind="namespace" language="C++">
+    <compoundname>graphene::wallet</compoundname>
+    <innerclass refid="classgraphene_1_1wallet_1_1api__documentation" prot="public">graphene::wallet::api_documentation</innerclass>
+    <innerclass refid="structgraphene_1_1wallet_1_1approval__delta" prot="public">graphene::wallet::approval_delta</innerclass>
+    <innerclass refid="structgraphene_1_1wallet_1_1blind__balance" prot="public">graphene::wallet::blind_balance</innerclass>
+    <innerclass refid="structgraphene_1_1wallet_1_1blind__confirmation" prot="public">graphene::wallet::blind_confirmation</innerclass>
+    <innerclass refid="structgraphene_1_1wallet_1_1blind__receipt" prot="public">graphene::wallet::blind_receipt</innerclass>
+    <innerclass refid="structgraphene_1_1wallet_1_1brain__key__info" prot="public">graphene::wallet::brain_key_info</innerclass>
+    <innerclass refid="structgraphene_1_1wallet_1_1exported__account__keys" prot="public">graphene::wallet::exported_account_keys</innerclass>
+    <innerclass refid="structgraphene_1_1wallet_1_1exported__keys" prot="public">graphene::wallet::exported_keys</innerclass>
+    <innerclass refid="structgraphene_1_1wallet_1_1key__label" prot="public">graphene::wallet::key_label</innerclass>
+    <innerclass refid="structgraphene_1_1wallet_1_1method__description" prot="public">graphene::wallet::method_description</innerclass>
+    <innerclass refid="structgraphene_1_1wallet_1_1operation__detail" prot="public">graphene::wallet::operation_detail</innerclass>
+    <innerclass refid="structgraphene_1_1wallet_1_1plain__keys" prot="public">graphene::wallet::plain_keys</innerclass>
+    <innerclass refid="structgraphene_1_1wallet_1_1signed__block__with__info" prot="public">graphene::wallet::signed_block_with_info</innerclass>
+    <innerclass refid="structgraphene_1_1wallet_1_1static__variant__map" prot="public">graphene::wallet::static_variant_map</innerclass>
+    <innerclass refid="classgraphene_1_1wallet_1_1utility" prot="public">graphene::wallet::utility</innerclass>
+    <innerclass refid="structgraphene_1_1wallet_1_1vesting__balance__object__with__info" prot="public">graphene::wallet::vesting_balance_object_with_info</innerclass>
+    <innerclass refid="classgraphene_1_1wallet_1_1wallet__api" prot="public">graphene::wallet::wallet_api</innerclass>
+    <innerclass refid="structgraphene_1_1wallet_1_1wallet__data" prot="public">graphene::wallet::wallet_data</innerclass>
+    <innerclass refid="structgraphene_1_1wallet_1_1worker__vote__delta" prot="public">graphene::wallet::worker_vote_delta</innerclass>
+    <innernamespace refid="namespacegraphene_1_1wallet_1_1detail">graphene::wallet::detail</innernamespace>
+    <innernamespace refid="namespacegraphene_1_1wallet_1_1impl">graphene::wallet::impl</innernamespace>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespacegraphene_1_1wallet_1a385c5434f1c4e271cf812627f9ee759a" prot="public" static="no">
+        <type>uint16_t</type>
+        <definition>typedef uint16_t graphene::wallet::transaction_handle_type</definition>
+        <argsstring></argsstring>
+        <name>transaction_handle_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="42" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacegraphene_1_1wallet_1ad9716b5e512a47a21832967fc0ced842" prot="public" static="no">
+        <type>multi_index_container&lt; <ref refid="structgraphene_1_1wallet_1_1blind__receipt" kindref="compound">blind_receipt</ref>, indexed_by&lt; ordered_unique&lt; tag&lt; by_commitment &gt;, const_mem_fun&lt; <ref refid="structgraphene_1_1wallet_1_1blind__receipt" kindref="compound">blind_receipt</ref>, const commitment_type &amp;, &amp;<ref refid="structgraphene_1_1wallet_1_1blind__receipt_1a2349833d23a74b290792a8b4c622f3d9" kindref="member">blind_receipt::commitment</ref> &gt; &gt;, ordered_unique&lt; tag&lt; by_to &gt;, const_mem_fun&lt; <ref refid="structgraphene_1_1wallet_1_1blind__receipt" kindref="compound">blind_receipt</ref>, std::pair&lt; <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref>, fc::time_point &gt;, &amp;<ref refid="structgraphene_1_1wallet_1_1blind__receipt_1a0eef1f5c2f1f31af1fc7577b181640c4" kindref="member">blind_receipt::to_date</ref> &gt; &gt;, ordered_non_unique&lt; tag&lt; by_to_asset_used &gt;, const_mem_fun&lt; <ref refid="structgraphene_1_1wallet_1_1blind__receipt" kindref="compound">blind_receipt</ref>, std::tuple&lt; <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref>, <ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref>, bool &gt;, &amp;<ref refid="structgraphene_1_1wallet_1_1blind__receipt_1abd0d1903cf8d337eb3471321e524e3ab" kindref="member">blind_receipt::to_asset_used</ref> &gt; &gt;, ordered_unique&lt; tag&lt; by_from &gt;, const_mem_fun&lt; <ref refid="structgraphene_1_1wallet_1_1blind__receipt" kindref="compound">blind_receipt</ref>, std::pair&lt; <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref>, fc::time_point &gt;, &amp;<ref refid="structgraphene_1_1wallet_1_1blind__receipt_1aaacd6aa1d3b034061d4b6ed450a14203" kindref="member">blind_receipt::from_date</ref> &gt; &gt; &gt;&gt;</type>
+        <definition>typedef multi_index_container&lt; blind_receipt, indexed_by&lt; ordered_unique&lt; tag&lt;by_commitment&gt;, const_mem_fun&lt; blind_receipt, const commitment_type&amp;, &amp;blind_receipt::commitment &gt; &gt;, ordered_unique&lt; tag&lt;by_to&gt;, const_mem_fun&lt; blind_receipt, std::pair&lt;public_key_type,fc::time_point&gt;, &amp;blind_receipt::to_date &gt; &gt;, ordered_non_unique&lt; tag&lt;by_to_asset_used&gt;, const_mem_fun&lt; blind_receipt, std::tuple&lt;public_key_type,asset_id_type,bool&gt;, &amp;blind_receipt::to_asset_used &gt; &gt;, ordered_unique&lt; tag&lt;by_from&gt;, const_mem_fun&lt; blind_receipt, std::pair&lt;public_key_type,fc::time_point&gt;, &amp;blind_receipt::from_date &gt; &gt; &gt;&gt; graphene::wallet::blind_receipt_index_type</definition>
+        <argsstring></argsstring>
+        <name>blind_receipt_index_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="129" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacegraphene_1_1wallet_1a00d96f68df9fc0364b97a1fdb077045c" prot="public" static="no">
+        <type>multi_index_container&lt; <ref refid="structgraphene_1_1wallet_1_1key__label" kindref="compound">key_label</ref>, indexed_by&lt; ordered_unique&lt; tag&lt; by_label &gt;, member&lt; <ref refid="structgraphene_1_1wallet_1_1key__label" kindref="compound">key_label</ref>, string, &amp;<ref refid="structgraphene_1_1wallet_1_1key__label_1ad8baaecd6b9247a1cbb411a069a6b3d5" kindref="member">key_label::label</ref> &gt; &gt;, ordered_unique&lt; tag&lt; by_key &gt;, member&lt; <ref refid="structgraphene_1_1wallet_1_1key__label" kindref="compound">key_label</ref>, <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref>, &amp;<ref refid="structgraphene_1_1wallet_1_1key__label_1a7ac7d6be608cea6d92269991c7cd7883" kindref="member">key_label::key</ref> &gt; &gt; &gt;&gt;</type>
+        <definition>typedef multi_index_container&lt; key_label, indexed_by&lt; ordered_unique&lt; tag&lt;by_label&gt;, member&lt; key_label, string, &amp;key_label::label &gt; &gt;, ordered_unique&lt; tag&lt;by_key&gt;, member&lt; key_label, public_key_type, &amp;key_label::key &gt; &gt; &gt;&gt; graphene::wallet::key_label_index_type</definition>
+        <argsstring></argsstring>
+        <name>key_label_index_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="147" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacegraphene_1_1wallet_1a6c98ed4f25b1602e9abb9b84962faf9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T graphene::wallet::from_which_variant</definition>
+        <argsstring>(int which, const variant &amp;v)</argsstring>
+        <name>from_which_variant</name>
+        <param>
+          <type>int</type>
+          <declname>which</declname>
+        </param>
+        <param>
+          <type>const variant &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/reflect_util.hpp" line="96" column="1" bodyfile="libraries/wallet/include/graphene/wallet/reflect_util.hpp" bodystart="96" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacegraphene_1_1wallet_1a94323616e1c511ee95bfc69f073b397d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structgraphene_1_1wallet_1_1static__variant__map" kindref="compound">static_variant_map</ref></type>
+        <definition>static_variant_map graphene::wallet::create_static_variant_map</definition>
+        <argsstring>()</argsstring>
+        <name>create_static_variant_map</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/reflect_util.hpp" line="106" column="1" bodyfile="libraries/wallet/include/graphene/wallet/reflect_util.hpp" bodystart="106" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacegraphene_1_1wallet_1a123885efb87d8e7b83b3ffc383368b54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>object *</type>
+        <definition>object* graphene::wallet::create_object</definition>
+        <argsstring>(const variant &amp;v)</argsstring>
+        <name>create_object</name>
+        <param>
+          <type>const variant &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This class takes a variant and turns it into an object of the given type, with the new operator. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="49" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/wallet/api_documentation.cpp" line="29" column="1"/>
+  </compounddef>
+</doxygen>

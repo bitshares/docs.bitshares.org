@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgraphene_1_1chain_1_1budget__record__object" kind="class" language="C++" prot="public">
+    <compoundname>graphene::chain::budget_record_object</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">graphene::db::abstract_object&lt; budget_record_object &gt;</basecompoundref>
+    <includes refid="budget__record__object_8hpp" local="no">budget_record_object.hpp</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1budget__record__object_1ae4b3b4eddf7b7aeafcaa96cc4455cd29" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t graphene::chain::budget_record_object::space_id</definition>
+        <argsstring></argsstring>
+        <name>space_id</name>
+        <initializer>= <ref refid="namespacegraphene_1_1chain_1a92e55d4242187696c5e2c5eaafbd9400a81f35c04f1d3f3109dacaa6f2bef33c7" kindref="member">implementation_ids</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/budget_record_object.hpp" line="62" column="1" bodyfile="libraries/chain/include/graphene/chain/budget_record_object.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1budget__record__object_1a6ac1fd73ae331b8abdf5e337fa853bc7" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t graphene::chain::budget_record_object::type_id</definition>
+        <argsstring></argsstring>
+        <name>type_id</name>
+        <initializer>= <ref refid="namespacegraphene_1_1chain_1ad3bef2f100b722a6c30fada38f6dcd73a8b4ffc45235b1f894dd7cb703cfde831" kindref="member">impl_budget_record_object_type</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/budget_record_object.hpp" line="63" column="1" bodyfile="libraries/chain/include/graphene/chain/budget_record_object.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1budget__record__object_1a0b5e86ff5685daddc8aef53932cd7dcf" prot="public" static="no" mutable="no">
+        <type>fc::time_point_sec</type>
+        <definition>fc::time_point_sec graphene::chain::budget_record_object::time</definition>
+        <argsstring></argsstring>
+        <name>time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/budget_record_object.hpp" line="65" column="1" bodyfile="libraries/chain/include/graphene/chain/budget_record_object.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1budget__record__object_1adb9d179a5218c00166b7788c96130a98" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1budget__record" kindref="compound">budget_record</ref></type>
+        <definition>budget_record graphene::chain::budget_record_object::record</definition>
+        <argsstring></argsstring>
+        <name>record</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/budget_record_object.hpp" line="66" column="1" bodyfile="libraries/chain/include/graphene/chain/budget_record_object.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1273">
+        <label>graphene::db::abstract_object&lt; budget_record_object &gt;</label>
+      </node>
+      <node id="1272">
+        <label>graphene::chain::budget_record_object</label>
+        <link refid="classgraphene_1_1chain_1_1budget__record__object"/>
+        <childnode refid="1273" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1278">
+        <label>time_point_sec</label>
+      </node>
+      <node id="1275">
+        <label>graphene::db::abstract_object&lt; budget_record_object &gt;</label>
+      </node>
+      <node id="1276">
+        <label>graphene::chain::budget_record</label>
+        <link refid="structgraphene_1_1chain_1_1budget__record"/>
+        <childnode refid="1277" relation="usage">
+          <edgelabel>supply_delta</edgelabel>
+          <edgelabel>from_unused_witness_budget</edgelabel>
+          <edgelabel>from_initial_reserve</edgelabel>
+          <edgelabel>requested_witness_budget</edgelabel>
+          <edgelabel>witness_budget</edgelabel>
+          <edgelabel>from_accumulated_fees</edgelabel>
+          <edgelabel>total_budget</edgelabel>
+          <edgelabel>leftover_worker_funds</edgelabel>
+          <edgelabel>worker_budget</edgelabel>
+        </childnode>
+      </node>
+      <node id="1277">
+        <label>safe&lt; int64_t &gt;</label>
+      </node>
+      <node id="1274">
+        <label>graphene::chain::budget_record_object</label>
+        <link refid="classgraphene_1_1chain_1_1budget__record__object"/>
+        <childnode refid="1275" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1276" relation="usage">
+          <edgelabel>record</edgelabel>
+        </childnode>
+        <childnode refid="1278" relation="usage">
+          <edgelabel>time</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/budget_record_object.hpp" line="60" column="1" bodyfile="libraries/chain/include/graphene/chain/budget_record_object.hpp" bodystart="59" bodyend="67"/>
+    <listofallmembers>
+      <member refid="classgraphene_1_1chain_1_1budget__record__object_1adb9d179a5218c00166b7788c96130a98" prot="public" virt="non-virtual"><scope>graphene::chain::budget_record_object</scope><name>record</name></member>
+      <member refid="classgraphene_1_1chain_1_1budget__record__object_1ae4b3b4eddf7b7aeafcaa96cc4455cd29" prot="public" virt="non-virtual"><scope>graphene::chain::budget_record_object</scope><name>space_id</name></member>
+      <member refid="classgraphene_1_1chain_1_1budget__record__object_1a0b5e86ff5685daddc8aef53932cd7dcf" prot="public" virt="non-virtual"><scope>graphene::chain::budget_record_object</scope><name>time</name></member>
+      <member refid="classgraphene_1_1chain_1_1budget__record__object_1a6ac1fd73ae331b8abdf5e337fa853bc7" prot="public" virt="non-virtual"><scope>graphene::chain::budget_record_object</scope><name>type_id</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

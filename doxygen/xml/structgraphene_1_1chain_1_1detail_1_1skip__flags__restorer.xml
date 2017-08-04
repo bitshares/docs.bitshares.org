@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1detail_1_1skip__flags__restorer" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::detail::skip_flags_restorer</compoundname>
+    <includes refid="db__with_8hpp" local="no">db_with.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1detail_1_1skip__flags__restorer_1a9651b2384dc7c47bfffe29bf55f36cd0" prot="public" static="no" mutable="no">
+        <type><ref refid="classgraphene_1_1chain_1_1node__property__object" kindref="compound">node_property_object</ref> &amp;</type>
+        <definition>node_property_object&amp; graphene::chain::detail::skip_flags_restorer::_npo</definition>
+        <argsstring></argsstring>
+        <name>_npo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/db_with.hpp" line="58" column="1" bodyfile="libraries/chain/include/graphene/chain/db_with.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1detail_1_1skip__flags__restorer_1acdd8afa64daeb10f68470d3cd3afe2ec" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t graphene::chain::detail::skip_flags_restorer::_old_skip_flags</definition>
+        <argsstring></argsstring>
+        <name>_old_skip_flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/db_with.hpp" line="59" column="1" bodyfile="libraries/chain/include/graphene/chain/db_with.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1detail_1_1skip__flags__restorer_1a877663f137df527d02edb771b8c26f1d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>graphene::chain::detail::skip_flags_restorer::skip_flags_restorer</definition>
+        <argsstring>(node_property_object &amp;npo, uint32_t old_skip_flags)</argsstring>
+        <name>skip_flags_restorer</name>
+        <param>
+          <type><ref refid="classgraphene_1_1chain_1_1node__property__object" kindref="compound">node_property_object</ref> &amp;</type>
+          <declname>npo</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>old_skip_flags</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/db_with.hpp" line="49" column="1" bodyfile="libraries/chain/include/graphene/chain/db_with.hpp" bodystart="49" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1detail_1_1skip__flags__restorer_1a3f28c775efdef54d608d6f4b66101984" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>graphene::chain::detail::skip_flags_restorer::~skip_flags_restorer</definition>
+        <argsstring>()</argsstring>
+        <name>~skip_flags_restorer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/db_with.hpp" line="53" column="1" bodyfile="libraries/chain/include/graphene/chain/db_with.hpp" bodystart="53" bodyend="56"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Class used to help the with_skip_flags implementation. It must be defined in this header because it must be available to the with_skip_flags implementation, which is a template and therefore must also be defined in this header. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="2651">
+        <label>graphene::chain::node_property_object</label>
+        <link refid="classgraphene_1_1chain_1_1node__property__object"/>
+      </node>
+      <node id="2650">
+        <label>graphene::chain::detail::skip_flags_restorer</label>
+        <link refid="structgraphene_1_1chain_1_1detail_1_1skip__flags__restorer"/>
+        <childnode refid="2651" relation="usage">
+          <edgelabel>_npo</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/db_with.hpp" line="48" column="1" bodyfile="libraries/chain/include/graphene/chain/db_with.hpp" bodystart="47" bodyend="60"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1detail_1_1skip__flags__restorer_1a9651b2384dc7c47bfffe29bf55f36cd0" prot="public" virt="non-virtual"><scope>graphene::chain::detail::skip_flags_restorer</scope><name>_npo</name></member>
+      <member refid="structgraphene_1_1chain_1_1detail_1_1skip__flags__restorer_1acdd8afa64daeb10f68470d3cd3afe2ec" prot="public" virt="non-virtual"><scope>graphene::chain::detail::skip_flags_restorer</scope><name>_old_skip_flags</name></member>
+      <member refid="structgraphene_1_1chain_1_1detail_1_1skip__flags__restorer_1a877663f137df527d02edb771b8c26f1d" prot="public" virt="non-virtual"><scope>graphene::chain::detail::skip_flags_restorer</scope><name>skip_flags_restorer</name></member>
+      <member refid="structgraphene_1_1chain_1_1detail_1_1skip__flags__restorer_1a3f28c775efdef54d608d6f4b66101984" prot="public" virt="non-virtual"><scope>graphene::chain::detail::skip_flags_restorer</scope><name>~skip_flags_restorer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

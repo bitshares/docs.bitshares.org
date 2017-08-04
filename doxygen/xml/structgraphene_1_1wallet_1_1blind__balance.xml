@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1wallet_1_1blind__balance" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::wallet::blind_balance</compoundname>
+    <includes refid="wallet_8hpp" local="no">wallet.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1wallet_1_1blind__balance_1a0963d0f3b8629cffa26696bf7b700f35" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::wallet::blind_balance::amount</definition>
+        <argsstring></argsstring>
+        <name>amount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="88" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1wallet_1_1blind__balance_1a6a1ece9cb59e5f101ab746a079604305" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref></type>
+        <definition>public_key_type graphene::wallet::blind_balance::from</definition>
+        <argsstring></argsstring>
+        <name>from</name>
+        <briefdescription>
+<para>the account this balance came from </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="89" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1wallet_1_1blind__balance_1af10396210141d59f52f08fb1a97de16b" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref></type>
+        <definition>public_key_type graphene::wallet::blind_balance::to</definition>
+        <argsstring></argsstring>
+        <name>to</name>
+        <briefdescription>
+<para>the account this balance is logically associated with </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="90" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1wallet_1_1blind__balance_1ab458667120916d668dbf28fda180be64" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref></type>
+        <definition>public_key_type graphene::wallet::blind_balance::one_time_key</definition>
+        <argsstring></argsstring>
+        <name>one_time_key</name>
+        <briefdescription>
+<para>used to derive the authority key and blinding factor </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="91" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1wallet_1_1blind__balance_1a89dd4343a0c81f978f6ca8fbdafa7a35" prot="public" static="no" mutable="no">
+        <type>fc::sha256</type>
+        <definition>fc::sha256 graphene::wallet::blind_balance::blinding_factor</definition>
+        <argsstring></argsstring>
+        <name>blinding_factor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="92" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1wallet_1_1blind__balance_1a630af1e8a09e38ac1ab4de036f0a2797" prot="public" static="no" mutable="no">
+        <type>fc::ecc::commitment_type</type>
+        <definition>fc::ecc::commitment_type graphene::wallet::blind_balance::commitment</definition>
+        <argsstring></argsstring>
+        <name>commitment</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="93" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1wallet_1_1blind__balance_1a71c95effef157c6f3755faa0b9b803a3" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool graphene::wallet::blind_balance::used</definition>
+        <argsstring></argsstring>
+        <name>used</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="94" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1138">
+        <label>commitment_type</label>
+      </node>
+      <node id="1141">
+        <label>graphene::chain::public_key_type</label>
+        <link refid="structgraphene_1_1chain_1_1public__key__type"/>
+      </node>
+      <node id="1137">
+        <label>graphene::wallet::blind_balance</label>
+        <link refid="structgraphene_1_1wallet_1_1blind__balance"/>
+        <childnode refid="1138" relation="usage">
+          <edgelabel>commitment</edgelabel>
+        </childnode>
+        <childnode refid="1139" relation="usage">
+          <edgelabel>amount</edgelabel>
+        </childnode>
+        <childnode refid="1141" relation="usage">
+          <edgelabel>from</edgelabel>
+          <edgelabel>to</edgelabel>
+          <edgelabel>one_time_key</edgelabel>
+        </childnode>
+      </node>
+      <node id="1139">
+        <label>graphene::chain::asset</label>
+        <link refid="structgraphene_1_1chain_1_1asset"/>
+        <childnode refid="1140" relation="usage">
+          <edgelabel>amount</edgelabel>
+        </childnode>
+      </node>
+      <node id="1140">
+        <label>safe&lt; int64_t &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="87" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="86" bodyend="95"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1wallet_1_1blind__balance_1a0963d0f3b8629cffa26696bf7b700f35" prot="public" virt="non-virtual"><scope>graphene::wallet::blind_balance</scope><name>amount</name></member>
+      <member refid="structgraphene_1_1wallet_1_1blind__balance_1a89dd4343a0c81f978f6ca8fbdafa7a35" prot="public" virt="non-virtual"><scope>graphene::wallet::blind_balance</scope><name>blinding_factor</name></member>
+      <member refid="structgraphene_1_1wallet_1_1blind__balance_1a630af1e8a09e38ac1ab4de036f0a2797" prot="public" virt="non-virtual"><scope>graphene::wallet::blind_balance</scope><name>commitment</name></member>
+      <member refid="structgraphene_1_1wallet_1_1blind__balance_1a6a1ece9cb59e5f101ab746a079604305" prot="public" virt="non-virtual"><scope>graphene::wallet::blind_balance</scope><name>from</name></member>
+      <member refid="structgraphene_1_1wallet_1_1blind__balance_1ab458667120916d668dbf28fda180be64" prot="public" virt="non-virtual"><scope>graphene::wallet::blind_balance</scope><name>one_time_key</name></member>
+      <member refid="structgraphene_1_1wallet_1_1blind__balance_1af10396210141d59f52f08fb1a97de16b" prot="public" virt="non-virtual"><scope>graphene::wallet::blind_balance</scope><name>to</name></member>
+      <member refid="structgraphene_1_1wallet_1_1blind__balance_1a71c95effef157c6f3755faa0b9b803a3" prot="public" virt="non-virtual"><scope>graphene::wallet::blind_balance</scope><name>used</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1wallet_1_1operation__detail" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::wallet::operation_detail</compoundname>
+    <includes refid="wallet_8hpp" local="no">wallet.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1wallet_1_1operation__detail_1a7617e79dcfbf1b9fa3cfe3a205198786" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string graphene::wallet::operation_detail::memo</definition>
+        <argsstring></argsstring>
+        <name>memo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="280" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="280" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1wallet_1_1operation__detail_1ae4a7d32f69a517ecfe1203fe6277a0c0" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string graphene::wallet::operation_detail::description</definition>
+        <argsstring></argsstring>
+        <name>description</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="281" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="281" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1wallet_1_1operation__detail_1a5bbaf259cd35ab1093f01e4f4bd0396f" prot="public" static="no" mutable="no">
+        <type><ref refid="classgraphene_1_1chain_1_1operation__history__object" kindref="compound">operation_history_object</ref></type>
+        <definition>operation_history_object graphene::wallet::operation_detail::op</definition>
+        <argsstring></argsstring>
+        <name>op</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="282" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="282" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2253">
+        <label>string</label>
+      </node>
+      <node id="2254">
+        <label>graphene::chain::operation_history_object</label>
+        <link refid="classgraphene_1_1chain_1_1operation__history__object"/>
+        <childnode refid="2255" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2252">
+        <label>graphene::wallet::operation_detail</label>
+        <link refid="structgraphene_1_1wallet_1_1operation__detail"/>
+        <childnode refid="2253" relation="usage">
+          <edgelabel>memo</edgelabel>
+          <edgelabel>description</edgelabel>
+        </childnode>
+        <childnode refid="2254" relation="usage">
+          <edgelabel>op</edgelabel>
+        </childnode>
+      </node>
+      <node id="2255">
+        <label>graphene::db::abstract_object&lt; operation_history_object &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="279" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="279" bodyend="283"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1wallet_1_1operation__detail_1ae4a7d32f69a517ecfe1203fe6277a0c0" prot="public" virt="non-virtual"><scope>graphene::wallet::operation_detail</scope><name>description</name></member>
+      <member refid="structgraphene_1_1wallet_1_1operation__detail_1a7617e79dcfbf1b9fa3cfe3a205198786" prot="public" virt="non-virtual"><scope>graphene::wallet::operation_detail</scope><name>memo</name></member>
+      <member refid="structgraphene_1_1wallet_1_1operation__detail_1a5bbaf259cd35ab1093f01e4f4bd0396f" prot="public" virt="non-virtual"><scope>graphene::wallet::operation_detail</scope><name>op</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

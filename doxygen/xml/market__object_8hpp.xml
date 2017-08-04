@@ -1,0 +1,343 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="market__object_8hpp" kind="file" language="C++">
+    <compoundname>market_object.hpp</compoundname>
+    <includes refid="asset_8hpp" local="no">graphene/chain/protocol/asset.hpp</includes>
+    <includes refid="types_8hpp" local="no">graphene/chain/protocol/types.hpp</includes>
+    <includes local="no">graphene/db/generic_index.hpp</includes>
+    <includes local="no">graphene/db/object.hpp</includes>
+    <includes local="no">boost/multi_index/composite_key.hpp</includes>
+    <includedby refid="asset__evaluator_8cpp" local="no">libraries/chain/asset_evaluator.cpp</includedby>
+    <includedby refid="db__debug_8cpp" local="no">libraries/chain/db_debug.cpp</includedby>
+    <includedby refid="db__init_8cpp" local="no">libraries/chain/db_init.cpp</includedby>
+    <includedby refid="db__maint_8cpp" local="no">libraries/chain/db_maint.cpp</includedby>
+    <includedby refid="db__market_8cpp" local="no">libraries/chain/db_market.cpp</includedby>
+    <includedby refid="db__update_8cpp" local="no">libraries/chain/db_update.cpp</includedby>
+    <includedby refid="db__notify_8cpp" local="no">libraries/chain/db_notify.cpp</includedby>
+    <includedby refid="market__evaluator_8cpp" local="no">libraries/chain/market_evaluator.cpp</includedby>
+    <includedby refid="api_8cpp" local="no">libraries/app/api.cpp</includedby>
+    <includedby refid="database__api_8hpp" local="no">libraries/app/include/graphene/app/database_api.hpp</includedby>
+    <incdepgraph>
+      <node id="6349">
+        <label>fc/reflect/reflect.hpp</label>
+      </node>
+      <node id="6363">
+        <label>graphene/chain/protocol/address.hpp</label>
+        <link refid="address_8hpp"/>
+        <childnode refid="6342" relation="include">
+        </childnode>
+        <childnode refid="6364" relation="include">
+        </childnode>
+        <childnode refid="6365" relation="include">
+        </childnode>
+        <childnode refid="6367" relation="include">
+        </childnode>
+        <childnode refid="6349" relation="include">
+        </childnode>
+      </node>
+      <node id="6358">
+        <label>fc/smart_ref_fwd.hpp</label>
+      </node>
+      <node id="6348">
+        <label>fc/crypto/elliptic.hpp</label>
+      </node>
+      <node id="6362">
+        <label>cstdint</label>
+      </node>
+      <node id="6351">
+        <label>fc/optional.hpp</label>
+      </node>
+      <node id="6339">
+        <label>libraries/chain/include/graphene/chain/market_object.hpp</label>
+        <link refid="market__object_8hpp"/>
+        <childnode refid="6340" relation="include">
+        </childnode>
+        <childnode refid="6343" relation="include">
+        </childnode>
+        <childnode refid="6369" relation="include">
+        </childnode>
+        <childnode refid="6370" relation="include">
+        </childnode>
+        <childnode refid="6371" relation="include">
+        </childnode>
+      </node>
+      <node id="6367">
+        <label>fc/crypto/ripemd160.hpp</label>
+      </node>
+      <node id="6365">
+        <label>fc/array.hpp</label>
+      </node>
+      <node id="6352">
+        <label>fc/safe.hpp</label>
+      </node>
+      <node id="6355">
+        <label>fc/io/raw.hpp</label>
+      </node>
+      <node id="6366">
+        <label>string</label>
+      </node>
+      <node id="6347">
+        <label>fc/crypto/sha224.hpp</label>
+      </node>
+      <node id="6342">
+        <label>graphene/chain/config.hpp</label>
+        <link refid="config_8hpp"/>
+      </node>
+      <node id="6364">
+        <label>graphene/chain/pts_address.hpp</label>
+        <link refid="pts__address_8hpp"/>
+        <childnode refid="6365" relation="include">
+        </childnode>
+        <childnode refid="6366" relation="include">
+        </childnode>
+        <childnode refid="6349" relation="include">
+        </childnode>
+      </node>
+      <node id="6369">
+        <label>graphene/db/generic_index.hpp</label>
+      </node>
+      <node id="6357">
+        <label>fc/static_variant.hpp</label>
+      </node>
+      <node id="6350">
+        <label>fc/reflect/variant.hpp</label>
+      </node>
+      <node id="6360">
+        <label>vector</label>
+      </node>
+      <node id="6346">
+        <label>fc/io/enum_type.hpp</label>
+      </node>
+      <node id="6340">
+        <label>graphene/chain/protocol/asset.hpp</label>
+        <link refid="asset_8hpp"/>
+        <childnode refid="6341" relation="include">
+        </childnode>
+        <childnode refid="6343" relation="include">
+        </childnode>
+      </node>
+      <node id="6341">
+        <label>graphene/chain/protocol/config.hpp</label>
+        <link refid="protocol_2config_8hpp"/>
+        <childnode refid="6342" relation="include">
+        </childnode>
+      </node>
+      <node id="6353">
+        <label>fc/container/flat.hpp</label>
+      </node>
+      <node id="6371">
+        <label>boost/multi_index/composite_key.hpp</label>
+      </node>
+      <node id="6368">
+        <label>graphene/db/object_id.hpp</label>
+      </node>
+      <node id="6361">
+        <label>deque</label>
+      </node>
+      <node id="6345">
+        <label>fc/io/varint.hpp</label>
+      </node>
+      <node id="6344">
+        <label>fc/container/flat_fwd.hpp</label>
+      </node>
+      <node id="6354">
+        <label>fc/string.hpp</label>
+      </node>
+      <node id="6356">
+        <label>fc/uint128.hpp</label>
+      </node>
+      <node id="6370">
+        <label>graphene/db/object.hpp</label>
+      </node>
+      <node id="6359">
+        <label>memory</label>
+      </node>
+      <node id="6343">
+        <label>graphene/chain/protocol/types.hpp</label>
+        <link refid="types_8hpp"/>
+        <childnode refid="6344" relation="include">
+        </childnode>
+        <childnode refid="6345" relation="include">
+        </childnode>
+        <childnode refid="6346" relation="include">
+        </childnode>
+        <childnode refid="6347" relation="include">
+        </childnode>
+        <childnode refid="6348" relation="include">
+        </childnode>
+        <childnode refid="6349" relation="include">
+        </childnode>
+        <childnode refid="6350" relation="include">
+        </childnode>
+        <childnode refid="6351" relation="include">
+        </childnode>
+        <childnode refid="6352" relation="include">
+        </childnode>
+        <childnode refid="6353" relation="include">
+        </childnode>
+        <childnode refid="6354" relation="include">
+        </childnode>
+        <childnode refid="6355" relation="include">
+        </childnode>
+        <childnode refid="6356" relation="include">
+        </childnode>
+        <childnode refid="6357" relation="include">
+        </childnode>
+        <childnode refid="6358" relation="include">
+        </childnode>
+        <childnode refid="6359" relation="include">
+        </childnode>
+        <childnode refid="6360" relation="include">
+        </childnode>
+        <childnode refid="6361" relation="include">
+        </childnode>
+        <childnode refid="6362" relation="include">
+        </childnode>
+        <childnode refid="6363" relation="include">
+        </childnode>
+        <childnode refid="6368" relation="include">
+        </childnode>
+        <childnode refid="6341" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="6384">
+        <label>libraries/app/database_api.cpp</label>
+        <link refid="database__api_8cpp"/>
+      </node>
+      <node id="6389">
+        <label>libraries/wallet/api_documentation_standin.cpp</label>
+        <link refid="api__documentation__standin_8cpp"/>
+      </node>
+      <node id="6388">
+        <label>libraries/wallet/api_documentation.cpp</label>
+        <link refid="api__documentation_8cpp"/>
+      </node>
+      <node id="6377">
+        <label>libraries/chain/db_maint.cpp</label>
+        <link refid="db__maint_8cpp"/>
+        <childnode refid="6375" relation="include">
+        </childnode>
+      </node>
+      <node id="6372">
+        <label>libraries/chain/include/graphene/chain/market_object.hpp</label>
+        <link refid="market__object_8hpp"/>
+        <childnode refid="6373" relation="include">
+        </childnode>
+        <childnode refid="6374" relation="include">
+        </childnode>
+        <childnode refid="6376" relation="include">
+        </childnode>
+        <childnode refid="6377" relation="include">
+        </childnode>
+        <childnode refid="6378" relation="include">
+        </childnode>
+        <childnode refid="6379" relation="include">
+        </childnode>
+        <childnode refid="6380" relation="include">
+        </childnode>
+        <childnode refid="6381" relation="include">
+        </childnode>
+        <childnode refid="6382" relation="include">
+        </childnode>
+        <childnode refid="6383" relation="include">
+        </childnode>
+      </node>
+      <node id="6383">
+        <label>libraries/app/include/graphene/app/database_api.hpp</label>
+        <link refid="database__api_8hpp"/>
+        <childnode refid="6384" relation="include">
+        </childnode>
+        <childnode refid="6385" relation="include">
+        </childnode>
+      </node>
+      <node id="6381">
+        <label>libraries/chain/market_evaluator.cpp</label>
+        <link refid="market__evaluator_8cpp"/>
+      </node>
+      <node id="6376">
+        <label>libraries/chain/db_init.cpp</label>
+        <link refid="db__init_8cpp"/>
+        <childnode refid="6375" relation="include">
+        </childnode>
+      </node>
+      <node id="6385">
+        <label>libraries/app/include/graphene/app/api.hpp</label>
+        <link refid="api_8hpp"/>
+        <childnode refid="6382" relation="include">
+        </childnode>
+        <childnode refid="6386" relation="include">
+        </childnode>
+        <childnode refid="6387" relation="include">
+        </childnode>
+        <childnode refid="6390" relation="include">
+        </childnode>
+      </node>
+      <node id="6387">
+        <label>libraries/wallet/include/graphene/wallet/wallet.hpp</label>
+        <link refid="wallet_8hpp"/>
+        <childnode refid="6388" relation="include">
+        </childnode>
+        <childnode refid="6389" relation="include">
+        </childnode>
+        <childnode refid="6390" relation="include">
+        </childnode>
+      </node>
+      <node id="6374">
+        <label>libraries/chain/db_debug.cpp</label>
+        <link refid="db__debug_8cpp"/>
+        <childnode refid="6375" relation="include">
+        </childnode>
+      </node>
+      <node id="6375">
+        <label>libraries/chain/database.cpp</label>
+        <link refid="database_8cpp"/>
+      </node>
+      <node id="6382">
+        <label>libraries/app/api.cpp</label>
+        <link refid="api_8cpp"/>
+      </node>
+      <node id="6386">
+        <label>libraries/app/application.cpp</label>
+        <link refid="application_8cpp"/>
+      </node>
+      <node id="6380">
+        <label>libraries/chain/db_notify.cpp</label>
+        <link refid="db__notify_8cpp"/>
+        <childnode refid="6375" relation="include">
+        </childnode>
+      </node>
+      <node id="6373">
+        <label>libraries/chain/asset_evaluator.cpp</label>
+        <link refid="asset__evaluator_8cpp"/>
+      </node>
+      <node id="6390">
+        <label>libraries/wallet/wallet.cpp</label>
+        <link refid="wallet_8cpp"/>
+      </node>
+      <node id="6379">
+        <label>libraries/chain/db_update.cpp</label>
+        <link refid="db__update_8cpp"/>
+        <childnode refid="6375" relation="include">
+        </childnode>
+      </node>
+      <node id="6378">
+        <label>libraries/chain/db_market.cpp</label>
+        <link refid="db__market_8cpp"/>
+        <childnode refid="6375" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classgraphene_1_1chain_1_1limit__order__object" prot="public">graphene::chain::limit_order_object</innerclass>
+    <innerclass refid="classgraphene_1_1chain_1_1call__order__object" prot="public">graphene::chain::call_order_object</innerclass>
+    <innerclass refid="classgraphene_1_1chain_1_1force__settlement__object" prot="public">graphene::chain::force_settlement_object</innerclass>
+    <innernamespace refid="namespacegraphene">graphene</innernamespace>
+    <innernamespace refid="namespacegraphene_1_1chain">graphene::chain</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/chain/include/graphene/chain/market_object.hpp"/>
+  </compounddef>
+</doxygen>

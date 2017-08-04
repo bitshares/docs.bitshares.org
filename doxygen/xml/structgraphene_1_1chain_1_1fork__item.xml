@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1fork__item" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::fork_item</compoundname>
+    <includes refid="fork__database_8hpp" local="no">fork_database.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1fork__item_1afdf2291c60a93b770c24c64de5e22e53" prot="public" static="no" mutable="no">
+        <type>weak_ptr&lt; <ref refid="structgraphene_1_1chain_1_1fork__item" kindref="compound">fork_item</ref> &gt;</type>
+        <definition>weak_ptr&lt; fork_item &gt; graphene::chain::fork_item::prev</definition>
+        <argsstring></argsstring>
+        <name>prev</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/fork_database.hpp" line="45" column="1" bodyfile="libraries/chain/include/graphene/chain/fork_database.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1fork__item_1a382a00efd04e95349085a60530134fa9" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t graphene::chain::fork_item::num</definition>
+        <argsstring></argsstring>
+        <name>num</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/fork_database.hpp" line="46" column="1" bodyfile="libraries/chain/include/graphene/chain/fork_database.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1fork__item_1a9b0689b375ec503fd77ae869120d61a7" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool graphene::chain::fork_item::invalid</definition>
+        <argsstring></argsstring>
+        <name>invalid</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Used to flag a block as invalid and prevent other blocks from building on top of it. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/fork_database.hpp" line="51" column="1" bodyfile="libraries/chain/include/graphene/chain/fork_database.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1fork__item_1a3d96781568fcbebf3cfa0a53e08530c3" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a314b030d7a6107c5641fd9945da7f568" kindref="member">block_id_type</ref></type>
+        <definition>block_id_type graphene::chain::fork_item::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/fork_database.hpp" line="52" column="1" bodyfile="libraries/chain/include/graphene/chain/fork_database.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1fork__item_1ad5d0177e3674b581a81892c9284e87a7" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__block" kindref="compound">signed_block</ref></type>
+        <definition>signed_block graphene::chain::fork_item::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/fork_database.hpp" line="53" column="1" bodyfile="libraries/chain/include/graphene/chain/fork_database.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1fork__item_1ad46564ed602beb70d66060d91bc9c490" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>graphene::chain::fork_item::fork_item</definition>
+        <argsstring>(signed_block d)</argsstring>
+        <name>fork_item</name>
+        <param>
+          <type><ref refid="structgraphene_1_1chain_1_1signed__block" kindref="compound">signed_block</ref></type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/fork_database.hpp" line="40" column="1" bodyfile="libraries/chain/include/graphene/chain/fork_database.hpp" bodystart="40" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1fork__item_1a9f3d5e56ae208fb4c39aa6422589255b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1a314b030d7a6107c5641fd9945da7f568" kindref="member">block_id_type</ref></type>
+        <definition>block_id_type graphene::chain::fork_item::previous_id</definition>
+        <argsstring>() const</argsstring>
+        <name>previous_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/fork_database.hpp" line="43" column="1" bodyfile="libraries/chain/include/graphene/chain/fork_database.hpp" bodystart="43" bodyend="43"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1805">
+        <label>graphene::chain::signed_block_header</label>
+        <link refid="structgraphene_1_1chain_1_1signed__block__header"/>
+        <childnode refid="1806" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1808">
+        <label>time_point_sec</label>
+      </node>
+      <node id="1807">
+        <label>flat_set&lt; future_extensions &gt;</label>
+      </node>
+      <node id="1804">
+        <label>graphene::chain::signed_block</label>
+        <link refid="structgraphene_1_1chain_1_1signed__block"/>
+        <childnode refid="1805" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1809" relation="usage">
+          <edgelabel>transactions</edgelabel>
+        </childnode>
+      </node>
+      <node id="1803">
+        <label>graphene::chain::fork_item</label>
+        <link refid="structgraphene_1_1chain_1_1fork__item"/>
+        <childnode refid="1804" relation="usage">
+          <edgelabel>data</edgelabel>
+        </childnode>
+        <childnode refid="1810" relation="usage">
+          <edgelabel>prev</edgelabel>
+        </childnode>
+      </node>
+      <node id="1809">
+        <label>vector&lt; graphene::chain::processed_transaction &gt;</label>
+      </node>
+      <node id="1806">
+        <label>graphene::chain::block_header</label>
+        <link refid="structgraphene_1_1chain_1_1block__header"/>
+        <childnode refid="1807" relation="usage">
+          <edgelabel>extensions</edgelabel>
+        </childnode>
+        <childnode refid="1808" relation="usage">
+          <edgelabel>timestamp</edgelabel>
+        </childnode>
+      </node>
+      <node id="1810">
+        <label>weak_ptr&lt; graphene::chain::fork_item &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/fork_database.hpp" line="39" column="1" bodyfile="libraries/chain/include/graphene/chain/fork_database.hpp" bodystart="38" bodyend="54"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1fork__item_1ad5d0177e3674b581a81892c9284e87a7" prot="public" virt="non-virtual"><scope>graphene::chain::fork_item</scope><name>data</name></member>
+      <member refid="structgraphene_1_1chain_1_1fork__item_1ad46564ed602beb70d66060d91bc9c490" prot="public" virt="non-virtual"><scope>graphene::chain::fork_item</scope><name>fork_item</name></member>
+      <member refid="structgraphene_1_1chain_1_1fork__item_1a3d96781568fcbebf3cfa0a53e08530c3" prot="public" virt="non-virtual"><scope>graphene::chain::fork_item</scope><name>id</name></member>
+      <member refid="structgraphene_1_1chain_1_1fork__item_1a9b0689b375ec503fd77ae869120d61a7" prot="public" virt="non-virtual"><scope>graphene::chain::fork_item</scope><name>invalid</name></member>
+      <member refid="structgraphene_1_1chain_1_1fork__item_1a382a00efd04e95349085a60530134fa9" prot="public" virt="non-virtual"><scope>graphene::chain::fork_item</scope><name>num</name></member>
+      <member refid="structgraphene_1_1chain_1_1fork__item_1afdf2291c60a93b770c24c64de5e22e53" prot="public" virt="non-virtual"><scope>graphene::chain::fork_item</scope><name>prev</name></member>
+      <member refid="structgraphene_1_1chain_1_1fork__item_1a9f3d5e56ae208fb4c39aa6422589255b" prot="public" virt="non-virtual"><scope>graphene::chain::fork_item</scope><name>previous_id</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

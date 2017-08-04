@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1withdraw__permission__claim__operation" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::withdraw_permission_claim_operation</compoundname>
+    <basecompoundref refid="structgraphene_1_1chain_1_1base__operation" prot="public" virt="non-virtual">graphene::chain::base_operation</basecompoundref>
+    <includes refid="withdraw__permission_8hpp" local="no">withdraw_permission.hpp</includes>
+    <innerclass refid="structgraphene_1_1chain_1_1withdraw__permission__claim__operation_1_1fee__parameters__type" prot="public">graphene::chain::withdraw_permission_claim_operation::fee_parameters_type</innerclass>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1withdraw__permission__claim__operation_1aa859676b795d27356d2cae53b4b66e12" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::withdraw_permission_claim_operation::fee</definition>
+        <argsstring></argsstring>
+        <name>fee</name>
+        <briefdescription>
+<para>Paid by withdraw_to_account. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" line="127" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1withdraw__permission__claim__operation_1a6eaf7439a6af330b76846a54e24e160e" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1ae1e7d73b3ea0bcf44a14b2487911736a" kindref="member">withdraw_permission_id_type</ref></type>
+        <definition>withdraw_permission_id_type graphene::chain::withdraw_permission_claim_operation::withdraw_permission</definition>
+        <argsstring></argsstring>
+        <name>withdraw_permission</name>
+        <briefdescription>
+<para>ID of the permission authorizing this withdrawal. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" line="129" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1withdraw__permission__claim__operation_1af19f378f38846c1df32c54dc85ca712c" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::withdraw_permission_claim_operation::withdraw_from_account</definition>
+        <argsstring></argsstring>
+        <name>withdraw_from_account</name>
+        <briefdescription>
+<para>Must match withdraw_permission-&gt;withdraw_from_account. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" line="131" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1withdraw__permission__claim__operation_1acca0cb50c7f624e3b094a580106f01c4" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::withdraw_permission_claim_operation::withdraw_to_account</definition>
+        <argsstring></argsstring>
+        <name>withdraw_to_account</name>
+        <briefdescription>
+<para>Must match withdraw_permision-&gt;authorized_account. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" line="133" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1withdraw__permission__claim__operation_1ab39c4153d52fc3f0c047d3c270c48cfa" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::withdraw_permission_claim_operation::amount_to_withdraw</definition>
+        <argsstring></argsstring>
+        <name>amount_to_withdraw</name>
+        <briefdescription>
+<para>Amount to withdraw. Must not exceed withdraw_permission-&gt;withdrawal_limit. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" line="135" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1withdraw__permission__claim__operation_1ad3106d70e80be72b31ee19e15b70d5f3" prot="public" static="no" mutable="no">
+        <type>optional&lt; <ref refid="structgraphene_1_1chain_1_1memo__data" kindref="compound">memo_data</ref> &gt;</type>
+        <definition>optional&lt;memo_data&gt; graphene::chain::withdraw_permission_claim_operation::memo</definition>
+        <argsstring></argsstring>
+        <name>memo</name>
+        <briefdescription>
+<para>Memo for withdraw_from_account. Should generally be encrypted with withdraw_from_account-&gt;memo_key. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" line="137" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1withdraw__permission__claim__operation_1aa4cce457037a45cc23a70da9280c56cc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::withdraw_permission_claim_operation::fee_payer</definition>
+        <argsstring>() const</argsstring>
+        <name>fee_payer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" line="139" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" bodystart="139" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1withdraw__permission__claim__operation_1a58ba464d93d8ab572f60c8dbaced26f2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::withdraw_permission_claim_operation::validate</definition>
+        <argsstring>() const</argsstring>
+        <name>validate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" line="140" column="1" bodyfile="libraries/chain/protocol/withdraw_permission.cpp" bodystart="37" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1withdraw__permission__claim__operation_1a32f1e86d31e2b8e5298f1edbb68bd99e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+        <definition>share_type graphene::chain::withdraw_permission_claim_operation::calculate_fee</definition>
+        <argsstring>(const fee_parameters_type &amp;k) const</argsstring>
+        <name>calculate_fee</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1withdraw__permission__claim__operation_1_1fee__parameters__type" kindref="compound">fee_parameters_type</ref> &amp;</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" line="141" column="1" bodyfile="libraries/chain/protocol/withdraw_permission.cpp" bodystart="44" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Withdraw from an account which has published a withdrawal permission</para><para>This operation is used to withdraw from an account which has authorized such a withdrawal. It may be executed at most once per withdrawal period for the given permission. On execution, amount_to_withdraw is transferred from withdraw_from_account to withdraw_to_account, assuming amount_to_withdraw is within the withdrawal limit. The withdrawal permission will be updated to note that the withdrawal for the current period has occurred, and further withdrawals will not be permitted until the next withdrawal period, assuming the permission has not expired. This operation may be executed at any time within the current withdrawal period. </para>    </briefdescription>
+    <detaileddescription>
+<para>Fee is paid by withdraw_to_account, which is required to authorize this operation </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="3097">
+        <label>graphene::chain::base_operation</label>
+        <link refid="structgraphene_1_1chain_1_1base__operation"/>
+      </node>
+      <node id="3096">
+        <label>graphene::chain::withdraw_permission_claim_operation</label>
+        <link refid="structgraphene_1_1chain_1_1withdraw__permission__claim__operation"/>
+        <childnode refid="3097" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3099">
+        <label>graphene::chain::base_operation</label>
+        <link refid="structgraphene_1_1chain_1_1base__operation"/>
+      </node>
+      <node id="3098">
+        <label>graphene::chain::withdraw_permission_claim_operation</label>
+        <link refid="structgraphene_1_1chain_1_1withdraw__permission__claim__operation"/>
+        <childnode refid="3099" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3100" relation="usage">
+          <edgelabel>fee</edgelabel>
+          <edgelabel>amount_to_withdraw</edgelabel>
+        </childnode>
+        <childnode refid="3102" relation="usage">
+          <edgelabel>memo</edgelabel>
+        </childnode>
+      </node>
+      <node id="3100">
+        <label>graphene::chain::asset</label>
+        <link refid="structgraphene_1_1chain_1_1asset"/>
+        <childnode refid="3101" relation="usage">
+          <edgelabel>amount</edgelabel>
+        </childnode>
+      </node>
+      <node id="3101">
+        <label>safe&lt; int64_t &gt;</label>
+      </node>
+      <node id="3102">
+        <label>optional&lt; graphene::chain::memo_data &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" line="120" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" bodystart="119" bodyend="142"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1withdraw__permission__claim__operation_1ab39c4153d52fc3f0c047d3c270c48cfa" prot="public" virt="non-virtual"><scope>graphene::chain::withdraw_permission_claim_operation</scope><name>amount_to_withdraw</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a8947f5ff3ea0458c7fe981b5bb9e82b7" prot="public" virt="non-virtual"><scope>graphene::chain::withdraw_permission_claim_operation</scope><name>calculate_data_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1withdraw__permission__claim__operation_1a32f1e86d31e2b8e5298f1edbb68bd99e" prot="public" virt="non-virtual"><scope>graphene::chain::withdraw_permission_claim_operation</scope><name>calculate_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a18b678eb05bc5b30d75f10b398c07a91" prot="public" virt="non-virtual" ambiguityscope="graphene::chain::base_operation::"><scope>graphene::chain::withdraw_permission_claim_operation</scope><name>calculate_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1withdraw__permission__claim__operation_1aa859676b795d27356d2cae53b4b66e12" prot="public" virt="non-virtual"><scope>graphene::chain::withdraw_permission_claim_operation</scope><name>fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1withdraw__permission__claim__operation_1aa4cce457037a45cc23a70da9280c56cc" prot="public" virt="non-virtual"><scope>graphene::chain::withdraw_permission_claim_operation</scope><name>fee_payer</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a1d398b2f68e1dca5f453b86655a64c41" prot="public" virt="non-virtual"><scope>graphene::chain::withdraw_permission_claim_operation</scope><name>get_required_active_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1ac7e2861a01bbaef8fbe5c5dcf5e73b38" prot="public" virt="non-virtual"><scope>graphene::chain::withdraw_permission_claim_operation</scope><name>get_required_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1aff6e2d2b66117c8c87f6a6e7e7ddba1f" prot="public" virt="non-virtual"><scope>graphene::chain::withdraw_permission_claim_operation</scope><name>get_required_owner_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1withdraw__permission__claim__operation_1ad3106d70e80be72b31ee19e15b70d5f3" prot="public" virt="non-virtual"><scope>graphene::chain::withdraw_permission_claim_operation</scope><name>memo</name></member>
+      <member refid="structgraphene_1_1chain_1_1withdraw__permission__claim__operation_1a58ba464d93d8ab572f60c8dbaced26f2" prot="public" virt="non-virtual"><scope>graphene::chain::withdraw_permission_claim_operation</scope><name>validate</name></member>
+      <member refid="structgraphene_1_1chain_1_1withdraw__permission__claim__operation_1af19f378f38846c1df32c54dc85ca712c" prot="public" virt="non-virtual"><scope>graphene::chain::withdraw_permission_claim_operation</scope><name>withdraw_from_account</name></member>
+      <member refid="structgraphene_1_1chain_1_1withdraw__permission__claim__operation_1a6eaf7439a6af330b76846a54e24e160e" prot="public" virt="non-virtual"><scope>graphene::chain::withdraw_permission_claim_operation</scope><name>withdraw_permission</name></member>
+      <member refid="structgraphene_1_1chain_1_1withdraw__permission__claim__operation_1acca0cb50c7f624e3b094a580106f01c4" prot="public" virt="non-virtual"><scope>graphene::chain::withdraw_permission_claim_operation</scope><name>withdraw_to_account</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

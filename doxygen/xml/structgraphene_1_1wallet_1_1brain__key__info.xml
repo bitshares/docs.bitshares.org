@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1wallet_1_1brain__key__info" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::wallet::brain_key_info</compoundname>
+    <includes refid="wallet_8hpp" local="no">wallet.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1wallet_1_1brain__key__info_1acebb141c3f2db64308ab7acf2c8f2b8f" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string graphene::wallet::brain_key_info::brain_priv_key</definition>
+        <argsstring></argsstring>
+        <name>brain_priv_key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="59" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1wallet_1_1brain__key__info_1a2e2fa5bdcdf1522433ef2079b7975cbd" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string graphene::wallet::brain_key_info::wif_priv_key</definition>
+        <argsstring></argsstring>
+        <name>wif_priv_key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="60" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1wallet_1_1brain__key__info_1a929ac30e8a95ef6228dd80c0d27ae702" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref></type>
+        <definition>public_key_type graphene::wallet::brain_key_info::pub_key</definition>
+        <argsstring></argsstring>
+        <name>pub_key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="61" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1267">
+        <label>string</label>
+      </node>
+      <node id="1268">
+        <label>graphene::chain::public_key_type</label>
+        <link refid="structgraphene_1_1chain_1_1public__key__type"/>
+      </node>
+      <node id="1266">
+        <label>graphene::wallet::brain_key_info</label>
+        <link refid="structgraphene_1_1wallet_1_1brain__key__info"/>
+        <childnode refid="1267" relation="usage">
+          <edgelabel>wif_priv_key</edgelabel>
+          <edgelabel>brain_priv_key</edgelabel>
+        </childnode>
+        <childnode refid="1268" relation="usage">
+          <edgelabel>pub_key</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="58" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="57" bodyend="62"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1wallet_1_1brain__key__info_1acebb141c3f2db64308ab7acf2c8f2b8f" prot="public" virt="non-virtual"><scope>graphene::wallet::brain_key_info</scope><name>brain_priv_key</name></member>
+      <member refid="structgraphene_1_1wallet_1_1brain__key__info_1a929ac30e8a95ef6228dd80c0d27ae702" prot="public" virt="non-virtual"><scope>graphene::wallet::brain_key_info</scope><name>pub_key</name></member>
+      <member refid="structgraphene_1_1wallet_1_1brain__key__info_1a2e2fa5bdcdf1522433ef2079b7975cbd" prot="public" virt="non-virtual"><scope>graphene::wallet::brain_key_info</scope><name>wif_priv_key</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

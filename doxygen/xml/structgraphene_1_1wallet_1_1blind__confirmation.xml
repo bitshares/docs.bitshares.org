@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1wallet_1_1blind__confirmation" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::wallet::blind_confirmation</compoundname>
+    <includes refid="wallet_8hpp" local="no">wallet.hpp</includes>
+    <innerclass refid="structgraphene_1_1wallet_1_1blind__confirmation_1_1output" prot="public">graphene::wallet::blind_confirmation::output</innerclass>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1wallet_1_1blind__confirmation_1a653d69e701e1234471877abcf1528646" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+        <definition>signed_transaction graphene::wallet::blind_confirmation::trx</definition>
+        <argsstring></argsstring>
+        <name>trx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="82" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1wallet_1_1blind__confirmation_1a0915ae94a5969384631ab66bee10f13c" prot="public" static="no" mutable="no">
+        <type>vector&lt; <ref refid="structgraphene_1_1wallet_1_1blind__confirmation_1_1output" kindref="compound">output</ref> &gt;</type>
+        <definition>vector&lt;output&gt; graphene::wallet::blind_confirmation::outputs</definition>
+        <argsstring></argsstring>
+        <name>outputs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="83" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Contains the confirmation receipt the sender must give the receiver and the meta data about the receipt that helps the sender identify which receipt is for the receiver and which is for the change address. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="1147">
+        <label>time_point_sec</label>
+      </node>
+      <node id="1146">
+        <label>flat_set&lt; future_extensions &gt;</label>
+      </node>
+      <node id="1143">
+        <label>graphene::wallet::blind_confirmation</label>
+        <link refid="structgraphene_1_1wallet_1_1blind__confirmation"/>
+        <childnode refid="1144" relation="usage">
+          <edgelabel>trx</edgelabel>
+        </childnode>
+        <childnode refid="1150" relation="usage">
+          <edgelabel>outputs</edgelabel>
+        </childnode>
+      </node>
+      <node id="1149">
+        <label>vector&lt; signature_type &gt;</label>
+      </node>
+      <node id="1144">
+        <label>graphene::chain::signed_transaction</label>
+        <link refid="structgraphene_1_1chain_1_1signed__transaction"/>
+        <childnode refid="1145" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1149" relation="usage">
+          <edgelabel>signatures</edgelabel>
+        </childnode>
+      </node>
+      <node id="1148">
+        <label>vector&lt; operation &gt;</label>
+      </node>
+      <node id="1150">
+        <label>vector&lt; graphene::wallet::blind_confirmation::output &gt;</label>
+      </node>
+      <node id="1145">
+        <label>graphene::chain::transaction</label>
+        <link refid="structgraphene_1_1chain_1_1transaction"/>
+        <childnode refid="1146" relation="usage">
+          <edgelabel>extensions</edgelabel>
+        </childnode>
+        <childnode refid="1147" relation="usage">
+          <edgelabel>expiration</edgelabel>
+        </childnode>
+        <childnode refid="1148" relation="usage">
+          <edgelabel>operations</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="71" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="70" bodyend="84"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1wallet_1_1blind__confirmation_1a0915ae94a5969384631ab66bee10f13c" prot="public" virt="non-virtual"><scope>graphene::wallet::blind_confirmation</scope><name>outputs</name></member>
+      <member refid="structgraphene_1_1wallet_1_1blind__confirmation_1a653d69e701e1234471877abcf1528646" prot="public" virt="non-virtual"><scope>graphene::wallet::blind_confirmation</scope><name>trx</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

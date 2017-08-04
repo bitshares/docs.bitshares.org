@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgraphene_1_1chain_1_1address" kind="class" language="C++" prot="public">
+    <compoundname>graphene::chain::address</compoundname>
+    <includes refid="address_8hpp" local="no">address.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1address_1ac135b62817b096215abbc2f35574d1f0" prot="public" static="no" mutable="no">
+        <type>fc::ripemd160</type>
+        <definition>fc::ripemd160 graphene::chain::address::addr</definition>
+        <argsstring></argsstring>
+        <name>addr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/address.hpp" line="71" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/address.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1address_1a532c01719430b2c48c4319d31d66d6dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>graphene::chain::address::address</definition>
+        <argsstring>()</argsstring>
+        <name>address</name>
+        <briefdescription>
+<para>constructs empty / null address </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/address.hpp" line="54" column="1" bodyfile="libraries/chain/protocol/address.cpp" bodystart="32" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1address_1a77c602d56e099a4e2254c7b47cd26303" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>graphene::chain::address::address</definition>
+        <argsstring>(const std::string &amp;base58str)</argsstring>
+        <name>address</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>base58str</declname>
+        </param>
+        <briefdescription>
+<para>converts to binary, validates checksum </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/address.hpp" line="55" column="1" bodyfile="libraries/chain/protocol/address.cpp" bodystart="34" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1address_1ae5349055f225362695885d7d7f34fc3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>graphene::chain::address::address</definition>
+        <argsstring>(const fc::ecc::public_key &amp;pub)</argsstring>
+        <name>address</name>
+        <param>
+          <type>const fc::ecc::public_key &amp;</type>
+          <declname>pub</declname>
+        </param>
+        <briefdescription>
+<para>converts to binary </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/address.hpp" line="56" column="1" bodyfile="libraries/chain/protocol/address.cpp" bodystart="70" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1address_1af0b392e7616fda5b3c6f8289649f2b08" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>graphene::chain::address::address</definition>
+        <argsstring>(const fc::ecc::public_key_data &amp;pub)</argsstring>
+        <name>address</name>
+        <param>
+          <type>const <ref refid="namespacefc_1_1ecc_1a86376367df56783963d35795bebddce6" kindref="member">fc::ecc::public_key_data</ref> &amp;</type>
+          <declname>pub</declname>
+        </param>
+        <briefdescription>
+<para>converts to binary </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/address.hpp" line="57" column="1" bodyfile="libraries/chain/protocol/address.cpp" bodystart="81" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1address_1aca7f7dce531bb7846460a2f58f216dff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>graphene::chain::address::address</definition>
+        <argsstring>(const pts_address &amp;pub)</argsstring>
+        <name>address</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1pts__address" kindref="compound">pts_address</ref> &amp;</type>
+          <declname>pub</declname>
+        </param>
+        <briefdescription>
+<para>converts to binary </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/address.hpp" line="58" column="1" bodyfile="libraries/chain/protocol/address.cpp" bodystart="76" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1address_1a34a9b2d55044976639a251babeea494d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>graphene::chain::address::address</definition>
+        <argsstring>(const public_key_type &amp;pubkey)</argsstring>
+        <name>address</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref> &amp;</type>
+          <declname>pubkey</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/address.hpp" line="59" column="1" bodyfile="libraries/chain/protocol/address.cpp" bodystart="86" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1address_1ab00bc1036bb3eff7ace87a1f6a057d34" prot="public" static="no" const="yes" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>graphene::chain::address::operator std::string</definition>
+        <argsstring>() const</argsstring>
+        <name>operator std::string</name>
+        <briefdescription>
+<para>converts to base58 + checksum </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/address.hpp" line="63" column="1" bodyfile="libraries/chain/protocol/address.cpp" bodystart="91" bodyend="98"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1address_1a3201e9797090081198e0031e44ff783a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::address::is_valid</definition>
+        <argsstring>(const std::string &amp;base58str, const std::string &amp;prefix=GRAPHENE_ADDRESS_PREFIX)</argsstring>
+        <name>is_valid</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>base58str</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>prefix</declname>
+          <defval><ref refid="config_8hpp_1a3b5980d1a4071e8a4aac69cb6710eb2f" kindref="member">GRAPHENE_ADDRESS_PREFIX</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/address.hpp" line="61" column="1" bodyfile="libraries/chain/protocol/address.cpp" bodystart="43" bodyend="68"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classgraphene_1_1chain_1_1address_1ae4ce2352ad36d5689d87fc2f59b22d9d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>friend size_t</type>
+        <definition>size_t hash_value</definition>
+        <argsstring>(const address &amp;v)</argsstring>
+        <name>hash_value</name>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1address" kindref="compound">address</ref> &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/address.hpp" line="65" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/address.hpp" bodystart="65" bodyend="70"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>a 160 bit hash of a public key </para>    </briefdescription>
+    <detaileddescription>
+<para>An address can be converted to or from a base58 string with 32 bit checksum.</para><para>An address is calculated as ripemd160( sha512( compressed_ecc_public_key ) )</para><para>When converted to a string, checksum calculated as the first 4 bytes ripemd160( address ) is appended to the binary address before converting to base58. </para>    </detaileddescription>
+    <location file="libraries/chain/include/graphene/chain/protocol/address.hpp" line="52" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/address.hpp" bodystart="51" bodyend="72"/>
+    <listofallmembers>
+      <member refid="classgraphene_1_1chain_1_1address_1ac135b62817b096215abbc2f35574d1f0" prot="public" virt="non-virtual"><scope>graphene::chain::address</scope><name>addr</name></member>
+      <member refid="classgraphene_1_1chain_1_1address_1a532c01719430b2c48c4319d31d66d6dd" prot="public" virt="non-virtual"><scope>graphene::chain::address</scope><name>address</name></member>
+      <member refid="classgraphene_1_1chain_1_1address_1a77c602d56e099a4e2254c7b47cd26303" prot="public" virt="non-virtual"><scope>graphene::chain::address</scope><name>address</name></member>
+      <member refid="classgraphene_1_1chain_1_1address_1ae5349055f225362695885d7d7f34fc3e" prot="public" virt="non-virtual"><scope>graphene::chain::address</scope><name>address</name></member>
+      <member refid="classgraphene_1_1chain_1_1address_1af0b392e7616fda5b3c6f8289649f2b08" prot="public" virt="non-virtual"><scope>graphene::chain::address</scope><name>address</name></member>
+      <member refid="classgraphene_1_1chain_1_1address_1aca7f7dce531bb7846460a2f58f216dff" prot="public" virt="non-virtual"><scope>graphene::chain::address</scope><name>address</name></member>
+      <member refid="classgraphene_1_1chain_1_1address_1a34a9b2d55044976639a251babeea494d" prot="public" virt="non-virtual"><scope>graphene::chain::address</scope><name>address</name></member>
+      <member refid="classgraphene_1_1chain_1_1address_1ae4ce2352ad36d5689d87fc2f59b22d9d" prot="public" virt="non-virtual"><scope>graphene::chain::address</scope><name>hash_value</name></member>
+      <member refid="classgraphene_1_1chain_1_1address_1a3201e9797090081198e0031e44ff783a" prot="public" virt="non-virtual"><scope>graphene::chain::address</scope><name>is_valid</name></member>
+      <member refid="classgraphene_1_1chain_1_1address_1ab00bc1036bb3eff7ace87a1f6a057d34" prot="public" virt="non-virtual"><scope>graphene::chain::address</scope><name>operator std::string</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

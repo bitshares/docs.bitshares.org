@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1processed__transaction" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::processed_transaction</compoundname>
+    <basecompoundref refid="structgraphene_1_1chain_1_1signed__transaction" prot="public" virt="non-virtual">graphene::chain::signed_transaction</basecompoundref>
+    <includes refid="transaction_8hpp" local="no">transaction.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1processed__transaction_1a93aa1fc128d6cb9bd068e31ac72cf4f5" prot="public" static="no" mutable="no">
+        <type>vector&lt; <ref refid="group__operations_1gaf121d5f218e142d53acffc833cae929a" kindref="member">operation_result</ref> &gt;</type>
+        <definition>vector&lt;operation_result&gt; graphene::chain::processed_transaction::operation_results</definition>
+        <argsstring></argsstring>
+        <name>operation_results</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/transaction.hpp" line="202" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/transaction.hpp" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1processed__transaction_1a842a78049046ba07ad411831efea462f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>graphene::chain::processed_transaction::processed_transaction</definition>
+        <argsstring>(const signed_transaction &amp;trx=signed_transaction())</argsstring>
+        <name>processed_transaction</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref> &amp;</type>
+          <declname>trx</declname>
+          <defval><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref>()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/transaction.hpp" line="199" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/transaction.hpp" bodystart="199" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1processed__transaction_1a348571d7429c14a3b847c03ebaba545a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1a575e2ea493a5e8f4d2888ee753084596" kindref="member">digest_type</ref></type>
+        <definition>digest_type graphene::chain::processed_transaction::merkle_digest</definition>
+        <argsstring>() const</argsstring>
+        <name>merkle_digest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/transaction.hpp" line="204" column="1" bodyfile="libraries/chain/protocol/transaction.cpp" bodystart="33" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>captures the result of evaluating the operations contained in the transaction </para>    </briefdescription>
+    <detaileddescription>
+<para>When processing a transaction some operations generate new object IDs and these IDs cannot be known until the transaction is actually included into a block. When a block is produced these new ids are captured and included with every transaction. The index in operation_results should correspond to the same index in operations.</para><para>If an operation did not create any new object IDs then 0 should be returned. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2391">
+        <label>graphene::chain::processed_transaction</label>
+        <link refid="structgraphene_1_1chain_1_1processed__transaction"/>
+        <childnode refid="2392" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2392">
+        <label>graphene::chain::signed_transaction</label>
+        <link refid="structgraphene_1_1chain_1_1signed__transaction"/>
+        <childnode refid="2393" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2393">
+        <label>graphene::chain::transaction</label>
+        <link refid="structgraphene_1_1chain_1_1transaction"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2398">
+        <label>time_point_sec</label>
+      </node>
+      <node id="2394">
+        <label>graphene::chain::processed_transaction</label>
+        <link refid="structgraphene_1_1chain_1_1processed__transaction"/>
+        <childnode refid="2395" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2401" relation="usage">
+          <edgelabel>operation_results</edgelabel>
+        </childnode>
+      </node>
+      <node id="2397">
+        <label>flat_set&lt; future_extensions &gt;</label>
+      </node>
+      <node id="2400">
+        <label>vector&lt; signature_type &gt;</label>
+      </node>
+      <node id="2395">
+        <label>graphene::chain::signed_transaction</label>
+        <link refid="structgraphene_1_1chain_1_1signed__transaction"/>
+        <childnode refid="2396" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2400" relation="usage">
+          <edgelabel>signatures</edgelabel>
+        </childnode>
+      </node>
+      <node id="2399">
+        <label>vector&lt; operation &gt;</label>
+      </node>
+      <node id="2401">
+        <label>vector&lt; operation_result &gt;</label>
+      </node>
+      <node id="2396">
+        <label>graphene::chain::transaction</label>
+        <link refid="structgraphene_1_1chain_1_1transaction"/>
+        <childnode refid="2397" relation="usage">
+          <edgelabel>extensions</edgelabel>
+        </childnode>
+        <childnode refid="2398" relation="usage">
+          <edgelabel>expiration</edgelabel>
+        </childnode>
+        <childnode refid="2399" relation="usage">
+          <edgelabel>operations</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/protocol/transaction.hpp" line="198" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/transaction.hpp" bodystart="197" bodyend="205"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1signed__transaction_1ab99f3eb4824b38719f2158f0d256a321" prot="public" virt="non-virtual"><scope>graphene::chain::processed_transaction</scope><name>clear</name></member>
+      <member refid="structgraphene_1_1chain_1_1transaction_1aba25fb0435684c2088b0d0ae5e0d27d2" prot="public" virt="non-virtual"><scope>graphene::chain::processed_transaction</scope><name>digest</name></member>
+      <member refid="structgraphene_1_1chain_1_1transaction_1a31fbf0cfaa89497d13fc35fb51319a32" prot="public" virt="non-virtual"><scope>graphene::chain::processed_transaction</scope><name>expiration</name></member>
+      <member refid="structgraphene_1_1chain_1_1transaction_1a4f405d9c07b4655ef38e4388852caf38" prot="public" virt="non-virtual"><scope>graphene::chain::processed_transaction</scope><name>extensions</name></member>
+      <member refid="structgraphene_1_1chain_1_1transaction_1a3d4d00f25924c74f600064951a83f5e1" prot="public" virt="non-virtual"><scope>graphene::chain::processed_transaction</scope><name>get_required_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1signed__transaction_1a206cfe6280cdc3c22ed63a4fcf949dff" prot="public" virt="non-virtual"><scope>graphene::chain::processed_transaction</scope><name>get_required_signatures</name></member>
+      <member refid="structgraphene_1_1chain_1_1signed__transaction_1a79c5278bbae117d149f84cf58d1ab3e2" prot="public" virt="non-virtual"><scope>graphene::chain::processed_transaction</scope><name>get_signature_keys</name></member>
+      <member refid="structgraphene_1_1chain_1_1transaction_1a94f1f38f5bdcb2e5041f964ca6b99d5b" prot="public" virt="non-virtual"><scope>graphene::chain::processed_transaction</scope><name>id</name></member>
+      <member refid="structgraphene_1_1chain_1_1processed__transaction_1a348571d7429c14a3b847c03ebaba545a" prot="public" virt="non-virtual"><scope>graphene::chain::processed_transaction</scope><name>merkle_digest</name></member>
+      <member refid="structgraphene_1_1chain_1_1signed__transaction_1a35191145a0b5831d587b24cce88daf93" prot="public" virt="non-virtual"><scope>graphene::chain::processed_transaction</scope><name>minimize_required_signatures</name></member>
+      <member refid="structgraphene_1_1chain_1_1processed__transaction_1a93aa1fc128d6cb9bd068e31ac72cf4f5" prot="public" virt="non-virtual"><scope>graphene::chain::processed_transaction</scope><name>operation_results</name></member>
+      <member refid="structgraphene_1_1chain_1_1transaction_1a8013003bb366e3a6a7f61eae96cd1281" prot="public" virt="non-virtual"><scope>graphene::chain::processed_transaction</scope><name>operations</name></member>
+      <member refid="structgraphene_1_1chain_1_1processed__transaction_1a842a78049046ba07ad411831efea462f" prot="public" virt="non-virtual"><scope>graphene::chain::processed_transaction</scope><name>processed_transaction</name></member>
+      <member refid="structgraphene_1_1chain_1_1transaction_1a3c3667e1bb02ad8f694f41206436e9cf" prot="public" virt="non-virtual"><scope>graphene::chain::processed_transaction</scope><name>ref_block_num</name></member>
+      <member refid="structgraphene_1_1chain_1_1transaction_1afcebf54b05d6254e6ea53aecdd075975" prot="public" virt="non-virtual"><scope>graphene::chain::processed_transaction</scope><name>ref_block_prefix</name></member>
+      <member refid="structgraphene_1_1chain_1_1transaction_1a6d70681972cbabd916c52fb63b6091c6" prot="public" virt="non-virtual"><scope>graphene::chain::processed_transaction</scope><name>set_expiration</name></member>
+      <member refid="structgraphene_1_1chain_1_1transaction_1a8571a6eb56aad9899093eb15fa18b43d" prot="public" virt="non-virtual"><scope>graphene::chain::processed_transaction</scope><name>set_reference_block</name></member>
+      <member refid="structgraphene_1_1chain_1_1transaction_1a5b988fc8d032e5d8c9ef4b605834cf07" prot="public" virt="non-virtual"><scope>graphene::chain::processed_transaction</scope><name>sig_digest</name></member>
+      <member refid="structgraphene_1_1chain_1_1signed__transaction_1a99cd8014861f5371b466b2dba00551f2" prot="public" virt="non-virtual"><scope>graphene::chain::processed_transaction</scope><name>sign</name></member>
+      <member refid="structgraphene_1_1chain_1_1signed__transaction_1a96b0d1c656b2c480d5f2ddd627a34e45" prot="public" virt="non-virtual"><scope>graphene::chain::processed_transaction</scope><name>sign</name></member>
+      <member refid="structgraphene_1_1chain_1_1signed__transaction_1a11b7f1817059ccae1ea5f176a505834e" prot="public" virt="non-virtual"><scope>graphene::chain::processed_transaction</scope><name>signatures</name></member>
+      <member refid="structgraphene_1_1chain_1_1signed__transaction_1a9be0388e8af36733e314ac2793452984" prot="public" virt="non-virtual"><scope>graphene::chain::processed_transaction</scope><name>signed_transaction</name></member>
+      <member refid="structgraphene_1_1chain_1_1transaction_1adbd10db7270e459e93daf28da33010c8" prot="public" virt="non-virtual"><scope>graphene::chain::processed_transaction</scope><name>validate</name></member>
+      <member refid="structgraphene_1_1chain_1_1signed__transaction_1ad98a778f0c7ab667c73ac32eab84dc9c" prot="public" virt="non-virtual"><scope>graphene::chain::processed_transaction</scope><name>verify_authority</name></member>
+      <member refid="structgraphene_1_1chain_1_1transaction_1a870f3054c7403dbce2b21a7253b2a1d1" prot="public" virt="non-virtual"><scope>graphene::chain::processed_transaction</scope><name>visit</name></member>
+      <member refid="structgraphene_1_1chain_1_1transaction_1a927bed92680e17e9790a598a64f79943" prot="public" virt="non-virtual"><scope>graphene::chain::processed_transaction</scope><name>visit</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

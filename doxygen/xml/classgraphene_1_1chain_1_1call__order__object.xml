@@ -1,0 +1,238 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgraphene_1_1chain_1_1call__order__object" kind="class" language="C++" prot="public">
+    <compoundname>graphene::chain::call_order_object</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">graphene::db::abstract_object&lt; call_order_object &gt;</basecompoundref>
+    <includes refid="market__object_8hpp" local="no">market_object.hpp</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1call__order__object_1a384e8843ed00719c044a631f97d76479" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t graphene::chain::call_order_object::space_id</definition>
+        <argsstring></argsstring>
+        <name>space_id</name>
+        <initializer>= <ref refid="namespacegraphene_1_1chain_1a92e55d4242187696c5e2c5eaafbd9400a9dadbbe526b5096091138116c13d612d" kindref="member">protocol_ids</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/market_object.hpp" line="110" column="1" bodyfile="libraries/chain/include/graphene/chain/market_object.hpp" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1call__order__object_1aec9e906304c1f718535430c2c0d58fa0" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t graphene::chain::call_order_object::type_id</definition>
+        <argsstring></argsstring>
+        <name>type_id</name>
+        <initializer>= <ref refid="namespacegraphene_1_1chain_1aa6e32c79e2b22c998deddedcb696633da57ab9805df6108570f8928ea9b366a28" kindref="member">call_order_object_type</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/market_object.hpp" line="111" column="1" bodyfile="libraries/chain/include/graphene/chain/market_object.hpp" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1call__order__object_1ac4996a67c8cf9be42bb9275240d6bcd0" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::call_order_object::borrower</definition>
+        <argsstring></argsstring>
+        <name>borrower</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/market_object.hpp" line="119" column="1" bodyfile="libraries/chain/include/graphene/chain/market_object.hpp" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1call__order__object_1a79f4094cbf8c4e529579576d2e432e4f" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+        <definition>share_type graphene::chain::call_order_object::collateral</definition>
+        <argsstring></argsstring>
+        <name>collateral</name>
+        <briefdescription>
+<para>call_price.base.asset_id, access via get_collateral </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/market_object.hpp" line="120" column="1" bodyfile="libraries/chain/include/graphene/chain/market_object.hpp" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1call__order__object_1a0d0b6584d5e78f58d85c139fa68ee795" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+        <definition>share_type graphene::chain::call_order_object::debt</definition>
+        <argsstring></argsstring>
+        <name>debt</name>
+        <briefdescription>
+<para>call_price.quote.asset_id, access via get_collateral </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/market_object.hpp" line="121" column="1" bodyfile="libraries/chain/include/graphene/chain/market_object.hpp" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1call__order__object_1adfd7a641c2761e4a3366db5862d95fcc" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1price" kindref="compound">price</ref></type>
+        <definition>price graphene::chain::call_order_object::call_price</definition>
+        <argsstring></argsstring>
+        <name>call_price</name>
+        <briefdescription>
+<para>Debt / Collateral. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/market_object.hpp" line="122" column="1" bodyfile="libraries/chain/include/graphene/chain/market_object.hpp" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1call__order__object_1ac02b0fe0f81f40f36fcb4e4dfc7c384b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::call_order_object::get_collateral</definition>
+        <argsstring>() const</argsstring>
+        <name>get_collateral</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/market_object.hpp" line="113" column="1" bodyfile="libraries/chain/include/graphene/chain/market_object.hpp" bodystart="113" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1call__order__object_1a90552c5a02f02441d5b9f9000f22d51b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::call_order_object::get_debt</definition>
+        <argsstring>() const</argsstring>
+        <name>get_debt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/market_object.hpp" line="114" column="1" bodyfile="libraries/chain/include/graphene/chain/market_object.hpp" bodystart="114" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1call__order__object_1a067e439fbf6b4fef237ef929255718f4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::call_order_object::amount_to_receive</definition>
+        <argsstring>() const</argsstring>
+        <name>amount_to_receive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/market_object.hpp" line="115" column="1" bodyfile="libraries/chain/include/graphene/chain/market_object.hpp" bodystart="115" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1call__order__object_1a9813f0b057877885697c133c67fa29a7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref></type>
+        <definition>asset_id_type graphene::chain::call_order_object::debt_type</definition>
+        <argsstring>() const</argsstring>
+        <name>debt_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/market_object.hpp" line="116" column="1" bodyfile="libraries/chain/include/graphene/chain/market_object.hpp" bodystart="116" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1call__order__object_1ae002873c5f4431e4c44a4ab05593f2d0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1price" kindref="compound">price</ref></type>
+        <definition>price graphene::chain::call_order_object::collateralization</definition>
+        <argsstring>() const</argsstring>
+        <name>collateralization</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/market_object.hpp" line="117" column="1" bodyfile="libraries/chain/include/graphene/chain/market_object.hpp" bodystart="117" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1call__order__object_1a36eb86e9be5d51ff11d16251d0599210" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>pair&lt; <ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref>, <ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref> &gt;</type>
+        <definition>pair&lt;asset_id_type,asset_id_type&gt; graphene::chain::call_order_object::get_market</definition>
+        <argsstring>() const</argsstring>
+        <name>get_market</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/market_object.hpp" line="124" column="1" bodyfile="libraries/chain/include/graphene/chain/market_object.hpp" bodystart="124" bodyend="129"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>tracks debt and call price information </para>    </briefdescription>
+    <detaileddescription>
+<para>There should only be one <ref refid="classgraphene_1_1chain_1_1call__order__object" kindref="compound">call_order_object</ref> per asset pair per account and they will all have the same call price. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1297">
+        <label>graphene::chain::call_order_object</label>
+        <link refid="classgraphene_1_1chain_1_1call__order__object"/>
+        <childnode refid="1298" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1298">
+        <label>graphene::db::abstract_object&lt; call_order_object &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1302">
+        <label>graphene::chain::price</label>
+        <link refid="structgraphene_1_1chain_1_1price"/>
+        <childnode refid="1303" relation="usage">
+          <edgelabel>base</edgelabel>
+          <edgelabel>quote</edgelabel>
+        </childnode>
+      </node>
+      <node id="1299">
+        <label>graphene::chain::call_order_object</label>
+        <link refid="classgraphene_1_1chain_1_1call__order__object"/>
+        <childnode refid="1300" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1301" relation="usage">
+          <edgelabel>debt</edgelabel>
+          <edgelabel>collateral</edgelabel>
+        </childnode>
+        <childnode refid="1302" relation="usage">
+          <edgelabel>call_price</edgelabel>
+        </childnode>
+      </node>
+      <node id="1303">
+        <label>graphene::chain::asset</label>
+        <link refid="structgraphene_1_1chain_1_1asset"/>
+        <childnode refid="1301" relation="usage">
+          <edgelabel>amount</edgelabel>
+        </childnode>
+      </node>
+      <node id="1301">
+        <label>safe&lt; int64_t &gt;</label>
+      </node>
+      <node id="1300">
+        <label>graphene::db::abstract_object&lt; call_order_object &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/market_object.hpp" line="108" column="1" bodyfile="libraries/chain/include/graphene/chain/market_object.hpp" bodystart="107" bodyend="130"/>
+    <listofallmembers>
+      <member refid="classgraphene_1_1chain_1_1call__order__object_1a067e439fbf6b4fef237ef929255718f4" prot="public" virt="non-virtual"><scope>graphene::chain::call_order_object</scope><name>amount_to_receive</name></member>
+      <member refid="classgraphene_1_1chain_1_1call__order__object_1ac4996a67c8cf9be42bb9275240d6bcd0" prot="public" virt="non-virtual"><scope>graphene::chain::call_order_object</scope><name>borrower</name></member>
+      <member refid="classgraphene_1_1chain_1_1call__order__object_1adfd7a641c2761e4a3366db5862d95fcc" prot="public" virt="non-virtual"><scope>graphene::chain::call_order_object</scope><name>call_price</name></member>
+      <member refid="classgraphene_1_1chain_1_1call__order__object_1a79f4094cbf8c4e529579576d2e432e4f" prot="public" virt="non-virtual"><scope>graphene::chain::call_order_object</scope><name>collateral</name></member>
+      <member refid="classgraphene_1_1chain_1_1call__order__object_1ae002873c5f4431e4c44a4ab05593f2d0" prot="public" virt="non-virtual"><scope>graphene::chain::call_order_object</scope><name>collateralization</name></member>
+      <member refid="classgraphene_1_1chain_1_1call__order__object_1a0d0b6584d5e78f58d85c139fa68ee795" prot="public" virt="non-virtual"><scope>graphene::chain::call_order_object</scope><name>debt</name></member>
+      <member refid="classgraphene_1_1chain_1_1call__order__object_1a9813f0b057877885697c133c67fa29a7" prot="public" virt="non-virtual"><scope>graphene::chain::call_order_object</scope><name>debt_type</name></member>
+      <member refid="classgraphene_1_1chain_1_1call__order__object_1ac02b0fe0f81f40f36fcb4e4dfc7c384b" prot="public" virt="non-virtual"><scope>graphene::chain::call_order_object</scope><name>get_collateral</name></member>
+      <member refid="classgraphene_1_1chain_1_1call__order__object_1a90552c5a02f02441d5b9f9000f22d51b" prot="public" virt="non-virtual"><scope>graphene::chain::call_order_object</scope><name>get_debt</name></member>
+      <member refid="classgraphene_1_1chain_1_1call__order__object_1a36eb86e9be5d51ff11d16251d0599210" prot="public" virt="non-virtual"><scope>graphene::chain::call_order_object</scope><name>get_market</name></member>
+      <member refid="classgraphene_1_1chain_1_1call__order__object_1a384e8843ed00719c044a631f97d76479" prot="public" virt="non-virtual"><scope>graphene::chain::call_order_object</scope><name>space_id</name></member>
+      <member refid="classgraphene_1_1chain_1_1call__order__object_1aec9e906304c1f718535430c2c0d58fa0" prot="public" virt="non-virtual"><scope>graphene::chain::call_order_object</scope><name>type_id</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

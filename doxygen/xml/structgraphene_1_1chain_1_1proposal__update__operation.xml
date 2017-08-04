@@ -1,0 +1,321 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1proposal__update__operation" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::proposal_update_operation</compoundname>
+    <basecompoundref refid="structgraphene_1_1chain_1_1base__operation" prot="public" virt="non-virtual">graphene::chain::base_operation</basecompoundref>
+    <includes refid="proposal_8hpp" local="no">proposal.hpp</includes>
+    <innerclass refid="structgraphene_1_1chain_1_1proposal__update__operation_1_1fee__parameters__type" prot="public">graphene::chain::proposal_update_operation::fee_parameters_type</innerclass>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1proposal__update__operation_1a4f3284294f4724f7d66aa059f0d027c7" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::proposal_update_operation::fee_paying_account</definition>
+        <argsstring></argsstring>
+        <name>fee_paying_account</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/proposal.hpp" line="125" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/proposal.hpp" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1proposal__update__operation_1a4790bb13f5e7ac19a798acf0e25d4959" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::proposal_update_operation::fee</definition>
+        <argsstring></argsstring>
+        <name>fee</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/proposal.hpp" line="126" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/proposal.hpp" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1proposal__update__operation_1a36f5310eb2928c2cae666619e42aee7e" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a2af50d1432f0f4faf76130e684982a0b" kindref="member">proposal_id_type</ref></type>
+        <definition>proposal_id_type graphene::chain::proposal_update_operation::proposal</definition>
+        <argsstring></argsstring>
+        <name>proposal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/proposal.hpp" line="127" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/proposal.hpp" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1proposal__update__operation_1a6acdcf6146d827d859fbfae26f9afb45" prot="public" static="no" mutable="no">
+        <type>flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt;</type>
+        <definition>flat_set&lt;account_id_type&gt; graphene::chain::proposal_update_operation::active_approvals_to_add</definition>
+        <argsstring></argsstring>
+        <name>active_approvals_to_add</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/proposal.hpp" line="128" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/proposal.hpp" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1proposal__update__operation_1a6eb5829db2d206536b3a4e7f93a1dc19" prot="public" static="no" mutable="no">
+        <type>flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt;</type>
+        <definition>flat_set&lt;account_id_type&gt; graphene::chain::proposal_update_operation::active_approvals_to_remove</definition>
+        <argsstring></argsstring>
+        <name>active_approvals_to_remove</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/proposal.hpp" line="129" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/proposal.hpp" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1proposal__update__operation_1a7d1d4deb7f8bc312c33d94a0b1611a39" prot="public" static="no" mutable="no">
+        <type>flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt;</type>
+        <definition>flat_set&lt;account_id_type&gt; graphene::chain::proposal_update_operation::owner_approvals_to_add</definition>
+        <argsstring></argsstring>
+        <name>owner_approvals_to_add</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/proposal.hpp" line="130" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/proposal.hpp" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1proposal__update__operation_1a7981b23ac84ea7c9e24fc76d0ee36cae" prot="public" static="no" mutable="no">
+        <type>flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt;</type>
+        <definition>flat_set&lt;account_id_type&gt; graphene::chain::proposal_update_operation::owner_approvals_to_remove</definition>
+        <argsstring></argsstring>
+        <name>owner_approvals_to_remove</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/proposal.hpp" line="131" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/proposal.hpp" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1proposal__update__operation_1ae3c7c971edf76280305cca51594fd930" prot="public" static="no" mutable="no">
+        <type>flat_set&lt; <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref> &gt;</type>
+        <definition>flat_set&lt;public_key_type&gt; graphene::chain::proposal_update_operation::key_approvals_to_add</definition>
+        <argsstring></argsstring>
+        <name>key_approvals_to_add</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/proposal.hpp" line="132" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/proposal.hpp" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1proposal__update__operation_1afdff730295abd4aa27b05569a4cf0862" prot="public" static="no" mutable="no">
+        <type>flat_set&lt; <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref> &gt;</type>
+        <definition>flat_set&lt;public_key_type&gt; graphene::chain::proposal_update_operation::key_approvals_to_remove</definition>
+        <argsstring></argsstring>
+        <name>key_approvals_to_remove</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/proposal.hpp" line="133" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/proposal.hpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1proposal__update__operation_1a8e91e115e4021d4c0872cad92626ab33" prot="public" static="no" mutable="no">
+        <type><ref refid="group__operations_1gae0096750377f6e9d61dba5765284de99" kindref="member">extensions_type</ref></type>
+        <definition>extensions_type graphene::chain::proposal_update_operation::extensions</definition>
+        <argsstring></argsstring>
+        <name>extensions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/proposal.hpp" line="134" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/proposal.hpp" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1proposal__update__operation_1af014bfa7dbaa0ede7824d737fcaa0f88" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::proposal_update_operation::fee_payer</definition>
+        <argsstring>() const</argsstring>
+        <name>fee_payer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/proposal.hpp" line="136" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/proposal.hpp" bodystart="136" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1proposal__update__operation_1aaac80473fb87f8bd0c50de0bb48c6359" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::proposal_update_operation::validate</definition>
+        <argsstring>() const</argsstring>
+        <name>validate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/proposal.hpp" line="137" column="1" bodyfile="libraries/chain/protocol/proposal.cpp" bodystart="50" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1proposal__update__operation_1ae9937a64ef56790d4519844c8f85f85a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+        <definition>share_type graphene::chain::proposal_update_operation::calculate_fee</definition>
+        <argsstring>(const fee_parameters_type &amp;k) const</argsstring>
+        <name>calculate_fee</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1proposal__update__operation_1_1fee__parameters__type" kindref="compound">fee_parameters_type</ref> &amp;</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/proposal.hpp" line="138" column="1" bodyfile="libraries/chain/protocol/proposal.cpp" bodystart="78" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1proposal__update__operation_1ad780512f494d893c2146cad105685e72" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::proposal_update_operation::get_required_authorities</definition>
+        <argsstring>(vector&lt; authority &gt; &amp;) const</argsstring>
+        <name>get_required_authorities</name>
+        <param>
+          <type>vector&lt; <ref refid="structgraphene_1_1chain_1_1authority" kindref="compound">authority</ref> &gt; &amp;</type>
+          <defname>o</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/proposal.hpp" line="139" column="1" bodyfile="libraries/chain/protocol/proposal.cpp" bodystart="83" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1proposal__update__operation_1a1bd1cdd4394f8107dc3d254462a18e15" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::proposal_update_operation::get_required_active_authorities</definition>
+        <argsstring>(flat_set&lt; account_id_type &gt; &amp;) const</argsstring>
+        <name>get_required_active_authorities</name>
+        <param>
+          <type>flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt; &amp;</type>
+          <defname>a</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/proposal.hpp" line="140" column="1" bodyfile="libraries/chain/protocol/proposal.cpp" bodystart="95" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1proposal__update__operation_1aca017bf8df5c8a2f4bb8cc8be55c6d18" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::proposal_update_operation::get_required_owner_authorities</definition>
+        <argsstring>(flat_set&lt; account_id_type &gt; &amp;) const</argsstring>
+        <name>get_required_owner_authorities</name>
+        <param>
+          <type>flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt; &amp;</type>
+          <defname>a</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/proposal.hpp" line="141" column="1" bodyfile="libraries/chain/protocol/proposal.cpp" bodystart="101" bodyend="105"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="structgraphene_1_1chain_1_1proposal__update__operation" kindref="compound">proposal_update_operation</ref> updates an existing transaction proposal</para><para>This operation allows accounts to add or revoke approval of a proposed transaction. Signatures sufficient to satisfy the authority of each account in approvals are required on the transaction containing this operation. </para>    </briefdescription>
+    <detaileddescription>
+<para>If an account with a multi-signature authority is listed in approvals_to_add or approvals_to_remove, either all required signatures to satisfy that account&apos;s authority must be provided in the transaction containing this operation, or a secondary proposal must be created which contains this operation.</para><para>NOTE: If the proposal requires only an account&apos;s active authority, the account must not update adding its owner authority&apos;s approval. This is considered an error. An owner approval may only be added if the proposal requires the owner&apos;s authority.</para><para>If an account&apos;s owner and active authority are both required, only the owner authority may approve. An attempt to add or remove active authority approval to such a proposal will fail. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2572">
+        <label>graphene::chain::base_operation</label>
+        <link refid="structgraphene_1_1chain_1_1base__operation"/>
+      </node>
+      <node id="2571">
+        <label>graphene::chain::proposal_update_operation</label>
+        <link refid="structgraphene_1_1chain_1_1proposal__update__operation"/>
+        <childnode refid="2572" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2575">
+        <label>flat_set&lt; future_extensions &gt;</label>
+      </node>
+      <node id="2579">
+        <label>flat_set&lt; account_id_type &gt;</label>
+      </node>
+      <node id="2574">
+        <label>graphene::chain::base_operation</label>
+        <link refid="structgraphene_1_1chain_1_1base__operation"/>
+      </node>
+      <node id="2576">
+        <label>flat_set&lt; graphene::chain::public_key_type &gt;</label>
+      </node>
+      <node id="2577">
+        <label>graphene::chain::asset</label>
+        <link refid="structgraphene_1_1chain_1_1asset"/>
+        <childnode refid="2578" relation="usage">
+          <edgelabel>amount</edgelabel>
+        </childnode>
+      </node>
+      <node id="2578">
+        <label>safe&lt; int64_t &gt;</label>
+      </node>
+      <node id="2573">
+        <label>graphene::chain::proposal_update_operation</label>
+        <link refid="structgraphene_1_1chain_1_1proposal__update__operation"/>
+        <childnode refid="2574" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2575" relation="usage">
+          <edgelabel>extensions</edgelabel>
+        </childnode>
+        <childnode refid="2576" relation="usage">
+          <edgelabel>key_approvals_to_remove</edgelabel>
+          <edgelabel>key_approvals_to_add</edgelabel>
+        </childnode>
+        <childnode refid="2577" relation="usage">
+          <edgelabel>fee</edgelabel>
+        </childnode>
+        <childnode refid="2579" relation="usage">
+          <edgelabel>owner_approvals_to_remove</edgelabel>
+          <edgelabel>owner_approvals_to_add</edgelabel>
+          <edgelabel>active_approvals_to_remove</edgelabel>
+          <edgelabel>active_approvals_to_add</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/protocol/proposal.hpp" line="119" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/proposal.hpp" bodystart="118" bodyend="142"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1proposal__update__operation_1a6acdcf6146d827d859fbfae26f9afb45" prot="public" virt="non-virtual"><scope>graphene::chain::proposal_update_operation</scope><name>active_approvals_to_add</name></member>
+      <member refid="structgraphene_1_1chain_1_1proposal__update__operation_1a6eb5829db2d206536b3a4e7f93a1dc19" prot="public" virt="non-virtual"><scope>graphene::chain::proposal_update_operation</scope><name>active_approvals_to_remove</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a8947f5ff3ea0458c7fe981b5bb9e82b7" prot="public" virt="non-virtual"><scope>graphene::chain::proposal_update_operation</scope><name>calculate_data_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1proposal__update__operation_1ae9937a64ef56790d4519844c8f85f85a" prot="public" virt="non-virtual"><scope>graphene::chain::proposal_update_operation</scope><name>calculate_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a18b678eb05bc5b30d75f10b398c07a91" prot="public" virt="non-virtual" ambiguityscope="graphene::chain::base_operation::"><scope>graphene::chain::proposal_update_operation</scope><name>calculate_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1proposal__update__operation_1a8e91e115e4021d4c0872cad92626ab33" prot="public" virt="non-virtual"><scope>graphene::chain::proposal_update_operation</scope><name>extensions</name></member>
+      <member refid="structgraphene_1_1chain_1_1proposal__update__operation_1a4790bb13f5e7ac19a798acf0e25d4959" prot="public" virt="non-virtual"><scope>graphene::chain::proposal_update_operation</scope><name>fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1proposal__update__operation_1af014bfa7dbaa0ede7824d737fcaa0f88" prot="public" virt="non-virtual"><scope>graphene::chain::proposal_update_operation</scope><name>fee_payer</name></member>
+      <member refid="structgraphene_1_1chain_1_1proposal__update__operation_1a4f3284294f4724f7d66aa059f0d027c7" prot="public" virt="non-virtual"><scope>graphene::chain::proposal_update_operation</scope><name>fee_paying_account</name></member>
+      <member refid="structgraphene_1_1chain_1_1proposal__update__operation_1a1bd1cdd4394f8107dc3d254462a18e15" prot="public" virt="non-virtual"><scope>graphene::chain::proposal_update_operation</scope><name>get_required_active_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1proposal__update__operation_1ad780512f494d893c2146cad105685e72" prot="public" virt="non-virtual"><scope>graphene::chain::proposal_update_operation</scope><name>get_required_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1proposal__update__operation_1aca017bf8df5c8a2f4bb8cc8be55c6d18" prot="public" virt="non-virtual"><scope>graphene::chain::proposal_update_operation</scope><name>get_required_owner_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1proposal__update__operation_1ae3c7c971edf76280305cca51594fd930" prot="public" virt="non-virtual"><scope>graphene::chain::proposal_update_operation</scope><name>key_approvals_to_add</name></member>
+      <member refid="structgraphene_1_1chain_1_1proposal__update__operation_1afdff730295abd4aa27b05569a4cf0862" prot="public" virt="non-virtual"><scope>graphene::chain::proposal_update_operation</scope><name>key_approvals_to_remove</name></member>
+      <member refid="structgraphene_1_1chain_1_1proposal__update__operation_1a7d1d4deb7f8bc312c33d94a0b1611a39" prot="public" virt="non-virtual"><scope>graphene::chain::proposal_update_operation</scope><name>owner_approvals_to_add</name></member>
+      <member refid="structgraphene_1_1chain_1_1proposal__update__operation_1a7981b23ac84ea7c9e24fc76d0ee36cae" prot="public" virt="non-virtual"><scope>graphene::chain::proposal_update_operation</scope><name>owner_approvals_to_remove</name></member>
+      <member refid="structgraphene_1_1chain_1_1proposal__update__operation_1a36f5310eb2928c2cae666619e42aee7e" prot="public" virt="non-virtual"><scope>graphene::chain::proposal_update_operation</scope><name>proposal</name></member>
+      <member refid="structgraphene_1_1chain_1_1proposal__update__operation_1aaac80473fb87f8bd0c50de0bb48c6359" prot="public" virt="non-virtual"><scope>graphene::chain::proposal_update_operation</scope><name>validate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

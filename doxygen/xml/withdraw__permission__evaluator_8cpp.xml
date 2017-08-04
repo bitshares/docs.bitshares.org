@@ -1,0 +1,667 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="withdraw__permission__evaluator_8cpp" kind="file" language="C++">
+    <compoundname>withdraw_permission_evaluator.cpp</compoundname>
+    <includes refid="withdraw__permission__evaluator_8hpp" local="no">graphene/chain/withdraw_permission_evaluator.hpp</includes>
+    <includes refid="withdraw__permission__object_8hpp" local="no">graphene/chain/withdraw_permission_object.hpp</includes>
+    <includes refid="account__object_8hpp" local="no">graphene/chain/account_object.hpp</includes>
+    <includes refid="database_8hpp" local="no">graphene/chain/database.hpp</includes>
+    <includes refid="exceptions_8hpp" local="no">graphene/chain/exceptions.hpp</includes>
+    <includes refid="hardfork_8hpp" local="no">graphene/chain/hardfork.hpp</includes>
+    <includes refid="is__authorized__asset_8hpp" local="no">graphene/chain/is_authorized_asset.hpp</includes>
+    <incdepgraph>
+      <node id="13719">
+        <label>boost/multi_index/ordered_index.hpp</label>
+      </node>
+      <node id="13682">
+        <label>graphene/chain/protocol/buyback.hpp</label>
+        <link refid="protocol_2buyback_8hpp"/>
+        <childnode refid="13651" relation="include">
+        </childnode>
+      </node>
+      <node id="13715">
+        <label>graphene/chain/asset_object.hpp</label>
+        <link refid="asset__object_8hpp"/>
+        <childnode refid="13688" relation="include">
+        </childnode>
+        <childnode refid="13709" relation="include">
+        </childnode>
+        <childnode refid="13708" relation="include">
+        </childnode>
+      </node>
+      <node id="13722">
+        <label>graphene/chain/block_database.hpp</label>
+        <link refid="block__database_8hpp"/>
+        <childnode refid="13723" relation="include">
+        </childnode>
+        <childnode refid="13703" relation="include">
+        </childnode>
+      </node>
+      <node id="13680">
+        <label>graphene/chain/protocol/authority.hpp</label>
+        <link refid="authority_8hpp"/>
+        <childnode refid="13651" relation="include">
+        </childnode>
+      </node>
+      <node id="13657">
+        <label>fc/reflect/reflect.hpp</label>
+      </node>
+      <node id="13671">
+        <label>graphene/chain/protocol/address.hpp</label>
+        <link refid="address_8hpp"/>
+        <childnode refid="13672" relation="include">
+        </childnode>
+        <childnode refid="13673" relation="include">
+        </childnode>
+        <childnode refid="13674" relation="include">
+        </childnode>
+        <childnode refid="13676" relation="include">
+        </childnode>
+        <childnode refid="13657" relation="include">
+        </childnode>
+      </node>
+      <node id="13689">
+        <label>graphene/chain/protocol/memo.hpp</label>
+        <link refid="memo_8hpp"/>
+        <childnode refid="13651" relation="include">
+        </childnode>
+      </node>
+      <node id="13666">
+        <label>fc/smart_ref_fwd.hpp</label>
+      </node>
+      <node id="13656">
+        <label>fc/crypto/elliptic.hpp</label>
+      </node>
+      <node id="13670">
+        <label>cstdint</label>
+      </node>
+      <node id="13687">
+        <label>graphene/chain/protocol/assert.hpp</label>
+        <link refid="assert_8hpp"/>
+        <childnode refid="13650" relation="include">
+        </childnode>
+      </node>
+      <node id="13697">
+        <label>graphene/chain/protocol/proposal.hpp</label>
+        <link refid="proposal_8hpp"/>
+        <childnode refid="13650" relation="include">
+        </childnode>
+      </node>
+      <node id="13681">
+        <label>graphene/chain/protocol/account.hpp</label>
+        <link refid="account_8hpp"/>
+        <childnode refid="13650" relation="include">
+        </childnode>
+        <childnode refid="13682" relation="include">
+        </childnode>
+        <childnode refid="13683" relation="include">
+        </childnode>
+        <childnode refid="13684" relation="include">
+        </childnode>
+        <childnode refid="13651" relation="include">
+        </childnode>
+        <childnode refid="13685" relation="include">
+        </childnode>
+      </node>
+      <node id="13659">
+        <label>fc/optional.hpp</label>
+      </node>
+      <node id="13676">
+        <label>fc/crypto/ripemd160.hpp</label>
+      </node>
+      <node id="13712">
+        <label>graphene/chain/global_property_object.hpp</label>
+        <link refid="global__property__object_8hpp"/>
+        <childnode refid="13664" relation="include">
+        </childnode>
+        <childnode refid="13693" relation="include">
+        </childnode>
+        <childnode refid="13651" relation="include">
+        </childnode>
+        <childnode refid="13711" relation="include">
+        </childnode>
+        <childnode refid="13713" relation="include">
+        </childnode>
+      </node>
+      <node id="13674">
+        <label>fc/array.hpp</label>
+      </node>
+      <node id="13648">
+        <label>graphene/chain/protocol/fee_schedule.hpp</label>
+        <link refid="fee__schedule_8hpp"/>
+        <childnode refid="13649" relation="include">
+        </childnode>
+      </node>
+      <node id="13686">
+        <label>cassert</label>
+      </node>
+      <node id="13688">
+        <label>graphene/chain/protocol/asset_ops.hpp</label>
+        <link refid="asset__ops_8hpp"/>
+        <childnode refid="13650" relation="include">
+        </childnode>
+        <childnode refid="13689" relation="include">
+        </childnode>
+      </node>
+      <node id="13705">
+        <label>numeric</label>
+      </node>
+      <node id="13660">
+        <label>fc/safe.hpp</label>
+      </node>
+      <node id="13663">
+        <label>fc/io/raw.hpp</label>
+      </node>
+      <node id="13729">
+        <label>fc/signals.hpp</label>
+      </node>
+      <node id="13725">
+        <label>graphene/chain/immutable_chain_parameters.hpp</label>
+        <link refid="immutable__chain__parameters_8hpp"/>
+        <childnode refid="13657" relation="include">
+        </childnode>
+        <childnode refid="13670" relation="include">
+        </childnode>
+        <childnode refid="13672" relation="include">
+        </childnode>
+      </node>
+      <node id="13675">
+        <label>string</label>
+      </node>
+      <node id="13643">
+        <label>graphene/chain/withdraw_permission_evaluator.hpp</label>
+        <link refid="withdraw__permission__evaluator_8hpp"/>
+        <childnode refid="13644" relation="include">
+        </childnode>
+      </node>
+      <node id="13731">
+        <label>map</label>
+      </node>
+      <node id="13650">
+        <label>graphene/chain/protocol/base.hpp</label>
+        <link refid="base_8hpp"/>
+        <childnode refid="13651" relation="include">
+        </childnode>
+        <childnode refid="13679" relation="include">
+        </childnode>
+        <childnode refid="13680" relation="include">
+        </childnode>
+      </node>
+      <node id="13649">
+        <label>graphene/chain/protocol/operations.hpp</label>
+        <link refid="operations_8hpp"/>
+        <childnode refid="13650" relation="include">
+        </childnode>
+        <childnode refid="13681" relation="include">
+        </childnode>
+        <childnode refid="13687" relation="include">
+        </childnode>
+        <childnode refid="13688" relation="include">
+        </childnode>
+        <childnode refid="13690" relation="include">
+        </childnode>
+        <childnode refid="13691" relation="include">
+        </childnode>
+        <childnode refid="13692" relation="include">
+        </childnode>
+        <childnode refid="13694" relation="include">
+        </childnode>
+        <childnode refid="13695" relation="include">
+        </childnode>
+        <childnode refid="13696" relation="include">
+        </childnode>
+        <childnode refid="13697" relation="include">
+        </childnode>
+        <childnode refid="13698" relation="include">
+        </childnode>
+        <childnode refid="13699" relation="include">
+        </childnode>
+        <childnode refid="13700" relation="include">
+        </childnode>
+        <childnode refid="13701" relation="include">
+        </childnode>
+        <childnode refid="13702" relation="include">
+        </childnode>
+      </node>
+      <node id="13724">
+        <label>graphene/chain/genesis_state.hpp</label>
+        <link refid="genesis__state_8hpp"/>
+        <childnode refid="13693" relation="include">
+        </childnode>
+        <childnode refid="13651" relation="include">
+        </childnode>
+        <childnode refid="13725" relation="include">
+        </childnode>
+        <childnode refid="13726" relation="include">
+        </childnode>
+        <childnode refid="13675" relation="include">
+        </childnode>
+        <childnode refid="13668" relation="include">
+        </childnode>
+      </node>
+      <node id="13655">
+        <label>fc/crypto/sha224.hpp</label>
+      </node>
+      <node id="13704">
+        <label>graphene/chain/protocol/transaction.hpp</label>
+        <link refid="transaction_8hpp"/>
+        <childnode refid="13649" relation="include">
+        </childnode>
+        <childnode refid="13651" relation="include">
+        </childnode>
+        <childnode refid="13705" relation="include">
+        </childnode>
+      </node>
+      <node id="13728">
+        <label>graphene/db/simple_index.hpp</label>
+      </node>
+      <node id="13672">
+        <label>graphene/chain/config.hpp</label>
+        <link refid="config_8hpp"/>
+      </node>
+      <node id="13699">
+        <label>graphene/chain/protocol/vesting.hpp</label>
+        <link refid="vesting_8hpp"/>
+        <childnode refid="13650" relation="include">
+        </childnode>
+      </node>
+      <node id="13673">
+        <label>graphene/chain/pts_address.hpp</label>
+        <link refid="pts__address_8hpp"/>
+        <childnode refid="13674" relation="include">
+        </childnode>
+        <childnode refid="13675" relation="include">
+        </childnode>
+        <childnode refid="13657" relation="include">
+        </childnode>
+      </node>
+      <node id="13723">
+        <label>fstream</label>
+      </node>
+      <node id="13684">
+        <label>graphene/chain/protocol/special_authority.hpp</label>
+        <link refid="protocol_2special__authority_8hpp"/>
+        <childnode refid="13651" relation="include">
+        </childnode>
+        <childnode refid="13657" relation="include">
+        </childnode>
+      </node>
+      <node id="13703">
+        <label>graphene/chain/protocol/block.hpp</label>
+        <link refid="block_8hpp"/>
+        <childnode refid="13704" relation="include">
+        </childnode>
+      </node>
+      <node id="13690">
+        <label>graphene/chain/protocol/balance.hpp</label>
+        <link refid="balance_8hpp"/>
+        <childnode refid="13650" relation="include">
+        </childnode>
+      </node>
+      <node id="13694">
+        <label>graphene/chain/protocol/confidential.hpp</label>
+        <link refid="confidential_8hpp"/>
+        <childnode refid="13650" relation="include">
+        </childnode>
+      </node>
+      <node id="13702">
+        <label>graphene/chain/protocol/worker.hpp</label>
+        <link refid="worker_8hpp"/>
+        <childnode refid="13650" relation="include">
+        </childnode>
+      </node>
+      <node id="13730">
+        <label>fc/log/logger.hpp</label>
+      </node>
+      <node id="13708">
+        <label>graphene/db/generic_index.hpp</label>
+      </node>
+      <node id="13665">
+        <label>fc/static_variant.hpp</label>
+      </node>
+      <node id="13700">
+        <label>graphene/chain/protocol/withdraw_permission.hpp</label>
+        <link refid="withdraw__permission_8hpp"/>
+        <childnode refid="13650" relation="include">
+        </childnode>
+        <childnode refid="13689" relation="include">
+        </childnode>
+      </node>
+      <node id="13658">
+        <label>fc/reflect/variant.hpp</label>
+      </node>
+      <node id="13726">
+        <label>fc/crypto/sha256.hpp</label>
+      </node>
+      <node id="13642">
+        <label>libraries/chain/withdraw_permission_evaluator.cpp</label>
+        <link refid="withdraw__permission__evaluator_8cpp"/>
+        <childnode refid="13643" relation="include">
+        </childnode>
+        <childnode refid="13707" relation="include">
+        </childnode>
+        <childnode refid="13710" relation="include">
+        </childnode>
+        <childnode refid="13711" relation="include">
+        </childnode>
+        <childnode refid="13645" relation="include">
+        </childnode>
+        <childnode refid="13732" relation="include">
+        </childnode>
+        <childnode refid="13733" relation="include">
+        </childnode>
+      </node>
+      <node id="13706">
+        <label>graphene/chain/transaction_evaluation_state.hpp</label>
+        <link refid="transaction__evaluation__state_8hpp"/>
+        <childnode refid="13649" relation="include">
+        </childnode>
+      </node>
+      <node id="13732">
+        <label>graphene/chain/hardfork.hpp</label>
+        <link refid="hardfork_8hpp"/>
+      </node>
+      <node id="13696">
+        <label>graphene/chain/protocol/market.hpp</label>
+        <link refid="market_8hpp"/>
+        <childnode refid="13650" relation="include">
+        </childnode>
+      </node>
+      <node id="13646">
+        <label>fc/exception/exception.hpp</label>
+      </node>
+      <node id="13668">
+        <label>vector</label>
+      </node>
+      <node id="13654">
+        <label>fc/io/enum_type.hpp</label>
+      </node>
+      <node id="13685">
+        <label>graphene/chain/protocol/vote.hpp</label>
+        <link refid="vote_8hpp"/>
+        <childnode refid="13686" relation="include">
+        </childnode>
+        <childnode refid="13670" relation="include">
+        </childnode>
+        <childnode refid="13675" relation="include">
+        </childnode>
+        <childnode refid="13661" relation="include">
+        </childnode>
+        <childnode refid="13657" relation="include">
+        </childnode>
+      </node>
+      <node id="13692">
+        <label>graphene/chain/protocol/committee_member.hpp</label>
+        <link refid="committee__member_8hpp"/>
+        <childnode refid="13650" relation="include">
+        </childnode>
+        <childnode refid="13693" relation="include">
+        </childnode>
+      </node>
+      <node id="13679">
+        <label>graphene/chain/protocol/asset.hpp</label>
+        <link refid="asset_8hpp"/>
+        <childnode refid="13678" relation="include">
+        </childnode>
+        <childnode refid="13651" relation="include">
+        </childnode>
+      </node>
+      <node id="13683">
+        <label>graphene/chain/protocol/ext.hpp</label>
+        <link refid="ext_8hpp"/>
+        <childnode refid="13653" relation="include">
+        </childnode>
+        <childnode refid="13657" relation="include">
+        </childnode>
+      </node>
+      <node id="13716">
+        <label>graphene/chain/fork_database.hpp</label>
+        <link refid="fork__database_8hpp"/>
+        <childnode refid="13703" relation="include">
+        </childnode>
+        <childnode refid="13717" relation="include">
+        </childnode>
+        <childnode refid="13718" relation="include">
+        </childnode>
+        <childnode refid="13719" relation="include">
+        </childnode>
+        <childnode refid="13720" relation="include">
+        </childnode>
+        <childnode refid="13721" relation="include">
+        </childnode>
+      </node>
+      <node id="13711">
+        <label>graphene/chain/database.hpp</label>
+        <link refid="database_8hpp"/>
+        <childnode refid="13712" relation="include">
+        </childnode>
+        <childnode refid="13714" relation="include">
+        </childnode>
+        <childnode refid="13710" relation="include">
+        </childnode>
+        <childnode refid="13715" relation="include">
+        </childnode>
+        <childnode refid="13716" relation="include">
+        </childnode>
+        <childnode refid="13722" relation="include">
+        </childnode>
+        <childnode refid="13724" relation="include">
+        </childnode>
+        <childnode refid="13644" relation="include">
+        </childnode>
+        <childnode refid="13727" relation="include">
+        </childnode>
+        <childnode refid="13713" relation="include">
+        </childnode>
+        <childnode refid="13728" relation="include">
+        </childnode>
+        <childnode refid="13729" relation="include">
+        </childnode>
+        <childnode refid="13647" relation="include">
+        </childnode>
+        <childnode refid="13730" relation="include">
+        </childnode>
+        <childnode refid="13731" relation="include">
+        </childnode>
+      </node>
+      <node id="13691">
+        <label>graphene/chain/protocol/custom.hpp</label>
+        <link refid="custom_8hpp"/>
+        <childnode refid="13650" relation="include">
+        </childnode>
+      </node>
+      <node id="13720">
+        <label>boost/multi_index/hashed_index.hpp</label>
+      </node>
+      <node id="13644">
+        <label>graphene/chain/evaluator.hpp</label>
+        <link refid="evaluator_8hpp"/>
+        <childnode refid="13645" relation="include">
+        </childnode>
+        <childnode refid="13706" relation="include">
+        </childnode>
+        <childnode refid="13649" relation="include">
+        </childnode>
+      </node>
+      <node id="13647">
+        <label>graphene/chain/protocol/protocol.hpp</label>
+        <link refid="protocol_8hpp"/>
+        <childnode refid="13648" relation="include">
+        </childnode>
+        <childnode refid="13703" relation="include">
+        </childnode>
+      </node>
+      <node id="13710">
+        <label>graphene/chain/account_object.hpp</label>
+        <link refid="account__object_8hpp"/>
+        <childnode refid="13649" relation="include">
+        </childnode>
+        <childnode refid="13708" relation="include">
+        </childnode>
+        <childnode refid="13709" relation="include">
+        </childnode>
+      </node>
+      <node id="13678">
+        <label>graphene/chain/protocol/config.hpp</label>
+        <link refid="protocol_2config_8hpp"/>
+        <childnode refid="13672" relation="include">
+        </childnode>
+      </node>
+      <node id="13661">
+        <label>fc/container/flat.hpp</label>
+      </node>
+      <node id="13709">
+        <label>boost/multi_index/composite_key.hpp</label>
+      </node>
+      <node id="13677">
+        <label>graphene/db/object_id.hpp</label>
+      </node>
+      <node id="13727">
+        <label>graphene/db/object_database.hpp</label>
+      </node>
+      <node id="13645">
+        <label>graphene/chain/exceptions.hpp</label>
+        <link refid="exceptions_8hpp"/>
+        <childnode refid="13646" relation="include">
+        </childnode>
+        <childnode refid="13647" relation="include">
+        </childnode>
+      </node>
+      <node id="13695">
+        <label>graphene/chain/protocol/fba.hpp</label>
+        <link refid="fba_8hpp"/>
+        <childnode refid="13650" relation="include">
+        </childnode>
+      </node>
+      <node id="13669">
+        <label>deque</label>
+      </node>
+      <node id="13718">
+        <label>boost/multi_index/member.hpp</label>
+      </node>
+      <node id="13717">
+        <label>boost/multi_index_container.hpp</label>
+      </node>
+      <node id="13707">
+        <label>graphene/chain/withdraw_permission_object.hpp</label>
+        <link refid="withdraw__permission__object_8hpp"/>
+        <childnode refid="13680" relation="include">
+        </childnode>
+        <childnode refid="13708" relation="include">
+        </childnode>
+        <childnode refid="13709" relation="include">
+        </childnode>
+      </node>
+      <node id="13653">
+        <label>fc/io/varint.hpp</label>
+      </node>
+      <node id="13693">
+        <label>graphene/chain/protocol/chain_parameters.hpp</label>
+        <link refid="chain__parameters_8hpp"/>
+        <childnode refid="13650" relation="include">
+        </childnode>
+        <childnode refid="13651" relation="include">
+        </childnode>
+        <childnode refid="13666" relation="include">
+        </childnode>
+      </node>
+      <node id="13714">
+        <label>graphene/chain/node_property_object.hpp</label>
+        <link refid="node__property__object_8hpp"/>
+        <childnode refid="13713" relation="include">
+        </childnode>
+      </node>
+      <node id="13698">
+        <label>graphene/chain/protocol/transfer.hpp</label>
+        <link refid="transfer_8hpp"/>
+        <childnode refid="13650" relation="include">
+        </childnode>
+        <childnode refid="13689" relation="include">
+        </childnode>
+      </node>
+      <node id="13701">
+        <label>graphene/chain/protocol/witness.hpp</label>
+        <link refid="witness_8hpp"/>
+        <childnode refid="13650" relation="include">
+        </childnode>
+      </node>
+      <node id="13652">
+        <label>fc/container/flat_fwd.hpp</label>
+      </node>
+      <node id="13662">
+        <label>fc/string.hpp</label>
+      </node>
+      <node id="13664">
+        <label>fc/uint128.hpp</label>
+      </node>
+      <node id="13713">
+        <label>graphene/db/object.hpp</label>
+      </node>
+      <node id="13721">
+        <label>boost/multi_index/mem_fun.hpp</label>
+      </node>
+      <node id="13733">
+        <label>graphene/chain/is_authorized_asset.hpp</label>
+        <link refid="is__authorized__asset_8hpp"/>
+      </node>
+      <node id="13667">
+        <label>memory</label>
+      </node>
+      <node id="13651">
+        <label>graphene/chain/protocol/types.hpp</label>
+        <link refid="types_8hpp"/>
+        <childnode refid="13652" relation="include">
+        </childnode>
+        <childnode refid="13653" relation="include">
+        </childnode>
+        <childnode refid="13654" relation="include">
+        </childnode>
+        <childnode refid="13655" relation="include">
+        </childnode>
+        <childnode refid="13656" relation="include">
+        </childnode>
+        <childnode refid="13657" relation="include">
+        </childnode>
+        <childnode refid="13658" relation="include">
+        </childnode>
+        <childnode refid="13659" relation="include">
+        </childnode>
+        <childnode refid="13660" relation="include">
+        </childnode>
+        <childnode refid="13661" relation="include">
+        </childnode>
+        <childnode refid="13662" relation="include">
+        </childnode>
+        <childnode refid="13663" relation="include">
+        </childnode>
+        <childnode refid="13664" relation="include">
+        </childnode>
+        <childnode refid="13665" relation="include">
+        </childnode>
+        <childnode refid="13666" relation="include">
+        </childnode>
+        <childnode refid="13667" relation="include">
+        </childnode>
+        <childnode refid="13668" relation="include">
+        </childnode>
+        <childnode refid="13669" relation="include">
+        </childnode>
+        <childnode refid="13670" relation="include">
+        </childnode>
+        <childnode refid="13671" relation="include">
+        </childnode>
+        <childnode refid="13677" relation="include">
+        </childnode>
+        <childnode refid="13678" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacegraphene">graphene</innernamespace>
+    <innernamespace refid="namespacegraphene_1_1chain">graphene::chain</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/chain/withdraw_permission_evaluator.cpp"/>
+  </compounddef>
+</doxygen>

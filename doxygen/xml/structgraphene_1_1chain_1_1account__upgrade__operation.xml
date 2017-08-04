@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1account__upgrade__operation" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::account_upgrade_operation</compoundname>
+    <basecompoundref refid="structgraphene_1_1chain_1_1base__operation" prot="public" virt="non-virtual">graphene::chain::base_operation</basecompoundref>
+    <includes refid="account_8hpp" local="no">account.hpp</includes>
+    <innerclass refid="structgraphene_1_1chain_1_1account__upgrade__operation_1_1fee__parameters__type" prot="public">graphene::chain::account_upgrade_operation::fee_parameters_type</innerclass>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1account__upgrade__operation_1aec8b57663338a845c4369b9dde0f2215" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::account_upgrade_operation::fee</definition>
+        <argsstring></argsstring>
+        <name>fee</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/account.hpp" line="226" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/account.hpp" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1account__upgrade__operation_1a7b91762f9ac1f7df2906643bb5fb6ac6" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::account_upgrade_operation::account_to_upgrade</definition>
+        <argsstring></argsstring>
+        <name>account_to_upgrade</name>
+        <briefdescription>
+<para>The account to upgrade; must not already be a lifetime member. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/account.hpp" line="228" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/account.hpp" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1account__upgrade__operation_1ae1f636f8599fcd45cb5db5ec4be0f4d8" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool graphene::chain::account_upgrade_operation::upgrade_to_lifetime_member</definition>
+        <argsstring></argsstring>
+        <name>upgrade_to_lifetime_member</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>If true, the account will be upgraded to a lifetime member; otherwise, it will add a year to the subscription. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/account.hpp" line="230" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/account.hpp" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1account__upgrade__operation_1a1c30ee89e622050b590be79b4b8d9bea" prot="public" static="no" mutable="no">
+        <type><ref refid="group__operations_1gae0096750377f6e9d61dba5765284de99" kindref="member">extensions_type</ref></type>
+        <definition>extensions_type graphene::chain::account_upgrade_operation::extensions</definition>
+        <argsstring></argsstring>
+        <name>extensions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/account.hpp" line="231" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/account.hpp" bodystart="231" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1account__upgrade__operation_1abebf212325c495a9d3fdff3019293917" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::account_upgrade_operation::fee_payer</definition>
+        <argsstring>() const</argsstring>
+        <name>fee_payer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/account.hpp" line="233" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/account.hpp" bodystart="233" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1account__upgrade__operation_1a4c1bed239ab765c09919313500f2c2fe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::account_upgrade_operation::validate</definition>
+        <argsstring>() const</argsstring>
+        <name>validate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/account.hpp" line="234" column="1" bodyfile="libraries/chain/protocol/account.cpp" bodystart="281" bodyend="284"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1account__upgrade__operation_1a1619cced52ed5f855d0b04d5998d7dc7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+        <definition>share_type graphene::chain::account_upgrade_operation::calculate_fee</definition>
+        <argsstring>(const fee_parameters_type &amp;k) const</argsstring>
+        <name>calculate_fee</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1account__upgrade__operation_1_1fee__parameters__type" kindref="compound">fee_parameters_type</ref> &amp;</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/account.hpp" line="235" column="1" bodyfile="libraries/chain/protocol/account.cpp" bodystart="273" bodyend="278"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Manage an account&apos;s membership status</para><para>This operation is used to upgrade an account to a member, or renew its subscription. If an account which is an unexpired annual subscription member publishes this operation with <ref refid="structgraphene_1_1chain_1_1account__upgrade__operation_1ae1f636f8599fcd45cb5db5ec4be0f4d8" kindref="member">upgrade_to_lifetime_member</ref> set to false, the account&apos;s membership expiration date will be pushed backward one year. If a basic account publishes it with <ref refid="structgraphene_1_1chain_1_1account__upgrade__operation_1ae1f636f8599fcd45cb5db5ec4be0f4d8" kindref="member">upgrade_to_lifetime_member</ref> set to false, the account will be upgraded to a subscription member with an expiration date one year after the processing time of this operation. </para>    </briefdescription>
+    <detaileddescription>
+<para>Any account may use this operation to become a lifetime member by setting <ref refid="structgraphene_1_1chain_1_1account__upgrade__operation_1ae1f636f8599fcd45cb5db5ec4be0f4d8" kindref="member">upgrade_to_lifetime_member</ref> to true. Once an account has become a lifetime member, it may not use this operation anymore. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="234">
+        <label>graphene::chain::account_upgrade_operation</label>
+        <link refid="structgraphene_1_1chain_1_1account__upgrade__operation"/>
+        <childnode refid="235" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="235">
+        <label>graphene::chain::base_operation</label>
+        <link refid="structgraphene_1_1chain_1_1base__operation"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="238">
+        <label>flat_set&lt; future_extensions &gt;</label>
+      </node>
+      <node id="236">
+        <label>graphene::chain::account_upgrade_operation</label>
+        <link refid="structgraphene_1_1chain_1_1account__upgrade__operation"/>
+        <childnode refid="237" relation="public-inheritance">
+        </childnode>
+        <childnode refid="238" relation="usage">
+          <edgelabel>extensions</edgelabel>
+        </childnode>
+        <childnode refid="239" relation="usage">
+          <edgelabel>fee</edgelabel>
+        </childnode>
+      </node>
+      <node id="237">
+        <label>graphene::chain::base_operation</label>
+        <link refid="structgraphene_1_1chain_1_1base__operation"/>
+      </node>
+      <node id="239">
+        <label>graphene::chain::asset</label>
+        <link refid="structgraphene_1_1chain_1_1asset"/>
+        <childnode refid="240" relation="usage">
+          <edgelabel>amount</edgelabel>
+        </childnode>
+      </node>
+      <node id="240">
+        <label>safe&lt; int64_t &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/protocol/account.hpp" line="220" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/account.hpp" bodystart="219" bodyend="236"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1account__upgrade__operation_1a7b91762f9ac1f7df2906643bb5fb6ac6" prot="public" virt="non-virtual"><scope>graphene::chain::account_upgrade_operation</scope><name>account_to_upgrade</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a8947f5ff3ea0458c7fe981b5bb9e82b7" prot="public" virt="non-virtual"><scope>graphene::chain::account_upgrade_operation</scope><name>calculate_data_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1account__upgrade__operation_1a1619cced52ed5f855d0b04d5998d7dc7" prot="public" virt="non-virtual"><scope>graphene::chain::account_upgrade_operation</scope><name>calculate_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a18b678eb05bc5b30d75f10b398c07a91" prot="public" virt="non-virtual" ambiguityscope="graphene::chain::base_operation::"><scope>graphene::chain::account_upgrade_operation</scope><name>calculate_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1account__upgrade__operation_1a1c30ee89e622050b590be79b4b8d9bea" prot="public" virt="non-virtual"><scope>graphene::chain::account_upgrade_operation</scope><name>extensions</name></member>
+      <member refid="structgraphene_1_1chain_1_1account__upgrade__operation_1aec8b57663338a845c4369b9dde0f2215" prot="public" virt="non-virtual"><scope>graphene::chain::account_upgrade_operation</scope><name>fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1account__upgrade__operation_1abebf212325c495a9d3fdff3019293917" prot="public" virt="non-virtual"><scope>graphene::chain::account_upgrade_operation</scope><name>fee_payer</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a1d398b2f68e1dca5f453b86655a64c41" prot="public" virt="non-virtual"><scope>graphene::chain::account_upgrade_operation</scope><name>get_required_active_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1ac7e2861a01bbaef8fbe5c5dcf5e73b38" prot="public" virt="non-virtual"><scope>graphene::chain::account_upgrade_operation</scope><name>get_required_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1aff6e2d2b66117c8c87f6a6e7e7ddba1f" prot="public" virt="non-virtual"><scope>graphene::chain::account_upgrade_operation</scope><name>get_required_owner_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1account__upgrade__operation_1ae1f636f8599fcd45cb5db5ec4be0f4d8" prot="public" virt="non-virtual"><scope>graphene::chain::account_upgrade_operation</scope><name>upgrade_to_lifetime_member</name></member>
+      <member refid="structgraphene_1_1chain_1_1account__upgrade__operation_1a4c1bed239ab765c09919313500f2c2fe" prot="public" virt="non-virtual"><scope>graphene::chain::account_upgrade_operation</scope><name>validate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

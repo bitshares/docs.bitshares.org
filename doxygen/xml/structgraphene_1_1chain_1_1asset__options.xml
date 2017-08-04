@@ -1,0 +1,271 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1asset__options" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::asset_options</compoundname>
+    <includes refid="asset__ops_8hpp" local="no">asset_ops.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1asset__options_1ab52b7282e9bea8c6a57ee282a66c6f92" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+        <definition>share_type graphene::chain::asset_options::max_supply</definition>
+        <argsstring></argsstring>
+        <name>max_supply</name>
+        <initializer>= <ref refid="config_8hpp_1a0097d4b8dab3cb6d7c7f275b054c2380" kindref="member">GRAPHENE_MAX_SHARE_SUPPLY</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The maximum supply of this asset which may exist at any given time. This can be as large as GRAPHENE_MAX_SHARE_SUPPLY </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="40" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1asset__options_1ace27aedf849e0a01950ec362ffb3c6c8" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t graphene::chain::asset_options::market_fee_percent</definition>
+        <argsstring></argsstring>
+        <name>market_fee_percent</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>When this asset is traded on the markets, this percentage of the total traded will be exacted and paid to the issuer. This is a fixed point value, representing hundredths of a percent, i.e. a value of 100 in this field means a 1% fee is charged on market trades of this asset. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="44" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1asset__options_1a1316295332120e67582f919f1cb88a41" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+        <definition>share_type graphene::chain::asset_options::max_market_fee</definition>
+        <argsstring></argsstring>
+        <name>max_market_fee</name>
+        <initializer>= <ref refid="config_8hpp_1a0097d4b8dab3cb6d7c7f275b054c2380" kindref="member">GRAPHENE_MAX_SHARE_SUPPLY</ref></initializer>
+        <briefdescription>
+<para>Market fees calculated as <ref refid="structgraphene_1_1chain_1_1asset__options_1ace27aedf849e0a01950ec362ffb3c6c8" kindref="member">market_fee_percent</ref> of the traded volume are capped to this value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="46" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1asset__options_1af0e2f972dd6f62147301b79369f74e24" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t graphene::chain::asset_options::issuer_permissions</definition>
+        <argsstring></argsstring>
+        <name>issuer_permissions</name>
+        <initializer>= UIA_ASSET_ISSUER_PERMISSION_MASK</initializer>
+        <briefdescription>
+<para>The flags which the issuer has permission to update. See <ref refid="namespacegraphene_1_1chain_1a6a12bfc3745c709e79e6bbcd1fa6c3d2" kindref="member">asset_issuer_permission_flags</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="49" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1asset__options_1af00c8e76afbe6cbc47e3eeb71f456f4c" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t graphene::chain::asset_options::flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>The currently active flags on this permission. See <ref refid="namespacegraphene_1_1chain_1a6a12bfc3745c709e79e6bbcd1fa6c3d2" kindref="member">asset_issuer_permission_flags</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="51" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1asset__options_1a86a119a813714a608c6bae62e6f59a10" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1price" kindref="compound">price</ref></type>
+        <definition>price graphene::chain::asset_options::core_exchange_rate</definition>
+        <argsstring></argsstring>
+        <name>core_exchange_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>When a non-core asset is used to pay a fee, the blockchain must convert that asset to core asset in order to accept the fee. If this asset&apos;s fee pool is funded, the chain will automatically deposite fees in this asset to its accumulated fees, and withdraw from the fee pool the same amount as converted at the core exchange rate. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="57" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1asset__options_1a9bb53490451f02ecb9fe07e01bce2da0" prot="public" static="no" mutable="no">
+        <type>flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt;</type>
+        <definition>flat_set&lt;account_id_type&gt; graphene::chain::asset_options::whitelist_authorities</definition>
+        <argsstring></argsstring>
+        <name>whitelist_authorities</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A set of accounts which maintain whitelists to consult for this asset. If whitelist_authorities is non-empty, then only accounts in whitelist_authorities are allowed to hold, use, or transfer the asset. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="61" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1asset__options_1af04793715b1da8f1b8f9927f6e8d8e9e" prot="public" static="no" mutable="no">
+        <type>flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt;</type>
+        <definition>flat_set&lt;account_id_type&gt; graphene::chain::asset_options::blacklist_authorities</definition>
+        <argsstring></argsstring>
+        <name>blacklist_authorities</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>A set of accounts which maintain blacklists to consult for this asset. If flags &amp; white_list is set, an account may only send, receive, trade, etc. in this asset if none of these accounts appears in its <ref refid="classgraphene_1_1chain_1_1account__object_1aa89c8709baa83afd446a8314179b100e" kindref="member">account_object::blacklisting_accounts</ref> field. If the account is blacklisted, it may not transact in this asset even if it is also whitelisted. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="66" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1asset__options_1a1d035949834b38d6044e2870c9a937e5" prot="public" static="no" mutable="no">
+        <type>flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref> &gt;</type>
+        <definition>flat_set&lt;asset_id_type&gt; graphene::chain::asset_options::whitelist_markets</definition>
+        <argsstring></argsstring>
+        <name>whitelist_markets</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>defines the assets that this asset may be traded against in the market </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="69" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1asset__options_1a15aaf1409aba651d2302d16db61e1723" prot="public" static="no" mutable="no">
+        <type>flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref> &gt;</type>
+        <definition>flat_set&lt;asset_id_type&gt; graphene::chain::asset_options::blacklist_markets</definition>
+        <argsstring></argsstring>
+        <name>blacklist_markets</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>defines the assets that this asset may not be traded against in the market, must not overlap whitelist </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="71" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1asset__options_1a94acd3a518a5fb1ba2f4d515bfa897a0" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string graphene::chain::asset_options::description</definition>
+        <argsstring></argsstring>
+        <name>description</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>data that describes the meaning/purpose of this asset, fee will be charged proportional to size of description. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="77" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1asset__options_1aea23b4f1249e9b544f7b3fb9a7cdef2b" prot="public" static="no" mutable="no">
+        <type><ref refid="group__operations_1gae0096750377f6e9d61dba5765284de99" kindref="member">extensions_type</ref></type>
+        <definition>extensions_type graphene::chain::asset_options::extensions</definition>
+        <argsstring></argsstring>
+        <name>extensions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="78" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1asset__options_1af421452bdf461c44b29560a77f55b952" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::asset_options::validate</definition>
+        <argsstring>() const</argsstring>
+        <name>validate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Perform internal consistency checks. <parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>fc::exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if any check fails </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="82" column="1" bodyfile="libraries/chain/protocol/asset_ops.cpp" bodystart="204" bodyend="230"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="structgraphene_1_1chain_1_1asset__options" kindref="compound">asset_options</ref> struct contains options available on all assets in the network. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>Changes to this struct will break protocol compatibility </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="669">
+        <label>flat_set&lt; asset_id_type &gt;</label>
+      </node>
+      <node id="672">
+        <label>graphene::chain::price</label>
+        <link refid="structgraphene_1_1chain_1_1price"/>
+        <childnode refid="673" relation="usage">
+          <edgelabel>base</edgelabel>
+          <edgelabel>quote</edgelabel>
+        </childnode>
+      </node>
+      <node id="671">
+        <label>string</label>
+      </node>
+      <node id="668">
+        <label>flat_set&lt; future_extensions &gt;</label>
+      </node>
+      <node id="674">
+        <label>flat_set&lt; account_id_type &gt;</label>
+      </node>
+      <node id="673">
+        <label>graphene::chain::asset</label>
+        <link refid="structgraphene_1_1chain_1_1asset"/>
+        <childnode refid="670" relation="usage">
+          <edgelabel>amount</edgelabel>
+        </childnode>
+      </node>
+      <node id="670">
+        <label>safe&lt; int64_t &gt;</label>
+      </node>
+      <node id="667">
+        <label>graphene::chain::asset_options</label>
+        <link refid="structgraphene_1_1chain_1_1asset__options"/>
+        <childnode refid="668" relation="usage">
+          <edgelabel>extensions</edgelabel>
+        </childnode>
+        <childnode refid="669" relation="usage">
+          <edgelabel>whitelist_markets</edgelabel>
+          <edgelabel>blacklist_markets</edgelabel>
+        </childnode>
+        <childnode refid="670" relation="usage">
+          <edgelabel>max_market_fee</edgelabel>
+          <edgelabel>max_supply</edgelabel>
+        </childnode>
+        <childnode refid="671" relation="usage">
+          <edgelabel>description</edgelabel>
+        </childnode>
+        <childnode refid="672" relation="usage">
+          <edgelabel>core_exchange_rate</edgelabel>
+        </childnode>
+        <childnode refid="674" relation="usage">
+          <edgelabel>whitelist_authorities</edgelabel>
+          <edgelabel>blacklist_authorities</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="37" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="37" bodyend="83"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1asset__options_1af04793715b1da8f1b8f9927f6e8d8e9e" prot="public" virt="non-virtual"><scope>graphene::chain::asset_options</scope><name>blacklist_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1asset__options_1a15aaf1409aba651d2302d16db61e1723" prot="public" virt="non-virtual"><scope>graphene::chain::asset_options</scope><name>blacklist_markets</name></member>
+      <member refid="structgraphene_1_1chain_1_1asset__options_1a86a119a813714a608c6bae62e6f59a10" prot="public" virt="non-virtual"><scope>graphene::chain::asset_options</scope><name>core_exchange_rate</name></member>
+      <member refid="structgraphene_1_1chain_1_1asset__options_1a94acd3a518a5fb1ba2f4d515bfa897a0" prot="public" virt="non-virtual"><scope>graphene::chain::asset_options</scope><name>description</name></member>
+      <member refid="structgraphene_1_1chain_1_1asset__options_1aea23b4f1249e9b544f7b3fb9a7cdef2b" prot="public" virt="non-virtual"><scope>graphene::chain::asset_options</scope><name>extensions</name></member>
+      <member refid="structgraphene_1_1chain_1_1asset__options_1af00c8e76afbe6cbc47e3eeb71f456f4c" prot="public" virt="non-virtual"><scope>graphene::chain::asset_options</scope><name>flags</name></member>
+      <member refid="structgraphene_1_1chain_1_1asset__options_1af0e2f972dd6f62147301b79369f74e24" prot="public" virt="non-virtual"><scope>graphene::chain::asset_options</scope><name>issuer_permissions</name></member>
+      <member refid="structgraphene_1_1chain_1_1asset__options_1ace27aedf849e0a01950ec362ffb3c6c8" prot="public" virt="non-virtual"><scope>graphene::chain::asset_options</scope><name>market_fee_percent</name></member>
+      <member refid="structgraphene_1_1chain_1_1asset__options_1a1316295332120e67582f919f1cb88a41" prot="public" virt="non-virtual"><scope>graphene::chain::asset_options</scope><name>max_market_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1asset__options_1ab52b7282e9bea8c6a57ee282a66c6f92" prot="public" virt="non-virtual"><scope>graphene::chain::asset_options</scope><name>max_supply</name></member>
+      <member refid="structgraphene_1_1chain_1_1asset__options_1af421452bdf461c44b29560a77f55b952" prot="public" virt="non-virtual"><scope>graphene::chain::asset_options</scope><name>validate</name></member>
+      <member refid="structgraphene_1_1chain_1_1asset__options_1a9bb53490451f02ecb9fe07e01bce2da0" prot="public" virt="non-virtual"><scope>graphene::chain::asset_options</scope><name>whitelist_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1asset__options_1a1d035949834b38d6044e2870c9a937e5" prot="public" virt="non-virtual"><scope>graphene::chain::asset_options</scope><name>whitelist_markets</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

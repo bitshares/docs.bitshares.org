@@ -1,0 +1,421 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1authority" kind="class" language="C++" prot="public">
+    <compoundname>graphene::chain::authority</compoundname>
+    <includes refid="authority_8hpp" local="no">authority.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="structgraphene_1_1chain_1_1authority_1a97efc4c5ba59e79b1a6275130c77eeaf" prot="public" static="no">
+        <name>classification</name>
+        <enumvalue id="structgraphene_1_1chain_1_1authority_1a97efc4c5ba59e79b1a6275130c77eeafa63727163a5312f469ce679dcd1534006" prot="public">
+          <name>owner</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>the key that is authorized to change owner, active, and voting keys </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structgraphene_1_1chain_1_1authority_1a97efc4c5ba59e79b1a6275130c77eeafa30571eb5e0348176652f6ca6e90b313a" prot="public">
+          <name>active</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>the key that is able to perform normal operations </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structgraphene_1_1chain_1_1authority_1a97efc4c5ba59e79b1a6275130c77eeafaf3104db45d848f4e6d868310a976720e" prot="public">
+          <name>key</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/authority.hpp" line="44" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/authority.hpp" bodystart="43" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1authority_1ac31247040886c24bbab996edf795f512" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t graphene::chain::authority::weight_threshold</definition>
+        <argsstring></argsstring>
+        <name>weight_threshold</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/authority.hpp" line="117" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/authority.hpp" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1authority_1a59539db30757ee1ee9ff0191f646f426" prot="public" static="no" mutable="no">
+        <type>flat_map&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref>, <ref refid="namespacegraphene_1_1chain_1abfad0b3a88dd91b907bc0199ded6768c" kindref="member">weight_type</ref> &gt;</type>
+        <definition>flat_map&lt;account_id_type,weight_type&gt; graphene::chain::authority::account_auths</definition>
+        <argsstring></argsstring>
+        <name>account_auths</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/authority.hpp" line="118" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/authority.hpp" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1authority_1ae0a7e15ab2b4280146bbd2656789ff82" prot="public" static="no" mutable="no">
+        <type>flat_map&lt; <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref>, <ref refid="namespacegraphene_1_1chain_1abfad0b3a88dd91b907bc0199ded6768c" kindref="member">weight_type</ref> &gt;</type>
+        <definition>flat_map&lt;public_key_type,weight_type&gt; graphene::chain::authority::key_auths</definition>
+        <argsstring></argsstring>
+        <name>key_auths</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/authority.hpp" line="119" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/authority.hpp" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1authority_1aa3bc11b16539fb10ee22e7b5b3f20133" prot="public" static="no" mutable="no">
+        <type>flat_map&lt; <ref refid="classgraphene_1_1chain_1_1address" kindref="compound">address</ref>, <ref refid="namespacegraphene_1_1chain_1abfad0b3a88dd91b907bc0199ded6768c" kindref="member">weight_type</ref> &gt;</type>
+        <definition>flat_map&lt;address,weight_type&gt; graphene::chain::authority::address_auths</definition>
+        <argsstring></argsstring>
+        <name>address_auths</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>needed for backward compatibility only </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/authority.hpp" line="121" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/authority.hpp" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1authority_1aa5056d89d1c2eea87c91cd2ad6f7bc41" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>graphene::chain::authority::authority</definition>
+        <argsstring>()</argsstring>
+        <name>authority</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/authority.hpp" line="35" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/authority.hpp" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1authority_1ac41c495772cfcccbca600d1dd421b6d9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class ...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>graphene::chain::authority::authority</definition>
+        <argsstring>(uint32_t threshhold, Args... auths)</argsstring>
+        <name>authority</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>threshhold</declname>
+        </param>
+        <param>
+          <type>Args...</type>
+          <declname>auths</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/authority.hpp" line="37" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/authority.hpp" bodystart="37" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1authority_1a717cc324b17bcb94b18c60f6d64efdf2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::authority::add_authority</definition>
+        <argsstring>(const public_key_type &amp;k, weight_type w)</argsstring>
+        <name>add_authority</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref> &amp;</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1abfad0b3a88dd91b907bc0199ded6768c" kindref="member">weight_type</ref></type>
+          <declname>w</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/authority.hpp" line="51" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/authority.hpp" bodystart="51" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1authority_1a8446c4e92b1022aed6d5213622c14a92" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::authority::add_authority</definition>
+        <argsstring>(const address &amp;k, weight_type w)</argsstring>
+        <name>add_authority</name>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1address" kindref="compound">address</ref> &amp;</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1abfad0b3a88dd91b907bc0199ded6768c" kindref="member">weight_type</ref></type>
+          <declname>w</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/authority.hpp" line="55" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/authority.hpp" bodystart="55" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1authority_1accfda0a90e8338a896419d42a1781704" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::authority::add_authority</definition>
+        <argsstring>(account_id_type k, weight_type w)</argsstring>
+        <name>add_authority</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1abfad0b3a88dd91b907bc0199ded6768c" kindref="member">weight_type</ref></type>
+          <declname>w</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/authority.hpp" line="59" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/authority.hpp" bodystart="59" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1authority_1a333c5a6aedbd117821a38e79cd19a6d9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::authority::is_impossible</definition>
+        <argsstring>() const</argsstring>
+        <name>is_impossible</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/authority.hpp" line="63" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/authority.hpp" bodystart="63" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1authority_1a67c4ba3bcab1d201471209787b7b2fdd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename AuthType</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void graphene::chain::authority::add_authorities</definition>
+        <argsstring>(AuthType k, weight_type w)</argsstring>
+        <name>add_authorities</name>
+        <param>
+          <type>AuthType</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1abfad0b3a88dd91b907bc0199ded6768c" kindref="member">weight_type</ref></type>
+          <declname>w</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/authority.hpp" line="73" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/authority.hpp" bodystart="73" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1authority_1abc081103a24a977ab32f8f87bf698772" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename AuthType</type>
+          </param>
+          <param>
+            <type>class ...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void graphene::chain::authority::add_authorities</definition>
+        <argsstring>(AuthType k, weight_type w, Args... auths)</argsstring>
+        <name>add_authorities</name>
+        <param>
+          <type>AuthType</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1abfad0b3a88dd91b907bc0199ded6768c" kindref="member">weight_type</ref></type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type>Args...</type>
+          <declname>auths</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/authority.hpp" line="78" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/authority.hpp" bodystart="78" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1authority_1ac31f640cad7eb187030ed6cd267f32dd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>vector&lt; <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref> &gt;</type>
+        <definition>vector&lt;public_key_type&gt; graphene::chain::authority::get_keys</definition>
+        <argsstring>() const</argsstring>
+        <name>get_keys</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/authority.hpp" line="84" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/authority.hpp" bodystart="84" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1authority_1af309d27bfa19f7b38367444fbc34f908" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>vector&lt; <ref refid="classgraphene_1_1chain_1_1address" kindref="compound">address</ref> &gt;</type>
+        <definition>vector&lt;address&gt; graphene::chain::authority::get_addresses</definition>
+        <argsstring>() const</argsstring>
+        <name>get_addresses</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/authority.hpp" line="92" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/authority.hpp" bodystart="92" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1authority_1af015e8b316222815c7830f31c8c625f8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t graphene::chain::authority::num_auths</definition>
+        <argsstring>() const</argsstring>
+        <name>num_auths</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/authority.hpp" line="109" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/authority.hpp" bodystart="109" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1authority_1ae9446a636f5b830a475da182c5dabea1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::authority::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/authority.hpp" line="110" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/authority.hpp" bodystart="110" bodyend="110"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="structgraphene_1_1chain_1_1authority_1aafe64f981f46eedbd895177a6ab55d1a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>friend bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(const authority &amp;a, const authority &amp;b)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1authority" kindref="compound">authority</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1authority" kindref="compound">authority</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/authority.hpp" line="102" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/authority.hpp" bodystart="102" bodyend="108"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1authority_1a8d6c046aa9f606333dc6a9caab22c880" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1authority" kindref="compound">authority</ref></type>
+        <definition>static authority graphene::chain::authority::null_authority</definition>
+        <argsstring>()</argsstring>
+        <name>null_authority</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/authority.hpp" line="112" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/authority.hpp" bodystart="112" bodyend="115"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Identifies a weighted set of keys and accounts that must approve operations. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1015">
+        <label>flat_map&lt; graphene::chain::address, weight_type &gt;</label>
+      </node>
+      <node id="1012">
+        <label>graphene::chain::authority</label>
+        <link refid="structgraphene_1_1chain_1_1authority"/>
+        <childnode refid="1013" relation="usage">
+          <edgelabel>key_auths</edgelabel>
+        </childnode>
+        <childnode refid="1014" relation="usage">
+          <edgelabel>account_auths</edgelabel>
+        </childnode>
+        <childnode refid="1015" relation="usage">
+          <edgelabel>address_auths</edgelabel>
+        </childnode>
+      </node>
+      <node id="1013">
+        <label>flat_map&lt; graphene::chain::public_key_type, weight_type &gt;</label>
+      </node>
+      <node id="1014">
+        <label>flat_map&lt; account_id_type, weight_type &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/protocol/authority.hpp" line="34" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/authority.hpp" bodystart="33" bodyend="122"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1authority_1a59539db30757ee1ee9ff0191f646f426" prot="public" virt="non-virtual"><scope>graphene::chain::authority</scope><name>account_auths</name></member>
+      <member refid="structgraphene_1_1chain_1_1authority_1a97efc4c5ba59e79b1a6275130c77eeafa30571eb5e0348176652f6ca6e90b313a" prot="public" virt="non-virtual"><scope>graphene::chain::authority</scope><name>active</name></member>
+      <member refid="structgraphene_1_1chain_1_1authority_1a67c4ba3bcab1d201471209787b7b2fdd" prot="public" virt="non-virtual"><scope>graphene::chain::authority</scope><name>add_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1authority_1abc081103a24a977ab32f8f87bf698772" prot="public" virt="non-virtual"><scope>graphene::chain::authority</scope><name>add_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1authority_1a717cc324b17bcb94b18c60f6d64efdf2" prot="public" virt="non-virtual"><scope>graphene::chain::authority</scope><name>add_authority</name></member>
+      <member refid="structgraphene_1_1chain_1_1authority_1a8446c4e92b1022aed6d5213622c14a92" prot="public" virt="non-virtual"><scope>graphene::chain::authority</scope><name>add_authority</name></member>
+      <member refid="structgraphene_1_1chain_1_1authority_1accfda0a90e8338a896419d42a1781704" prot="public" virt="non-virtual"><scope>graphene::chain::authority</scope><name>add_authority</name></member>
+      <member refid="structgraphene_1_1chain_1_1authority_1aa3bc11b16539fb10ee22e7b5b3f20133" prot="public" virt="non-virtual"><scope>graphene::chain::authority</scope><name>address_auths</name></member>
+      <member refid="structgraphene_1_1chain_1_1authority_1aa5056d89d1c2eea87c91cd2ad6f7bc41" prot="public" virt="non-virtual"><scope>graphene::chain::authority</scope><name>authority</name></member>
+      <member refid="structgraphene_1_1chain_1_1authority_1ac41c495772cfcccbca600d1dd421b6d9" prot="public" virt="non-virtual"><scope>graphene::chain::authority</scope><name>authority</name></member>
+      <member refid="structgraphene_1_1chain_1_1authority_1a97efc4c5ba59e79b1a6275130c77eeaf" prot="public" virt="non-virtual"><scope>graphene::chain::authority</scope><name>classification</name></member>
+      <member refid="structgraphene_1_1chain_1_1authority_1ae9446a636f5b830a475da182c5dabea1" prot="public" virt="non-virtual"><scope>graphene::chain::authority</scope><name>clear</name></member>
+      <member refid="structgraphene_1_1chain_1_1authority_1af309d27bfa19f7b38367444fbc34f908" prot="public" virt="non-virtual"><scope>graphene::chain::authority</scope><name>get_addresses</name></member>
+      <member refid="structgraphene_1_1chain_1_1authority_1ac31f640cad7eb187030ed6cd267f32dd" prot="public" virt="non-virtual"><scope>graphene::chain::authority</scope><name>get_keys</name></member>
+      <member refid="structgraphene_1_1chain_1_1authority_1a333c5a6aedbd117821a38e79cd19a6d9" prot="public" virt="non-virtual"><scope>graphene::chain::authority</scope><name>is_impossible</name></member>
+      <member refid="structgraphene_1_1chain_1_1authority_1a97efc4c5ba59e79b1a6275130c77eeafaf3104db45d848f4e6d868310a976720e" prot="public" virt="non-virtual"><scope>graphene::chain::authority</scope><name>key</name></member>
+      <member refid="structgraphene_1_1chain_1_1authority_1ae0a7e15ab2b4280146bbd2656789ff82" prot="public" virt="non-virtual"><scope>graphene::chain::authority</scope><name>key_auths</name></member>
+      <member refid="structgraphene_1_1chain_1_1authority_1a8d6c046aa9f606333dc6a9caab22c880" prot="public" virt="non-virtual"><scope>graphene::chain::authority</scope><name>null_authority</name></member>
+      <member refid="structgraphene_1_1chain_1_1authority_1af015e8b316222815c7830f31c8c625f8" prot="public" virt="non-virtual"><scope>graphene::chain::authority</scope><name>num_auths</name></member>
+      <member refid="structgraphene_1_1chain_1_1authority_1aafe64f981f46eedbd895177a6ab55d1a" prot="public" virt="non-virtual"><scope>graphene::chain::authority</scope><name>operator==</name></member>
+      <member refid="structgraphene_1_1chain_1_1authority_1a97efc4c5ba59e79b1a6275130c77eeafa63727163a5312f469ce679dcd1534006" prot="public" virt="non-virtual"><scope>graphene::chain::authority</scope><name>owner</name></member>
+      <member refid="structgraphene_1_1chain_1_1authority_1ac31247040886c24bbab996edf795f512" prot="public" virt="non-virtual"><scope>graphene::chain::authority</scope><name>weight_threshold</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1asset__settle__cancel__operation" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::asset_settle_cancel_operation</compoundname>
+    <basecompoundref refid="structgraphene_1_1chain_1_1base__operation" prot="public" virt="non-virtual">graphene::chain::base_operation</basecompoundref>
+    <includes refid="asset__ops_8hpp" local="no">asset_ops.hpp</includes>
+    <innerclass refid="structgraphene_1_1chain_1_1asset__settle__cancel__operation_1_1fee__parameters__type" prot="public">graphene::chain::asset_settle_cancel_operation::fee_parameters_type</innerclass>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1asset__settle__cancel__operation_1a816ab28fae487ed5607fa9f37df9bad5" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::asset_settle_cancel_operation::fee</definition>
+        <argsstring></argsstring>
+        <name>fee</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="222" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1asset__settle__cancel__operation_1abce99214af901ee0616c10aafdf2304d" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1adf18546469e67899bc31b5e258f7a6ff" kindref="member">force_settlement_id_type</ref></type>
+        <definition>force_settlement_id_type graphene::chain::asset_settle_cancel_operation::settlement</definition>
+        <argsstring></argsstring>
+        <name>settlement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="223" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1asset__settle__cancel__operation_1a060104c00dc4ce90718659e5e634529d" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::asset_settle_cancel_operation::account</definition>
+        <argsstring></argsstring>
+        <name>account</name>
+        <briefdescription>
+<para>Account requesting the force settlement. This account pays the fee. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="225" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1asset__settle__cancel__operation_1a0431d953bb4bda4bb94c0fa3b8b29603" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::asset_settle_cancel_operation::amount</definition>
+        <argsstring></argsstring>
+        <name>amount</name>
+        <briefdescription>
+<para>Amount of asset to force settle. This must be a market-issued asset. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="227" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="227" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1asset__settle__cancel__operation_1a36fbd1e94db1485c6435b735df1700cb" prot="public" static="no" mutable="no">
+        <type><ref refid="group__operations_1gae0096750377f6e9d61dba5765284de99" kindref="member">extensions_type</ref></type>
+        <definition>extensions_type graphene::chain::asset_settle_cancel_operation::extensions</definition>
+        <argsstring></argsstring>
+        <name>extensions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="228" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1asset__settle__cancel__operation_1a5210e85b03df67f636a8e3ba025117ff" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::asset_settle_cancel_operation::fee_payer</definition>
+        <argsstring>() const</argsstring>
+        <name>fee_payer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="230" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="230" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1asset__settle__cancel__operation_1a608453c77d136ac1d7caa4b5e53c1c5b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::asset_settle_cancel_operation::validate</definition>
+        <argsstring>() const</argsstring>
+        <name>validate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="231" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="231" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1asset__settle__cancel__operation_1a0688e28400cc6b6eba0db3043d451e10" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+        <definition>share_type graphene::chain::asset_settle_cancel_operation::calculate_fee</definition>
+        <argsstring>(const fee_parameters_type &amp;params) const</argsstring>
+        <name>calculate_fee</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1asset__settle__cancel__operation_1_1fee__parameters__type" kindref="compound">fee_parameters_type</ref> &amp;</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="235" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="235" bodyend="236"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Virtual op generated when force settlement is cancelled. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="780">
+        <label>graphene::chain::base_operation</label>
+        <link refid="structgraphene_1_1chain_1_1base__operation"/>
+      </node>
+      <node id="779">
+        <label>graphene::chain::asset_settle_cancel_operation</label>
+        <link refid="structgraphene_1_1chain_1_1asset__settle__cancel__operation"/>
+        <childnode refid="780" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="783">
+        <label>flat_set&lt; future_extensions &gt;</label>
+      </node>
+      <node id="782">
+        <label>graphene::chain::base_operation</label>
+        <link refid="structgraphene_1_1chain_1_1base__operation"/>
+      </node>
+      <node id="784">
+        <label>graphene::chain::asset</label>
+        <link refid="structgraphene_1_1chain_1_1asset"/>
+        <childnode refid="785" relation="usage">
+          <edgelabel>amount</edgelabel>
+        </childnode>
+      </node>
+      <node id="785">
+        <label>safe&lt; int64_t &gt;</label>
+      </node>
+      <node id="781">
+        <label>graphene::chain::asset_settle_cancel_operation</label>
+        <link refid="structgraphene_1_1chain_1_1asset__settle__cancel__operation"/>
+        <childnode refid="782" relation="public-inheritance">
+        </childnode>
+        <childnode refid="783" relation="usage">
+          <edgelabel>extensions</edgelabel>
+        </childnode>
+        <childnode refid="784" relation="usage">
+          <edgelabel>fee</edgelabel>
+          <edgelabel>amount</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="219" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="218" bodyend="237"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1asset__settle__cancel__operation_1a060104c00dc4ce90718659e5e634529d" prot="public" virt="non-virtual"><scope>graphene::chain::asset_settle_cancel_operation</scope><name>account</name></member>
+      <member refid="structgraphene_1_1chain_1_1asset__settle__cancel__operation_1a0431d953bb4bda4bb94c0fa3b8b29603" prot="public" virt="non-virtual"><scope>graphene::chain::asset_settle_cancel_operation</scope><name>amount</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a8947f5ff3ea0458c7fe981b5bb9e82b7" prot="public" virt="non-virtual"><scope>graphene::chain::asset_settle_cancel_operation</scope><name>calculate_data_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1asset__settle__cancel__operation_1a0688e28400cc6b6eba0db3043d451e10" prot="public" virt="non-virtual"><scope>graphene::chain::asset_settle_cancel_operation</scope><name>calculate_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a18b678eb05bc5b30d75f10b398c07a91" prot="public" virt="non-virtual" ambiguityscope="graphene::chain::base_operation::"><scope>graphene::chain::asset_settle_cancel_operation</scope><name>calculate_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1asset__settle__cancel__operation_1a36fbd1e94db1485c6435b735df1700cb" prot="public" virt="non-virtual"><scope>graphene::chain::asset_settle_cancel_operation</scope><name>extensions</name></member>
+      <member refid="structgraphene_1_1chain_1_1asset__settle__cancel__operation_1a816ab28fae487ed5607fa9f37df9bad5" prot="public" virt="non-virtual"><scope>graphene::chain::asset_settle_cancel_operation</scope><name>fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1asset__settle__cancel__operation_1a5210e85b03df67f636a8e3ba025117ff" prot="public" virt="non-virtual"><scope>graphene::chain::asset_settle_cancel_operation</scope><name>fee_payer</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a1d398b2f68e1dca5f453b86655a64c41" prot="public" virt="non-virtual"><scope>graphene::chain::asset_settle_cancel_operation</scope><name>get_required_active_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1ac7e2861a01bbaef8fbe5c5dcf5e73b38" prot="public" virt="non-virtual"><scope>graphene::chain::asset_settle_cancel_operation</scope><name>get_required_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1aff6e2d2b66117c8c87f6a6e7e7ddba1f" prot="public" virt="non-virtual"><scope>graphene::chain::asset_settle_cancel_operation</scope><name>get_required_owner_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1asset__settle__cancel__operation_1abce99214af901ee0616c10aafdf2304d" prot="public" virt="non-virtual"><scope>graphene::chain::asset_settle_cancel_operation</scope><name>settlement</name></member>
+      <member refid="structgraphene_1_1chain_1_1asset__settle__cancel__operation_1a608453c77d136ac1d7caa4b5e53c1c5b" prot="public" virt="non-virtual"><scope>graphene::chain::asset_settle_cancel_operation</scope><name>validate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

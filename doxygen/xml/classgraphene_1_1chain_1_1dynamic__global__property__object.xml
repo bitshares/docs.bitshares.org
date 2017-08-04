@@ -1,0 +1,296 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgraphene_1_1chain_1_1dynamic__global__property__object" kind="class" language="C++" prot="public">
+    <compoundname>graphene::chain::dynamic_global_property_object</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">graphene::db::abstract_object&lt; dynamic_global_property_object &gt;</basecompoundref>
+    <includes refid="global__property__object_8hpp" local="no">global_property_object.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classgraphene_1_1chain_1_1dynamic__global__property__object_1a566f83c180a362c4296d06e5d1930482" prot="public" static="no">
+        <name>dynamic_flag_bits</name>
+        <enumvalue id="classgraphene_1_1chain_1_1dynamic__global__property__object_1a566f83c180a362c4296d06e5d1930482ab2946fc5c4d7acc1bbf1880ebe5a1c12" prot="public">
+          <name>maintenance_flag</name>
+          <initializer>= 0x01</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>If maintenance_flag is set, then the head block is a maintenance block. This means get_time_slot(1) - head_block_time() will have a gap due to maintenance duration.</para><para>This flag answers the question, &quot;Was maintenance
+performed in the last call to apply_block()?&quot; </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/global_property_object.hpp" line="112" column="1" bodyfile="libraries/chain/include/graphene/chain/global_property_object.hpp" bodystart="111" bodyend="123"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1dynamic__global__property__object_1a41784d88561fbdb998a85c37ca6b77f9" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t graphene::chain::dynamic_global_property_object::space_id</definition>
+        <argsstring></argsstring>
+        <name>space_id</name>
+        <initializer>= <ref refid="namespacegraphene_1_1chain_1a92e55d4242187696c5e2c5eaafbd9400a81f35c04f1d3f3109dacaa6f2bef33c7" kindref="member">implementation_ids</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/global_property_object.hpp" line="69" column="1" bodyfile="libraries/chain/include/graphene/chain/global_property_object.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1dynamic__global__property__object_1a14df287e156aad421e1a6b9f00e27e1a" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t graphene::chain::dynamic_global_property_object::type_id</definition>
+        <argsstring></argsstring>
+        <name>type_id</name>
+        <initializer>= <ref refid="namespacegraphene_1_1chain_1ad3bef2f100b722a6c30fada38f6dcd73a837a7ebbc012e3b81e667171e7c9b5a8" kindref="member">impl_dynamic_global_property_object_type</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/global_property_object.hpp" line="70" column="1" bodyfile="libraries/chain/include/graphene/chain/global_property_object.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1dynamic__global__property__object_1aec0d3d4326eda5531e557093ce913743" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t graphene::chain::dynamic_global_property_object::head_block_number</definition>
+        <argsstring></argsstring>
+        <name>head_block_number</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/global_property_object.hpp" line="72" column="1" bodyfile="libraries/chain/include/graphene/chain/global_property_object.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1dynamic__global__property__object_1aa919d4efd23a372b60801837fd2b2912" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a314b030d7a6107c5641fd9945da7f568" kindref="member">block_id_type</ref></type>
+        <definition>block_id_type graphene::chain::dynamic_global_property_object::head_block_id</definition>
+        <argsstring></argsstring>
+        <name>head_block_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/global_property_object.hpp" line="73" column="1" bodyfile="libraries/chain/include/graphene/chain/global_property_object.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1dynamic__global__property__object_1a30cf8f3d61b1bd1fdcb19836ada6e14e" prot="public" static="no" mutable="no">
+        <type>time_point_sec</type>
+        <definition>time_point_sec graphene::chain::dynamic_global_property_object::time</definition>
+        <argsstring></argsstring>
+        <name>time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/global_property_object.hpp" line="74" column="1" bodyfile="libraries/chain/include/graphene/chain/global_property_object.hpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1dynamic__global__property__object_1a02575a5c7cf9d6ab3e3ae2c5d287ac28" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1ab7749ab4e10e21734e81c82e229657c0" kindref="member">witness_id_type</ref></type>
+        <definition>witness_id_type graphene::chain::dynamic_global_property_object::current_witness</definition>
+        <argsstring></argsstring>
+        <name>current_witness</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/global_property_object.hpp" line="75" column="1" bodyfile="libraries/chain/include/graphene/chain/global_property_object.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1dynamic__global__property__object_1a2e907ac0340cc99a629d957bdc729faa" prot="public" static="no" mutable="no">
+        <type>time_point_sec</type>
+        <definition>time_point_sec graphene::chain::dynamic_global_property_object::next_maintenance_time</definition>
+        <argsstring></argsstring>
+        <name>next_maintenance_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/global_property_object.hpp" line="76" column="1" bodyfile="libraries/chain/include/graphene/chain/global_property_object.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1dynamic__global__property__object_1a6885010b682e4f90ba14d6a3ea4b61bb" prot="public" static="no" mutable="no">
+        <type>time_point_sec</type>
+        <definition>time_point_sec graphene::chain::dynamic_global_property_object::last_budget_time</definition>
+        <argsstring></argsstring>
+        <name>last_budget_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/global_property_object.hpp" line="77" column="1" bodyfile="libraries/chain/include/graphene/chain/global_property_object.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1dynamic__global__property__object_1a6fd44ac88fdcfe657ba2b0af43adceb5" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+        <definition>share_type graphene::chain::dynamic_global_property_object::witness_budget</definition>
+        <argsstring></argsstring>
+        <name>witness_budget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/global_property_object.hpp" line="78" column="1" bodyfile="libraries/chain/include/graphene/chain/global_property_object.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1dynamic__global__property__object_1a1f96c553d4608ac5480fe8d07d2e92a9" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t graphene::chain::dynamic_global_property_object::accounts_registered_this_interval</definition>
+        <argsstring></argsstring>
+        <name>accounts_registered_this_interval</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/global_property_object.hpp" line="79" column="1" bodyfile="libraries/chain/include/graphene/chain/global_property_object.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1dynamic__global__property__object_1ae58fe8181a2e6b02cf3d78d29ccf0f08" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t graphene::chain::dynamic_global_property_object::recently_missed_count</definition>
+        <argsstring></argsstring>
+        <name>recently_missed_count</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Every time a block is missed this increases by RECENTLY_MISSED_COUNT_INCREMENT, every time a block is found it decreases by RECENTLY_MISSED_COUNT_DECREMENT. It is never less than 0.</para><para>If the recently_missed_count hits 2*UNDO_HISTORY then no new blocks may be pushed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/global_property_object.hpp" line="89" column="1" bodyfile="libraries/chain/include/graphene/chain/global_property_object.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1dynamic__global__property__object_1a8953680ec7a11395478b71b445707812" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t graphene::chain::dynamic_global_property_object::current_aslot</definition>
+        <argsstring></argsstring>
+        <name>current_aslot</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The current absolute slot number. Equal to the total number of slots since genesis. Also equal to the total number of missed slots plus head_block_number. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/global_property_object.hpp" line="96" column="1" bodyfile="libraries/chain/include/graphene/chain/global_property_object.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1dynamic__global__property__object_1a291e4b87492f0548b1dc6e94c4cb0a47" prot="public" static="no" mutable="no">
+        <type>fc::uint128_t</type>
+        <definition>fc::uint128_t graphene::chain::dynamic_global_property_object::recent_slots_filled</definition>
+        <argsstring></argsstring>
+        <name>recent_slots_filled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>used to compute witness participation. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/global_property_object.hpp" line="101" column="1" bodyfile="libraries/chain/include/graphene/chain/global_property_object.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1dynamic__global__property__object_1a4936eae7bb09a0fa08450cffa2d6d63f" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t graphene::chain::dynamic_global_property_object::dynamic_flags</definition>
+        <argsstring></argsstring>
+        <name>dynamic_flags</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>dynamic_flags specifies chain state properties that can be expressed in one bit. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/global_property_object.hpp" line="107" column="1" bodyfile="libraries/chain/include/graphene/chain/global_property_object.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1dynamic__global__property__object_1a74dfc7b21530d28ade644ce1ff13a2b7" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t graphene::chain::dynamic_global_property_object::last_irreversible_block_num</definition>
+        <argsstring></argsstring>
+        <name>last_irreversible_block_num</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/global_property_object.hpp" line="109" column="1" bodyfile="libraries/chain/include/graphene/chain/global_property_object.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Maintains global state information (committee_member list, current fees)</para><para>This is an implementation detail. The values here are calculated during normal chain operations and reflect the current values of global blockchain properties. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1607">
+        <label>graphene::db::abstract_object&lt; dynamic_global_property_object &gt;</label>
+      </node>
+      <node id="1606">
+        <label>graphene::chain::dynamic_global_property_object</label>
+        <link refid="classgraphene_1_1chain_1_1dynamic__global__property__object"/>
+        <childnode refid="1607" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1610">
+        <label>time_point_sec</label>
+      </node>
+      <node id="1609">
+        <label>graphene::db::abstract_object&lt; dynamic_global_property_object &gt;</label>
+      </node>
+      <node id="1608">
+        <label>graphene::chain::dynamic_global_property_object</label>
+        <link refid="classgraphene_1_1chain_1_1dynamic__global__property__object"/>
+        <childnode refid="1609" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1610" relation="usage">
+          <edgelabel>next_maintenance_time</edgelabel>
+          <edgelabel>last_budget_time</edgelabel>
+          <edgelabel>time</edgelabel>
+        </childnode>
+        <childnode refid="1611" relation="usage">
+          <edgelabel>witness_budget</edgelabel>
+        </childnode>
+      </node>
+      <node id="1611">
+        <label>safe&lt; int64_t &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/global_property_object.hpp" line="67" column="1" bodyfile="libraries/chain/include/graphene/chain/global_property_object.hpp" bodystart="66" bodyend="124"/>
+    <listofallmembers>
+      <member refid="classgraphene_1_1chain_1_1dynamic__global__property__object_1a1f96c553d4608ac5480fe8d07d2e92a9" prot="public" virt="non-virtual"><scope>graphene::chain::dynamic_global_property_object</scope><name>accounts_registered_this_interval</name></member>
+      <member refid="classgraphene_1_1chain_1_1dynamic__global__property__object_1a8953680ec7a11395478b71b445707812" prot="public" virt="non-virtual"><scope>graphene::chain::dynamic_global_property_object</scope><name>current_aslot</name></member>
+      <member refid="classgraphene_1_1chain_1_1dynamic__global__property__object_1a02575a5c7cf9d6ab3e3ae2c5d287ac28" prot="public" virt="non-virtual"><scope>graphene::chain::dynamic_global_property_object</scope><name>current_witness</name></member>
+      <member refid="classgraphene_1_1chain_1_1dynamic__global__property__object_1a566f83c180a362c4296d06e5d1930482" prot="public" virt="non-virtual"><scope>graphene::chain::dynamic_global_property_object</scope><name>dynamic_flag_bits</name></member>
+      <member refid="classgraphene_1_1chain_1_1dynamic__global__property__object_1a4936eae7bb09a0fa08450cffa2d6d63f" prot="public" virt="non-virtual"><scope>graphene::chain::dynamic_global_property_object</scope><name>dynamic_flags</name></member>
+      <member refid="classgraphene_1_1chain_1_1dynamic__global__property__object_1aa919d4efd23a372b60801837fd2b2912" prot="public" virt="non-virtual"><scope>graphene::chain::dynamic_global_property_object</scope><name>head_block_id</name></member>
+      <member refid="classgraphene_1_1chain_1_1dynamic__global__property__object_1aec0d3d4326eda5531e557093ce913743" prot="public" virt="non-virtual"><scope>graphene::chain::dynamic_global_property_object</scope><name>head_block_number</name></member>
+      <member refid="classgraphene_1_1chain_1_1dynamic__global__property__object_1a6885010b682e4f90ba14d6a3ea4b61bb" prot="public" virt="non-virtual"><scope>graphene::chain::dynamic_global_property_object</scope><name>last_budget_time</name></member>
+      <member refid="classgraphene_1_1chain_1_1dynamic__global__property__object_1a74dfc7b21530d28ade644ce1ff13a2b7" prot="public" virt="non-virtual"><scope>graphene::chain::dynamic_global_property_object</scope><name>last_irreversible_block_num</name></member>
+      <member refid="classgraphene_1_1chain_1_1dynamic__global__property__object_1a566f83c180a362c4296d06e5d1930482ab2946fc5c4d7acc1bbf1880ebe5a1c12" prot="public" virt="non-virtual"><scope>graphene::chain::dynamic_global_property_object</scope><name>maintenance_flag</name></member>
+      <member refid="classgraphene_1_1chain_1_1dynamic__global__property__object_1a2e907ac0340cc99a629d957bdc729faa" prot="public" virt="non-virtual"><scope>graphene::chain::dynamic_global_property_object</scope><name>next_maintenance_time</name></member>
+      <member refid="classgraphene_1_1chain_1_1dynamic__global__property__object_1a291e4b87492f0548b1dc6e94c4cb0a47" prot="public" virt="non-virtual"><scope>graphene::chain::dynamic_global_property_object</scope><name>recent_slots_filled</name></member>
+      <member refid="classgraphene_1_1chain_1_1dynamic__global__property__object_1ae58fe8181a2e6b02cf3d78d29ccf0f08" prot="public" virt="non-virtual"><scope>graphene::chain::dynamic_global_property_object</scope><name>recently_missed_count</name></member>
+      <member refid="classgraphene_1_1chain_1_1dynamic__global__property__object_1a41784d88561fbdb998a85c37ca6b77f9" prot="public" virt="non-virtual"><scope>graphene::chain::dynamic_global_property_object</scope><name>space_id</name></member>
+      <member refid="classgraphene_1_1chain_1_1dynamic__global__property__object_1a30cf8f3d61b1bd1fdcb19836ada6e14e" prot="public" virt="non-virtual"><scope>graphene::chain::dynamic_global_property_object</scope><name>time</name></member>
+      <member refid="classgraphene_1_1chain_1_1dynamic__global__property__object_1a14df287e156aad421e1a6b9f00e27e1a" prot="public" virt="non-virtual"><scope>graphene::chain::dynamic_global_property_object</scope><name>type_id</name></member>
+      <member refid="classgraphene_1_1chain_1_1dynamic__global__property__object_1a6fd44ac88fdcfe657ba2b0af43adceb5" prot="public" virt="non-virtual"><scope>graphene::chain::dynamic_global_property_object</scope><name>witness_budget</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgraphene_1_1wallet_1_1utility" kind="class" language="C++" prot="public">
+    <compoundname>graphene::wallet::utility</compoundname>
+    <includes refid="wallet_8hpp" local="no">wallet.hpp</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1utility_1a2c55d056c89bbd5945489c5185cea814" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="structgraphene_1_1wallet_1_1brain__key__info" kindref="compound">brain_key_info</ref> &gt;</type>
+        <definition>vector&lt; brain_key_info &gt; graphene::wallet::utility::derive_owner_keys_from_brain_key</definition>
+        <argsstring>(string brain_key, int number_of_desired_keys=1)</argsstring>
+        <name>derive_owner_keys_from_brain_key</name>
+        <param>
+          <type>string</type>
+          <declname>brain_key</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>number_of_desired_keys</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Derive any number of <emphasis>possible</emphasis> owner keys from a given brain key.</para><para>NOTE: These keys may or may not match with the owner keys of any account. This function is merely intended to assist with account or key recovery.</para><para><simplesect kind="see"><para>suggest_brain_key()</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>brain_key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Brain key </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>number_of_desired_keys</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of desired keys </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A list of keys that are deterministically derived from the brainkey </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="276" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2738" bodyend="2758"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="262" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="262" bodyend="277"/>
+    <listofallmembers>
+      <member refid="classgraphene_1_1wallet_1_1utility_1a2c55d056c89bbd5945489c5185cea814" prot="public" virt="non-virtual"><scope>graphene::wallet::utility</scope><name>derive_owner_keys_from_brain_key</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

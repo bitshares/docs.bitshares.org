@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1burn__worker__type" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::burn_worker_type</compoundname>
+    <includes refid="worker__object_8hpp" local="no">worker_object.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1burn__worker__type_1ae9847f16c1fdb9c33fcf31f5d428890c" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+        <definition>share_type graphene::chain::burn_worker_type::total_burned</definition>
+        <argsstring></argsstring>
+        <name>total_burned</name>
+        <briefdescription>
+<para>Record of how much this worker has burned in his lifetime. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/worker_object.hpp" line="88" column="1" bodyfile="libraries/chain/include/graphene/chain/worker_object.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1burn__worker__type_1ac04003f5d6f5bf77717ad1278c572d12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::burn_worker_type::pay_worker</definition>
+        <argsstring>(share_type pay, database &amp;)</argsstring>
+        <name>pay_worker</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+          <declname>pay</declname>
+        </param>
+        <param>
+          <type><ref refid="classgraphene_1_1chain_1_1database" kindref="compound">database</ref> &amp;</type>
+          <defname>db</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/worker_object.hpp" line="90" column="1" bodyfile="libraries/chain/worker_evaluator.cpp" bodystart="122" bodyend="126"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A worker who permanently destroys all of his pay. </para>    </briefdescription>
+    <detaileddescription>
+<para>This worker sends all pay he receives to the null account. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="1283">
+        <label>safe&lt; int64_t &gt;</label>
+      </node>
+      <node id="1282">
+        <label>graphene::chain::burn_worker_type</label>
+        <link refid="structgraphene_1_1chain_1_1burn__worker__type"/>
+        <childnode refid="1283" relation="usage">
+          <edgelabel>total_burned</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/worker_object.hpp" line="86" column="1" bodyfile="libraries/chain/include/graphene/chain/worker_object.hpp" bodystart="85" bodyend="91"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1burn__worker__type_1ac04003f5d6f5bf77717ad1278c572d12" prot="public" virt="non-virtual"><scope>graphene::chain::burn_worker_type</scope><name>pay_worker</name></member>
+      <member refid="structgraphene_1_1chain_1_1burn__worker__type_1ae9847f16c1fdb9c33fcf31f5d428890c" prot="public" virt="non-virtual"><scope>graphene::chain::burn_worker_type</scope><name>total_burned</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

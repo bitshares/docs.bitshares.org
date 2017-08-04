@@ -1,0 +1,385 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgraphene_1_1chain_1_1fork__database" kind="class" language="C++" prot="public">
+    <compoundname>graphene::chain::fork_database</compoundname>
+    <includes refid="fork__database_8hpp" local="no">fork_database.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classgraphene_1_1chain_1_1fork__database_1a1f06faf4817e8fedc44cb3b56f77ee1a" prot="public" static="no">
+        <type>vector&lt; <ref refid="namespacegraphene_1_1chain_1a455f7a42385453236a3252fa8ba97654" kindref="member">item_ptr</ref> &gt;</type>
+        <definition>typedef vector&lt;item_ptr&gt; graphene::chain::fork_database::branch_type</definition>
+        <argsstring></argsstring>
+        <name>branch_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/fork_database.hpp" line="71" column="1" bodyfile="libraries/chain/include/graphene/chain/fork_database.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classgraphene_1_1chain_1_1fork__database_1a365f404cd62a6e1d1ae48104148215bc" prot="public" static="no">
+        <type>multi_index_container&lt; <ref refid="namespacegraphene_1_1chain_1a455f7a42385453236a3252fa8ba97654" kindref="member">item_ptr</ref>, indexed_by&lt; hashed_unique&lt; tag&lt; block_id &gt;, member&lt; <ref refid="structgraphene_1_1chain_1_1fork__item" kindref="compound">fork_item</ref>, <ref refid="namespacegraphene_1_1chain_1a314b030d7a6107c5641fd9945da7f568" kindref="member">block_id_type</ref>, &amp;<ref refid="structgraphene_1_1chain_1_1fork__item_1a3d96781568fcbebf3cfa0a53e08530c3" kindref="member">fork_item::id</ref> &gt;, std::hash&lt; fc::ripemd160 &gt; &gt;, hashed_non_unique&lt; tag&lt; by_previous &gt;, const_mem_fun&lt; <ref refid="structgraphene_1_1chain_1_1fork__item" kindref="compound">fork_item</ref>, <ref refid="namespacegraphene_1_1chain_1a314b030d7a6107c5641fd9945da7f568" kindref="member">block_id_type</ref>, &amp;<ref refid="structgraphene_1_1chain_1_1fork__item_1a9f3d5e56ae208fb4c39aa6422589255b" kindref="member">fork_item::previous_id</ref> &gt;, std::hash&lt; fc::ripemd160 &gt; &gt;, ordered_non_unique&lt; tag&lt; block_num &gt;, member&lt; <ref refid="structgraphene_1_1chain_1_1fork__item" kindref="compound">fork_item</ref>, uint32_t,&amp;<ref refid="structgraphene_1_1chain_1_1fork__item_1a382a00efd04e95349085a60530134fa9" kindref="member">fork_item::num</ref> &gt; &gt; &gt; &gt;</type>
+        <definition>typedef multi_index_container&lt; item_ptr, indexed_by&lt; hashed_unique&lt;tag&lt;block_id&gt;, member&lt;fork_item, block_id_type, &amp;fork_item::id&gt;, std::hash&lt;fc::ripemd160&gt; &gt;, hashed_non_unique&lt;tag&lt;by_previous&gt;, const_mem_fun&lt;fork_item, block_id_type, &amp;fork_item::previous_id&gt;, std::hash&lt;fc::ripemd160&gt; &gt;, ordered_non_unique&lt;tag&lt;block_num&gt;, member&lt;fork_item,uint32_t,&amp;fork_item::num&gt; &gt; &gt; &gt; graphene::chain::fork_database::fork_multi_index_type</definition>
+        <argsstring></argsstring>
+        <name>fork_multi_index_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/fork_database.hpp" line="109" column="1" bodyfile="libraries/chain/include/graphene/chain/fork_database.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1fork__database_1ab3ccef6661b3f6a3fa3437887e773eaa" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int graphene::chain::fork_database::MAX_BLOCK_REORDERING</definition>
+        <argsstring></argsstring>
+        <name>MAX_BLOCK_REORDERING</name>
+        <initializer>= 1024</initializer>
+        <briefdescription>
+<para>The maximum number of blocks that may be skipped in an out-of-order push. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/fork_database.hpp" line="73" column="1" bodyfile="libraries/chain/include/graphene/chain/fork_database.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1fork__database_1a7ad447fd9f612998a824d447faf8754f" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t graphene::chain::fork_database::_max_size</definition>
+        <argsstring></argsstring>
+        <name>_max_size</name>
+        <initializer>= 1024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/fork_database.hpp" line="118" column="1" bodyfile="libraries/chain/include/graphene/chain/fork_database.hpp" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1fork__database_1a37f45a521d9884049c338f291c4aa9f1" prot="private" static="no" mutable="no">
+        <type><ref refid="classgraphene_1_1chain_1_1fork__database_1a365f404cd62a6e1d1ae48104148215bc" kindref="member">fork_multi_index_type</ref></type>
+        <definition>fork_multi_index_type graphene::chain::fork_database::_unlinked_index</definition>
+        <argsstring></argsstring>
+        <name>_unlinked_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/fork_database.hpp" line="120" column="1" bodyfile="libraries/chain/include/graphene/chain/fork_database.hpp" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1fork__database_1a8c5a65614c5d1ada7b8bb85d7639d497" prot="private" static="no" mutable="no">
+        <type><ref refid="classgraphene_1_1chain_1_1fork__database_1a365f404cd62a6e1d1ae48104148215bc" kindref="member">fork_multi_index_type</ref></type>
+        <definition>fork_multi_index_type graphene::chain::fork_database::_index</definition>
+        <argsstring></argsstring>
+        <name>_index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/fork_database.hpp" line="121" column="1" bodyfile="libraries/chain/include/graphene/chain/fork_database.hpp" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1fork__database_1a9a6c944527ed62e0f0e1638c07b90969" prot="private" static="no" mutable="no">
+        <type>shared_ptr&lt; <ref refid="structgraphene_1_1chain_1_1fork__item" kindref="compound">fork_item</ref> &gt;</type>
+        <definition>shared_ptr&lt;fork_item&gt; graphene::chain::fork_database::_head</definition>
+        <argsstring></argsstring>
+        <name>_head</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/fork_database.hpp" line="122" column="1" bodyfile="libraries/chain/include/graphene/chain/fork_database.hpp" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1fork__database_1a40ba49a8b4d929c894df9fbc110243e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>graphene::chain::fork_database::fork_database</definition>
+        <argsstring>()</argsstring>
+        <name>fork_database</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/fork_database.hpp" line="75" column="1" bodyfile="libraries/chain/fork_database.cpp" bodystart="30" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1fork__database_1a7120c86cf8c9e8f86f52be52d4be3b3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::fork_database::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/fork_database.hpp" line="76" column="1" bodyfile="libraries/chain/fork_database.cpp" bodystart="33" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1fork__database_1abacaa8af84a83a66e4fdd137fa35ccce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::fork_database::start_block</definition>
+        <argsstring>(signed_block b)</argsstring>
+        <name>start_block</name>
+        <param>
+          <type><ref refid="structgraphene_1_1chain_1_1signed__block" kindref="compound">signed_block</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/fork_database.hpp" line="78" column="1" bodyfile="libraries/chain/fork_database.cpp" bodystart="47" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1fork__database_1ae06cc1d56ea2e8fc46b39c44201dde8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::fork_database::remove</definition>
+        <argsstring>(block_id_type b)</argsstring>
+        <name>remove</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a314b030d7a6107c5641fd9945da7f568" kindref="member">block_id_type</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/fork_database.hpp" line="79" column="1" bodyfile="libraries/chain/fork_database.cpp" bodystart="248" bodyend="251"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1fork__database_1a938b25a516701dbd7d43e3ac444ba068" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::fork_database::set_head</definition>
+        <argsstring>(shared_ptr&lt; fork_item &gt; h)</argsstring>
+        <name>set_head</name>
+        <param>
+          <type>shared_ptr&lt; <ref refid="structgraphene_1_1chain_1_1fork__item" kindref="compound">fork_item</ref> &gt;</type>
+          <declname>h</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/fork_database.hpp" line="80" column="1" bodyfile="libraries/chain/fork_database.cpp" bodystart="243" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1fork__database_1a68c3c2cf975b0df4980d9f4311815074" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::fork_database::is_known_block</definition>
+        <argsstring>(const block_id_type &amp;id) const</argsstring>
+        <name>is_known_block</name>
+        <param>
+          <type>const <ref refid="namespacegraphene_1_1chain_1a314b030d7a6107c5641fd9945da7f568" kindref="member">block_id_type</ref> &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/fork_database.hpp" line="81" column="1" bodyfile="libraries/chain/fork_database.cpp" bodystart="160" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1fork__database_1afea46c995295b788c84976e819d24dbe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>shared_ptr&lt; <ref refid="structgraphene_1_1chain_1_1fork__item" kindref="compound">fork_item</ref> &gt;</type>
+        <definition>item_ptr graphene::chain::fork_database::fetch_block</definition>
+        <argsstring>(const block_id_type &amp;id) const</argsstring>
+        <name>fetch_block</name>
+        <param>
+          <type>const <ref refid="namespacegraphene_1_1chain_1a314b030d7a6107c5641fd9945da7f568" kindref="member">block_id_type</ref> &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/fork_database.hpp" line="82" column="1" bodyfile="libraries/chain/fork_database.cpp" bodystart="171" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1fork__database_1ab1244c8dbaf21983d81af0818416b0a1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="namespacegraphene_1_1chain_1a455f7a42385453236a3252fa8ba97654" kindref="member">item_ptr</ref> &gt;</type>
+        <definition>vector&lt; item_ptr &gt; graphene::chain::fork_database::fetch_block_by_number</definition>
+        <argsstring>(uint32_t n) const</argsstring>
+        <name>fetch_block_by_number</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/fork_database.hpp" line="83" column="1" bodyfile="libraries/chain/fork_database.cpp" bodystart="184" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1fork__database_1a43d65adc655effa23bca9d7a93d42bdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>shared_ptr&lt; <ref refid="structgraphene_1_1chain_1_1fork__item" kindref="compound">fork_item</ref> &gt;</type>
+        <definition>shared_ptr&lt; fork_item &gt; graphene::chain::fork_database::push_block</definition>
+        <argsstring>(const signed_block &amp;b)</argsstring>
+        <name>push_block</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1signed__block" kindref="compound">signed_block</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the new head block ( the longest fork )</para></simplesect>
+Pushes the block into the fork database and caches it if it doesn&apos;t link </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/fork_database.hpp" line="88" column="1" bodyfile="libraries/chain/fork_database.cpp" bodystart="58" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1fork__database_1ac8f037c13ce941cf69397608566732a5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>shared_ptr&lt; <ref refid="structgraphene_1_1chain_1_1fork__item" kindref="compound">fork_item</ref> &gt;</type>
+        <definition>shared_ptr&lt;fork_item&gt; graphene::chain::fork_database::head</definition>
+        <argsstring>() const</argsstring>
+        <name>head</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/fork_database.hpp" line="89" column="1" bodyfile="libraries/chain/include/graphene/chain/fork_database.hpp" bodystart="89" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1fork__database_1a5a438cb36c9ea891bb47164c08c01c96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::fork_database::pop_block</definition>
+        <argsstring>()</argsstring>
+        <name>pop_block</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/fork_database.hpp" line="90" column="1" bodyfile="libraries/chain/fork_database.cpp" bodystart="39" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1fork__database_1a0b521e20b7a86be5a8294a34a3bdd9e0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>pair&lt; <ref refid="classgraphene_1_1chain_1_1fork__database_1a1f06faf4817e8fedc44cb3b56f77ee1a" kindref="member">branch_type</ref>, <ref refid="classgraphene_1_1chain_1_1fork__database_1a1f06faf4817e8fedc44cb3b56f77ee1a" kindref="member">branch_type</ref> &gt;</type>
+        <definition>pair&lt; fork_database::branch_type, fork_database::branch_type &gt; graphene::chain::fork_database::fetch_branch_from</definition>
+        <argsstring>(block_id_type first, block_id_type second) const</argsstring>
+        <name>fetch_branch_from</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a314b030d7a6107c5641fd9945da7f568" kindref="member">block_id_type</ref></type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a314b030d7a6107c5641fd9945da7f568" kindref="member">block_id_type</ref></type>
+          <declname>second</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Given two head blocks, return two branches of the fork graph that end with a common ancestor (same prior block) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/fork_database.hpp" line="96" column="1" bodyfile="libraries/chain/fork_database.cpp" bodystart="200" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1fork__database_1acfc69f6b30385000233d3db985e866e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::fork_database::set_max_size</definition>
+        <argsstring>(uint32_t s)</argsstring>
+        <name>set_max_size</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>index</para><para>unlinked_index </para>        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/fork_database.hpp" line="111" column="1" bodyfile="libraries/chain/fork_database.cpp" bodystart="129" bodyend="158"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1fork__database_1a0d8ab71da7085bc5ab0166b2981564e9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::fork_database::_push_block</definition>
+        <argsstring>(const item_ptr &amp;b)</argsstring>
+        <name>_push_block</name>
+        <param>
+          <type>const <ref refid="namespacegraphene_1_1chain_1a455f7a42385453236a3252fa8ba97654" kindref="member">item_ptr</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>a pointer to the newly pushed item </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/fork_database.hpp" line="115" column="1" bodyfile="libraries/chain/fork_database.cpp" bodystart="74" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1fork__database_1a39a68038b73865a6bcf19b2978625233" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::fork_database::_push_next</definition>
+        <argsstring>(const item_ptr &amp;newly_inserted)</argsstring>
+        <name>_push_next</name>
+        <param>
+          <type>const <ref refid="namespacegraphene_1_1chain_1a455f7a42385453236a3252fa8ba97654" kindref="member">item_ptr</ref> &amp;</type>
+          <declname>newly_inserted</declname>
+          <defname>new_item</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Iterate through the unlinked cache and insert anything that links to the newly inserted item. This will start a recursive set of calls performing a depth-first insertion of pending blocks as _push_next(..) calls _push_block(...) which will in turn call _push_next </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/fork_database.hpp" line="116" column="1" bodyfile="libraries/chain/fork_database.cpp" bodystart="114" bodyend="127"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>As long as blocks are pushed in order the fork database will maintain a linked tree of all blocks that branch from the start_block. The tree will have a maximum depth of 1024 blocks after which the database will start lopping off forks.</para><para>Every time a block is pushed into the fork DB the block with the highest block_num will be returned. </para>    </detaileddescription>
+    <location file="libraries/chain/include/graphene/chain/fork_database.hpp" line="69" column="1" bodyfile="libraries/chain/include/graphene/chain/fork_database.hpp" bodystart="68" bodyend="123"/>
+    <listofallmembers>
+      <member refid="classgraphene_1_1chain_1_1fork__database_1a9a6c944527ed62e0f0e1638c07b90969" prot="private" virt="non-virtual"><scope>graphene::chain::fork_database</scope><name>_head</name></member>
+      <member refid="classgraphene_1_1chain_1_1fork__database_1a8c5a65614c5d1ada7b8bb85d7639d497" prot="private" virt="non-virtual"><scope>graphene::chain::fork_database</scope><name>_index</name></member>
+      <member refid="classgraphene_1_1chain_1_1fork__database_1a7ad447fd9f612998a824d447faf8754f" prot="private" virt="non-virtual"><scope>graphene::chain::fork_database</scope><name>_max_size</name></member>
+      <member refid="classgraphene_1_1chain_1_1fork__database_1a0d8ab71da7085bc5ab0166b2981564e9" prot="private" virt="non-virtual"><scope>graphene::chain::fork_database</scope><name>_push_block</name></member>
+      <member refid="classgraphene_1_1chain_1_1fork__database_1a39a68038b73865a6bcf19b2978625233" prot="private" virt="non-virtual"><scope>graphene::chain::fork_database</scope><name>_push_next</name></member>
+      <member refid="classgraphene_1_1chain_1_1fork__database_1a37f45a521d9884049c338f291c4aa9f1" prot="private" virt="non-virtual"><scope>graphene::chain::fork_database</scope><name>_unlinked_index</name></member>
+      <member refid="classgraphene_1_1chain_1_1fork__database_1a1f06faf4817e8fedc44cb3b56f77ee1a" prot="public" virt="non-virtual"><scope>graphene::chain::fork_database</scope><name>branch_type</name></member>
+      <member refid="classgraphene_1_1chain_1_1fork__database_1afea46c995295b788c84976e819d24dbe" prot="public" virt="non-virtual"><scope>graphene::chain::fork_database</scope><name>fetch_block</name></member>
+      <member refid="classgraphene_1_1chain_1_1fork__database_1ab1244c8dbaf21983d81af0818416b0a1" prot="public" virt="non-virtual"><scope>graphene::chain::fork_database</scope><name>fetch_block_by_number</name></member>
+      <member refid="classgraphene_1_1chain_1_1fork__database_1a0b521e20b7a86be5a8294a34a3bdd9e0" prot="public" virt="non-virtual"><scope>graphene::chain::fork_database</scope><name>fetch_branch_from</name></member>
+      <member refid="classgraphene_1_1chain_1_1fork__database_1a40ba49a8b4d929c894df9fbc110243e4" prot="public" virt="non-virtual"><scope>graphene::chain::fork_database</scope><name>fork_database</name></member>
+      <member refid="classgraphene_1_1chain_1_1fork__database_1a365f404cd62a6e1d1ae48104148215bc" prot="public" virt="non-virtual"><scope>graphene::chain::fork_database</scope><name>fork_multi_index_type</name></member>
+      <member refid="classgraphene_1_1chain_1_1fork__database_1ac8f037c13ce941cf69397608566732a5" prot="public" virt="non-virtual"><scope>graphene::chain::fork_database</scope><name>head</name></member>
+      <member refid="classgraphene_1_1chain_1_1fork__database_1a68c3c2cf975b0df4980d9f4311815074" prot="public" virt="non-virtual"><scope>graphene::chain::fork_database</scope><name>is_known_block</name></member>
+      <member refid="classgraphene_1_1chain_1_1fork__database_1ab3ccef6661b3f6a3fa3437887e773eaa" prot="public" virt="non-virtual"><scope>graphene::chain::fork_database</scope><name>MAX_BLOCK_REORDERING</name></member>
+      <member refid="classgraphene_1_1chain_1_1fork__database_1a5a438cb36c9ea891bb47164c08c01c96" prot="public" virt="non-virtual"><scope>graphene::chain::fork_database</scope><name>pop_block</name></member>
+      <member refid="classgraphene_1_1chain_1_1fork__database_1a43d65adc655effa23bca9d7a93d42bdb" prot="public" virt="non-virtual"><scope>graphene::chain::fork_database</scope><name>push_block</name></member>
+      <member refid="classgraphene_1_1chain_1_1fork__database_1ae06cc1d56ea2e8fc46b39c44201dde8a" prot="public" virt="non-virtual"><scope>graphene::chain::fork_database</scope><name>remove</name></member>
+      <member refid="classgraphene_1_1chain_1_1fork__database_1a7120c86cf8c9e8f86f52be52d4be3b3c" prot="public" virt="non-virtual"><scope>graphene::chain::fork_database</scope><name>reset</name></member>
+      <member refid="classgraphene_1_1chain_1_1fork__database_1a938b25a516701dbd7d43e3ac444ba068" prot="public" virt="non-virtual"><scope>graphene::chain::fork_database</scope><name>set_head</name></member>
+      <member refid="classgraphene_1_1chain_1_1fork__database_1acfc69f6b30385000233d3db985e866e1" prot="public" virt="non-virtual"><scope>graphene::chain::fork_database</scope><name>set_max_size</name></member>
+      <member refid="classgraphene_1_1chain_1_1fork__database_1abacaa8af84a83a66e4fdd137fa35ccce" prot="public" virt="non-virtual"><scope>graphene::chain::fork_database</scope><name>start_block</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

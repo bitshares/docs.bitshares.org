@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1stealth__confirmation" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::stealth_confirmation</compoundname>
+    <includes refid="confidential_8hpp" local="no">confidential.hpp</includes>
+    <innerclass refid="structgraphene_1_1chain_1_1stealth__confirmation_1_1memo__data" prot="public">graphene::chain::stealth_confirmation::memo_data</innerclass>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1stealth__confirmation_1a247c2886fa7a2154afe9bae179709fe0" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref></type>
+        <definition>public_key_type graphene::chain::stealth_confirmation::one_time_key</definition>
+        <argsstring></argsstring>
+        <name>one_time_key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/confidential.hpp" line="121" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/confidential.hpp" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1stealth__confirmation_1a52e85446a207bace2fdf33f32b7c206b" prot="public" static="no" mutable="no">
+        <type>optional&lt; <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref> &gt;</type>
+        <definition>optional&lt;public_key_type&gt; graphene::chain::stealth_confirmation::to</definition>
+        <argsstring></argsstring>
+        <name>to</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/confidential.hpp" line="122" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/confidential.hpp" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1stealth__confirmation_1a5a45865dd7207979af62e2a8608669ac" prot="public" static="no" mutable="no">
+        <type>vector&lt; char &gt;</type>
+        <definition>vector&lt;char&gt; graphene::chain::stealth_confirmation::encrypted_memo</definition>
+        <argsstring></argsstring>
+        <name>encrypted_memo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/confidential.hpp" line="123" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/confidential.hpp" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1stealth__confirmation_1a92b4aca3fe8c4fbc42a4a3b8be9d92b4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>graphene::chain::stealth_confirmation::operator string</definition>
+        <argsstring>() const</argsstring>
+        <name>operator string</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Packs *this then encodes as base58 encoded string. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/confidential.hpp" line="114" column="1" bodyfile="libraries/chain/protocol/confidential.cpp" bodystart="150" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1stealth__confirmation_1a83bf05e77c1951b043e73beda8466607" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>graphene::chain::stealth_confirmation::stealth_confirmation</definition>
+        <argsstring>(const std::string &amp;base58)</argsstring>
+        <name>stealth_confirmation</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>base58</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unpacks from a base58 string </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/confidential.hpp" line="118" column="1" bodyfile="libraries/chain/protocol/confidential.cpp" bodystart="157" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1stealth__confirmation_1a5c03e14170764189bb1bc0d96208d63c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>graphene::chain::stealth_confirmation::stealth_confirmation</definition>
+        <argsstring>()</argsstring>
+        <name>stealth_confirmation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/confidential.hpp" line="119" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/confidential.hpp" bodystart="119" bodyend="119"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>When sending a stealth tranfer we assume users are unable to scan the full blockchain; therefore, payments require confirmation data to be passed out of band. We assume this out-of-band channel is not secure and therefore the contents of the confirmation must be encrypted. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="2672">
+        <label>graphene::chain::stealth_confirmation</label>
+        <link refid="structgraphene_1_1chain_1_1stealth__confirmation"/>
+        <childnode refid="2673" relation="usage">
+          <edgelabel>to</edgelabel>
+        </childnode>
+        <childnode refid="2674" relation="usage">
+          <edgelabel>encrypted_memo</edgelabel>
+        </childnode>
+        <childnode refid="2675" relation="usage">
+          <edgelabel>one_time_key</edgelabel>
+        </childnode>
+      </node>
+      <node id="2674">
+        <label>vector&lt; char &gt;</label>
+      </node>
+      <node id="2675">
+        <label>graphene::chain::public_key_type</label>
+        <link refid="structgraphene_1_1chain_1_1public__key__type"/>
+      </node>
+      <node id="2673">
+        <label>optional&lt; graphene::chain::public_key_type &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/protocol/confidential.hpp" line="101" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/confidential.hpp" bodystart="100" bodyend="124"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1stealth__confirmation_1a5a45865dd7207979af62e2a8608669ac" prot="public" virt="non-virtual"><scope>graphene::chain::stealth_confirmation</scope><name>encrypted_memo</name></member>
+      <member refid="structgraphene_1_1chain_1_1stealth__confirmation_1a247c2886fa7a2154afe9bae179709fe0" prot="public" virt="non-virtual"><scope>graphene::chain::stealth_confirmation</scope><name>one_time_key</name></member>
+      <member refid="structgraphene_1_1chain_1_1stealth__confirmation_1a92b4aca3fe8c4fbc42a4a3b8be9d92b4" prot="public" virt="non-virtual"><scope>graphene::chain::stealth_confirmation</scope><name>operator string</name></member>
+      <member refid="structgraphene_1_1chain_1_1stealth__confirmation_1a83bf05e77c1951b043e73beda8466607" prot="public" virt="non-virtual"><scope>graphene::chain::stealth_confirmation</scope><name>stealth_confirmation</name></member>
+      <member refid="structgraphene_1_1chain_1_1stealth__confirmation_1a5c03e14170764189bb1bc0d96208d63c" prot="public" virt="non-virtual"><scope>graphene::chain::stealth_confirmation</scope><name>stealth_confirmation</name></member>
+      <member refid="structgraphene_1_1chain_1_1stealth__confirmation_1a52e85446a207bace2fdf33f32b7c206b" prot="public" virt="non-virtual"><scope>graphene::chain::stealth_confirmation</scope><name>to</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

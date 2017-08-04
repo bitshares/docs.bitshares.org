@@ -1,0 +1,342 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="witness__object_8hpp" kind="file" language="C++">
+    <compoundname>witness_object.hpp</compoundname>
+    <includes refid="asset_8hpp" local="no">graphene/chain/protocol/asset.hpp</includes>
+    <includes local="no">graphene/db/object.hpp</includes>
+    <includes local="no">graphene/db/generic_index.hpp</includes>
+    <includedby refid="db__balance_8cpp" local="no">libraries/chain/db_balance.cpp</includedby>
+    <includedby refid="db__block_8cpp" local="no">libraries/chain/db_block.cpp</includedby>
+    <includedby refid="db__debug_8cpp" local="no">libraries/chain/db_debug.cpp</includedby>
+    <includedby refid="db__init_8cpp" local="no">libraries/chain/db_init.cpp</includedby>
+    <includedby refid="db__maint_8cpp" local="no">libraries/chain/db_maint.cpp</includedby>
+    <includedby refid="db__update_8cpp" local="no">libraries/chain/db_update.cpp</includedby>
+    <includedby refid="db__witness__schedule_8cpp" local="no">libraries/chain/db_witness_schedule.cpp</includedby>
+    <includedby refid="witness__evaluator_8hpp" local="no">libraries/chain/include/graphene/chain/witness_evaluator.hpp</includedby>
+    <includedby refid="witness__evaluator_8cpp" local="no">libraries/chain/witness_evaluator.cpp</includedby>
+    <includedby refid="database__api_8hpp" local="no">libraries/app/include/graphene/app/database_api.hpp</includedby>
+    <incdepgraph>
+      <node id="11564">
+        <label>fc/reflect/reflect.hpp</label>
+      </node>
+      <node id="11578">
+        <label>graphene/chain/protocol/address.hpp</label>
+        <link refid="address_8hpp"/>
+        <childnode refid="11557" relation="include">
+        </childnode>
+        <childnode refid="11579" relation="include">
+        </childnode>
+        <childnode refid="11580" relation="include">
+        </childnode>
+        <childnode refid="11582" relation="include">
+        </childnode>
+        <childnode refid="11564" relation="include">
+        </childnode>
+      </node>
+      <node id="11573">
+        <label>fc/smart_ref_fwd.hpp</label>
+      </node>
+      <node id="11563">
+        <label>fc/crypto/elliptic.hpp</label>
+      </node>
+      <node id="11577">
+        <label>cstdint</label>
+      </node>
+      <node id="11566">
+        <label>fc/optional.hpp</label>
+      </node>
+      <node id="11582">
+        <label>fc/crypto/ripemd160.hpp</label>
+      </node>
+      <node id="11580">
+        <label>fc/array.hpp</label>
+      </node>
+      <node id="11567">
+        <label>fc/safe.hpp</label>
+      </node>
+      <node id="11570">
+        <label>fc/io/raw.hpp</label>
+      </node>
+      <node id="11581">
+        <label>string</label>
+      </node>
+      <node id="11562">
+        <label>fc/crypto/sha224.hpp</label>
+      </node>
+      <node id="11557">
+        <label>graphene/chain/config.hpp</label>
+        <link refid="config_8hpp"/>
+      </node>
+      <node id="11579">
+        <label>graphene/chain/pts_address.hpp</label>
+        <link refid="pts__address_8hpp"/>
+        <childnode refid="11580" relation="include">
+        </childnode>
+        <childnode refid="11581" relation="include">
+        </childnode>
+        <childnode refid="11564" relation="include">
+        </childnode>
+      </node>
+      <node id="11585">
+        <label>graphene/db/generic_index.hpp</label>
+      </node>
+      <node id="11572">
+        <label>fc/static_variant.hpp</label>
+      </node>
+      <node id="11565">
+        <label>fc/reflect/variant.hpp</label>
+      </node>
+      <node id="11554">
+        <label>libraries/chain/include/graphene/chain/witness_object.hpp</label>
+        <link refid="witness__object_8hpp"/>
+        <childnode refid="11555" relation="include">
+        </childnode>
+        <childnode refid="11584" relation="include">
+        </childnode>
+        <childnode refid="11585" relation="include">
+        </childnode>
+      </node>
+      <node id="11575">
+        <label>vector</label>
+      </node>
+      <node id="11561">
+        <label>fc/io/enum_type.hpp</label>
+      </node>
+      <node id="11555">
+        <label>graphene/chain/protocol/asset.hpp</label>
+        <link refid="asset_8hpp"/>
+        <childnode refid="11556" relation="include">
+        </childnode>
+        <childnode refid="11558" relation="include">
+        </childnode>
+      </node>
+      <node id="11556">
+        <label>graphene/chain/protocol/config.hpp</label>
+        <link refid="protocol_2config_8hpp"/>
+        <childnode refid="11557" relation="include">
+        </childnode>
+      </node>
+      <node id="11568">
+        <label>fc/container/flat.hpp</label>
+      </node>
+      <node id="11583">
+        <label>graphene/db/object_id.hpp</label>
+      </node>
+      <node id="11576">
+        <label>deque</label>
+      </node>
+      <node id="11560">
+        <label>fc/io/varint.hpp</label>
+      </node>
+      <node id="11559">
+        <label>fc/container/flat_fwd.hpp</label>
+      </node>
+      <node id="11569">
+        <label>fc/string.hpp</label>
+      </node>
+      <node id="11571">
+        <label>fc/uint128.hpp</label>
+      </node>
+      <node id="11584">
+        <label>graphene/db/object.hpp</label>
+      </node>
+      <node id="11574">
+        <label>memory</label>
+      </node>
+      <node id="11558">
+        <label>graphene/chain/protocol/types.hpp</label>
+        <link refid="types_8hpp"/>
+        <childnode refid="11559" relation="include">
+        </childnode>
+        <childnode refid="11560" relation="include">
+        </childnode>
+        <childnode refid="11561" relation="include">
+        </childnode>
+        <childnode refid="11562" relation="include">
+        </childnode>
+        <childnode refid="11563" relation="include">
+        </childnode>
+        <childnode refid="11564" relation="include">
+        </childnode>
+        <childnode refid="11565" relation="include">
+        </childnode>
+        <childnode refid="11566" relation="include">
+        </childnode>
+        <childnode refid="11567" relation="include">
+        </childnode>
+        <childnode refid="11568" relation="include">
+        </childnode>
+        <childnode refid="11569" relation="include">
+        </childnode>
+        <childnode refid="11570" relation="include">
+        </childnode>
+        <childnode refid="11571" relation="include">
+        </childnode>
+        <childnode refid="11572" relation="include">
+        </childnode>
+        <childnode refid="11573" relation="include">
+        </childnode>
+        <childnode refid="11574" relation="include">
+        </childnode>
+        <childnode refid="11575" relation="include">
+        </childnode>
+        <childnode refid="11576" relation="include">
+        </childnode>
+        <childnode refid="11577" relation="include">
+        </childnode>
+        <childnode refid="11578" relation="include">
+        </childnode>
+        <childnode refid="11583" relation="include">
+        </childnode>
+        <childnode refid="11556" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="11594">
+        <label>libraries/chain/db_witness_schedule.cpp</label>
+        <link refid="db__witness__schedule_8cpp"/>
+        <childnode refid="11588" relation="include">
+        </childnode>
+      </node>
+      <node id="11598">
+        <label>libraries/app/database_api.cpp</label>
+        <link refid="database__api_8cpp"/>
+      </node>
+      <node id="11604">
+        <label>libraries/wallet/api_documentation_standin.cpp</label>
+        <link refid="api__documentation__standin_8cpp"/>
+      </node>
+      <node id="11603">
+        <label>libraries/wallet/api_documentation.cpp</label>
+        <link refid="api__documentation_8cpp"/>
+      </node>
+      <node id="11587">
+        <label>libraries/chain/db_balance.cpp</label>
+        <link refid="db__balance_8cpp"/>
+        <childnode refid="11588" relation="include">
+        </childnode>
+      </node>
+      <node id="11596">
+        <label>libraries/chain/witness_evaluator.cpp</label>
+        <link refid="witness__evaluator_8cpp"/>
+      </node>
+      <node id="11592">
+        <label>libraries/chain/db_maint.cpp</label>
+        <link refid="db__maint_8cpp"/>
+        <childnode refid="11588" relation="include">
+        </childnode>
+      </node>
+      <node id="11597">
+        <label>libraries/app/include/graphene/app/database_api.hpp</label>
+        <link refid="database__api_8hpp"/>
+        <childnode refid="11598" relation="include">
+        </childnode>
+        <childnode refid="11599" relation="include">
+        </childnode>
+      </node>
+      <node id="11591">
+        <label>libraries/chain/db_init.cpp</label>
+        <link refid="db__init_8cpp"/>
+        <childnode refid="11588" relation="include">
+        </childnode>
+      </node>
+      <node id="11599">
+        <label>libraries/app/include/graphene/app/api.hpp</label>
+        <link refid="api_8hpp"/>
+        <childnode refid="11600" relation="include">
+        </childnode>
+        <childnode refid="11601" relation="include">
+        </childnode>
+        <childnode refid="11602" relation="include">
+        </childnode>
+        <childnode refid="11605" relation="include">
+        </childnode>
+      </node>
+      <node id="11595">
+        <label>libraries/chain/include/graphene/chain/witness_evaluator.hpp</label>
+        <link refid="witness__evaluator_8hpp"/>
+        <childnode refid="11591" relation="include">
+        </childnode>
+        <childnode refid="11596" relation="include">
+        </childnode>
+      </node>
+      <node id="11602">
+        <label>libraries/wallet/include/graphene/wallet/wallet.hpp</label>
+        <link refid="wallet_8hpp"/>
+        <childnode refid="11603" relation="include">
+        </childnode>
+        <childnode refid="11604" relation="include">
+        </childnode>
+        <childnode refid="11605" relation="include">
+        </childnode>
+      </node>
+      <node id="11590">
+        <label>libraries/chain/db_debug.cpp</label>
+        <link refid="db__debug_8cpp"/>
+        <childnode refid="11588" relation="include">
+        </childnode>
+      </node>
+      <node id="11588">
+        <label>libraries/chain/database.cpp</label>
+        <link refid="database_8cpp"/>
+      </node>
+      <node id="11586">
+        <label>libraries/chain/include/graphene/chain/witness_object.hpp</label>
+        <link refid="witness__object_8hpp"/>
+        <childnode refid="11587" relation="include">
+        </childnode>
+        <childnode refid="11589" relation="include">
+        </childnode>
+        <childnode refid="11590" relation="include">
+        </childnode>
+        <childnode refid="11591" relation="include">
+        </childnode>
+        <childnode refid="11592" relation="include">
+        </childnode>
+        <childnode refid="11593" relation="include">
+        </childnode>
+        <childnode refid="11594" relation="include">
+        </childnode>
+        <childnode refid="11595" relation="include">
+        </childnode>
+        <childnode refid="11596" relation="include">
+        </childnode>
+        <childnode refid="11597" relation="include">
+        </childnode>
+      </node>
+      <node id="11600">
+        <label>libraries/app/api.cpp</label>
+        <link refid="api_8cpp"/>
+      </node>
+      <node id="11589">
+        <label>libraries/chain/db_block.cpp</label>
+        <link refid="db__block_8cpp"/>
+        <childnode refid="11588" relation="include">
+        </childnode>
+      </node>
+      <node id="11601">
+        <label>libraries/app/application.cpp</label>
+        <link refid="application_8cpp"/>
+      </node>
+      <node id="11605">
+        <label>libraries/wallet/wallet.cpp</label>
+        <link refid="wallet_8cpp"/>
+      </node>
+      <node id="11593">
+        <label>libraries/chain/db_update.cpp</label>
+        <link refid="db__update_8cpp"/>
+        <childnode refid="11588" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classgraphene_1_1chain_1_1witness__object" prot="public">graphene::chain::witness_object</innerclass>
+    <innernamespace refid="namespacegraphene">graphene</innernamespace>
+    <innernamespace refid="namespacegraphene_1_1chain">graphene::chain</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/chain/include/graphene/chain/witness_object.hpp"/>
+  </compounddef>
+</doxygen>

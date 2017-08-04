@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1worker__pay__visitor" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::worker_pay_visitor</compoundname>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structgraphene_1_1chain_1_1worker__pay__visitor_1a51e2650924e4da89bd6f70c1ff13f659" prot="public" static="no">
+        <type>void</type>
+        <definition>typedef void graphene::chain::worker_pay_visitor::result_type</definition>
+        <argsstring></argsstring>
+        <name>result_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/db_maint.cpp" line="94" column="1" bodyfile="libraries/chain/db_maint.cpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1worker__pay__visitor_1aa7be6734e6560921c5152c49d0b8058b" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+        <definition>share_type graphene::chain::worker_pay_visitor::pay</definition>
+        <argsstring></argsstring>
+        <name>pay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/db_maint.cpp" line="87" column="1" bodyfile="libraries/chain/db_maint.cpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1worker__pay__visitor_1ac4ee259223d257662cf0f6248ee975cd" prot="private" static="no" mutable="no">
+        <type><ref refid="classgraphene_1_1chain_1_1database" kindref="compound">database</ref> &amp;</type>
+        <definition>database&amp; graphene::chain::worker_pay_visitor::db</definition>
+        <argsstring></argsstring>
+        <name>db</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/db_maint.cpp" line="88" column="1" bodyfile="libraries/chain/db_maint.cpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1worker__pay__visitor_1a372b888b92461b9a92f0c5d9115c143d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>graphene::chain::worker_pay_visitor::worker_pay_visitor</definition>
+        <argsstring>(share_type pay, database &amp;db)</argsstring>
+        <name>worker_pay_visitor</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+          <declname>pay</declname>
+        </param>
+        <param>
+          <type><ref refid="classgraphene_1_1chain_1_1database" kindref="compound">database</ref> &amp;</type>
+          <declname>db</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/db_maint.cpp" line="91" column="1" bodyfile="libraries/chain/db_maint.cpp" bodystart="91" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1worker__pay__visitor_1aee8150892c4d2b14f5e763b69264564b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename W</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void graphene::chain::worker_pay_visitor::operator()</definition>
+        <argsstring>(W &amp;worker) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>W &amp;</type>
+          <declname>worker</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/db_maint.cpp" line="96" column="1" bodyfile="libraries/chain/db_maint.cpp" bodystart="96" bodyend="99"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A visitor for <ref refid="namespacegraphene_1_1chain_1aff2faab1253f21209aaad5771fdda38c" kindref="member">worker_type</ref> which calls pay_worker on the worker within. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/chain/db_maint.cpp" line="85" column="1" bodyfile="libraries/chain/db_maint.cpp" bodystart="84" bodyend="100"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1worker__pay__visitor_1ac4ee259223d257662cf0f6248ee975cd" prot="private" virt="non-virtual"><scope>graphene::chain::worker_pay_visitor</scope><name>db</name></member>
+      <member refid="structgraphene_1_1chain_1_1worker__pay__visitor_1aee8150892c4d2b14f5e763b69264564b" prot="public" virt="non-virtual"><scope>graphene::chain::worker_pay_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1chain_1_1worker__pay__visitor_1aa7be6734e6560921c5152c49d0b8058b" prot="private" virt="non-virtual"><scope>graphene::chain::worker_pay_visitor</scope><name>pay</name></member>
+      <member refid="structgraphene_1_1chain_1_1worker__pay__visitor_1a51e2650924e4da89bd6f70c1ff13f659" prot="public" virt="non-virtual"><scope>graphene::chain::worker_pay_visitor</scope><name>result_type</name></member>
+      <member refid="structgraphene_1_1chain_1_1worker__pay__visitor_1a372b888b92461b9a92f0c5d9115c143d" prot="public" virt="non-virtual"><scope>graphene::chain::worker_pay_visitor</scope><name>worker_pay_visitor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

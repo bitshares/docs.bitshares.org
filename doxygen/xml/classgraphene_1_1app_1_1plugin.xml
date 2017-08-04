@@ -1,0 +1,260 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgraphene_1_1app_1_1plugin" kind="class" language="C++" prot="public">
+    <compoundname>graphene::app::plugin</compoundname>
+    <basecompoundref refid="classgraphene_1_1app_1_1abstract__plugin" prot="public" virt="non-virtual">graphene::app::abstract_plugin</basecompoundref>
+    <includes refid="plugin_8hpp" local="no">plugin.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1app_1_1plugin_1a8a51cdf12a53c8b4b3d53f12bfaf5167" prot="private" static="no" mutable="no">
+        <type><ref refid="classgraphene_1_1app_1_1application" kindref="compound">application</ref> *</type>
+        <definition>application* graphene::app::plugin::_app</definition>
+        <argsstring></argsstring>
+        <name>_app</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/plugin.hpp" line="118" column="1" bodyfile="libraries/app/include/graphene/app/plugin.hpp" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgraphene_1_1app_1_1plugin_1a9f8774b88bbc5c111f26f16a2974cb97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>graphene::app::plugin::plugin</definition>
+        <argsstring>()</argsstring>
+        <name>plugin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/plugin.hpp" line="99" column="1" bodyfile="libraries/app/plugin.cpp" bodystart="30" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1plugin_1a175311e034408609d5d145f2e01903be" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>graphene::app::plugin::~plugin</definition>
+        <argsstring>() override</argsstring>
+        <name>~plugin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/plugin.hpp" line="100" column="1" bodyfile="libraries/app/plugin.cpp" bodystart="36" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1plugin_1a5712513a3211adf382a161f49e4a7327" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string graphene::app::plugin::plugin_name</definition>
+        <argsstring>() const override</argsstring>
+        <name>plugin_name</name>
+        <reimplements refid="classgraphene_1_1app_1_1abstract__plugin_1a9222d3cfd86bdd93cf2fb85cbe9b4801">plugin_name</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/plugin.hpp" line="102" column="1" bodyfile="libraries/app/plugin.cpp" bodystart="41" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1plugin_1a55f3edacaa70b31121533c946c80f756" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void graphene::app::plugin::plugin_initialize</definition>
+        <argsstring>(const boost::program_options::variables_map &amp;options) override</argsstring>
+        <name>plugin_initialize</name>
+        <reimplements refid="classgraphene_1_1app_1_1abstract__plugin_1acc1afc4292fef565ed8e50fe4cc012fc">plugin_initialize</reimplements>
+        <param>
+          <type>const boost::program_options::variables_map &amp;</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+<para>Perform early startup routines and register plugin indexes, callbacks, etc. </para>        </briefdescription>
+        <detaileddescription>
+<para>Plugins MUST supply a method initialize() which will be called early in the application startup. This method should contain early setup code such as initializing variables, adding indexes to the database, registering callback methods from the database, adding APIs, etc., as well as applying any options in the options map</para><para>This method is called BEFORE the database is open, therefore any routines which require any chain state MUST NOT be called by this method. These routines should be performed in startup() instead.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The options passed to the application, via configuration files or command line </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/plugin.hpp" line="103" column="1" bodyfile="libraries/app/plugin.cpp" bodystart="46" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1plugin_1a6dc55708298e55234f7e2e8e5781854f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void graphene::app::plugin::plugin_startup</definition>
+        <argsstring>() override</argsstring>
+        <name>plugin_startup</name>
+        <reimplements refid="classgraphene_1_1app_1_1abstract__plugin_1ac60b3c2089daaf45a062ae34eb409b7e">plugin_startup</reimplements>
+        <briefdescription>
+<para>Begin normal runtime operations. </para>        </briefdescription>
+        <detaileddescription>
+<para>Plugins MUST supply a method startup() which will be called at the end of application startup. This method should contain code which schedules any tasks, or requires chain state. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/plugin.hpp" line="104" column="1" bodyfile="libraries/app/plugin.cpp" bodystart="51" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1plugin_1abe7030a505bb7fef8fc3d37f5b33e015" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void graphene::app::plugin::plugin_shutdown</definition>
+        <argsstring>() override</argsstring>
+        <name>plugin_shutdown</name>
+        <reimplements refid="classgraphene_1_1app_1_1abstract__plugin_1a1e6f189580d394e16fa36e207cfe44b6">plugin_shutdown</reimplements>
+        <briefdescription>
+<para>Cleanly shut down the plugin. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is called to request a clean shutdown (e.g. due to SIGINT or SIGTERM). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/plugin.hpp" line="105" column="1" bodyfile="libraries/app/plugin.cpp" bodystart="56" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1plugin_1acaf8518f3750d7385c9a5afafc9b2a64" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void graphene::app::plugin::plugin_set_app</definition>
+        <argsstring>(application *app) override</argsstring>
+        <name>plugin_set_app</name>
+        <reimplements refid="classgraphene_1_1app_1_1abstract__plugin_1a3ee9ef4a045f448bff8403375cdd9bb8">plugin_set_app</reimplements>
+        <param>
+          <type><ref refid="classgraphene_1_1app_1_1application" kindref="compound">application</ref> *</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+<para>Register the application instance with the plugin. </para>        </briefdescription>
+        <detaileddescription>
+<para>This is called by the framework to set the application. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/plugin.hpp" line="106" column="1" bodyfile="libraries/app/plugin.cpp" bodystart="61" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1plugin_1a99ffee727e0f7bd6e88e8201fc84f93f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void graphene::app::plugin::plugin_set_program_options</definition>
+        <argsstring>(boost::program_options::options_description &amp;command_line_options, boost::program_options::options_description &amp;config_file_options) override</argsstring>
+        <name>plugin_set_program_options</name>
+        <reimplements refid="classgraphene_1_1app_1_1abstract__plugin_1a0eb927bd566fb09db77ebd838f99bba3">plugin_set_program_options</reimplements>
+        <param>
+          <type>boost::program_options::options_description &amp;</type>
+          <declname>command_line_options</declname>
+        </param>
+        <param>
+          <type>boost::program_options::options_description &amp;</type>
+          <declname>config_file_options</declname>
+        </param>
+        <briefdescription>
+<para>Fill in command line parameters used by the plugin. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>command_line_options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>All options this plugin supports taking on the command-line </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>config_file_options</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>All options this plugin supports storing in a configuration file</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+This method populates its arguments with any command-line and configuration file options the plugin supports. If a plugin does not need these options, it may simply provide an empty implementation of this method. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/plugin.hpp" line="107" column="1" bodyfile="libraries/app/plugin.cpp" bodystart="67" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1plugin_1a4e387fd1543b949aba7f64d68a14b9e1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classgraphene_1_1chain_1_1database" kindref="compound">chain::database</ref> &amp;</type>
+        <definition>chain::database&amp; graphene::app::plugin::database</definition>
+        <argsstring>()</argsstring>
+        <name>database</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/plugin.hpp" line="112" column="1" bodyfile="libraries/app/include/graphene/app/plugin.hpp" bodystart="112" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1plugin_1a587cd7075b129cca93b49d2743c990ab" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classgraphene_1_1app_1_1application" kindref="compound">application</ref> &amp;</type>
+        <definition>application&amp; graphene::app::plugin::app</definition>
+        <argsstring>() const</argsstring>
+        <name>app</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/plugin.hpp" line="113" column="1" bodyfile="libraries/app/include/graphene/app/plugin.hpp" bodystart="113" bodyend="113"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classgraphene_1_1app_1_1plugin_1a38f4af42d32e4df5c303d5376e416dd7" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>net::node &amp;</type>
+        <definition>net::node&amp; graphene::app::plugin::p2p_node</definition>
+        <argsstring>()</argsstring>
+        <name>p2p_node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/plugin.hpp" line="115" column="1" bodyfile="libraries/app/include/graphene/app/plugin.hpp" bodystart="115" bodyend="115"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides basic default implementations of <ref refid="classgraphene_1_1app_1_1abstract__plugin" kindref="compound">abstract_plugin</ref> functions. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2372">
+        <label>graphene::app::plugin</label>
+        <link refid="classgraphene_1_1app_1_1plugin"/>
+        <childnode refid="2373" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2373">
+        <label>graphene::app::abstract_plugin</label>
+        <link refid="classgraphene_1_1app_1_1abstract__plugin"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2374">
+        <label>graphene::app::plugin</label>
+        <link refid="classgraphene_1_1app_1_1plugin"/>
+        <childnode refid="2375" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2375">
+        <label>graphene::app::abstract_plugin</label>
+        <link refid="classgraphene_1_1app_1_1abstract__plugin"/>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/app/include/graphene/app/plugin.hpp" line="97" column="1" bodyfile="libraries/app/include/graphene/app/plugin.hpp" bodystart="96" bodyend="119"/>
+    <listofallmembers>
+      <member refid="classgraphene_1_1app_1_1plugin_1a8a51cdf12a53c8b4b3d53f12bfaf5167" prot="private" virt="non-virtual"><scope>graphene::app::plugin</scope><name>_app</name></member>
+      <member refid="classgraphene_1_1app_1_1plugin_1a587cd7075b129cca93b49d2743c990ab" prot="public" virt="non-virtual"><scope>graphene::app::plugin</scope><name>app</name></member>
+      <member refid="classgraphene_1_1app_1_1plugin_1a4e387fd1543b949aba7f64d68a14b9e1" prot="public" virt="non-virtual"><scope>graphene::app::plugin</scope><name>database</name></member>
+      <member refid="classgraphene_1_1app_1_1plugin_1a38f4af42d32e4df5c303d5376e416dd7" prot="protected" virt="non-virtual"><scope>graphene::app::plugin</scope><name>p2p_node</name></member>
+      <member refid="classgraphene_1_1app_1_1plugin_1a9f8774b88bbc5c111f26f16a2974cb97" prot="public" virt="non-virtual"><scope>graphene::app::plugin</scope><name>plugin</name></member>
+      <member refid="classgraphene_1_1app_1_1plugin_1a55f3edacaa70b31121533c946c80f756" prot="public" virt="virtual"><scope>graphene::app::plugin</scope><name>plugin_initialize</name></member>
+      <member refid="classgraphene_1_1app_1_1plugin_1a5712513a3211adf382a161f49e4a7327" prot="public" virt="virtual"><scope>graphene::app::plugin</scope><name>plugin_name</name></member>
+      <member refid="classgraphene_1_1app_1_1plugin_1acaf8518f3750d7385c9a5afafc9b2a64" prot="public" virt="virtual"><scope>graphene::app::plugin</scope><name>plugin_set_app</name></member>
+      <member refid="classgraphene_1_1app_1_1plugin_1a99ffee727e0f7bd6e88e8201fc84f93f" prot="public" virt="virtual"><scope>graphene::app::plugin</scope><name>plugin_set_program_options</name></member>
+      <member refid="classgraphene_1_1app_1_1plugin_1abe7030a505bb7fef8fc3d37f5b33e015" prot="public" virt="virtual"><scope>graphene::app::plugin</scope><name>plugin_shutdown</name></member>
+      <member refid="classgraphene_1_1app_1_1plugin_1a6dc55708298e55234f7e2e8e5781854f" prot="public" virt="virtual"><scope>graphene::app::plugin</scope><name>plugin_startup</name></member>
+      <member refid="classgraphene_1_1app_1_1abstract__plugin_1a7f87a8f5a963d235db5941ca0a273b90" prot="public" virt="virtual"><scope>graphene::app::plugin</scope><name>~abstract_plugin</name></member>
+      <member refid="classgraphene_1_1app_1_1plugin_1a175311e034408609d5d145f2e01903be" prot="public" virt="virtual"><scope>graphene::app::plugin</scope><name>~plugin</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

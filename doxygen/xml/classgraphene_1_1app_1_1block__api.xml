@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgraphene_1_1app_1_1block__api" kind="class" language="C++" prot="public">
+    <compoundname>graphene::app::block_api</compoundname>
+    <includes refid="api_8hpp" local="no">api.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1app_1_1block__api_1a0a834c5c0c2b69026cd7beef18f9ce88" prot="private" static="no" mutable="no">
+        <type><ref refid="classgraphene_1_1chain_1_1database" kindref="compound">graphene::chain::database</ref> &amp;</type>
+        <definition>graphene::chain::database&amp; graphene::app::block_api::_db</definition>
+        <argsstring></argsstring>
+        <name>_db</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/api.hpp" line="161" column="1" bodyfile="libraries/app/include/graphene/app/api.hpp" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgraphene_1_1app_1_1block__api_1ac69781692e77bb9951b53669199cdf5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>graphene::app::block_api::block_api</definition>
+        <argsstring>(graphene::chain::database &amp;db)</argsstring>
+        <name>block_api</name>
+        <param>
+          <type><ref refid="classgraphene_1_1chain_1_1database" kindref="compound">graphene::chain::database</ref> &amp;</type>
+          <declname>db</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/api.hpp" line="155" column="1" bodyfile="libraries/app/api.cpp" bodystart="117" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1block__api_1ab0d6515ecbc18ac7ee651d283ceaeedc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>graphene::app::block_api::~block_api</definition>
+        <argsstring>()</argsstring>
+        <name>~block_api</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/api.hpp" line="156" column="1" bodyfile="libraries/app/api.cpp" bodystart="118" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1block__api_1a0cf585f558b2f98ac33a40a0739c4296" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; optional&lt; <ref refid="structgraphene_1_1chain_1_1signed__block" kindref="compound">signed_block</ref> &gt; &gt;</type>
+        <definition>vector&lt; optional&lt; signed_block &gt; &gt; graphene::app::block_api::get_blocks</definition>
+        <argsstring>(uint32_t block_num_from, uint32_t block_num_to) const</argsstring>
+        <name>get_blocks</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>block_num_from</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>block_num_to</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/api.hpp" line="158" column="1" bodyfile="libraries/app/api.cpp" bodystart="120" bodyend="128"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Block api. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/app/include/graphene/app/api.hpp" line="153" column="1" bodyfile="libraries/app/include/graphene/app/api.hpp" bodystart="152" bodyend="162"/>
+    <listofallmembers>
+      <member refid="classgraphene_1_1app_1_1block__api_1a0a834c5c0c2b69026cd7beef18f9ce88" prot="private" virt="non-virtual"><scope>graphene::app::block_api</scope><name>_db</name></member>
+      <member refid="classgraphene_1_1app_1_1block__api_1ac69781692e77bb9951b53669199cdf5f" prot="public" virt="non-virtual"><scope>graphene::app::block_api</scope><name>block_api</name></member>
+      <member refid="classgraphene_1_1app_1_1block__api_1a0cf585f558b2f98ac33a40a0739c4296" prot="public" virt="non-virtual"><scope>graphene::app::block_api</scope><name>get_blocks</name></member>
+      <member refid="classgraphene_1_1app_1_1block__api_1ab0d6515ecbc18ac7ee651d283ceaeedc" prot="public" virt="non-virtual"><scope>graphene::app::block_api</scope><name>~block_api</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

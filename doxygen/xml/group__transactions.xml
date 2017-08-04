@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="group__transactions" kind="group">
+    <compoundname>transactions</compoundname>
+    <title>Transactions</title>
+    <innerclass refid="structgraphene_1_1chain_1_1transaction" prot="public">graphene::chain::transaction</innerclass>
+    <innerclass refid="structgraphene_1_1chain_1_1signed__transaction" prot="public">graphene::chain::signed_transaction</innerclass>
+    <innerclass refid="structgraphene_1_1chain_1_1processed__transaction" prot="public">graphene::chain::processed_transaction</innerclass>
+    <innergroup refid="group__operations">Operations</innergroup>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__transactions_1ga48bf3d11043fdbf6ce62604e448e3313" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::verify_authority</definition>
+        <argsstring>(const vector&lt; operation &gt; &amp;ops, const flat_set&lt; public_key_type &gt; &amp;sigs, const std::function&lt; const authority *(account_id_type)&gt; &amp;get_active, const std::function&lt; const authority *(account_id_type)&gt; &amp;get_owner, uint32_t max_recursion=GRAPHENE_MAX_SIG_CHECK_DEPTH, bool allow_committe=false, const flat_set&lt; account_id_type &gt; &amp;active_aprovals=flat_set&lt; account_id_type &gt;(), const flat_set&lt; account_id_type &gt; &amp;owner_approvals=flat_set&lt; account_id_type &gt;())</argsstring>
+        <name>verify_authority</name>
+        <param>
+          <type>const vector&lt; operation &gt; &amp;</type>
+          <declname>ops</declname>
+        </param>
+        <param>
+          <type>const flat_set&lt; public_key_type &gt; &amp;</type>
+          <declname>sigs</declname>
+        </param>
+        <param>
+          <type>const std::function&lt; const authority *(account_id_type)&gt; &amp;</type>
+          <declname>get_active</declname>
+        </param>
+        <param>
+          <type>const std::function&lt; const authority *(account_id_type)&gt; &amp;</type>
+          <declname>get_owner</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>max_recursion</declname>
+          <defval><ref refid="config_8hpp_1aea0bc2216bc54371f7f54d6f6d6e4d9d" kindref="member">GRAPHENE_MAX_SIG_CHECK_DEPTH</ref></defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>allow_committe</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>const flat_set&lt; account_id_type &gt; &amp;</type>
+          <declname>active_aprovals</declname>
+          <defval>flat_set&lt; account_id_type &gt;()</defval>
+        </param>
+        <param>
+          <type>const flat_set&lt; account_id_type &gt; &amp;</type>
+          <declname>owner_approvals</declname>
+          <defval>flat_set&lt; account_id_type &gt;()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/transaction.hpp" line="176" column="1" bodyfile="libraries/chain/protocol/transaction.cpp" bodystart="246" bodyend="297"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>All transactions are sets of operations that must be applied atomically. Transactions must refer to a recent block that defines the context of the operation so that they assert a known binding to the object id&apos;s referenced in the transaction.</para><para>Rather than specify a full block number, we only specify the lower 16 bits of the block number which means you can reference any block within the last 65,536 blocks which is 3.5 days with a 5 second block interval or 18 hours with a 1 second interval.</para><para>All transactions must expire so that the network does not have to maintain a permanent record of all transactions ever published. A transaction may not have an expiration date too far in the future because this would require keeping too much transaction history in memory.</para><para>The block prefix is the first 4 bytes of the block hash of the reference block number, which is the second 4 bytes of the <ref refid="namespacegraphene_1_1chain_1a314b030d7a6107c5641fd9945da7f568" kindref="member">block_id_type</ref> (the first 4 bytes of the block ID are the block number)</para><para>Note: A transaction which selects a reference block cannot be migrated between forks outside the period of ref_block_num.time to (ref_block_num.time + rel_exp * interval). This fact can be used to protect market orders which should specify a relatively short re-org window of perhaps less than 1 minute. Normal payments should probably have a longer re-org window to ensure their transaction can still go through in the event of a momentary disruption in service.</para><para><simplesect kind="note"><para>It is not recommended to set the ref_block_num, ref_block_prefix, and expiration fields manually. Call the appropriate overload of set_expiration instead. </para></simplesect>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,265 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1sign__state" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::sign_state</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1sign__state_1a61b426b0cd7ad81ef674f28f9c10163c" prot="public" static="no" mutable="no">
+        <type>optional&lt; map&lt; <ref refid="classgraphene_1_1chain_1_1address" kindref="compound">address</ref>, <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref> &gt; &gt;</type>
+        <definition>optional&lt;map&lt;address,public_key_type&gt; &gt; graphene::chain::sign_state::available_address_sigs</definition>
+        <argsstring></argsstring>
+        <name>available_address_sigs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/protocol/transaction.cpp" line="123" column="1" bodyfile="libraries/chain/protocol/transaction.cpp" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1sign__state_1a4fa3d0b23688c4fc249a380fe3d1a364" prot="public" static="no" mutable="no">
+        <type>optional&lt; map&lt; <ref refid="classgraphene_1_1chain_1_1address" kindref="compound">address</ref>, <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref> &gt; &gt;</type>
+        <definition>optional&lt;map&lt;address,public_key_type&gt; &gt; graphene::chain::sign_state::provided_address_sigs</definition>
+        <argsstring></argsstring>
+        <name>provided_address_sigs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/protocol/transaction.cpp" line="124" column="1" bodyfile="libraries/chain/protocol/transaction.cpp" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1sign__state_1a785aad6f730b11b0f1c0ce5c1f3f92c2" prot="public" static="no" mutable="no">
+        <type>const std::function&lt; const <ref refid="structgraphene_1_1chain_1_1authority" kindref="compound">authority</ref> *(<ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref>)&gt; &amp;</type>
+        <definition>const std::function&lt;const authority*(account_id_type)&gt;&amp; graphene::chain::sign_state::get_active</definition>
+        <argsstring></argsstring>
+        <name>get_active</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/protocol/transaction.cpp" line="237" column="1" bodyfile="libraries/chain/protocol/transaction.cpp" bodystart="237" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1sign__state_1ad74fa666c285d27400298f036343a5c3" prot="public" static="no" mutable="no">
+        <type>const flat_set&lt; <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref> &gt; &amp;</type>
+        <definition>const flat_set&lt;public_key_type&gt;&amp; graphene::chain::sign_state::available_keys</definition>
+        <argsstring></argsstring>
+        <name>available_keys</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/protocol/transaction.cpp" line="238" column="1" bodyfile="libraries/chain/protocol/transaction.cpp" bodystart="238" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1sign__state_1a33a0ebd539913fee57848880462da231" prot="public" static="no" mutable="no">
+        <type>flat_map&lt; <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref>, bool &gt;</type>
+        <definition>flat_map&lt;public_key_type,bool&gt; graphene::chain::sign_state::provided_signatures</definition>
+        <argsstring></argsstring>
+        <name>provided_signatures</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/protocol/transaction.cpp" line="240" column="1" bodyfile="libraries/chain/protocol/transaction.cpp" bodystart="240" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1sign__state_1a59c055b63a07f61e8b5ea37d8ffe7b31" prot="public" static="no" mutable="no">
+        <type>flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt;</type>
+        <definition>flat_set&lt;account_id_type&gt; graphene::chain::sign_state::approved_by</definition>
+        <argsstring></argsstring>
+        <name>approved_by</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/protocol/transaction.cpp" line="241" column="1" bodyfile="libraries/chain/protocol/transaction.cpp" bodystart="241" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1sign__state_1a1e1b1ccdb63fcda665b3c1b4ce031fd8" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t graphene::chain::sign_state::max_recursion</definition>
+        <argsstring></argsstring>
+        <name>max_recursion</name>
+        <initializer>= <ref refid="config_8hpp_1aea0bc2216bc54371f7f54d6f6d6e4d9d" kindref="member">GRAPHENE_MAX_SIG_CHECK_DEPTH</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/protocol/transaction.cpp" line="242" column="1" bodyfile="libraries/chain/protocol/transaction.cpp" bodystart="242" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1sign__state_1a57df58e0fcb68dd3400a93a3f7a583be" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::sign_state::signed_by</definition>
+        <argsstring>(const public_key_type &amp;k)</argsstring>
+        <name>signed_by</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref> &amp;</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>returns true if we have a signature for this key or can produce a signature for this key, else returns false. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/protocol/transaction.cpp" line="110" column="1" bodyfile="libraries/chain/protocol/transaction.cpp" bodystart="110" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1sign__state_1a339841c0856af69ed4394ac8ad2b443c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::sign_state::signed_by</definition>
+        <argsstring>(const address &amp;a)</argsstring>
+        <name>signed_by</name>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1address" kindref="compound">address</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/protocol/transaction.cpp" line="126" column="1" bodyfile="libraries/chain/protocol/transaction.cpp" bodystart="126" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1sign__state_1a3557ef5dcbbd9a926da92c6dd9cc48b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::sign_state::check_authority</definition>
+        <argsstring>(account_id_type id)</argsstring>
+        <name>check_authority</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/protocol/transaction.cpp" line="159" column="1" bodyfile="libraries/chain/protocol/transaction.cpp" bodystart="159" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1sign__state_1a3bc8e387b54fe53cdfcfe2cbb99de465" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::sign_state::check_authority</definition>
+        <argsstring>(const authority *au, uint32_t depth=0)</argsstring>
+        <name>check_authority</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1authority" kindref="compound">authority</ref> *</type>
+          <declname>au</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>depth</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks to see if we have signatures of the active authorites of the accounts specified in authority or the keys specified. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/protocol/transaction.cpp" line="169" column="1" bodyfile="libraries/chain/protocol/transaction.cpp" bodystart="169" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1sign__state_1a8c1a069bf4ed29820f99092f04d50c04" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::sign_state::remove_unused_signatures</definition>
+        <argsstring>()</argsstring>
+        <name>remove_unused_signatures</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/protocol/transaction.cpp" line="215" column="1" bodyfile="libraries/chain/protocol/transaction.cpp" bodystart="215" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1sign__state_1ab36eb80042a99c42b0e1b6c82b717853" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>graphene::chain::sign_state::sign_state</definition>
+        <argsstring>(const flat_set&lt; public_key_type &gt; &amp;sigs, const std::function&lt; const authority *(account_id_type)&gt; &amp;a, const flat_set&lt; public_key_type &gt; &amp;keys=flat_set&lt; public_key_type &gt;())</argsstring>
+        <name>sign_state</name>
+        <param>
+          <type>const flat_set&lt; <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref> &gt; &amp;</type>
+          <declname>sigs</declname>
+        </param>
+        <param>
+          <type>const std::function&lt; const <ref refid="structgraphene_1_1chain_1_1authority" kindref="compound">authority</ref> *(<ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref>)&gt; &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const flat_set&lt; <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref> &gt; &amp;</type>
+          <declname>keys</declname>
+          <defval>flat_set&lt; <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref> &gt;()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/protocol/transaction.cpp" line="227" column="1" bodyfile="libraries/chain/protocol/transaction.cpp" bodystart="227" bodyend="235"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2604">
+        <label>graphene::chain::sign_state</label>
+        <link refid="structgraphene_1_1chain_1_1sign__state"/>
+        <childnode refid="2605" relation="usage">
+          <edgelabel>provided_signatures</edgelabel>
+        </childnode>
+        <childnode refid="2606" relation="usage">
+          <edgelabel>available_keys</edgelabel>
+        </childnode>
+        <childnode refid="2607" relation="usage">
+          <edgelabel>provided_address_sigs</edgelabel>
+          <edgelabel>available_address_sigs</edgelabel>
+        </childnode>
+        <childnode refid="2608" relation="usage">
+          <edgelabel>approved_by</edgelabel>
+        </childnode>
+      </node>
+      <node id="2605">
+        <label>flat_map&lt; graphene::chain::public_key_type, bool &gt;</label>
+      </node>
+      <node id="2608">
+        <label>flat_set&lt; account_id_type &gt;</label>
+      </node>
+      <node id="2607">
+        <label>optional&lt; map&lt; graphene::chain::address, graphene::chain::public_key_type &gt; &gt;</label>
+      </node>
+      <node id="2606">
+        <label>flat_set&lt; graphene::chain::public_key_type &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/protocol/transaction.cpp" line="106" column="1" bodyfile="libraries/chain/protocol/transaction.cpp" bodystart="105" bodyend="243"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1sign__state_1a59c055b63a07f61e8b5ea37d8ffe7b31" prot="public" virt="non-virtual"><scope>graphene::chain::sign_state</scope><name>approved_by</name></member>
+      <member refid="structgraphene_1_1chain_1_1sign__state_1a61b426b0cd7ad81ef674f28f9c10163c" prot="public" virt="non-virtual"><scope>graphene::chain::sign_state</scope><name>available_address_sigs</name></member>
+      <member refid="structgraphene_1_1chain_1_1sign__state_1ad74fa666c285d27400298f036343a5c3" prot="public" virt="non-virtual"><scope>graphene::chain::sign_state</scope><name>available_keys</name></member>
+      <member refid="structgraphene_1_1chain_1_1sign__state_1a3557ef5dcbbd9a926da92c6dd9cc48b0" prot="public" virt="non-virtual"><scope>graphene::chain::sign_state</scope><name>check_authority</name></member>
+      <member refid="structgraphene_1_1chain_1_1sign__state_1a3bc8e387b54fe53cdfcfe2cbb99de465" prot="public" virt="non-virtual"><scope>graphene::chain::sign_state</scope><name>check_authority</name></member>
+      <member refid="structgraphene_1_1chain_1_1sign__state_1a785aad6f730b11b0f1c0ce5c1f3f92c2" prot="public" virt="non-virtual"><scope>graphene::chain::sign_state</scope><name>get_active</name></member>
+      <member refid="structgraphene_1_1chain_1_1sign__state_1a1e1b1ccdb63fcda665b3c1b4ce031fd8" prot="public" virt="non-virtual"><scope>graphene::chain::sign_state</scope><name>max_recursion</name></member>
+      <member refid="structgraphene_1_1chain_1_1sign__state_1a4fa3d0b23688c4fc249a380fe3d1a364" prot="public" virt="non-virtual"><scope>graphene::chain::sign_state</scope><name>provided_address_sigs</name></member>
+      <member refid="structgraphene_1_1chain_1_1sign__state_1a33a0ebd539913fee57848880462da231" prot="public" virt="non-virtual"><scope>graphene::chain::sign_state</scope><name>provided_signatures</name></member>
+      <member refid="structgraphene_1_1chain_1_1sign__state_1a8c1a069bf4ed29820f99092f04d50c04" prot="public" virt="non-virtual"><scope>graphene::chain::sign_state</scope><name>remove_unused_signatures</name></member>
+      <member refid="structgraphene_1_1chain_1_1sign__state_1ab36eb80042a99c42b0e1b6c82b717853" prot="public" virt="non-virtual"><scope>graphene::chain::sign_state</scope><name>sign_state</name></member>
+      <member refid="structgraphene_1_1chain_1_1sign__state_1a57df58e0fcb68dd3400a93a3f7a583be" prot="public" virt="non-virtual"><scope>graphene::chain::sign_state</scope><name>signed_by</name></member>
+      <member refid="structgraphene_1_1chain_1_1sign__state_1a339841c0856af69ed4394ac8ad2b443c" prot="public" virt="non-virtual"><scope>graphene::chain::sign_state</scope><name>signed_by</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

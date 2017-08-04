@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgraphene_1_1chain_1_1special__authority__object" kind="class" language="C++" prot="public">
+    <compoundname>graphene::chain::special_authority_object</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">graphene::db::abstract_object&lt; special_authority_object &gt;</basecompoundref>
+    <includes refid="special__authority__object_8hpp" local="no">special_authority_object.hpp</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1special__authority__object_1ad8856ff29ad6ee3c3f5f43091b4623fc" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t graphene::chain::special_authority_object::space_id</definition>
+        <argsstring></argsstring>
+        <name>space_id</name>
+        <initializer>= <ref refid="namespacegraphene_1_1chain_1a92e55d4242187696c5e2c5eaafbd9400a81f35c04f1d3f3109dacaa6f2bef33c7" kindref="member">implementation_ids</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/special_authority_object.hpp" line="46" column="1" bodyfile="libraries/chain/include/graphene/chain/special_authority_object.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1special__authority__object_1ab372f6ab488fc9cfda185cd0bea81569" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t graphene::chain::special_authority_object::type_id</definition>
+        <argsstring></argsstring>
+        <name>type_id</name>
+        <initializer>= <ref refid="namespacegraphene_1_1chain_1ad3bef2f100b722a6c30fada38f6dcd73a9d63a3647a2db0610d19742509c51e32" kindref="member">impl_special_authority_object_type</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/special_authority_object.hpp" line="47" column="1" bodyfile="libraries/chain/include/graphene/chain/special_authority_object.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1special__authority__object_1a4a81ab5af2a9da10b8093c1aea58d83c" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::special_authority_object::account</definition>
+        <argsstring></argsstring>
+        <name>account</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/special_authority_object.hpp" line="49" column="1" bodyfile="libraries/chain/include/graphene/chain/special_authority_object.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classgraphene_1_1chain_1_1special__authority__object" kindref="compound">special_authority_object</ref> only exists to help with a specific indexing problem. We want to be able to iterate over all accounts that contain a special authority. However, accounts which have a special_authority are very rare. So rather than indexing <ref refid="classgraphene_1_1chain_1_1account__object" kindref="compound">account_object</ref> by the special_authority fields (requiring additional bookkeeping for every account), we instead maintain a <ref refid="classgraphene_1_1chain_1_1special__authority__object" kindref="compound">special_authority_object</ref> pointing to each account which has special_authority (requiring additional bookkeeping only for every account which has special_authority).</para><para>This class is an implementation detail. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2656">
+        <label>graphene::chain::special_authority_object</label>
+        <link refid="classgraphene_1_1chain_1_1special__authority__object"/>
+        <childnode refid="2657" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2657">
+        <label>graphene::db::abstract_object&lt; special_authority_object &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2658">
+        <label>graphene::chain::special_authority_object</label>
+        <link refid="classgraphene_1_1chain_1_1special__authority__object"/>
+        <childnode refid="2659" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2659">
+        <label>graphene::db::abstract_object&lt; special_authority_object &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/special_authority_object.hpp" line="44" column="1" bodyfile="libraries/chain/include/graphene/chain/special_authority_object.hpp" bodystart="43" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classgraphene_1_1chain_1_1special__authority__object_1a4a81ab5af2a9da10b8093c1aea58d83c" prot="public" virt="non-virtual"><scope>graphene::chain::special_authority_object</scope><name>account</name></member>
+      <member refid="classgraphene_1_1chain_1_1special__authority__object_1ad8856ff29ad6ee3c3f5f43091b4623fc" prot="public" virt="non-virtual"><scope>graphene::chain::special_authority_object</scope><name>space_id</name></member>
+      <member refid="classgraphene_1_1chain_1_1special__authority__object_1ab372f6ab488fc9cfda185cd0bea81569" prot="public" virt="non-virtual"><scope>graphene::chain::special_authority_object</scope><name>type_id</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,253 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1wallet_1_1detail_1_1operation__printer" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::wallet::detail::operation_printer</compoundname>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structgraphene_1_1wallet_1_1detail_1_1operation__printer_1a27a02e6f0013618f1a7e0b818f8249f2" prot="public" static="no">
+        <type>std::string</type>
+        <definition>typedef std::string graphene::wallet::detail::operation_printer::result_type</definition>
+        <argsstring></argsstring>
+        <name>result_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="115" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1wallet_1_1detail_1_1operation__printer_1a8dfeae1e6612f405a670599682a7c177" prot="private" static="no" mutable="no">
+        <type>ostream &amp;</type>
+        <definition>ostream&amp; graphene::wallet::detail::operation_printer::out</definition>
+        <argsstring></argsstring>
+        <name>out</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="103" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1wallet_1_1detail_1_1operation__printer_1a43336c82fb7713e3c5d57faaea9156d8" prot="private" static="no" mutable="no">
+        <type>const <ref refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl" kindref="compound">wallet_api_impl</ref> &amp;</type>
+        <definition>const wallet_api_impl&amp; graphene::wallet::detail::operation_printer::wallet</definition>
+        <argsstring></argsstring>
+        <name>wallet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="104" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1wallet_1_1detail_1_1operation__printer_1a5f3b3ca37ee5c6de0c17f3cf3c1e9f0e" prot="private" static="no" mutable="no">
+        <type><ref refid="group__operations_1gaf121d5f218e142d53acffc833cae929a" kindref="member">operation_result</ref></type>
+        <definition>operation_result graphene::wallet::detail::operation_printer::result</definition>
+        <argsstring></argsstring>
+        <name>result</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="105" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="structgraphene_1_1wallet_1_1detail_1_1operation__printer_1aa367f928f0f495ef3041ff2614048923" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string graphene::wallet::detail::operation_printer::fee</definition>
+        <argsstring>(const asset &amp;a) const</argsstring>
+        <name>fee</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="107" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2616" bodyend="2619"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1wallet_1_1detail_1_1operation__printer_1a2c152e2d8cf84e9ff3311186b73e7835" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>graphene::wallet::detail::operation_printer::operation_printer</definition>
+        <argsstring>(ostream &amp;out, const wallet_api_impl &amp;wallet, const operation_result &amp;r=operation_result())</argsstring>
+        <name>operation_printer</name>
+        <param>
+          <type>ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl" kindref="compound">wallet_api_impl</ref> &amp;</type>
+          <declname>wallet</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__operations_1gaf121d5f218e142d53acffc833cae929a" kindref="member">operation_result</ref> &amp;</type>
+          <declname>r</declname>
+          <defval><ref refid="group__operations_1gaf121d5f218e142d53acffc833cae929a" kindref="member">operation_result</ref>()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="110" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="110" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1wallet_1_1detail_1_1operation__printer_1ae08e459c53f1105f80f4e88ac3551cb6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::string</type>
+        <definition>std::string graphene::wallet::detail::operation_printer::operator()</definition>
+        <argsstring>(const T &amp;op) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="118" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2622" bodyend="2642"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1wallet_1_1detail_1_1operation__printer_1a5c516047a0fe80551ceaf6e8f78852f5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>string graphene::wallet::detail::operation_printer::operator()</definition>
+        <argsstring>(const transfer_operation &amp;op) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1transfer__operation" kindref="compound">transfer_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="120" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2663" bodyend="2695"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1wallet_1_1detail_1_1operation__printer_1ac15056eba33122a59d92cc3191afefd2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string graphene::wallet::detail::operation_printer::operator()</definition>
+        <argsstring>(const transfer_from_blind_operation &amp;op) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1transfer__from__blind__operation" kindref="compound">transfer_from_blind_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="121" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2643" bodyend="2651"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1wallet_1_1detail_1_1operation__printer_1a4e48b7509323dbb0a3ae6789818322d7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string graphene::wallet::detail::operation_printer::operator()</definition>
+        <argsstring>(const transfer_to_blind_operation &amp;op) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1transfer__to__blind__operation" kindref="compound">transfer_to_blind_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="122" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2652" bodyend="2662"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1wallet_1_1detail_1_1operation__printer_1a7f0aabffe175f70bc1acc561e6ed291c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string graphene::wallet::detail::operation_printer::operator()</definition>
+        <argsstring>(const account_create_operation &amp;op) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1account__create__operation" kindref="compound">account_create_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="123" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2697" bodyend="2701"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1wallet_1_1detail_1_1operation__printer_1a43792bd787e24c5bf652cf826865a4ec" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string graphene::wallet::detail::operation_printer::operator()</definition>
+        <argsstring>(const account_update_operation &amp;op) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1account__update__operation" kindref="compound">account_update_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="124" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2703" bodyend="2707"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1wallet_1_1detail_1_1operation__printer_1a64a58238c50a9c53fc94bdfea00c20d1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string graphene::wallet::detail::operation_printer::operator()</definition>
+        <argsstring>(const asset_create_operation &amp;op) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1asset__create__operation" kindref="compound">asset_create_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="125" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2709" bodyend="2718"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/wallet/wallet.cpp" line="101" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="100" bodyend="126"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1wallet_1_1detail_1_1operation__printer_1aa367f928f0f495ef3041ff2614048923" prot="private" virt="non-virtual"><scope>graphene::wallet::detail::operation_printer</scope><name>fee</name></member>
+      <member refid="structgraphene_1_1wallet_1_1detail_1_1operation__printer_1a2c152e2d8cf84e9ff3311186b73e7835" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::operation_printer</scope><name>operation_printer</name></member>
+      <member refid="structgraphene_1_1wallet_1_1detail_1_1operation__printer_1ae08e459c53f1105f80f4e88ac3551cb6" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::operation_printer</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1wallet_1_1detail_1_1operation__printer_1a5c516047a0fe80551ceaf6e8f78852f5" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::operation_printer</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1wallet_1_1detail_1_1operation__printer_1ac15056eba33122a59d92cc3191afefd2" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::operation_printer</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1wallet_1_1detail_1_1operation__printer_1a4e48b7509323dbb0a3ae6789818322d7" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::operation_printer</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1wallet_1_1detail_1_1operation__printer_1a7f0aabffe175f70bc1acc561e6ed291c" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::operation_printer</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1wallet_1_1detail_1_1operation__printer_1a43792bd787e24c5bf652cf826865a4ec" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::operation_printer</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1wallet_1_1detail_1_1operation__printer_1a64a58238c50a9c53fc94bdfea00c20d1" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::operation_printer</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1wallet_1_1detail_1_1operation__printer_1a8dfeae1e6612f405a670599682a7c177" prot="private" virt="non-virtual"><scope>graphene::wallet::detail::operation_printer</scope><name>out</name></member>
+      <member refid="structgraphene_1_1wallet_1_1detail_1_1operation__printer_1a5f3b3ca37ee5c6de0c17f3cf3c1e9f0e" prot="private" virt="non-virtual"><scope>graphene::wallet::detail::operation_printer</scope><name>result</name></member>
+      <member refid="structgraphene_1_1wallet_1_1detail_1_1operation__printer_1a27a02e6f0013618f1a7e0b818f8249f2" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::operation_printer</scope><name>result_type</name></member>
+      <member refid="structgraphene_1_1wallet_1_1detail_1_1operation__printer_1a43336c82fb7713e3c5d57faaea9156d8" prot="private" virt="non-virtual"><scope>graphene::wallet::detail::operation_printer</scope><name>wallet</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,299 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgraphene_1_1chain_1_1vesting__balance__object" kind="class" language="C++" prot="public">
+    <compoundname>graphene::chain::vesting_balance_object</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">graphene::db::abstract_object&lt; vesting_balance_object &gt;</basecompoundref>
+    <derivedcompoundref refid="structgraphene_1_1wallet_1_1vesting__balance__object__with__info" prot="public" virt="non-virtual">graphene::wallet::vesting_balance_object_with_info</derivedcompoundref>
+    <includes refid="vesting__balance__object_8hpp" local="no">vesting_balance_object.hpp</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1vesting__balance__object_1ab999fcca9be4d932dbb2586b9a7d339d" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t graphene::chain::vesting_balance_object::space_id</definition>
+        <argsstring></argsstring>
+        <name>space_id</name>
+        <initializer>= <ref refid="namespacegraphene_1_1chain_1a92e55d4242187696c5e2c5eaafbd9400a9dadbbe526b5096091138116c13d612d" kindref="member">protocol_ids</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="133" column="1" bodyfile="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1vesting__balance__object_1a5ed5e43ebf715f6eb711139e035255c7" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t graphene::chain::vesting_balance_object::type_id</definition>
+        <argsstring></argsstring>
+        <name>type_id</name>
+        <initializer>= <ref refid="namespacegraphene_1_1chain_1aa6e32c79e2b22c998deddedcb696633da910ef1b8a52e0047fb3692cdaee9f9ee" kindref="member">vesting_balance_object_type</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="134" column="1" bodyfile="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1vesting__balance__object_1a67fcfc288de5c0094d1d97ccf4c67108" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::vesting_balance_object::owner</definition>
+        <argsstring></argsstring>
+        <name>owner</name>
+        <briefdescription>
+<para>Account which owns and may withdraw from this vesting balance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="137" column="1" bodyfile="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1vesting__balance__object_1ad0a453c90b0555f470fe04692400a770" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::vesting_balance_object::balance</definition>
+        <argsstring></argsstring>
+        <name>balance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Total amount remaining in this vesting balance Includes the unvested funds, and the vested funds which have not yet been withdrawn </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="140" column="1" bodyfile="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1vesting__balance__object_1a9c40157fb6d2fb86c6f158437aece76d" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a53807c77a8d2a7efb30e13b772e99b3a" kindref="member">vesting_policy</ref></type>
+        <definition>vesting_policy graphene::chain::vesting_balance_object::policy</definition>
+        <argsstring></argsstring>
+        <name>policy</name>
+        <briefdescription>
+<para>The vesting policy stores details on when funds vest, and controls when they may be withdrawn. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="142" column="1" bodyfile="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1vesting__balance__object_1a9e14dd77a333cbcf73bcc814a6dfc9dd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>graphene::chain::vesting_balance_object::vesting_balance_object</definition>
+        <argsstring>()</argsstring>
+        <name>vesting_balance_object</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="144" column="1" bodyfile="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" bodystart="144" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1vesting__balance__object_1a178b417cc5b0124693b0137b057be8fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::vesting_balance_object::deposit</definition>
+        <argsstring>(const fc::time_point_sec &amp;now, const asset &amp;amount)</argsstring>
+        <name>deposit</name>
+        <param>
+          <type>const fc::time_point_sec &amp;</type>
+          <declname>now</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref> &amp;</type>
+          <declname>amount</declname>
+        </param>
+        <briefdescription>
+<para>Deposit amount into vesting balance, requiring it to vest before withdrawal. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="147" column="1" bodyfile="libraries/chain/vesting_balance_object.cpp" bodystart="207" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1vesting__balance__object_1aa5ee63be625ac79eb18fa545a8e9aa4d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::vesting_balance_object::is_deposit_allowed</definition>
+        <argsstring>(const fc::time_point_sec &amp;now, const asset &amp;amount) const</argsstring>
+        <name>is_deposit_allowed</name>
+        <param>
+          <type>const fc::time_point_sec &amp;</type>
+          <declname>now</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref> &amp;</type>
+          <declname>amount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="148" column="1" bodyfile="libraries/chain/vesting_balance_object.cpp" bodystart="193" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1vesting__balance__object_1a0abf048f7d0c3b1dc5fd20a528862c79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::vesting_balance_object::deposit_vested</definition>
+        <argsstring>(const fc::time_point_sec &amp;now, const asset &amp;amount)</argsstring>
+        <name>deposit_vested</name>
+        <param>
+          <type>const fc::time_point_sec &amp;</type>
+          <declname>now</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref> &amp;</type>
+          <declname>amount</declname>
+        </param>
+        <briefdescription>
+<para>Deposit amount into vesting balance, making the new funds vest immediately. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="151" column="1" bodyfile="libraries/chain/vesting_balance_object.cpp" bodystart="214" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1vesting__balance__object_1abe28f237ac1ead090a9d64d10fa30af2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::vesting_balance_object::is_deposit_vested_allowed</definition>
+        <argsstring>(const fc::time_point_sec &amp;now, const asset &amp;amount) const</argsstring>
+        <name>is_deposit_vested_allowed</name>
+        <param>
+          <type>const fc::time_point_sec &amp;</type>
+          <declname>now</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref> &amp;</type>
+          <declname>amount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="152" column="1" bodyfile="libraries/chain/vesting_balance_object.cpp" bodystart="221" bodyend="224"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1vesting__balance__object_1a132a8aeae6d15ca91bcd6a78966f4919" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::vesting_balance_object::withdraw</definition>
+        <argsstring>(const fc::time_point_sec &amp;now, const asset &amp;amount)</argsstring>
+        <name>withdraw</name>
+        <param>
+          <type>const fc::time_point_sec &amp;</type>
+          <declname>now</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref> &amp;</type>
+          <declname>amount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Used to remove a vesting balance from the VBO. As well as the balance field, coin_seconds_earned and coin_seconds_earned_last_update fields are updated.</para><para>The money doesn&apos;t &quot;go&quot; anywhere; the caller is responsible for crediting it to the proper account. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="162" column="1" bodyfile="libraries/chain/vesting_balance_object.cpp" bodystart="226" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1vesting__balance__object_1a77d833f9dc36c18ec756b43b98e01b54" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::vesting_balance_object::is_withdraw_allowed</definition>
+        <argsstring>(const fc::time_point_sec &amp;now, const asset &amp;amount) const</argsstring>
+        <name>is_withdraw_allowed</name>
+        <param>
+          <type>const fc::time_point_sec &amp;</type>
+          <declname>now</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref> &amp;</type>
+          <declname>amount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="163" column="1" bodyfile="libraries/chain/vesting_balance_object.cpp" bodystart="198" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1vesting__balance__object_1ac603d34434a36d083c4220f4ee90bb45" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::vesting_balance_object::get_allowed_withdraw</definition>
+        <argsstring>(const time_point_sec &amp;now) const</argsstring>
+        <name>get_allowed_withdraw</name>
+        <param>
+          <type>const time_point_sec &amp;</type>
+          <declname>now</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get amount of allowed withdrawal. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="168" column="1" bodyfile="libraries/chain/vesting_balance_object.cpp" bodystart="234" bodyend="238"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Vesting balance object is a balance that is locked by the blockchain for a period of time. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2936">
+        <label>graphene::chain::vesting_balance_object</label>
+        <link refid="classgraphene_1_1chain_1_1vesting__balance__object"/>
+        <childnode refid="2937" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2937">
+        <label>graphene::db::abstract_object&lt; vesting_balance_object &gt;</label>
+      </node>
+      <node id="2938">
+        <label>graphene::wallet::vesting_balance_object_with_info</label>
+        <link refid="structgraphene_1_1wallet_1_1vesting__balance__object__with__info"/>
+        <childnode refid="2936" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2939">
+        <label>graphene::chain::vesting_balance_object</label>
+        <link refid="classgraphene_1_1chain_1_1vesting__balance__object"/>
+        <childnode refid="2940" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2941" relation="usage">
+          <edgelabel>balance</edgelabel>
+        </childnode>
+      </node>
+      <node id="2940">
+        <label>graphene::db::abstract_object&lt; vesting_balance_object &gt;</label>
+      </node>
+      <node id="2941">
+        <label>graphene::chain::asset</label>
+        <link refid="structgraphene_1_1chain_1_1asset"/>
+        <childnode refid="2942" relation="usage">
+          <edgelabel>amount</edgelabel>
+        </childnode>
+      </node>
+      <node id="2942">
+        <label>safe&lt; int64_t &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="131" column="1" bodyfile="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" bodystart="130" bodyend="169"/>
+    <listofallmembers>
+      <member refid="classgraphene_1_1chain_1_1vesting__balance__object_1ad0a453c90b0555f470fe04692400a770" prot="public" virt="non-virtual"><scope>graphene::chain::vesting_balance_object</scope><name>balance</name></member>
+      <member refid="classgraphene_1_1chain_1_1vesting__balance__object_1a178b417cc5b0124693b0137b057be8fb" prot="public" virt="non-virtual"><scope>graphene::chain::vesting_balance_object</scope><name>deposit</name></member>
+      <member refid="classgraphene_1_1chain_1_1vesting__balance__object_1a0abf048f7d0c3b1dc5fd20a528862c79" prot="public" virt="non-virtual"><scope>graphene::chain::vesting_balance_object</scope><name>deposit_vested</name></member>
+      <member refid="classgraphene_1_1chain_1_1vesting__balance__object_1ac603d34434a36d083c4220f4ee90bb45" prot="public" virt="non-virtual"><scope>graphene::chain::vesting_balance_object</scope><name>get_allowed_withdraw</name></member>
+      <member refid="classgraphene_1_1chain_1_1vesting__balance__object_1aa5ee63be625ac79eb18fa545a8e9aa4d" prot="public" virt="non-virtual"><scope>graphene::chain::vesting_balance_object</scope><name>is_deposit_allowed</name></member>
+      <member refid="classgraphene_1_1chain_1_1vesting__balance__object_1abe28f237ac1ead090a9d64d10fa30af2" prot="public" virt="non-virtual"><scope>graphene::chain::vesting_balance_object</scope><name>is_deposit_vested_allowed</name></member>
+      <member refid="classgraphene_1_1chain_1_1vesting__balance__object_1a77d833f9dc36c18ec756b43b98e01b54" prot="public" virt="non-virtual"><scope>graphene::chain::vesting_balance_object</scope><name>is_withdraw_allowed</name></member>
+      <member refid="classgraphene_1_1chain_1_1vesting__balance__object_1a67fcfc288de5c0094d1d97ccf4c67108" prot="public" virt="non-virtual"><scope>graphene::chain::vesting_balance_object</scope><name>owner</name></member>
+      <member refid="classgraphene_1_1chain_1_1vesting__balance__object_1a9c40157fb6d2fb86c6f158437aece76d" prot="public" virt="non-virtual"><scope>graphene::chain::vesting_balance_object</scope><name>policy</name></member>
+      <member refid="classgraphene_1_1chain_1_1vesting__balance__object_1ab999fcca9be4d932dbb2586b9a7d339d" prot="public" virt="non-virtual"><scope>graphene::chain::vesting_balance_object</scope><name>space_id</name></member>
+      <member refid="classgraphene_1_1chain_1_1vesting__balance__object_1a5ed5e43ebf715f6eb711139e035255c7" prot="public" virt="non-virtual"><scope>graphene::chain::vesting_balance_object</scope><name>type_id</name></member>
+      <member refid="classgraphene_1_1chain_1_1vesting__balance__object_1a9e14dd77a333cbcf73bcc814a6dfc9dd" prot="public" virt="non-virtual"><scope>graphene::chain::vesting_balance_object</scope><name>vesting_balance_object</name></member>
+      <member refid="classgraphene_1_1chain_1_1vesting__balance__object_1a132a8aeae6d15ca91bcd6a78966f4919" prot="public" virt="non-virtual"><scope>graphene::chain::vesting_balance_object</scope><name>withdraw</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

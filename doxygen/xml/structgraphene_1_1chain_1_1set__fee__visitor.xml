@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1set__fee__visitor" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::set_fee_visitor</compoundname>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structgraphene_1_1chain_1_1set__fee__visitor_1a8b61eb4b9e72dd14b9f9db90ea7c4f12" prot="public" static="no">
+        <type>void</type>
+        <definition>typedef void graphene::chain::set_fee_visitor::result_type</definition>
+        <argsstring></argsstring>
+        <name>result_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/protocol/fee_schedule.cpp" line="94" column="1" bodyfile="libraries/chain/protocol/fee_schedule.cpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1set__fee__visitor_1a7d9333960192954aaedfd3d9a8e23a4b" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::set_fee_visitor::_fee</definition>
+        <argsstring></argsstring>
+        <name>_fee</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/protocol/fee_schedule.cpp" line="95" column="1" bodyfile="libraries/chain/protocol/fee_schedule.cpp" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1set__fee__visitor_1a7d1a28bbc567b91ab74c5341f208bf74" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>graphene::chain::set_fee_visitor::set_fee_visitor</definition>
+        <argsstring>(asset f)</argsstring>
+        <name>set_fee_visitor</name>
+        <param>
+          <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/protocol/fee_schedule.cpp" line="97" column="1" bodyfile="libraries/chain/protocol/fee_schedule.cpp" bodystart="97" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1set__fee__visitor_1aa87d292e0db58e057adc8acba9029447" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename OpType</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void graphene::chain::set_fee_visitor::operator()</definition>
+        <argsstring>(OpType &amp;op) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>OpType &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/protocol/fee_schedule.cpp" line="100" column="1" bodyfile="libraries/chain/protocol/fee_schedule.cpp" bodystart="100" bodyend="103"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2600">
+        <label>graphene::chain::set_fee_visitor</label>
+        <link refid="structgraphene_1_1chain_1_1set__fee__visitor"/>
+        <childnode refid="2601" relation="usage">
+          <edgelabel>_fee</edgelabel>
+        </childnode>
+      </node>
+      <node id="2601">
+        <label>graphene::chain::asset</label>
+        <link refid="structgraphene_1_1chain_1_1asset"/>
+        <childnode refid="2602" relation="usage">
+          <edgelabel>amount</edgelabel>
+        </childnode>
+      </node>
+      <node id="2602">
+        <label>safe&lt; int64_t &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/protocol/fee_schedule.cpp" line="93" column="1" bodyfile="libraries/chain/protocol/fee_schedule.cpp" bodystart="92" bodyend="104"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1set__fee__visitor_1a7d9333960192954aaedfd3d9a8e23a4b" prot="public" virt="non-virtual"><scope>graphene::chain::set_fee_visitor</scope><name>_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1set__fee__visitor_1aa87d292e0db58e057adc8acba9029447" prot="public" virt="non-virtual"><scope>graphene::chain::set_fee_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1chain_1_1set__fee__visitor_1a8b61eb4b9e72dd14b9f9db90ea7c4f12" prot="public" virt="non-virtual"><scope>graphene::chain::set_fee_visitor</scope><name>result_type</name></member>
+      <member refid="structgraphene_1_1chain_1_1set__fee__visitor_1a7d1a28bbc567b91ab74c5341f208bf74" prot="public" virt="non-virtual"><scope>graphene::chain::set_fee_visitor</scope><name>set_fee_visitor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

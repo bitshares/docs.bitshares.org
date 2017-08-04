@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1bitasset__options" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::bitasset_options</compoundname>
+    <includes refid="asset__ops_8hpp" local="no">asset_ops.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1bitasset__options_1a819ca8da077e90dc4f328661cee5030e" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t graphene::chain::bitasset_options::feed_lifetime_sec</definition>
+        <argsstring></argsstring>
+        <name>feed_lifetime_sec</name>
+        <initializer>= <ref refid="config_8hpp_1a0ce06f10a711677251107caa0ac33dc6" kindref="member">GRAPHENE_DEFAULT_PRICE_FEED_LIFETIME</ref></initializer>
+        <briefdescription>
+<para>Time before a price feed expires. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="92" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1bitasset__options_1a5330af03e4ff50492160cc60987ff958" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t graphene::chain::bitasset_options::minimum_feeds</definition>
+        <argsstring></argsstring>
+        <name>minimum_feeds</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+<para>Minimum number of unexpired feeds required to extract a median feed from. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="94" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1bitasset__options_1aacccb90d033ea4777f380e0866bfb17f" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t graphene::chain::bitasset_options::force_settlement_delay_sec</definition>
+        <argsstring></argsstring>
+        <name>force_settlement_delay_sec</name>
+        <initializer>= <ref refid="config_8hpp_1a664f0f3802f2770f9c6268f50bb69ebc" kindref="member">GRAPHENE_DEFAULT_FORCE_SETTLEMENT_DELAY</ref></initializer>
+        <briefdescription>
+<para>This is the delay between the time a long requests settlement and the chain evaluates the settlement. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="96" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1bitasset__options_1adc6cd11cb3ce4db2f6f54acdde98edbb" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t graphene::chain::bitasset_options::force_settlement_offset_percent</definition>
+        <argsstring></argsstring>
+        <name>force_settlement_offset_percent</name>
+        <initializer>= <ref refid="config_8hpp_1a8d59c575193fad3e084e5f4d0c9e1db4" kindref="member">GRAPHENE_DEFAULT_FORCE_SETTLEMENT_OFFSET</ref></initializer>
+        <briefdescription>
+<para>This is the percent to adjust the feed price in the short&apos;s favor in the event of a forced settlement. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="98" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1bitasset__options_1ae07a34d28152a3dbd7b197118c29b373" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t graphene::chain::bitasset_options::maximum_force_settlement_volume</definition>
+        <argsstring></argsstring>
+        <name>maximum_force_settlement_volume</name>
+        <initializer>= <ref refid="config_8hpp_1adc5efb82601873c5bd188b5ba494967d" kindref="member">GRAPHENE_DEFAULT_FORCE_SETTLEMENT_MAX_VOLUME</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Force settlement volume can be limited such that only a certain percentage of the total existing supply of the asset may be force-settled within any given chain maintenance interval. This field stores the percentage of the current supply which may be force settled within the current maintenance interval. If force settlements come due in an interval in which the maximum volume has already been settled, the new settlements will be enqueued and processed at the beginning of the next maintenance interval. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="104" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1bitasset__options_1ab7a015cad9454193f87de78d9e2cdc70" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref></type>
+        <definition>asset_id_type graphene::chain::bitasset_options::short_backing_asset</definition>
+        <argsstring></argsstring>
+        <name>short_backing_asset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This speicifies which asset type is used to collateralize short sales This field may only be updated if the current supply of the asset is zero. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="107" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1bitasset__options_1a75a4618ac43edea683778bc0a32685fc" prot="public" static="no" mutable="no">
+        <type><ref refid="group__operations_1gae0096750377f6e9d61dba5765284de99" kindref="member">extensions_type</ref></type>
+        <definition>extensions_type graphene::chain::bitasset_options::extensions</definition>
+        <argsstring></argsstring>
+        <name>extensions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="108" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1bitasset__options_1a1dfb904fce8f8e2e750d20f130234b1a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::bitasset_options::validate</definition>
+        <argsstring>() const</argsstring>
+        <name>validate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Perform internal consistency checks. <parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>fc::exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if any check fails </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="112" column="1" bodyfile="libraries/chain/protocol/asset_ops.cpp" bodystart="197" bodyend="202"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="structgraphene_1_1chain_1_1bitasset__options" kindref="compound">bitasset_options</ref> struct contains configurable options available only to BitAssets. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="note"><para>Changes to this struct will break protocol compatibility </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="1134">
+        <label>graphene::chain::bitasset_options</label>
+        <link refid="structgraphene_1_1chain_1_1bitasset__options"/>
+        <childnode refid="1135" relation="usage">
+          <edgelabel>extensions</edgelabel>
+        </childnode>
+      </node>
+      <node id="1135">
+        <label>flat_set&lt; future_extensions &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="90" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="90" bodyend="113"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1bitasset__options_1a75a4618ac43edea683778bc0a32685fc" prot="public" virt="non-virtual"><scope>graphene::chain::bitasset_options</scope><name>extensions</name></member>
+      <member refid="structgraphene_1_1chain_1_1bitasset__options_1a819ca8da077e90dc4f328661cee5030e" prot="public" virt="non-virtual"><scope>graphene::chain::bitasset_options</scope><name>feed_lifetime_sec</name></member>
+      <member refid="structgraphene_1_1chain_1_1bitasset__options_1aacccb90d033ea4777f380e0866bfb17f" prot="public" virt="non-virtual"><scope>graphene::chain::bitasset_options</scope><name>force_settlement_delay_sec</name></member>
+      <member refid="structgraphene_1_1chain_1_1bitasset__options_1adc6cd11cb3ce4db2f6f54acdde98edbb" prot="public" virt="non-virtual"><scope>graphene::chain::bitasset_options</scope><name>force_settlement_offset_percent</name></member>
+      <member refid="structgraphene_1_1chain_1_1bitasset__options_1ae07a34d28152a3dbd7b197118c29b373" prot="public" virt="non-virtual"><scope>graphene::chain::bitasset_options</scope><name>maximum_force_settlement_volume</name></member>
+      <member refid="structgraphene_1_1chain_1_1bitasset__options_1a5330af03e4ff50492160cc60987ff958" prot="public" virt="non-virtual"><scope>graphene::chain::bitasset_options</scope><name>minimum_feeds</name></member>
+      <member refid="structgraphene_1_1chain_1_1bitasset__options_1ab7a015cad9454193f87de78d9e2cdc70" prot="public" virt="non-virtual"><scope>graphene::chain::bitasset_options</scope><name>short_backing_asset</name></member>
+      <member refid="structgraphene_1_1chain_1_1bitasset__options_1a1dfb904fce8f8e2e750d20f130234b1a" prot="public" virt="non-virtual"><scope>graphene::chain::bitasset_options</scope><name>validate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1buyback__account__options" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::buyback_account_options</compoundname>
+    <includes refid="protocol_2buyback_8hpp" local="no">buyback.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1buyback__account__options_1aa227c25733aa1c7566659cff793aa53f" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref></type>
+        <definition>asset_id_type graphene::chain::buyback_account_options::asset_to_buy</definition>
+        <argsstring></argsstring>
+        <name>asset_to_buy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The asset to buy. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/buyback.hpp" line="35" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/buyback.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1buyback__account__options_1ae5dcd3697b5161e697574a6155b2f604" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::buyback_account_options::asset_to_buy_issuer</definition>
+        <argsstring></argsstring>
+        <name>asset_to_buy_issuer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Issuer of the asset. Must sign the transaction, must match issuer of specified asset. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/buyback.hpp" line="41" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/buyback.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1buyback__account__options_1aa00261c47e3ca745bf6a3cfcaf11c147" prot="public" static="no" mutable="no">
+        <type>flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref> &gt;</type>
+        <definition>flat_set&lt; asset_id_type &gt; graphene::chain::buyback_account_options::markets</definition>
+        <argsstring></argsstring>
+        <name>markets</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>What assets the account is willing to buy with. Other assets will just sit there since the account has null authority. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/buyback.hpp" line="47" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/buyback.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1286">
+        <label>flat_set&lt; asset_id_type &gt;</label>
+      </node>
+      <node id="1285">
+        <label>graphene::chain::buyback_account_options</label>
+        <link refid="structgraphene_1_1chain_1_1buyback__account__options"/>
+        <childnode refid="1286" relation="usage">
+          <edgelabel>markets</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/protocol/buyback.hpp" line="31" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/buyback.hpp" bodystart="30" bodyend="48"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1buyback__account__options_1aa227c25733aa1c7566659cff793aa53f" prot="public" virt="non-virtual"><scope>graphene::chain::buyback_account_options</scope><name>asset_to_buy</name></member>
+      <member refid="structgraphene_1_1chain_1_1buyback__account__options_1ae5dcd3697b5161e697574a6155b2f604" prot="public" virt="non-virtual"><scope>graphene::chain::buyback_account_options</scope><name>asset_to_buy_issuer</name></member>
+      <member refid="structgraphene_1_1chain_1_1buyback__account__options_1aa00261c47e3ca745bf6a3cfcaf11c147" prot="public" virt="non-virtual"><scope>graphene::chain::buyback_account_options</scope><name>markets</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgraphene_1_1app_1_1network__broadcast__api" kind="class" language="C++" prot="public">
+    <compoundname>graphene::app::network_broadcast_api</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::enable_shared_from_this&lt; network_broadcast_api &gt;</basecompoundref>
+    <includes refid="api_8hpp" local="no">api.hpp</includes>
+    <innerclass refid="structgraphene_1_1app_1_1network__broadcast__api_1_1transaction__confirmation" prot="public">graphene::app::network_broadcast_api::transaction_confirmation</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classgraphene_1_1app_1_1network__broadcast__api_1a386f5b3156ac36437597c3119de4d242" prot="public" static="no">
+        <type>std::function&lt; void(variant)&gt;</type>
+        <definition>typedef std::function&lt;void(variant)&gt; graphene::app::network_broadcast_api::confirmation_callback</definition>
+        <argsstring></argsstring>
+        <name>confirmation_callback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/api.hpp" line="181" column="1" bodyfile="libraries/app/include/graphene/app/api.hpp" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1app_1_1network__broadcast__api_1a725105e84e9ea945aaeabcc6082be207" prot="private" static="no" mutable="no">
+        <type>boost::signals2::scoped_connection</type>
+        <definition>boost::signals2::scoped_connection graphene::app::network_broadcast_api::_applied_block_connection</definition>
+        <argsstring></argsstring>
+        <name>_applied_block_connection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/api.hpp" line="216" column="1" bodyfile="libraries/app/include/graphene/app/api.hpp" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1app_1_1network__broadcast__api_1a0a92ce1e221f3085992f27e042be85cd" prot="private" static="no" mutable="no">
+        <type>map&lt; <ref refid="namespacegraphene_1_1chain_1adc38ef0a36d8b8dfcef2cbbcacb6d1e8" kindref="member">transaction_id_type</ref>, <ref refid="classgraphene_1_1app_1_1network__broadcast__api_1a386f5b3156ac36437597c3119de4d242" kindref="member">confirmation_callback</ref> &gt;</type>
+        <definition>map&lt;transaction_id_type,confirmation_callback&gt; graphene::app::network_broadcast_api::_callbacks</definition>
+        <argsstring></argsstring>
+        <name>_callbacks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/api.hpp" line="217" column="1" bodyfile="libraries/app/include/graphene/app/api.hpp" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1app_1_1network__broadcast__api_1add88daf64b53cdaff0748922b413a244" prot="private" static="no" mutable="no">
+        <type><ref refid="classgraphene_1_1app_1_1application" kindref="compound">application</ref> &amp;</type>
+        <definition>application&amp; graphene::app::network_broadcast_api::_app</definition>
+        <argsstring></argsstring>
+        <name>_app</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/api.hpp" line="218" column="1" bodyfile="libraries/app/include/graphene/app/api.hpp" bodystart="218" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgraphene_1_1app_1_1network__broadcast__api_1a33713868b546fe67bd32323ec1745ee7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>graphene::app::network_broadcast_api::network_broadcast_api</definition>
+        <argsstring>(application &amp;a)</argsstring>
+        <name>network_broadcast_api</name>
+        <param>
+          <type><ref refid="classgraphene_1_1app_1_1application" kindref="compound">application</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/api.hpp" line="171" column="1" bodyfile="libraries/app/api.cpp" bodystart="130" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1network__broadcast__api_1aaaf4e22733a59e28dc7cef6ba5530562" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::network_broadcast_api::broadcast_transaction</definition>
+        <argsstring>(const signed_transaction &amp;trx)</argsstring>
+        <name>broadcast_transaction</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref> &amp;</type>
+          <declname>trx</declname>
+        </param>
+        <briefdescription>
+<para>Broadcast a transaction to the network. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>trx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The transaction to broadcast</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+The transaction will be checked for validity in the local database prior to broadcasting. If it fails to apply locally, an error will be thrown and the transaction will not be broadcast. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/api.hpp" line="190" column="1" bodyfile="libraries/app/api.cpp" bodystart="156" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1network__broadcast__api_1a67737f03620587eed68b91184c753c2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::network_broadcast_api::broadcast_transaction_with_callback</definition>
+        <argsstring>(confirmation_callback cb, const signed_transaction &amp;trx)</argsstring>
+        <name>broadcast_transaction_with_callback</name>
+        <param>
+          <type><ref refid="classgraphene_1_1app_1_1network__broadcast__api_1a386f5b3156ac36437597c3119de4d242" kindref="member">confirmation_callback</ref></type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref> &amp;</type>
+          <declname>trx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>this version of broadcast transaction registers a callback method that will be called when the transaction is included into a block. The callback method includes the transaction id, block number, and transaction number in the block. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/api.hpp" line="196" column="1" bodyfile="libraries/app/api.cpp" bodystart="179" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1network__broadcast__api_1a18acee341d90fb8d392d5aa5e8d2649d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>fc::variant</type>
+        <definition>fc::variant graphene::app::network_broadcast_api::broadcast_transaction_synchronous</definition>
+        <argsstring>(const signed_transaction &amp;trx)</argsstring>
+        <name>broadcast_transaction_synchronous</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref> &amp;</type>
+          <declname>trx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>this version of broadcast transaction registers a callback method that will be called when the transaction is included into a block. The callback method includes the transaction id, block number, and transaction number in the block. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/api.hpp" line="202" column="1" bodyfile="libraries/app/api.cpp" bodystart="163" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1network__broadcast__api_1a547818c9883ad1299b9e00cdcf635fed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::network_broadcast_api::broadcast_block</definition>
+        <argsstring>(const signed_block &amp;block)</argsstring>
+        <name>broadcast_block</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1signed__block" kindref="compound">signed_block</ref> &amp;</type>
+          <declname>block</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/api.hpp" line="204" column="1" bodyfile="libraries/app/api.cpp" bodystart="173" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1network__broadcast__api_1acadde8137fccf6d482ce7f94bb8c0cbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::network_broadcast_api::on_applied_block</definition>
+        <argsstring>(const signed_block &amp;b)</argsstring>
+        <name>on_applied_block</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1signed__block" kindref="compound">signed_block</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Not reflected, thus not accessible to API clients. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is registered to receive the applied_block signal from the chain database when a block is received. It then dispatches callbacks to clients who have requested to be notified when a particular txid is included in a block. </para>        </detaileddescription>
+        <inbodydescription>
+<para>we need to ensure the <ref refid="classgraphene_1_1app_1_1database__api" kindref="compound">database_api</ref> is not deleted for the life of the async operation </para>        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/api.hpp" line="214" column="1" bodyfile="libraries/app/api.cpp" bodystart="135" bodyend="154"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classgraphene_1_1app_1_1network__broadcast__api" kindref="compound">network_broadcast_api</ref> class allows broadcasting of transactions. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2230">
+        <label>std::enable_shared_from_this&lt; network_broadcast_api &gt;</label>
+      </node>
+      <node id="2229">
+        <label>graphene::app::network_broadcast_api</label>
+        <link refid="classgraphene_1_1app_1_1network__broadcast__api"/>
+        <childnode refid="2230" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2232">
+        <label>std::enable_shared_from_this&lt; network_broadcast_api &gt;</label>
+      </node>
+      <node id="2231">
+        <label>graphene::app::network_broadcast_api</label>
+        <link refid="classgraphene_1_1app_1_1network__broadcast__api"/>
+        <childnode refid="2232" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/app/include/graphene/app/api.hpp" line="169" column="1" bodyfile="libraries/app/include/graphene/app/api.hpp" bodystart="168" bodyend="219"/>
+    <listofallmembers>
+      <member refid="classgraphene_1_1app_1_1network__broadcast__api_1add88daf64b53cdaff0748922b413a244" prot="private" virt="non-virtual"><scope>graphene::app::network_broadcast_api</scope><name>_app</name></member>
+      <member refid="classgraphene_1_1app_1_1network__broadcast__api_1a725105e84e9ea945aaeabcc6082be207" prot="private" virt="non-virtual"><scope>graphene::app::network_broadcast_api</scope><name>_applied_block_connection</name></member>
+      <member refid="classgraphene_1_1app_1_1network__broadcast__api_1a0a92ce1e221f3085992f27e042be85cd" prot="private" virt="non-virtual"><scope>graphene::app::network_broadcast_api</scope><name>_callbacks</name></member>
+      <member refid="classgraphene_1_1app_1_1network__broadcast__api_1a547818c9883ad1299b9e00cdcf635fed" prot="public" virt="non-virtual"><scope>graphene::app::network_broadcast_api</scope><name>broadcast_block</name></member>
+      <member refid="classgraphene_1_1app_1_1network__broadcast__api_1aaaf4e22733a59e28dc7cef6ba5530562" prot="public" virt="non-virtual"><scope>graphene::app::network_broadcast_api</scope><name>broadcast_transaction</name></member>
+      <member refid="classgraphene_1_1app_1_1network__broadcast__api_1a18acee341d90fb8d392d5aa5e8d2649d" prot="public" virt="non-virtual"><scope>graphene::app::network_broadcast_api</scope><name>broadcast_transaction_synchronous</name></member>
+      <member refid="classgraphene_1_1app_1_1network__broadcast__api_1a67737f03620587eed68b91184c753c2e" prot="public" virt="non-virtual"><scope>graphene::app::network_broadcast_api</scope><name>broadcast_transaction_with_callback</name></member>
+      <member refid="classgraphene_1_1app_1_1network__broadcast__api_1a386f5b3156ac36437597c3119de4d242" prot="public" virt="non-virtual"><scope>graphene::app::network_broadcast_api</scope><name>confirmation_callback</name></member>
+      <member refid="classgraphene_1_1app_1_1network__broadcast__api_1a33713868b546fe67bd32323ec1745ee7" prot="public" virt="non-virtual"><scope>graphene::app::network_broadcast_api</scope><name>network_broadcast_api</name></member>
+      <member refid="classgraphene_1_1app_1_1network__broadcast__api_1acadde8137fccf6d482ce7f94bb8c0cbe" prot="public" virt="non-virtual"><scope>graphene::app::network_broadcast_api</scope><name>on_applied_block</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

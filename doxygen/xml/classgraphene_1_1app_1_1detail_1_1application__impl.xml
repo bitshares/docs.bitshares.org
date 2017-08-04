@@ -1,0 +1,787 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgraphene_1_1app_1_1detail_1_1application__impl" kind="class" language="C++" prot="public">
+    <compoundname>graphene::app::detail::application_impl</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">node_delegate</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1app_1_1detail_1_1application__impl_1af07b5b8d6e16afe34208c9755f6416f5" prot="public" static="no" mutable="no">
+        <type>fc::optional&lt; fc::temp_file &gt;</type>
+        <definition>fc::optional&lt;fc::temp_file&gt; graphene::app::detail::application_impl::_lock_file</definition>
+        <argsstring></argsstring>
+        <name>_lock_file</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="111" column="1" bodyfile="libraries/app/application.cpp" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1app_1_1detail_1_1application__impl_1a14c8a3eab603c26744a2ece452aa0bc7" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool graphene::app::detail::application_impl::_is_block_producer</definition>
+        <argsstring></argsstring>
+        <name>_is_block_producer</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="112" column="1" bodyfile="libraries/app/application.cpp" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1app_1_1detail_1_1application__impl_1ad6aadf4191041d2fa601241542256e40" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool graphene::app::detail::application_impl::_force_validate</definition>
+        <argsstring></argsstring>
+        <name>_force_validate</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="113" column="1" bodyfile="libraries/app/application.cpp" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1app_1_1detail_1_1application__impl_1a01326317118046e1a808c998a7fd509e" prot="public" static="no" mutable="no">
+        <type><ref refid="classgraphene_1_1app_1_1application" kindref="compound">application</ref> *</type>
+        <definition>application* graphene::app::detail::application_impl::_self</definition>
+        <argsstring></argsstring>
+        <name>_self</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="935" column="1" bodyfile="libraries/app/application.cpp" bodystart="935" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1app_1_1detail_1_1application__impl_1a31f4ebabcfc8d3304706120af8ac74a5" prot="public" static="no" mutable="no">
+        <type>fc::path</type>
+        <definition>fc::path graphene::app::detail::application_impl::_data_dir</definition>
+        <argsstring></argsstring>
+        <name>_data_dir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="937" column="1" bodyfile="libraries/app/application.cpp" bodystart="937" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1app_1_1detail_1_1application__impl_1a3554a1446ab70f65f3de8971da1643b5" prot="public" static="no" mutable="no">
+        <type>const bpo::variables_map *</type>
+        <definition>const bpo::variables_map* graphene::app::detail::application_impl::_options</definition>
+        <argsstring></argsstring>
+        <name>_options</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="938" column="1" bodyfile="libraries/app/application.cpp" bodystart="938" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1app_1_1detail_1_1application__impl_1aaf6a8332d0bafd2d58acc8bca108fadf" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1app_1_1api__access" kindref="compound">api_access</ref></type>
+        <definition>api_access graphene::app::detail::application_impl::_apiaccess</definition>
+        <argsstring></argsstring>
+        <name>_apiaccess</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="939" column="1" bodyfile="libraries/app/application.cpp" bodystart="939" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1app_1_1detail_1_1application__impl_1ab81da4ed3068cb9e85380007471e2985" prot="public" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classgraphene_1_1chain_1_1database" kindref="compound">graphene::chain::database</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;graphene::chain::database&gt; graphene::app::detail::application_impl::_chain_db</definition>
+        <argsstring></argsstring>
+        <name>_chain_db</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="941" column="1" bodyfile="libraries/app/application.cpp" bodystart="941" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1app_1_1detail_1_1application__impl_1a0a00a599276f8d7d30910da38a27d9a4" prot="public" static="no" mutable="no">
+        <type>std::shared_ptr&lt; graphene::net::node &gt;</type>
+        <definition>std::shared_ptr&lt;graphene::net::node&gt; graphene::app::detail::application_impl::_p2p_network</definition>
+        <argsstring></argsstring>
+        <name>_p2p_network</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="942" column="1" bodyfile="libraries/app/application.cpp" bodystart="942" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1app_1_1detail_1_1application__impl_1ae6447c7cc434945337456c18d0103ef1" prot="public" static="no" mutable="no">
+        <type>std::shared_ptr&lt; fc::http::websocket_server &gt;</type>
+        <definition>std::shared_ptr&lt;fc::http::websocket_server&gt; graphene::app::detail::application_impl::_websocket_server</definition>
+        <argsstring></argsstring>
+        <name>_websocket_server</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="943" column="1" bodyfile="libraries/app/application.cpp" bodystart="943" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1app_1_1detail_1_1application__impl_1aca6d490958bb5748c84cb89488f0bb3e" prot="public" static="no" mutable="no">
+        <type>std::shared_ptr&lt; fc::http::websocket_tls_server &gt;</type>
+        <definition>std::shared_ptr&lt;fc::http::websocket_tls_server&gt; graphene::app::detail::application_impl::_websocket_tls_server</definition>
+        <argsstring></argsstring>
+        <name>_websocket_tls_server</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="944" column="1" bodyfile="libraries/app/application.cpp" bodystart="944" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1app_1_1detail_1_1application__impl_1a84e996e47fdeb1c7b6e13bdfa096015a" prot="public" static="no" mutable="no">
+        <type>std::map&lt; string, std::shared_ptr&lt; <ref refid="classgraphene_1_1app_1_1abstract__plugin" kindref="compound">abstract_plugin</ref> &gt; &gt;</type>
+        <definition>std::map&lt;string, std::shared_ptr&lt;abstract_plugin&gt; &gt; graphene::app::detail::application_impl::_plugins</definition>
+        <argsstring></argsstring>
+        <name>_plugins</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="946" column="1" bodyfile="libraries/app/application.cpp" bodystart="946" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1app_1_1detail_1_1application__impl_1a5109761c5258e4962c089d023a207a98" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool graphene::app::detail::application_impl::_is_finished_syncing</definition>
+        <argsstring></argsstring>
+        <name>_is_finished_syncing</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="948" column="1" bodyfile="libraries/app/application.cpp" bodystart="948" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgraphene_1_1app_1_1detail_1_1application__impl_1a05f6b598c146b0707f86c2e46ccdeb58" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::detail::application_impl::reset_p2p_node</definition>
+        <argsstring>(const fc::path &amp;data_dir)</argsstring>
+        <name>reset_p2p_node</name>
+        <param>
+          <type>const fc::path &amp;</type>
+          <declname>data_dir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="115" column="1" bodyfile="libraries/app/application.cpp" bodystart="115" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1detail_1_1application__impl_1ab60c6eefbea6f71eee04e79c6f7a21d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; fc::ip::endpoint &gt;</type>
+        <definition>std::vector&lt;fc::ip::endpoint&gt; graphene::app::detail::application_impl::resolve_string_to_ip_endpoints</definition>
+        <argsstring>(const std::string &amp;endpoint_string)</argsstring>
+        <name>resolve_string_to_ip_endpoints</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>endpoint_string</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="212" column="1" bodyfile="libraries/app/application.cpp" bodystart="212" bodyend="237"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1detail_1_1application__impl_1a53299364447764a4628a0f2b9018871b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::detail::application_impl::new_connection</definition>
+        <argsstring>(const fc::http::websocket_connection_ptr &amp;c)</argsstring>
+        <name>new_connection</name>
+        <param>
+          <type>const fc::http::websocket_connection_ptr &amp;</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="239" column="1" bodyfile="libraries/app/application.cpp" bodystart="239" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1detail_1_1application__impl_1aa0951d21a6e4640c78c8dba4dd53b6a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::detail::application_impl::reset_websocket_server</definition>
+        <argsstring>()</argsstring>
+        <name>reset_websocket_server</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="271" column="1" bodyfile="libraries/app/application.cpp" bodystart="271" bodyend="282"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1detail_1_1application__impl_1a56d7b546e3625b57e88a6b414ea6abe1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::detail::application_impl::reset_websocket_tls_server</definition>
+        <argsstring>()</argsstring>
+        <name>reset_websocket_tls_server</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="285" column="1" bodyfile="libraries/app/application.cpp" bodystart="285" bodyend="302"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1detail_1_1application__impl_1a6c1140ec4c796ae811e5f4e151d22a8b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>graphene::app::detail::application_impl::application_impl</definition>
+        <argsstring>(application *self)</argsstring>
+        <name>application_impl</name>
+        <param>
+          <type><ref refid="classgraphene_1_1app_1_1application" kindref="compound">application</ref> *</type>
+          <declname>self</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="304" column="1" bodyfile="libraries/app/application.cpp" bodystart="304" bodyend="308"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1detail_1_1application__impl_1ab43ddaba8adc18948f6282c76cc2bb05" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>graphene::app::detail::application_impl::~application_impl</definition>
+        <argsstring>()</argsstring>
+        <name>~application_impl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="310" column="1" bodyfile="libraries/app/application.cpp" bodystart="310" bodyend="313"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1detail_1_1application__impl_1a4ae044a072dac137b0283ad60b90c5f8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::detail::application_impl::set_dbg_init_key</definition>
+        <argsstring>(genesis_state_type &amp;genesis, const std::string &amp;init_key)</argsstring>
+        <name>set_dbg_init_key</name>
+        <param>
+          <type><ref refid="structgraphene_1_1chain_1_1genesis__state__type" kindref="compound">genesis_state_type</ref> &amp;</type>
+          <declname>genesis</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>init_key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="315" column="1" bodyfile="libraries/app/application.cpp" bodystart="315" bodyend="322"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1detail_1_1application__impl_1a2367bb23a57aa6b4608e7176c63cd9f6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::detail::application_impl::startup</definition>
+        <argsstring>()</argsstring>
+        <name>startup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="324" column="1" bodyfile="libraries/app/application.cpp" bodystart="324" bodyend="493"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1detail_1_1application__impl_1a1cd01553607a8c532a89f265412e6121" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>optional&lt; <ref refid="structgraphene_1_1app_1_1api__access__info" kindref="compound">api_access_info</ref> &gt;</type>
+        <definition>optional&lt; api_access_info &gt; graphene::app::detail::application_impl::get_api_access_info</definition>
+        <argsstring>(const string &amp;username) const</argsstring>
+        <name>get_api_access_info</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>username</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="495" column="1" bodyfile="libraries/app/application.cpp" bodystart="495" bodyend="506"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1detail_1_1application__impl_1a87f3404e89bb5e4426986a7248ece785" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::detail::application_impl::set_api_access_info</definition>
+        <argsstring>(const string &amp;username, api_access_info &amp;&amp;permissions)</argsstring>
+        <name>set_api_access_info</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>username</declname>
+        </param>
+        <param>
+          <type><ref refid="structgraphene_1_1app_1_1api__access__info" kindref="compound">api_access_info</ref> &amp;&amp;</type>
+          <declname>permissions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="508" column="1" bodyfile="libraries/app/application.cpp" bodystart="508" bodyend="511"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1detail_1_1application__impl_1a2dc37668fbd29eb5b875e39d0cebe00d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool graphene::app::detail::application_impl::has_item</definition>
+        <argsstring>(const net::item_id &amp;id) override</argsstring>
+        <name>has_item</name>
+        <param>
+          <type>const net::item_id &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If delegate has the item, the network has no need to fetch it. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="516" column="1" bodyfile="libraries/app/application.cpp" bodystart="516" bodyend="526"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1detail_1_1application__impl_1a975fc1413f1810ebf2cebb4c1ba67a63" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool graphene::app::detail::application_impl::handle_block</definition>
+        <argsstring>(const graphene::net::block_message &amp;blk_msg, bool sync_mode, std::vector&lt; fc::uint160_t &gt; &amp;contained_transaction_message_ids) override</argsstring>
+        <name>handle_block</name>
+        <param>
+          <type>const graphene::net::block_message &amp;</type>
+          <declname>blk_msg</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>sync_mode</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; fc::uint160_t &gt; &amp;</type>
+          <declname>contained_transaction_message_ids</declname>
+        </param>
+        <briefdescription>
+<para>allows the application to validate an item prior to broadcasting to peers. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sync_mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if the message was fetched through the sync process, false during normal operation </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if this message caused the blockchain to switch forks, false if it did not</para></simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if error validating the item, otherwise the item is safe to broadcast on. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="536" column="1" bodyfile="libraries/app/application.cpp" bodystart="536" bodyend="592"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1detail_1_1application__impl_1aaff7c2db6940b426331d1054d7703922" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void graphene::app::detail::application_impl::handle_transaction</definition>
+        <argsstring>(const graphene::net::trx_message &amp;transaction_message) override</argsstring>
+        <name>handle_transaction</name>
+        <param>
+          <type>const graphene::net::trx_message &amp;</type>
+          <declname>transaction_message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="594" column="1" bodyfile="libraries/app/application.cpp" bodystart="594" bodyend="607"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1detail_1_1application__impl_1ab6c5753f3f9acdfbd82aa5bf1817e18c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void graphene::app::detail::application_impl::handle_message</definition>
+        <argsstring>(const message &amp;message_to_process) override</argsstring>
+        <name>handle_message</name>
+        <param>
+          <type>const message &amp;</type>
+          <declname>message_to_process</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="609" column="1" bodyfile="libraries/app/application.cpp" bodystart="609" bodyend="613"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1detail_1_1application__impl_1a620604ba97ddc87557b19370b4b82472" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::app::detail::application_impl::is_included_block</definition>
+        <argsstring>(const block_id_type &amp;block_id)</argsstring>
+        <name>is_included_block</name>
+        <param>
+          <type>const <ref refid="namespacegraphene_1_1chain_1a314b030d7a6107c5641fd9945da7f568" kindref="member">block_id_type</ref> &amp;</type>
+          <declname>block_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="615" column="1" bodyfile="libraries/app/application.cpp" bodystart="615" bodyend="620"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1detail_1_1application__impl_1a17bf85b34cf9df047705ed20d8a1f82b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::vector&lt; item_hash_t &gt;</type>
+        <definition>virtual std::vector&lt;item_hash_t&gt; graphene::app::detail::application_impl::get_block_ids</definition>
+        <argsstring>(const std::vector&lt; item_hash_t &gt; &amp;blockchain_synopsis, uint32_t &amp;remaining_item_count, uint32_t limit) override</argsstring>
+        <name>get_block_ids</name>
+        <param>
+          <type>const std::vector&lt; item_hash_t &gt; &amp;</type>
+          <declname>blockchain_synopsis</declname>
+        </param>
+        <param>
+          <type>uint32_t &amp;</type>
+          <declname>remaining_item_count</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>limit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assuming all data elements are ordered in some way, this method should return up to limit ids that occur <emphasis>after</emphasis> the last ID in synopsis that we recognize.</para><para>On return, remaining_item_count will be set to the number of items in our blockchain after the last item returned in the result, or 0 if the result contains the last item in the blockchain </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="631" column="1" bodyfile="libraries/app/application.cpp" bodystart="631" bodyend="676"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1detail_1_1application__impl_1a6d482305c2d126a32306399ff83218e5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>message</type>
+        <definition>virtual message graphene::app::detail::application_impl::get_item</definition>
+        <argsstring>(const item_id &amp;id) override</argsstring>
+        <name>get_item</name>
+        <param>
+          <type>const item_id &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Given the hash of the requested data, fetch the body. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="681" column="1" bodyfile="libraries/app/application.cpp" bodystart="681" bodyend="695"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1detail_1_1application__impl_1ae3aa60c84a092ea4edfc6c65e708098f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1a8182991954496b517776f06844cf2d93" kindref="member">chain_id_type</ref></type>
+        <definition>virtual chain_id_type graphene::app::detail::application_impl::get_chain_id</definition>
+        <argsstring>() const override</argsstring>
+        <name>get_chain_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="697" column="1" bodyfile="libraries/app/application.cpp" bodystart="697" bodyend="700"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1detail_1_1application__impl_1aab1435ad835bba759cc5ab7ca292c82a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::vector&lt; item_hash_t &gt;</type>
+        <definition>virtual std::vector&lt;item_hash_t&gt; graphene::app::detail::application_impl::get_blockchain_synopsis</definition>
+        <argsstring>(const item_hash_t &amp;reference_point, uint32_t number_of_blocks_after_reference_point) override</argsstring>
+        <name>get_blockchain_synopsis</name>
+        <param>
+          <type>const item_hash_t &amp;</type>
+          <declname>reference_point</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>number_of_blocks_after_reference_point</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a synopsis of the blockchain used for syncing. This consists of a list of block hashes at intervals exponentially increasing towards the genesis block. When syncing to a peer, the peer uses this data to determine if we&apos;re on the same fork as they are, and if not, what blocks they need to send us to get us on their fork.</para><para>In the over-simplified case, this is a straighforward synopsis of our current preferred blockchain; when we first connect up to a peer, this is what we will be sending. It looks like this: If the blockchain is empty, it will return the empty list. If the blockchain has one block, it will return a list containing just that block. If it contains more than one block: the first element in the list will be the hash of the highest numbered block that we cannot undo the second element will be the hash of an item at the half way point in the undoable segment of the blockchain the third will be ~3/4 of the way through the undoable segment of the block chain the fourth will be at ~7/8... &amp;c. the last item in the list will be the hash of the most recent block on our preferred chain so if the blockchain had 26 blocks labeled a - z, the synopsis would be: a n u x z the idea being that by sending a small (&lt;30) number of block ids, we can summarize a huge blockchain. The block ids are more dense near the end of the chain where because we are more likely to be almost in sync when we first connect, and forks are likely to be short. If the peer we&apos;re syncing with in our example is on a fork that started at block &apos;v&apos;, then they will reply to our synopsis with a list of all blocks starting from block &apos;u&apos;, the last block they know that we had in common.</para><para>In the real code, there are several complications.</para><para>First, as an optimization, we don&apos;t usually send a synopsis of the entire blockchain, we send a synopsis of only the segment of the blockchain that we have undo data for. If their fork doesn&apos;t build off of something in our undo history, we would be unable to switch, so there&apos;s no reason to fetch the blocks.</para><para>Second, when a peer replies to our initial synopsis and gives us a list of the blocks they think we are missing, they only send a chunk of a few thousand blocks at once. After we get those block ids, we need to request more blocks by sending another synopsis (we can&apos;t just say &quot;send me
+the next 2000 ids&quot; because they may have switched forks themselves and they don&apos;t track what they&apos;ve sent us). For faster performance, we want to get a fairly long list of block ids first, then start downloading the blocks. The peer doesn&apos;t handle these follow-up block id requests any different from the initial request; it treats the synopsis we send as our blockchain and bases its response entirely off that. So to get the response we want (the next chunk of block ids following the last one they sent us, or, failing that, the shortest fork off of the last list of block ids they sent), we need to construct a synopsis as if our blockchain was made up of:<orderedlist>
+<listitem><para>the blocks in our block chain up to the fork point (if there is a fork) or the head block (if no fork)</para></listitem><listitem><para>the blocks we&apos;ve already pushed from their fork (if there&apos;s a fork)</para></listitem><listitem><para>the block ids they&apos;ve previously sent us Segment 3 is handled in the p2p code, it just tells us the number of blocks it has (in number_of_blocks_after_reference_point) so we can leave space in the synopsis for them. We&apos;re responsible for constructing the synopsis of Segments 1 and 2 from our active blockchain and fork database. The reference_point parameter is the last block from that peer that has been successfully pushed to the blockchain, so that tells us whether the peer is on a fork or on the main chain. </para></listitem></orderedlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="760" column="1" bodyfile="libraries/app/application.cpp" bodystart="760" bodyend="877"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1detail_1_1application__impl_1a5189abaed1b9bf9b47147bba869eec56" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void graphene::app::detail::application_impl::sync_status</definition>
+        <argsstring>(uint32_t item_type, uint32_t item_count) override</argsstring>
+        <name>sync_status</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>item_type</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>item_count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Call this after the call to handle_message succeeds.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>item_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the type of the item we&apos;re synchronizing, will be the same as item passed to the sync_from() call </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>item_count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the number of items known to the node that haven&apos;t been sent to handle_item() yet. After <computeroutput>item_count</computeroutput> more calls to handle_item(), the node will be in sync </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="886" column="1" bodyfile="libraries/app/application.cpp" bodystart="886" bodyend="889"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1detail_1_1application__impl_1ae940c6904889b507b4a594350856d7e6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void graphene::app::detail::application_impl::connection_count_changed</definition>
+        <argsstring>(uint32_t c) override</argsstring>
+        <name>connection_count_changed</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Call any time the number of connected peers changes. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="894" column="1" bodyfile="libraries/app/application.cpp" bodystart="894" bodyend="897"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1detail_1_1application__impl_1a946bfdcd5d0c0f9b46effbf0670691a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>uint32_t</type>
+        <definition>virtual uint32_t graphene::app::detail::application_impl::get_block_number</definition>
+        <argsstring>(const item_hash_t &amp;block_id) override</argsstring>
+        <name>get_block_number</name>
+        <param>
+          <type>const item_hash_t &amp;</type>
+          <declname>block_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="899" column="1" bodyfile="libraries/app/application.cpp" bodystart="899" bodyend="902"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1detail_1_1application__impl_1a2631c86d7ed3eded5aeec88678ba6cc0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>fc::time_point_sec</type>
+        <definition>virtual fc::time_point_sec graphene::app::detail::application_impl::get_block_time</definition>
+        <argsstring>(const item_hash_t &amp;block_id) override</argsstring>
+        <name>get_block_time</name>
+        <param>
+          <type>const item_hash_t &amp;</type>
+          <declname>block_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the time a block was produced (if block_id = 0, returns genesis time). If we don&apos;t know about the block, returns time_point_sec::min() </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="908" column="1" bodyfile="libraries/app/application.cpp" bodystart="908" bodyend="913"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1detail_1_1application__impl_1a05c914400bd2b9df191650a54a2e96fe" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>item_hash_t</type>
+        <definition>virtual item_hash_t graphene::app::detail::application_impl::get_head_block_id</definition>
+        <argsstring>() const override</argsstring>
+        <name>get_head_block_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="915" column="1" bodyfile="libraries/app/application.cpp" bodystart="915" bodyend="918"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1detail_1_1application__impl_1a5515c2ecf788d05347e930063e25888a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>uint32_t</type>
+        <definition>virtual uint32_t graphene::app::detail::application_impl::estimate_last_known_fork_from_git_revision_timestamp</definition>
+        <argsstring>(uint32_t unix_timestamp) const override</argsstring>
+        <name>estimate_last_known_fork_from_git_revision_timestamp</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>unix_timestamp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="920" column="1" bodyfile="libraries/app/application.cpp" bodystart="920" bodyend="923"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1detail_1_1application__impl_1a9ebb2cffba92004c81ee2db648cbdbfc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void graphene::app::detail::application_impl::error_encountered</definition>
+        <argsstring>(const std::string &amp;message, const fc::oexception &amp;error) override</argsstring>
+        <name>error_encountered</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>const fc::oexception &amp;</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="925" column="1" bodyfile="libraries/app/application.cpp" bodystart="925" bodyend="928"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1detail_1_1application__impl_1a5a16866ca1ed46f734043f473fad7735" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t graphene::app::detail::application_impl::get_current_block_interval_in_seconds</definition>
+        <argsstring>() const override</argsstring>
+        <name>get_current_block_interval_in_seconds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/application.cpp" line="930" column="1" bodyfile="libraries/app/application.cpp" bodystart="930" bodyend="933"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="304">
+        <label>net::node_delegate</label>
+      </node>
+      <node id="303">
+        <label>graphene::app::detail::application_impl</label>
+        <link refid="classgraphene_1_1app_1_1detail_1_1application__impl"/>
+        <childnode refid="304" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="306">
+        <label>net::node_delegate</label>
+      </node>
+      <node id="305">
+        <label>graphene::app::detail::application_impl</label>
+        <link refid="classgraphene_1_1app_1_1detail_1_1application__impl"/>
+        <childnode refid="306" relation="public-inheritance">
+        </childnode>
+        <childnode refid="307" relation="usage">
+          <edgelabel>_self</edgelabel>
+        </childnode>
+        <childnode refid="308" relation="usage">
+          <edgelabel>_apiaccess</edgelabel>
+        </childnode>
+      </node>
+      <node id="307">
+        <label>graphene::app::application</label>
+        <link refid="classgraphene_1_1app_1_1application"/>
+      </node>
+      <node id="308">
+        <label>graphene::app::api_access</label>
+        <link refid="structgraphene_1_1app_1_1api__access"/>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/app/application.cpp" line="109" column="1" bodyfile="libraries/app/application.cpp" bodystart="108" bodyend="949"/>
+    <listofallmembers>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1aaf6a8332d0bafd2d58acc8bca108fadf" prot="public" virt="non-virtual"><scope>graphene::app::detail::application_impl</scope><name>_apiaccess</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1ab81da4ed3068cb9e85380007471e2985" prot="public" virt="non-virtual"><scope>graphene::app::detail::application_impl</scope><name>_chain_db</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1a31f4ebabcfc8d3304706120af8ac74a5" prot="public" virt="non-virtual"><scope>graphene::app::detail::application_impl</scope><name>_data_dir</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1ad6aadf4191041d2fa601241542256e40" prot="public" virt="non-virtual"><scope>graphene::app::detail::application_impl</scope><name>_force_validate</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1a14c8a3eab603c26744a2ece452aa0bc7" prot="public" virt="non-virtual"><scope>graphene::app::detail::application_impl</scope><name>_is_block_producer</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1a5109761c5258e4962c089d023a207a98" prot="public" virt="non-virtual"><scope>graphene::app::detail::application_impl</scope><name>_is_finished_syncing</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1af07b5b8d6e16afe34208c9755f6416f5" prot="public" virt="non-virtual"><scope>graphene::app::detail::application_impl</scope><name>_lock_file</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1a3554a1446ab70f65f3de8971da1643b5" prot="public" virt="non-virtual"><scope>graphene::app::detail::application_impl</scope><name>_options</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1a0a00a599276f8d7d30910da38a27d9a4" prot="public" virt="non-virtual"><scope>graphene::app::detail::application_impl</scope><name>_p2p_network</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1a84e996e47fdeb1c7b6e13bdfa096015a" prot="public" virt="non-virtual"><scope>graphene::app::detail::application_impl</scope><name>_plugins</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1a01326317118046e1a808c998a7fd509e" prot="public" virt="non-virtual"><scope>graphene::app::detail::application_impl</scope><name>_self</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1ae6447c7cc434945337456c18d0103ef1" prot="public" virt="non-virtual"><scope>graphene::app::detail::application_impl</scope><name>_websocket_server</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1aca6d490958bb5748c84cb89488f0bb3e" prot="public" virt="non-virtual"><scope>graphene::app::detail::application_impl</scope><name>_websocket_tls_server</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1a6c1140ec4c796ae811e5f4e151d22a8b" prot="public" virt="non-virtual"><scope>graphene::app::detail::application_impl</scope><name>application_impl</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1ae940c6904889b507b4a594350856d7e6" prot="public" virt="virtual"><scope>graphene::app::detail::application_impl</scope><name>connection_count_changed</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1a9ebb2cffba92004c81ee2db648cbdbfc" prot="public" virt="virtual"><scope>graphene::app::detail::application_impl</scope><name>error_encountered</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1a5515c2ecf788d05347e930063e25888a" prot="public" virt="virtual"><scope>graphene::app::detail::application_impl</scope><name>estimate_last_known_fork_from_git_revision_timestamp</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1a1cd01553607a8c532a89f265412e6121" prot="public" virt="non-virtual"><scope>graphene::app::detail::application_impl</scope><name>get_api_access_info</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1a17bf85b34cf9df047705ed20d8a1f82b" prot="public" virt="virtual"><scope>graphene::app::detail::application_impl</scope><name>get_block_ids</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1a946bfdcd5d0c0f9b46effbf0670691a1" prot="public" virt="virtual"><scope>graphene::app::detail::application_impl</scope><name>get_block_number</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1a2631c86d7ed3eded5aeec88678ba6cc0" prot="public" virt="virtual"><scope>graphene::app::detail::application_impl</scope><name>get_block_time</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1aab1435ad835bba759cc5ab7ca292c82a" prot="public" virt="virtual"><scope>graphene::app::detail::application_impl</scope><name>get_blockchain_synopsis</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1ae3aa60c84a092ea4edfc6c65e708098f" prot="public" virt="virtual"><scope>graphene::app::detail::application_impl</scope><name>get_chain_id</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1a5a16866ca1ed46f734043f473fad7735" prot="public" virt="non-virtual"><scope>graphene::app::detail::application_impl</scope><name>get_current_block_interval_in_seconds</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1a05c914400bd2b9df191650a54a2e96fe" prot="public" virt="virtual"><scope>graphene::app::detail::application_impl</scope><name>get_head_block_id</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1a6d482305c2d126a32306399ff83218e5" prot="public" virt="virtual"><scope>graphene::app::detail::application_impl</scope><name>get_item</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1a975fc1413f1810ebf2cebb4c1ba67a63" prot="public" virt="virtual"><scope>graphene::app::detail::application_impl</scope><name>handle_block</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1ab6c5753f3f9acdfbd82aa5bf1817e18c" prot="public" virt="virtual"><scope>graphene::app::detail::application_impl</scope><name>handle_message</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1aaff7c2db6940b426331d1054d7703922" prot="public" virt="virtual"><scope>graphene::app::detail::application_impl</scope><name>handle_transaction</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1a2dc37668fbd29eb5b875e39d0cebe00d" prot="public" virt="virtual"><scope>graphene::app::detail::application_impl</scope><name>has_item</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1a620604ba97ddc87557b19370b4b82472" prot="public" virt="non-virtual"><scope>graphene::app::detail::application_impl</scope><name>is_included_block</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1a53299364447764a4628a0f2b9018871b" prot="public" virt="non-virtual"><scope>graphene::app::detail::application_impl</scope><name>new_connection</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1a05f6b598c146b0707f86c2e46ccdeb58" prot="public" virt="non-virtual"><scope>graphene::app::detail::application_impl</scope><name>reset_p2p_node</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1aa0951d21a6e4640c78c8dba4dd53b6a8" prot="public" virt="non-virtual"><scope>graphene::app::detail::application_impl</scope><name>reset_websocket_server</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1a56d7b546e3625b57e88a6b414ea6abe1" prot="public" virt="non-virtual"><scope>graphene::app::detail::application_impl</scope><name>reset_websocket_tls_server</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1ab60c6eefbea6f71eee04e79c6f7a21d3" prot="public" virt="non-virtual"><scope>graphene::app::detail::application_impl</scope><name>resolve_string_to_ip_endpoints</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1a87f3404e89bb5e4426986a7248ece785" prot="public" virt="non-virtual"><scope>graphene::app::detail::application_impl</scope><name>set_api_access_info</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1a4ae044a072dac137b0283ad60b90c5f8" prot="public" virt="non-virtual"><scope>graphene::app::detail::application_impl</scope><name>set_dbg_init_key</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1a2367bb23a57aa6b4608e7176c63cd9f6" prot="public" virt="non-virtual"><scope>graphene::app::detail::application_impl</scope><name>startup</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1a5189abaed1b9bf9b47147bba869eec56" prot="public" virt="virtual"><scope>graphene::app::detail::application_impl</scope><name>sync_status</name></member>
+      <member refid="classgraphene_1_1app_1_1detail_1_1application__impl_1ab43ddaba8adc18948f6282c76cc2bb05" prot="public" virt="non-virtual"><scope>graphene::app::detail::application_impl</scope><name>~application_impl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

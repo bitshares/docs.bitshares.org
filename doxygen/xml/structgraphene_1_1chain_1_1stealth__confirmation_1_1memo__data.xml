@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1stealth__confirmation_1_1memo__data" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::stealth_confirmation::memo_data</compoundname>
+    <includes refid="confidential_8hpp" local="no">confidential.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1stealth__confirmation_1_1memo__data_1a76af975b09b16ad26e39d4b615a33189" prot="public" static="no" mutable="no">
+        <type>optional&lt; <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref> &gt;</type>
+        <definition>optional&lt;public_key_type&gt; graphene::chain::stealth_confirmation::memo_data::from</definition>
+        <argsstring></argsstring>
+        <name>from</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/confidential.hpp" line="104" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/confidential.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1stealth__confirmation_1_1memo__data_1a2761ef742c498c952340e0796ccfb5c5" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::stealth_confirmation::memo_data::amount</definition>
+        <argsstring></argsstring>
+        <name>amount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/confidential.hpp" line="105" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/confidential.hpp" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1stealth__confirmation_1_1memo__data_1a771b0f89d8949d69a3b6aafc0e4b05e7" prot="public" static="no" mutable="no">
+        <type>fc::sha256</type>
+        <definition>fc::sha256 graphene::chain::stealth_confirmation::memo_data::blinding_factor</definition>
+        <argsstring></argsstring>
+        <name>blinding_factor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/confidential.hpp" line="106" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/confidential.hpp" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1stealth__confirmation_1_1memo__data_1a93863a07e0345421370d9566d60eb803" prot="public" static="no" mutable="no">
+        <type>fc::ecc::commitment_type</type>
+        <definition>fc::ecc::commitment_type graphene::chain::stealth_confirmation::memo_data::commitment</definition>
+        <argsstring></argsstring>
+        <name>commitment</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/confidential.hpp" line="107" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/confidential.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1stealth__confirmation_1_1memo__data_1ab1aa76920c43c08e40c68e763c8d60cc" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t graphene::chain::stealth_confirmation::memo_data::check</definition>
+        <argsstring></argsstring>
+        <name>check</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/confidential.hpp" line="108" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/confidential.hpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2216">
+        <label>commitment_type</label>
+      </node>
+      <node id="2217">
+        <label>graphene::chain::asset</label>
+        <link refid="structgraphene_1_1chain_1_1asset"/>
+        <childnode refid="2218" relation="usage">
+          <edgelabel>amount</edgelabel>
+        </childnode>
+      </node>
+      <node id="2218">
+        <label>safe&lt; int64_t &gt;</label>
+      </node>
+      <node id="2215">
+        <label>optional&lt; graphene::chain::public_key_type &gt;</label>
+      </node>
+      <node id="2214">
+        <label>graphene::chain::stealth_confirmation::memo_data</label>
+        <link refid="structgraphene_1_1chain_1_1stealth__confirmation_1_1memo__data"/>
+        <childnode refid="2215" relation="usage">
+          <edgelabel>from</edgelabel>
+        </childnode>
+        <childnode refid="2216" relation="usage">
+          <edgelabel>commitment</edgelabel>
+        </childnode>
+        <childnode refid="2217" relation="usage">
+          <edgelabel>amount</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/protocol/confidential.hpp" line="103" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/confidential.hpp" bodystart="102" bodyend="109"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1stealth__confirmation_1_1memo__data_1a2761ef742c498c952340e0796ccfb5c5" prot="public" virt="non-virtual"><scope>graphene::chain::stealth_confirmation::memo_data</scope><name>amount</name></member>
+      <member refid="structgraphene_1_1chain_1_1stealth__confirmation_1_1memo__data_1a771b0f89d8949d69a3b6aafc0e4b05e7" prot="public" virt="non-virtual"><scope>graphene::chain::stealth_confirmation::memo_data</scope><name>blinding_factor</name></member>
+      <member refid="structgraphene_1_1chain_1_1stealth__confirmation_1_1memo__data_1ab1aa76920c43c08e40c68e763c8d60cc" prot="public" virt="non-virtual"><scope>graphene::chain::stealth_confirmation::memo_data</scope><name>check</name></member>
+      <member refid="structgraphene_1_1chain_1_1stealth__confirmation_1_1memo__data_1a93863a07e0345421370d9566d60eb803" prot="public" virt="non-virtual"><scope>graphene::chain::stealth_confirmation::memo_data</scope><name>commitment</name></member>
+      <member refid="structgraphene_1_1chain_1_1stealth__confirmation_1_1memo__data_1a76af975b09b16ad26e39d4b615a33189" prot="public" virt="non-virtual"><scope>graphene::chain::stealth_confirmation::memo_data</scope><name>from</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

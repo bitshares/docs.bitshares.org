@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="worker__object_8hpp" kind="file" language="C++">
+    <compoundname>worker_object.hpp</compoundname>
+    <includes local="no">graphene/db/object.hpp</includes>
+    <includes local="no">graphene/db/generic_index.hpp</includes>
+    <includedby refid="account__evaluator_8cpp" local="no">libraries/chain/account_evaluator.cpp</includedby>
+    <includedby refid="db__init_8cpp" local="no">libraries/chain/db_init.cpp</includedby>
+    <includedby refid="db__maint_8cpp" local="no">libraries/chain/db_maint.cpp</includedby>
+    <includedby refid="db__notify_8cpp" local="no">libraries/chain/db_notify.cpp</includedby>
+    <includedby refid="worker__evaluator_8cpp" local="no">libraries/chain/worker_evaluator.cpp</includedby>
+    <includedby refid="api_8cpp" local="no">libraries/app/api.cpp</includedby>
+    <includedby refid="database__api_8hpp" local="no">libraries/app/include/graphene/app/database_api.hpp</includedby>
+    <incdepgraph>
+      <node id="11710">
+        <label>libraries/chain/include/graphene/chain/worker_object.hpp</label>
+        <link refid="worker__object_8hpp"/>
+        <childnode refid="11711" relation="include">
+        </childnode>
+        <childnode refid="11712" relation="include">
+        </childnode>
+      </node>
+      <node id="11712">
+        <label>graphene/db/generic_index.hpp</label>
+      </node>
+      <node id="11711">
+        <label>graphene/db/object.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="11722">
+        <label>libraries/app/database_api.cpp</label>
+        <link refid="database__api_8cpp"/>
+      </node>
+      <node id="11727">
+        <label>libraries/wallet/api_documentation_standin.cpp</label>
+        <link refid="api__documentation__standin_8cpp"/>
+      </node>
+      <node id="11726">
+        <label>libraries/wallet/api_documentation.cpp</label>
+        <link refid="api__documentation_8cpp"/>
+      </node>
+      <node id="11717">
+        <label>libraries/chain/db_maint.cpp</label>
+        <link refid="db__maint_8cpp"/>
+        <childnode refid="11716" relation="include">
+        </childnode>
+      </node>
+      <node id="11713">
+        <label>libraries/chain/include/graphene/chain/worker_object.hpp</label>
+        <link refid="worker__object_8hpp"/>
+        <childnode refid="11714" relation="include">
+        </childnode>
+        <childnode refid="11715" relation="include">
+        </childnode>
+        <childnode refid="11717" relation="include">
+        </childnode>
+        <childnode refid="11718" relation="include">
+        </childnode>
+        <childnode refid="11719" relation="include">
+        </childnode>
+        <childnode refid="11720" relation="include">
+        </childnode>
+        <childnode refid="11721" relation="include">
+        </childnode>
+      </node>
+      <node id="11721">
+        <label>libraries/app/include/graphene/app/database_api.hpp</label>
+        <link refid="database__api_8hpp"/>
+        <childnode refid="11722" relation="include">
+        </childnode>
+        <childnode refid="11723" relation="include">
+        </childnode>
+      </node>
+      <node id="11714">
+        <label>libraries/chain/account_evaluator.cpp</label>
+        <link refid="account__evaluator_8cpp"/>
+      </node>
+      <node id="11715">
+        <label>libraries/chain/db_init.cpp</label>
+        <link refid="db__init_8cpp"/>
+        <childnode refid="11716" relation="include">
+        </childnode>
+      </node>
+      <node id="11719">
+        <label>libraries/chain/worker_evaluator.cpp</label>
+        <link refid="worker__evaluator_8cpp"/>
+      </node>
+      <node id="11723">
+        <label>libraries/app/include/graphene/app/api.hpp</label>
+        <link refid="api_8hpp"/>
+        <childnode refid="11720" relation="include">
+        </childnode>
+        <childnode refid="11724" relation="include">
+        </childnode>
+        <childnode refid="11725" relation="include">
+        </childnode>
+        <childnode refid="11728" relation="include">
+        </childnode>
+      </node>
+      <node id="11725">
+        <label>libraries/wallet/include/graphene/wallet/wallet.hpp</label>
+        <link refid="wallet_8hpp"/>
+        <childnode refid="11726" relation="include">
+        </childnode>
+        <childnode refid="11727" relation="include">
+        </childnode>
+        <childnode refid="11728" relation="include">
+        </childnode>
+      </node>
+      <node id="11716">
+        <label>libraries/chain/database.cpp</label>
+        <link refid="database_8cpp"/>
+      </node>
+      <node id="11720">
+        <label>libraries/app/api.cpp</label>
+        <link refid="api_8cpp"/>
+      </node>
+      <node id="11724">
+        <label>libraries/app/application.cpp</label>
+        <link refid="application_8cpp"/>
+      </node>
+      <node id="11718">
+        <label>libraries/chain/db_notify.cpp</label>
+        <link refid="db__notify_8cpp"/>
+        <childnode refid="11716" relation="include">
+        </childnode>
+      </node>
+      <node id="11728">
+        <label>libraries/wallet/wallet.cpp</label>
+        <link refid="wallet_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structgraphene_1_1chain_1_1refund__worker__type" prot="public">graphene::chain::refund_worker_type</innerclass>
+    <innerclass refid="structgraphene_1_1chain_1_1vesting__balance__worker__type" prot="public">graphene::chain::vesting_balance_worker_type</innerclass>
+    <innerclass refid="structgraphene_1_1chain_1_1burn__worker__type" prot="public">graphene::chain::burn_worker_type</innerclass>
+    <innerclass refid="classgraphene_1_1chain_1_1worker__object" prot="public">graphene::chain::worker_object</innerclass>
+    <innernamespace refid="namespacegraphene">graphene</innernamespace>
+    <innernamespace refid="namespacegraphene_1_1chain">graphene::chain</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/chain/include/graphene/chain/worker_object.hpp"/>
+  </compounddef>
+</doxygen>

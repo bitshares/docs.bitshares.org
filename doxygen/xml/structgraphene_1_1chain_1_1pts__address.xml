@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1pts__address" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::pts_address</compoundname>
+    <includes refid="pts__address_8hpp" local="no">pts_address.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1pts__address_1a39622adc9ffbe717621421bf940fa87d" prot="public" static="no" mutable="no">
+        <type>fc::array&lt; char, 25 &gt;</type>
+        <definition>fc::array&lt;char,25&gt; graphene::chain::pts_address::addr</definition>
+        <argsstring></argsstring>
+        <name>addr</name>
+        <briefdescription>
+<para>binary representation of address </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/pts_address.hpp" line="47" column="1" bodyfile="libraries/chain/include/graphene/chain/pts_address.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1pts__address_1a5a6184df9efadfb7fe4910d85e86b268" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>graphene::chain::pts_address::pts_address</definition>
+        <argsstring>()</argsstring>
+        <name>pts_address</name>
+        <briefdescription>
+<para>constructs empty / null address </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/pts_address.hpp" line="38" column="1" bodyfile="libraries/chain/pts_address.cpp" bodystart="34" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1pts__address_1a3af67266021b8f921e141cbf6708b33e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>graphene::chain::pts_address::pts_address</definition>
+        <argsstring>(const std::string &amp;base58str)</argsstring>
+        <name>pts_address</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>base58str</declname>
+        </param>
+        <briefdescription>
+<para>converts to binary, validates checksum </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/pts_address.hpp" line="39" column="1" bodyfile="libraries/chain/pts_address.cpp" bodystart="39" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1pts__address_1a6bbf3f64e74d5b664f4905d9fa97b362" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>graphene::chain::pts_address::pts_address</definition>
+        <argsstring>(const fc::ecc::public_key &amp;pub, bool compressed=true, uint8_t version=56)</argsstring>
+        <name>pts_address</name>
+        <param>
+          <type>const fc::ecc::public_key &amp;</type>
+          <declname>pub</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>compressed</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>version</declname>
+          <defval>56</defval>
+        </param>
+        <briefdescription>
+<para>converts to binary </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/pts_address.hpp" line="40" column="1" bodyfile="libraries/chain/pts_address.cpp" bodystart="51" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1pts__address_1a0494c9818c3f544b47aae58d1235f8b3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t graphene::chain::pts_address::version</definition>
+        <argsstring>() const</argsstring>
+        <name>version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/pts_address.hpp" line="42" column="1" bodyfile="libraries/chain/include/graphene/chain/pts_address.hpp" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1pts__address_1a52b387758a77ed692458af9f74516acf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::pts_address::is_valid</definition>
+        <argsstring>() const</argsstring>
+        <name>is_valid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks the address to verify it has a valid checksum </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/pts_address.hpp" line="43" column="1" bodyfile="libraries/chain/pts_address.cpp" bodystart="76" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1pts__address_1acc553d74f7a71d45ee6aa628645cb939" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>graphene::chain::pts_address::operator std::string</definition>
+        <argsstring>() const</argsstring>
+        <name>operator std::string</name>
+        <briefdescription>
+<para>converts to base58 + checksum </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/pts_address.hpp" line="45" column="1" bodyfile="libraries/chain/pts_address.cpp" bodystart="83" bodyend="86"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Implements address stringification and validation from PTS </para>    </detaileddescription>
+    <location file="libraries/chain/include/graphene/chain/pts_address.hpp" line="37" column="1" bodyfile="libraries/chain/include/graphene/chain/pts_address.hpp" bodystart="36" bodyend="48"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1pts__address_1a39622adc9ffbe717621421bf940fa87d" prot="public" virt="non-virtual"><scope>graphene::chain::pts_address</scope><name>addr</name></member>
+      <member refid="structgraphene_1_1chain_1_1pts__address_1a52b387758a77ed692458af9f74516acf" prot="public" virt="non-virtual"><scope>graphene::chain::pts_address</scope><name>is_valid</name></member>
+      <member refid="structgraphene_1_1chain_1_1pts__address_1acc553d74f7a71d45ee6aa628645cb939" prot="public" virt="non-virtual"><scope>graphene::chain::pts_address</scope><name>operator std::string</name></member>
+      <member refid="structgraphene_1_1chain_1_1pts__address_1a5a6184df9efadfb7fe4910d85e86b268" prot="public" virt="non-virtual"><scope>graphene::chain::pts_address</scope><name>pts_address</name></member>
+      <member refid="structgraphene_1_1chain_1_1pts__address_1a3af67266021b8f921e141cbf6708b33e" prot="public" virt="non-virtual"><scope>graphene::chain::pts_address</scope><name>pts_address</name></member>
+      <member refid="structgraphene_1_1chain_1_1pts__address_1a6bbf3f64e74d5b664f4905d9fa97b362" prot="public" virt="non-virtual"><scope>graphene::chain::pts_address</scope><name>pts_address</name></member>
+      <member refid="structgraphene_1_1chain_1_1pts__address_1a0494c9818c3f544b47aae58d1235f8b3" prot="public" virt="non-virtual"><scope>graphene::chain::pts_address</scope><name>version</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

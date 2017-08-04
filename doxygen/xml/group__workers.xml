@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="group__workers" kind="group">
+    <compoundname>workers</compoundname>
+    <title>The Blockchain Worker System</title>
+    <innerclass refid="structgraphene_1_1chain_1_1vesting__balance__worker__initializer" prot="public">graphene::chain::vesting_balance_worker_initializer</innerclass>
+    <innerclass refid="structgraphene_1_1chain_1_1burn__worker__initializer" prot="public">graphene::chain::burn_worker_initializer</innerclass>
+    <innerclass refid="structgraphene_1_1chain_1_1refund__worker__initializer" prot="public">graphene::chain::refund_worker_initializer</innerclass>
+    <innerclass refid="structgraphene_1_1chain_1_1worker__create__operation" prot="public">graphene::chain::worker_create_operation</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__workers_1ga13df48976822df52f83ec69a458e4d46" prot="public" static="no">
+        <type>static_variant&lt; refund_worker_initializer, vesting_balance_worker_initializer, burn_worker_initializer &gt;</type>
+        <definition>typedef static_variant&lt; refund_worker_initializer, vesting_balance_worker_initializer, burn_worker_initializer &gt; graphene::chain::worker_initializer</definition>
+        <argsstring></argsstring>
+        <name>worker_initializer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/worker.hpp" line="70" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/worker.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Graphene blockchains allow the creation of special &quot;workers&quot; which are elected positions paid by the blockchain for services they provide. There may be several types of workers, and the semantics of how and when they are paid are defined by the worker_type_enum enumeration. All workers are elected by core stakeholder approval, by voting for or against them.</para><para>Workers are paid from the blockchain&apos;s daily budget if their total approval (votes for - votes against) is positive, ordered from most positive approval to least, until the budget is exhausted. Payments are processed at the blockchain maintenance interval. If a worker does not have positive approval during payment processing, or if the chain&apos;s budget is exhausted before the worker is paid, that worker is simply not paid at that interval. Payment is not prorated based on percentage of the interval the worker was approved. If the chain attempts to pay a worker, but the budget is insufficient to cover its entire pay, the worker is paid the remaining budget funds, even though this does not fulfill his total pay. The worker will not receive extra pay to make up the difference later. Worker pay is placed in a vesting balance and vests over the number of days specified at the worker&apos;s creation.</para><para>Once created, a worker is immutable and will be kept by the blockchain forever. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

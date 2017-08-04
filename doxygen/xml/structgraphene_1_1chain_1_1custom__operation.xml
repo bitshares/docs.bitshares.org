@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1custom__operation" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::custom_operation</compoundname>
+    <basecompoundref refid="structgraphene_1_1chain_1_1base__operation" prot="public" virt="non-virtual">graphene::chain::base_operation</basecompoundref>
+    <includes refid="custom_8hpp" local="no">custom.hpp</includes>
+    <innerclass refid="structgraphene_1_1chain_1_1custom__operation_1_1fee__parameters__type" prot="public">graphene::chain::custom_operation::fee_parameters_type</innerclass>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1custom__operation_1ab003ab9311def18ea76c4b7a0c37fb5e" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::custom_operation::fee</definition>
+        <argsstring></argsstring>
+        <name>fee</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/custom.hpp" line="44" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/custom.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1custom__operation_1a79af14457460a5ef1e71cca4c2019210" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::custom_operation::payer</definition>
+        <argsstring></argsstring>
+        <name>payer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/custom.hpp" line="45" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/custom.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1custom__operation_1a729a0de38636ba0875dbe3d5b8244e91" prot="public" static="no" mutable="no">
+        <type>flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt;</type>
+        <definition>flat_set&lt;account_id_type&gt; graphene::chain::custom_operation::required_auths</definition>
+        <argsstring></argsstring>
+        <name>required_auths</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/custom.hpp" line="46" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/custom.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1custom__operation_1aff4c0559b1bb9c1d21dc77fbb2e8cbf5" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t graphene::chain::custom_operation::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/custom.hpp" line="47" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/custom.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1custom__operation_1a40d2e8641c1711f701f719ee3c2732eb" prot="public" static="no" mutable="no">
+        <type>vector&lt; char &gt;</type>
+        <definition>vector&lt;char&gt; graphene::chain::custom_operation::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/custom.hpp" line="48" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/custom.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1custom__operation_1a834ea2aa5fd1a16c6a0893e043615147" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::custom_operation::fee_payer</definition>
+        <argsstring>() const</argsstring>
+        <name>fee_payer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/custom.hpp" line="50" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/custom.hpp" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1custom__operation_1a3e49981f47ca669a352ef165089c385e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::custom_operation::validate</definition>
+        <argsstring>() const</argsstring>
+        <name>validate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/custom.hpp" line="51" column="1" bodyfile="libraries/chain/protocol/custom.cpp" bodystart="28" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1custom__operation_1acaaf2808e4011e0b6c0373ba6ecb191c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+        <definition>share_type graphene::chain::custom_operation::calculate_fee</definition>
+        <argsstring>(const fee_parameters_type &amp;k) const</argsstring>
+        <name>calculate_fee</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1custom__operation_1_1fee__parameters__type" kindref="compound">fee_parameters_type</ref> &amp;</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/custom.hpp" line="52" column="1" bodyfile="libraries/chain/protocol/custom.cpp" bodystart="32" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>provides a generic way to add higher level protocols on top of witness consensus</para><para>There is no validation for this operation other than that required auths are valid and a fee is paid that is appropriate for the data contained. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1586">
+        <label>graphene::chain::base_operation</label>
+        <link refid="structgraphene_1_1chain_1_1base__operation"/>
+      </node>
+      <node id="1585">
+        <label>graphene::chain::custom_operation</label>
+        <link refid="structgraphene_1_1chain_1_1custom__operation"/>
+        <childnode refid="1586" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1589">
+        <label>vector&lt; char &gt;</label>
+      </node>
+      <node id="1592">
+        <label>flat_set&lt; account_id_type &gt;</label>
+      </node>
+      <node id="1588">
+        <label>graphene::chain::base_operation</label>
+        <link refid="structgraphene_1_1chain_1_1base__operation"/>
+      </node>
+      <node id="1587">
+        <label>graphene::chain::custom_operation</label>
+        <link refid="structgraphene_1_1chain_1_1custom__operation"/>
+        <childnode refid="1588" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1589" relation="usage">
+          <edgelabel>data</edgelabel>
+        </childnode>
+        <childnode refid="1590" relation="usage">
+          <edgelabel>fee</edgelabel>
+        </childnode>
+        <childnode refid="1592" relation="usage">
+          <edgelabel>required_auths</edgelabel>
+        </childnode>
+      </node>
+      <node id="1590">
+        <label>graphene::chain::asset</label>
+        <link refid="structgraphene_1_1chain_1_1asset"/>
+        <childnode refid="1591" relation="usage">
+          <edgelabel>amount</edgelabel>
+        </childnode>
+      </node>
+      <node id="1591">
+        <label>safe&lt; int64_t &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/protocol/custom.hpp" line="38" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/custom.hpp" bodystart="37" bodyend="53"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a8947f5ff3ea0458c7fe981b5bb9e82b7" prot="public" virt="non-virtual"><scope>graphene::chain::custom_operation</scope><name>calculate_data_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1custom__operation_1acaaf2808e4011e0b6c0373ba6ecb191c" prot="public" virt="non-virtual"><scope>graphene::chain::custom_operation</scope><name>calculate_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a18b678eb05bc5b30d75f10b398c07a91" prot="public" virt="non-virtual" ambiguityscope="graphene::chain::base_operation::"><scope>graphene::chain::custom_operation</scope><name>calculate_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1custom__operation_1a40d2e8641c1711f701f719ee3c2732eb" prot="public" virt="non-virtual"><scope>graphene::chain::custom_operation</scope><name>data</name></member>
+      <member refid="structgraphene_1_1chain_1_1custom__operation_1ab003ab9311def18ea76c4b7a0c37fb5e" prot="public" virt="non-virtual"><scope>graphene::chain::custom_operation</scope><name>fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1custom__operation_1a834ea2aa5fd1a16c6a0893e043615147" prot="public" virt="non-virtual"><scope>graphene::chain::custom_operation</scope><name>fee_payer</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a1d398b2f68e1dca5f453b86655a64c41" prot="public" virt="non-virtual"><scope>graphene::chain::custom_operation</scope><name>get_required_active_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1ac7e2861a01bbaef8fbe5c5dcf5e73b38" prot="public" virt="non-virtual"><scope>graphene::chain::custom_operation</scope><name>get_required_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1aff6e2d2b66117c8c87f6a6e7e7ddba1f" prot="public" virt="non-virtual"><scope>graphene::chain::custom_operation</scope><name>get_required_owner_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1custom__operation_1aff4c0559b1bb9c1d21dc77fbb2e8cbf5" prot="public" virt="non-virtual"><scope>graphene::chain::custom_operation</scope><name>id</name></member>
+      <member refid="structgraphene_1_1chain_1_1custom__operation_1a79af14457460a5ef1e71cca4c2019210" prot="public" virt="non-virtual"><scope>graphene::chain::custom_operation</scope><name>payer</name></member>
+      <member refid="structgraphene_1_1chain_1_1custom__operation_1a729a0de38636ba0875dbe3d5b8244e91" prot="public" virt="non-virtual"><scope>graphene::chain::custom_operation</scope><name>required_auths</name></member>
+      <member refid="structgraphene_1_1chain_1_1custom__operation_1a3e49981f47ca669a352ef165089c385e" prot="public" virt="non-virtual"><scope>graphene::chain::custom_operation</scope><name>validate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

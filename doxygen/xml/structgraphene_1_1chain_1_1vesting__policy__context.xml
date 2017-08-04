@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1vesting__policy__context" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::vesting_policy_context</compoundname>
+    <includes refid="vesting__balance__object_8hpp" local="no">vesting_balance_object.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1vesting__policy__context_1a7b82c68fef82acb24b0a7bde5a0f3850" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::vesting_policy_context::balance</definition>
+        <argsstring></argsstring>
+        <name>balance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="50" column="1" bodyfile="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1vesting__policy__context_1a4f6a6518933c76986633032e42161cf6" prot="public" static="no" mutable="no">
+        <type>fc::time_point_sec</type>
+        <definition>fc::time_point_sec graphene::chain::vesting_policy_context::now</definition>
+        <argsstring></argsstring>
+        <name>now</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="51" column="1" bodyfile="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1vesting__policy__context_1af5da5ef34878534263341d212197af4d" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::vesting_policy_context::amount</definition>
+        <argsstring></argsstring>
+        <name>amount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="52" column="1" bodyfile="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1vesting__policy__context_1a8aa9cd02f8add028a21b601508199d0d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>graphene::chain::vesting_policy_context::vesting_policy_context</definition>
+        <argsstring>(asset _balance, fc::time_point_sec _now, asset _amount)</argsstring>
+        <name>vesting_policy_context</name>
+        <param>
+          <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+          <declname>_balance</declname>
+        </param>
+        <param>
+          <type>fc::time_point_sec</type>
+          <declname>_now</declname>
+        </param>
+        <param>
+          <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+          <declname>_amount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="44" column="1" bodyfile="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" bodystart="44" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3007">
+        <label>graphene::chain::vesting_policy_context</label>
+        <link refid="structgraphene_1_1chain_1_1vesting__policy__context"/>
+        <childnode refid="3008" relation="usage">
+          <edgelabel>now</edgelabel>
+        </childnode>
+        <childnode refid="3009" relation="usage">
+          <edgelabel>balance</edgelabel>
+          <edgelabel>amount</edgelabel>
+        </childnode>
+      </node>
+      <node id="3008">
+        <label>time_point_sec</label>
+      </node>
+      <node id="3009">
+        <label>graphene::chain::asset</label>
+        <link refid="structgraphene_1_1chain_1_1asset"/>
+        <childnode refid="3010" relation="usage">
+          <edgelabel>amount</edgelabel>
+        </childnode>
+      </node>
+      <node id="3010">
+        <label>safe&lt; int64_t &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="43" column="1" bodyfile="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" bodystart="42" bodyend="53"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1vesting__policy__context_1af5da5ef34878534263341d212197af4d" prot="public" virt="non-virtual"><scope>graphene::chain::vesting_policy_context</scope><name>amount</name></member>
+      <member refid="structgraphene_1_1chain_1_1vesting__policy__context_1a7b82c68fef82acb24b0a7bde5a0f3850" prot="public" virt="non-virtual"><scope>graphene::chain::vesting_policy_context</scope><name>balance</name></member>
+      <member refid="structgraphene_1_1chain_1_1vesting__policy__context_1a4f6a6518933c76986633032e42161cf6" prot="public" virt="non-virtual"><scope>graphene::chain::vesting_policy_context</scope><name>now</name></member>
+      <member refid="structgraphene_1_1chain_1_1vesting__policy__context_1a8aa9cd02f8add028a21b601508199d0d" prot="public" virt="non-virtual"><scope>graphene::chain::vesting_policy_context</scope><name>vesting_policy_context</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

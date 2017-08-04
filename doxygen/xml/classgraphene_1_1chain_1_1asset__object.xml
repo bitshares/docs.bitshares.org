@@ -1,0 +1,574 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgraphene_1_1chain_1_1asset__object" kind="class" language="C++" prot="public">
+    <compoundname>graphene::chain::asset_object</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">graphene::db::abstract_object&lt; asset_object &gt;</basecompoundref>
+    <includes refid="asset__object_8hpp" local="no">asset_object.hpp</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1asset__object_1a2ec03bf0f8b75cc3de37168452cb1b48" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t graphene::chain::asset_object::space_id</definition>
+        <argsstring></argsstring>
+        <name>space_id</name>
+        <initializer>= <ref refid="namespacegraphene_1_1chain_1a92e55d4242187696c5e2c5eaafbd9400a9dadbbe526b5096091138116c13d612d" kindref="member">protocol_ids</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/asset_object.hpp" line="79" column="1" bodyfile="libraries/chain/include/graphene/chain/asset_object.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1asset__object_1a35a5e4d40e2e14e87997953f787a5108" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t graphene::chain::asset_object::type_id</definition>
+        <argsstring></argsstring>
+        <name>type_id</name>
+        <initializer>= <ref refid="namespacegraphene_1_1chain_1aa6e32c79e2b22c998deddedcb696633daa3ebbda158af342607bd72ee57e81788" kindref="member">asset_object_type</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/asset_object.hpp" line="80" column="1" bodyfile="libraries/chain/include/graphene/chain/asset_object.hpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1asset__object_1a089165870abab6b77345acea240937b6" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string graphene::chain::asset_object::symbol</definition>
+        <argsstring></argsstring>
+        <name>symbol</name>
+        <briefdescription>
+<para>Ticker symbol for this asset, i.e. &quot;USD&quot;. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/asset_object.hpp" line="118" column="1" bodyfile="libraries/chain/include/graphene/chain/asset_object.hpp" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1asset__object_1a7169594e64f681273a6ece486de9ef38" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t graphene::chain::asset_object::precision</definition>
+        <argsstring></argsstring>
+        <name>precision</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Maximum number of digits after the decimal point (must be &lt;= 12) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/asset_object.hpp" line="120" column="1" bodyfile="libraries/chain/include/graphene/chain/asset_object.hpp" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1asset__object_1ad5274b71ad420b57da53c3ef80b95577" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::asset_object::issuer</definition>
+        <argsstring></argsstring>
+        <name>issuer</name>
+        <briefdescription>
+<para>ID of the account which issued this asset. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/asset_object.hpp" line="122" column="1" bodyfile="libraries/chain/include/graphene/chain/asset_object.hpp" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1asset__object_1a51510fee637f062e6db9cfc0986fcf49" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1asset__options" kindref="compound">asset_options</ref></type>
+        <definition>asset_options graphene::chain::asset_object::options</definition>
+        <argsstring></argsstring>
+        <name>options</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/asset_object.hpp" line="124" column="1" bodyfile="libraries/chain/include/graphene/chain/asset_object.hpp" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1asset__object_1a85367857043568d480de982ae1b6518c" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a6f7a444a2b082fd600fb61dd773d128b" kindref="member">asset_dynamic_data_id_type</ref></type>
+        <definition>asset_dynamic_data_id_type graphene::chain::asset_object::dynamic_asset_data_id</definition>
+        <argsstring></argsstring>
+        <name>dynamic_asset_data_id</name>
+        <briefdescription>
+<para>Current supply, fee pool, and collected fees are stored in a separate object as they change frequently. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/asset_object.hpp" line="128" column="1" bodyfile="libraries/chain/include/graphene/chain/asset_object.hpp" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1asset__object_1a5a69d1ef467d5eb7163fb4c301937066" prot="public" static="no" mutable="no">
+        <type>optional&lt; <ref refid="namespacegraphene_1_1chain_1abd48ba1ebfcc2fd007dbbe91f54407aa" kindref="member">asset_bitasset_data_id_type</ref> &gt;</type>
+        <definition>optional&lt;asset_bitasset_data_id_type&gt; graphene::chain::asset_object::bitasset_data_id</definition>
+        <argsstring></argsstring>
+        <name>bitasset_data_id</name>
+        <briefdescription>
+<para>Extra data associated with BitAssets. This field is non-null if and only if <ref refid="classgraphene_1_1chain_1_1asset__object_1a5cd681e6cc216f87d99f60c1de63eba8" kindref="member">is_market_issued()</ref> returns true. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/asset_object.hpp" line="130" column="1" bodyfile="libraries/chain/include/graphene/chain/asset_object.hpp" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1asset__object_1a57ff2c36a04a2123d1dad48ea76049bc" prot="public" static="no" mutable="no">
+        <type>optional&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt;</type>
+        <definition>optional&lt;account_id_type&gt; graphene::chain::asset_object::buyback_account</definition>
+        <argsstring></argsstring>
+        <name>buyback_account</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/asset_object.hpp" line="132" column="1" bodyfile="libraries/chain/include/graphene/chain/asset_object.hpp" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1asset__object_1ac15166dec400e72604ecdbb6d25ae800" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool graphene::chain::asset_object::is_valid_symbol</definition>
+        <argsstring>(const string &amp;symbol)</argsstring>
+        <name>is_valid_symbol</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>symbol</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This function does not check if any registered asset has this symbol or not; it simply checks whether the symbol would be valid. <simplesect kind="return"><para>true if symbol is a valid ticker symbol; false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/asset_object.hpp" line="85" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1asset__object_1a5cd681e6cc216f87d99f60c1de63eba8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::asset_object::is_market_issued</definition>
+        <argsstring>() const</argsstring>
+        <name>is_market_issued</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if this is a market-issued asset; false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/asset_object.hpp" line="88" column="1" bodyfile="libraries/chain/include/graphene/chain/asset_object.hpp" bodystart="88" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1asset__object_1aae49c2f2dc541d0f3e8299191cc63746" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::asset_object::can_force_settle</definition>
+        <argsstring>() const</argsstring>
+        <name>can_force_settle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if users may request force-settlement of this market-issued asset; false otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/asset_object.hpp" line="90" column="1" bodyfile="libraries/chain/include/graphene/chain/asset_object.hpp" bodystart="90" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1asset__object_1a0a21f0bfc85c0e44928d9ada2ae89327" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::asset_object::can_global_settle</definition>
+        <argsstring>() const</argsstring>
+        <name>can_global_settle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if the issuer of this market-issued asset may globally settle the asset; false otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/asset_object.hpp" line="92" column="1" bodyfile="libraries/chain/include/graphene/chain/asset_object.hpp" bodystart="92" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1asset__object_1aab9293c90db12e09ca4d95f5fa4706c1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::asset_object::charges_market_fees</definition>
+        <argsstring>() const</argsstring>
+        <name>charges_market_fees</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if this asset charges a fee for the issuer on market operations; false otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/asset_object.hpp" line="94" column="1" bodyfile="libraries/chain/include/graphene/chain/asset_object.hpp" bodystart="94" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1asset__object_1a6d2f96a1d93ba79d13a184a259a7c3da" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::asset_object::is_transfer_restricted</definition>
+        <argsstring>() const</argsstring>
+        <name>is_transfer_restricted</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if this asset may only be transferred to/from the issuer or market orders </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/asset_object.hpp" line="96" column="1" bodyfile="libraries/chain/include/graphene/chain/asset_object.hpp" bodystart="96" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1asset__object_1a5531018d6bc4fd9bca594cbefa0f414f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::asset_object::can_override</definition>
+        <argsstring>() const</argsstring>
+        <name>can_override</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/asset_object.hpp" line="97" column="1" bodyfile="libraries/chain/include/graphene/chain/asset_object.hpp" bodystart="97" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1asset__object_1a47d7fac85d5d45035b51b03a03af29b6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::asset_object::allow_confidential</definition>
+        <argsstring>() const</argsstring>
+        <name>allow_confidential</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/asset_object.hpp" line="98" column="1" bodyfile="libraries/chain/include/graphene/chain/asset_object.hpp" bodystart="98" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1asset__object_1acb60f1912e9463316ae5c1577cafdaa5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::asset_object::amount</definition>
+        <argsstring>(share_type a) const</argsstring>
+        <name>amount</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+<para>Helper function to get an asset object with the given amount in this asset&apos;s type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/asset_object.hpp" line="101" column="1" bodyfile="libraries/chain/include/graphene/chain/asset_object.hpp" bodystart="101" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1asset__object_1acc8913cfd17675156bc4ed9e43c3e04d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset asset_object::amount_from_string</definition>
+        <argsstring>(string amount_string) const</argsstring>
+        <name>amount_from_string</name>
+        <param>
+          <type>string</type>
+          <declname>amount_string</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert a string amount (i.e. &quot;123.45&quot;) to an asset object with this asset&apos;s type The string may have a decimal and/or a negative sign. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/asset_object.hpp" line="104" column="1" bodyfile="libraries/chain/asset_object.cpp" bodystart="93" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1asset__object_1ad0f7792fcad856d35d1049b95acedec3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string asset_object::amount_to_string</definition>
+        <argsstring>(share_type amount) const</argsstring>
+        <name>amount_to_string</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+          <declname>amount</declname>
+        </param>
+        <briefdescription>
+<para>Convert an asset to a textual representation, i.e. &quot;123.45&quot;. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/asset_object.hpp" line="106" column="1" bodyfile="libraries/chain/asset_object.cpp" bodystart="148" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1asset__object_1a05bc40ee989e7c43e8ab14a010519175" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string graphene::chain::asset_object::amount_to_string</definition>
+        <argsstring>(const asset &amp;amount) const</argsstring>
+        <name>amount_to_string</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref> &amp;</type>
+          <declname>amount</declname>
+        </param>
+        <briefdescription>
+<para>Convert an asset to a textual representation, i.e. &quot;123.45&quot;. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/asset_object.hpp" line="108" column="1" bodyfile="libraries/chain/include/graphene/chain/asset_object.hpp" bodystart="108" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1asset__object_1a1cbad7d23cf2f980af956b4e8e625142" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string graphene::chain::asset_object::amount_to_pretty_string</definition>
+        <argsstring>(share_type amount) const</argsstring>
+        <name>amount_to_pretty_string</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+          <declname>amount</declname>
+        </param>
+        <briefdescription>
+<para>Convert an asset to a textual representation with symbol, i.e. &quot;123.45 USD&quot;. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/asset_object.hpp" line="111" column="1" bodyfile="libraries/chain/include/graphene/chain/asset_object.hpp" bodystart="111" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1asset__object_1a0118c84ac2a7856e191d6c09ff2a3715" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string graphene::chain::asset_object::amount_to_pretty_string</definition>
+        <argsstring>(const asset &amp;amount) const</argsstring>
+        <name>amount_to_pretty_string</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref> &amp;</type>
+          <declname>amount</declname>
+        </param>
+        <briefdescription>
+<para>Convert an asset to a textual representation with symbol, i.e. &quot;123.45 USD&quot;. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/asset_object.hpp" line="114" column="1" bodyfile="libraries/chain/include/graphene/chain/asset_object.hpp" bodystart="114" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1asset__object_1a14bea5d61d935e4f4890df38cde0e295" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref></type>
+        <definition>asset_id_type graphene::chain::asset_object::get_id</definition>
+        <argsstring>() const</argsstring>
+        <name>get_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/asset_object.hpp" line="134" column="1" bodyfile="libraries/chain/include/graphene/chain/asset_object.hpp" bodystart="134" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1asset__object_1aa7756248ee88ce97490c4261c7e1b75c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::asset_object::validate</definition>
+        <argsstring>() const</argsstring>
+        <name>validate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/asset_object.hpp" line="136" column="1" bodyfile="libraries/chain/include/graphene/chain/asset_object.hpp" bodystart="136" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1asset__object_1a92611ccbf1c28aef5649a96ec8c5b712" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class DB</type>
+          </param>
+        </templateparamlist>
+        <type>const <ref refid="classgraphene_1_1chain_1_1asset__bitasset__data__object" kindref="compound">asset_bitasset_data_object</ref> &amp;</type>
+        <definition>const asset_bitasset_data_object&amp; graphene::chain::asset_object::bitasset_data</definition>
+        <argsstring>(const DB &amp;db) const</argsstring>
+        <name>bitasset_data</name>
+        <param>
+          <type>const DB &amp;</type>
+          <declname>db</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/asset_object.hpp" line="147" column="1" bodyfile="libraries/chain/include/graphene/chain/asset_object.hpp" bodystart="147" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1asset__object_1a6d1165c64b8d38b36b8c8d4165cbfc7b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class DB</type>
+          </param>
+        </templateparamlist>
+        <type>const <ref refid="classgraphene_1_1chain_1_1asset__dynamic__data__object" kindref="compound">asset_dynamic_data_object</ref> &amp;</type>
+        <definition>const asset_dynamic_data_object&amp; graphene::chain::asset_object::dynamic_data</definition>
+        <argsstring>(const DB &amp;db) const</argsstring>
+        <name>dynamic_data</name>
+        <param>
+          <type>const DB &amp;</type>
+          <declname>db</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/asset_object.hpp" line="151" column="1" bodyfile="libraries/chain/include/graphene/chain/asset_object.hpp" bodystart="151" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1asset__object_1a6c2a607af2e8ef974baa0f347a7c2ffe" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class DB</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+        <definition>share_type graphene::chain::asset_object::reserved</definition>
+        <argsstring>(const DB &amp;db) const</argsstring>
+        <name>reserved</name>
+        <param>
+          <type>const DB &amp;</type>
+          <declname>db</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The total amount of an asset that is reserved for future issuance. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/asset_object.hpp" line="158" column="1" bodyfile="libraries/chain/include/graphene/chain/asset_object.hpp" bodystart="158" bodyend="159"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>tracks the parameters of an asset</para><para>All assets have a globally unique symbol name that controls how they are traded and an issuer who has authority over the parameters of the asset. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="653">
+        <label>graphene::db::abstract_object&lt; asset_object &gt;</label>
+      </node>
+      <node id="652">
+        <label>graphene::chain::asset_object</label>
+        <link refid="classgraphene_1_1chain_1_1asset__object"/>
+        <childnode refid="653" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="655">
+        <label>graphene::db::abstract_object&lt; asset_object &gt;</label>
+      </node>
+      <node id="660">
+        <label>flat_set&lt; asset_id_type &gt;</label>
+      </node>
+      <node id="663">
+        <label>graphene::chain::price</label>
+        <link refid="structgraphene_1_1chain_1_1price"/>
+        <childnode refid="664" relation="usage">
+          <edgelabel>base</edgelabel>
+          <edgelabel>quote</edgelabel>
+        </childnode>
+      </node>
+      <node id="662">
+        <label>string</label>
+      </node>
+      <node id="659">
+        <label>flat_set&lt; future_extensions &gt;</label>
+      </node>
+      <node id="665">
+        <label>flat_set&lt; account_id_type &gt;</label>
+      </node>
+      <node id="657">
+        <label>optional&lt; account_id_type &gt;</label>
+      </node>
+      <node id="664">
+        <label>graphene::chain::asset</label>
+        <link refid="structgraphene_1_1chain_1_1asset"/>
+        <childnode refid="661" relation="usage">
+          <edgelabel>amount</edgelabel>
+        </childnode>
+      </node>
+      <node id="654">
+        <label>graphene::chain::asset_object</label>
+        <link refid="classgraphene_1_1chain_1_1asset__object"/>
+        <childnode refid="655" relation="public-inheritance">
+        </childnode>
+        <childnode refid="656" relation="usage">
+          <edgelabel>bitasset_data_id</edgelabel>
+        </childnode>
+        <childnode refid="657" relation="usage">
+          <edgelabel>buyback_account</edgelabel>
+        </childnode>
+        <childnode refid="658" relation="usage">
+          <edgelabel>options</edgelabel>
+        </childnode>
+        <childnode refid="662" relation="usage">
+          <edgelabel>symbol</edgelabel>
+        </childnode>
+      </node>
+      <node id="661">
+        <label>safe&lt; int64_t &gt;</label>
+      </node>
+      <node id="656">
+        <label>optional&lt; asset_bitasset_data_id_type &gt;</label>
+      </node>
+      <node id="658">
+        <label>graphene::chain::asset_options</label>
+        <link refid="structgraphene_1_1chain_1_1asset__options"/>
+        <childnode refid="659" relation="usage">
+          <edgelabel>extensions</edgelabel>
+        </childnode>
+        <childnode refid="660" relation="usage">
+          <edgelabel>whitelist_markets</edgelabel>
+          <edgelabel>blacklist_markets</edgelabel>
+        </childnode>
+        <childnode refid="661" relation="usage">
+          <edgelabel>max_market_fee</edgelabel>
+          <edgelabel>max_supply</edgelabel>
+        </childnode>
+        <childnode refid="662" relation="usage">
+          <edgelabel>description</edgelabel>
+        </childnode>
+        <childnode refid="663" relation="usage">
+          <edgelabel>core_exchange_rate</edgelabel>
+        </childnode>
+        <childnode refid="665" relation="usage">
+          <edgelabel>whitelist_authorities</edgelabel>
+          <edgelabel>blacklist_authorities</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/asset_object.hpp" line="77" column="1" bodyfile="libraries/chain/include/graphene/chain/asset_object.hpp" bodystart="76" bodyend="160"/>
+    <listofallmembers>
+      <member refid="classgraphene_1_1chain_1_1asset__object_1a47d7fac85d5d45035b51b03a03af29b6" prot="public" virt="non-virtual"><scope>graphene::chain::asset_object</scope><name>allow_confidential</name></member>
+      <member refid="classgraphene_1_1chain_1_1asset__object_1acb60f1912e9463316ae5c1577cafdaa5" prot="public" virt="non-virtual"><scope>graphene::chain::asset_object</scope><name>amount</name></member>
+      <member refid="classgraphene_1_1chain_1_1asset__object_1acc8913cfd17675156bc4ed9e43c3e04d" prot="public" virt="non-virtual"><scope>graphene::chain::asset_object</scope><name>amount_from_string</name></member>
+      <member refid="classgraphene_1_1chain_1_1asset__object_1a1cbad7d23cf2f980af956b4e8e625142" prot="public" virt="non-virtual"><scope>graphene::chain::asset_object</scope><name>amount_to_pretty_string</name></member>
+      <member refid="classgraphene_1_1chain_1_1asset__object_1a0118c84ac2a7856e191d6c09ff2a3715" prot="public" virt="non-virtual"><scope>graphene::chain::asset_object</scope><name>amount_to_pretty_string</name></member>
+      <member refid="classgraphene_1_1chain_1_1asset__object_1ad0f7792fcad856d35d1049b95acedec3" prot="public" virt="non-virtual"><scope>graphene::chain::asset_object</scope><name>amount_to_string</name></member>
+      <member refid="classgraphene_1_1chain_1_1asset__object_1a05bc40ee989e7c43e8ab14a010519175" prot="public" virt="non-virtual"><scope>graphene::chain::asset_object</scope><name>amount_to_string</name></member>
+      <member refid="classgraphene_1_1chain_1_1asset__object_1a92611ccbf1c28aef5649a96ec8c5b712" prot="public" virt="non-virtual"><scope>graphene::chain::asset_object</scope><name>bitasset_data</name></member>
+      <member refid="classgraphene_1_1chain_1_1asset__object_1a5a69d1ef467d5eb7163fb4c301937066" prot="public" virt="non-virtual"><scope>graphene::chain::asset_object</scope><name>bitasset_data_id</name></member>
+      <member refid="classgraphene_1_1chain_1_1asset__object_1a57ff2c36a04a2123d1dad48ea76049bc" prot="public" virt="non-virtual"><scope>graphene::chain::asset_object</scope><name>buyback_account</name></member>
+      <member refid="classgraphene_1_1chain_1_1asset__object_1aae49c2f2dc541d0f3e8299191cc63746" prot="public" virt="non-virtual"><scope>graphene::chain::asset_object</scope><name>can_force_settle</name></member>
+      <member refid="classgraphene_1_1chain_1_1asset__object_1a0a21f0bfc85c0e44928d9ada2ae89327" prot="public" virt="non-virtual"><scope>graphene::chain::asset_object</scope><name>can_global_settle</name></member>
+      <member refid="classgraphene_1_1chain_1_1asset__object_1a5531018d6bc4fd9bca594cbefa0f414f" prot="public" virt="non-virtual"><scope>graphene::chain::asset_object</scope><name>can_override</name></member>
+      <member refid="classgraphene_1_1chain_1_1asset__object_1aab9293c90db12e09ca4d95f5fa4706c1" prot="public" virt="non-virtual"><scope>graphene::chain::asset_object</scope><name>charges_market_fees</name></member>
+      <member refid="classgraphene_1_1chain_1_1asset__object_1a85367857043568d480de982ae1b6518c" prot="public" virt="non-virtual"><scope>graphene::chain::asset_object</scope><name>dynamic_asset_data_id</name></member>
+      <member refid="classgraphene_1_1chain_1_1asset__object_1a6d1165c64b8d38b36b8c8d4165cbfc7b" prot="public" virt="non-virtual"><scope>graphene::chain::asset_object</scope><name>dynamic_data</name></member>
+      <member refid="classgraphene_1_1chain_1_1asset__object_1a14bea5d61d935e4f4890df38cde0e295" prot="public" virt="non-virtual"><scope>graphene::chain::asset_object</scope><name>get_id</name></member>
+      <member refid="classgraphene_1_1chain_1_1asset__object_1a5cd681e6cc216f87d99f60c1de63eba8" prot="public" virt="non-virtual"><scope>graphene::chain::asset_object</scope><name>is_market_issued</name></member>
+      <member refid="classgraphene_1_1chain_1_1asset__object_1a6d2f96a1d93ba79d13a184a259a7c3da" prot="public" virt="non-virtual"><scope>graphene::chain::asset_object</scope><name>is_transfer_restricted</name></member>
+      <member refid="classgraphene_1_1chain_1_1asset__object_1ac15166dec400e72604ecdbb6d25ae800" prot="public" virt="non-virtual"><scope>graphene::chain::asset_object</scope><name>is_valid_symbol</name></member>
+      <member refid="classgraphene_1_1chain_1_1asset__object_1ad5274b71ad420b57da53c3ef80b95577" prot="public" virt="non-virtual"><scope>graphene::chain::asset_object</scope><name>issuer</name></member>
+      <member refid="classgraphene_1_1chain_1_1asset__object_1a51510fee637f062e6db9cfc0986fcf49" prot="public" virt="non-virtual"><scope>graphene::chain::asset_object</scope><name>options</name></member>
+      <member refid="classgraphene_1_1chain_1_1asset__object_1a7169594e64f681273a6ece486de9ef38" prot="public" virt="non-virtual"><scope>graphene::chain::asset_object</scope><name>precision</name></member>
+      <member refid="classgraphene_1_1chain_1_1asset__object_1a6c2a607af2e8ef974baa0f347a7c2ffe" prot="public" virt="non-virtual"><scope>graphene::chain::asset_object</scope><name>reserved</name></member>
+      <member refid="classgraphene_1_1chain_1_1asset__object_1a2ec03bf0f8b75cc3de37168452cb1b48" prot="public" virt="non-virtual"><scope>graphene::chain::asset_object</scope><name>space_id</name></member>
+      <member refid="classgraphene_1_1chain_1_1asset__object_1a089165870abab6b77345acea240937b6" prot="public" virt="non-virtual"><scope>graphene::chain::asset_object</scope><name>symbol</name></member>
+      <member refid="classgraphene_1_1chain_1_1asset__object_1a35a5e4d40e2e14e87997953f787a5108" prot="public" virt="non-virtual"><scope>graphene::chain::asset_object</scope><name>type_id</name></member>
+      <member refid="classgraphene_1_1chain_1_1asset__object_1aa7756248ee88ce97490c4261c7e1b75c" prot="public" virt="non-virtual"><scope>graphene::chain::asset_object</scope><name>validate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

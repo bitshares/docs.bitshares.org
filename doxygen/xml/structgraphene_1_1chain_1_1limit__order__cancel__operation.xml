@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1limit__order__cancel__operation" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::limit_order_cancel_operation</compoundname>
+    <basecompoundref refid="structgraphene_1_1chain_1_1base__operation" prot="public" virt="non-virtual">graphene::chain::base_operation</basecompoundref>
+    <includes refid="market_8hpp" local="no">market.hpp</includes>
+    <innerclass refid="structgraphene_1_1chain_1_1limit__order__cancel__operation_1_1fee__parameters__type" prot="public">graphene::chain::limit_order_cancel_operation::fee_parameters_type</innerclass>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1limit__order__cancel__operation_1afe07af8861bf3be4167687215d150e01" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::limit_order_cancel_operation::fee</definition>
+        <argsstring></argsstring>
+        <name>fee</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/market.hpp" line="87" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/market.hpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1limit__order__cancel__operation_1a51d070159edb0c6b6da9e35a591d174e" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a9a84db1c3acc33b2fd7c8de9969a8e06" kindref="member">limit_order_id_type</ref></type>
+        <definition>limit_order_id_type graphene::chain::limit_order_cancel_operation::order</definition>
+        <argsstring></argsstring>
+        <name>order</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/market.hpp" line="88" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/market.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1limit__order__cancel__operation_1a03ec1ac270822dc1fed5e6a79925d5a5" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::limit_order_cancel_operation::fee_paying_account</definition>
+        <argsstring></argsstring>
+        <name>fee_paying_account</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>must be order-&gt;seller </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/market.hpp" line="90" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/market.hpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1limit__order__cancel__operation_1aa74a8372019393355adf8d9c8871b4fe" prot="public" static="no" mutable="no">
+        <type><ref refid="group__operations_1gae0096750377f6e9d61dba5765284de99" kindref="member">extensions_type</ref></type>
+        <definition>extensions_type graphene::chain::limit_order_cancel_operation::extensions</definition>
+        <argsstring></argsstring>
+        <name>extensions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/market.hpp" line="91" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/market.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1limit__order__cancel__operation_1a17402b16238692441b36b760b2b349dc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::limit_order_cancel_operation::fee_payer</definition>
+        <argsstring>() const</argsstring>
+        <name>fee_payer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/market.hpp" line="93" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/market.hpp" bodystart="93" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1limit__order__cancel__operation_1a39b7365dbe34833077e00b2674d55d43" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::limit_order_cancel_operation::validate</definition>
+        <argsstring>() const</argsstring>
+        <name>validate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/market.hpp" line="94" column="1" bodyfile="libraries/chain/protocol/market.cpp" bodystart="36" bodyend="39"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Used to cancel an existing limit order. Both fee_pay_account and the account to receive the proceeds must be the same as order-&gt;seller.</para><para><simplesect kind="return"><para>the amount actually refunded </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2127">
+        <label>graphene::chain::base_operation</label>
+        <link refid="structgraphene_1_1chain_1_1base__operation"/>
+      </node>
+      <node id="2126">
+        <label>graphene::chain::limit_order_cancel_operation</label>
+        <link refid="structgraphene_1_1chain_1_1limit__order__cancel__operation"/>
+        <childnode refid="2127" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2130">
+        <label>flat_set&lt; future_extensions &gt;</label>
+      </node>
+      <node id="2129">
+        <label>graphene::chain::base_operation</label>
+        <link refid="structgraphene_1_1chain_1_1base__operation"/>
+      </node>
+      <node id="2128">
+        <label>graphene::chain::limit_order_cancel_operation</label>
+        <link refid="structgraphene_1_1chain_1_1limit__order__cancel__operation"/>
+        <childnode refid="2129" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2130" relation="usage">
+          <edgelabel>extensions</edgelabel>
+        </childnode>
+        <childnode refid="2131" relation="usage">
+          <edgelabel>fee</edgelabel>
+        </childnode>
+      </node>
+      <node id="2131">
+        <label>graphene::chain::asset</label>
+        <link refid="structgraphene_1_1chain_1_1asset"/>
+        <childnode refid="2132" relation="usage">
+          <edgelabel>amount</edgelabel>
+        </childnode>
+      </node>
+      <node id="2132">
+        <label>safe&lt; int64_t &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/protocol/market.hpp" line="84" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/market.hpp" bodystart="83" bodyend="95"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a8947f5ff3ea0458c7fe981b5bb9e82b7" prot="public" virt="non-virtual"><scope>graphene::chain::limit_order_cancel_operation</scope><name>calculate_data_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a18b678eb05bc5b30d75f10b398c07a91" prot="public" virt="non-virtual"><scope>graphene::chain::limit_order_cancel_operation</scope><name>calculate_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1limit__order__cancel__operation_1aa74a8372019393355adf8d9c8871b4fe" prot="public" virt="non-virtual"><scope>graphene::chain::limit_order_cancel_operation</scope><name>extensions</name></member>
+      <member refid="structgraphene_1_1chain_1_1limit__order__cancel__operation_1afe07af8861bf3be4167687215d150e01" prot="public" virt="non-virtual"><scope>graphene::chain::limit_order_cancel_operation</scope><name>fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1limit__order__cancel__operation_1a17402b16238692441b36b760b2b349dc" prot="public" virt="non-virtual"><scope>graphene::chain::limit_order_cancel_operation</scope><name>fee_payer</name></member>
+      <member refid="structgraphene_1_1chain_1_1limit__order__cancel__operation_1a03ec1ac270822dc1fed5e6a79925d5a5" prot="public" virt="non-virtual"><scope>graphene::chain::limit_order_cancel_operation</scope><name>fee_paying_account</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a1d398b2f68e1dca5f453b86655a64c41" prot="public" virt="non-virtual"><scope>graphene::chain::limit_order_cancel_operation</scope><name>get_required_active_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1ac7e2861a01bbaef8fbe5c5dcf5e73b38" prot="public" virt="non-virtual"><scope>graphene::chain::limit_order_cancel_operation</scope><name>get_required_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1aff6e2d2b66117c8c87f6a6e7e7ddba1f" prot="public" virt="non-virtual"><scope>graphene::chain::limit_order_cancel_operation</scope><name>get_required_owner_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1limit__order__cancel__operation_1a51d070159edb0c6b6da9e35a591d174e" prot="public" virt="non-virtual"><scope>graphene::chain::limit_order_cancel_operation</scope><name>order</name></member>
+      <member refid="structgraphene_1_1chain_1_1limit__order__cancel__operation_1a39b7365dbe34833077e00b2674d55d43" prot="public" virt="non-virtual"><scope>graphene::chain::limit_order_cancel_operation</scope><name>validate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

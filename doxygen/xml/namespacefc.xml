@@ -1,0 +1,488 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacefc" kind="namespace" language="C++">
+    <compoundname>fc</compoundname>
+    <innerclass refid="structfc_1_1graphene__extension__from__variant__visitor" prot="public">fc::graphene_extension_from_variant_visitor</innerclass>
+    <innerclass refid="structfc_1_1graphene__extension__to__variant__visitor" prot="public">fc::graphene_extension_to_variant_visitor</innerclass>
+    <innernamespace refid="namespacefc_1_1ecc">fc::ecc</innernamespace>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacefc_1a59f37805601d95985925a2c80c922e83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fc::to_variant</definition>
+        <argsstring>(const graphene::chain::address &amp;var, fc::variant &amp;vo)</argsstring>
+        <name>to_variant</name>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1address" kindref="compound">graphene::chain::address</ref> &amp;</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type>fc::variant &amp;</type>
+          <declname>vo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/address.hpp" line="81" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefc_1a9f25b6d81d95f3075a8381efbdd56ef3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fc::from_variant</definition>
+        <argsstring>(const fc::variant &amp;var, graphene::chain::address &amp;vo)</argsstring>
+        <name>from_variant</name>
+        <param>
+          <type>const fc::variant &amp;</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type><ref refid="classgraphene_1_1chain_1_1address" kindref="compound">graphene::chain::address</ref> &amp;</type>
+          <declname>vo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/address.hpp" line="82" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefc_1ab0f543833e0a4f9311171c1432f7cf91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void fc::from_variant</definition>
+        <argsstring>(const fc::variant &amp;var, graphene::chain::extension&lt; T &gt; &amp;value)</argsstring>
+        <name>from_variant</name>
+        <param>
+          <type>const fc::variant &amp;</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type><ref refid="structgraphene_1_1chain_1_1extension" kindref="compound">graphene::chain::extension</ref>&lt; T &gt; &amp;</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/ext.hpp" line="172" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/ext.hpp" bodystart="172" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefc_1a1d354c75655cf6cc7eb9cf69f64237ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void fc::to_variant</definition>
+        <argsstring>(const graphene::chain::extension&lt; T &gt; &amp;value, fc::variant &amp;var)</argsstring>
+        <name>to_variant</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1extension" kindref="compound">graphene::chain::extension</ref>&lt; T &gt; &amp;</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>fc::variant &amp;</type>
+          <declname>var</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/ext.hpp" line="205" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/ext.hpp" bodystart="205" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefc_1af7ff1bb89dbbaf988c4286c0d29fab0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fc::to_variant</definition>
+        <argsstring>(const graphene::chain::public_key_type &amp;var, fc::variant &amp;vo)</argsstring>
+        <name>to_variant</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">graphene::chain::public_key_type</ref> &amp;</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type>fc::variant &amp;</type>
+          <declname>vo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/types.hpp" line="310" column="1" bodyfile="libraries/chain/protocol/types.cpp" bodystart="228" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefc_1a028d0b8e27234cd653fbaf899ded8d54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fc::from_variant</definition>
+        <argsstring>(const fc::variant &amp;var, graphene::chain::public_key_type &amp;vo)</argsstring>
+        <name>from_variant</name>
+        <param>
+          <type>const fc::variant &amp;</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type><ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">graphene::chain::public_key_type</ref> &amp;</type>
+          <declname>vo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/types.hpp" line="311" column="1" bodyfile="libraries/chain/protocol/types.cpp" bodystart="233" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefc_1a0c6a2d4738aa38c58d9d07ed1ad83316" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fc::to_variant</definition>
+        <argsstring>(const graphene::chain::extended_public_key_type &amp;var, fc::variant &amp;vo)</argsstring>
+        <name>to_variant</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1extended__public__key__type" kindref="compound">graphene::chain::extended_public_key_type</ref> &amp;</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type>fc::variant &amp;</type>
+          <declname>vo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/types.hpp" line="312" column="1" bodyfile="libraries/chain/protocol/types.cpp" bodystart="238" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefc_1a2193143894c870e283169e3cef5c6f0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fc::from_variant</definition>
+        <argsstring>(const fc::variant &amp;var, graphene::chain::extended_public_key_type &amp;vo)</argsstring>
+        <name>from_variant</name>
+        <param>
+          <type>const fc::variant &amp;</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type><ref refid="structgraphene_1_1chain_1_1extended__public__key__type" kindref="compound">graphene::chain::extended_public_key_type</ref> &amp;</type>
+          <declname>vo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/types.hpp" line="313" column="1" bodyfile="libraries/chain/protocol/types.cpp" bodystart="243" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefc_1a003865e2072a30388fd37b99ff6b166b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fc::to_variant</definition>
+        <argsstring>(const graphene::chain::extended_private_key_type &amp;var, fc::variant &amp;vo)</argsstring>
+        <name>to_variant</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1extended__private__key__type" kindref="compound">graphene::chain::extended_private_key_type</ref> &amp;</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type>fc::variant &amp;</type>
+          <declname>vo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/types.hpp" line="314" column="1" bodyfile="libraries/chain/protocol/types.cpp" bodystart="248" bodyend="251"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefc_1a0b3c699b846a5cc01ba4413f3f2565ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fc::from_variant</definition>
+        <argsstring>(const fc::variant &amp;var, graphene::chain::extended_private_key_type &amp;vo)</argsstring>
+        <name>from_variant</name>
+        <param>
+          <type>const fc::variant &amp;</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type><ref refid="structgraphene_1_1chain_1_1extended__private__key__type" kindref="compound">graphene::chain::extended_private_key_type</ref> &amp;</type>
+          <declname>vo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/types.hpp" line="315" column="1" bodyfile="libraries/chain/protocol/types.cpp" bodystart="253" bodyend="256"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefc_1ae8c35fa4eba93f2ff3ebc97253e45619" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fc::to_variant</definition>
+        <argsstring>(const graphene::chain::vote_id_type &amp;var, fc::variant &amp;vo)</argsstring>
+        <name>to_variant</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1vote__id__type" kindref="compound">graphene::chain::vote_id_type</ref> &amp;</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type>fc::variant &amp;</type>
+          <declname>vo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/vote.hpp" line="144" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefc_1ac5546e52042c5f4eb38506e69e8b0fb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fc::from_variant</definition>
+        <argsstring>(const fc::variant &amp;var, graphene::chain::vote_id_type &amp;vo)</argsstring>
+        <name>from_variant</name>
+        <param>
+          <type>const fc::variant &amp;</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type><ref refid="structgraphene_1_1chain_1_1vote__id__type" kindref="compound">graphene::chain::vote_id_type</ref> &amp;</type>
+          <declname>vo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/vote.hpp" line="145" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefc_1a98fbe4dfb827828f60a375fe033e4e42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fc::to_variant</definition>
+        <argsstring>(const graphene::chain::pts_address &amp;var, fc::variant &amp;vo)</argsstring>
+        <name>to_variant</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1pts__address" kindref="compound">graphene::chain::pts_address</ref> &amp;</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type>fc::variant &amp;</type>
+          <declname>vo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/pts_address.hpp" line="76" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefc_1a109dadc3b8b5ed61a5cc7b094dd12ecd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fc::from_variant</definition>
+        <argsstring>(const fc::variant &amp;var, graphene::chain::pts_address &amp;vo)</argsstring>
+        <name>from_variant</name>
+        <param>
+          <type>const fc::variant &amp;</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type><ref refid="structgraphene_1_1chain_1_1pts__address" kindref="compound">graphene::chain::pts_address</ref> &amp;</type>
+          <declname>vo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/pts_address.hpp" line="77" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefc_1aabb139124fbff7df1491e9a89c884b7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fc::to_variant</definition>
+        <argsstring>(const graphene::chain::address &amp;var, variant &amp;vo)</argsstring>
+        <name>to_variant</name>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1address" kindref="compound">graphene::chain::address</ref> &amp;</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type>variant &amp;</type>
+          <declname>vo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/protocol/address.cpp" line="104" column="1" bodyfile="libraries/chain/protocol/address.cpp" bodystart="104" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefc_1a0706a322aed92292e6046176723d354e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fc::from_variant</definition>
+        <argsstring>(const variant &amp;var, graphene::chain::address &amp;vo)</argsstring>
+        <name>from_variant</name>
+        <param>
+          <type>const variant &amp;</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type><ref refid="classgraphene_1_1chain_1_1address" kindref="compound">graphene::chain::address</ref> &amp;</type>
+          <declname>vo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/protocol/address.cpp" line="108" column="1" bodyfile="libraries/chain/protocol/address.cpp" bodystart="108" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefc_1af1321a665d91d1246ac49a8f2821c05b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fc::to_variant</definition>
+        <argsstring>(const graphene::chain::vote_id_type &amp;var, variant &amp;vo)</argsstring>
+        <name>to_variant</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1vote__id__type" kindref="compound">graphene::chain::vote_id_type</ref> &amp;</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type>variant &amp;</type>
+          <declname>vo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/protocol/vote.cpp" line="41" column="1" bodyfile="libraries/chain/protocol/vote.cpp" bodystart="41" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefc_1a9114339cd2f53d74c77da7675c0e3628" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fc::from_variant</definition>
+        <argsstring>(const variant &amp;var, graphene::chain::vote_id_type &amp;vo)</argsstring>
+        <name>from_variant</name>
+        <param>
+          <type>const variant &amp;</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type><ref refid="structgraphene_1_1chain_1_1vote__id__type" kindref="compound">graphene::chain::vote_id_type</ref> &amp;</type>
+          <declname>vo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/protocol/vote.cpp" line="46" column="1" bodyfile="libraries/chain/protocol/vote.cpp" bodystart="46" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefc_1ad11cfabf5c2761586d5d797cd15218ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fc::to_variant</definition>
+        <argsstring>(const graphene::chain::pts_address &amp;var, variant &amp;vo)</argsstring>
+        <name>to_variant</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1pts__address" kindref="compound">graphene::chain::pts_address</ref> &amp;</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type>variant &amp;</type>
+          <declname>vo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/pts_address.cpp" line="92" column="1" bodyfile="libraries/chain/pts_address.cpp" bodystart="92" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefc_1aeaa7827438c0aef64ff9cc0530212c51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fc::from_variant</definition>
+        <argsstring>(const variant &amp;var, graphene::chain::pts_address &amp;vo)</argsstring>
+        <name>from_variant</name>
+        <param>
+          <type>const variant &amp;</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type><ref refid="structgraphene_1_1chain_1_1pts__address" kindref="compound">graphene::chain::pts_address</ref> &amp;</type>
+          <declname>vo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/pts_address.cpp" line="96" column="1" bodyfile="libraries/chain/pts_address.cpp" bodystart="96" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefc_1a4793cca482cf0a1d27ca91cc5a32d9d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fc::to_variant</definition>
+        <argsstring>(const account_multi_index_type &amp;accts, variant &amp;vo)</argsstring>
+        <name>to_variant</name>
+        <param>
+          <type>const <ref refid="namespacegraphene_1_1chain_1a2cb69664c48f3d41eb5ac8b6bc4847cc" kindref="member">account_multi_index_type</ref> &amp;</type>
+          <declname>accts</declname>
+        </param>
+        <param>
+          <type>variant &amp;</type>
+          <declname>vo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacefc_1a7419481e611fbd5f073ee5d46c1b2cf7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fc::from_variant</definition>
+        <argsstring>(const variant &amp;var, account_multi_index_type &amp;vo)</argsstring>
+        <name>from_variant</name>
+        <param>
+          <type>const variant &amp;</type>
+          <declname>var</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a2cb69664c48f3d41eb5ac8b6bc4847cc" kindref="member">account_multi_index_type</ref> &amp;</type>
+          <declname>vo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="37" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/chain/include/graphene/chain/protocol/address.hpp" line="32" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacegraphene_1_1app" kind="namespace" language="C++">
+    <compoundname>graphene::app</compoundname>
+    <innerclass refid="classgraphene_1_1app_1_1abstract__plugin" prot="public">graphene::app::abstract_plugin</innerclass>
+    <innerclass refid="structgraphene_1_1app_1_1account__asset__balance" prot="public">graphene::app::account_asset_balance</innerclass>
+    <innerclass refid="structgraphene_1_1app_1_1api__access" prot="public">graphene::app::api_access</innerclass>
+    <innerclass refid="structgraphene_1_1app_1_1api__access__info" prot="public">graphene::app::api_access_info</innerclass>
+    <innerclass refid="classgraphene_1_1app_1_1application" prot="public">graphene::app::application</innerclass>
+    <innerclass refid="classgraphene_1_1app_1_1asset__api" prot="public">graphene::app::asset_api</innerclass>
+    <innerclass refid="structgraphene_1_1app_1_1asset__holders" prot="public">graphene::app::asset_holders</innerclass>
+    <innerclass refid="classgraphene_1_1app_1_1block__api" prot="public">graphene::app::block_api</innerclass>
+    <innerclass refid="classgraphene_1_1app_1_1crypto__api" prot="public">graphene::app::crypto_api</innerclass>
+    <innerclass refid="classgraphene_1_1app_1_1database__api" prot="public">graphene::app::database_api</innerclass>
+    <innerclass refid="classgraphene_1_1app_1_1database__api__impl" prot="public">graphene::app::database_api_impl</innerclass>
+    <innerclass refid="structgraphene_1_1app_1_1full__account" prot="public">graphene::app::full_account</innerclass>
+    <innerclass refid="structgraphene_1_1app_1_1get__impacted__account__visitor" prot="public">graphene::app::get_impacted_account_visitor</innerclass>
+    <innerclass refid="structgraphene_1_1app_1_1get__required__fees__helper" prot="public">graphene::app::get_required_fees_helper</innerclass>
+    <innerclass refid="classgraphene_1_1app_1_1history__api" prot="public">graphene::app::history_api</innerclass>
+    <innerclass refid="classgraphene_1_1app_1_1login__api" prot="public">graphene::app::login_api</innerclass>
+    <innerclass refid="structgraphene_1_1app_1_1market__ticker" prot="public">graphene::app::market_ticker</innerclass>
+    <innerclass refid="structgraphene_1_1app_1_1market__trade" prot="public">graphene::app::market_trade</innerclass>
+    <innerclass refid="structgraphene_1_1app_1_1market__volume" prot="public">graphene::app::market_volume</innerclass>
+    <innerclass refid="classgraphene_1_1app_1_1network__broadcast__api" prot="public">graphene::app::network_broadcast_api</innerclass>
+    <innerclass refid="classgraphene_1_1app_1_1network__node__api" prot="public">graphene::app::network_node_api</innerclass>
+    <innerclass refid="structgraphene_1_1app_1_1order" prot="public">graphene::app::order</innerclass>
+    <innerclass refid="structgraphene_1_1app_1_1order__book" prot="public">graphene::app::order_book</innerclass>
+    <innerclass refid="classgraphene_1_1app_1_1plugin" prot="public">graphene::app::plugin</innerclass>
+    <innerclass refid="structgraphene_1_1app_1_1verify__range__proof__rewind__result" prot="public">graphene::app::verify_range_proof_rewind_result</innerclass>
+    <innerclass refid="structgraphene_1_1app_1_1verify__range__result" prot="public">graphene::app::verify_range_result</innerclass>
+    <innernamespace refid="namespacegraphene_1_1app_1_1detail">graphene::app::detail</innernamespace>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="namespacegraphene_1_1app_1aaf7e26d8fb14cc3f358e45e3359b2251" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T graphene::app::dejsonify</definition>
+        <argsstring>(const string &amp;s)</argsstring>
+        <name>dejsonify</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Some useful tools for boost::program_options arguments using vectors of JSON strings </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/plugin.hpp" line="124" column="1" bodyfile="libraries/app/include/graphene/app/plugin.hpp" bodystart="124" bodyend="127"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacegraphene_1_1app_1a35c13e88f8c7ee744ad65322029a9152" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt;</type>
+        <definition>vector&lt;account_id_type&gt; graphene::app::get_relevant_accounts</definition>
+        <argsstring>(const object *obj)</argsstring>
+        <name>get_relevant_accounts</name>
+        <param>
+          <type>const object *</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>these are free from any accounts </para>        </inbodydescription>
+        <location file="libraries/app/api.cpp" line="271" column="1" bodyfile="libraries/app/api.cpp" bodystart="271" bodyend="413"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacegraphene_1_1app_1a8b26f5f3943b64e80cf7332aa7da271d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::operation_get_impacted_accounts</definition>
+        <argsstring>(const operation &amp;op, flat_set&lt; account_id_type &gt; &amp;result)</argsstring>
+        <name>operation_get_impacted_accounts</name>
+        <param>
+          <type>const <ref refid="group__operations_1ga8b0400e40715f7fd1608ab2dc3d6d401" kindref="member">operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <param>
+          <type>flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt; &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="208" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="208" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacegraphene_1_1app_1a708203a860491e6e94fb42cbc882e9d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::transaction_get_impacted_accounts</definition>
+        <argsstring>(const transaction &amp;tx, flat_set&lt; account_id_type &gt; &amp;result)</argsstring>
+        <name>transaction_get_impacted_accounts</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1transaction" kindref="compound">transaction</ref> &amp;</type>
+          <declname>tx</declname>
+        </param>
+        <param>
+          <type>flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt; &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="214" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="214" bodyend="218"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacegraphene_1_1app_1abd9ca88290bc9b12612207b498e82430" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::operation_get_impacted_accounts</definition>
+        <argsstring>(const graphene::chain::operation &amp;op, fc::flat_set&lt; graphene::chain::account_id_type &gt; &amp;result)</argsstring>
+        <name>operation_get_impacted_accounts</name>
+        <param>
+          <type>const <ref refid="group__operations_1ga8b0400e40715f7fd1608ab2dc3d6d401" kindref="member">graphene::chain::operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <param>
+          <type>fc::flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">graphene::chain::account_id_type</ref> &gt; &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/impacted.hpp" line="33" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacegraphene_1_1app_1aa8a287c1e0040ab0aa85f31a9abdb07e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::transaction_get_impacted_accounts</definition>
+        <argsstring>(const graphene::chain::transaction &amp;tx, fc::flat_set&lt; graphene::chain::account_id_type &gt; &amp;result)</argsstring>
+        <name>transaction_get_impacted_accounts</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1transaction" kindref="compound">graphene::chain::transaction</ref> &amp;</type>
+          <declname>tx</declname>
+        </param>
+        <param>
+          <type>fc::flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">graphene::chain::account_id_type</ref> &gt; &amp;</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/impacted.hpp" line="37" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/app/api.cpp" line="44" column="1"/>
+  </compounddef>
+</doxygen>

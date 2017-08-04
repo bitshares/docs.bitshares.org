@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1vesting__balance__worker__type" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::vesting_balance_worker_type</compoundname>
+    <includes refid="worker__object_8hpp" local="no">worker_object.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1vesting__balance__worker__type_1a140f1a5e1384bc8cfafe0fef76d5bd73" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a3c7832a7fb78912c0bd3b8b50a19c3f1" kindref="member">vesting_balance_id_type</ref></type>
+        <definition>vesting_balance_id_type graphene::chain::vesting_balance_worker_type::balance</definition>
+        <argsstring></argsstring>
+        <name>balance</name>
+        <briefdescription>
+<para>The balance this worker pays into. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/worker_object.hpp" line="75" column="1" bodyfile="libraries/chain/include/graphene/chain/worker_object.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1vesting__balance__worker__type_1a00fb9176eed69899e130e454919bff90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::vesting_balance_worker_type::pay_worker</definition>
+        <argsstring>(share_type pay, database &amp;db)</argsstring>
+        <name>pay_worker</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+          <declname>pay</declname>
+        </param>
+        <param>
+          <type><ref refid="classgraphene_1_1chain_1_1database" kindref="compound">database</ref> &amp;</type>
+          <declname>db</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/worker_object.hpp" line="77" column="1" bodyfile="libraries/chain/worker_evaluator.cpp" bodystart="114" bodyend="119"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A worker who sends his pay to a vesting balance. </para>    </briefdescription>
+    <detaileddescription>
+<para>This worker type takes all of his pay and places it into a vesting balance </para>    </detaileddescription>
+    <location file="libraries/chain/include/graphene/chain/worker_object.hpp" line="73" column="1" bodyfile="libraries/chain/include/graphene/chain/worker_object.hpp" bodystart="72" bodyend="78"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1vesting__balance__worker__type_1a140f1a5e1384bc8cfafe0fef76d5bd73" prot="public" virt="non-virtual"><scope>graphene::chain::vesting_balance_worker_type</scope><name>balance</name></member>
+      <member refid="structgraphene_1_1chain_1_1vesting__balance__worker__type_1a00fb9176eed69899e130e454919bff90" prot="public" virt="non-virtual"><scope>graphene::chain::vesting_balance_worker_type</scope><name>pay_worker</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

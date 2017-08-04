@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgraphene_1_1app_1_1network__node__api" kind="class" language="C++" prot="public">
+    <compoundname>graphene::app::network_node_api</compoundname>
+    <includes refid="api_8hpp" local="no">api.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1app_1_1network__node__api_1aad4d3f8120878e826275d7e80ea84958" prot="private" static="no" mutable="no">
+        <type><ref refid="classgraphene_1_1app_1_1application" kindref="compound">application</ref> &amp;</type>
+        <definition>application&amp; graphene::app::network_node_api::_app</definition>
+        <argsstring></argsstring>
+        <name>_app</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/api.hpp" line="264" column="1" bodyfile="libraries/app/include/graphene/app/api.hpp" bodystart="264" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgraphene_1_1app_1_1network__node__api_1a18a99d65a8cde46d13c1efd24c229c9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>graphene::app::network_node_api::network_node_api</definition>
+        <argsstring>(application &amp;a)</argsstring>
+        <name>network_node_api</name>
+        <param>
+          <type><ref refid="classgraphene_1_1app_1_1application" kindref="compound">application</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/api.hpp" line="227" column="1" bodyfile="libraries/app/api.cpp" bodystart="187" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1network__node__api_1af09c45f0da303b1761815e9b78d96cdd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>fc::variant_object</type>
+        <definition>fc::variant_object graphene::app::network_node_api::get_info</definition>
+        <argsstring>() const</argsstring>
+        <name>get_info</name>
+        <briefdescription>
+<para>Return general network information, such as p2p port. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/api.hpp" line="232" column="1" bodyfile="libraries/app/api.cpp" bodystart="191" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1network__node__api_1acb792c2b97e1775236b5001a94ddbaa0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::network_node_api::add_node</definition>
+        <argsstring>(const fc::ip::endpoint &amp;ep)</argsstring>
+        <name>add_node</name>
+        <param>
+          <type>const fc::ip::endpoint &amp;</type>
+          <declname>ep</declname>
+        </param>
+        <briefdescription>
+<para>add_node Connect to a new peer </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ep</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The IP/Port of the peer to connect to </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/api.hpp" line="238" column="1" bodyfile="libraries/app/api.cpp" bodystart="198" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1network__node__api_1a51d790218d644c98e1d4814f47355f73" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; net::peer_status &gt;</type>
+        <definition>std::vector&lt; net::peer_status &gt; graphene::app::network_node_api::get_connected_peers</definition>
+        <argsstring>() const</argsstring>
+        <name>get_connected_peers</name>
+        <briefdescription>
+<para>Get status of all current connections to peers. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/api.hpp" line="243" column="1" bodyfile="libraries/app/api.cpp" bodystart="203" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1network__node__api_1aaedf38f658a7672bec04dcc0910f7220" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>fc::variant_object</type>
+        <definition>fc::variant_object graphene::app::network_node_api::get_advanced_node_parameters</definition>
+        <argsstring>() const</argsstring>
+        <name>get_advanced_node_parameters</name>
+        <briefdescription>
+<para>Get advanced node parameters, such as desired and max number of connections. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/api.hpp" line="249" column="1" bodyfile="libraries/app/api.cpp" bodystart="213" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1network__node__api_1a59eb5a747b02c2b7c7f08462338a6805" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::network_node_api::set_advanced_node_parameters</definition>
+        <argsstring>(const fc::variant_object &amp;params)</argsstring>
+        <name>set_advanced_node_parameters</name>
+        <param>
+          <type>const fc::variant_object &amp;</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+<para>Set advanced node parameters, such as desired and max number of connections. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>a JSON object containing the name/value pairs for the parameters to set </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/api.hpp" line="256" column="1" bodyfile="libraries/app/api.cpp" bodystart="218" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1network__node__api_1a88cab8ab6baa332bf60648457cf32466" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; net::potential_peer_record &gt;</type>
+        <definition>std::vector&lt; net::potential_peer_record &gt; graphene::app::network_node_api::get_potential_peers</definition>
+        <argsstring>() const</argsstring>
+        <name>get_potential_peers</name>
+        <briefdescription>
+<para>Return list of potential peers. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/api.hpp" line="261" column="1" bodyfile="libraries/app/api.cpp" bodystart="208" bodyend="211"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classgraphene_1_1app_1_1network__node__api" kindref="compound">network_node_api</ref> class allows maintenance of p2p connections. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/app/include/graphene/app/api.hpp" line="225" column="1" bodyfile="libraries/app/include/graphene/app/api.hpp" bodystart="224" bodyend="265"/>
+    <listofallmembers>
+      <member refid="classgraphene_1_1app_1_1network__node__api_1aad4d3f8120878e826275d7e80ea84958" prot="private" virt="non-virtual"><scope>graphene::app::network_node_api</scope><name>_app</name></member>
+      <member refid="classgraphene_1_1app_1_1network__node__api_1acb792c2b97e1775236b5001a94ddbaa0" prot="public" virt="non-virtual"><scope>graphene::app::network_node_api</scope><name>add_node</name></member>
+      <member refid="classgraphene_1_1app_1_1network__node__api_1aaedf38f658a7672bec04dcc0910f7220" prot="public" virt="non-virtual"><scope>graphene::app::network_node_api</scope><name>get_advanced_node_parameters</name></member>
+      <member refid="classgraphene_1_1app_1_1network__node__api_1a51d790218d644c98e1d4814f47355f73" prot="public" virt="non-virtual"><scope>graphene::app::network_node_api</scope><name>get_connected_peers</name></member>
+      <member refid="classgraphene_1_1app_1_1network__node__api_1af09c45f0da303b1761815e9b78d96cdd" prot="public" virt="non-virtual"><scope>graphene::app::network_node_api</scope><name>get_info</name></member>
+      <member refid="classgraphene_1_1app_1_1network__node__api_1a88cab8ab6baa332bf60648457cf32466" prot="public" virt="non-virtual"><scope>graphene::app::network_node_api</scope><name>get_potential_peers</name></member>
+      <member refid="classgraphene_1_1app_1_1network__node__api_1a18a99d65a8cde46d13c1efd24c229c9f" prot="public" virt="non-virtual"><scope>graphene::app::network_node_api</scope><name>network_node_api</name></member>
+      <member refid="classgraphene_1_1app_1_1network__node__api_1a59eb5a747b02c2b7c7f08462338a6805" prot="public" virt="non-virtual"><scope>graphene::app::network_node_api</scope><name>set_advanced_node_parameters</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

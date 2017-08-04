@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1limit__order__create__operation" kind="class" language="C++" prot="public">
+    <compoundname>graphene::chain::limit_order_create_operation</compoundname>
+    <basecompoundref refid="structgraphene_1_1chain_1_1base__operation" prot="public" virt="non-virtual">graphene::chain::base_operation</basecompoundref>
+    <includes refid="market_8hpp" local="no">market.hpp</includes>
+    <innerclass refid="structgraphene_1_1chain_1_1limit__order__create__operation_1_1fee__parameters__type" prot="public">graphene::chain::limit_order_create_operation::fee_parameters_type</innerclass>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1limit__order__create__operation_1a65b934a4323443dbb7902ac2ca0ec91f" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::limit_order_create_operation::fee</definition>
+        <argsstring></argsstring>
+        <name>fee</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/market.hpp" line="51" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/market.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1limit__order__create__operation_1ab660a81f44480b9fe6b594aea9fdcb7f" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::limit_order_create_operation::seller</definition>
+        <argsstring></argsstring>
+        <name>seller</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/market.hpp" line="52" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/market.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1limit__order__create__operation_1a241da05893ee41b966a29ec8334aac80" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::limit_order_create_operation::amount_to_sell</definition>
+        <argsstring></argsstring>
+        <name>amount_to_sell</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/market.hpp" line="53" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/market.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1limit__order__create__operation_1a57938c88b8065e93d07341238d7b9ce6" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::limit_order_create_operation::min_to_receive</definition>
+        <argsstring></argsstring>
+        <name>min_to_receive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/market.hpp" line="54" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/market.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1limit__order__create__operation_1a3e4662cebca7efb7f26abc792e7eef5b" prot="public" static="no" mutable="no">
+        <type>time_point_sec</type>
+        <definition>time_point_sec graphene::chain::limit_order_create_operation::expiration</definition>
+        <argsstring></argsstring>
+        <name>expiration</name>
+        <initializer>= time_point_sec::maximum()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The order will be removed from the books if not filled by expiration Upon expiration, all unsold asset will be returned to seller </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/market.hpp" line="58" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/market.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1limit__order__create__operation_1a1b03d43d5e68412a8d4b36523b1c7ff0" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool graphene::chain::limit_order_create_operation::fill_or_kill</definition>
+        <argsstring></argsstring>
+        <name>fill_or_kill</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>If this flag is set the entire order must be filled or the operation is rejected. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/market.hpp" line="61" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/market.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1limit__order__create__operation_1a103d1670664d88badeccd7de398555f3" prot="public" static="no" mutable="no">
+        <type><ref refid="group__operations_1gae0096750377f6e9d61dba5765284de99" kindref="member">extensions_type</ref></type>
+        <definition>extensions_type graphene::chain::limit_order_create_operation::extensions</definition>
+        <argsstring></argsstring>
+        <name>extensions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/market.hpp" line="62" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/market.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1limit__order__create__operation_1af517e29dc646102016dceb4724a20e1b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>pair&lt; <ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref>, <ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref> &gt;</type>
+        <definition>pair&lt;asset_id_type,asset_id_type&gt; graphene::chain::limit_order_create_operation::get_market</definition>
+        <argsstring>() const</argsstring>
+        <name>get_market</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/market.hpp" line="64" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/market.hpp" bodystart="64" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1limit__order__create__operation_1a34eec9a759e3ff934635f64e84e31935" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::limit_order_create_operation::fee_payer</definition>
+        <argsstring>() const</argsstring>
+        <name>fee_payer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/market.hpp" line="70" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/market.hpp" bodystart="70" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1limit__order__create__operation_1aa14b8696ee9c7b3a58b6a83818deacec" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::limit_order_create_operation::validate</definition>
+        <argsstring>() const</argsstring>
+        <name>validate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/market.hpp" line="71" column="1" bodyfile="libraries/chain/protocol/market.cpp" bodystart="28" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1limit__order__create__operation_1a6627fc225904e743f78dfad02004888c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1price" kindref="compound">price</ref></type>
+        <definition>price graphene::chain::limit_order_create_operation::get_price</definition>
+        <argsstring>() const</argsstring>
+        <name>get_price</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/market.hpp" line="72" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/market.hpp" bodystart="72" bodyend="72"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>instructs the blockchain to attempt to sell one asset for another</para><para>The blockchain will atempt to sell amount_to_sell.asset_id for as much min_to_receive.asset_id as possible. The fee will be paid by the seller&apos;s account. Market fees will apply as specified by the issuer of both the selling asset and the receiving asset as a percentage of the amount exchanged. </para>    </briefdescription>
+    <detaileddescription>
+<para>If either the selling asset or the receiving asset is white list restricted, the order will only be created if the seller is on the white list of the restricted asset type.</para><para>Market orders are matched in the order they are included in the block chain. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2179">
+        <label>graphene::chain::limit_order_create_operation</label>
+        <link refid="structgraphene_1_1chain_1_1limit__order__create__operation"/>
+        <childnode refid="2180" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2180">
+        <label>graphene::chain::base_operation</label>
+        <link refid="structgraphene_1_1chain_1_1base__operation"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2184">
+        <label>time_point_sec</label>
+      </node>
+      <node id="2183">
+        <label>flat_set&lt; future_extensions &gt;</label>
+      </node>
+      <node id="2181">
+        <label>graphene::chain::limit_order_create_operation</label>
+        <link refid="structgraphene_1_1chain_1_1limit__order__create__operation"/>
+        <childnode refid="2182" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2183" relation="usage">
+          <edgelabel>extensions</edgelabel>
+        </childnode>
+        <childnode refid="2184" relation="usage">
+          <edgelabel>expiration</edgelabel>
+        </childnode>
+        <childnode refid="2185" relation="usage">
+          <edgelabel>fee</edgelabel>
+          <edgelabel>min_to_receive</edgelabel>
+          <edgelabel>amount_to_sell</edgelabel>
+        </childnode>
+      </node>
+      <node id="2182">
+        <label>graphene::chain::base_operation</label>
+        <link refid="structgraphene_1_1chain_1_1base__operation"/>
+      </node>
+      <node id="2185">
+        <label>graphene::chain::asset</label>
+        <link refid="structgraphene_1_1chain_1_1asset"/>
+        <childnode refid="2186" relation="usage">
+          <edgelabel>amount</edgelabel>
+        </childnode>
+      </node>
+      <node id="2186">
+        <label>safe&lt; int64_t &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/protocol/market.hpp" line="48" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/market.hpp" bodystart="47" bodyend="73"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1limit__order__create__operation_1a241da05893ee41b966a29ec8334aac80" prot="public" virt="non-virtual"><scope>graphene::chain::limit_order_create_operation</scope><name>amount_to_sell</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a8947f5ff3ea0458c7fe981b5bb9e82b7" prot="public" virt="non-virtual"><scope>graphene::chain::limit_order_create_operation</scope><name>calculate_data_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a18b678eb05bc5b30d75f10b398c07a91" prot="public" virt="non-virtual"><scope>graphene::chain::limit_order_create_operation</scope><name>calculate_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1limit__order__create__operation_1a3e4662cebca7efb7f26abc792e7eef5b" prot="public" virt="non-virtual"><scope>graphene::chain::limit_order_create_operation</scope><name>expiration</name></member>
+      <member refid="structgraphene_1_1chain_1_1limit__order__create__operation_1a103d1670664d88badeccd7de398555f3" prot="public" virt="non-virtual"><scope>graphene::chain::limit_order_create_operation</scope><name>extensions</name></member>
+      <member refid="structgraphene_1_1chain_1_1limit__order__create__operation_1a65b934a4323443dbb7902ac2ca0ec91f" prot="public" virt="non-virtual"><scope>graphene::chain::limit_order_create_operation</scope><name>fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1limit__order__create__operation_1a34eec9a759e3ff934635f64e84e31935" prot="public" virt="non-virtual"><scope>graphene::chain::limit_order_create_operation</scope><name>fee_payer</name></member>
+      <member refid="structgraphene_1_1chain_1_1limit__order__create__operation_1a1b03d43d5e68412a8d4b36523b1c7ff0" prot="public" virt="non-virtual"><scope>graphene::chain::limit_order_create_operation</scope><name>fill_or_kill</name></member>
+      <member refid="structgraphene_1_1chain_1_1limit__order__create__operation_1af517e29dc646102016dceb4724a20e1b" prot="public" virt="non-virtual"><scope>graphene::chain::limit_order_create_operation</scope><name>get_market</name></member>
+      <member refid="structgraphene_1_1chain_1_1limit__order__create__operation_1a6627fc225904e743f78dfad02004888c" prot="public" virt="non-virtual"><scope>graphene::chain::limit_order_create_operation</scope><name>get_price</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a1d398b2f68e1dca5f453b86655a64c41" prot="public" virt="non-virtual"><scope>graphene::chain::limit_order_create_operation</scope><name>get_required_active_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1ac7e2861a01bbaef8fbe5c5dcf5e73b38" prot="public" virt="non-virtual"><scope>graphene::chain::limit_order_create_operation</scope><name>get_required_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1aff6e2d2b66117c8c87f6a6e7e7ddba1f" prot="public" virt="non-virtual"><scope>graphene::chain::limit_order_create_operation</scope><name>get_required_owner_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1limit__order__create__operation_1a57938c88b8065e93d07341238d7b9ce6" prot="public" virt="non-virtual"><scope>graphene::chain::limit_order_create_operation</scope><name>min_to_receive</name></member>
+      <member refid="structgraphene_1_1chain_1_1limit__order__create__operation_1ab660a81f44480b9fe6b594aea9fdcb7f" prot="public" virt="non-virtual"><scope>graphene::chain::limit_order_create_operation</scope><name>seller</name></member>
+      <member refid="structgraphene_1_1chain_1_1limit__order__create__operation_1aa14b8696ee9c7b3a58b6a83818deacec" prot="public" virt="non-virtual"><scope>graphene::chain::limit_order_create_operation</scope><name>validate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

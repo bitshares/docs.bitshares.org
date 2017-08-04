@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgraphene_1_1wallet_1_1api__documentation" kind="class" language="C++" prot="public">
+    <compoundname>graphene::wallet::api_documentation</compoundname>
+    <includes refid="api__documentation_8hpp" local="no">api_documentation.hpp</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classgraphene_1_1wallet_1_1api__documentation_1aa223bdab0648a4320466687259c84e9f" prot="private" static="no">
+        <type>boost::multi_index::multi_index_container&lt; <ref refid="structgraphene_1_1wallet_1_1method__description" kindref="compound">method_description</ref>, boost::multi_index::indexed_by&lt; boost::multi_index::ordered_unique&lt; boost::multi_index::member&lt; <ref refid="structgraphene_1_1wallet_1_1method__description" kindref="compound">method_description</ref>, std::string, &amp;<ref refid="structgraphene_1_1wallet_1_1method__description_1a82b981b7f669f839c23f88aec0a0e1ca" kindref="member">method_description::method_name</ref> &gt; &gt; &gt; &gt;</type>
+        <definition>typedef boost::multi_index::multi_index_container&lt;method_description, boost::multi_index::indexed_by&lt; boost::multi_index::ordered_unique&lt; boost::multi_index::member&lt;method_description, std::string, &amp;method_description::method_name&gt; &gt; &gt; &gt; graphene::wallet::api_documentation::method_description_set</definition>
+        <argsstring></argsstring>
+        <name>method_description_set</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/api_documentation.hpp" line="48" column="1" bodyfile="libraries/wallet/include/graphene/wallet/api_documentation.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1wallet_1_1api__documentation_1ab7604985547731faca4cda426a71d8aa" prot="private" static="no" mutable="no">
+        <type>method_description_set</type>
+        <definition>method_description_set graphene::wallet::api_documentation::method_descriptions</definition>
+        <argsstring></argsstring>
+        <name>method_descriptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/api_documentation.hpp" line="49" column="1" bodyfile="libraries/wallet/include/graphene/wallet/api_documentation.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1api__documentation_1ad7675e4911494a19f12d3adfb4a46140" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>graphene::wallet::api_documentation::api_documentation</definition>
+        <argsstring>()</argsstring>
+        <name>api_documentation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/api_documentation.hpp" line="51" column="1" bodyfile="libraries/wallet/api_documentation.cpp" bodystart="82" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1api__documentation_1a1bbbd79a079f07f076d5dfeeb620f9c4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string graphene::wallet::api_documentation::get_brief_description</definition>
+        <argsstring>(const std::string &amp;method_name) const</argsstring>
+        <name>get_brief_description</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>method_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/api_documentation.hpp" line="52" column="1" bodyfile="libraries/wallet/include/graphene/wallet/api_documentation.hpp" bodystart="52" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1api__documentation_1a866315118118e70729ff5b3b6d86f85f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string graphene::wallet::api_documentation::get_detailed_description</definition>
+        <argsstring>(const std::string &amp;method_name) const</argsstring>
+        <name>get_detailed_description</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>method_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/api_documentation.hpp" line="60" column="1" bodyfile="libraries/wallet/include/graphene/wallet/api_documentation.hpp" bodystart="60" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1api__documentation_1a99527593df4207c775c2bfd446d6c392" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; graphene::wallet::api_documentation::get_method_names</definition>
+        <argsstring>() const</argsstring>
+        <name>get_method_names</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/api_documentation.hpp" line="68" column="1" bodyfile="libraries/wallet/include/graphene/wallet/api_documentation.hpp" bodystart="68" bodyend="74"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/wallet/include/graphene/wallet/api_documentation.hpp" line="44" column="1" bodyfile="libraries/wallet/include/graphene/wallet/api_documentation.hpp" bodystart="43" bodyend="75"/>
+    <listofallmembers>
+      <member refid="classgraphene_1_1wallet_1_1api__documentation_1ad7675e4911494a19f12d3adfb4a46140" prot="public" virt="non-virtual"><scope>graphene::wallet::api_documentation</scope><name>api_documentation</name></member>
+      <member refid="classgraphene_1_1wallet_1_1api__documentation_1a1bbbd79a079f07f076d5dfeeb620f9c4" prot="public" virt="non-virtual"><scope>graphene::wallet::api_documentation</scope><name>get_brief_description</name></member>
+      <member refid="classgraphene_1_1wallet_1_1api__documentation_1a866315118118e70729ff5b3b6d86f85f" prot="public" virt="non-virtual"><scope>graphene::wallet::api_documentation</scope><name>get_detailed_description</name></member>
+      <member refid="classgraphene_1_1wallet_1_1api__documentation_1a99527593df4207c775c2bfd446d6c392" prot="public" virt="non-virtual"><scope>graphene::wallet::api_documentation</scope><name>get_method_names</name></member>
+      <member refid="classgraphene_1_1wallet_1_1api__documentation_1aa223bdab0648a4320466687259c84e9f" prot="private" virt="non-virtual"><scope>graphene::wallet::api_documentation</scope><name>method_description_set</name></member>
+      <member refid="classgraphene_1_1wallet_1_1api__documentation_1ab7604985547731faca4cda426a71d8aa" prot="private" virt="non-virtual"><scope>graphene::wallet::api_documentation</scope><name>method_descriptions</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

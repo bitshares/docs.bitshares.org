@@ -1,0 +1,408 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgraphene_1_1chain_1_1withdraw__permission__claim__evaluator" kind="class" language="C++" prot="public">
+    <compoundname>graphene::chain::withdraw_permission_claim_evaluator</compoundname>
+    <basecompoundref refid="classgraphene_1_1chain_1_1evaluator" prot="public" virt="non-virtual">graphene::chain::evaluator&lt; withdraw_permission_claim_evaluator &gt;</basecompoundref>
+    <includes refid="withdraw__permission__evaluator_8hpp" local="no">withdraw_permission_evaluator.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classgraphene_1_1chain_1_1withdraw__permission__claim__evaluator_1ae4533ad157229f9cf257ccc89e36a72f" prot="public" static="no">
+        <type><ref refid="structgraphene_1_1chain_1_1withdraw__permission__claim__operation" kindref="compound">withdraw_permission_claim_operation</ref></type>
+        <definition>typedef withdraw_permission_claim_operation graphene::chain::withdraw_permission_claim_evaluator::operation_type</definition>
+        <argsstring></argsstring>
+        <name>operation_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/withdraw_permission_evaluator.hpp" line="42" column="1" bodyfile="libraries/chain/include/graphene/chain/withdraw_permission_evaluator.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1withdraw__permission__claim__evaluator_1a3cdd24a3df4ff44a2aabe07a90aa8efd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1void__result" kindref="compound">void_result</ref></type>
+        <definition>void_result graphene::chain::withdraw_permission_claim_evaluator::do_evaluate</definition>
+        <argsstring>(const operation_type &amp;op)</argsstring>
+        <name>do_evaluate</name>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1withdraw__permission__claim__evaluator_1ae4533ad157229f9cf257ccc89e36a72f" kindref="member">operation_type</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/withdraw_permission_evaluator.hpp" line="44" column="1" bodyfile="libraries/chain/withdraw_permission_evaluator.cpp" bodystart="59" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1withdraw__permission__claim__evaluator_1a59261d3132eeaa38f6c21cfb1bd29515" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1void__result" kindref="compound">void_result</ref></type>
+        <definition>void_result graphene::chain::withdraw_permission_claim_evaluator::do_apply</definition>
+        <argsstring>(const operation_type &amp;op)</argsstring>
+        <name>do_apply</name>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1withdraw__permission__claim__evaluator_1ae4533ad157229f9cf257ccc89e36a72f" kindref="member">operation_type</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/withdraw_permission_evaluator.hpp" line="45" column="1" bodyfile="libraries/chain/withdraw_permission_evaluator.cpp" bodystart="81" bodyend="99"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3053">
+        <label>graphene::chain::evaluator&lt; withdraw_permission_claim_evaluator &gt;</label>
+        <link refid="classgraphene_1_1chain_1_1evaluator"/>
+        <childnode refid="3054" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3052">
+        <label>graphene::chain::withdraw_permission_claim_evaluator</label>
+        <link refid="classgraphene_1_1chain_1_1withdraw__permission__claim__evaluator"/>
+        <childnode refid="3053" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3054">
+        <label>graphene::chain::generic_evaluator</label>
+        <link refid="classgraphene_1_1chain_1_1generic__evaluator"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3059">
+        <label>graphene::db::abstract_object&lt; asset_object &gt;</label>
+      </node>
+      <node id="3064">
+        <label>flat_set&lt; asset_id_type &gt;</label>
+      </node>
+      <node id="3073">
+        <label>time_point_sec</label>
+      </node>
+      <node id="3087">
+        <label>optional&lt; vesting_balance_id_type &gt;</label>
+      </node>
+      <node id="3094">
+        <label>flat_map&lt; graphene::chain::address, weight_type &gt;</label>
+      </node>
+      <node id="3077">
+        <label>db::object_database</label>
+      </node>
+      <node id="3067">
+        <label>graphene::chain::price</label>
+        <link refid="structgraphene_1_1chain_1_1price"/>
+        <childnode refid="3068" relation="usage">
+          <edgelabel>base</edgelabel>
+          <edgelabel>quote</edgelabel>
+        </childnode>
+      </node>
+      <node id="3066">
+        <label>string</label>
+      </node>
+      <node id="3063">
+        <label>flat_set&lt; future_extensions &gt;</label>
+      </node>
+      <node id="3056">
+        <label>graphene::chain::evaluator&lt; withdraw_permission_claim_evaluator &gt;</label>
+        <link refid="classgraphene_1_1chain_1_1evaluator"/>
+        <childnode refid="3057" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3090">
+        <label>graphene::chain::public_key_type</label>
+        <link refid="structgraphene_1_1chain_1_1public__key__type"/>
+      </node>
+      <node id="3082">
+        <label>graphene::db::abstract_object&lt; asset_dynamic_data_object &gt;</label>
+      </node>
+      <node id="3083">
+        <label>graphene::chain::account_object</label>
+        <link refid="classgraphene_1_1chain_1_1account__object"/>
+        <childnode refid="3084" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3085" relation="usage">
+          <edgelabel>allowed_assets</edgelabel>
+        </childnode>
+        <childnode refid="3086" relation="usage">
+          <edgelabel>owner_special_authority</edgelabel>
+          <edgelabel>active_special_authority</edgelabel>
+        </childnode>
+        <childnode refid="3087" relation="usage">
+          <edgelabel>cashback_vb</edgelabel>
+        </childnode>
+        <childnode refid="3088" relation="usage">
+          <edgelabel>options</edgelabel>
+        </childnode>
+        <childnode refid="3091" relation="usage">
+          <edgelabel>active</edgelabel>
+          <edgelabel>owner</edgelabel>
+        </childnode>
+        <childnode refid="3073" relation="usage">
+          <edgelabel>membership_expiration_date</edgelabel>
+        </childnode>
+        <childnode refid="3066" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+        <childnode refid="3095" relation="usage">
+          <edgelabel>whitelisted_accounts</edgelabel>
+          <edgelabel>blacklisted_accounts</edgelabel>
+        </childnode>
+        <childnode refid="3069" relation="usage">
+          <edgelabel>whitelisting_accounts</edgelabel>
+          <edgelabel>blacklisting_accounts</edgelabel>
+        </childnode>
+      </node>
+      <node id="3095">
+        <label>set&lt; account_id_type &gt;</label>
+      </node>
+      <node id="3084">
+        <label>graphene::db::abstract_object&lt; account_object &gt;</label>
+      </node>
+      <node id="3055">
+        <label>graphene::chain::withdraw_permission_claim_evaluator</label>
+        <link refid="classgraphene_1_1chain_1_1withdraw__permission__claim__evaluator"/>
+        <childnode refid="3056" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3069">
+        <label>flat_set&lt; account_id_type &gt;</label>
+      </node>
+      <node id="3089">
+        <label>flat_set&lt; graphene::chain::vote_id_type &gt;</label>
+      </node>
+      <node id="3075">
+        <label>vector&lt; signature_type &gt;</label>
+      </node>
+      <node id="3057">
+        <label>graphene::chain::generic_evaluator</label>
+        <link refid="classgraphene_1_1chain_1_1generic__evaluator"/>
+        <childnode refid="3058" relation="usage">
+          <edgelabel>fee_asset</edgelabel>
+        </childnode>
+        <childnode refid="3065" relation="usage">
+          <edgelabel>core_fee_paid</edgelabel>
+        </childnode>
+        <childnode refid="3070" relation="usage">
+          <edgelabel>trx_state</edgelabel>
+        </childnode>
+        <childnode refid="3079" relation="usage">
+          <edgelabel>fee_paying_account_statistics</edgelabel>
+        </childnode>
+        <childnode refid="3081" relation="usage">
+          <edgelabel>fee_asset_dyn_data</edgelabel>
+        </childnode>
+        <childnode refid="3068" relation="usage">
+          <edgelabel>fee_from_account</edgelabel>
+        </childnode>
+        <childnode refid="3083" relation="usage">
+          <edgelabel>fee_paying_account</edgelabel>
+        </childnode>
+      </node>
+      <node id="3071">
+        <label>graphene::chain::signed_transaction</label>
+        <link refid="structgraphene_1_1chain_1_1signed__transaction"/>
+        <childnode refid="3072" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3075" relation="usage">
+          <edgelabel>signatures</edgelabel>
+        </childnode>
+      </node>
+      <node id="3091">
+        <label>graphene::chain::authority</label>
+        <link refid="structgraphene_1_1chain_1_1authority"/>
+        <childnode refid="3092" relation="usage">
+          <edgelabel>key_auths</edgelabel>
+        </childnode>
+        <childnode refid="3093" relation="usage">
+          <edgelabel>account_auths</edgelabel>
+        </childnode>
+        <childnode refid="3094" relation="usage">
+          <edgelabel>address_auths</edgelabel>
+        </childnode>
+      </node>
+      <node id="3074">
+        <label>vector&lt; operation &gt;</label>
+      </node>
+      <node id="3078">
+        <label>vector&lt; operation_result &gt;</label>
+      </node>
+      <node id="3086">
+        <label>static_variant&lt; no_special_authority, top_holders_special_authority &gt;</label>
+      </node>
+      <node id="3061">
+        <label>optional&lt; account_id_type &gt;</label>
+      </node>
+      <node id="3068">
+        <label>graphene::chain::asset</label>
+        <link refid="structgraphene_1_1chain_1_1asset"/>
+        <childnode refid="3065" relation="usage">
+          <edgelabel>amount</edgelabel>
+        </childnode>
+      </node>
+      <node id="3058">
+        <label>graphene::chain::asset_object</label>
+        <link refid="classgraphene_1_1chain_1_1asset__object"/>
+        <childnode refid="3059" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3060" relation="usage">
+          <edgelabel>bitasset_data_id</edgelabel>
+        </childnode>
+        <childnode refid="3061" relation="usage">
+          <edgelabel>buyback_account</edgelabel>
+        </childnode>
+        <childnode refid="3062" relation="usage">
+          <edgelabel>options</edgelabel>
+        </childnode>
+        <childnode refid="3066" relation="usage">
+          <edgelabel>symbol</edgelabel>
+        </childnode>
+      </node>
+      <node id="3076">
+        <label>graphene::chain::database</label>
+        <link refid="classgraphene_1_1chain_1_1database"/>
+        <childnode refid="3077" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3092">
+        <label>flat_map&lt; graphene::chain::public_key_type, weight_type &gt;</label>
+      </node>
+      <node id="3088">
+        <label>graphene::chain::account_options</label>
+        <link refid="structgraphene_1_1chain_1_1account__options"/>
+        <childnode refid="3063" relation="usage">
+          <edgelabel>extensions</edgelabel>
+        </childnode>
+        <childnode refid="3089" relation="usage">
+          <edgelabel>votes</edgelabel>
+        </childnode>
+        <childnode refid="3090" relation="usage">
+          <edgelabel>memo_key</edgelabel>
+        </childnode>
+      </node>
+      <node id="3065">
+        <label>safe&lt; int64_t &gt;</label>
+      </node>
+      <node id="3070">
+        <label>graphene::chain::transaction_evaluation_state</label>
+        <link refid="classgraphene_1_1chain_1_1transaction__evaluation__state"/>
+        <childnode refid="3071" relation="usage">
+          <edgelabel>_trx</edgelabel>
+        </childnode>
+        <childnode refid="3076" relation="usage">
+          <edgelabel>_db</edgelabel>
+        </childnode>
+        <childnode refid="3078" relation="usage">
+          <edgelabel>operation_results</edgelabel>
+        </childnode>
+      </node>
+      <node id="3060">
+        <label>optional&lt; asset_bitasset_data_id_type &gt;</label>
+      </node>
+      <node id="3079">
+        <label>graphene::chain::account_statistics_object</label>
+        <link refid="classgraphene_1_1chain_1_1account__statistics__object"/>
+        <childnode refid="3080" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3065" relation="usage">
+          <edgelabel>pending_fees</edgelabel>
+          <edgelabel>lifetime_fees_paid</edgelabel>
+          <edgelabel>pending_vested_fees</edgelabel>
+          <edgelabel>total_core_in_orders</edgelabel>
+        </childnode>
+      </node>
+      <node id="3072">
+        <label>graphene::chain::transaction</label>
+        <link refid="structgraphene_1_1chain_1_1transaction"/>
+        <childnode refid="3063" relation="usage">
+          <edgelabel>extensions</edgelabel>
+        </childnode>
+        <childnode refid="3073" relation="usage">
+          <edgelabel>expiration</edgelabel>
+        </childnode>
+        <childnode refid="3074" relation="usage">
+          <edgelabel>operations</edgelabel>
+        </childnode>
+      </node>
+      <node id="3062">
+        <label>graphene::chain::asset_options</label>
+        <link refid="structgraphene_1_1chain_1_1asset__options"/>
+        <childnode refid="3063" relation="usage">
+          <edgelabel>extensions</edgelabel>
+        </childnode>
+        <childnode refid="3064" relation="usage">
+          <edgelabel>whitelist_markets</edgelabel>
+          <edgelabel>blacklist_markets</edgelabel>
+        </childnode>
+        <childnode refid="3065" relation="usage">
+          <edgelabel>max_market_fee</edgelabel>
+          <edgelabel>max_supply</edgelabel>
+        </childnode>
+        <childnode refid="3066" relation="usage">
+          <edgelabel>description</edgelabel>
+        </childnode>
+        <childnode refid="3067" relation="usage">
+          <edgelabel>core_exchange_rate</edgelabel>
+        </childnode>
+        <childnode refid="3069" relation="usage">
+          <edgelabel>whitelist_authorities</edgelabel>
+          <edgelabel>blacklist_authorities</edgelabel>
+        </childnode>
+      </node>
+      <node id="3085">
+        <label>optional&lt; flat_set&lt; asset_id_type &gt; &gt;</label>
+      </node>
+      <node id="3093">
+        <label>flat_map&lt; account_id_type, weight_type &gt;</label>
+      </node>
+      <node id="3081">
+        <label>graphene::chain::asset_dynamic_data_object</label>
+        <link refid="classgraphene_1_1chain_1_1asset__dynamic__data__object"/>
+        <childnode refid="3082" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3065" relation="usage">
+          <edgelabel>confidential_supply</edgelabel>
+          <edgelabel>fee_pool</edgelabel>
+          <edgelabel>current_supply</edgelabel>
+          <edgelabel>accumulated_fees</edgelabel>
+        </childnode>
+      </node>
+      <node id="3080">
+        <label>graphene::db::abstract_object&lt; account_statistics_object &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/withdraw_permission_evaluator.hpp" line="40" column="1" bodyfile="libraries/chain/include/graphene/chain/withdraw_permission_evaluator.hpp" bodystart="39" bodyend="46"/>
+    <listofallmembers>
+      <member refid="classgraphene_1_1chain_1_1evaluator_1a4186e76425438ece8cd64bfc6961608c" prot="public" virt="virtual"><scope>graphene::chain::withdraw_permission_claim_evaluator</scope><name>apply</name></member>
+      <member refid="classgraphene_1_1chain_1_1generic__evaluator_1ab9da3acadc46e1d4a87ea91457de9a91" prot="protected" virt="non-virtual"><scope>graphene::chain::withdraw_permission_claim_evaluator</scope><name>calculate_fee_for_operation</name></member>
+      <member refid="classgraphene_1_1chain_1_1generic__evaluator_1a65bd5bfc5112f84b364ec43c1c17a699" prot="protected" virt="non-virtual"><scope>graphene::chain::withdraw_permission_claim_evaluator</scope><name>convert_fee</name></member>
+      <member refid="classgraphene_1_1chain_1_1generic__evaluator_1aa7e2ca176a3ce6690e17536549fb4c5b" prot="protected" virt="non-virtual"><scope>graphene::chain::withdraw_permission_claim_evaluator</scope><name>core_fee_paid</name></member>
+      <member refid="classgraphene_1_1chain_1_1generic__evaluator_1a9f906a5670b56865a2e9b4029a67ba81" prot="public" virt="non-virtual"><scope>graphene::chain::withdraw_permission_claim_evaluator</scope><name>db</name></member>
+      <member refid="classgraphene_1_1chain_1_1generic__evaluator_1a945e2f8e31ad68bd802618fff3a3d5d3" prot="protected" virt="non-virtual"><scope>graphene::chain::withdraw_permission_claim_evaluator</scope><name>db_adjust_balance</name></member>
+      <member refid="classgraphene_1_1chain_1_1withdraw__permission__claim__evaluator_1a59261d3132eeaa38f6c21cfb1bd29515" prot="public" virt="non-virtual"><scope>graphene::chain::withdraw_permission_claim_evaluator</scope><name>do_apply</name></member>
+      <member refid="classgraphene_1_1chain_1_1withdraw__permission__claim__evaluator_1a3cdd24a3df4ff44a2aabe07a90aa8efd" prot="public" virt="non-virtual"><scope>graphene::chain::withdraw_permission_claim_evaluator</scope><name>do_evaluate</name></member>
+      <member refid="classgraphene_1_1chain_1_1evaluator_1ad206096f93b8a944901c2f0cb1bed151" prot="public" virt="virtual"><scope>graphene::chain::withdraw_permission_claim_evaluator</scope><name>evaluate</name></member>
+      <member refid="classgraphene_1_1chain_1_1generic__evaluator_1a07efd4fa9493389424fdaa38e626ebd4" prot="protected" virt="non-virtual"><scope>graphene::chain::withdraw_permission_claim_evaluator</scope><name>fee_asset</name></member>
+      <member refid="classgraphene_1_1chain_1_1generic__evaluator_1ad602d55adcb7229b91397a514c27a1c7" prot="protected" virt="non-virtual"><scope>graphene::chain::withdraw_permission_claim_evaluator</scope><name>fee_asset_dyn_data</name></member>
+      <member refid="classgraphene_1_1chain_1_1generic__evaluator_1aeced28daa14ff4a07b9eadf14f782b5a" prot="protected" virt="non-virtual"><scope>graphene::chain::withdraw_permission_claim_evaluator</scope><name>fee_from_account</name></member>
+      <member refid="classgraphene_1_1chain_1_1generic__evaluator_1a1ad16d69e89d5e9c04299b92e324bf7d" prot="protected" virt="non-virtual"><scope>graphene::chain::withdraw_permission_claim_evaluator</scope><name>fee_paying_account</name></member>
+      <member refid="classgraphene_1_1chain_1_1generic__evaluator_1a9f7422a38474ca4ede2f9bd82ac6cf91" prot="protected" virt="non-virtual"><scope>graphene::chain::withdraw_permission_claim_evaluator</scope><name>fee_paying_account_statistics</name></member>
+      <member refid="classgraphene_1_1chain_1_1generic__evaluator_1ab6ad5b670242e3dbcde741a5cc9ddad8" prot="protected" virt="non-virtual"><scope>graphene::chain::withdraw_permission_claim_evaluator</scope><name>get_relative_id</name></member>
+      <member refid="classgraphene_1_1chain_1_1evaluator_1a1fc01577ffad44dfa3283a5a1c79a7e6" prot="public" virt="virtual"><scope>graphene::chain::withdraw_permission_claim_evaluator</scope><name>get_type</name></member>
+      <member refid="classgraphene_1_1chain_1_1withdraw__permission__claim__evaluator_1ae4533ad157229f9cf257ccc89e36a72f" prot="public" virt="non-virtual"><scope>graphene::chain::withdraw_permission_claim_evaluator</scope><name>operation_type</name></member>
+      <member refid="classgraphene_1_1chain_1_1generic__evaluator_1a6ef4f7c04d0d0289cf95a9d18d5142cb" prot="protected" virt="non-virtual"><scope>graphene::chain::withdraw_permission_claim_evaluator</scope><name>pay_fba_fee</name></member>
+      <member refid="classgraphene_1_1chain_1_1generic__evaluator_1a832b9ba03e2d8b1dfb8e3e91d3ec49bc" prot="public" virt="virtual"><scope>graphene::chain::withdraw_permission_claim_evaluator</scope><name>pay_fee</name></member>
+      <member refid="classgraphene_1_1chain_1_1generic__evaluator_1a90ff8169dbff062373ea5fdc98e6c484" prot="protected" virt="non-virtual"><scope>graphene::chain::withdraw_permission_claim_evaluator</scope><name>prepare_fee</name></member>
+      <member refid="classgraphene_1_1chain_1_1generic__evaluator_1ad62bf969f43cfd4900a0f4fdadc2b780" prot="public" virt="virtual"><scope>graphene::chain::withdraw_permission_claim_evaluator</scope><name>start_evaluate</name></member>
+      <member refid="classgraphene_1_1chain_1_1generic__evaluator_1a7f87a32183ec768a0402913e0e64d881" prot="protected" virt="non-virtual"><scope>graphene::chain::withdraw_permission_claim_evaluator</scope><name>trx_state</name></member>
+      <member refid="classgraphene_1_1chain_1_1generic__evaluator_1ad716bd9ef32c10ba2a136cb0d7e24c1f" prot="public" virt="virtual"><scope>graphene::chain::withdraw_permission_claim_evaluator</scope><name>~generic_evaluator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1wallet_1_1exported__keys" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::wallet::exported_keys</compoundname>
+    <includes refid="wallet_8hpp" local="no">wallet.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1wallet_1_1exported__keys_1a7bb480d69962bfc673411a99a67588c7" prot="public" static="no" mutable="no">
+        <type>fc::sha512</type>
+        <definition>fc::sha512 graphene::wallet::exported_keys::password_checksum</definition>
+        <argsstring></argsstring>
+        <name>password_checksum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="208" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1wallet_1_1exported__keys_1a0f8c2bbf9deea3dc05a02ff0be1de8d5" prot="public" static="no" mutable="no">
+        <type>vector&lt; <ref refid="structgraphene_1_1wallet_1_1exported__account__keys" kindref="compound">exported_account_keys</ref> &gt;</type>
+        <definition>vector&lt;exported_account_keys&gt; graphene::wallet::exported_keys::account_keys</definition>
+        <argsstring></argsstring>
+        <name>account_keys</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="209" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1661">
+        <label>vector&lt; graphene::wallet::exported_account_keys &gt;</label>
+      </node>
+      <node id="1660">
+        <label>graphene::wallet::exported_keys</label>
+        <link refid="structgraphene_1_1wallet_1_1exported__keys"/>
+        <childnode refid="1661" relation="usage">
+          <edgelabel>account_keys</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="207" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="206" bodyend="210"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1wallet_1_1exported__keys_1a0f8c2bbf9deea3dc05a02ff0be1de8d5" prot="public" virt="non-virtual"><scope>graphene::wallet::exported_keys</scope><name>account_keys</name></member>
+      <member refid="structgraphene_1_1wallet_1_1exported__keys_1a7bb480d69962bfc673411a99a67588c7" prot="public" virt="non-virtual"><scope>graphene::wallet::exported_keys</scope><name>password_checksum</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

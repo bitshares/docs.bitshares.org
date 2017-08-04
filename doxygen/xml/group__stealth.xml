@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="group__stealth" kind="group">
+    <compoundname>stealth</compoundname>
+    <title>Stealth Transfer</title>
+    <innerclass refid="structgraphene_1_1chain_1_1blind__memo" prot="public">graphene::chain::blind_memo</innerclass>
+    <innerclass refid="structgraphene_1_1chain_1_1blind__input" prot="public">graphene::chain::blind_input</innerclass>
+    <innerclass refid="structgraphene_1_1chain_1_1stealth__confirmation" prot="public">graphene::chain::stealth_confirmation</innerclass>
+    <innerclass refid="structgraphene_1_1chain_1_1blind__output" prot="public">graphene::chain::blind_output</innerclass>
+    <innerclass refid="structgraphene_1_1chain_1_1transfer__to__blind__operation" prot="public">graphene::chain::transfer_to_blind_operation</innerclass>
+    <innerclass refid="structgraphene_1_1chain_1_1transfer__from__blind__operation" prot="public">graphene::chain::transfer_from_blind_operation</innerclass>
+    <innerclass refid="structgraphene_1_1chain_1_1blind__transfer__operation" prot="public">graphene::chain::blind_transfer_operation</innerclass>
+    <briefdescription>
+<para>Operations related to stealth transfer of value. </para>    </briefdescription>
+    <detaileddescription>
+<para>Stealth Transfers enable users to maintain their finanical privacy against even though all transactions are public. Every account has three balances:</para><para><orderedlist>
+<listitem><para>Public Balance - everyone can see the balance changes and the parties involved</para></listitem><listitem><para>Blinded Balance - everyone can see who is transacting but not the amounts involved</para></listitem><listitem><para>Stealth Balance - both the amounts and parties involved are obscured</para></listitem></orderedlist>
+</para><para>Account owners may set a flag that allows their account to receive(or not) transfers of these kinds Asset issuers can enable or disable the use of each of these types of accounts.</para><para>Using the &quot;temp account&quot; which has no permissions required, users can transfer a stealth balance to the temp account and then use the temp account to register a new account. In this way users can use stealth funds to create anonymous accounts with which they can perform other actions that are not compatible with blinded balances (such as market orders)</para><sect1 id="group__stealth_1referral_program">
+<title>Referral Progam</title>
+<para>Stealth transfers that do not specify any account id cannot pay referral fees so 100% of the transaction fee is paid to the network.</para></sect1>
+<sect1 id="group__stealth_1transaction_fees">
+<title>Fees</title>
+<para>Stealth transfers can have an arbitrarylly large size and therefore the transaction fee for stealth transfers is based purley on the data size of the transaction. </para></sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

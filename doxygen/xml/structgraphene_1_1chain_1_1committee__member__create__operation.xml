@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1committee__member__create__operation" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::committee_member_create_operation</compoundname>
+    <basecompoundref refid="structgraphene_1_1chain_1_1base__operation" prot="public" virt="non-virtual">graphene::chain::base_operation</basecompoundref>
+    <includes refid="committee__member_8hpp" local="no">committee_member.hpp</includes>
+    <innerclass refid="structgraphene_1_1chain_1_1committee__member__create__operation_1_1fee__parameters__type" prot="public">graphene::chain::committee_member_create_operation::fee_parameters_type</innerclass>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1committee__member__create__operation_1a6d770247fc038eccb534c9cf5dbd9211" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::committee_member_create_operation::fee</definition>
+        <argsstring></argsstring>
+        <name>fee</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/committee_member.hpp" line="41" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/committee_member.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1committee__member__create__operation_1a1705259c66a4d46c165cf860e4ebe42e" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::committee_member_create_operation::committee_member_account</definition>
+        <argsstring></argsstring>
+        <name>committee_member_account</name>
+        <briefdescription>
+<para>The account which owns the committee_member. This account pays the fee for this operation. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/committee_member.hpp" line="43" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/committee_member.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1committee__member__create__operation_1a38dd9ac77e43d06be78bfc845872f18e" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string graphene::chain::committee_member_create_operation::url</definition>
+        <argsstring></argsstring>
+        <name>url</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/committee_member.hpp" line="44" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/committee_member.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1committee__member__create__operation_1abc1f39d3fbada90755a67d0ef00a5189" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::committee_member_create_operation::fee_payer</definition>
+        <argsstring>() const</argsstring>
+        <name>fee_payer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/committee_member.hpp" line="46" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/committee_member.hpp" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1committee__member__create__operation_1ab1aa87069bcc9abd32c64c1ac508f430" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::committee_member_create_operation::validate</definition>
+        <argsstring>() const</argsstring>
+        <name>validate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/committee_member.hpp" line="47" column="1" bodyfile="libraries/chain/protocol/committee_member.cpp" bodystart="28" bodyend="32"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Create a committee_member object, as a bid to hold a committee_member seat on the network.</para><para>Accounts which wish to become committee_members may use this operation to create a committee_member object which stakeholders may vote on to approve its position as a committee_member. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1423">
+        <label>graphene::chain::base_operation</label>
+        <link refid="structgraphene_1_1chain_1_1base__operation"/>
+      </node>
+      <node id="1422">
+        <label>graphene::chain::committee_member_create_operation</label>
+        <link refid="structgraphene_1_1chain_1_1committee__member__create__operation"/>
+        <childnode refid="1423" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1426">
+        <label>string</label>
+      </node>
+      <node id="1425">
+        <label>graphene::chain::base_operation</label>
+        <link refid="structgraphene_1_1chain_1_1base__operation"/>
+      </node>
+      <node id="1424">
+        <label>graphene::chain::committee_member_create_operation</label>
+        <link refid="structgraphene_1_1chain_1_1committee__member__create__operation"/>
+        <childnode refid="1425" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1426" relation="usage">
+          <edgelabel>url</edgelabel>
+        </childnode>
+        <childnode refid="1427" relation="usage">
+          <edgelabel>fee</edgelabel>
+        </childnode>
+      </node>
+      <node id="1427">
+        <label>graphene::chain::asset</label>
+        <link refid="structgraphene_1_1chain_1_1asset"/>
+        <childnode refid="1428" relation="usage">
+          <edgelabel>amount</edgelabel>
+        </childnode>
+      </node>
+      <node id="1428">
+        <label>safe&lt; int64_t &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/protocol/committee_member.hpp" line="38" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/committee_member.hpp" bodystart="37" bodyend="48"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a8947f5ff3ea0458c7fe981b5bb9e82b7" prot="public" virt="non-virtual"><scope>graphene::chain::committee_member_create_operation</scope><name>calculate_data_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a18b678eb05bc5b30d75f10b398c07a91" prot="public" virt="non-virtual"><scope>graphene::chain::committee_member_create_operation</scope><name>calculate_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1committee__member__create__operation_1a1705259c66a4d46c165cf860e4ebe42e" prot="public" virt="non-virtual"><scope>graphene::chain::committee_member_create_operation</scope><name>committee_member_account</name></member>
+      <member refid="structgraphene_1_1chain_1_1committee__member__create__operation_1a6d770247fc038eccb534c9cf5dbd9211" prot="public" virt="non-virtual"><scope>graphene::chain::committee_member_create_operation</scope><name>fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1committee__member__create__operation_1abc1f39d3fbada90755a67d0ef00a5189" prot="public" virt="non-virtual"><scope>graphene::chain::committee_member_create_operation</scope><name>fee_payer</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a1d398b2f68e1dca5f453b86655a64c41" prot="public" virt="non-virtual"><scope>graphene::chain::committee_member_create_operation</scope><name>get_required_active_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1ac7e2861a01bbaef8fbe5c5dcf5e73b38" prot="public" virt="non-virtual"><scope>graphene::chain::committee_member_create_operation</scope><name>get_required_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1aff6e2d2b66117c8c87f6a6e7e7ddba1f" prot="public" virt="non-virtual"><scope>graphene::chain::committee_member_create_operation</scope><name>get_required_owner_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1committee__member__create__operation_1a38dd9ac77e43d06be78bfc845872f18e" prot="public" virt="non-virtual"><scope>graphene::chain::committee_member_create_operation</scope><name>url</name></member>
+      <member refid="structgraphene_1_1chain_1_1committee__member__create__operation_1ab1aa87069bcc9abd32c64c1ac508f430" prot="public" virt="non-virtual"><scope>graphene::chain::committee_member_create_operation</scope><name>validate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

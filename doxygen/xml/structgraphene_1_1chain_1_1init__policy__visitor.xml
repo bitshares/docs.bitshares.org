@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1init__policy__visitor" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::init_policy_visitor</compoundname>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structgraphene_1_1chain_1_1init__policy__visitor_1a45f589224ca6b77de23278ab62b0d83e" prot="public" static="no">
+        <type>void</type>
+        <definition>typedef void graphene::chain::init_policy_visitor::result_type</definition>
+        <argsstring></argsstring>
+        <name>result_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/vesting_balance_evaluator.cpp" line="50" column="1" bodyfile="libraries/chain/vesting_balance_evaluator.cpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1init__policy__visitor_1a11bc927558e8ccdb76fc2595d84c08ad" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a53807c77a8d2a7efb30e13b772e99b3a" kindref="member">vesting_policy</ref> &amp;</type>
+        <definition>vesting_policy&amp; graphene::chain::init_policy_visitor::p</definition>
+        <argsstring></argsstring>
+        <name>p</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/vesting_balance_evaluator.cpp" line="56" column="1" bodyfile="libraries/chain/vesting_balance_evaluator.cpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1init__policy__visitor_1ae3cffc89dc76e0c36726f96212ac0677" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+        <definition>share_type graphene::chain::init_policy_visitor::init_balance</definition>
+        <argsstring></argsstring>
+        <name>init_balance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/vesting_balance_evaluator.cpp" line="57" column="1" bodyfile="libraries/chain/vesting_balance_evaluator.cpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1init__policy__visitor_1a45a88fe8d423ea338f5203390f98c718" prot="public" static="no" mutable="no">
+        <type>fc::time_point_sec</type>
+        <definition>fc::time_point_sec graphene::chain::init_policy_visitor::now</definition>
+        <argsstring></argsstring>
+        <name>now</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/vesting_balance_evaluator.cpp" line="58" column="1" bodyfile="libraries/chain/vesting_balance_evaluator.cpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1init__policy__visitor_1aaafac27796b61c653366178740bf378a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>graphene::chain::init_policy_visitor::init_policy_visitor</definition>
+        <argsstring>(vesting_policy &amp;po, const share_type &amp;begin_balance, const fc::time_point_sec &amp;n)</argsstring>
+        <name>init_policy_visitor</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a53807c77a8d2a7efb30e13b772e99b3a" kindref="member">vesting_policy</ref> &amp;</type>
+          <declname>po</declname>
+        </param>
+        <param>
+          <type>const <ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref> &amp;</type>
+          <declname>begin_balance</declname>
+        </param>
+        <param>
+          <type>const fc::time_point_sec &amp;</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/vesting_balance_evaluator.cpp" line="52" column="1" bodyfile="libraries/chain/vesting_balance_evaluator.cpp" bodystart="52" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1init__policy__visitor_1a9febe8208991e5b00b851fd189d7794b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::init_policy_visitor::operator()</definition>
+        <argsstring>(const linear_vesting_policy_initializer &amp;i) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1linear__vesting__policy__initializer" kindref="compound">linear_vesting_policy_initializer</ref> &amp;</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/vesting_balance_evaluator.cpp" line="60" column="1" bodyfile="libraries/chain/vesting_balance_evaluator.cpp" bodystart="60" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1init__policy__visitor_1a1cc7bf8463ad3fb82149ca18f13450a6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::init_policy_visitor::operator()</definition>
+        <argsstring>(const cdd_vesting_policy_initializer &amp;i) const</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1cdd__vesting__policy__initializer" kindref="compound">cdd_vesting_policy_initializer</ref> &amp;</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/vesting_balance_evaluator.cpp" line="70" column="1" bodyfile="libraries/chain/vesting_balance_evaluator.cpp" bodystart="70" bodyend="78"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2039">
+        <label>time_point_sec</label>
+      </node>
+      <node id="2038">
+        <label>graphene::chain::init_policy_visitor</label>
+        <link refid="structgraphene_1_1chain_1_1init__policy__visitor"/>
+        <childnode refid="2039" relation="usage">
+          <edgelabel>now</edgelabel>
+        </childnode>
+        <childnode refid="2040" relation="usage">
+          <edgelabel>init_balance</edgelabel>
+        </childnode>
+      </node>
+      <node id="2040">
+        <label>safe&lt; int64_t &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/vesting_balance_evaluator.cpp" line="49" column="1" bodyfile="libraries/chain/vesting_balance_evaluator.cpp" bodystart="48" bodyend="79"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1init__policy__visitor_1ae3cffc89dc76e0c36726f96212ac0677" prot="public" virt="non-virtual"><scope>graphene::chain::init_policy_visitor</scope><name>init_balance</name></member>
+      <member refid="structgraphene_1_1chain_1_1init__policy__visitor_1aaafac27796b61c653366178740bf378a" prot="public" virt="non-virtual"><scope>graphene::chain::init_policy_visitor</scope><name>init_policy_visitor</name></member>
+      <member refid="structgraphene_1_1chain_1_1init__policy__visitor_1a45a88fe8d423ea338f5203390f98c718" prot="public" virt="non-virtual"><scope>graphene::chain::init_policy_visitor</scope><name>now</name></member>
+      <member refid="structgraphene_1_1chain_1_1init__policy__visitor_1a9febe8208991e5b00b851fd189d7794b" prot="public" virt="non-virtual"><scope>graphene::chain::init_policy_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1chain_1_1init__policy__visitor_1a1cc7bf8463ad3fb82149ca18f13450a6" prot="public" virt="non-virtual"><scope>graphene::chain::init_policy_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1chain_1_1init__policy__visitor_1a11bc927558e8ccdb76fc2595d84c08ad" prot="public" virt="non-virtual"><scope>graphene::chain::init_policy_visitor</scope><name>p</name></member>
+      <member refid="structgraphene_1_1chain_1_1init__policy__visitor_1a45f589224ca6b77de23278ab62b0d83e" prot="public" virt="non-virtual"><scope>graphene::chain::init_policy_visitor</scope><name>result_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

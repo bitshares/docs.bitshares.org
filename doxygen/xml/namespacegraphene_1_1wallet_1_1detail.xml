@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacegraphene_1_1wallet_1_1detail" kind="namespace" language="C++">
+    <compoundname>graphene::wallet::detail</compoundname>
+    <innerclass refid="structgraphene_1_1wallet_1_1detail_1_1help__visitor" prot="public">graphene::wallet::detail::help_visitor</innerclass>
+    <innerclass refid="structgraphene_1_1wallet_1_1detail_1_1op__prototype__visitor" prot="public">graphene::wallet::detail::op_prototype_visitor</innerclass>
+    <innerclass refid="structgraphene_1_1wallet_1_1detail_1_1operation__printer" prot="public">graphene::wallet::detail::operation_printer</innerclass>
+    <innerclass refid="structgraphene_1_1wallet_1_1detail_1_1operation__result__printer" prot="public">graphene::wallet::detail::operation_result_printer</innerclass>
+    <innerclass refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl" prot="public">graphene::wallet::detail::wallet_api_impl</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacegraphene_1_1wallet_1_1detail_1a979ab353f66ec2473b4aa22897c4cfd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>optional&lt; T &gt;</type>
+        <definition>optional&lt;T&gt; graphene::wallet::detail::maybe_id</definition>
+        <argsstring>(const string &amp;name_or_id)</argsstring>
+        <name>maybe_id</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>name_or_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="129" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="129" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacegraphene_1_1wallet_1_1detail_1ab1919254d982c593f07ba455857a1cfc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string graphene::wallet::detail::address_to_shorthash</definition>
+        <argsstring>(const address &amp;addr)</argsstring>
+        <name>address_to_shorthash</name>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1address" kindref="compound">address</ref> &amp;</type>
+          <declname>addr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="144" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="144" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacegraphene_1_1wallet_1_1detail_1a4a5667631b1d056590750526a0912fc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>fc::ecc::private_key</type>
+        <definition>fc::ecc::private_key graphene::wallet::detail::derive_private_key</definition>
+        <argsstring>(const std::string &amp;prefix_string, int sequence_number)</argsstring>
+        <name>derive_private_key</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>prefix_string</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sequence_number</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="162" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="162" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacegraphene_1_1wallet_1_1detail_1ab0dc05ce8662a76f8608d0a7adca5013" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string graphene::wallet::detail::normalize_brain_key</definition>
+        <argsstring>(string s)</argsstring>
+        <name>normalize_brain_key</name>
+        <param>
+          <type>string</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="171" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="171" bodyend="226"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/wallet/api_documentation.cpp" line="30" column="1"/>
+  </compounddef>
+</doxygen>

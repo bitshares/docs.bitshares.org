@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1app_1_1network__broadcast__api_1_1transaction__confirmation" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::app::network_broadcast_api::transaction_confirmation</compoundname>
+    <includes refid="api_8hpp" local="no">api.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1app_1_1network__broadcast__api_1_1transaction__confirmation_1a29c7cc4e034c9cf708417135792736db" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1adc38ef0a36d8b8dfcef2cbbcacb6d1e8" kindref="member">transaction_id_type</ref></type>
+        <definition>transaction_id_type graphene::app::network_broadcast_api::transaction_confirmation::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/api.hpp" line="175" column="1" bodyfile="libraries/app/include/graphene/app/api.hpp" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1app_1_1network__broadcast__api_1_1transaction__confirmation_1a408d15e9cba4daf26519245b1d0c57d8" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t graphene::app::network_broadcast_api::transaction_confirmation::block_num</definition>
+        <argsstring></argsstring>
+        <name>block_num</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/api.hpp" line="176" column="1" bodyfile="libraries/app/include/graphene/app/api.hpp" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1app_1_1network__broadcast__api_1_1transaction__confirmation_1aa3f6b7380a51ff5356fade8c8bc3b52a" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t graphene::app::network_broadcast_api::transaction_confirmation::trx_num</definition>
+        <argsstring></argsstring>
+        <name>trx_num</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/api.hpp" line="177" column="1" bodyfile="libraries/app/include/graphene/app/api.hpp" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1app_1_1network__broadcast__api_1_1transaction__confirmation_1af0db052dc5b9c4768ae6416606637949" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1processed__transaction" kindref="compound">processed_transaction</ref></type>
+        <definition>processed_transaction graphene::app::network_broadcast_api::transaction_confirmation::trx</definition>
+        <argsstring></argsstring>
+        <name>trx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/api.hpp" line="178" column="1" bodyfile="libraries/app/include/graphene/app/api.hpp" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2693">
+        <label>time_point_sec</label>
+      </node>
+      <node id="2689">
+        <label>graphene::chain::processed_transaction</label>
+        <link refid="structgraphene_1_1chain_1_1processed__transaction"/>
+        <childnode refid="2690" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2696" relation="usage">
+          <edgelabel>operation_results</edgelabel>
+        </childnode>
+      </node>
+      <node id="2688">
+        <label>graphene::app::network_broadcast_api::transaction_confirmation</label>
+        <link refid="structgraphene_1_1app_1_1network__broadcast__api_1_1transaction__confirmation"/>
+        <childnode refid="2689" relation="usage">
+          <edgelabel>trx</edgelabel>
+        </childnode>
+      </node>
+      <node id="2692">
+        <label>flat_set&lt; future_extensions &gt;</label>
+      </node>
+      <node id="2695">
+        <label>vector&lt; signature_type &gt;</label>
+      </node>
+      <node id="2690">
+        <label>graphene::chain::signed_transaction</label>
+        <link refid="structgraphene_1_1chain_1_1signed__transaction"/>
+        <childnode refid="2691" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2695" relation="usage">
+          <edgelabel>signatures</edgelabel>
+        </childnode>
+      </node>
+      <node id="2694">
+        <label>vector&lt; operation &gt;</label>
+      </node>
+      <node id="2696">
+        <label>vector&lt; operation_result &gt;</label>
+      </node>
+      <node id="2691">
+        <label>graphene::chain::transaction</label>
+        <link refid="structgraphene_1_1chain_1_1transaction"/>
+        <childnode refid="2692" relation="usage">
+          <edgelabel>extensions</edgelabel>
+        </childnode>
+        <childnode refid="2693" relation="usage">
+          <edgelabel>expiration</edgelabel>
+        </childnode>
+        <childnode refid="2694" relation="usage">
+          <edgelabel>operations</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/app/include/graphene/app/api.hpp" line="174" column="1" bodyfile="libraries/app/include/graphene/app/api.hpp" bodystart="173" bodyend="179"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1app_1_1network__broadcast__api_1_1transaction__confirmation_1a408d15e9cba4daf26519245b1d0c57d8" prot="public" virt="non-virtual"><scope>graphene::app::network_broadcast_api::transaction_confirmation</scope><name>block_num</name></member>
+      <member refid="structgraphene_1_1app_1_1network__broadcast__api_1_1transaction__confirmation_1a29c7cc4e034c9cf708417135792736db" prot="public" virt="non-virtual"><scope>graphene::app::network_broadcast_api::transaction_confirmation</scope><name>id</name></member>
+      <member refid="structgraphene_1_1app_1_1network__broadcast__api_1_1transaction__confirmation_1af0db052dc5b9c4768ae6416606637949" prot="public" virt="non-virtual"><scope>graphene::app::network_broadcast_api::transaction_confirmation</scope><name>trx</name></member>
+      <member refid="structgraphene_1_1app_1_1network__broadcast__api_1_1transaction__confirmation_1aa3f6b7380a51ff5356fade8c8bc3b52a" prot="public" virt="non-virtual"><scope>graphene::app::network_broadcast_api::transaction_confirmation</scope><name>trx_num</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

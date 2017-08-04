@@ -1,0 +1,642 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgraphene_1_1chain_1_1account__object" kind="class" language="C++" prot="public">
+    <compoundname>graphene::chain::account_object</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">graphene::db::abstract_object&lt; account_object &gt;</basecompoundref>
+    <includes refid="account__object_8hpp" local="no">account_object.hpp</includes>
+      <sectiondef kind="user-defined">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__object_1a3e1bd4c318ce23cb83eb74c07af73af7" prot="public" static="no" mutable="no">
+        <type>set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt;</type>
+        <definition>set&lt;account_id_type&gt; graphene::chain::account_object::whitelisted_accounts</definition>
+        <argsstring></argsstring>
+        <name>whitelisted_accounts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Optionally track all of the accounts this account has whitelisted or blacklisted, these should be made Immutable so that when the account object is cloned no deep copy is required. This state is tracked for GUI display purposes.</para><para>TODO: move white list tracking to its own multi-index container rather than having 4 fields on an account. This will scale better because under the current design if you whitelist 2000 accounts, then every time someone fetches this account object they will get the full list of 2000 accounts. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="194" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__object_1a4be78ed6ac2d40a5e3cea18d907bf3e5" prot="public" static="no" mutable="no">
+        <type>set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt;</type>
+        <definition>set&lt;account_id_type&gt; graphene::chain::account_object::blacklisted_accounts</definition>
+        <argsstring></argsstring>
+        <name>blacklisted_accounts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="195" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classgraphene_1_1chain_1_1account__object_1adefb42cc7a11b805b98f8af1d0f8fdb4" prot="public" static="no">
+        <type><ref refid="structgraphene_1_1chain_1_1account__options" kindref="compound">account_options</ref></type>
+        <definition>typedef account_options graphene::chain::account_object::options_type</definition>
+        <argsstring></argsstring>
+        <name>options_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="169" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__object_1a0f562851b5dc2a4a7c2c28cc77658a53" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t graphene::chain::account_object::space_id</definition>
+        <argsstring></argsstring>
+        <name>space_id</name>
+        <initializer>= <ref refid="namespacegraphene_1_1chain_1a92e55d4242187696c5e2c5eaafbd9400a9dadbbe526b5096091138116c13d612d" kindref="member">protocol_ids</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="127" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__object_1a3b8ccd0b502307f382a3fb42c8ca8b76" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t graphene::chain::account_object::type_id</definition>
+        <argsstring></argsstring>
+        <name>type_id</name>
+        <initializer>= <ref refid="namespacegraphene_1_1chain_1aa6e32c79e2b22c998deddedcb696633da9a9e8ad687ba16618f0c4cd89fd3e3de" kindref="member">account_object_type</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="128" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__object_1a78c917dcdc4060163e7be0ae2348f301" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t graphene::chain::account_object::top_n_control_owner</definition>
+        <argsstring></argsstring>
+        <name>top_n_control_owner</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="220" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__object_1a2c020b43bc5610c258f423c373f4528e" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t graphene::chain::account_object::top_n_control_active</definition>
+        <argsstring></argsstring>
+        <name>top_n_control_active</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="221" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__object_1a901b57f630eaa3f077f8d29e317b70ed" prot="public" static="no" mutable="no">
+        <type>time_point_sec</type>
+        <definition>time_point_sec graphene::chain::account_object::membership_expiration_date</definition>
+        <argsstring></argsstring>
+        <name>membership_expiration_date</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The time at which this account&apos;s membership expires. If set to any time in the past, the account is a basic account. If set to time_point_sec::maximum(), the account is a lifetime member. If set to any time not in the past less than time_point_sec::maximum(), the account is an annual member.</para><para>See <ref refid="classgraphene_1_1chain_1_1account__object_1a297dd50b1672a4a97e2b50d42cfa5664" kindref="member">is_lifetime_member</ref>, <ref refid="classgraphene_1_1chain_1_1account__object_1a9da3633451253951b732df60422fedca" kindref="member">is_basic_account</ref>, <ref refid="classgraphene_1_1chain_1_1account__object_1a2c666ee5bfeb9263cfbfa1c161798c69" kindref="member">is_annual_member</ref>, and <ref refid="classgraphene_1_1chain_1_1account__object_1aa11e7440e6260e5a71e6f2dd62c22d85" kindref="member">is_member</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="138" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__object_1ae3e5ea3b236ea984eeaa49e9304361ce" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::account_object::registrar</definition>
+        <argsstring></argsstring>
+        <name>registrar</name>
+        <briefdescription>
+<para>The account that paid the fee to register this account. Receives a percentage of referral rewards. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="141" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__object_1a6ff595cad0456a433b37e30b966e9200" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::account_object::referrer</definition>
+        <argsstring></argsstring>
+        <name>referrer</name>
+        <briefdescription>
+<para>The account credited as referring this account. Receives a percentage of referral rewards. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="143" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__object_1a30f76968ef4c60fa570a0974f8417543" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::account_object::lifetime_referrer</definition>
+        <argsstring></argsstring>
+        <name>lifetime_referrer</name>
+        <briefdescription>
+<para>The lifetime member at the top of the referral tree. Receives a percentage of referral rewards. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="145" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__object_1a8300776bf9a3e29dbc55f078385f5ae2" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t graphene::chain::account_object::network_fee_percentage</definition>
+        <argsstring></argsstring>
+        <name>network_fee_percentage</name>
+        <initializer>= <ref refid="config_8hpp_1a04d434b39c86e609cc0de005f99f57c4" kindref="member">GRAPHENE_DEFAULT_NETWORK_PERCENT_OF_FEE</ref></initializer>
+        <briefdescription>
+<para>Percentage of fee which should go to network. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="148" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__object_1a740544ffa778d3f11fccd468bfb2e90e" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t graphene::chain::account_object::lifetime_referrer_fee_percentage</definition>
+        <argsstring></argsstring>
+        <name>lifetime_referrer_fee_percentage</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Percentage of fee which should go to lifetime referrer. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="150" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__object_1a9320e6656f81097554c1a9d51d50d5d5" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t graphene::chain::account_object::referrer_rewards_percentage</definition>
+        <argsstring></argsstring>
+        <name>referrer_rewards_percentage</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Percentage of referral rewards (leftover fee after paying network and lifetime referrer) which should go to referrer. The remainder of referral rewards goes to the registrar. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="153" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__object_1a9eeeba87995190284d93bd3d7fabc639" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string graphene::chain::account_object::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+<para>The account&apos;s name. This name must be unique among all account names on the graph. May not be empty. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="156" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__object_1ada7ca7476e6e2a03d061329089a5ae7a" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1authority" kindref="compound">authority</ref></type>
+        <definition>authority graphene::chain::account_object::owner</definition>
+        <argsstring></argsstring>
+        <name>owner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The owner authority represents absolute control over the account. Usually the keys in this authority will be kept in cold storage, as they should not be needed very often and compromise of these keys constitutes complete and irrevocable loss of the account. Generally the only time the owner authority is required is to update the active authority. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="164" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__object_1a79351f998d3b4fee35d07c168d469e3e" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1authority" kindref="compound">authority</ref></type>
+        <definition>authority graphene::chain::account_object::active</definition>
+        <argsstring></argsstring>
+        <name>active</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The owner authority contains the hot keys of the account. This authority has control over nearly all operations the account may perform. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="167" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__object_1ab15b79929ed63aba6deb911a0deb1b9a" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1account__options" kindref="compound">account_options</ref></type>
+        <definition>account_options graphene::chain::account_object::options</definition>
+        <argsstring></argsstring>
+        <name>options</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="170" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__object_1a5b9bfe461d65d269fb054e7e1dbe8b48" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1ab7bfd382b5c45b5e2c00965eb6b67efa" kindref="member">account_statistics_id_type</ref></type>
+        <definition>account_statistics_id_type graphene::chain::account_object::statistics</definition>
+        <argsstring></argsstring>
+        <name>statistics</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The reference implementation records the account&apos;s statistics in a separate object. This field contains the ID of that object. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="174" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__object_1ac624b05f17f24fbb67f66d5fa85814fa" prot="public" static="no" mutable="no">
+        <type>flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt;</type>
+        <definition>flat_set&lt;account_id_type&gt; graphene::chain::account_object::whitelisting_accounts</definition>
+        <argsstring></argsstring>
+        <name>whitelisting_accounts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is a set of all accounts which have &apos;whitelisted&apos; this account. Whitelisting is only used in core validation for the purpose of authorizing accounts to hold and transact in whitelisted assets. This account cannot update this set, except by transferring ownership of the account, which will clear it. Other accounts may add or remove their IDs from this set. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="182" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__object_1aa89c8709baa83afd446a8314179b100e" prot="public" static="no" mutable="no">
+        <type>flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt;</type>
+        <definition>flat_set&lt;account_id_type&gt; graphene::chain::account_object::blacklisting_accounts</definition>
+        <argsstring></argsstring>
+        <name>blacklisting_accounts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is a set of all accounts which have &apos;blacklisted&apos; this account. Blacklisting is only used in core validation for the purpose of forbidding accounts from holding and transacting in whitelisted assets. This account cannot update this set, and it will be preserved even if the account is transferred. Other accounts may add or remove their IDs from this set. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="205" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__object_1a3b37b7a13d7ac82f5fae1f903cb12063" prot="public" static="no" mutable="no">
+        <type>optional&lt; <ref refid="namespacegraphene_1_1chain_1a3c7832a7fb78912c0bd3b8b50a19c3f1" kindref="member">vesting_balance_id_type</ref> &gt;</type>
+        <definition>optional&lt;vesting_balance_id_type&gt; graphene::chain::account_object::cashback_vb</definition>
+        <argsstring></argsstring>
+        <name>cashback_vb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Vesting balance which receives cashback_reward deposits. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="210" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__object_1adabd5026637a5adc416eb8a45371921c" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1acf64b783a57a0845a3d1882c98b6d345" kindref="member">special_authority</ref></type>
+        <definition>special_authority graphene::chain::account_object::owner_special_authority</definition>
+        <argsstring></argsstring>
+        <name>owner_special_authority</name>
+        <initializer>= <ref refid="structgraphene_1_1chain_1_1no__special__authority" kindref="compound">no_special_authority</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="212" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__object_1aa134b581b350df4dbb372884455d8813" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1acf64b783a57a0845a3d1882c98b6d345" kindref="member">special_authority</ref></type>
+        <definition>special_authority graphene::chain::account_object::active_special_authority</definition>
+        <argsstring></argsstring>
+        <name>active_special_authority</name>
+        <initializer>= <ref refid="structgraphene_1_1chain_1_1no__special__authority" kindref="compound">no_special_authority</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="213" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__object_1a657d9d5d3206edc25b7a9790ad277abc" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t graphene::chain::account_object::top_n_control_flags</definition>
+        <argsstring></argsstring>
+        <name>top_n_control_flags</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This flag is set when the top_n logic sets both authorities, and gets reset when authority or special_authority is set. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="219" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__object_1a59356089d7ecad86e4ccacdd495da699" prot="public" static="no" mutable="no">
+        <type>optional&lt; flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref> &gt; &gt;</type>
+        <definition>optional&lt; flat_set&lt;asset_id_type&gt; &gt; graphene::chain::account_object::allowed_assets</definition>
+        <argsstring></argsstring>
+        <name>allowed_assets</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This is a set of assets which the account is allowed to have. This is utilized to restrict buyback accounts to the assets that trade in their markets. In the future we may expand this to allow accounts to e.g. voluntarily restrict incoming transfers. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="228" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1account__object_1a01cd90355b340dd46817f917155750d9" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::account_object::has_special_authority</definition>
+        <argsstring>() const</argsstring>
+        <name>has_special_authority</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="230" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="230" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1account__object_1aca4f45e72c944f9920d85ead4201c827" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename DB</type>
+          </param>
+        </templateparamlist>
+        <type>const <ref refid="classgraphene_1_1chain_1_1vesting__balance__object" kindref="compound">vesting_balance_object</ref> &amp;</type>
+        <definition>const vesting_balance_object&amp; graphene::chain::account_object::cashback_balance</definition>
+        <argsstring>(const DB &amp;db) const</argsstring>
+        <name>cashback_balance</name>
+        <param>
+          <type>const DB &amp;</type>
+          <declname>db</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="237" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="237" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1account__object_1a297dd50b1672a4a97e2b50d42cfa5664" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::account_object::is_lifetime_member</definition>
+        <argsstring>() const</argsstring>
+        <name>is_lifetime_member</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if this is a lifetime member account; false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="244" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="244" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1account__object_1a9da3633451253951b732df60422fedca" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::account_object::is_basic_account</definition>
+        <argsstring>(time_point_sec now) const</argsstring>
+        <name>is_basic_account</name>
+        <param>
+          <type>time_point_sec</type>
+          <declname>now</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if this is a basic account; false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="249" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="249" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1account__object_1a2c666ee5bfeb9263cfbfa1c161798c69" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::account_object::is_annual_member</definition>
+        <argsstring>(time_point_sec now) const</argsstring>
+        <name>is_annual_member</name>
+        <param>
+          <type>time_point_sec</type>
+          <declname>now</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if the account is an unexpired annual member; false otherwise. </para></simplesect>
+<simplesect kind="note"><para>This method will return false for lifetime members. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="255" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="255" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1account__object_1aa11e7440e6260e5a71e6f2dd62c22d85" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::account_object::is_member</definition>
+        <argsstring>(time_point_sec now) const</argsstring>
+        <name>is_member</name>
+        <param>
+          <type>time_point_sec</type>
+          <declname>now</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if the account is an annual or lifetime member; false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="260" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="260" bodyend="263"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1account__object_1a2a07de0cc9ffd5af2d23156767d61bf7" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::account_object::get_id</definition>
+        <argsstring>() const</argsstring>
+        <name>get_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="265" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="265" bodyend="265"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class represents an account on the object graph</para><para>Accounts are the primary unit of authority on the graphene system. Users must have an account in order to use assets, trade in the markets, vote for committee_members, etc. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="89">
+        <label>graphene::chain::account_object</label>
+        <link refid="classgraphene_1_1chain_1_1account__object"/>
+        <childnode refid="90" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="90">
+        <label>graphene::db::abstract_object&lt; account_object &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="104">
+        <label>time_point_sec</label>
+      </node>
+      <node id="95">
+        <label>optional&lt; vesting_balance_id_type &gt;</label>
+      </node>
+      <node id="103">
+        <label>flat_map&lt; graphene::chain::address, weight_type &gt;</label>
+      </node>
+      <node id="105">
+        <label>string</label>
+      </node>
+      <node id="97">
+        <label>flat_set&lt; future_extensions &gt;</label>
+      </node>
+      <node id="99">
+        <label>graphene::chain::public_key_type</label>
+        <link refid="structgraphene_1_1chain_1_1public__key__type"/>
+      </node>
+      <node id="91">
+        <label>graphene::chain::account_object</label>
+        <link refid="classgraphene_1_1chain_1_1account__object"/>
+        <childnode refid="92" relation="public-inheritance">
+        </childnode>
+        <childnode refid="93" relation="usage">
+          <edgelabel>allowed_assets</edgelabel>
+        </childnode>
+        <childnode refid="94" relation="usage">
+          <edgelabel>owner_special_authority</edgelabel>
+          <edgelabel>active_special_authority</edgelabel>
+        </childnode>
+        <childnode refid="95" relation="usage">
+          <edgelabel>cashback_vb</edgelabel>
+        </childnode>
+        <childnode refid="96" relation="usage">
+          <edgelabel>options</edgelabel>
+        </childnode>
+        <childnode refid="100" relation="usage">
+          <edgelabel>active</edgelabel>
+          <edgelabel>owner</edgelabel>
+        </childnode>
+        <childnode refid="104" relation="usage">
+          <edgelabel>membership_expiration_date</edgelabel>
+        </childnode>
+        <childnode refid="105" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+        <childnode refid="106" relation="usage">
+          <edgelabel>whitelisted_accounts</edgelabel>
+          <edgelabel>blacklisted_accounts</edgelabel>
+        </childnode>
+        <childnode refid="107" relation="usage">
+          <edgelabel>whitelisting_accounts</edgelabel>
+          <edgelabel>blacklisting_accounts</edgelabel>
+        </childnode>
+      </node>
+      <node id="106">
+        <label>set&lt; account_id_type &gt;</label>
+      </node>
+      <node id="92">
+        <label>graphene::db::abstract_object&lt; account_object &gt;</label>
+      </node>
+      <node id="107">
+        <label>flat_set&lt; account_id_type &gt;</label>
+      </node>
+      <node id="98">
+        <label>flat_set&lt; graphene::chain::vote_id_type &gt;</label>
+      </node>
+      <node id="100">
+        <label>graphene::chain::authority</label>
+        <link refid="structgraphene_1_1chain_1_1authority"/>
+        <childnode refid="101" relation="usage">
+          <edgelabel>key_auths</edgelabel>
+        </childnode>
+        <childnode refid="102" relation="usage">
+          <edgelabel>account_auths</edgelabel>
+        </childnode>
+        <childnode refid="103" relation="usage">
+          <edgelabel>address_auths</edgelabel>
+        </childnode>
+      </node>
+      <node id="94">
+        <label>static_variant&lt; no_special_authority, top_holders_special_authority &gt;</label>
+      </node>
+      <node id="101">
+        <label>flat_map&lt; graphene::chain::public_key_type, weight_type &gt;</label>
+      </node>
+      <node id="96">
+        <label>graphene::chain::account_options</label>
+        <link refid="structgraphene_1_1chain_1_1account__options"/>
+        <childnode refid="97" relation="usage">
+          <edgelabel>extensions</edgelabel>
+        </childnode>
+        <childnode refid="98" relation="usage">
+          <edgelabel>votes</edgelabel>
+        </childnode>
+        <childnode refid="99" relation="usage">
+          <edgelabel>memo_key</edgelabel>
+        </childnode>
+      </node>
+      <node id="93">
+        <label>optional&lt; flat_set&lt; asset_id_type &gt; &gt;</label>
+      </node>
+      <node id="102">
+        <label>flat_map&lt; account_id_type, weight_type &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="125" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="124" bodyend="266"/>
+    <listofallmembers>
+      <member refid="classgraphene_1_1chain_1_1account__object_1a79351f998d3b4fee35d07c168d469e3e" prot="public" virt="non-virtual"><scope>graphene::chain::account_object</scope><name>active</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__object_1aa134b581b350df4dbb372884455d8813" prot="public" virt="non-virtual"><scope>graphene::chain::account_object</scope><name>active_special_authority</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__object_1a59356089d7ecad86e4ccacdd495da699" prot="public" virt="non-virtual"><scope>graphene::chain::account_object</scope><name>allowed_assets</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__object_1a4be78ed6ac2d40a5e3cea18d907bf3e5" prot="public" virt="non-virtual"><scope>graphene::chain::account_object</scope><name>blacklisted_accounts</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__object_1aa89c8709baa83afd446a8314179b100e" prot="public" virt="non-virtual"><scope>graphene::chain::account_object</scope><name>blacklisting_accounts</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__object_1aca4f45e72c944f9920d85ead4201c827" prot="public" virt="non-virtual"><scope>graphene::chain::account_object</scope><name>cashback_balance</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__object_1a3b37b7a13d7ac82f5fae1f903cb12063" prot="public" virt="non-virtual"><scope>graphene::chain::account_object</scope><name>cashback_vb</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__object_1a2a07de0cc9ffd5af2d23156767d61bf7" prot="public" virt="non-virtual"><scope>graphene::chain::account_object</scope><name>get_id</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__object_1a01cd90355b340dd46817f917155750d9" prot="public" virt="non-virtual"><scope>graphene::chain::account_object</scope><name>has_special_authority</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__object_1a2c666ee5bfeb9263cfbfa1c161798c69" prot="public" virt="non-virtual"><scope>graphene::chain::account_object</scope><name>is_annual_member</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__object_1a9da3633451253951b732df60422fedca" prot="public" virt="non-virtual"><scope>graphene::chain::account_object</scope><name>is_basic_account</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__object_1a297dd50b1672a4a97e2b50d42cfa5664" prot="public" virt="non-virtual"><scope>graphene::chain::account_object</scope><name>is_lifetime_member</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__object_1aa11e7440e6260e5a71e6f2dd62c22d85" prot="public" virt="non-virtual"><scope>graphene::chain::account_object</scope><name>is_member</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__object_1a30f76968ef4c60fa570a0974f8417543" prot="public" virt="non-virtual"><scope>graphene::chain::account_object</scope><name>lifetime_referrer</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__object_1a740544ffa778d3f11fccd468bfb2e90e" prot="public" virt="non-virtual"><scope>graphene::chain::account_object</scope><name>lifetime_referrer_fee_percentage</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__object_1a901b57f630eaa3f077f8d29e317b70ed" prot="public" virt="non-virtual"><scope>graphene::chain::account_object</scope><name>membership_expiration_date</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__object_1a9eeeba87995190284d93bd3d7fabc639" prot="public" virt="non-virtual"><scope>graphene::chain::account_object</scope><name>name</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__object_1a8300776bf9a3e29dbc55f078385f5ae2" prot="public" virt="non-virtual"><scope>graphene::chain::account_object</scope><name>network_fee_percentage</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__object_1ab15b79929ed63aba6deb911a0deb1b9a" prot="public" virt="non-virtual"><scope>graphene::chain::account_object</scope><name>options</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__object_1adefb42cc7a11b805b98f8af1d0f8fdb4" prot="public" virt="non-virtual"><scope>graphene::chain::account_object</scope><name>options_type</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__object_1ada7ca7476e6e2a03d061329089a5ae7a" prot="public" virt="non-virtual"><scope>graphene::chain::account_object</scope><name>owner</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__object_1adabd5026637a5adc416eb8a45371921c" prot="public" virt="non-virtual"><scope>graphene::chain::account_object</scope><name>owner_special_authority</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__object_1a6ff595cad0456a433b37e30b966e9200" prot="public" virt="non-virtual"><scope>graphene::chain::account_object</scope><name>referrer</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__object_1a9320e6656f81097554c1a9d51d50d5d5" prot="public" virt="non-virtual"><scope>graphene::chain::account_object</scope><name>referrer_rewards_percentage</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__object_1ae3e5ea3b236ea984eeaa49e9304361ce" prot="public" virt="non-virtual"><scope>graphene::chain::account_object</scope><name>registrar</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__object_1a0f562851b5dc2a4a7c2c28cc77658a53" prot="public" virt="non-virtual"><scope>graphene::chain::account_object</scope><name>space_id</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__object_1a5b9bfe461d65d269fb054e7e1dbe8b48" prot="public" virt="non-virtual"><scope>graphene::chain::account_object</scope><name>statistics</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__object_1a2c020b43bc5610c258f423c373f4528e" prot="public" virt="non-virtual"><scope>graphene::chain::account_object</scope><name>top_n_control_active</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__object_1a657d9d5d3206edc25b7a9790ad277abc" prot="public" virt="non-virtual"><scope>graphene::chain::account_object</scope><name>top_n_control_flags</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__object_1a78c917dcdc4060163e7be0ae2348f301" prot="public" virt="non-virtual"><scope>graphene::chain::account_object</scope><name>top_n_control_owner</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__object_1a3b8ccd0b502307f382a3fb42c8ca8b76" prot="public" virt="non-virtual"><scope>graphene::chain::account_object</scope><name>type_id</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__object_1a3e1bd4c318ce23cb83eb74c07af73af7" prot="public" virt="non-virtual"><scope>graphene::chain::account_object</scope><name>whitelisted_accounts</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__object_1ac624b05f17f24fbb67f66d5fa85814fa" prot="public" virt="non-virtual"><scope>graphene::chain::account_object</scope><name>whitelisting_accounts</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1666 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgraphene_1_1app_1_1database__api__impl" kind="class" language="C++" prot="public">
+    <compoundname>graphene::app::database_api_impl</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::enable_shared_from_this&lt; database_api_impl &gt;</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1app_1_1database__api__impl_1a44bb83df538540ec0d969c739f28c589" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool graphene::app::database_api_impl::_notify_remove_create</definition>
+        <argsstring></argsstring>
+        <name>_notify_remove_create</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="204" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1app_1_1database__api__impl_1add7a21998f28a6c4aea41006eb1ff022" prot="public" static="no" mutable="yes">
+        <type>fc::bloom_filter</type>
+        <definition>fc::bloom_filter graphene::app::database_api_impl::_subscribe_filter</definition>
+        <argsstring></argsstring>
+        <name>_subscribe_filter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="205" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1app_1_1database__api__impl_1acab1dea5c17660083df33c2bddc204e2" prot="public" static="no" mutable="no">
+        <type>std::set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt;</type>
+        <definition>std::set&lt;account_id_type&gt; graphene::app::database_api_impl::_subscribed_accounts</definition>
+        <argsstring></argsstring>
+        <name>_subscribed_accounts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="206" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1app_1_1database__api__impl_1af716153167cbb37816d69a69cd8391ee" prot="public" static="no" mutable="no">
+        <type>std::function&lt; void(const fc::variant &amp;)&gt;</type>
+        <definition>std::function&lt;void(const fc::variant&amp;)&gt; graphene::app::database_api_impl::_subscribe_callback</definition>
+        <argsstring></argsstring>
+        <name>_subscribe_callback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="207" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1app_1_1database__api__impl_1adfbd822d409be041227ec58c94f95db8" prot="public" static="no" mutable="no">
+        <type>std::function&lt; void(const fc::variant &amp;)&gt;</type>
+        <definition>std::function&lt;void(const fc::variant&amp;)&gt; graphene::app::database_api_impl::_pending_trx_callback</definition>
+        <argsstring></argsstring>
+        <name>_pending_trx_callback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="208" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1app_1_1database__api__impl_1a79f338b26855b0a580f74e47e0600758" prot="public" static="no" mutable="no">
+        <type>std::function&lt; void(const fc::variant &amp;)&gt;</type>
+        <definition>std::function&lt;void(const fc::variant&amp;)&gt; graphene::app::database_api_impl::_block_applied_callback</definition>
+        <argsstring></argsstring>
+        <name>_block_applied_callback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="209" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1app_1_1database__api__impl_1ae432b4993936147dcd5e8ac87bc087eb" prot="public" static="no" mutable="no">
+        <type>boost::signals2::scoped_connection</type>
+        <definition>boost::signals2::scoped_connection graphene::app::database_api_impl::_new_connection</definition>
+        <argsstring></argsstring>
+        <name>_new_connection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="211" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1app_1_1database__api__impl_1a08837ce80550808d16dc34e85258f40f" prot="public" static="no" mutable="no">
+        <type>boost::signals2::scoped_connection</type>
+        <definition>boost::signals2::scoped_connection graphene::app::database_api_impl::_change_connection</definition>
+        <argsstring></argsstring>
+        <name>_change_connection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="212" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1app_1_1database__api__impl_1a499df6660549b1f8b430a8c4a612c72e" prot="public" static="no" mutable="no">
+        <type>boost::signals2::scoped_connection</type>
+        <definition>boost::signals2::scoped_connection graphene::app::database_api_impl::_removed_connection</definition>
+        <argsstring></argsstring>
+        <name>_removed_connection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="213" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1app_1_1database__api__impl_1a3986f9637134d0f91d711c7ff4df7189" prot="public" static="no" mutable="no">
+        <type>boost::signals2::scoped_connection</type>
+        <definition>boost::signals2::scoped_connection graphene::app::database_api_impl::_applied_block_connection</definition>
+        <argsstring></argsstring>
+        <name>_applied_block_connection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="214" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1app_1_1database__api__impl_1a3a55e04699d428f42c9a69672d488105" prot="public" static="no" mutable="no">
+        <type>boost::signals2::scoped_connection</type>
+        <definition>boost::signals2::scoped_connection graphene::app::database_api_impl::_pending_trx_connection</definition>
+        <argsstring></argsstring>
+        <name>_pending_trx_connection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="215" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1app_1_1database__api__impl_1a466336fd22c476e6b2e0b4e52ef6dce5" prot="public" static="no" mutable="no">
+        <type>map&lt; pair&lt; <ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref>, <ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref> &gt;, std::function&lt; void(const variant &amp;)&gt; &gt;</type>
+        <definition>map&lt; pair&lt;asset_id_type,asset_id_type&gt;, std::function&lt;void(const variant&amp;)&gt; &gt; graphene::app::database_api_impl::_market_subscriptions</definition>
+        <argsstring></argsstring>
+        <name>_market_subscriptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="216" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1app_1_1database__api__impl_1a1da4ab9154f9a30bae71e183b202d1e1" prot="public" static="no" mutable="no">
+        <type><ref refid="classgraphene_1_1chain_1_1database" kindref="compound">graphene::chain::database</ref> &amp;</type>
+        <definition>graphene::chain::database&amp; graphene::app::database_api_impl::_db</definition>
+        <argsstring></argsstring>
+        <name>_db</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="217" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a355bb4389930fa264bc89972af2b3f33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>graphene::app::database_api_impl::database_api_impl</definition>
+        <argsstring>(graphene::chain::database &amp;db)</argsstring>
+        <name>database_api_impl</name>
+        <param>
+          <type><ref refid="classgraphene_1_1chain_1_1database" kindref="compound">graphene::chain::database</ref> &amp;</type>
+          <declname>db</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="54" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="231" bodyend="248"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a89f8d316670134c3faa5fb07032603cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>graphene::app::database_api_impl::~database_api_impl</definition>
+        <argsstring>()</argsstring>
+        <name>~database_api_impl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="55" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="250" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a35d27f0797bd1aef6068f07ef8ddbda9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>fc::variants</type>
+        <definition>fc::variants graphene::app::database_api_impl::get_objects</definition>
+        <argsstring>(const vector&lt; object_id_type &gt; &amp;ids) const</argsstring>
+        <name>get_objects</name>
+        <param>
+          <type>const vector&lt; object_id_type &gt; &amp;</type>
+          <declname>ids</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="58" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="266" bodyend="289"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a9efad1951dada7a463e304d5ade154ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::database_api_impl::set_subscribe_callback</definition>
+        <argsstring>(std::function&lt; void(const variant &amp;)&gt; cb, bool notify_remove_create)</argsstring>
+        <name>set_subscribe_callback</name>
+        <param>
+          <type>std::function&lt; void(const variant &amp;)&gt;</type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>notify_remove_create</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="61" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="302" bodyend="315"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a0ab92833cf9e6fa7b6a6b7472b2f36a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::database_api_impl::set_pending_transaction_callback</definition>
+        <argsstring>(std::function&lt; void(const variant &amp;)&gt; cb)</argsstring>
+        <name>set_pending_transaction_callback</name>
+        <param>
+          <type>std::function&lt; void(const variant &amp;)&gt;</type>
+          <declname>cb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="62" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="322" bodyend="325"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1aaa7ad36ef0da4021fc4dea51449014bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::database_api_impl::set_block_applied_callback</definition>
+        <argsstring>(std::function&lt; void(const variant &amp;block_id)&gt; cb)</argsstring>
+        <name>set_block_applied_callback</name>
+        <param>
+          <type>std::function&lt; void(const variant &amp;block_id)&gt;</type>
+          <declname>cb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="63" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="332" bodyend="335"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a651bbd731744ded8d9114977a1f0e305" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::database_api_impl::cancel_all_subscriptions</definition>
+        <argsstring>()</argsstring>
+        <name>cancel_all_subscriptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="64" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="342" bodyend="346"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a1904524494af58def0aadbb5dd3d472e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>optional&lt; <ref refid="structgraphene_1_1chain_1_1block__header" kindref="compound">block_header</ref> &gt;</type>
+        <definition>optional&lt; block_header &gt; graphene::app::database_api_impl::get_block_header</definition>
+        <argsstring>(uint32_t block_num) const</argsstring>
+        <name>get_block_header</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>block_num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="67" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="359" bodyend="365"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1aeb1446219a34d5f1a821b96bf6323541" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>map&lt; uint32_t, optional&lt; <ref refid="structgraphene_1_1chain_1_1block__header" kindref="compound">block_header</ref> &gt; &gt;</type>
+        <definition>map&lt; uint32_t, optional&lt; block_header &gt; &gt; graphene::app::database_api_impl::get_block_header_batch</definition>
+        <argsstring>(const vector&lt; uint32_t &gt; block_nums) const</argsstring>
+        <name>get_block_header_batch</name>
+        <param>
+          <type>const vector&lt; uint32_t &gt;</type>
+          <declname>block_nums</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="68" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="371" bodyend="379"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1ac58de247b5e405af56821a0d70f0770e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>optional&lt; <ref refid="structgraphene_1_1chain_1_1signed__block" kindref="compound">signed_block</ref> &gt;</type>
+        <definition>optional&lt; signed_block &gt; graphene::app::database_api_impl::get_block</definition>
+        <argsstring>(uint32_t block_num) const</argsstring>
+        <name>get_block</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>block_num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="69" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="386" bodyend="389"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a93356646b379ee79ad8700e7d6a93b22" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1processed__transaction" kindref="compound">processed_transaction</ref></type>
+        <definition>processed_transaction graphene::app::database_api_impl::get_transaction</definition>
+        <argsstring>(uint32_t block_num, uint32_t trx_in_block) const</argsstring>
+        <name>get_transaction</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>block_num</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>trx_in_block</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="70" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="405" bodyend="411"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a12ce279b022e8ded590aaf2764f24b17" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgraphene_1_1chain_1_1chain__property__object" kindref="compound">chain_property_object</ref></type>
+        <definition>chain_property_object graphene::app::database_api_impl::get_chain_properties</definition>
+        <argsstring>() const</argsstring>
+        <name>get_chain_properties</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="73" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="424" bodyend="427"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a5ec39c51451ddba8fe390c0a174cdf3c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgraphene_1_1chain_1_1global__property__object" kindref="compound">global_property_object</ref></type>
+        <definition>global_property_object graphene::app::database_api_impl::get_global_properties</definition>
+        <argsstring>() const</argsstring>
+        <name>get_global_properties</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="74" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="434" bodyend="437"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a388576d4612e9d7b36511d0431c20f7c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>fc::variant_object</type>
+        <definition>fc::variant_object graphene::app::database_api_impl::get_config</definition>
+        <argsstring>() const</argsstring>
+        <name>get_config</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="75" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="444" bodyend="447"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1aac4b96fb3bb2446ebde410fa6a12fcc3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1a8182991954496b517776f06844cf2d93" kindref="member">chain_id_type</ref></type>
+        <definition>chain_id_type graphene::app::database_api_impl::get_chain_id</definition>
+        <argsstring>() const</argsstring>
+        <name>get_chain_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="76" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="454" bodyend="457"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a7d3a09112fe43b55cdb70c9654d6d9be" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgraphene_1_1chain_1_1dynamic__global__property__object" kindref="compound">dynamic_global_property_object</ref></type>
+        <definition>dynamic_global_property_object graphene::app::database_api_impl::get_dynamic_global_properties</definition>
+        <argsstring>() const</argsstring>
+        <name>get_dynamic_global_properties</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="77" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="464" bodyend="467"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a752958134298f4bd079913b70228775c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; vector&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt; &gt;</type>
+        <definition>vector&lt; vector&lt; account_id_type &gt; &gt; graphene::app::database_api_impl::get_key_references</definition>
+        <argsstring>(vector&lt; public_key_type &gt; key) const</argsstring>
+        <name>get_key_references</name>
+        <param>
+          <type>vector&lt; <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref> &gt;</type>
+          <declname>key</declname>
+          <defname>keys</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>all accounts that referr to the key or account id in their owner or active authorities. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="80" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="483" bodyend="537"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a80b46160a2181f5aa8cd3af6718793d2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::app::database_api_impl::is_public_key_registered</definition>
+        <argsstring>(string public_key) const</argsstring>
+        <name>is_public_key_registered</name>
+        <param>
+          <type>string</type>
+          <declname>public_key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="81" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="544" bodyend="566"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a79da23f67f227aa44a5af733f73bebea" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; optional&lt; <ref refid="classgraphene_1_1chain_1_1account__object" kindref="compound">account_object</ref> &gt; &gt;</type>
+        <definition>vector&lt; optional&lt; account_object &gt; &gt; graphene::app::database_api_impl::get_accounts</definition>
+        <argsstring>(const vector&lt; account_id_type &gt; &amp;account_ids) const</argsstring>
+        <name>get_accounts</name>
+        <param>
+          <type>const vector&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt; &amp;</type>
+          <declname>account_ids</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="84" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="579" bodyend="592"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a620af88817e6a90642a61aea5c1e4a3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::map&lt; string, <ref refid="structgraphene_1_1app_1_1full__account" kindref="compound">full_account</ref> &gt;</type>
+        <definition>std::map&lt; std::string, full_account &gt; graphene::app::database_api_impl::get_full_accounts</definition>
+        <argsstring>(const vector&lt; string &gt; &amp;names_or_ids, bool subscribe)</argsstring>
+        <name>get_full_accounts</name>
+        <param>
+          <type>const vector&lt; string &gt; &amp;</type>
+          <declname>names_or_ids</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>subscribe</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="85" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="599" bodyend="708"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a091be4e3a512dd7b83a19c58632ad19b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>optional&lt; <ref refid="classgraphene_1_1chain_1_1account__object" kindref="compound">account_object</ref> &gt;</type>
+        <definition>optional&lt; account_object &gt; graphene::app::database_api_impl::get_account_by_name</definition>
+        <argsstring>(string name) const</argsstring>
+        <name>get_account_by_name</name>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="86" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="715" bodyend="722"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a0b0f8ce28a85279a3c4bb4297484c8ab" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt;</type>
+        <definition>vector&lt; account_id_type &gt; graphene::app::database_api_impl::get_account_references</definition>
+        <argsstring>(account_id_type account_id) const</argsstring>
+        <name>get_account_references</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+          <declname>account_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="87" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="729" bodyend="743"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1ac248983aae44dc9b647cdb801c6691f0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; optional&lt; <ref refid="classgraphene_1_1chain_1_1account__object" kindref="compound">account_object</ref> &gt; &gt;</type>
+        <definition>vector&lt; optional&lt; account_object &gt; &gt; graphene::app::database_api_impl::lookup_account_names</definition>
+        <argsstring>(const vector&lt; string &gt; &amp;account_names) const</argsstring>
+        <name>lookup_account_names</name>
+        <param>
+          <type>const vector&lt; string &gt; &amp;</type>
+          <declname>account_names</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="88" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="750" bodyend="761"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1abd450a9eb1eebb97292c239f213bf4e1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>map&lt; string, <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt;</type>
+        <definition>map&lt; string, account_id_type &gt; graphene::app::database_api_impl::lookup_accounts</definition>
+        <argsstring>(const string &amp;lower_bound_name, uint32_t limit) const</argsstring>
+        <name>lookup_accounts</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>lower_bound_name</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>limit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="89" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="768" bodyend="784"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a838b2ae1c363d6db501483636ec5222e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t graphene::app::database_api_impl::get_account_count</definition>
+        <argsstring>() const</argsstring>
+        <name>get_account_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="90" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="791" bodyend="794"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a3e736db73934fa83d65275e5d6244810" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref> &gt;</type>
+        <definition>vector&lt; asset &gt; graphene::app::database_api_impl::get_account_balances</definition>
+        <argsstring>(account_id_type id, const flat_set&lt; asset_id_type &gt; &amp;assets) const</argsstring>
+        <name>get_account_balances</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref> &gt; &amp;</type>
+          <declname>assets</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="93" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="807" bodyend="827"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a40cfbe6defd213ba7fc45969afc8cb99" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref> &gt;</type>
+        <definition>vector&lt; asset &gt; graphene::app::database_api_impl::get_named_account_balances</definition>
+        <argsstring>(const std::string &amp;name, const flat_set&lt; asset_id_type &gt; &amp;assets) const</argsstring>
+        <name>get_named_account_balances</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref> &gt; &amp;</type>
+          <declname>assets</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="94" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="834" bodyend="840"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1aef3840cb3c44793c9581f2ccc52bc33e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="classgraphene_1_1chain_1_1balance__object" kindref="compound">balance_object</ref> &gt;</type>
+        <definition>vector&lt; balance_object &gt; graphene::app::database_api_impl::get_balance_objects</definition>
+        <argsstring>(const vector&lt; address &gt; &amp;addrs) const</argsstring>
+        <name>get_balance_objects</name>
+        <param>
+          <type>const vector&lt; <ref refid="classgraphene_1_1chain_1_1address" kindref="compound">address</ref> &gt; &amp;</type>
+          <declname>addrs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="95" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="847" bodyend="869"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a6b2bdaaf14efcd053f6e21c0d33f1661" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref> &gt;</type>
+        <definition>vector&lt; asset &gt; graphene::app::database_api_impl::get_vested_balances</definition>
+        <argsstring>(const vector&lt; balance_id_type &gt; &amp;objs) const</argsstring>
+        <name>get_vested_balances</name>
+        <param>
+          <type>const vector&lt; <ref refid="namespacegraphene_1_1chain_1acd20e3f4b4f9cb5d8112cf5d97b3e259" kindref="member">balance_id_type</ref> &gt; &amp;</type>
+          <declname>objs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="96" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="876" bodyend="887"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1ae3e74e1299aa8339fd54a467a5cc2560" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="classgraphene_1_1chain_1_1vesting__balance__object" kindref="compound">vesting_balance_object</ref> &gt;</type>
+        <definition>vector&lt; vesting_balance_object &gt; graphene::app::database_api_impl::get_vesting_balances</definition>
+        <argsstring>(account_id_type account_id) const</argsstring>
+        <name>get_vesting_balances</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+          <declname>account_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="97" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="894" bodyend="907"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a45645a26a94cb9d5d0f28da737496667" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; optional&lt; <ref refid="classgraphene_1_1chain_1_1asset__object" kindref="compound">asset_object</ref> &gt; &gt;</type>
+        <definition>vector&lt; optional&lt; asset_object &gt; &gt; graphene::app::database_api_impl::get_assets</definition>
+        <argsstring>(const vector&lt; asset_id_type &gt; &amp;asset_ids) const</argsstring>
+        <name>get_assets</name>
+        <param>
+          <type>const vector&lt; <ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref> &gt; &amp;</type>
+          <declname>asset_ids</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="100" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="920" bodyend="933"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1ab005774a3ebf00782722d26f60ec06ca" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="classgraphene_1_1chain_1_1asset__object" kindref="compound">asset_object</ref> &gt;</type>
+        <definition>vector&lt; asset_object &gt; graphene::app::database_api_impl::list_assets</definition>
+        <argsstring>(const string &amp;lower_bound_symbol, uint32_t limit) const</argsstring>
+        <name>list_assets</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>lower_bound_symbol</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>limit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="101" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="940" bodyend="956"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a08af3327c36bc05d51cee4db198ea780" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; optional&lt; <ref refid="classgraphene_1_1chain_1_1asset__object" kindref="compound">asset_object</ref> &gt; &gt;</type>
+        <definition>vector&lt; optional&lt; asset_object &gt; &gt; graphene::app::database_api_impl::lookup_asset_symbols</definition>
+        <argsstring>(const vector&lt; string &gt; &amp;symbols_or_ids) const</argsstring>
+        <name>lookup_asset_symbols</name>
+        <param>
+          <type>const vector&lt; string &gt; &amp;</type>
+          <declname>symbols_or_ids</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="102" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="963" bodyend="979"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a61d17187a587ee10b086c57b5693ab86" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="classgraphene_1_1chain_1_1limit__order__object" kindref="compound">limit_order_object</ref> &gt;</type>
+        <definition>vector&lt; limit_order_object &gt; graphene::app::database_api_impl::get_limit_orders</definition>
+        <argsstring>(asset_id_type a, asset_id_type b, uint32_t limit) const</argsstring>
+        <name>get_limit_orders</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref></type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>limit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the limit orders for both sides of the book for the two assets specified up to limit number on each side. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="105" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="995" bodyend="1022"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a53aa15996c5a27d3b258d50fa78f2d6f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="classgraphene_1_1chain_1_1call__order__object" kindref="compound">call_order_object</ref> &gt;</type>
+        <definition>vector&lt; call_order_object &gt; graphene::app::database_api_impl::get_call_orders</definition>
+        <argsstring>(asset_id_type a, uint32_t limit) const</argsstring>
+        <name>get_call_orders</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>limit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="106" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1029" bodyend="1044"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a9e6e437542ca76e4ad4bbb2a8a0d5f95" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="classgraphene_1_1chain_1_1force__settlement__object" kindref="compound">force_settlement_object</ref> &gt;</type>
+        <definition>vector&lt; force_settlement_object &gt; graphene::app::database_api_impl::get_settle_orders</definition>
+        <argsstring>(asset_id_type a, uint32_t limit) const</argsstring>
+        <name>get_settle_orders</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>limit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="107" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1051" bodyend="1065"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1acbadb113a48387f2c939f430d30a3de8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="classgraphene_1_1chain_1_1call__order__object" kindref="compound">call_order_object</ref> &gt;</type>
+        <definition>vector&lt; call_order_object &gt; graphene::app::database_api_impl::get_margin_positions</definition>
+        <argsstring>(const account_id_type &amp;id) const</argsstring>
+        <name>get_margin_positions</name>
+        <param>
+          <type>const <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="108" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1072" bodyend="1088"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a41ad7c956cc583701a049ea0b11cef2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::database_api_impl::subscribe_to_market</definition>
+        <argsstring>(std::function&lt; void(const variant &amp;)&gt; callback, asset_id_type a, asset_id_type b)</argsstring>
+        <name>subscribe_to_market</name>
+        <param>
+          <type>std::function&lt; void(const variant &amp;)&gt;</type>
+          <declname>callback</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="109" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1095" bodyend="1100"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a63131b06bb606727c8508352fad751ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::database_api_impl::unsubscribe_from_market</definition>
+        <argsstring>(asset_id_type a, asset_id_type b)</argsstring>
+        <name>unsubscribe_from_market</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="110" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1107" bodyend="1112"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1aa51a817bf72fe207a5955a685b789afb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1app_1_1market__ticker" kindref="compound">market_ticker</ref></type>
+        <definition>market_ticker graphene::app::database_api_impl::get_ticker</definition>
+        <argsstring>(const string &amp;base, const string &amp;quote) const</argsstring>
+        <name>get_ticker</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>quote</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="111" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1119" bodyend="1176"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1aa78e27ca738205c4f82ec80d60d75740" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1app_1_1market__volume" kindref="compound">market_volume</ref></type>
+        <definition>market_volume graphene::app::database_api_impl::get_24_volume</definition>
+        <argsstring>(const string &amp;base, const string &amp;quote) const</argsstring>
+        <name>get_24_volume</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>quote</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="112" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1183" bodyend="1194"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1accf4a40359a34a0e748ec96a93cc0efc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1app_1_1order__book" kindref="compound">order_book</ref></type>
+        <definition>order_book graphene::app::database_api_impl::get_order_book</definition>
+        <argsstring>(const string &amp;base, const string &amp;quote, unsigned limit=50) const</argsstring>
+        <name>get_order_book</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>quote</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>limit</declname>
+          <defval>50</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="113" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1201" bodyend="1249"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a914253d37c580537ba4fa6aa7ce28cd5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="structgraphene_1_1app_1_1market__trade" kindref="compound">market_trade</ref> &gt;</type>
+        <definition>vector&lt; market_trade &gt; graphene::app::database_api_impl::get_trade_history</definition>
+        <argsstring>(const string &amp;base, const string &amp;quote, fc::time_point_sec start, fc::time_point_sec stop, unsigned limit=100) const</argsstring>
+        <name>get_trade_history</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>quote</declname>
+        </param>
+        <param>
+          <type>fc::time_point_sec</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>fc::time_point_sec</type>
+          <declname>stop</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>limit</declname>
+          <defval>100</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="114" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1260" bodyend="1321"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a07a69c909b7f1c3f07f94f0e72a49055" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; optional&lt; <ref refid="classgraphene_1_1chain_1_1witness__object" kindref="compound">witness_object</ref> &gt; &gt;</type>
+        <definition>vector&lt; optional&lt; witness_object &gt; &gt; graphene::app::database_api_impl::get_witnesses</definition>
+        <argsstring>(const vector&lt; witness_id_type &gt; &amp;witness_ids) const</argsstring>
+        <name>get_witnesses</name>
+        <param>
+          <type>const vector&lt; <ref refid="namespacegraphene_1_1chain_1ab7749ab4e10e21734e81c82e229657c0" kindref="member">witness_id_type</ref> &gt; &amp;</type>
+          <declname>witness_ids</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="117" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1350" bodyend="1360"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1ac4134f6abd9b9bf53d7704f6aea8fd9a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>fc::optional&lt; <ref refid="classgraphene_1_1chain_1_1witness__object" kindref="compound">witness_object</ref> &gt;</type>
+        <definition>fc::optional&lt; witness_object &gt; graphene::app::database_api_impl::get_witness_by_account</definition>
+        <argsstring>(account_id_type account) const</argsstring>
+        <name>get_witness_by_account</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+          <declname>account</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="118" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1367" bodyend="1374"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a8948113622033bc699c155041682d5b8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>map&lt; string, <ref refid="namespacegraphene_1_1chain_1ab7749ab4e10e21734e81c82e229657c0" kindref="member">witness_id_type</ref> &gt;</type>
+        <definition>map&lt; string, witness_id_type &gt; graphene::app::database_api_impl::lookup_witness_accounts</definition>
+        <argsstring>(const string &amp;lower_bound_name, uint32_t limit) const</argsstring>
+        <name>lookup_witness_accounts</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>lower_bound_name</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>limit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="119" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1381" bodyend="1402"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a4cfd97e7cea92f6dacedfc779a3dc239" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t graphene::app::database_api_impl::get_witness_count</definition>
+        <argsstring>() const</argsstring>
+        <name>get_witness_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="120" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1409" bodyend="1412"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1acab4f92a15d0509131a623e65c737de6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; optional&lt; <ref refid="classgraphene_1_1chain_1_1committee__member__object" kindref="compound">committee_member_object</ref> &gt; &gt;</type>
+        <definition>vector&lt; optional&lt; committee_member_object &gt; &gt; graphene::app::database_api_impl::get_committee_members</definition>
+        <argsstring>(const vector&lt; committee_member_id_type &gt; &amp;committee_member_ids) const</argsstring>
+        <name>get_committee_members</name>
+        <param>
+          <type>const vector&lt; <ref refid="namespacegraphene_1_1chain_1ab79292a0eac35523c6e76cae4b6b6fa4" kindref="member">committee_member_id_type</ref> &gt; &amp;</type>
+          <declname>committee_member_ids</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="123" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1425" bodyend="1435"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a466894d67afe76e2347133dc88828449" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>fc::optional&lt; <ref refid="classgraphene_1_1chain_1_1committee__member__object" kindref="compound">committee_member_object</ref> &gt;</type>
+        <definition>fc::optional&lt; committee_member_object &gt; graphene::app::database_api_impl::get_committee_member_by_account</definition>
+        <argsstring>(account_id_type account) const</argsstring>
+        <name>get_committee_member_by_account</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+          <declname>account</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="124" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1442" bodyend="1449"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a1fbfc32a908225d0d91b704dd1d05b1c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>map&lt; string, <ref refid="namespacegraphene_1_1chain_1ab79292a0eac35523c6e76cae4b6b6fa4" kindref="member">committee_member_id_type</ref> &gt;</type>
+        <definition>map&lt; string, committee_member_id_type &gt; graphene::app::database_api_impl::lookup_committee_member_accounts</definition>
+        <argsstring>(const string &amp;lower_bound_name, uint32_t limit) const</argsstring>
+        <name>lookup_committee_member_accounts</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>lower_bound_name</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>limit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="125" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1456" bodyend="1477"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a9f3c59402a1776da2951fdd666e20a16" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; variant &gt;</type>
+        <definition>vector&lt; variant &gt; graphene::app::database_api_impl::lookup_vote_ids</definition>
+        <argsstring>(const vector&lt; vote_id_type &gt; &amp;votes) const</argsstring>
+        <name>lookup_vote_ids</name>
+        <param>
+          <type>const vector&lt; <ref refid="structgraphene_1_1chain_1_1vote__id__type" kindref="compound">vote_id_type</ref> &gt; &amp;</type>
+          <declname>votes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="128" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1490" bodyend="1544"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a2ba80f79ad05b3a6fb2d1ea3df18eb95" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string graphene::app::database_api_impl::get_transaction_hex</definition>
+        <argsstring>(const signed_transaction &amp;trx) const</argsstring>
+        <name>get_transaction_hex</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref> &amp;</type>
+          <declname>trx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="131" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1557" bodyend="1560"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a69312609009b9fcff77e931e70479b9d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>set&lt; <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref> &gt;</type>
+        <definition>set&lt; public_key_type &gt; graphene::app::database_api_impl::get_required_signatures</definition>
+        <argsstring>(const signed_transaction &amp;trx, const flat_set&lt; public_key_type &gt; &amp;available_keys) const</argsstring>
+        <name>get_required_signatures</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref> &amp;</type>
+          <declname>trx</declname>
+        </param>
+        <param>
+          <type>const flat_set&lt; <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref> &gt; &amp;</type>
+          <declname>available_keys</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="132" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1567" bodyend="1577"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1acef339ff42bfbf976567a5b876e14751" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>set&lt; <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref> &gt;</type>
+        <definition>set&lt; public_key_type &gt; graphene::app::database_api_impl::get_potential_signatures</definition>
+        <argsstring>(const signed_transaction &amp;trx) const</argsstring>
+        <name>get_potential_signatures</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref> &amp;</type>
+          <declname>trx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="133" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1588" bodyend="1614"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1acc46cde78a2c224a99ea622865360ba6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>set&lt; <ref refid="classgraphene_1_1chain_1_1address" kindref="compound">address</ref> &gt;</type>
+        <definition>set&lt; address &gt; graphene::app::database_api_impl::get_potential_address_signatures</definition>
+        <argsstring>(const signed_transaction &amp;trx) const</argsstring>
+        <name>get_potential_address_signatures</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref> &amp;</type>
+          <declname>trx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="134" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1616" bodyend="1639"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a54dddff3398d303e7c9bdf1a1f2d2498" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::app::database_api_impl::verify_authority</definition>
+        <argsstring>(const signed_transaction &amp;trx) const</argsstring>
+        <name>verify_authority</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref> &amp;</type>
+          <declname>trx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="135" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1646" bodyend="1653"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a1038294710409da7e52ae2647dc5357e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::app::database_api_impl::verify_account_authority</definition>
+        <argsstring>(const string &amp;name_or_id, const flat_set&lt; public_key_type &gt; &amp;signers) const</argsstring>
+        <name>verify_account_authority</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>name_or_id</declname>
+        </param>
+        <param>
+          <type>const flat_set&lt; <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref> &gt; &amp;</type>
+          <declname>signers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>reuse trx.verify_authority by creating a dummy transfer </para>        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="136" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1660" bodyend="1683"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a294d0e741fa22072439875121f39eb43" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1processed__transaction" kindref="compound">processed_transaction</ref></type>
+        <definition>processed_transaction graphene::app::database_api_impl::validate_transaction</definition>
+        <argsstring>(const signed_transaction &amp;trx) const</argsstring>
+        <name>validate_transaction</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref> &amp;</type>
+          <declname>trx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="137" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1690" bodyend="1693"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1af8e4a4b8062cc56fa80ba74b3394a640" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; fc::variant &gt;</type>
+        <definition>vector&lt; fc::variant &gt; graphene::app::database_api_impl::get_required_fees</definition>
+        <argsstring>(const vector&lt; operation &gt; &amp;ops, asset_id_type id) const</argsstring>
+        <name>get_required_fees</name>
+        <param>
+          <type>const vector&lt; <ref refid="group__operations_1ga8b0400e40715f7fd1608ab2dc3d6d401" kindref="member">operation</ref> &gt; &amp;</type>
+          <declname>ops</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref></type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="138" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1756" bodyend="1776"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a3ccb268634faa655b0d56a31da3075f2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="classgraphene_1_1chain_1_1proposal__object" kindref="compound">proposal_object</ref> &gt;</type>
+        <definition>vector&lt; proposal_object &gt; graphene::app::database_api_impl::get_proposed_transactions</definition>
+        <argsstring>(account_id_type id) const</argsstring>
+        <name>get_proposed_transactions</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>TODO: add secondary index that will accelerate this process </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="141" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1790" bodyend="1805"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a78d42d6340af3cbb9ceb22dcbd3504b5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="classgraphene_1_1chain_1_1blinded__balance__object" kindref="compound">blinded_balance_object</ref> &gt;</type>
+        <definition>vector&lt; blinded_balance_object &gt; graphene::app::database_api_impl::get_blinded_balances</definition>
+        <argsstring>(const flat_set&lt; commitment_type &gt; &amp;commitments) const</argsstring>
+        <name>get_blinded_balances</name>
+        <param>
+          <type>const flat_set&lt; commitment_type &gt; &amp;</type>
+          <declname>commitments</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="144" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1818" bodyend="1830"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1ab4fce022a8f68122d101786eb4b4af44" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void graphene::app::database_api_impl::subscribe_to_item</definition>
+        <argsstring>(const T &amp;i) const</argsstring>
+        <name>subscribe_to_item</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="148" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="148" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a5aa74519defe72c7c13f425dd6ce693c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool graphene::app::database_api_impl::is_subscribed_to_item</definition>
+        <argsstring>(const T &amp;i) const</argsstring>
+        <name>is_subscribed_to_item</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="162" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="162" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a070c7127572da3986facf042c6668ccc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::app::database_api_impl::is_impacted_account</definition>
+        <argsstring>(const flat_set&lt; account_id_type &gt; &amp;accounts)</argsstring>
+        <name>is_impacted_account</name>
+        <param>
+          <type>const flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt; &amp;</type>
+          <declname>accounts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="170" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="170" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1ac70659cf33483f0113f2559eb18b6903" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void graphene::app::database_api_impl::enqueue_if_subscribed_to_market</definition>
+        <argsstring>(const object *obj, market_queue_type &amp;queue, bool full_object=true)</argsstring>
+        <name>enqueue_if_subscribed_to_market</name>
+        <param>
+          <type>const object *</type>
+          <declname>obj</declname>
+        </param>
+        <param>
+          <type><ref refid="database__api_8cpp_1acf791c2d177a378a7390c9c57dc5efe3" kindref="member">market_queue_type</ref> &amp;</type>
+          <declname>queue</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>full_object</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="181" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="181" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a55ff9f5836e67fc803189fa184d8dbcb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::database_api_impl::broadcast_updates</definition>
+        <argsstring>(const vector&lt; variant &gt; &amp;updates)</argsstring>
+        <name>broadcast_updates</name>
+        <param>
+          <type>const vector&lt; variant &gt; &amp;</type>
+          <declname>updates</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="194" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1838" bodyend="1847"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a7cfc3b40b9187f22cc92d0859118edd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::database_api_impl::broadcast_market_updates</definition>
+        <argsstring>(const market_queue_type &amp;queue)</argsstring>
+        <name>broadcast_market_updates</name>
+        <param>
+          <type>const <ref refid="database__api_8cpp_1acf791c2d177a378a7390c9c57dc5efe3" kindref="member">market_queue_type</ref> &amp;</type>
+          <declname>queue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="195" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1849" bodyend="1863"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1af32c7a64a34782f8cfc678098e63633a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::database_api_impl::handle_object_changed</definition>
+        <argsstring>(bool force_notify, bool full_object, const vector&lt; object_id_type &gt; &amp;ids, const flat_set&lt; account_id_type &gt; &amp;impacted_accounts, std::function&lt; const object *(object_id_type id)&gt; find_object)</argsstring>
+        <name>handle_object_changed</name>
+        <param>
+          <type>bool</type>
+          <declname>force_notify</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>full_object</declname>
+        </param>
+        <param>
+          <type>const vector&lt; object_id_type &gt; &amp;</type>
+          <declname>ids</declname>
+        </param>
+        <param>
+          <type>const flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt; &amp;</type>
+          <declname>impacted_accounts</declname>
+        </param>
+        <param>
+          <type>std::function&lt; const object *(object_id_type id)&gt;</type>
+          <declname>find_object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="196" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1895" bodyend="1941"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1ad7e92705742642bcc7c856f03ed1e244" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::database_api_impl::on_objects_new</definition>
+        <argsstring>(const vector&lt; object_id_type &gt; &amp;ids, const flat_set&lt; account_id_type &gt; &amp;impacted_accounts)</argsstring>
+        <name>on_objects_new</name>
+        <param>
+          <type>const vector&lt; object_id_type &gt; &amp;</type>
+          <declname>ids</declname>
+        </param>
+        <param>
+          <type>const flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt; &amp;</type>
+          <declname>impacted_accounts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>called every time a block is applied to report the objects that were changed </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="199" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1881" bodyend="1886"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1ad55c3a34c9ad6e65d4fe87261d76bef4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::database_api_impl::on_objects_changed</definition>
+        <argsstring>(const vector&lt; object_id_type &gt; &amp;ids, const flat_set&lt; account_id_type &gt; &amp;impacted_accounts)</argsstring>
+        <name>on_objects_changed</name>
+        <param>
+          <type>const vector&lt; object_id_type &gt; &amp;</type>
+          <declname>ids</declname>
+        </param>
+        <param>
+          <type>const flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt; &amp;</type>
+          <declname>impacted_accounts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="200" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1888" bodyend="1893"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1a1bc7ccfd792ccbe1d2f852f3dcc1bfcd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::database_api_impl::on_objects_removed</definition>
+        <argsstring>(const vector&lt; object_id_type &gt; &amp;ids, const vector&lt; const object *&gt; &amp;objs, const flat_set&lt; account_id_type &gt; &amp;impacted_accounts)</argsstring>
+        <name>on_objects_removed</name>
+        <param>
+          <type>const vector&lt; object_id_type &gt; &amp;</type>
+          <declname>ids</declname>
+        </param>
+        <param>
+          <type>const vector&lt; const object *&gt; &amp;</type>
+          <declname>objs</declname>
+        </param>
+        <param>
+          <type>const flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt; &amp;</type>
+          <declname>impacted_accounts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="201" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1865" bodyend="1879"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api__impl_1ae7b704ead77565a89c50fa327288d1a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::database_api_impl::on_applied_block</definition>
+        <argsstring>()</argsstring>
+        <name>on_applied_block</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>note: this method cannot yield because it is called in the middle of apply a block. </para>        </detaileddescription>
+        <inbodydescription>
+<para>we need to ensure the <ref refid="classgraphene_1_1app_1_1database__api" kindref="compound">database_api</ref> is not deleted for the life of the async operation </para>        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="202" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1946" bodyend="1997"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1599">
+        <label>graphene::app::database_api_impl</label>
+        <link refid="classgraphene_1_1app_1_1database__api__impl"/>
+        <childnode refid="1600" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1600">
+        <label>std::enable_shared_from_this&lt; database_api_impl &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1605">
+        <label>map&lt; pair&lt; asset_id_type, asset_id_type &gt;, std::function&lt; void(const variant &amp;)&gt; &gt;</label>
+      </node>
+      <node id="1604">
+        <label>db::object_database</label>
+      </node>
+      <node id="1601">
+        <label>graphene::app::database_api_impl</label>
+        <link refid="classgraphene_1_1app_1_1database__api__impl"/>
+        <childnode refid="1602" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1603" relation="usage">
+          <edgelabel>_db</edgelabel>
+        </childnode>
+        <childnode refid="1605" relation="usage">
+          <edgelabel>_market_subscriptions</edgelabel>
+        </childnode>
+      </node>
+      <node id="1602">
+        <label>std::enable_shared_from_this&lt; database_api_impl &gt;</label>
+      </node>
+      <node id="1603">
+        <label>graphene::chain::database</label>
+        <link refid="classgraphene_1_1chain_1_1database"/>
+        <childnode refid="1604" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/app/database_api.cpp" line="52" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="51" bodyend="218"/>
+    <listofallmembers>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a3986f9637134d0f91d711c7ff4df7189" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>_applied_block_connection</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a79f338b26855b0a580f74e47e0600758" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>_block_applied_callback</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a08837ce80550808d16dc34e85258f40f" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>_change_connection</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a1da4ab9154f9a30bae71e183b202d1e1" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>_db</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a466336fd22c476e6b2e0b4e52ef6dce5" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>_market_subscriptions</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1ae432b4993936147dcd5e8ac87bc087eb" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>_new_connection</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a44bb83df538540ec0d969c739f28c589" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>_notify_remove_create</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1adfbd822d409be041227ec58c94f95db8" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>_pending_trx_callback</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a3a55e04699d428f42c9a69672d488105" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>_pending_trx_connection</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a499df6660549b1f8b430a8c4a612c72e" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>_removed_connection</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1af716153167cbb37816d69a69cd8391ee" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>_subscribe_callback</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1add7a21998f28a6c4aea41006eb1ff022" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>_subscribe_filter</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1acab1dea5c17660083df33c2bddc204e2" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>_subscribed_accounts</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a7cfc3b40b9187f22cc92d0859118edd7" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>broadcast_market_updates</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a55ff9f5836e67fc803189fa184d8dbcb" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>broadcast_updates</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a651bbd731744ded8d9114977a1f0e305" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>cancel_all_subscriptions</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a355bb4389930fa264bc89972af2b3f33" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>database_api_impl</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1ac70659cf33483f0113f2559eb18b6903" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>enqueue_if_subscribed_to_market</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1aa78e27ca738205c4f82ec80d60d75740" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_24_volume</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a3e736db73934fa83d65275e5d6244810" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_account_balances</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a091be4e3a512dd7b83a19c58632ad19b" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_account_by_name</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a838b2ae1c363d6db501483636ec5222e" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_account_count</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a0b0f8ce28a85279a3c4bb4297484c8ab" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_account_references</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a79da23f67f227aa44a5af733f73bebea" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_accounts</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a45645a26a94cb9d5d0f28da737496667" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_assets</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1aef3840cb3c44793c9581f2ccc52bc33e" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_balance_objects</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a78d42d6340af3cbb9ceb22dcbd3504b5" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_blinded_balances</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1ac58de247b5e405af56821a0d70f0770e" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_block</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a1904524494af58def0aadbb5dd3d472e" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_block_header</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1aeb1446219a34d5f1a821b96bf6323541" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_block_header_batch</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a53aa15996c5a27d3b258d50fa78f2d6f" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_call_orders</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1aac4b96fb3bb2446ebde410fa6a12fcc3" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_chain_id</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a12ce279b022e8ded590aaf2764f24b17" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_chain_properties</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a466894d67afe76e2347133dc88828449" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_committee_member_by_account</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1acab4f92a15d0509131a623e65c737de6" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_committee_members</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a388576d4612e9d7b36511d0431c20f7c" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_config</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a7d3a09112fe43b55cdb70c9654d6d9be" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_dynamic_global_properties</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a620af88817e6a90642a61aea5c1e4a3b" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_full_accounts</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a5ec39c51451ddba8fe390c0a174cdf3c" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_global_properties</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a752958134298f4bd079913b70228775c" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_key_references</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a61d17187a587ee10b086c57b5693ab86" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_limit_orders</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1acbadb113a48387f2c939f430d30a3de8" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_margin_positions</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a40cfbe6defd213ba7fc45969afc8cb99" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_named_account_balances</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a35d27f0797bd1aef6068f07ef8ddbda9" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_objects</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1accf4a40359a34a0e748ec96a93cc0efc" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_order_book</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1acc46cde78a2c224a99ea622865360ba6" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_potential_address_signatures</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1acef339ff42bfbf976567a5b876e14751" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_potential_signatures</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a3ccb268634faa655b0d56a31da3075f2" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_proposed_transactions</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1af8e4a4b8062cc56fa80ba74b3394a640" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_required_fees</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a69312609009b9fcff77e931e70479b9d" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_required_signatures</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a9e6e437542ca76e4ad4bbb2a8a0d5f95" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_settle_orders</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1aa51a817bf72fe207a5955a685b789afb" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_ticker</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a914253d37c580537ba4fa6aa7ce28cd5" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_trade_history</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a93356646b379ee79ad8700e7d6a93b22" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_transaction</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a2ba80f79ad05b3a6fb2d1ea3df18eb95" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_transaction_hex</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a6b2bdaaf14efcd053f6e21c0d33f1661" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_vested_balances</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1ae3e74e1299aa8339fd54a467a5cc2560" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_vesting_balances</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1ac4134f6abd9b9bf53d7704f6aea8fd9a" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_witness_by_account</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a4cfd97e7cea92f6dacedfc779a3dc239" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_witness_count</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a07a69c909b7f1c3f07f94f0e72a49055" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>get_witnesses</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1af32c7a64a34782f8cfc678098e63633a" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>handle_object_changed</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a070c7127572da3986facf042c6668ccc" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>is_impacted_account</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a80b46160a2181f5aa8cd3af6718793d2" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>is_public_key_registered</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a5aa74519defe72c7c13f425dd6ce693c" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>is_subscribed_to_item</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1ab005774a3ebf00782722d26f60ec06ca" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>list_assets</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1ac248983aae44dc9b647cdb801c6691f0" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>lookup_account_names</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1abd450a9eb1eebb97292c239f213bf4e1" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>lookup_accounts</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a08af3327c36bc05d51cee4db198ea780" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>lookup_asset_symbols</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a1fbfc32a908225d0d91b704dd1d05b1c" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>lookup_committee_member_accounts</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a9f3c59402a1776da2951fdd666e20a16" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>lookup_vote_ids</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a8948113622033bc699c155041682d5b8" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>lookup_witness_accounts</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1ae7b704ead77565a89c50fa327288d1a1" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>on_applied_block</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1ad55c3a34c9ad6e65d4fe87261d76bef4" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>on_objects_changed</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1ad7e92705742642bcc7c856f03ed1e244" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>on_objects_new</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a1bc7ccfd792ccbe1d2f852f3dcc1bfcd" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>on_objects_removed</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1aaa7ad36ef0da4021fc4dea51449014bf" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>set_block_applied_callback</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a0ab92833cf9e6fa7b6a6b7472b2f36a3" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>set_pending_transaction_callback</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a9efad1951dada7a463e304d5ade154ab" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>set_subscribe_callback</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1ab4fce022a8f68122d101786eb4b4af44" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>subscribe_to_item</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a41ad7c956cc583701a049ea0b11cef2f" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>subscribe_to_market</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a63131b06bb606727c8508352fad751ee" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>unsubscribe_from_market</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a294d0e741fa22072439875121f39eb43" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>validate_transaction</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a1038294710409da7e52ae2647dc5357e" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>verify_account_authority</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a54dddff3398d303e7c9bdf1a1f2d2498" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>verify_authority</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api__impl_1a89f8d316670134c3faa5fb07032603cb" prot="public" virt="non-virtual"><scope>graphene::app::database_api_impl</scope><name>~database_api_impl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

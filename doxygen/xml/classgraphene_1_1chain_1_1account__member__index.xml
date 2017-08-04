@@ -1,0 +1,291 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgraphene_1_1chain_1_1account__member__index" kind="class" language="C++" prot="public">
+    <compoundname>graphene::chain::account_member_index</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">secondary_index</basecompoundref>
+    <includes refid="account__object_8hpp" local="no">account_object.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__member__index_1aee3307356f441d6b5aefc0a23b0da04e" prot="public" static="no" mutable="no">
+        <type>map&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref>, set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt; &gt;</type>
+        <definition>map&lt; account_id_type, set&lt;account_id_type&gt; &gt; graphene::chain::account_member_index::account_to_account_memberships</definition>
+        <argsstring></argsstring>
+        <name>account_to_account_memberships</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>given an account or key, map it to the set of accounts that reference it in an active or owner authority </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="282" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="282" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__member__index_1acdb7e4594dc02fd42f4d48ac99f076ba" prot="public" static="no" mutable="no">
+        <type>map&lt; <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref>, set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt; &gt;</type>
+        <definition>map&lt; public_key_type, set&lt;account_id_type&gt; &gt; graphene::chain::account_member_index::account_to_key_memberships</definition>
+        <argsstring></argsstring>
+        <name>account_to_key_memberships</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="283" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="283" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__member__index_1abee23a484ffae4b2a55d9629fef25600" prot="public" static="no" mutable="no">
+        <type>map&lt; <ref refid="classgraphene_1_1chain_1_1address" kindref="compound">address</ref>, set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt; &gt;</type>
+        <definition>map&lt; address, set&lt;account_id_type&gt; &gt; graphene::chain::account_member_index::account_to_address_memberships</definition>
+        <argsstring></argsstring>
+        <name>account_to_address_memberships</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>some accounts use address authorities in the genesis block </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="285" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="285" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__member__index_1a53aabc360ce2ade9e460424aeaddf367" prot="protected" static="no" mutable="no">
+        <type>set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt;</type>
+        <definition>set&lt;account_id_type&gt; graphene::chain::account_member_index::before_account_members</definition>
+        <argsstring></argsstring>
+        <name>before_account_members</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="293" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="293" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__member__index_1ac50e9de4b00358567e62112dd75b4e26" prot="protected" static="no" mutable="no">
+        <type>set&lt; <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref> &gt;</type>
+        <definition>set&lt;public_key_type&gt; graphene::chain::account_member_index::before_key_members</definition>
+        <argsstring></argsstring>
+        <name>before_key_members</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="294" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="294" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__member__index_1a073c9e7e98ce29a7c9ccf696145c502f" prot="protected" static="no" mutable="no">
+        <type>set&lt; <ref refid="classgraphene_1_1chain_1_1address" kindref="compound">address</ref> &gt;</type>
+        <definition>set&lt;address&gt; graphene::chain::account_member_index::before_address_members</definition>
+        <argsstring></argsstring>
+        <name>before_address_members</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="295" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="295" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1account__member__index_1a1fc6394bcaee29e672305a4b9cdcee57" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void graphene::chain::account_member_index::object_inserted</definition>
+        <argsstring>(const object &amp;obj) override</argsstring>
+        <name>object_inserted</name>
+        <param>
+          <type>const object &amp;</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="275" column="1" bodyfile="libraries/chain/account_object.cpp" bodystart="143" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1account__member__index_1a289cbc24df1a0c582079c491cb6d795f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void graphene::chain::account_member_index::object_removed</definition>
+        <argsstring>(const object &amp;obj) override</argsstring>
+        <name>object_removed</name>
+        <param>
+          <type>const object &amp;</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="276" column="1" bodyfile="libraries/chain/account_object.cpp" bodystart="161" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1account__member__index_1ace7d6747f95ae350e5a07fb1324ddfa3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void graphene::chain::account_member_index::about_to_modify</definition>
+        <argsstring>(const object &amp;before) override</argsstring>
+        <name>about_to_modify</name>
+        <param>
+          <type>const object &amp;</type>
+          <declname>before</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="277" column="1" bodyfile="libraries/chain/account_object.cpp" bodystart="179" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1account__member__index_1aa469fb8cc93d67ec3e8a25b814d54418" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void graphene::chain::account_member_index::object_modified</definition>
+        <argsstring>(const object &amp;after) override</argsstring>
+        <name>object_modified</name>
+        <param>
+          <type>const object &amp;</type>
+          <declname>after</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="278" column="1" bodyfile="libraries/chain/account_object.cpp" bodystart="190" bodyend="255"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1account__member__index_1a18d0c45bca5553a5ac83143d1abdaa1e" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt;</type>
+        <definition>set&lt; account_id_type &gt; graphene::chain::account_member_index::get_account_members</definition>
+        <argsstring>(const account_object &amp;a) const</argsstring>
+        <name>get_account_members</name>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1account__object" kindref="compound">account_object</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="289" column="1" bodyfile="libraries/chain/account_object.cpp" bodystart="113" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1account__member__index_1a9e7261d01188531f38cfab9f5a20e6f5" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>set&lt; <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref> &gt;</type>
+        <definition>set&lt; public_key_type &gt; graphene::chain::account_member_index::get_key_members</definition>
+        <argsstring>(const account_object &amp;a) const</argsstring>
+        <name>get_key_members</name>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1account__object" kindref="compound">account_object</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="290" column="1" bodyfile="libraries/chain/account_object.cpp" bodystart="122" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1account__member__index_1a5e0ce0ad3bef9873016482be263733ca" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>set&lt; <ref refid="classgraphene_1_1chain_1_1address" kindref="compound">address</ref> &gt;</type>
+        <definition>set&lt; address &gt; graphene::chain::account_member_index::get_address_members</definition>
+        <argsstring>(const account_object &amp;a) const</argsstring>
+        <name>get_address_members</name>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1account__object" kindref="compound">account_object</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="291" column="1" bodyfile="libraries/chain/account_object.cpp" bodystart="132" bodyend="141"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This secondary index will allow a reverse lookup of all accounts that a particular key or account is an potential signing authority. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="76">
+        <label>graphene::chain::account_member_index</label>
+        <link refid="classgraphene_1_1chain_1_1account__member__index"/>
+        <childnode refid="77" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="77">
+        <label>secondary_index</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="83">
+        <label>map&lt; graphene::chain::address, set&lt; account_id_type &gt; &gt;</label>
+      </node>
+      <node id="80">
+        <label>set&lt; graphene::chain::address &gt;</label>
+      </node>
+      <node id="82">
+        <label>map&lt; account_id_type, set&lt; account_id_type &gt; &gt;</label>
+      </node>
+      <node id="85">
+        <label>map&lt; graphene::chain::public_key_type, set&lt; account_id_type &gt; &gt;</label>
+      </node>
+      <node id="78">
+        <label>graphene::chain::account_member_index</label>
+        <link refid="classgraphene_1_1chain_1_1account__member__index"/>
+        <childnode refid="79" relation="public-inheritance">
+        </childnode>
+        <childnode refid="80" relation="usage">
+          <edgelabel>before_address_members</edgelabel>
+        </childnode>
+        <childnode refid="81" relation="usage">
+          <edgelabel>before_key_members</edgelabel>
+        </childnode>
+        <childnode refid="82" relation="usage">
+          <edgelabel>account_to_account_memberships</edgelabel>
+        </childnode>
+        <childnode refid="83" relation="usage">
+          <edgelabel>account_to_address_memberships</edgelabel>
+        </childnode>
+        <childnode refid="84" relation="usage">
+          <edgelabel>before_account_members</edgelabel>
+        </childnode>
+        <childnode refid="85" relation="usage">
+          <edgelabel>account_to_key_memberships</edgelabel>
+        </childnode>
+      </node>
+      <node id="84">
+        <label>set&lt; account_id_type &gt;</label>
+      </node>
+      <node id="79">
+        <label>secondary_index</label>
+      </node>
+      <node id="81">
+        <label>set&lt; graphene::chain::public_key_type &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="273" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="272" bodyend="296"/>
+    <listofallmembers>
+      <member refid="classgraphene_1_1chain_1_1account__member__index_1ace7d6747f95ae350e5a07fb1324ddfa3" prot="public" virt="virtual"><scope>graphene::chain::account_member_index</scope><name>about_to_modify</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__member__index_1aee3307356f441d6b5aefc0a23b0da04e" prot="public" virt="non-virtual"><scope>graphene::chain::account_member_index</scope><name>account_to_account_memberships</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__member__index_1abee23a484ffae4b2a55d9629fef25600" prot="public" virt="non-virtual"><scope>graphene::chain::account_member_index</scope><name>account_to_address_memberships</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__member__index_1acdb7e4594dc02fd42f4d48ac99f076ba" prot="public" virt="non-virtual"><scope>graphene::chain::account_member_index</scope><name>account_to_key_memberships</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__member__index_1a53aabc360ce2ade9e460424aeaddf367" prot="protected" virt="non-virtual"><scope>graphene::chain::account_member_index</scope><name>before_account_members</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__member__index_1a073c9e7e98ce29a7c9ccf696145c502f" prot="protected" virt="non-virtual"><scope>graphene::chain::account_member_index</scope><name>before_address_members</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__member__index_1ac50e9de4b00358567e62112dd75b4e26" prot="protected" virt="non-virtual"><scope>graphene::chain::account_member_index</scope><name>before_key_members</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__member__index_1a18d0c45bca5553a5ac83143d1abdaa1e" prot="protected" virt="non-virtual"><scope>graphene::chain::account_member_index</scope><name>get_account_members</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__member__index_1a5e0ce0ad3bef9873016482be263733ca" prot="protected" virt="non-virtual"><scope>graphene::chain::account_member_index</scope><name>get_address_members</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__member__index_1a9e7261d01188531f38cfab9f5a20e6f5" prot="protected" virt="non-virtual"><scope>graphene::chain::account_member_index</scope><name>get_key_members</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__member__index_1a1fc6394bcaee29e672305a4b9cdcee57" prot="public" virt="virtual"><scope>graphene::chain::account_member_index</scope><name>object_inserted</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__member__index_1aa469fb8cc93d67ec3e8a25b814d54418" prot="public" virt="virtual"><scope>graphene::chain::account_member_index</scope><name>object_modified</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__member__index_1a289cbc24df1a0c582079c491cb6d795f" prot="public" virt="virtual"><scope>graphene::chain::account_member_index</scope><name>object_removed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

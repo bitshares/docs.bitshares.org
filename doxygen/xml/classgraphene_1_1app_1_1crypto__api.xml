@@ -1,0 +1,268 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgraphene_1_1app_1_1crypto__api" kind="class" language="C++" prot="public">
+    <compoundname>graphene::app::crypto_api</compoundname>
+    <includes refid="api_8hpp" local="no">api.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgraphene_1_1app_1_1crypto__api_1adcb829f4fc90959164d92b4b285e8085" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>graphene::app::crypto_api::crypto_api</definition>
+        <argsstring>()</argsstring>
+        <name>crypto_api</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/api.hpp" line="270" column="1" bodyfile="libraries/app/api.cpp" bodystart="565" bodyend="565"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1crypto__api_1a8e0f5c3c3af4bf399cc2a523fc9a14c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>fc::ecc::blind_signature</type>
+        <definition>blind_signature graphene::app::crypto_api::blind_sign</definition>
+        <argsstring>(const extended_private_key_type &amp;key, const fc::ecc::blinded_hash &amp;hash, int i)</argsstring>
+        <name>blind_sign</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1extended__private__key__type" kindref="compound">extended_private_key_type</ref> &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const fc::ecc::blinded_hash &amp;</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/api.hpp" line="272" column="1" bodyfile="libraries/app/api.cpp" bodystart="567" bodyend="570"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1crypto__api_1ac589411b741e0e82e737d316feda3e4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1aed41249e2d1e1e56e91d68da30cbddad" kindref="member">signature_type</ref></type>
+        <definition>signature_type graphene::app::crypto_api::unblind_signature</definition>
+        <argsstring>(const extended_private_key_type &amp;key, const extended_public_key_type &amp;bob, const fc::ecc::blind_signature &amp;sig, const fc::sha256 &amp;hash, int i)</argsstring>
+        <name>unblind_signature</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1extended__private__key__type" kindref="compound">extended_private_key_type</ref> &amp;</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1extended__public__key__type" kindref="compound">extended_public_key_type</ref> &amp;</type>
+          <declname>bob</declname>
+        </param>
+        <param>
+          <type>const fc::ecc::blind_signature &amp;</type>
+          <declname>sig</declname>
+        </param>
+        <param>
+          <type>const fc::sha256 &amp;</type>
+          <declname>hash</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/api.hpp" line="274" column="1" bodyfile="libraries/app/api.cpp" bodystart="572" bodyend="579"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1crypto__api_1a819517c27c9b5436cea4bd7114d68759" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>fc::ecc::commitment_type</type>
+        <definition>commitment_type graphene::app::crypto_api::blind</definition>
+        <argsstring>(const fc::ecc::blind_factor_type &amp;blind, uint64_t value)</argsstring>
+        <name>blind</name>
+        <param>
+          <type>const fc::ecc::blind_factor_type &amp;</type>
+          <declname>blind</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/api.hpp" line="280" column="1" bodyfile="libraries/app/api.cpp" bodystart="581" bodyend="584"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1crypto__api_1aa1a6caa5122568ca0ae4f5379a2d1943" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>fc::ecc::blind_factor_type</type>
+        <definition>blind_factor_type graphene::app::crypto_api::blind_sum</definition>
+        <argsstring>(const std::vector&lt; blind_factor_type &gt; &amp;blinds_in, uint32_t non_neg)</argsstring>
+        <name>blind_sum</name>
+        <param>
+          <type>const std::vector&lt; blind_factor_type &gt; &amp;</type>
+          <declname>blinds_in</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>non_neg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/api.hpp" line="282" column="1" bodyfile="libraries/app/api.cpp" bodystart="586" bodyend="589"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1crypto__api_1ad9c6f9589828b10f4cc8bfe4a6a359d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::app::crypto_api::verify_sum</definition>
+        <argsstring>(const std::vector&lt; commitment_type &gt; &amp;commits_in, const std::vector&lt; commitment_type &gt; &amp;neg_commits_in, int64_t excess)</argsstring>
+        <name>verify_sum</name>
+        <param>
+          <type>const std::vector&lt; commitment_type &gt; &amp;</type>
+          <declname>commits_in</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; commitment_type &gt; &amp;</type>
+          <declname>neg_commits_in</declname>
+        </param>
+        <param>
+          <type>int64_t</type>
+          <declname>excess</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/api.hpp" line="284" column="1" bodyfile="libraries/app/api.cpp" bodystart="591" bodyend="594"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1crypto__api_1a5310e5955a16937db91c99a8fea0ffe6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1app_1_1verify__range__result" kindref="compound">verify_range_result</ref></type>
+        <definition>verify_range_result graphene::app::crypto_api::verify_range</definition>
+        <argsstring>(const fc::ecc::commitment_type &amp;commit, const std::vector&lt; char &gt; &amp;proof)</argsstring>
+        <name>verify_range</name>
+        <param>
+          <type>const fc::ecc::commitment_type &amp;</type>
+          <declname>commit</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; char &gt; &amp;</type>
+          <declname>proof</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/api.hpp" line="286" column="1" bodyfile="libraries/app/api.cpp" bodystart="596" bodyend="601"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1crypto__api_1a1923d73235200a4f3da0a4d021a865d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; char &gt;</type>
+        <definition>std::vector&lt; char &gt; graphene::app::crypto_api::range_proof_sign</definition>
+        <argsstring>(uint64_t min_value, const commitment_type &amp;commit, const blind_factor_type &amp;commit_blind, const blind_factor_type &amp;nonce, int8_t base10_exp, uint8_t min_bits, uint64_t actual_value)</argsstring>
+        <name>range_proof_sign</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>min_value</declname>
+        </param>
+        <param>
+          <type>const commitment_type &amp;</type>
+          <declname>commit</declname>
+        </param>
+        <param>
+          <type>const blind_factor_type &amp;</type>
+          <declname>commit_blind</declname>
+        </param>
+        <param>
+          <type>const blind_factor_type &amp;</type>
+          <declname>nonce</declname>
+        </param>
+        <param>
+          <type>int8_t</type>
+          <declname>base10_exp</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>min_bits</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>actual_value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/api.hpp" line="288" column="1" bodyfile="libraries/app/api.cpp" bodystart="603" bodyend="612"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1crypto__api_1af49d58d9538c6908ea320887af07d9f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1app_1_1verify__range__proof__rewind__result" kindref="compound">verify_range_proof_rewind_result</ref></type>
+        <definition>verify_range_proof_rewind_result graphene::app::crypto_api::verify_range_proof_rewind</definition>
+        <argsstring>(const blind_factor_type &amp;nonce, const fc::ecc::commitment_type &amp;commit, const std::vector&lt; char &gt; &amp;proof)</argsstring>
+        <name>verify_range_proof_rewind</name>
+        <param>
+          <type>const blind_factor_type &amp;</type>
+          <declname>nonce</declname>
+        </param>
+        <param>
+          <type>const fc::ecc::commitment_type &amp;</type>
+          <declname>commit</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; char &gt; &amp;</type>
+          <declname>proof</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/api.hpp" line="297" column="1" bodyfile="libraries/app/api.cpp" bodystart="614" bodyend="628"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1crypto__api_1a6765af523fc6dd5e75872782b4ee12b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>range_proof_info</type>
+        <definition>range_proof_info graphene::app::crypto_api::range_get_info</definition>
+        <argsstring>(const std::vector&lt; char &gt; &amp;proof)</argsstring>
+        <name>range_get_info</name>
+        <param>
+          <type>const std::vector&lt; char &gt; &amp;</type>
+          <declname>proof</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/api.hpp" line="302" column="1" bodyfile="libraries/app/api.cpp" bodystart="630" bodyend="633"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/app/include/graphene/app/api.hpp" line="268" column="1" bodyfile="libraries/app/include/graphene/app/api.hpp" bodystart="267" bodyend="303"/>
+    <listofallmembers>
+      <member refid="classgraphene_1_1app_1_1crypto__api_1a819517c27c9b5436cea4bd7114d68759" prot="public" virt="non-virtual"><scope>graphene::app::crypto_api</scope><name>blind</name></member>
+      <member refid="classgraphene_1_1app_1_1crypto__api_1a8e0f5c3c3af4bf399cc2a523fc9a14c8" prot="public" virt="non-virtual"><scope>graphene::app::crypto_api</scope><name>blind_sign</name></member>
+      <member refid="classgraphene_1_1app_1_1crypto__api_1aa1a6caa5122568ca0ae4f5379a2d1943" prot="public" virt="non-virtual"><scope>graphene::app::crypto_api</scope><name>blind_sum</name></member>
+      <member refid="classgraphene_1_1app_1_1crypto__api_1adcb829f4fc90959164d92b4b285e8085" prot="public" virt="non-virtual"><scope>graphene::app::crypto_api</scope><name>crypto_api</name></member>
+      <member refid="classgraphene_1_1app_1_1crypto__api_1a6765af523fc6dd5e75872782b4ee12b2" prot="public" virt="non-virtual"><scope>graphene::app::crypto_api</scope><name>range_get_info</name></member>
+      <member refid="classgraphene_1_1app_1_1crypto__api_1a1923d73235200a4f3da0a4d021a865d2" prot="public" virt="non-virtual"><scope>graphene::app::crypto_api</scope><name>range_proof_sign</name></member>
+      <member refid="classgraphene_1_1app_1_1crypto__api_1ac589411b741e0e82e737d316feda3e4f" prot="public" virt="non-virtual"><scope>graphene::app::crypto_api</scope><name>unblind_signature</name></member>
+      <member refid="classgraphene_1_1app_1_1crypto__api_1a5310e5955a16937db91c99a8fea0ffe6" prot="public" virt="non-virtual"><scope>graphene::app::crypto_api</scope><name>verify_range</name></member>
+      <member refid="classgraphene_1_1app_1_1crypto__api_1af49d58d9538c6908ea320887af07d9f3" prot="public" virt="non-virtual"><scope>graphene::app::crypto_api</scope><name>verify_range_proof_rewind</name></member>
+      <member refid="classgraphene_1_1app_1_1crypto__api_1ad9c6f9589828b10f4cc8bfe4a6a359d3" prot="public" virt="non-virtual"><scope>graphene::app::crypto_api</scope><name>verify_sum</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

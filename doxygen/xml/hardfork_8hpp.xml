@@ -1,0 +1,389 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="hardfork_8hpp" kind="file" language="C++">
+    <compoundname>hardfork.hpp</compoundname>
+    <includedby refid="account__evaluator_8cpp" local="no">libraries/chain/account_evaluator.cpp</includedby>
+    <includedby refid="account__object_8cpp" local="no">libraries/chain/account_object.cpp</includedby>
+    <includedby refid="asset__evaluator_8cpp" local="no">libraries/chain/asset_evaluator.cpp</includedby>
+    <includedby refid="buyback_8cpp" local="no">libraries/chain/buyback.cpp</includedby>
+    <includedby refid="confidential__evaluator_8cpp" local="no">libraries/chain/confidential_evaluator.cpp</includedby>
+    <includedby refid="db__block_8cpp" local="no">libraries/chain/db_block.cpp</includedby>
+    <includedby refid="db__maint_8cpp" local="no">libraries/chain/db_maint.cpp</includedby>
+    <includedby refid="db__market_8cpp" local="no">libraries/chain/db_market.cpp</includedby>
+    <includedby refid="db__update_8cpp" local="no">libraries/chain/db_update.cpp</includedby>
+    <includedby refid="evaluator_8cpp" local="no">libraries/chain/evaluator.cpp</includedby>
+    <includedby refid="is__authorized__asset_8cpp" local="no">libraries/chain/is_authorized_asset.cpp</includedby>
+    <includedby refid="market__evaluator_8cpp" local="no">libraries/chain/market_evaluator.cpp</includedby>
+    <includedby refid="account_8cpp" local="no">libraries/chain/protocol/account.cpp</includedby>
+    <includedby refid="transfer__evaluator_8cpp" local="no">libraries/chain/transfer_evaluator.cpp</includedby>
+    <includedby refid="withdraw__permission__evaluator_8cpp" local="no">libraries/chain/withdraw_permission_evaluator.cpp</includedby>
+    <invincdepgraph>
+      <node id="6119">
+        <label>libraries/chain/evaluator.cpp</label>
+        <link refid="evaluator_8cpp"/>
+      </node>
+      <node id="6116">
+        <label>libraries/chain/db_maint.cpp</label>
+        <link refid="db__maint_8cpp"/>
+        <childnode refid="6115" relation="include">
+        </childnode>
+      </node>
+      <node id="6121">
+        <label>libraries/chain/market_evaluator.cpp</label>
+        <link refid="market__evaluator_8cpp"/>
+      </node>
+      <node id="6110">
+        <label>libraries/chain/account_object.cpp</label>
+        <link refid="account__object_8cpp"/>
+      </node>
+      <node id="6109">
+        <label>libraries/chain/account_evaluator.cpp</label>
+        <link refid="account__evaluator_8cpp"/>
+      </node>
+      <node id="6122">
+        <label>libraries/chain/protocol/account.cpp</label>
+        <link refid="account_8cpp"/>
+      </node>
+      <node id="6113">
+        <label>libraries/chain/confidential_evaluator.cpp</label>
+        <link refid="confidential__evaluator_8cpp"/>
+      </node>
+      <node id="6112">
+        <label>libraries/chain/buyback.cpp</label>
+        <link refid="buyback_8cpp"/>
+      </node>
+      <node id="6120">
+        <label>libraries/chain/is_authorized_asset.cpp</label>
+        <link refid="is__authorized__asset_8cpp"/>
+      </node>
+      <node id="6115">
+        <label>libraries/chain/database.cpp</label>
+        <link refid="database_8cpp"/>
+      </node>
+      <node id="6124">
+        <label>libraries/chain/withdraw_permission_evaluator.cpp</label>
+        <link refid="withdraw__permission__evaluator_8cpp"/>
+      </node>
+      <node id="6108">
+        <label>libraries/chain/include/graphene/chain/hardfork.hpp</label>
+        <link refid="hardfork_8hpp"/>
+        <childnode refid="6109" relation="include">
+        </childnode>
+        <childnode refid="6110" relation="include">
+        </childnode>
+        <childnode refid="6111" relation="include">
+        </childnode>
+        <childnode refid="6112" relation="include">
+        </childnode>
+        <childnode refid="6113" relation="include">
+        </childnode>
+        <childnode refid="6114" relation="include">
+        </childnode>
+        <childnode refid="6116" relation="include">
+        </childnode>
+        <childnode refid="6117" relation="include">
+        </childnode>
+        <childnode refid="6118" relation="include">
+        </childnode>
+        <childnode refid="6119" relation="include">
+        </childnode>
+        <childnode refid="6120" relation="include">
+        </childnode>
+        <childnode refid="6121" relation="include">
+        </childnode>
+        <childnode refid="6122" relation="include">
+        </childnode>
+        <childnode refid="6123" relation="include">
+        </childnode>
+        <childnode refid="6124" relation="include">
+        </childnode>
+      </node>
+      <node id="6114">
+        <label>libraries/chain/db_block.cpp</label>
+        <link refid="db__block_8cpp"/>
+        <childnode refid="6115" relation="include">
+        </childnode>
+      </node>
+      <node id="6123">
+        <label>libraries/chain/transfer_evaluator.cpp</label>
+        <link refid="transfer__evaluator_8cpp"/>
+      </node>
+      <node id="6111">
+        <label>libraries/chain/asset_evaluator.cpp</label>
+        <link refid="asset__evaluator_8cpp"/>
+      </node>
+      <node id="6118">
+        <label>libraries/chain/db_update.cpp</label>
+        <link refid="db__update_8cpp"/>
+        <childnode refid="6115" relation="include">
+        </childnode>
+      </node>
+      <node id="6117">
+        <label>libraries/chain/db_market.cpp</label>
+        <link refid="db__market_8cpp"/>
+        <childnode refid="6115" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="hardfork_8hpp_1a2688405ac330113e296dd274af80a15b" prot="public" static="no">
+        <name>HARDFORK_357_TIME</name>
+        <initializer>(fc::time_point_sec( 1444416300 ))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/hardfork.hpp" line="13" column="9" bodyfile="libraries/chain/include/graphene/chain/hardfork.hpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hardfork_8hpp_1abdc9b1423da32170327a5e69eecb2c8a" prot="public" static="no">
+        <name>HARDFORK_359_TIME</name>
+        <initializer>(fc::time_point_sec( 1444416300 ))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/hardfork.hpp" line="17" column="9" bodyfile="libraries/chain/include/graphene/chain/hardfork.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hardfork_8hpp_1a27233c28ba3ada5f15f4cb743ad2a0e7" prot="public" static="no">
+        <name>HARDFORK_385_TIME</name>
+        <initializer>(fc::time_point_sec( 1445558400 ))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/hardfork.hpp" line="21" column="9" bodyfile="libraries/chain/include/graphene/chain/hardfork.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hardfork_8hpp_1afb8d5f13ad453b747ac26296c1a38ff8" prot="public" static="no">
+        <name>HARDFORK_409_TIME</name>
+        <initializer>(fc::time_point_sec( 1446652800 ))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/hardfork.hpp" line="25" column="9" bodyfile="libraries/chain/include/graphene/chain/hardfork.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hardfork_8hpp_1a3ef66b6bd13e4a90b9bed086cb06d30a" prot="public" static="no">
+        <name>HARDFORK_413_TIME</name>
+        <initializer>(fc::time_point_sec( 1446652800 ))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/hardfork.hpp" line="29" column="9" bodyfile="libraries/chain/include/graphene/chain/hardfork.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hardfork_8hpp_1a8192f22b1d7339ff72a9ac7a5c3a60f5" prot="public" static="no">
+        <name>HARDFORK_415_TIME</name>
+        <initializer>(fc::time_point_sec( 1446652800 ))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/hardfork.hpp" line="33" column="9" bodyfile="libraries/chain/include/graphene/chain/hardfork.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hardfork_8hpp_1a150f6af415ae7ca9b594f5bcd8425beb" prot="public" static="no">
+        <name>HARDFORK_416_TIME</name>
+        <initializer>(fc::time_point_sec( 1446652800 ))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/hardfork.hpp" line="37" column="9" bodyfile="libraries/chain/include/graphene/chain/hardfork.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hardfork_8hpp_1a06841eb56bd7f82466902318a927e028" prot="public" static="no">
+        <name>HARDFORK_419_TIME</name>
+        <initializer>(fc::time_point_sec( 1446652800 ))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/hardfork.hpp" line="41" column="9" bodyfile="libraries/chain/include/graphene/chain/hardfork.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hardfork_8hpp_1a6e52bcf9a3f90ae7b383156b9bc3c799" prot="public" static="no">
+        <name>HARDFORK_436_TIME</name>
+        <initializer>(fc::time_point_sec( 1450288800 ))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/hardfork.hpp" line="45" column="9" bodyfile="libraries/chain/include/graphene/chain/hardfork.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hardfork_8hpp_1ad2badbadd2e2df01f2de5b751b57709c" prot="public" static="no">
+        <name>HARDFORK_445_TIME</name>
+        <initializer>(fc::time_point_sec( 1450288800 ))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/hardfork.hpp" line="49" column="9" bodyfile="libraries/chain/include/graphene/chain/hardfork.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hardfork_8hpp_1aa2538e1481584ea0057361beea6cef7b" prot="public" static="no">
+        <name>HARDFORK_453_TIME</name>
+        <initializer>(fc::time_point_sec( 1450288800 ))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/hardfork.hpp" line="53" column="9" bodyfile="libraries/chain/include/graphene/chain/hardfork.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hardfork_8hpp_1aa858273c725fdee6c72f5625ac31e6d0" prot="public" static="no">
+        <name>HARDFORK_480_TIME</name>
+        <initializer>(fc::time_point_sec( 1450378800 ))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/hardfork.hpp" line="57" column="9" bodyfile="libraries/chain/include/graphene/chain/hardfork.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hardfork_8hpp_1aece73dd6c09144164fc724b217eaf41b" prot="public" static="no">
+        <name>HARDFORK_483_TIME</name>
+        <initializer>(fc::time_point_sec( 1450378800 ))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/hardfork.hpp" line="61" column="9" bodyfile="libraries/chain/include/graphene/chain/hardfork.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hardfork_8hpp_1a77407882031689bebec3c85d8f80cde7" prot="public" static="no">
+        <name>HARDFORK_516_TIME</name>
+        <initializer>(fc::time_point_sec( 1456250400 ))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/hardfork.hpp" line="65" column="9" bodyfile="libraries/chain/include/graphene/chain/hardfork.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hardfork_8hpp_1afbe8bf820d4a4b2e31377a8b1e275d99" prot="public" static="no">
+        <name>HARDFORK_533_TIME</name>
+        <initializer>(fc::time_point_sec( 1456250400 ))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/hardfork.hpp" line="69" column="9" bodyfile="libraries/chain/include/graphene/chain/hardfork.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hardfork_8hpp_1a13f47f000a7dd352ca026659e02a5b0e" prot="public" static="no">
+        <name>HARDFORK_538_TIME</name>
+        <initializer>(fc::time_point_sec( 1456250400 ))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/hardfork.hpp" line="73" column="9" bodyfile="libraries/chain/include/graphene/chain/hardfork.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hardfork_8hpp_1a2446c3982d4fd746ccae4e532c91cd65" prot="public" static="no">
+        <name>HARDFORK_555_TIME</name>
+        <initializer>(fc::time_point_sec( 1456250400 ))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/hardfork.hpp" line="77" column="9" bodyfile="libraries/chain/include/graphene/chain/hardfork.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hardfork_8hpp_1aaf24c47ee0c1f77a12d3186ca4df2086" prot="public" static="no">
+        <name>HARDFORK_563_TIME</name>
+        <initializer>(fc::time_point_sec( 1456250400 ))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/hardfork.hpp" line="81" column="9" bodyfile="libraries/chain/include/graphene/chain/hardfork.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hardfork_8hpp_1a7cdc1aa7889783d56415ab2ce2d2beb1" prot="public" static="no">
+        <name>HARDFORK_572_TIME</name>
+        <initializer>(fc::time_point_sec( 1456250400 ))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/hardfork.hpp" line="85" column="9" bodyfile="libraries/chain/include/graphene/chain/hardfork.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hardfork_8hpp_1af9b390b7c254b97526909bd57a833ae9" prot="public" static="no">
+        <name>HARDFORK_599_TIME</name>
+        <initializer>(fc::time_point_sec( 1459789200 ))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/hardfork.hpp" line="89" column="9" bodyfile="libraries/chain/include/graphene/chain/hardfork.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hardfork_8hpp_1a9dba395ba9610dbbe6d468ef903ccb49" prot="public" static="no">
+        <name>HARDFORK_607_TIME</name>
+        <initializer>(fc::time_point_sec( 1458752400 ))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/hardfork.hpp" line="93" column="9" bodyfile="libraries/chain/include/graphene/chain/hardfork.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hardfork_8hpp_1ac05424ec987ae0cb65c4d593c6821c7e" prot="public" static="no">
+        <name>HARDFORK_613_TIME</name>
+        <initializer>(fc::time_point_sec( 1458752400 ))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/hardfork.hpp" line="97" column="9" bodyfile="libraries/chain/include/graphene/chain/hardfork.hpp" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="hardfork_8hpp_1a4073b6006e04b193f23b65a3cdc880f0" prot="public" static="no">
+        <name>HARDFORK_615_TIME</name>
+        <initializer>(fc::time_point_sec( 1458752400 ))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/hardfork.hpp" line="101" column="9" bodyfile="libraries/chain/include/graphene/chain/hardfork.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/chain/include/graphene/chain/hardfork.hpp"/>
+  </compounddef>
+</doxygen>

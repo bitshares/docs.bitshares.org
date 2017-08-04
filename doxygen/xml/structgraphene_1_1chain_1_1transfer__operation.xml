@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1transfer__operation" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::transfer_operation</compoundname>
+    <basecompoundref refid="structgraphene_1_1chain_1_1base__operation" prot="public" virt="non-virtual">graphene::chain::base_operation</basecompoundref>
+    <includes refid="transfer_8hpp" local="no">transfer.hpp</includes>
+    <innerclass refid="structgraphene_1_1chain_1_1transfer__operation_1_1fee__parameters__type" prot="public">graphene::chain::transfer_operation::fee_parameters_type</innerclass>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1transfer__operation_1abe4dae3b100e79a7e51feec5d44f138d" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::transfer_operation::fee</definition>
+        <argsstring></argsstring>
+        <name>fee</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/transfer.hpp" line="51" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/transfer.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1transfer__operation_1aef2ea25c2682522b5552afcc04a8b5f9" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::transfer_operation::from</definition>
+        <argsstring></argsstring>
+        <name>from</name>
+        <briefdescription>
+<para>Account to transfer asset from. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/transfer.hpp" line="53" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/transfer.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1transfer__operation_1ae3341bdd125d31de62bb5e0956acad65" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::transfer_operation::to</definition>
+        <argsstring></argsstring>
+        <name>to</name>
+        <briefdescription>
+<para>Account to transfer asset to. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/transfer.hpp" line="55" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/transfer.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1transfer__operation_1a0f50da74901acd7af97df5eb0c9dd2bb" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::transfer_operation::amount</definition>
+        <argsstring></argsstring>
+        <name>amount</name>
+        <briefdescription>
+<para>The amount of asset to transfer from <ref refid="structgraphene_1_1chain_1_1transfer__operation_1aef2ea25c2682522b5552afcc04a8b5f9" kindref="member">from</ref> to <ref refid="structgraphene_1_1chain_1_1transfer__operation_1ae3341bdd125d31de62bb5e0956acad65" kindref="member">to</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/transfer.hpp" line="57" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/transfer.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1transfer__operation_1a32eb9713ef1bed77a2e690170e281de2" prot="public" static="no" mutable="no">
+        <type>optional&lt; <ref refid="structgraphene_1_1chain_1_1memo__data" kindref="compound">memo_data</ref> &gt;</type>
+        <definition>optional&lt;memo_data&gt; graphene::chain::transfer_operation::memo</definition>
+        <argsstring></argsstring>
+        <name>memo</name>
+        <briefdescription>
+<para>User provided data encrypted to the memo key of the &quot;to&quot; account. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/transfer.hpp" line="60" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/transfer.hpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1transfer__operation_1ad4acf8e4541b8df4e4d5b596a5ef63f9" prot="public" static="no" mutable="no">
+        <type><ref refid="group__operations_1gae0096750377f6e9d61dba5765284de99" kindref="member">extensions_type</ref></type>
+        <definition>extensions_type graphene::chain::transfer_operation::extensions</definition>
+        <argsstring></argsstring>
+        <name>extensions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/transfer.hpp" line="61" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/transfer.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1transfer__operation_1acd4eb1aa605232a9ce2ba79255fec604" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::transfer_operation::fee_payer</definition>
+        <argsstring>() const</argsstring>
+        <name>fee_payer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/transfer.hpp" line="63" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/transfer.hpp" bodystart="63" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1transfer__operation_1a4785876e2e526ec92ece0f171cd9682d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::transfer_operation::validate</definition>
+        <argsstring>() const</argsstring>
+        <name>validate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/transfer.hpp" line="64" column="1" bodyfile="libraries/chain/protocol/transfer.cpp" bodystart="37" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1transfer__operation_1abde67b05b64c76dd7e4297aba5476784" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+        <definition>share_type graphene::chain::transfer_operation::calculate_fee</definition>
+        <argsstring>(const fee_parameters_type &amp;k) const</argsstring>
+        <name>calculate_fee</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1transfer__operation_1_1fee__parameters__type" kindref="compound">fee_parameters_type</ref> &amp;</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/transfer.hpp" line="65" column="1" bodyfile="libraries/chain/protocol/transfer.cpp" bodystart="28" bodyend="34"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Transfers an amount of one asset from one account to another. </para>    </briefdescription>
+    <detaileddescription>
+<para>Fees are paid by the &quot;from&quot; account</para><para><simplesect kind="pre"><para>amount.amount &gt; 0 </para></simplesect>
+<simplesect kind="pre"><para>fee.amount &gt;= 0 </para></simplesect>
+<simplesect kind="pre"><para>from != to </para></simplesect>
+<simplesect kind="post"><para>from account&apos;s balance will be reduced by fee and amount </para></simplesect>
+<simplesect kind="post"><para>to account&apos;s balance will be increased by amount </para></simplesect>
+<simplesect kind="return"><para>n/a </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2815">
+        <label>graphene::chain::base_operation</label>
+        <link refid="structgraphene_1_1chain_1_1base__operation"/>
+      </node>
+      <node id="2814">
+        <label>graphene::chain::transfer_operation</label>
+        <link refid="structgraphene_1_1chain_1_1transfer__operation"/>
+        <childnode refid="2815" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2818">
+        <label>flat_set&lt; future_extensions &gt;</label>
+      </node>
+      <node id="2817">
+        <label>graphene::chain::base_operation</label>
+        <link refid="structgraphene_1_1chain_1_1base__operation"/>
+      </node>
+      <node id="2816">
+        <label>graphene::chain::transfer_operation</label>
+        <link refid="structgraphene_1_1chain_1_1transfer__operation"/>
+        <childnode refid="2817" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2818" relation="usage">
+          <edgelabel>extensions</edgelabel>
+        </childnode>
+        <childnode refid="2819" relation="usage">
+          <edgelabel>fee</edgelabel>
+          <edgelabel>amount</edgelabel>
+        </childnode>
+        <childnode refid="2821" relation="usage">
+          <edgelabel>memo</edgelabel>
+        </childnode>
+      </node>
+      <node id="2819">
+        <label>graphene::chain::asset</label>
+        <link refid="structgraphene_1_1chain_1_1asset"/>
+        <childnode refid="2820" relation="usage">
+          <edgelabel>amount</edgelabel>
+        </childnode>
+      </node>
+      <node id="2820">
+        <label>safe&lt; int64_t &gt;</label>
+      </node>
+      <node id="2821">
+        <label>optional&lt; graphene::chain::memo_data &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/protocol/transfer.hpp" line="45" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/transfer.hpp" bodystart="44" bodyend="66"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1transfer__operation_1a0f50da74901acd7af97df5eb0c9dd2bb" prot="public" virt="non-virtual"><scope>graphene::chain::transfer_operation</scope><name>amount</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a8947f5ff3ea0458c7fe981b5bb9e82b7" prot="public" virt="non-virtual"><scope>graphene::chain::transfer_operation</scope><name>calculate_data_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1transfer__operation_1abde67b05b64c76dd7e4297aba5476784" prot="public" virt="non-virtual"><scope>graphene::chain::transfer_operation</scope><name>calculate_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a18b678eb05bc5b30d75f10b398c07a91" prot="public" virt="non-virtual" ambiguityscope="graphene::chain::base_operation::"><scope>graphene::chain::transfer_operation</scope><name>calculate_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1transfer__operation_1ad4acf8e4541b8df4e4d5b596a5ef63f9" prot="public" virt="non-virtual"><scope>graphene::chain::transfer_operation</scope><name>extensions</name></member>
+      <member refid="structgraphene_1_1chain_1_1transfer__operation_1abe4dae3b100e79a7e51feec5d44f138d" prot="public" virt="non-virtual"><scope>graphene::chain::transfer_operation</scope><name>fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1transfer__operation_1acd4eb1aa605232a9ce2ba79255fec604" prot="public" virt="non-virtual"><scope>graphene::chain::transfer_operation</scope><name>fee_payer</name></member>
+      <member refid="structgraphene_1_1chain_1_1transfer__operation_1aef2ea25c2682522b5552afcc04a8b5f9" prot="public" virt="non-virtual"><scope>graphene::chain::transfer_operation</scope><name>from</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a1d398b2f68e1dca5f453b86655a64c41" prot="public" virt="non-virtual"><scope>graphene::chain::transfer_operation</scope><name>get_required_active_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1ac7e2861a01bbaef8fbe5c5dcf5e73b38" prot="public" virt="non-virtual"><scope>graphene::chain::transfer_operation</scope><name>get_required_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1aff6e2d2b66117c8c87f6a6e7e7ddba1f" prot="public" virt="non-virtual"><scope>graphene::chain::transfer_operation</scope><name>get_required_owner_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1transfer__operation_1a32eb9713ef1bed77a2e690170e281de2" prot="public" virt="non-virtual"><scope>graphene::chain::transfer_operation</scope><name>memo</name></member>
+      <member refid="structgraphene_1_1chain_1_1transfer__operation_1ae3341bdd125d31de62bb5e0956acad65" prot="public" virt="non-virtual"><scope>graphene::chain::transfer_operation</scope><name>to</name></member>
+      <member refid="structgraphene_1_1chain_1_1transfer__operation_1a4785876e2e526ec92ece0f171cd9682d" prot="public" virt="non-virtual"><scope>graphene::chain::transfer_operation</scope><name>validate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

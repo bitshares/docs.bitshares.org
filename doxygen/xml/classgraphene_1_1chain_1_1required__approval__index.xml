@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgraphene_1_1chain_1_1required__approval__index" kind="class" language="C++" prot="public">
+    <compoundname>graphene::chain::required_approval_index</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">secondary_index</basecompoundref>
+    <includes refid="proposal__object_8hpp" local="no">proposal_object.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1required__approval__index_1a45bf422073fcbe6c65a01183535004cd" prot="public" static="no" mutable="no">
+        <type>map&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref>, set&lt; <ref refid="namespacegraphene_1_1chain_1a2af50d1432f0f4faf76130e684982a0b" kindref="member">proposal_id_type</ref> &gt; &gt;</type>
+        <definition>map&lt;account_id_type, set&lt;proposal_id_type&gt; &gt; graphene::chain::required_approval_index::_account_to_proposals</definition>
+        <argsstring></argsstring>
+        <name>_account_to_proposals</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/proposal_object.hpp" line="78" column="1" bodyfile="libraries/chain/include/graphene/chain/proposal_object.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1required__approval__index_1a279d0b55a651894574a62e49db0ac260" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void graphene::chain::required_approval_index::object_inserted</definition>
+        <argsstring>(const object &amp;obj) override</argsstring>
+        <name>object_inserted</name>
+        <param>
+          <type>const object &amp;</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/proposal_object.hpp" line="71" column="1" bodyfile="libraries/chain/proposal_object.cpp" bodystart="54" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1required__approval__index_1aedceac62ad3a5954c03e057ee25598e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void graphene::chain::required_approval_index::object_removed</definition>
+        <argsstring>(const object &amp;obj) override</argsstring>
+        <name>object_removed</name>
+        <param>
+          <type>const object &amp;</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/proposal_object.hpp" line="72" column="1" bodyfile="libraries/chain/proposal_object.cpp" bodystart="80" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1required__approval__index_1ae21810effb2cd2db3459411c04eaacaf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void graphene::chain::required_approval_index::about_to_modify</definition>
+        <argsstring>(const object &amp;before) override</argsstring>
+        <name>about_to_modify</name>
+        <param>
+          <type>const object &amp;</type>
+          <declname>before</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/proposal_object.hpp" line="73" column="1" bodyfile="libraries/chain/include/graphene/chain/proposal_object.hpp" bodystart="73" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1required__approval__index_1a206367ce9e3c7d3e0348f62418d66d05" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void graphene::chain::required_approval_index::object_modified</definition>
+        <argsstring>(const object &amp;after) override</argsstring>
+        <name>object_modified</name>
+        <param>
+          <type>const object &amp;</type>
+          <declname>after</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/proposal_object.hpp" line="74" column="1" bodyfile="libraries/chain/include/graphene/chain/proposal_object.hpp" bodystart="74" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1required__approval__index_1a7a2607d68febfd8c5478ebe13ac365c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::required_approval_index::remove</definition>
+        <argsstring>(account_id_type a, proposal_id_type p)</argsstring>
+        <name>remove</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a2af50d1432f0f4faf76130e684982a0b" kindref="member">proposal_id_type</ref></type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/proposal_object.hpp" line="76" column="1" bodyfile="libraries/chain/proposal_object.cpp" bodystart="69" bodyend="78"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>tracks all of the proposal objects that requrie approval of an individual account. </para>    </briefdescription>
+    <detaileddescription>
+<para>This is a secondary index on the proposal_index</para><para><simplesect kind="note"><para>the set of required approvals is constant </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2593">
+        <label>secondary_index</label>
+      </node>
+      <node id="2592">
+        <label>graphene::chain::required_approval_index</label>
+        <link refid="classgraphene_1_1chain_1_1required__approval__index"/>
+        <childnode refid="2593" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2595">
+        <label>secondary_index</label>
+      </node>
+      <node id="2594">
+        <label>graphene::chain::required_approval_index</label>
+        <link refid="classgraphene_1_1chain_1_1required__approval__index"/>
+        <childnode refid="2595" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2596" relation="usage">
+          <edgelabel>_account_to_proposals</edgelabel>
+        </childnode>
+      </node>
+      <node id="2596">
+        <label>map&lt; account_id_type, set&lt; proposal_id_type &gt; &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/proposal_object.hpp" line="69" column="1" bodyfile="libraries/chain/include/graphene/chain/proposal_object.hpp" bodystart="68" bodyend="79"/>
+    <listofallmembers>
+      <member refid="classgraphene_1_1chain_1_1required__approval__index_1a45bf422073fcbe6c65a01183535004cd" prot="public" virt="non-virtual"><scope>graphene::chain::required_approval_index</scope><name>_account_to_proposals</name></member>
+      <member refid="classgraphene_1_1chain_1_1required__approval__index_1ae21810effb2cd2db3459411c04eaacaf" prot="public" virt="virtual"><scope>graphene::chain::required_approval_index</scope><name>about_to_modify</name></member>
+      <member refid="classgraphene_1_1chain_1_1required__approval__index_1a279d0b55a651894574a62e49db0ac260" prot="public" virt="virtual"><scope>graphene::chain::required_approval_index</scope><name>object_inserted</name></member>
+      <member refid="classgraphene_1_1chain_1_1required__approval__index_1a206367ce9e3c7d3e0348f62418d66d05" prot="public" virt="virtual"><scope>graphene::chain::required_approval_index</scope><name>object_modified</name></member>
+      <member refid="classgraphene_1_1chain_1_1required__approval__index_1aedceac62ad3a5954c03e057ee25598e5" prot="public" virt="virtual"><scope>graphene::chain::required_approval_index</scope><name>object_removed</name></member>
+      <member refid="classgraphene_1_1chain_1_1required__approval__index_1a7a2607d68febfd8c5478ebe13ac365c2" prot="public" virt="non-virtual"><scope>graphene::chain::required_approval_index</scope><name>remove</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

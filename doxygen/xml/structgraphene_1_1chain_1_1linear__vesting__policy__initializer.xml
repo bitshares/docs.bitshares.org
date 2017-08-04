@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1linear__vesting__policy__initializer" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::linear_vesting_policy_initializer</compoundname>
+    <includes refid="vesting_8hpp" local="no">vesting.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1linear__vesting__policy__initializer_1a35a7bcd9b4638752a080943a11f654ba" prot="public" static="no" mutable="no">
+        <type>fc::time_point_sec</type>
+        <definition>fc::time_point_sec graphene::chain::linear_vesting_policy_initializer::begin_timestamp</definition>
+        <argsstring></argsstring>
+        <name>begin_timestamp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>while vesting begins on begin_timestamp, none may be claimed before vesting_cliff_seconds have passed </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/vesting.hpp" line="32" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/vesting.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1linear__vesting__policy__initializer_1a051c2a234532ccb64f6364e23fc76c5f" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t graphene::chain::linear_vesting_policy_initializer::vesting_cliff_seconds</definition>
+        <argsstring></argsstring>
+        <name>vesting_cliff_seconds</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/vesting.hpp" line="33" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/vesting.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1linear__vesting__policy__initializer_1a15584195f6e38ce4aaae2302f9e77653" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t graphene::chain::linear_vesting_policy_initializer::vesting_duration_seconds</definition>
+        <argsstring></argsstring>
+        <name>vesting_duration_seconds</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/vesting.hpp" line="34" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/vesting.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2201">
+        <label>time_point_sec</label>
+      </node>
+      <node id="2200">
+        <label>graphene::chain::linear_vesting_policy_initializer</label>
+        <link refid="structgraphene_1_1chain_1_1linear__vesting__policy__initializer"/>
+        <childnode refid="2201" relation="usage">
+          <edgelabel>begin_timestamp</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/protocol/vesting.hpp" line="30" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/vesting.hpp" bodystart="29" bodyend="35"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1linear__vesting__policy__initializer_1a35a7bcd9b4638752a080943a11f654ba" prot="public" virt="non-virtual"><scope>graphene::chain::linear_vesting_policy_initializer</scope><name>begin_timestamp</name></member>
+      <member refid="structgraphene_1_1chain_1_1linear__vesting__policy__initializer_1a051c2a234532ccb64f6364e23fc76c5f" prot="public" virt="non-virtual"><scope>graphene::chain::linear_vesting_policy_initializer</scope><name>vesting_cliff_seconds</name></member>
+      <member refid="structgraphene_1_1chain_1_1linear__vesting__policy__initializer_1a15584195f6e38ce4aaae2302f9e77653" prot="public" virt="non-virtual"><scope>graphene::chain::linear_vesting_policy_initializer</scope><name>vesting_duration_seconds</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

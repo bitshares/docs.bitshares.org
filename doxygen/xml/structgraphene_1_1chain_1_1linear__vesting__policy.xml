@@ -1,0 +1,219 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1linear__vesting__policy" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::linear_vesting_policy</compoundname>
+    <includes refid="vesting__balance__object_8hpp" local="no">vesting_balance_object.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1linear__vesting__policy_1ac9992ad7cd1bbe9eb391493e7bce83b8" prot="public" static="no" mutable="no">
+        <type>fc::time_point_sec</type>
+        <definition>fc::time_point_sec graphene::chain::linear_vesting_policy::begin_timestamp</definition>
+        <argsstring></argsstring>
+        <name>begin_timestamp</name>
+        <briefdescription>
+<para>This is the time at which funds begin vesting. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="66" column="1" bodyfile="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1linear__vesting__policy_1adab0e97b11abddc3dc2f6d85247420d3" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t graphene::chain::linear_vesting_policy::vesting_cliff_seconds</definition>
+        <argsstring></argsstring>
+        <name>vesting_cliff_seconds</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>No amount may be withdrawn before this many seconds of the vesting period have elapsed. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="68" column="1" bodyfile="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1linear__vesting__policy_1a70ed3be63f0e6dd8b01d1a401d5262b6" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t graphene::chain::linear_vesting_policy::vesting_duration_seconds</definition>
+        <argsstring></argsstring>
+        <name>vesting_duration_seconds</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Duration of the vesting period, in seconds. Must be greater than 0 and greater than vesting_cliff_seconds. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="70" column="1" bodyfile="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1linear__vesting__policy_1ab3f3542a5f32fe04cd18b0d2b8350479" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+        <definition>share_type graphene::chain::linear_vesting_policy::begin_balance</definition>
+        <argsstring></argsstring>
+        <name>begin_balance</name>
+        <briefdescription>
+<para>The total amount of asset to vest. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="72" column="1" bodyfile="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1linear__vesting__policy_1a8067d85502f9ec742d838fd6f80bb84a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::linear_vesting_policy::get_allowed_withdraw</definition>
+        <argsstring>(const vesting_policy_context &amp;ctx) const</argsstring>
+        <name>get_allowed_withdraw</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1vesting__policy__context" kindref="compound">vesting_policy_context</ref> &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="74" column="1" bodyfile="libraries/chain/vesting_balance_object.cpp" bodystart="37" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1linear__vesting__policy_1af6fa2854f6001694eb62c26b08442a18" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::linear_vesting_policy::is_deposit_allowed</definition>
+        <argsstring>(const vesting_policy_context &amp;ctx) const</argsstring>
+        <name>is_deposit_allowed</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1vesting__policy__context" kindref="compound">vesting_policy_context</ref> &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="75" column="1" bodyfile="libraries/chain/vesting_balance_object.cpp" bodystart="74" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1linear__vesting__policy_1a83f02c3cd00cb193124c213ef6451262" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::linear_vesting_policy::is_deposit_vested_allowed</definition>
+        <argsstring>(const vesting_policy_context &amp;) const</argsstring>
+        <name>is_deposit_vested_allowed</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1vesting__policy__context" kindref="compound">vesting_policy_context</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="76" column="1" bodyfile="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" bodystart="76" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1linear__vesting__policy_1a950cca4bcfe98b2efa3bf84ebda0a2da" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::linear_vesting_policy::is_withdraw_allowed</definition>
+        <argsstring>(const vesting_policy_context &amp;ctx) const</argsstring>
+        <name>is_withdraw_allowed</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1vesting__policy__context" kindref="compound">vesting_policy_context</ref> &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="77" column="1" bodyfile="libraries/chain/vesting_balance_object.cpp" bodystart="84" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1linear__vesting__policy_1ab08b93ac0a5082dbeeaed1c903a8cc4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::linear_vesting_policy::on_deposit</definition>
+        <argsstring>(const vesting_policy_context &amp;ctx)</argsstring>
+        <name>on_deposit</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1vesting__policy__context" kindref="compound">vesting_policy_context</ref> &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="78" column="1" bodyfile="libraries/chain/vesting_balance_object.cpp" bodystart="70" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1linear__vesting__policy_1a507404f11be8a9f3ec72b69fea12667a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::linear_vesting_policy::on_deposit_vested</definition>
+        <argsstring>(const vesting_policy_context &amp;)</argsstring>
+        <name>on_deposit_vested</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1vesting__policy__context" kindref="compound">vesting_policy_context</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="79" column="1" bodyfile="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" bodystart="79" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1linear__vesting__policy_1a6e38f1307201d96080804e26b920f575" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::linear_vesting_policy::on_withdraw</definition>
+        <argsstring>(const vesting_policy_context &amp;ctx)</argsstring>
+        <name>on_withdraw</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1vesting__policy__context" kindref="compound">vesting_policy_context</ref> &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="81" column="1" bodyfile="libraries/chain/vesting_balance_object.cpp" bodystart="80" bodyend="82"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Linear vesting balance with cliff. </para>    </briefdescription>
+    <detaileddescription>
+<para>This vesting balance type is used to mimic traditional stock vesting contracts where each day a certain amount vests until it is fully matured.</para><para><simplesect kind="note"><para>New funds may not be added to a linear vesting balance. </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="2197">
+        <label>time_point_sec</label>
+      </node>
+      <node id="2196">
+        <label>graphene::chain::linear_vesting_policy</label>
+        <link refid="structgraphene_1_1chain_1_1linear__vesting__policy"/>
+        <childnode refid="2197" relation="usage">
+          <edgelabel>begin_timestamp</edgelabel>
+        </childnode>
+        <childnode refid="2198" relation="usage">
+          <edgelabel>begin_balance</edgelabel>
+        </childnode>
+      </node>
+      <node id="2198">
+        <label>safe&lt; int64_t &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="64" column="1" bodyfile="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" bodystart="63" bodyend="82"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1linear__vesting__policy_1ab3f3542a5f32fe04cd18b0d2b8350479" prot="public" virt="non-virtual"><scope>graphene::chain::linear_vesting_policy</scope><name>begin_balance</name></member>
+      <member refid="structgraphene_1_1chain_1_1linear__vesting__policy_1ac9992ad7cd1bbe9eb391493e7bce83b8" prot="public" virt="non-virtual"><scope>graphene::chain::linear_vesting_policy</scope><name>begin_timestamp</name></member>
+      <member refid="structgraphene_1_1chain_1_1linear__vesting__policy_1a8067d85502f9ec742d838fd6f80bb84a" prot="public" virt="non-virtual"><scope>graphene::chain::linear_vesting_policy</scope><name>get_allowed_withdraw</name></member>
+      <member refid="structgraphene_1_1chain_1_1linear__vesting__policy_1af6fa2854f6001694eb62c26b08442a18" prot="public" virt="non-virtual"><scope>graphene::chain::linear_vesting_policy</scope><name>is_deposit_allowed</name></member>
+      <member refid="structgraphene_1_1chain_1_1linear__vesting__policy_1a83f02c3cd00cb193124c213ef6451262" prot="public" virt="non-virtual"><scope>graphene::chain::linear_vesting_policy</scope><name>is_deposit_vested_allowed</name></member>
+      <member refid="structgraphene_1_1chain_1_1linear__vesting__policy_1a950cca4bcfe98b2efa3bf84ebda0a2da" prot="public" virt="non-virtual"><scope>graphene::chain::linear_vesting_policy</scope><name>is_withdraw_allowed</name></member>
+      <member refid="structgraphene_1_1chain_1_1linear__vesting__policy_1ab08b93ac0a5082dbeeaed1c903a8cc4e" prot="public" virt="non-virtual"><scope>graphene::chain::linear_vesting_policy</scope><name>on_deposit</name></member>
+      <member refid="structgraphene_1_1chain_1_1linear__vesting__policy_1a507404f11be8a9f3ec72b69fea12667a" prot="public" virt="non-virtual"><scope>graphene::chain::linear_vesting_policy</scope><name>on_deposit_vested</name></member>
+      <member refid="structgraphene_1_1chain_1_1linear__vesting__policy_1a6e38f1307201d96080804e26b920f575" prot="public" virt="non-virtual"><scope>graphene::chain::linear_vesting_policy</scope><name>on_withdraw</name></member>
+      <member refid="structgraphene_1_1chain_1_1linear__vesting__policy_1adab0e97b11abddc3dc2f6d85247420d3" prot="public" virt="non-virtual"><scope>graphene::chain::linear_vesting_policy</scope><name>vesting_cliff_seconds</name></member>
+      <member refid="structgraphene_1_1chain_1_1linear__vesting__policy_1a70ed3be63f0e6dd8b01d1a401d5262b6" prot="public" virt="non-virtual"><scope>graphene::chain::linear_vesting_policy</scope><name>vesting_duration_seconds</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

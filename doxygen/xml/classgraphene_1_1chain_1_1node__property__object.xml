@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgraphene_1_1chain_1_1node__property__object" kind="class" language="C++" prot="public">
+    <compoundname>graphene::chain::node_property_object</compoundname>
+    <includes refid="node__property__object_8hpp" local="no">node_property_object.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1node__property__object_1afa38644ba610ec9aa152f94c8dd3e37e" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t graphene::chain::node_property_object::skip_flags</definition>
+        <argsstring></argsstring>
+        <name>skip_flags</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/node_property_object.hpp" line="45" column="1" bodyfile="libraries/chain/include/graphene/chain/node_property_object.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1node__property__object_1abf4557405b15ed5cc34226d807efb73e" prot="public" static="no" mutable="no">
+        <type>std::map&lt; <ref refid="namespacegraphene_1_1chain_1a314b030d7a6107c5641fd9945da7f568" kindref="member">block_id_type</ref>, std::vector&lt; fc::variant_object &gt; &gt;</type>
+        <definition>std::map&lt; block_id_type, std::vector&lt; fc::variant_object &gt; &gt; graphene::chain::node_property_object::debug_updates</definition>
+        <argsstring></argsstring>
+        <name>debug_updates</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/node_property_object.hpp" line="46" column="1" bodyfile="libraries/chain/include/graphene/chain/node_property_object.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1node__property__object_1aff79626702f52b398daf96fb064c1bfc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>graphene::chain::node_property_object::node_property_object</definition>
+        <argsstring>()</argsstring>
+        <name>node_property_object</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/node_property_object.hpp" line="42" column="1" bodyfile="libraries/chain/include/graphene/chain/node_property_object.hpp" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1node__property__object_1a02a156e080b7c644b6dab640c478e569" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>graphene::chain::node_property_object::~node_property_object</definition>
+        <argsstring>()</argsstring>
+        <name>~node_property_object</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/node_property_object.hpp" line="43" column="1" bodyfile="libraries/chain/include/graphene/chain/node_property_object.hpp" bodystart="43" bodyend="43"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Contains per-node database configuration. </para>    </briefdescription>
+    <detaileddescription>
+<para>Transactions are evaluated differently based on per-node state. Settings here may change based on whether the node is syncing or up-to-date. Or whether the node is a witness node. Or if we&apos;re processing a transaction in a witness-signed block vs. a fresh transaction from the p2p network. Or configuration-specified tradeoffs of performance/hardfork resilience vs. paranoia. </para>    </detaileddescription>
+    <location file="libraries/chain/include/graphene/chain/node_property_object.hpp" line="40" column="1" bodyfile="libraries/chain/include/graphene/chain/node_property_object.hpp" bodystart="39" bodyend="47"/>
+    <listofallmembers>
+      <member refid="classgraphene_1_1chain_1_1node__property__object_1abf4557405b15ed5cc34226d807efb73e" prot="public" virt="non-virtual"><scope>graphene::chain::node_property_object</scope><name>debug_updates</name></member>
+      <member refid="classgraphene_1_1chain_1_1node__property__object_1aff79626702f52b398daf96fb064c1bfc" prot="public" virt="non-virtual"><scope>graphene::chain::node_property_object</scope><name>node_property_object</name></member>
+      <member refid="classgraphene_1_1chain_1_1node__property__object_1afa38644ba610ec9aa152f94c8dd3e37e" prot="public" virt="non-virtual"><scope>graphene::chain::node_property_object</scope><name>skip_flags</name></member>
+      <member refid="classgraphene_1_1chain_1_1node__property__object_1a02a156e080b7c644b6dab640c478e569" prot="public" virt="non-virtual"><scope>graphene::chain::node_property_object</scope><name>~node_property_object</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

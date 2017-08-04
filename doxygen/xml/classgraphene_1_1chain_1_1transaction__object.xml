@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgraphene_1_1chain_1_1transaction__object" kind="class" language="C++" prot="public">
+    <compoundname>graphene::chain::transaction_object</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">graphene::db::abstract_object&lt; transaction_object &gt;</basecompoundref>
+    <includes refid="transaction__object_8hpp" local="no">transaction_object.hpp</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1transaction__object_1aa597c348140f09dcc0e4c7ed69a41ca9" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t graphene::chain::transaction_object::space_id</definition>
+        <argsstring></argsstring>
+        <name>space_id</name>
+        <initializer>= <ref refid="namespacegraphene_1_1chain_1a92e55d4242187696c5e2c5eaafbd9400a81f35c04f1d3f3109dacaa6f2bef33c7" kindref="member">implementation_ids</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/transaction_object.hpp" line="50" column="1" bodyfile="libraries/chain/include/graphene/chain/transaction_object.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1transaction__object_1aa06e45f1031a19e48f94c5a73fbc7f56" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t graphene::chain::transaction_object::type_id</definition>
+        <argsstring></argsstring>
+        <name>type_id</name>
+        <initializer>= <ref refid="namespacegraphene_1_1chain_1ad3bef2f100b722a6c30fada38f6dcd73a368561f04146a9649902faa8b016b5aa" kindref="member">impl_transaction_object_type</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/transaction_object.hpp" line="51" column="1" bodyfile="libraries/chain/include/graphene/chain/transaction_object.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1transaction__object_1a4e8cf483725517a654686544358f93a8" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+        <definition>signed_transaction graphene::chain::transaction_object::trx</definition>
+        <argsstring></argsstring>
+        <name>trx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/transaction_object.hpp" line="53" column="1" bodyfile="libraries/chain/include/graphene/chain/transaction_object.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1transaction__object_1aa5981d82b7cfc6766e69f911f17a43ad" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1adc38ef0a36d8b8dfcef2cbbcacb6d1e8" kindref="member">transaction_id_type</ref></type>
+        <definition>transaction_id_type graphene::chain::transaction_object::trx_id</definition>
+        <argsstring></argsstring>
+        <name>trx_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/transaction_object.hpp" line="54" column="1" bodyfile="libraries/chain/include/graphene/chain/transaction_object.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1transaction__object_1ab11da549204dd6cb23f5b40c0d402275" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>time_point_sec</type>
+        <definition>time_point_sec graphene::chain::transaction_object::get_expiration</definition>
+        <argsstring>() const</argsstring>
+        <name>get_expiration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/transaction_object.hpp" line="56" column="1" bodyfile="libraries/chain/include/graphene/chain/transaction_object.hpp" bodystart="56" bodyend="56"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>The purpose of this object is to enable the detection of duplicate transactions. When a transaction is included in a block a <ref refid="classgraphene_1_1chain_1_1transaction__object" kindref="compound">transaction_object</ref> is added. At the end of block processing all transaction_objects that have expired can be removed from the index. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="2709">
+        <label>graphene::db::abstract_object&lt; transaction_object &gt;</label>
+      </node>
+      <node id="2708">
+        <label>graphene::chain::transaction_object</label>
+        <link refid="classgraphene_1_1chain_1_1transaction__object"/>
+        <childnode refid="2709" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2715">
+        <label>time_point_sec</label>
+      </node>
+      <node id="2714">
+        <label>flat_set&lt; future_extensions &gt;</label>
+      </node>
+      <node id="2711">
+        <label>graphene::db::abstract_object&lt; transaction_object &gt;</label>
+      </node>
+      <node id="2717">
+        <label>vector&lt; signature_type &gt;</label>
+      </node>
+      <node id="2712">
+        <label>graphene::chain::signed_transaction</label>
+        <link refid="structgraphene_1_1chain_1_1signed__transaction"/>
+        <childnode refid="2713" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2717" relation="usage">
+          <edgelabel>signatures</edgelabel>
+        </childnode>
+      </node>
+      <node id="2716">
+        <label>vector&lt; operation &gt;</label>
+      </node>
+      <node id="2713">
+        <label>graphene::chain::transaction</label>
+        <link refid="structgraphene_1_1chain_1_1transaction"/>
+        <childnode refid="2714" relation="usage">
+          <edgelabel>extensions</edgelabel>
+        </childnode>
+        <childnode refid="2715" relation="usage">
+          <edgelabel>expiration</edgelabel>
+        </childnode>
+        <childnode refid="2716" relation="usage">
+          <edgelabel>operations</edgelabel>
+        </childnode>
+      </node>
+      <node id="2710">
+        <label>graphene::chain::transaction_object</label>
+        <link refid="classgraphene_1_1chain_1_1transaction__object"/>
+        <childnode refid="2711" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2712" relation="usage">
+          <edgelabel>trx</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/transaction_object.hpp" line="48" column="1" bodyfile="libraries/chain/include/graphene/chain/transaction_object.hpp" bodystart="47" bodyend="57"/>
+    <listofallmembers>
+      <member refid="classgraphene_1_1chain_1_1transaction__object_1ab11da549204dd6cb23f5b40c0d402275" prot="public" virt="non-virtual"><scope>graphene::chain::transaction_object</scope><name>get_expiration</name></member>
+      <member refid="classgraphene_1_1chain_1_1transaction__object_1aa597c348140f09dcc0e4c7ed69a41ca9" prot="public" virt="non-virtual"><scope>graphene::chain::transaction_object</scope><name>space_id</name></member>
+      <member refid="classgraphene_1_1chain_1_1transaction__object_1a4e8cf483725517a654686544358f93a8" prot="public" virt="non-virtual"><scope>graphene::chain::transaction_object</scope><name>trx</name></member>
+      <member refid="classgraphene_1_1chain_1_1transaction__object_1aa5981d82b7cfc6766e69f911f17a43ad" prot="public" virt="non-virtual"><scope>graphene::chain::transaction_object</scope><name>trx_id</name></member>
+      <member refid="classgraphene_1_1chain_1_1transaction__object_1aa06e45f1031a19e48f94c5a73fbc7f56" prot="public" virt="non-virtual"><scope>graphene::chain::transaction_object</scope><name>type_id</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

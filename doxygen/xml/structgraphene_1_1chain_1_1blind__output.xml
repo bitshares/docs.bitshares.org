@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1blind__output" kind="class" language="C++" prot="public">
+    <compoundname>graphene::chain::blind_output</compoundname>
+    <includes refid="confidential_8hpp" local="no">confidential.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1blind__output_1aea994b702b69923303916ed83341ebb3" prot="public" static="no" mutable="no">
+        <type>fc::ecc::commitment_type</type>
+        <definition>fc::ecc::commitment_type graphene::chain::blind_output::commitment</definition>
+        <argsstring></argsstring>
+        <name>commitment</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/confidential.hpp" line="135" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/confidential.hpp" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1blind__output_1ae57e1ce0cfbb8bcd43171fcfa553fe30" prot="public" static="no" mutable="no">
+        <type>range_proof_type</type>
+        <definition>range_proof_type graphene::chain::blind_output::range_proof</definition>
+        <argsstring></argsstring>
+        <name>range_proof</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>only required if there is more than one blind output </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/confidential.hpp" line="137" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/confidential.hpp" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1blind__output_1a977127ab085d1a3e854b88714d4a6bef" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1authority" kindref="compound">authority</ref></type>
+        <definition>authority graphene::chain::blind_output::owner</definition>
+        <argsstring></argsstring>
+        <name>owner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/confidential.hpp" line="138" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/confidential.hpp" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1blind__output_1a952918e5c6407dde74833b26e0411da7" prot="public" static="no" mutable="no">
+        <type>optional&lt; <ref refid="structgraphene_1_1chain_1_1stealth__confirmation" kindref="compound">stealth_confirmation</ref> &gt;</type>
+        <definition>optional&lt;stealth_confirmation&gt; graphene::chain::blind_output::stealth_memo</definition>
+        <argsstring></argsstring>
+        <name>stealth_memo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/confidential.hpp" line="139" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/confidential.hpp" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Defines data required to create a new blind commitment</para><para>The blinded output that must be proven to be greater than 0. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1164">
+        <label>range_proof_type</label>
+      </node>
+      <node id="1168">
+        <label>flat_map&lt; graphene::chain::address, weight_type &gt;</label>
+      </node>
+      <node id="1170">
+        <label>commitment_type</label>
+      </node>
+      <node id="1165">
+        <label>graphene::chain::authority</label>
+        <link refid="structgraphene_1_1chain_1_1authority"/>
+        <childnode refid="1166" relation="usage">
+          <edgelabel>key_auths</edgelabel>
+        </childnode>
+        <childnode refid="1167" relation="usage">
+          <edgelabel>account_auths</edgelabel>
+        </childnode>
+        <childnode refid="1168" relation="usage">
+          <edgelabel>address_auths</edgelabel>
+        </childnode>
+      </node>
+      <node id="1169">
+        <label>optional&lt; graphene::chain::stealth_confirmation &gt;</label>
+      </node>
+      <node id="1166">
+        <label>flat_map&lt; graphene::chain::public_key_type, weight_type &gt;</label>
+      </node>
+      <node id="1163">
+        <label>graphene::chain::blind_output</label>
+        <link refid="structgraphene_1_1chain_1_1blind__output"/>
+        <childnode refid="1164" relation="usage">
+          <edgelabel>range_proof</edgelabel>
+        </childnode>
+        <childnode refid="1165" relation="usage">
+          <edgelabel>owner</edgelabel>
+        </childnode>
+        <childnode refid="1169" relation="usage">
+          <edgelabel>stealth_memo</edgelabel>
+        </childnode>
+        <childnode refid="1170" relation="usage">
+          <edgelabel>commitment</edgelabel>
+        </childnode>
+      </node>
+      <node id="1167">
+        <label>flat_map&lt; account_id_type, weight_type &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/protocol/confidential.hpp" line="134" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/confidential.hpp" bodystart="133" bodyend="140"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1blind__output_1aea994b702b69923303916ed83341ebb3" prot="public" virt="non-virtual"><scope>graphene::chain::blind_output</scope><name>commitment</name></member>
+      <member refid="structgraphene_1_1chain_1_1blind__output_1a977127ab085d1a3e854b88714d4a6bef" prot="public" virt="non-virtual"><scope>graphene::chain::blind_output</scope><name>owner</name></member>
+      <member refid="structgraphene_1_1chain_1_1blind__output_1ae57e1ce0cfbb8bcd43171fcfa553fe30" prot="public" virt="non-virtual"><scope>graphene::chain::blind_output</scope><name>range_proof</name></member>
+      <member refid="structgraphene_1_1chain_1_1blind__output_1a952918e5c6407dde74833b26e0411da7" prot="public" virt="non-virtual"><scope>graphene::chain::blind_output</scope><name>stealth_memo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

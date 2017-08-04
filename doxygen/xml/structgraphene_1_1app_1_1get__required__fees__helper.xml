@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1app_1_1get__required__fees__helper" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::app::get_required_fees_helper</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1app_1_1get__required__fees__helper_1a5bc988de7f812f1e17f07655f9321cb1" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structgraphene_1_1chain_1_1fee__schedule" kindref="compound">fee_schedule</ref> &amp;</type>
+        <definition>const fee_schedule&amp; graphene::app::get_required_fees_helper::current_fee_schedule</definition>
+        <argsstring></argsstring>
+        <name>current_fee_schedule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="1750" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1750" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1app_1_1get__required__fees__helper_1ac4e834bd0ce40f5f222474d3ee019365" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structgraphene_1_1chain_1_1price" kindref="compound">price</ref> &amp;</type>
+        <definition>const price&amp; graphene::app::get_required_fees_helper::core_exchange_rate</definition>
+        <argsstring></argsstring>
+        <name>core_exchange_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="1751" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1751" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1app_1_1get__required__fees__helper_1ae802e908e9b2e2b48d27ceb44b250b57" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t graphene::app::get_required_fees_helper::max_recursion</definition>
+        <argsstring></argsstring>
+        <name>max_recursion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="1752" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1752" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1app_1_1get__required__fees__helper_1abd43b89fd52416214e6db3201cb6a21b" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t graphene::app::get_required_fees_helper::current_recursion</definition>
+        <argsstring></argsstring>
+        <name>current_recursion</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="1753" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1753" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__required__fees__helper_1a6b39af944be0033c16f390f54531136c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>graphene::app::get_required_fees_helper::get_required_fees_helper</definition>
+        <argsstring>(const fee_schedule &amp;_current_fee_schedule, const price &amp;_core_exchange_rate, uint32_t _max_recursion)</argsstring>
+        <name>get_required_fees_helper</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1fee__schedule" kindref="compound">fee_schedule</ref> &amp;</type>
+          <declname>_current_fee_schedule</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1price" kindref="compound">price</ref> &amp;</type>
+          <declname>_core_exchange_rate</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>_max_recursion</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="1706" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1706" bodyend="1714"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__required__fees__helper_1a9e5ab420a79a88dbe18bc478ec0fc7a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>fc::variant</type>
+        <definition>fc::variant graphene::app::get_required_fees_helper::set_op_fees</definition>
+        <argsstring>(operation &amp;op)</argsstring>
+        <name>set_op_fees</name>
+        <param>
+          <type><ref refid="group__operations_1ga8b0400e40715f7fd1608ab2dc3d6d401" kindref="member">operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="1716" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1716" bodyend="1729"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__required__fees__helper_1a146efa12486eb3c1a27fc5dc1fe7eac6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>fc::variant</type>
+        <definition>fc::variant graphene::app::get_required_fees_helper::set_proposal_create_op_fees</definition>
+        <argsstring>(operation &amp;proposal_create_op)</argsstring>
+        <name>set_proposal_create_op_fees</name>
+        <param>
+          <type><ref refid="group__operations_1ga8b0400e40715f7fd1608ab2dc3d6d401" kindref="member">operation</ref> &amp;</type>
+          <declname>proposal_create_op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/database_api.cpp" line="1731" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1731" bodyend="1748"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Container method for mutually recursive functions used to implement get_required_fees() with potentially nested proposals. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="1997">
+        <label>graphene::app::get_required_fees_helper</label>
+        <link refid="structgraphene_1_1app_1_1get__required__fees__helper"/>
+        <childnode refid="1998" relation="usage">
+          <edgelabel>current_fee_schedule</edgelabel>
+        </childnode>
+        <childnode refid="2000" relation="usage">
+          <edgelabel>core_exchange_rate</edgelabel>
+        </childnode>
+      </node>
+      <node id="2000">
+        <label>graphene::chain::price</label>
+        <link refid="structgraphene_1_1chain_1_1price"/>
+        <childnode refid="2001" relation="usage">
+          <edgelabel>base</edgelabel>
+          <edgelabel>quote</edgelabel>
+        </childnode>
+      </node>
+      <node id="1999">
+        <label>flat_set&lt; fee_parameters &gt;</label>
+      </node>
+      <node id="1998">
+        <label>graphene::chain::fee_schedule</label>
+        <link refid="structgraphene_1_1chain_1_1fee__schedule"/>
+        <childnode refid="1999" relation="usage">
+          <edgelabel>parameters</edgelabel>
+        </childnode>
+      </node>
+      <node id="2001">
+        <label>graphene::chain::asset</label>
+        <link refid="structgraphene_1_1chain_1_1asset"/>
+        <childnode refid="2002" relation="usage">
+          <edgelabel>amount</edgelabel>
+        </childnode>
+      </node>
+      <node id="2002">
+        <label>safe&lt; int64_t &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/app/database_api.cpp" line="1705" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1704" bodyend="1754"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1app_1_1get__required__fees__helper_1ac4e834bd0ce40f5f222474d3ee019365" prot="public" virt="non-virtual"><scope>graphene::app::get_required_fees_helper</scope><name>core_exchange_rate</name></member>
+      <member refid="structgraphene_1_1app_1_1get__required__fees__helper_1a5bc988de7f812f1e17f07655f9321cb1" prot="public" virt="non-virtual"><scope>graphene::app::get_required_fees_helper</scope><name>current_fee_schedule</name></member>
+      <member refid="structgraphene_1_1app_1_1get__required__fees__helper_1abd43b89fd52416214e6db3201cb6a21b" prot="public" virt="non-virtual"><scope>graphene::app::get_required_fees_helper</scope><name>current_recursion</name></member>
+      <member refid="structgraphene_1_1app_1_1get__required__fees__helper_1a6b39af944be0033c16f390f54531136c" prot="public" virt="non-virtual"><scope>graphene::app::get_required_fees_helper</scope><name>get_required_fees_helper</name></member>
+      <member refid="structgraphene_1_1app_1_1get__required__fees__helper_1ae802e908e9b2e2b48d27ceb44b250b57" prot="public" virt="non-virtual"><scope>graphene::app::get_required_fees_helper</scope><name>max_recursion</name></member>
+      <member refid="structgraphene_1_1app_1_1get__required__fees__helper_1a9e5ab420a79a88dbe18bc478ec0fc7a8" prot="public" virt="non-virtual"><scope>graphene::app::get_required_fees_helper</scope><name>set_op_fees</name></member>
+      <member refid="structgraphene_1_1app_1_1get__required__fees__helper_1a146efa12486eb3c1a27fc5dc1fe7eac6" prot="public" virt="non-virtual"><scope>graphene::app::get_required_fees_helper</scope><name>set_proposal_create_op_fees</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

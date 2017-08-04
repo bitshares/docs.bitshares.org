@@ -1,0 +1,301 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1transaction" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::transaction</compoundname>
+    <derivedcompoundref refid="structgraphene_1_1chain_1_1signed__transaction" prot="public" virt="non-virtual">graphene::chain::signed_transaction</derivedcompoundref>
+    <includes refid="transaction_8hpp" local="no">transaction.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1transaction_1a3c3667e1bb02ad8f694f41206436e9cf" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t graphene::chain::transaction::ref_block_num</definition>
+        <argsstring></argsstring>
+        <name>ref_block_num</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Least significant 16 bits from the reference block number. If relative_expiration is zero, this field must be zero as well. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/transaction.hpp" line="71" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/transaction.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1transaction_1afcebf54b05d6254e6ea53aecdd075975" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t graphene::chain::transaction::ref_block_prefix</definition>
+        <argsstring></argsstring>
+        <name>ref_block_prefix</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The first non-block-number 32-bits of the reference block ID. Recall that block IDs have 32 bits of block number followed by the actual block hash, so this field should be set using the second 32 bits in the <ref refid="namespacegraphene_1_1chain_1a314b030d7a6107c5641fd9945da7f568" kindref="member">block_id_type</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/transaction.hpp" line="77" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/transaction.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1transaction_1a31fbf0cfaa89497d13fc35fb51319a32" prot="public" static="no" mutable="no">
+        <type>fc::time_point_sec</type>
+        <definition>fc::time_point_sec graphene::chain::transaction::expiration</definition>
+        <argsstring></argsstring>
+        <name>expiration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This field specifies the absolute expiration for this transaction. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/transaction.hpp" line="82" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/transaction.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1transaction_1a8013003bb366e3a6a7f61eae96cd1281" prot="public" static="no" mutable="no">
+        <type>vector&lt; <ref refid="group__operations_1ga8b0400e40715f7fd1608ab2dc3d6d401" kindref="member">operation</ref> &gt;</type>
+        <definition>vector&lt;operation&gt; graphene::chain::transaction::operations</definition>
+        <argsstring></argsstring>
+        <name>operations</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/transaction.hpp" line="84" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/transaction.hpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1transaction_1a4f405d9c07b4655ef38e4388852caf38" prot="public" static="no" mutable="no">
+        <type><ref refid="group__operations_1gae0096750377f6e9d61dba5765284de99" kindref="member">extensions_type</ref></type>
+        <definition>extensions_type graphene::chain::transaction::extensions</definition>
+        <argsstring></argsstring>
+        <name>extensions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/transaction.hpp" line="85" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/transaction.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1transaction_1aba25fb0435684c2088b0d0ae5e0d27d2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1a575e2ea493a5e8f4d2888ee753084596" kindref="member">digest_type</ref></type>
+        <definition>digest_type graphene::chain::transaction::digest</definition>
+        <argsstring>() const</argsstring>
+        <name>digest</name>
+        <briefdescription>
+<para>Calculate the digest for a transaction. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/transaction.hpp" line="88" column="1" bodyfile="libraries/chain/protocol/transaction.cpp" bodystart="40" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1transaction_1a94f1f38f5bdcb2e5041f964ca6b99d5b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1adc38ef0a36d8b8dfcef2cbbcacb6d1e8" kindref="member">transaction_id_type</ref></type>
+        <definition>graphene::chain::transaction_id_type graphene::chain::transaction::id</definition>
+        <argsstring>() const</argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/transaction.hpp" line="89" column="1" bodyfile="libraries/chain/protocol/transaction.cpp" bodystart="62" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1transaction_1adbd10db7270e459e93daf28da33010c8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::transaction::validate</definition>
+        <argsstring>() const</argsstring>
+        <name>validate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/transaction.hpp" line="90" column="1" bodyfile="libraries/chain/protocol/transaction.cpp" bodystart="55" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1transaction_1a5b988fc8d032e5d8c9ef4b605834cf07" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1a575e2ea493a5e8f4d2888ee753084596" kindref="member">digest_type</ref></type>
+        <definition>digest_type graphene::chain::transaction::sig_digest</definition>
+        <argsstring>(const chain_id_type &amp;chain_id) const</argsstring>
+        <name>sig_digest</name>
+        <param>
+          <type>const <ref refid="namespacegraphene_1_1chain_1a8182991954496b517776f06844cf2d93" kindref="member">chain_id_type</ref> &amp;</type>
+          <declname>chain_id</declname>
+        </param>
+        <briefdescription>
+<para>Calculate the digest used for signature validation. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/transaction.hpp" line="92" column="1" bodyfile="libraries/chain/protocol/transaction.cpp" bodystart="47" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1transaction_1a6d70681972cbabd916c52fb63b6091c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::transaction::set_expiration</definition>
+        <argsstring>(fc::time_point_sec expiration_time)</argsstring>
+        <name>set_expiration</name>
+        <param>
+          <type>fc::time_point_sec</type>
+          <declname>expiration_time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/transaction.hpp" line="94" column="1" bodyfile="libraries/chain/protocol/transaction.cpp" bodystart="85" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1transaction_1a8571a6eb56aad9899093eb15fa18b43d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::transaction::set_reference_block</definition>
+        <argsstring>(const block_id_type &amp;reference_block)</argsstring>
+        <name>set_reference_block</name>
+        <param>
+          <type>const <ref refid="namespacegraphene_1_1chain_1a314b030d7a6107c5641fd9945da7f568" kindref="member">block_id_type</ref> &amp;</type>
+          <declname>reference_block</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/transaction.hpp" line="95" column="1" bodyfile="libraries/chain/protocol/transaction.cpp" bodystart="90" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1transaction_1a870f3054c7403dbce2b21a7253b2a1d1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Visitor</type>
+          </param>
+        </templateparamlist>
+        <type>vector&lt; typename Visitor::result_type &gt;</type>
+        <definition>vector&lt;typename Visitor::result_type&gt; graphene::chain::transaction::visit</definition>
+        <argsstring>(Visitor &amp;&amp;visitor)</argsstring>
+        <name>visit</name>
+        <param>
+          <type>Visitor &amp;&amp;</type>
+          <declname>visitor</declname>
+        </param>
+        <briefdescription>
+<para>visit all operations </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/transaction.hpp" line="99" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/transaction.hpp" bodystart="99" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1transaction_1a927bed92680e17e9790a598a64f79943" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Visitor</type>
+          </param>
+        </templateparamlist>
+        <type>vector&lt; typename Visitor::result_type &gt;</type>
+        <definition>vector&lt;typename Visitor::result_type&gt; graphene::chain::transaction::visit</definition>
+        <argsstring>(Visitor &amp;&amp;visitor) const</argsstring>
+        <name>visit</name>
+        <param>
+          <type>Visitor &amp;&amp;</type>
+          <declname>visitor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/transaction.hpp" line="107" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/transaction.hpp" bodystart="107" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1transaction_1a3d4d00f25924c74f600064951a83f5e1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::transaction::get_required_authorities</definition>
+        <argsstring>(flat_set&lt; account_id_type &gt; &amp;active, flat_set&lt; account_id_type &gt; &amp;owner, vector&lt; authority &gt; &amp;other) const</argsstring>
+        <name>get_required_authorities</name>
+        <param>
+          <type>flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt; &amp;</type>
+          <declname>active</declname>
+        </param>
+        <param>
+          <type>flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt; &amp;</type>
+          <declname>owner</declname>
+        </param>
+        <param>
+          <type>vector&lt; <ref refid="structgraphene_1_1chain_1_1authority" kindref="compound">authority</ref> &gt; &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/transaction.hpp" line="115" column="1" bodyfile="libraries/chain/protocol/transaction.cpp" bodystart="96" bodyend="100"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>groups operations that should be applied atomically </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2682">
+        <label>graphene::chain::processed_transaction</label>
+        <link refid="structgraphene_1_1chain_1_1processed__transaction"/>
+        <childnode refid="2681" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2681">
+        <label>graphene::chain::signed_transaction</label>
+        <link refid="structgraphene_1_1chain_1_1signed__transaction"/>
+        <childnode refid="2680" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2680">
+        <label>graphene::chain::transaction</label>
+        <link refid="structgraphene_1_1chain_1_1transaction"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2685">
+        <label>time_point_sec</label>
+      </node>
+      <node id="2684">
+        <label>flat_set&lt; future_extensions &gt;</label>
+      </node>
+      <node id="2686">
+        <label>vector&lt; operation &gt;</label>
+      </node>
+      <node id="2683">
+        <label>graphene::chain::transaction</label>
+        <link refid="structgraphene_1_1chain_1_1transaction"/>
+        <childnode refid="2684" relation="usage">
+          <edgelabel>extensions</edgelabel>
+        </childnode>
+        <childnode refid="2685" relation="usage">
+          <edgelabel>expiration</edgelabel>
+        </childnode>
+        <childnode refid="2686" relation="usage">
+          <edgelabel>operations</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/protocol/transaction.hpp" line="66" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/transaction.hpp" bodystart="65" bodyend="116"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1transaction_1aba25fb0435684c2088b0d0ae5e0d27d2" prot="public" virt="non-virtual"><scope>graphene::chain::transaction</scope><name>digest</name></member>
+      <member refid="structgraphene_1_1chain_1_1transaction_1a31fbf0cfaa89497d13fc35fb51319a32" prot="public" virt="non-virtual"><scope>graphene::chain::transaction</scope><name>expiration</name></member>
+      <member refid="structgraphene_1_1chain_1_1transaction_1a4f405d9c07b4655ef38e4388852caf38" prot="public" virt="non-virtual"><scope>graphene::chain::transaction</scope><name>extensions</name></member>
+      <member refid="structgraphene_1_1chain_1_1transaction_1a3d4d00f25924c74f600064951a83f5e1" prot="public" virt="non-virtual"><scope>graphene::chain::transaction</scope><name>get_required_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1transaction_1a94f1f38f5bdcb2e5041f964ca6b99d5b" prot="public" virt="non-virtual"><scope>graphene::chain::transaction</scope><name>id</name></member>
+      <member refid="structgraphene_1_1chain_1_1transaction_1a8013003bb366e3a6a7f61eae96cd1281" prot="public" virt="non-virtual"><scope>graphene::chain::transaction</scope><name>operations</name></member>
+      <member refid="structgraphene_1_1chain_1_1transaction_1a3c3667e1bb02ad8f694f41206436e9cf" prot="public" virt="non-virtual"><scope>graphene::chain::transaction</scope><name>ref_block_num</name></member>
+      <member refid="structgraphene_1_1chain_1_1transaction_1afcebf54b05d6254e6ea53aecdd075975" prot="public" virt="non-virtual"><scope>graphene::chain::transaction</scope><name>ref_block_prefix</name></member>
+      <member refid="structgraphene_1_1chain_1_1transaction_1a6d70681972cbabd916c52fb63b6091c6" prot="public" virt="non-virtual"><scope>graphene::chain::transaction</scope><name>set_expiration</name></member>
+      <member refid="structgraphene_1_1chain_1_1transaction_1a8571a6eb56aad9899093eb15fa18b43d" prot="public" virt="non-virtual"><scope>graphene::chain::transaction</scope><name>set_reference_block</name></member>
+      <member refid="structgraphene_1_1chain_1_1transaction_1a5b988fc8d032e5d8c9ef4b605834cf07" prot="public" virt="non-virtual"><scope>graphene::chain::transaction</scope><name>sig_digest</name></member>
+      <member refid="structgraphene_1_1chain_1_1transaction_1adbd10db7270e459e93daf28da33010c8" prot="public" virt="non-virtual"><scope>graphene::chain::transaction</scope><name>validate</name></member>
+      <member refid="structgraphene_1_1chain_1_1transaction_1a870f3054c7403dbce2b21a7253b2a1d1" prot="public" virt="non-virtual"><scope>graphene::chain::transaction</scope><name>visit</name></member>
+      <member refid="structgraphene_1_1chain_1_1transaction_1a927bed92680e17e9790a598a64f79943" prot="public" virt="non-virtual"><scope>graphene::chain::transaction</scope><name>visit</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

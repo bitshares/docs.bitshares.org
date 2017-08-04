@@ -1,0 +1,2552 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgraphene_1_1chain_1_1database" kind="class" language="C++" prot="public">
+    <compoundname>graphene::chain::database</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">object_database</basecompoundref>
+    <includes refid="database_8hpp" local="no">database.hpp</includes>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a500db4fc078f64b18d99c19d45fe8b13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::globally_settle_asset</definition>
+        <argsstring>(const asset_object &amp;bitasset, const price &amp;settle_price)</argsstring>
+        <name>globally_settle_asset</name>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1asset__object" kindref="compound">asset_object</ref> &amp;</type>
+          <declname>bitasset</declname>
+          <defname>mia</defname>
+        </param>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1price" kindref="compound">price</ref> &amp;</type>
+          <declname>settle_price</declname>
+          <defname>settlement_price</defname>
+        </param>
+        <briefdescription>
+<para>Market Helpers </para>        </briefdescription>
+        <detaileddescription>
+<para>All margin positions are force closed at the swan price Collateral received goes into a force-settlement fund No new margin positions can be created for this asset No more price feed updates Force settlement happens without delay at the swan price, deducting from force-settlement fund No more asset updates may be issued. </para>        </detaileddescription>
+        <inbodydescription>
+<para>After all margin positions are closed, the current supply will be reported as 0, but that is a lie, the supply didn&apos;t change. We need to capture the current supply before filling all call orders and then restore it afterward. Then in the force settlement evaluator reduce the supply </para>        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="337" column="1" bodyfile="libraries/chain/db_market.cpp" bodystart="44" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1ac89a3b04b731e51d3c27b83d60cfb905" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::cancel_order</definition>
+        <argsstring>(const force_settlement_object &amp;order, bool create_virtual_op=true)</argsstring>
+        <name>cancel_order</name>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1force__settlement__object" kindref="compound">force_settlement_object</ref> &amp;</type>
+          <declname>order</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>create_virtual_op</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="338" column="1" bodyfile="libraries/chain/db_market.cpp" bodystart="96" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a006212022286600c4a5ed1491fd11819" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::cancel_order</definition>
+        <argsstring>(const limit_order_object &amp;order, bool create_virtual_op=true)</argsstring>
+        <name>cancel_order</name>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1limit__order__object" kindref="compound">limit_order_object</ref> &amp;</type>
+          <declname>order</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>create_virtual_op</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="339" column="1" bodyfile="libraries/chain/db_market.cpp" bodystart="111" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a69b1c5d7b0b79d702e6de4a4a04ee95b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::database::apply_order</definition>
+        <argsstring>(const limit_order_object &amp;new_order_object, bool allow_black_swan=true)</argsstring>
+        <name>apply_order</name>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1limit__order__object" kindref="compound">limit_order_object</ref> &amp;</type>
+          <declname>new_order_object</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>allow_black_swan</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Process a new limit order through the markets. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>order</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new order to process </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if order was completely filled; false otherwise</para></simplesect>
+This function takes a new limit order, and runs the markets attempting to match it with existing orders already on the books. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="349" column="1" bodyfile="libraries/chain/db_market.cpp" bodystart="156" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1ad458cba38d580698095e7c9afcffd3be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename OrderType</type>
+          </param>
+        </templateparamlist>
+        <type>int</type>
+        <definition>int graphene::chain::database::match</definition>
+        <argsstring>(const limit_order_object &amp;bid, const OrderType &amp;ask, const price &amp;match_price)</argsstring>
+        <name>match</name>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1limit__order__object" kindref="compound">limit_order_object</ref> &amp;</type>
+          <declname>bid</declname>
+          <defname>usd</defname>
+        </param>
+        <param>
+          <type>const OrderType &amp;</type>
+          <declname>ask</declname>
+          <defname>core</defname>
+        </param>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1price" kindref="compound">price</ref> &amp;</type>
+          <declname>match_price</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Matches the two orders,</para><para><simplesect kind="return"><para>a bit field indicating which orders were filled (and thus removed)</para></simplesect>
+0 - no orders were matched 1 - bid was filled 2 - ask was filled 3 - both were filled </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="363" column="1" bodyfile="libraries/chain/db_market.cpp" bodystart="217" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a58f9a0bc9086e87cc7cb9344a574c5af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int graphene::chain::database::match</definition>
+        <argsstring>(const limit_order_object &amp;bid, const limit_order_object &amp;ask, const price &amp;trade_price)</argsstring>
+        <name>match</name>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1limit__order__object" kindref="compound">limit_order_object</ref> &amp;</type>
+          <declname>bid</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1limit__order__object" kindref="compound">limit_order_object</ref> &amp;</type>
+          <declname>ask</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1price" kindref="compound">price</ref> &amp;</type>
+          <declname>trade_price</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="364" column="1" bodyfile="libraries/chain/db_market.cpp" bodystart="256" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a022f435c1dd712430b84a2a3921a2acc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::database::match</definition>
+        <argsstring>(const call_order_object &amp;call, const force_settlement_object &amp;settle, const price &amp;match_price, asset max_settlement)</argsstring>
+        <name>match</name>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1call__order__object" kindref="compound">call_order_object</ref> &amp;</type>
+          <declname>call</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1force__settlement__object" kindref="compound">force_settlement_object</ref> &amp;</type>
+          <declname>settle</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1price" kindref="compound">price</ref> &amp;</type>
+          <declname>match_price</declname>
+        </param>
+        <param>
+          <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+          <declname>max_settlement</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the amount of asset settled </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+<para>If the least collateralized call position lacks sufficient collateral to cover at the match price then this indicates a black swan event according to the price feed, but only the market can trigger a black swan. So now we must cancel the forced settlement object.</para>        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="366" column="1" bodyfile="libraries/chain/db_market.cpp" bodystart="262" bodyend="293"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="user-defined">
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1abb25d544cb49ea782f43630e0bed084c" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classgraphene_1_1chain_1_1witness__object" kindref="compound">witness_object</ref> &amp;</type>
+        <definition>const witness_object &amp; graphene::chain::database::validate_block_header</definition>
+        <argsstring>(uint32_t skip, const signed_block &amp;next_block) const</argsstring>
+        <name>validate_block_header</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>skip</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1signed__block" kindref="compound">signed_block</ref> &amp;</type>
+          <declname>next_block</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Steps involved in applying a new block </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="429" column="1" bodyfile="libraries/chain/db_block.cpp" bodystart="648" bodyend="669"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1afe0c00a60f6bbe322c6a2db3cfb74b25" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classgraphene_1_1chain_1_1witness__object" kindref="compound">witness_object</ref> &amp;</type>
+        <definition>const witness_object&amp; graphene::chain::database::_validate_block_header</definition>
+        <argsstring>(const signed_block &amp;next_block) const</argsstring>
+        <name>_validate_block_header</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1signed__block" kindref="compound">signed_block</ref> &amp;</type>
+          <declname>next_block</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="430" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a614eb98379c3991d972133f6f846593d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::create_block_summary</definition>
+        <argsstring>(const signed_block &amp;next_block)</argsstring>
+        <name>create_block_summary</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1signed__block" kindref="compound">signed_block</ref> &amp;</type>
+          <declname>next_block</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="431" column="1" bodyfile="libraries/chain/db_block.cpp" bodystart="671" bodyend="677"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1aaa88beaf4853ba58821667aaa29d5fd6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::update_global_dynamic_data</definition>
+        <argsstring>(const signed_block &amp;b)</argsstring>
+        <name>update_global_dynamic_data</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1signed__block" kindref="compound">signed_block</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="434" column="1" bodyfile="libraries/chain/db_update.cpp" bodystart="43" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a0485e7a64376580ca08ada3b83a6de76" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::update_signing_witness</definition>
+        <argsstring>(const witness_object &amp;signing_witness, const signed_block &amp;new_block)</argsstring>
+        <name>update_signing_witness</name>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1witness__object" kindref="compound">witness_object</ref> &amp;</type>
+          <declname>signing_witness</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1signed__block" kindref="compound">signed_block</ref> &amp;</type>
+          <declname>new_block</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="435" column="1" bodyfile="libraries/chain/db_update.cpp" bodystart="102" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1aa281b08f27f23e83863106e7c5db543b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::update_last_irreversible_block</definition>
+        <argsstring>()</argsstring>
+        <name>update_last_irreversible_block</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="436" column="1" bodyfile="libraries/chain/db_update.cpp" bodystart="124" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1ad4844a036da23d18c0e65f5859f12683" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::clear_expired_transactions</definition>
+        <argsstring>()</argsstring>
+        <name>clear_expired_transactions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="437" column="1" bodyfile="libraries/chain/db_update.cpp" bodystart="159" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1ad75c225b144139e71fa68de637b2c548" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::clear_expired_proposals</definition>
+        <argsstring>()</argsstring>
+        <name>clear_expired_proposals</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="438" column="1" bodyfile="libraries/chain/db_update.cpp" bodystart="169" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1abdcb89e79aaadcdec3b90ebebcd130c5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::clear_expired_orders</definition>
+        <argsstring>()</argsstring>
+        <name>clear_expired_orders</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="439" column="1" bodyfile="libraries/chain/db_update.cpp" bodystart="257" bodyend="425"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1ae46cba129339864cc6958450b53c27f6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::update_expired_feeds</definition>
+        <argsstring>()</argsstring>
+        <name>update_expired_feeds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>market issued </para>        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="440" column="1" bodyfile="libraries/chain/db_update.cpp" bodystart="427" bodyend="456"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1ae68098fd0de4ab679bfc696a364ebb56" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::update_maintenance_flag</definition>
+        <argsstring>(bool new_maintenance_flag)</argsstring>
+        <name>update_maintenance_flag</name>
+        <param>
+          <type>bool</type>
+          <declname>new_maintenance_flag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="441" column="1" bodyfile="libraries/chain/db_update.cpp" bodystart="458" bodyend="468"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a5dd219435fad332aa12893b1aefdcbf8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::update_withdraw_permissions</definition>
+        <argsstring>()</argsstring>
+        <name>update_withdraw_permissions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="442" column="1" bodyfile="libraries/chain/db_update.cpp" bodystart="470" bodyend="475"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1ac02c8bcfcdbe39cd1486c6654f71264f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::database::check_for_blackswan</definition>
+        <argsstring>(const asset_object &amp;mia, bool enable_black_swan=true)</argsstring>
+        <name>check_for_blackswan</name>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1asset__object" kindref="compound">asset_object</ref> &amp;</type>
+          <declname>mia</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enable_black_swan</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>let HB = the highest bid for the collateral (aka who will pay the most DEBT for the least collateral) let SP = current median feed&apos;s Settlement Price let LC = the least collateralized call order&apos;s swan price (debt/collateral)</para><para>If there is no valid price feed or no bids then there is no black swan.</para><para>A black swan occurs if MAX(HB,SP) &lt;= LC </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="443" column="1" bodyfile="libraries/chain/db_update.cpp" bodystart="200" bodyend="255"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1af51b59445b07cab91bd70fd4ddec2e4f" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::initialize_budget_record</definition>
+        <argsstring>(fc::time_point_sec now, budget_record &amp;rec) const</argsstring>
+        <name>initialize_budget_record</name>
+        <param>
+          <type>fc::time_point_sec</type>
+          <declname>now</declname>
+        </param>
+        <param>
+          <type><ref refid="structgraphene_1_1chain_1_1budget__record" kindref="compound">budget_record</ref> &amp;</type>
+          <declname>rec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Steps performed only at maintenance intervals </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="450" column="1" bodyfile="libraries/chain/db_maint.cpp" bodystart="320" bodyend="366"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1aff91fc596f814302f39d4c0233969d37" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::process_budget</definition>
+        <argsstring>()</argsstring>
+        <name>process_budget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Update the budget for witnesses and workers. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="451" column="1" bodyfile="libraries/chain/db_maint.cpp" bodystart="371" bodyend="465"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a6fe82633f6c1133154b070c83a05362f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::pay_workers</definition>
+        <argsstring>(share_type &amp;budget)</argsstring>
+        <name>pay_workers</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref> &amp;</type>
+          <declname>budget</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="452" column="1" bodyfile="libraries/chain/db_maint.cpp" bodystart="116" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1ab47b0c08852cb203a4ba77240383b131" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::perform_chain_maintenance</definition>
+        <argsstring>(const signed_block &amp;next_block, const global_property_object &amp;global_props)</argsstring>
+        <name>perform_chain_maintenance</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1signed__block" kindref="compound">signed_block</ref> &amp;</type>
+          <declname>next_block</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1global__property__object" kindref="compound">global_property_object</ref> &amp;</type>
+          <declname>global_props</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="453" column="1" bodyfile="libraries/chain/db_maint.cpp" bodystart="719" bodyend="883"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1af31a9714d1e4a1de0ecd91346e0ae35f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::update_active_witnesses</definition>
+        <argsstring>()</argsstring>
+        <name>update_active_witnesses</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>accounts that vote for 0 or 1 witness do not get to express an opinion on the number of witnesses to have (they abstain and are non-voting accounts) </para>        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="454" column="1" bodyfile="libraries/chain/db_maint.cpp" bodystart="159" bodyend="242"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a8c6abb44b82f50b6c07b759bae840064" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::update_active_committee_members</definition>
+        <argsstring>()</argsstring>
+        <name>update_active_committee_members</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>accounts that vote for 0 or 1 witness do not get to express an opinion on the number of witnesses to have (they abstain and are non-voting accounts) </para>        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="455" column="1" bodyfile="libraries/chain/db_maint.cpp" bodystart="244" bodyend="318"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1af3b2871563286c018ef252daec940f15" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::update_worker_votes</definition>
+        <argsstring>()</argsstring>
+        <name>update_worker_votes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="456" column="1" bodyfile="libraries/chain/db_maint.cpp" bodystart="101" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1ab29c477088fadedbe396e4527d313e80" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class...</type>
+            <declname>Types</declname>
+            <defname>Types</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void graphene::chain::database::perform_account_maintenance</definition>
+        <argsstring>(std::tuple&lt; Types... &gt; helpers)</argsstring>
+        <name>perform_account_maintenance</name>
+        <param>
+          <type>std::tuple&lt; Types... &gt;</type>
+          <declname>helpers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="459" column="1" bodyfile="libraries/chain/db_maint.cpp" bodystart="76" bodyend="81"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classgraphene_1_1chain_1_1database_1a6de6add85d012876641f2a50ad707726" prot="public" static="no">
+        <name>validation_steps</name>
+        <enumvalue id="classgraphene_1_1chain_1_1database_1a6de6add85d012876641f2a50ad707726afbe701c12ae94e417ef9424306aabbdc" prot="public">
+          <name>skip_nothing</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgraphene_1_1chain_1_1database_1a6de6add85d012876641f2a50ad707726a7cd765f84f450cfdd68e3adcf87c02d2" prot="public">
+          <name>skip_witness_signature</name>
+          <initializer>= 1 &lt;&lt; 0</initializer>
+          <briefdescription>
+<para>used while reindexing </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgraphene_1_1chain_1_1database_1a6de6add85d012876641f2a50ad707726ada088aa976bc3f5a1813dc7645b591ad" prot="public">
+          <name>skip_transaction_signatures</name>
+          <initializer>= 1 &lt;&lt; 1</initializer>
+          <briefdescription>
+<para>used by non-witness nodes </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgraphene_1_1chain_1_1database_1a6de6add85d012876641f2a50ad707726aa4b454d723548a14369e9d54ebff309c" prot="public">
+          <name>skip_transaction_dupe_check</name>
+          <initializer>= 1 &lt;&lt; 2</initializer>
+          <briefdescription>
+<para>used while reindexing </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgraphene_1_1chain_1_1database_1a6de6add85d012876641f2a50ad707726ae7f6a8e92ab5e80351994ee6e7240187" prot="public">
+          <name>skip_fork_db</name>
+          <initializer>= 1 &lt;&lt; 3</initializer>
+          <briefdescription>
+<para>used while reindexing </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgraphene_1_1chain_1_1database_1a6de6add85d012876641f2a50ad707726ad400a74260f27eef16d855f4c325840f" prot="public">
+          <name>skip_block_size_check</name>
+          <initializer>= 1 &lt;&lt; 4</initializer>
+          <briefdescription>
+<para>used when applying locally generated transactions </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgraphene_1_1chain_1_1database_1a6de6add85d012876641f2a50ad707726aa9965640871a2f76bacd60c977a183bc" prot="public">
+          <name>skip_tapos_check</name>
+          <initializer>= 1 &lt;&lt; 5</initializer>
+          <briefdescription>
+<para>used while reindexing <ndash/> note this skips expiration check as well </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgraphene_1_1chain_1_1database_1a6de6add85d012876641f2a50ad707726a2ccaf9f1796afe8676c20e21571c91dc" prot="public">
+          <name>skip_authority_check</name>
+          <initializer>= 1 &lt;&lt; 6</initializer>
+          <briefdescription>
+<para>used while reindexing <ndash/> disables any checking of authority on transactions </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgraphene_1_1chain_1_1database_1a6de6add85d012876641f2a50ad707726a67c110807cc8ac1b8096a8d7888804c4" prot="public">
+          <name>skip_merkle_check</name>
+          <initializer>= 1 &lt;&lt; 7</initializer>
+          <briefdescription>
+<para>used while reindexing </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgraphene_1_1chain_1_1database_1a6de6add85d012876641f2a50ad707726ab1814f44f09e9aa67dc11f1a82179368" prot="public">
+          <name>skip_assert_evaluation</name>
+          <initializer>= 1 &lt;&lt; 8</initializer>
+          <briefdescription>
+<para>used while reindexing </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgraphene_1_1chain_1_1database_1a6de6add85d012876641f2a50ad707726a8627024a0226d1f03a963a90a26383b7" prot="public">
+          <name>skip_undo_history_check</name>
+          <initializer>= 1 &lt;&lt; 9</initializer>
+          <briefdescription>
+<para>used while reindexing </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgraphene_1_1chain_1_1database_1a6de6add85d012876641f2a50ad707726a5658faff01cd4c139d313f6888bc7da0" prot="public">
+          <name>skip_witness_schedule_check</name>
+          <initializer>= 1 &lt;&lt; 10</initializer>
+          <briefdescription>
+<para>used while reindexing </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classgraphene_1_1chain_1_1database_1a6de6add85d012876641f2a50ad707726aa6a4b7480b7887f498f60eb33abf5912" prot="public">
+          <name>skip_validate</name>
+          <initializer>= 1 &lt;&lt; 11</initializer>
+          <briefdescription>
+<para>used prior to checkpoint, skips validate() call on transaction </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="66" column="1" bodyfile="libraries/chain/include/graphene/chain/database.hpp" bodystart="65" bodyend="80"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1database_1a3e6934dcd3926a0064ef136afc242c33" prot="public" static="no" mutable="no">
+        <type>fc::signal&lt; void(const <ref refid="structgraphene_1_1chain_1_1signed__block" kindref="compound">signed_block</ref> &amp;)&gt;</type>
+        <definition>fc::signal&lt;void(const signed_block&amp;)&gt; graphene::chain::database::applied_block</definition>
+        <argsstring></argsstring>
+        <name>applied_block</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This signal is emitted after all operations and virtual operation for a block have been applied but before the <ref refid="classgraphene_1_1chain_1_1database_1a87c74f1ef2f8840261c3d9789151b305" kindref="member">get_applied_operations()</ref> are cleared.</para><para>You may not yield from this callback because the blockchain is holding the write lock and may be in an &quot;inconstant state&quot; until after it is released. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="184" column="1" bodyfile="libraries/chain/include/graphene/chain/database.hpp" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1database_1a0747f461aea199b260777d4b1975013d" prot="public" static="no" mutable="no">
+        <type>fc::signal&lt; void(const <ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref> &amp;)&gt;</type>
+        <definition>fc::signal&lt;void(const signed_transaction&amp;)&gt; graphene::chain::database::on_pending_transaction</definition>
+        <argsstring></argsstring>
+        <name>on_pending_transaction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This signal is emitted any time a new transaction is added to the pending block state. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="190" column="1" bodyfile="libraries/chain/include/graphene/chain/database.hpp" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1database_1a11eac7e673b4a9bb4458282b3b01e21f" prot="public" static="no" mutable="no">
+        <type>fc::signal&lt; void(const vector&lt; object_id_type &gt; &amp;, const flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt; &amp;)&gt;</type>
+        <definition>fc::signal&lt;void(const vector&lt;object_id_type&gt;&amp;, const flat_set&lt;account_id_type&gt;&amp;)&gt; graphene::chain::database::new_objects</definition>
+        <argsstring></argsstring>
+        <name>new_objects</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Emitted After a block has been applied and committed. The callback should not yield and should execute quickly. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="196" column="1" bodyfile="libraries/chain/include/graphene/chain/database.hpp" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1database_1a89c462c2ed0224b34cd6b6b06985d046" prot="public" static="no" mutable="no">
+        <type>fc::signal&lt; void(const vector&lt; object_id_type &gt; &amp;, const flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt; &amp;)&gt;</type>
+        <definition>fc::signal&lt;void(const vector&lt;object_id_type&gt;&amp;, const flat_set&lt;account_id_type&gt;&amp;)&gt; graphene::chain::database::changed_objects</definition>
+        <argsstring></argsstring>
+        <name>changed_objects</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Emitted After a block has been applied and committed. The callback should not yield and should execute quickly. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="202" column="1" bodyfile="libraries/chain/include/graphene/chain/database.hpp" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1database_1a9aa30b505cfa4e5cdc9a0b354d49e89e" prot="public" static="no" mutable="no">
+        <type>fc::signal&lt; void(const vector&lt; object_id_type &gt; &amp;, const vector&lt; const object * &gt; &amp;, const flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt; &amp;)&gt;</type>
+        <definition>fc::signal&lt;void(const vector&lt;object_id_type&gt;&amp;, const vector&lt;const object*&gt;&amp;, const flat_set&lt;account_id_type&gt;&amp;)&gt; graphene::chain::database::removed_objects</definition>
+        <argsstring></argsstring>
+        <name>removed_objects</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>this signal is emitted any time an object is removed and contains a pointer to the last value of every object that was removed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="207" column="1" bodyfile="libraries/chain/include/graphene/chain/database.hpp" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1database_1a94b3cf5753e4cf16d06840971c782db0" prot="public" static="no" mutable="no">
+        <type>std::deque&lt; <ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref> &gt;</type>
+        <definition>std::deque&lt; signed_transaction &gt; graphene::chain::database::_popped_tx</definition>
+        <argsstring></argsstring>
+        <name>_popped_tx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>when popping a block, the transactions that were removed get cached here so they can be reapplied at the proper time </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="398" column="1" bodyfile="libraries/chain/include/graphene/chain/database.hpp" bodystart="398" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1database_1a4fc3dc98840a3b6a652488b420662845" prot="private" static="no" mutable="no">
+        <type>optional&lt; undo_database::session &gt;</type>
+        <definition>optional&lt;undo_database::session&gt; graphene::chain::database::_pending_tx_session</definition>
+        <argsstring></argsstring>
+        <name>_pending_tx_session</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="409" column="1" bodyfile="libraries/chain/include/graphene/chain/database.hpp" bodystart="409" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1database_1ac9b667d4d617a607787c9a3c1f42ac30" prot="private" static="no" mutable="no">
+        <type>vector&lt; unique_ptr&lt; <ref refid="classgraphene_1_1chain_1_1op__evaluator" kindref="compound">op_evaluator</ref> &gt; &gt;</type>
+        <definition>vector&lt; unique_ptr&lt;op_evaluator&gt; &gt; graphene::chain::database::_operation_evaluators</definition>
+        <argsstring></argsstring>
+        <name>_operation_evaluators</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="410" column="1" bodyfile="libraries/chain/include/graphene/chain/database.hpp" bodystart="410" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1database_1a2818f2ad9b765d588fd125dc191e523a" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="structgraphene_1_1chain_1_1processed__transaction" kindref="compound">processed_transaction</ref> &gt;</type>
+        <definition>vector&lt; processed_transaction &gt; graphene::chain::database::_pending_tx</definition>
+        <argsstring></argsstring>
+        <name>_pending_tx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="463" column="1" bodyfile="libraries/chain/include/graphene/chain/database.hpp" bodystart="463" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1database_1ac1eab6ae52717cef08746bd3b2c9d464" prot="private" static="no" mutable="no">
+        <type><ref refid="classgraphene_1_1chain_1_1fork__database" kindref="compound">fork_database</ref></type>
+        <definition>fork_database graphene::chain::database::_fork_db</definition>
+        <argsstring></argsstring>
+        <name>_fork_db</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="464" column="1" bodyfile="libraries/chain/include/graphene/chain/database.hpp" bodystart="464" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1database_1aca7a7972f572bb397bb9cd666f476879" prot="private" static="no" mutable="no">
+        <type><ref refid="classgraphene_1_1chain_1_1block__database" kindref="compound">block_database</ref></type>
+        <definition>block_database graphene::chain::database::_block_id_to_block</definition>
+        <argsstring></argsstring>
+        <name>_block_id_to_block</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Note: we can probably store blocks by block num rather than block id because after the undo window is past the block ID is no longer relevant and its number is irreversible.</para><para>During the &quot;fork window&quot; we can cache blocks in memory until the fork is resolved. This should make maintaining the fork tree relatively simple. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="475" column="1" bodyfile="libraries/chain/include/graphene/chain/database.hpp" bodystart="475" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1database_1a0cdbc9e636ec8cba85507264b3477c79" prot="private" static="no" mutable="no">
+        <type>vector&lt; optional&lt; <ref refid="classgraphene_1_1chain_1_1operation__history__object" kindref="compound">operation_history_object</ref> &gt; &gt;</type>
+        <definition>vector&lt;optional&lt;operation_history_object&gt; &gt; graphene::chain::database::_applied_ops</definition>
+        <argsstring></argsstring>
+        <name>_applied_ops</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Contains the set of ops that are in the process of being applied from the current block. It contains real and virtual operations in the order they occur and is cleared after the applied_block signal is emited. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="483" column="1" bodyfile="libraries/chain/include/graphene/chain/database.hpp" bodystart="483" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1database_1a675728076c3aec61222edcae59af7337" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t graphene::chain::database::_current_block_num</definition>
+        <argsstring></argsstring>
+        <name>_current_block_num</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="485" column="1" bodyfile="libraries/chain/include/graphene/chain/database.hpp" bodystart="485" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1database_1a84008aa5f9c5d989b2e5e1bb9b91a995" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t graphene::chain::database::_current_trx_in_block</definition>
+        <argsstring></argsstring>
+        <name>_current_trx_in_block</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="486" column="1" bodyfile="libraries/chain/include/graphene/chain/database.hpp" bodystart="486" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1database_1a1e9b993a696f1fc3be6b913686d8b35b" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t graphene::chain::database::_current_op_in_trx</definition>
+        <argsstring></argsstring>
+        <name>_current_op_in_trx</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="487" column="1" bodyfile="libraries/chain/include/graphene/chain/database.hpp" bodystart="487" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1database_1a4161dbf18936f350ace2ffb875d13fe4" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t graphene::chain::database::_current_virtual_op</definition>
+        <argsstring></argsstring>
+        <name>_current_virtual_op</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="488" column="1" bodyfile="libraries/chain/include/graphene/chain/database.hpp" bodystart="488" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1database_1a59e5f7edb13bd71745c73e65359ca465" prot="private" static="no" mutable="no">
+        <type>vector&lt; uint64_t &gt;</type>
+        <definition>vector&lt;uint64_t&gt; graphene::chain::database::_vote_tally_buffer</definition>
+        <argsstring></argsstring>
+        <name>_vote_tally_buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="490" column="1" bodyfile="libraries/chain/include/graphene/chain/database.hpp" bodystart="490" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1database_1a694ccfb5385c32ab164b8388802ce36b" prot="private" static="no" mutable="no">
+        <type>vector&lt; uint64_t &gt;</type>
+        <definition>vector&lt;uint64_t&gt; graphene::chain::database::_witness_count_histogram_buffer</definition>
+        <argsstring></argsstring>
+        <name>_witness_count_histogram_buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="491" column="1" bodyfile="libraries/chain/include/graphene/chain/database.hpp" bodystart="491" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1database_1aa26ab6ee28c4157489e89160659e2ef8" prot="private" static="no" mutable="no">
+        <type>vector&lt; uint64_t &gt;</type>
+        <definition>vector&lt;uint64_t&gt; graphene::chain::database::_committee_count_histogram_buffer</definition>
+        <argsstring></argsstring>
+        <name>_committee_count_histogram_buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="492" column="1" bodyfile="libraries/chain/include/graphene/chain/database.hpp" bodystart="492" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1database_1a9c144da0b732c3ad9434f5a878bc0916" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t graphene::chain::database::_total_voting_stake</definition>
+        <argsstring></argsstring>
+        <name>_total_voting_stake</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="493" column="1" bodyfile="libraries/chain/include/graphene/chain/database.hpp" bodystart="493" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1database_1a61078f4c87b4fcb49d5a3e15d235fe0c" prot="private" static="no" mutable="no">
+        <type>flat_map&lt; uint32_t, <ref refid="namespacegraphene_1_1chain_1a314b030d7a6107c5641fd9945da7f568" kindref="member">block_id_type</ref> &gt;</type>
+        <definition>flat_map&lt;uint32_t,block_id_type&gt; graphene::chain::database::_checkpoints</definition>
+        <argsstring></argsstring>
+        <name>_checkpoints</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="495" column="1" bodyfile="libraries/chain/include/graphene/chain/database.hpp" bodystart="495" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1database_1a6c570ecbccb63d37c08c060f3dfaed19" prot="private" static="no" mutable="no">
+        <type><ref refid="classgraphene_1_1chain_1_1node__property__object" kindref="compound">node_property_object</ref></type>
+        <definition>node_property_object graphene::chain::database::_node_property_object</definition>
+        <argsstring></argsstring>
+        <name>_node_property_object</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="497" column="1" bodyfile="libraries/chain/include/graphene/chain/database.hpp" bodystart="497" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a5314db2d542f49fe5487e144a03c2ee9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>graphene::chain::database::database</definition>
+        <argsstring>()</argsstring>
+        <name>database</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="62" column="1" bodyfile="libraries/chain/db_management.cpp" bodystart="38" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a1733f5bf8a8ea84dcd8f962eb61debe1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>graphene::chain::database::~database</definition>
+        <argsstring>()</argsstring>
+        <name>~database</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="63" column="1" bodyfile="libraries/chain/db_management.cpp" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a2a2998715e050b0d98af6244000cbed5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::open</definition>
+        <argsstring>(const fc::path &amp;data_dir, std::function&lt; genesis_state_type()&gt; genesis_loader)</argsstring>
+        <name>open</name>
+        <param>
+          <type>const fc::path &amp;</type>
+          <declname>data_dir</declname>
+        </param>
+        <param>
+          <type>std::function&lt; <ref refid="structgraphene_1_1chain_1_1genesis__state__type" kindref="compound">genesis_state_type</ref>()&gt;</type>
+          <declname>genesis_loader</declname>
+        </param>
+        <briefdescription>
+<para>Open a database, creating a new one if necessary. </para>        </briefdescription>
+        <detaileddescription>
+<para>Opens a database in the specified directory. If no initialized database is found, genesis_loader is called and its return value is used as the genesis state when initializing the new database</para><para>genesis_loader will not be called if an existing database is found.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data_dir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path to open or create database in </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>genesis_loader</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A callable object which returns the genesis state to initialize new databases on </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="93" column="1" bodyfile="libraries/chain/db_management.cpp" bodystart="111" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a2d0d48f857cb39317ebd129a1edbbb06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::reindex</definition>
+        <argsstring>(fc::path data_dir, const genesis_state_type &amp;initial_allocation=genesis_state_type())</argsstring>
+        <name>reindex</name>
+        <param>
+          <type>fc::path</type>
+          <declname>data_dir</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1genesis__state__type" kindref="compound">genesis_state_type</ref> &amp;</type>
+          <declname>initial_allocation</declname>
+          <defval><ref refid="structgraphene_1_1chain_1_1genesis__state__type" kindref="compound">genesis_state_type</ref>()</defval>
+        </param>
+        <briefdescription>
+<para>Rebuild object graph from block history and open detabase. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method may be called after or instead of <ref refid="classgraphene_1_1chain_1_1database_1a2a2998715e050b0d98af6244000cbed5" kindref="member">database::open</ref>, and will rebuild the object graph by replaying blockchain history. When this method exits successfully, the database will be open. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="103" column="1" bodyfile="libraries/chain/db_management.cpp" bodystart="49" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a37463bb4fc61d94effff3f5784a2f168" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::wipe</definition>
+        <argsstring>(const fc::path &amp;data_dir, bool include_blocks)</argsstring>
+        <name>wipe</name>
+        <param>
+          <type>const fc::path &amp;</type>
+          <declname>data_dir</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>include_blocks</declname>
+        </param>
+        <briefdescription>
+<para>wipe Delete database from disk, and potentially the raw chain as well. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>include_blocks</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If true, delete the raw chain as well as the database.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Will close the database before wiping. Database will be closed when this function returns. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="111" column="1" bodyfile="libraries/chain/db_management.cpp" bodystart="102" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1aaef6e311f1eb8ddfea82751b4e2df2d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::close</definition>
+        <argsstring>(bool rewind=true)</argsstring>
+        <name>close</name>
+        <param>
+          <type>bool</type>
+          <declname>rewind</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="112" column="1" bodyfile="libraries/chain/db_management.cpp" bodystart="140" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a98795dba60947210dd9a0fbb770709a2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::database::is_known_block</definition>
+        <argsstring>(const block_id_type &amp;id) const</argsstring>
+        <name>is_known_block</name>
+        <param>
+          <type>const <ref refid="namespacegraphene_1_1chain_1a314b030d7a6107c5641fd9945da7f568" kindref="member">block_id_type</ref> &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if the block is in our fork DB or saved to disk as part of the official chain, otherwise return false </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="120" column="1" bodyfile="libraries/chain/db_block.cpp" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a0600c987cf89e038128684da9b8c2829" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::database::is_known_transaction</definition>
+        <argsstring>(const transaction_id_type &amp;id) const</argsstring>
+        <name>is_known_transaction</name>
+        <param>
+          <type>const <ref refid="namespacegraphene_1_1chain_1adc38ef0a36d8b8dfcef2cbbcacb6d1e8" kindref="member">transaction_id_type</ref> &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Only return true <emphasis>if</emphasis> the transaction has not expired or been invalidated. If this method is called with a VERY old transaction we will return false, they should query things by blocks if they are that old. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="121" column="1" bodyfile="libraries/chain/db_block.cpp" bodystart="53" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a4294f12b2299bab7684555c986abac76" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1a314b030d7a6107c5641fd9945da7f568" kindref="member">block_id_type</ref></type>
+        <definition>block_id_type graphene::chain::database::get_block_id_for_num</definition>
+        <argsstring>(uint32_t block_num) const</argsstring>
+        <name>get_block_id_for_num</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>block_num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="122" column="1" bodyfile="libraries/chain/db_block.cpp" bodystart="59" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1ae517d3ed2a2362a70d120962536e16a0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>optional&lt; <ref refid="structgraphene_1_1chain_1_1signed__block" kindref="compound">signed_block</ref> &gt;</type>
+        <definition>optional&lt; signed_block &gt; graphene::chain::database::fetch_block_by_id</definition>
+        <argsstring>(const block_id_type &amp;id) const</argsstring>
+        <name>fetch_block_by_id</name>
+        <param>
+          <type>const <ref refid="namespacegraphene_1_1chain_1a314b030d7a6107c5641fd9945da7f568" kindref="member">block_id_type</ref> &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="123" column="1" bodyfile="libraries/chain/db_block.cpp" bodystart="64" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a380a803937941dbbf86321373279a218" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>optional&lt; <ref refid="structgraphene_1_1chain_1_1signed__block" kindref="compound">signed_block</ref> &gt;</type>
+        <definition>optional&lt; signed_block &gt; graphene::chain::database::fetch_block_by_number</definition>
+        <argsstring>(uint32_t num) const</argsstring>
+        <name>fetch_block_by_number</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="124" column="1" bodyfile="libraries/chain/db_block.cpp" bodystart="72" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a19352bf8822d30ed4c71dd65fd62f0ca" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref> &amp;</type>
+        <definition>const signed_transaction &amp; graphene::chain::database::get_recent_transaction</definition>
+        <argsstring>(const transaction_id_type &amp;trx_id) const</argsstring>
+        <name>get_recent_transaction</name>
+        <param>
+          <type>const <ref refid="namespacegraphene_1_1chain_1adc38ef0a36d8b8dfcef2cbbcacb6d1e8" kindref="member">transaction_id_type</ref> &amp;</type>
+          <declname>trx_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="125" column="1" bodyfile="libraries/chain/db_block.cpp" bodystart="82" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1aba653e023b116d6a004ebf27dd184328" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="namespacegraphene_1_1chain_1a314b030d7a6107c5641fd9945da7f568" kindref="member">block_id_type</ref> &gt;</type>
+        <definition>std::vector&lt; block_id_type &gt; graphene::chain::database::get_block_ids_on_fork</definition>
+        <argsstring>(block_id_type head_of_fork) const</argsstring>
+        <name>get_block_ids_on_fork</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a314b030d7a6107c5641fd9945da7f568" kindref="member">block_id_type</ref></type>
+          <declname>head_of_fork</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="126" column="1" bodyfile="libraries/chain/db_block.cpp" bodystart="90" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1afa79d883fabbeab89ec71a47566ef1e6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t graphene::chain::database::witness_participation_rate</definition>
+        <argsstring>() const</argsstring>
+        <name>witness_participation_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculate the percent of block production slots that were missed in the past 128 blocks, not including the current block. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="132" column="1" bodyfile="libraries/chain/db_witness_schedule.cpp" bodystart="80" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a0e8c92ac95d4ac2569f6b079193691dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::add_checkpoints</definition>
+        <argsstring>(const flat_map&lt; uint32_t, block_id_type &gt; &amp;checkpts)</argsstring>
+        <name>add_checkpoints</name>
+        <param>
+          <type>const flat_map&lt; uint32_t, <ref refid="namespacegraphene_1_1chain_1a314b030d7a6107c5641fd9945da7f568" kindref="member">block_id_type</ref> &gt; &amp;</type>
+          <declname>checkpts</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="134" column="1" bodyfile="libraries/chain/db_block.cpp" bodystart="679" bodyend="683"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1ad467f7f5b2d7cb5a142e1e80186589a6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const flat_map&lt; uint32_t, <ref refid="namespacegraphene_1_1chain_1a314b030d7a6107c5641fd9945da7f568" kindref="member">block_id_type</ref> &gt;</type>
+        <definition>const flat_map&lt;uint32_t,block_id_type&gt; graphene::chain::database::get_checkpoints</definition>
+        <argsstring>() const</argsstring>
+        <name>get_checkpoints</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="135" column="1" bodyfile="libraries/chain/include/graphene/chain/database.hpp" bodystart="135" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a293e9896a2e9c9b6d62fb5e2c19d11e8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::database::before_last_checkpoint</definition>
+        <argsstring>() const</argsstring>
+        <name>before_last_checkpoint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="136" column="1" bodyfile="libraries/chain/db_block.cpp" bodystart="685" bodyend="688"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1aa62eb8144a717f62da5404e8bb482414" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::database::push_block</definition>
+        <argsstring>(const signed_block &amp;b, uint32_t skip=skip_nothing)</argsstring>
+        <name>push_block</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1signed__block" kindref="compound">signed_block</ref> &amp;</type>
+          <declname>b</declname>
+          <defname>new_block</defname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>skip</declname>
+          <defval><ref refid="classgraphene_1_1chain_1_1database_1a6de6add85d012876641f2a50ad707726afbe701c12ae94e417ef9424306aabbdc" kindref="member">skip_nothing</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Push block &quot;may fail&quot; in which case every partial change is unwound. After push block is successful the block is appended to the chain database on disk.</para><para><simplesect kind="return"><para>true if we switched forks as a result of this push. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="138" column="1" bodyfile="libraries/chain/db_block.cpp" bodystart="114" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a9f22e6c9b952fb833a6c34c0388c827a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1processed__transaction" kindref="compound">processed_transaction</ref></type>
+        <definition>processed_transaction graphene::chain::database::push_transaction</definition>
+        <argsstring>(const signed_transaction &amp;trx, uint32_t skip=skip_nothing)</argsstring>
+        <name>push_transaction</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref> &amp;</type>
+          <declname>trx</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>skip</declname>
+          <defval><ref refid="classgraphene_1_1chain_1_1database_1a6de6add85d012876641f2a50ad707726afbe701c12ae94e417ef9424306aabbdc" kindref="member">skip_nothing</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Attempts to push the transaction into the pending queue</para><para>When called to push a locally generated transaction, set the skip_block_size_check bit on the skip argument. This will allow the transaction to be pushed even if it causes the pending block size to exceed the maximum block size. Although the transaction will probably not propagate further now, as the peers are likely to have their pending queues full as well, it will be kept in the queue to be propagated later when a new block flushes out the pending queues. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="139" column="1" bodyfile="libraries/chain/db_block.cpp" bodystart="219" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1aae68153f9fb7d63e8c3d2d43875acbf9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::database::_push_block</definition>
+        <argsstring>(const signed_block &amp;b)</argsstring>
+        <name>_push_block</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1signed__block" kindref="compound">signed_block</ref> &amp;</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>TODO: if the block is greater than the head block and before the next maitenance interval </para>        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="140" column="1" bodyfile="libraries/chain/db_block.cpp" bodystart="129" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a85915100090a9a1770f6395b7c1584d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1processed__transaction" kindref="compound">processed_transaction</ref></type>
+        <definition>processed_transaction graphene::chain::database::_push_transaction</definition>
+        <argsstring>(const signed_transaction &amp;trx)</argsstring>
+        <name>_push_transaction</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref> &amp;</type>
+          <declname>trx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="141" column="1" bodyfile="libraries/chain/db_block.cpp" bodystart="229" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1ab5abeddad5156d1bcad2e97256d54fa0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1processed__transaction" kindref="compound">processed_transaction</ref></type>
+        <definition>processed_transaction graphene::chain::database::push_proposal</definition>
+        <argsstring>(const proposal_object &amp;proposal)</argsstring>
+        <name>push_proposal</name>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1proposal__object" kindref="compound">proposal_object</ref> &amp;</type>
+          <declname>proposal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>fc::exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the proposed transaction fails to apply. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="144" column="1" bodyfile="libraries/chain/db_block.cpp" bodystart="260" bodyend="295"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1ae8f11489883556cf872c893bc90fae53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__block" kindref="compound">signed_block</ref></type>
+        <definition>signed_block graphene::chain::database::generate_block</definition>
+        <argsstring>(const fc::time_point_sec when, witness_id_type witness_id, const fc::ecc::private_key &amp;block_signing_private_key, uint32_t skip)</argsstring>
+        <name>generate_block</name>
+        <param>
+          <type>const fc::time_point_sec</type>
+          <declname>when</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1ab7749ab4e10e21734e81c82e229657c0" kindref="member">witness_id_type</ref></type>
+          <declname>witness_id</declname>
+        </param>
+        <param>
+          <type>const fc::ecc::private_key &amp;</type>
+          <declname>block_signing_private_key</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>skip</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="146" column="1" bodyfile="libraries/chain/db_block.cpp" bodystart="297" bodyend="310"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a581a8d9539e3d2337d5665932048156c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__block" kindref="compound">signed_block</ref></type>
+        <definition>signed_block graphene::chain::database::_generate_block</definition>
+        <argsstring>(const fc::time_point_sec when, witness_id_type witness_id, const fc::ecc::private_key &amp;block_signing_private_key)</argsstring>
+        <name>_generate_block</name>
+        <param>
+          <type>const fc::time_point_sec</type>
+          <declname>when</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1ab7749ab4e10e21734e81c82e229657c0" kindref="member">witness_id_type</ref></type>
+          <declname>witness_id</declname>
+        </param>
+        <param>
+          <type>const fc::ecc::private_key &amp;</type>
+          <declname>block_signing_private_key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="152" column="1" bodyfile="libraries/chain/db_block.cpp" bodystart="312" bodyend="412"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a03253124ee8714af752c1d68b7cc206c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::pop_block</definition>
+        <argsstring>()</argsstring>
+        <name>pop_block</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes the most recent block from the database and undoes any changes it made. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="158" column="1" bodyfile="libraries/chain/db_block.cpp" bodystart="418" bodyend="431"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1af1c4e067598a0318e728b1d28df7a598" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::clear_pending</definition>
+        <argsstring>()</argsstring>
+        <name>clear_pending</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="159" column="1" bodyfile="libraries/chain/db_block.cpp" bodystart="433" bodyend="438"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a2fef3858781108d62da007cc155ccec7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t graphene::chain::database::push_applied_operation</definition>
+        <argsstring>(const operation &amp;op)</argsstring>
+        <name>push_applied_operation</name>
+        <param>
+          <type>const <ref refid="group__operations_1ga8b0400e40715f7fd1608ab2dc3d6d401" kindref="member">operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is used to track appied operations during the evaluation of a block, these operations should include any operation actually included in a transaction as well as any implied/virtual operations that resulted, such as filling an order. The applied operations is cleared after applying each block and calling the block observers which may want to index these operations.</para><para><simplesect kind="return"><para>the op_id which can be used to set the result after it has finished being applied. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="170" column="1" bodyfile="libraries/chain/db_block.cpp" bodystart="440" bodyend="449"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a1d85784b1e8dd37a7cecce893e248061" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::set_applied_operation_result</definition>
+        <argsstring>(uint32_t op_id, const operation_result &amp;r)</argsstring>
+        <name>set_applied_operation_result</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>op_id</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__operations_1gaf121d5f218e142d53acffc833cae929a" kindref="member">operation_result</ref> &amp;</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="171" column="1" bodyfile="libraries/chain/db_block.cpp" bodystart="450" bodyend="459"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a87c74f1ef2f8840261c3d9789151b305" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const vector&lt; optional&lt; <ref refid="classgraphene_1_1chain_1_1operation__history__object" kindref="compound">operation_history_object</ref> &gt; &gt; &amp;</type>
+        <definition>const vector&lt; optional&lt; operation_history_object &gt; &gt; &amp; graphene::chain::database::get_applied_operations</definition>
+        <argsstring>() const</argsstring>
+        <name>get_applied_operations</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="172" column="1" bodyfile="libraries/chain/db_block.cpp" bodystart="461" bodyend="464"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a5ebd612bd6895e9acf40c71ac69baed8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string graphene::chain::database::to_pretty_string</definition>
+        <argsstring>(const asset &amp;a) const</argsstring>
+        <name>to_pretty_string</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="174" column="1" bodyfile="libraries/chain/db_balance.cpp" bodystart="48" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a3daf7627fbbad235bc99cecc6464731b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1ab7749ab4e10e21734e81c82e229657c0" kindref="member">witness_id_type</ref></type>
+        <definition>witness_id_type graphene::chain::database::get_scheduled_witness</definition>
+        <argsstring>(uint32_t slot_num) const</argsstring>
+        <name>get_scheduled_witness</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>slot_num</declname>
+        </param>
+        <briefdescription>
+<para>Get the witness scheduled for block production in a slot. </para>        </briefdescription>
+        <detaileddescription>
+<para>slot_num always corresponds to a time in the future.</para><para>If slot_num == 1, returns the next scheduled witness. If slot_num == 2, returns the next scheduled witness after 1 block gap.</para><para>Use the <ref refid="classgraphene_1_1chain_1_1database_1a7a40590812847fac95aaded9dcac020e" kindref="member">get_slot_time()</ref> and <ref refid="classgraphene_1_1chain_1_1database_1a9f6a3131085a7411a46db17a818fd1ca" kindref="member">get_slot_at_time()</ref> functions to convert between slot_num and timestamp.</para><para>Passing slot_num == 0 returns GRAPHENE_NULL_WITNESS </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="225" column="1" bodyfile="libraries/chain/db_witness_schedule.cpp" bodystart="34" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a7a40590812847fac95aaded9dcac020e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>fc::time_point_sec</type>
+        <definition>fc::time_point_sec graphene::chain::database::get_slot_time</definition>
+        <argsstring>(uint32_t slot_num) const</argsstring>
+        <name>get_slot_time</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>slot_num</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the time at which the given slot occurs.</para><para>If slot_num == 0, return time_point_sec().</para><para>If slot_num == N for N &gt; 0, return the Nth next block-interval-aligned time greater than <ref refid="classgraphene_1_1chain_1_1database_1aa53e34701c0ab1b1c124b9c9e9c50ba1" kindref="member">head_block_time()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="235" column="1" bodyfile="libraries/chain/db_witness_schedule.cpp" bodystart="42" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a9f6a3131085a7411a46db17a818fd1ca" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t graphene::chain::database::get_slot_at_time</definition>
+        <argsstring>(fc::time_point_sec when) const</argsstring>
+        <name>get_slot_at_time</name>
+        <param>
+          <type>fc::time_point_sec</type>
+          <declname>when</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the last slot which occurs AT or BEFORE the given time.</para><para>The return value is the greatest value N such that get_slot_time( N ) &lt;= when.</para><para>If no such N exists, return 0. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="245" column="1" bodyfile="libraries/chain/db_witness_schedule.cpp" bodystart="72" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1aa10c1d73609828c1594e4054e4399b9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::update_witness_schedule</definition>
+        <argsstring>()</argsstring>
+        <name>update_witness_schedule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>High performance random generator <ulink url="http://xorshift.di.unimi.it/">http://xorshift.di.unimi.it/</ulink> </para>        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="247" column="1" bodyfile="libraries/chain/db_witness_schedule.cpp" bodystart="86" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a92ccabc0b2ed4232e41f44ad57ef321a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="namespacegraphene_1_1chain_1a8182991954496b517776f06844cf2d93" kindref="member">chain_id_type</ref> &amp;</type>
+        <definition>const chain_id_type &amp; graphene::chain::database::get_chain_id</definition>
+        <argsstring>() const</argsstring>
+        <name>get_chain_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="251" column="1" bodyfile="libraries/chain/db_getter.cpp" bodystart="80" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a73b613c345d2411977fb4f1b12b0b837" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classgraphene_1_1chain_1_1asset__object" kindref="compound">asset_object</ref> &amp;</type>
+        <definition>const asset_object &amp; graphene::chain::database::get_core_asset</definition>
+        <argsstring>() const</argsstring>
+        <name>get_core_asset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="252" column="1" bodyfile="libraries/chain/db_getter.cpp" bodystart="35" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1ac5519a9a8081356fa490be2db554b2e6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classgraphene_1_1chain_1_1chain__property__object" kindref="compound">chain_property_object</ref> &amp;</type>
+        <definition>const chain_property_object &amp; graphene::chain::database::get_chain_properties</definition>
+        <argsstring>() const</argsstring>
+        <name>get_chain_properties</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="253" column="1" bodyfile="libraries/chain/db_getter.cpp" bodystart="45" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a464a05994e41fdadd6351114eddaa316" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classgraphene_1_1chain_1_1global__property__object" kindref="compound">global_property_object</ref> &amp;</type>
+        <definition>const global_property_object &amp; graphene::chain::database::get_global_properties</definition>
+        <argsstring>() const</argsstring>
+        <name>get_global_properties</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="254" column="1" bodyfile="libraries/chain/db_getter.cpp" bodystart="40" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a3d8bc74b9cd108aaff1ed60de7fbfeb3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classgraphene_1_1chain_1_1dynamic__global__property__object" kindref="compound">dynamic_global_property_object</ref> &amp;</type>
+        <definition>const dynamic_global_property_object &amp; graphene::chain::database::get_dynamic_global_properties</definition>
+        <argsstring>() const</argsstring>
+        <name>get_dynamic_global_properties</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="255" column="1" bodyfile="libraries/chain/db_getter.cpp" bodystart="50" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1ad10d0309e4c878cb896b09bcbdb5e3b4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classgraphene_1_1chain_1_1node__property__object" kindref="compound">node_property_object</ref> &amp;</type>
+        <definition>const node_property_object &amp; graphene::chain::database::get_node_properties</definition>
+        <argsstring>() const</argsstring>
+        <name>get_node_properties</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="256" column="1" bodyfile="libraries/chain/db_getter.cpp" bodystart="85" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a337f8cd5e02c51ffde53b67cc04e2581" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="structgraphene_1_1chain_1_1fee__schedule" kindref="compound">fee_schedule</ref> &amp;</type>
+        <definition>const fee_schedule &amp; graphene::chain::database::current_fee_schedule</definition>
+        <argsstring>() const</argsstring>
+        <name>current_fee_schedule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="257" column="1" bodyfile="libraries/chain/db_getter.cpp" bodystart="55" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1aa53e34701c0ab1b1c124b9c9e9c50ba1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>time_point_sec</type>
+        <definition>time_point_sec graphene::chain::database::head_block_time</definition>
+        <argsstring>() const</argsstring>
+        <name>head_block_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="259" column="1" bodyfile="libraries/chain/db_getter.cpp" bodystart="60" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1aed39a6bd1c0356d6b7016af12509726d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t graphene::chain::database::head_block_num</definition>
+        <argsstring>() const</argsstring>
+        <name>head_block_num</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="260" column="1" bodyfile="libraries/chain/db_getter.cpp" bodystart="65" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a9d10c99200b0fa6dacc17993e7e22985" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1a314b030d7a6107c5641fd9945da7f568" kindref="member">block_id_type</ref></type>
+        <definition>block_id_type graphene::chain::database::head_block_id</definition>
+        <argsstring>() const</argsstring>
+        <name>head_block_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="261" column="1" bodyfile="libraries/chain/db_getter.cpp" bodystart="70" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a021e7b3697719810c2cf76772b55b44e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1ab7749ab4e10e21734e81c82e229657c0" kindref="member">witness_id_type</ref></type>
+        <definition>witness_id_type graphene::chain::database::head_block_witness</definition>
+        <argsstring>() const</argsstring>
+        <name>head_block_witness</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="262" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a5a11d2aa7bfc6fbbc33f67f6a6174b10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgraphene_1_1chain_1_1node__property__object" kindref="compound">node_property_object</ref> &amp;</type>
+        <definition>node_property_object &amp; graphene::chain::database::node_properties</definition>
+        <argsstring>()</argsstring>
+        <name>node_properties</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="266" column="1" bodyfile="libraries/chain/db_getter.cpp" bodystart="90" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1aee3dea95aed2dc56b5e3243e85c72e15" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t graphene::chain::database::last_non_undoable_block_num</definition>
+        <argsstring>() const</argsstring>
+        <name>last_non_undoable_block_num</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="269" column="1" bodyfile="libraries/chain/db_getter.cpp" bodystart="95" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1adbdb993dd56503d38044847dc478d19d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::initialize_evaluators</definition>
+        <argsstring>()</argsstring>
+        <name>initialize_evaluators</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="272" column="1" bodyfile="libraries/chain/db_init.cpp" bodystart="130" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1aa771c27abfab94ef6ed5f32348594508" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::initialize_indexes</definition>
+        <argsstring>()</argsstring>
+        <name>initialize_indexes</name>
+        <briefdescription>
+<para>Reset the object graph in-memory. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="274" column="1" bodyfile="libraries/chain/db_init.cpp" bodystart="176" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a91a45b5f416d80e1abab0affb75ea16a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::init_genesis</definition>
+        <argsstring>(const genesis_state_type &amp;genesis_state=genesis_state_type())</argsstring>
+        <name>init_genesis</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1genesis__state__type" kindref="compound">genesis_state_type</ref> &amp;</type>
+          <declname>genesis_state</declname>
+          <defval><ref refid="structgraphene_1_1chain_1_1genesis__state__type" kindref="compound">genesis_state_type</ref>()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="275" column="1" bodyfile="libraries/chain/db_init.cpp" bodystart="221" bodyend="702"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a116eef07a5b0af2512e1c55c724c6a60" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename EvaluatorType</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void graphene::chain::database::register_evaluator</definition>
+        <argsstring>()</argsstring>
+        <name>register_evaluator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="278" column="1" bodyfile="libraries/chain/include/graphene/chain/database.hpp" bodystart="278" bodyend="282"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a8f835513204025989f650833b43fb60c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::database::get_balance</definition>
+        <argsstring>(account_id_type owner, asset_id_type asset_id) const</argsstring>
+        <name>get_balance</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+          <declname>owner</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref></type>
+          <declname>asset_id</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a particular account&apos;s balance in a given asset. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>owner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Account whose balance should be retrieved </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>asset_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the asset to get balance in </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>owner&apos;s balance in asset </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="292" column="1" bodyfile="libraries/chain/db_balance.cpp" bodystart="34" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a66a6c5d7a70f514b80fff03620656f7d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::database::get_balance</definition>
+        <argsstring>(const account_object &amp;owner, const asset_object &amp;asset_obj) const</argsstring>
+        <name>get_balance</name>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1account__object" kindref="compound">account_object</ref> &amp;</type>
+          <declname>owner</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1asset__object" kindref="compound">asset_object</ref> &amp;</type>
+          <declname>asset_obj</declname>
+        </param>
+        <briefdescription>
+<para>This is an overloaded method. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="294" column="1" bodyfile="libraries/chain/db_balance.cpp" bodystart="43" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a1a4ebf561fcd858fa830e0582193eddd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::adjust_balance</definition>
+        <argsstring>(account_id_type account, asset delta)</argsstring>
+        <name>adjust_balance</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+          <declname>account</declname>
+        </param>
+        <param>
+          <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+          <declname>delta</declname>
+        </param>
+        <briefdescription>
+<para>Adjust a particular account&apos;s balance in a given asset by a delta. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>account</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of account whose balance should be adjusted </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>delta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Asset ID and amount to adjust balance by </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="301" column="1" bodyfile="libraries/chain/db_balance.cpp" bodystart="53" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1ab505e9971cb4636f2f15278893f4ba9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>optional&lt; <ref refid="namespacegraphene_1_1chain_1a3c7832a7fb78912c0bd3b8b50a19c3f1" kindref="member">vesting_balance_id_type</ref> &gt;</type>
+        <definition>optional&lt; vesting_balance_id_type &gt; graphene::chain::database::deposit_lazy_vesting</definition>
+        <argsstring>(const optional&lt; vesting_balance_id_type &gt; &amp;ovbid, share_type amount, uint32_t req_vesting_seconds, account_id_type req_owner, bool require_vesting)</argsstring>
+        <name>deposit_lazy_vesting</name>
+        <param>
+          <type>const optional&lt; <ref refid="namespacegraphene_1_1chain_1a3c7832a7fb78912c0bd3b8b50a19c3f1" kindref="member">vesting_balance_id_type</ref> &gt; &amp;</type>
+          <declname>ovbid</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+          <declname>amount</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>req_vesting_seconds</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+          <declname>req_owner</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>require_vesting</declname>
+        </param>
+        <briefdescription>
+<para>Helper to make lazy deposit to CDD VBO. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the given optional VBID is not valid(), or it does not have a CDD vesting policy, or the owner / vesting_seconds of the policy does not match the parameter, then credit amount to newly created VBID and return it.</para><para>Otherwise, credit amount to ovbid.</para><para><simplesect kind="return"><para>ID of newly created VBO, but only if VBO was created. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="316" column="1" bodyfile="libraries/chain/db_balance.cpp" bodystart="81" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1ada0ca07bcd351e7ee1f95719b8543579" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::deposit_cashback</definition>
+        <argsstring>(const account_object &amp;acct, share_type amount, bool require_vesting=true)</argsstring>
+        <name>deposit_cashback</name>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1account__object" kindref="compound">account_object</ref> &amp;</type>
+          <declname>acct</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+          <declname>amount</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>require_vesting</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="324" column="1" bodyfile="libraries/chain/db_balance.cpp" bodystart="129" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a8eba388c99ae3a7c13bb16cbfeb6be10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::deposit_witness_pay</definition>
+        <argsstring>(const witness_object &amp;wit, share_type amount)</argsstring>
+        <name>deposit_witness_pay</name>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1witness__object" kindref="compound">witness_object</ref> &amp;</type>
+          <declname>wit</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+          <declname>amount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="326" column="1" bodyfile="libraries/chain/db_balance.cpp" bodystart="166" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1ae82d4e2f0f40a9b7a5b13eb23315d637" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::debug_dump</definition>
+        <argsstring>()</argsstring>
+        <name>debug_dump</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method dumps the state of the blockchain in a semi-human readable form for the purpose of tracking down funds and mismatches in currency allocation </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="330" column="1" bodyfile="libraries/chain/db_debug.cpp" bodystart="39" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a8a805900b1a5c1ee4672b8f2732fda0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::apply_debug_updates</definition>
+        <argsstring>()</argsstring>
+        <name>apply_debug_updates</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="331" column="1" bodyfile="libraries/chain/db_debug.cpp" bodystart="175" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a69528d69a226d6a75670f5e31187db3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::debug_update</definition>
+        <argsstring>(const fc::variant_object &amp;update)</argsstring>
+        <name>debug_update</name>
+        <param>
+          <type>const fc::variant_object &amp;</type>
+          <declname>update</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="332" column="1" bodyfile="libraries/chain/db_debug.cpp" bodystart="185" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a9d07012c1ccb4df5e85999681b287f2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::database::fill_order</definition>
+        <argsstring>(const limit_order_object &amp;order, const asset &amp;pays, const asset &amp;receives, bool cull_if_small)</argsstring>
+        <name>fill_order</name>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1limit__order__object" kindref="compound">limit_order_object</ref> &amp;</type>
+          <declname>order</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref> &amp;</type>
+          <declname>pays</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref> &amp;</type>
+          <declname>receives</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>cull_if_small</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if the order was completely filled and thus freed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="375" column="1" bodyfile="libraries/chain/db_market.cpp" bodystart="295" bodyend="335"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a7ec2981a20e3537f89d246a1c0d67acd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::database::fill_order</definition>
+        <argsstring>(const call_order_object &amp;order, const asset &amp;pays, const asset &amp;receives)</argsstring>
+        <name>fill_order</name>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1call__order__object" kindref="compound">call_order_object</ref> &amp;</type>
+          <declname>order</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref> &amp;</type>
+          <declname>pays</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref> &amp;</type>
+          <declname>receives</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="376" column="1" bodyfile="libraries/chain/db_market.cpp" bodystart="338" bodyend="389"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a76cf607b3440aa06588491e35afadfdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::database::fill_order</definition>
+        <argsstring>(const force_settlement_object &amp;settle, const asset &amp;pays, const asset &amp;receives)</argsstring>
+        <name>fill_order</name>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1force__settlement__object" kindref="compound">force_settlement_object</ref> &amp;</type>
+          <declname>settle</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref> &amp;</type>
+          <declname>pays</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref> &amp;</type>
+          <declname>receives</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="377" column="1" bodyfile="libraries/chain/db_market.cpp" bodystart="391" bodyend="415"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1ab542e0ead0714964256fc8122fe12a99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::database::check_call_orders</definition>
+        <argsstring>(const asset_object &amp;mia, bool enable_black_swan=true)</argsstring>
+        <name>check_call_orders</name>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1asset__object" kindref="compound">asset_object</ref> &amp;</type>
+          <declname>mia</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enable_black_swan</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Starting with the least collateralized orders, fill them if their call price is above the max(lowest bid,call_limit).</para><para>This method will return true if it filled a short or limit</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mia</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the market issued asset that should be called. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>enable_black_swan</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- when adjusting collateral, triggering a black swan is invalid and will throw if enable_black_swan is not set to true.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if a margin call was executed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="379" column="1" bodyfile="libraries/chain/db_market.cpp" bodystart="429" bodyend="547"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a98391f198bc95d206c91da61dc55373d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::pay_order</definition>
+        <argsstring>(const account_object &amp;receiver, const asset &amp;receives, const asset &amp;pays)</argsstring>
+        <name>pay_order</name>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1account__object" kindref="compound">account_object</ref> &amp;</type>
+          <declname>receiver</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref> &amp;</type>
+          <declname>receives</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref> &amp;</type>
+          <declname>pays</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="382" column="1" bodyfile="libraries/chain/db_market.cpp" bodystart="549" bodyend="559"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a67e467860627363519b8548029102ff1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::database::calculate_market_fee</definition>
+        <argsstring>(const asset_object &amp;recv_asset, const asset &amp;trade_amount)</argsstring>
+        <name>calculate_market_fee</name>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1asset__object" kindref="compound">asset_object</ref> &amp;</type>
+          <declname>recv_asset</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref> &amp;</type>
+          <declname>trade_amount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="384" column="1" bodyfile="libraries/chain/db_market.cpp" bodystart="561" bodyend="579"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a5a9971fa9b80be998c1ff8f33726996e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::database::pay_market_fees</definition>
+        <argsstring>(const asset_object &amp;recv_asset, const asset &amp;receives)</argsstring>
+        <name>pay_market_fees</name>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1asset__object" kindref="compound">asset_object</ref> &amp;</type>
+          <declname>recv_asset</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref> &amp;</type>
+          <declname>receives</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="385" column="1" bodyfile="libraries/chain/db_market.cpp" bodystart="581" bodyend="597"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a414ee96a9f64b119cd3849266885d93d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1processed__transaction" kindref="compound">processed_transaction</ref></type>
+        <definition>processed_transaction graphene::chain::database::validate_transaction</definition>
+        <argsstring>(const signed_transaction &amp;trx)</argsstring>
+        <name>validate_transaction</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref> &amp;</type>
+          <declname>trx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method validates transactions without adding it to the pending state. <simplesect kind="return"><para>true if the transaction would validate </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="393" column="1" bodyfile="libraries/chain/db_block.cpp" bodystart="254" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1af9556e43f26824c2036c8916d0bc460c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::apply_block</definition>
+        <argsstring>(const signed_block &amp;next_block, uint32_t skip=skip_nothing)</argsstring>
+        <name>apply_block</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1signed__block" kindref="compound">signed_block</ref> &amp;</type>
+          <declname>next_block</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>skip</declname>
+          <defval><ref refid="classgraphene_1_1chain_1_1database_1a6de6add85d012876641f2a50ad707726afbe701c12ae94e417ef9424306aabbdc" kindref="member">skip_nothing</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="419" column="1" bodyfile="libraries/chain/db_block.cpp" bodystart="468" bodyend="486"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1aaadc49139eb020b3b1e91b60b128e49f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1processed__transaction" kindref="compound">processed_transaction</ref></type>
+        <definition>processed_transaction graphene::chain::database::apply_transaction</definition>
+        <argsstring>(const signed_transaction &amp;trx, uint32_t skip=skip_nothing)</argsstring>
+        <name>apply_transaction</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref> &amp;</type>
+          <declname>trx</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>skip</declname>
+          <defval><ref refid="classgraphene_1_1chain_1_1database_1a6de6add85d012876641f2a50ad707726afbe701c12ae94e417ef9424306aabbdc" kindref="member">skip_nothing</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="420" column="1" bodyfile="libraries/chain/db_block.cpp" bodystart="550" bodyend="558"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a930314aa34166b1dbfc06d0cd85d481d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__operations_1gaf121d5f218e142d53acffc833cae929a" kindref="member">operation_result</ref></type>
+        <definition>operation_result graphene::chain::database::apply_operation</definition>
+        <argsstring>(transaction_evaluation_state &amp;eval_state, const operation &amp;op)</argsstring>
+        <name>apply_operation</name>
+        <param>
+          <type><ref refid="classgraphene_1_1chain_1_1transaction__evaluation__state" kindref="compound">transaction_evaluation_state</ref> &amp;</type>
+          <declname>eval_state</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__operations_1ga8b0400e40715f7fd1608ab2dc3d6d401" kindref="member">operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="421" column="1" bodyfile="libraries/chain/db_block.cpp" bodystart="631" bodyend="646"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1aea9d1ca437641003a9426718ebe05481" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::pop_undo</definition>
+        <argsstring>()</argsstring>
+        <name>pop_undo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="405" column="1" bodyfile="libraries/chain/include/graphene/chain/database.hpp" bodystart="405" bodyend="405"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1ae3f480762bbb94cfecf98dd81fe3ed6e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::notify_changed_objects</definition>
+        <argsstring>()</argsstring>
+        <name>notify_changed_objects</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="406" column="1" bodyfile="libraries/chain/db_notify.cpp" bodystart="337" bodyend="390"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1aa90507ca970108d15c464c3938bb98df" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Index</type>
+          </param>
+        </templateparamlist>
+        <type>vector&lt; std::reference_wrapper&lt; const typename Index::object_type &gt; &gt;</type>
+        <definition>vector&lt; std::reference_wrapper&lt; const typename Index::object_type &gt; &gt; graphene::chain::database::sort_votable_objects</definition>
+        <argsstring>(size_t count) const</argsstring>
+        <name>sort_votable_objects</name>
+        <param>
+          <type>size_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="413" column="1" bodyfile="libraries/chain/db_maint.cpp" bodystart="52" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a55eb3701b763add49f4dc56f848b6dd3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::database::_apply_block</definition>
+        <argsstring>(const signed_block &amp;next_block)</argsstring>
+        <name>_apply_block</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1signed__block" kindref="compound">signed_block</ref> &amp;</type>
+          <declname>next_block</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="423" column="1" bodyfile="libraries/chain/db_block.cpp" bodystart="488" bodyend="546"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1database_1a575e603b3c68ea8fb91d16b92a8c543a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1processed__transaction" kindref="compound">processed_transaction</ref></type>
+        <definition>processed_transaction graphene::chain::database::_apply_transaction</definition>
+        <argsstring>(const signed_transaction &amp;trx)</argsstring>
+        <name>_apply_transaction</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref> &amp;</type>
+          <declname>trx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="424" column="1" bodyfile="libraries/chain/db_block.cpp" bodystart="560" bodyend="629"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>tracks the blockchain state in an extensible manner </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1594">
+        <label>db::object_database</label>
+      </node>
+      <node id="1593">
+        <label>graphene::chain::database</label>
+        <link refid="classgraphene_1_1chain_1_1database"/>
+        <childnode refid="1594" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1596">
+        <label>db::object_database</label>
+      </node>
+      <node id="1595">
+        <label>graphene::chain::database</label>
+        <link refid="classgraphene_1_1chain_1_1database"/>
+        <childnode refid="1596" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/database.hpp" line="58" column="1" bodyfile="libraries/chain/include/graphene/chain/database.hpp" bodystart="57" bodyend="498"/>
+    <listofallmembers>
+      <member refid="classgraphene_1_1chain_1_1database_1a0cdbc9e636ec8cba85507264b3477c79" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>_applied_ops</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a55eb3701b763add49f4dc56f848b6dd3" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>_apply_block</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a575e603b3c68ea8fb91d16b92a8c543a" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>_apply_transaction</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1aca7a7972f572bb397bb9cd666f476879" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>_block_id_to_block</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a61078f4c87b4fcb49d5a3e15d235fe0c" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>_checkpoints</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1aa26ab6ee28c4157489e89160659e2ef8" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>_committee_count_histogram_buffer</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a675728076c3aec61222edcae59af7337" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>_current_block_num</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a1e9b993a696f1fc3be6b913686d8b35b" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>_current_op_in_trx</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a84008aa5f9c5d989b2e5e1bb9b91a995" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>_current_trx_in_block</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a4161dbf18936f350ace2ffb875d13fe4" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>_current_virtual_op</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1ac1eab6ae52717cef08746bd3b2c9d464" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>_fork_db</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a581a8d9539e3d2337d5665932048156c" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>_generate_block</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a6c570ecbccb63d37c08c060f3dfaed19" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>_node_property_object</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1ac9b667d4d617a607787c9a3c1f42ac30" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>_operation_evaluators</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a2818f2ad9b765d588fd125dc191e523a" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>_pending_tx</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a4fc3dc98840a3b6a652488b420662845" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>_pending_tx_session</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a94b3cf5753e4cf16d06840971c782db0" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>_popped_tx</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1aae68153f9fb7d63e8c3d2d43875acbf9" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>_push_block</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a85915100090a9a1770f6395b7c1584d0" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>_push_transaction</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a9c144da0b732c3ad9434f5a878bc0916" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>_total_voting_stake</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1afe0c00a60f6bbe322c6a2db3cfb74b25" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>_validate_block_header</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a59e5f7edb13bd71745c73e65359ca465" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>_vote_tally_buffer</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a694ccfb5385c32ab164b8388802ce36b" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>_witness_count_histogram_buffer</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a0e8c92ac95d4ac2569f6b079193691dc" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>add_checkpoints</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a1a4ebf561fcd858fa830e0582193eddd" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>adjust_balance</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a3e6934dcd3926a0064ef136afc242c33" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>applied_block</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1af9556e43f26824c2036c8916d0bc460c" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>apply_block</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a8a805900b1a5c1ee4672b8f2732fda0a" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>apply_debug_updates</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a930314aa34166b1dbfc06d0cd85d481d" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>apply_operation</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a69b1c5d7b0b79d702e6de4a4a04ee95b" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>apply_order</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1aaadc49139eb020b3b1e91b60b128e49f" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>apply_transaction</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a293e9896a2e9c9b6d62fb5e2c19d11e8" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>before_last_checkpoint</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a67e467860627363519b8548029102ff1" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>calculate_market_fee</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1ac89a3b04b731e51d3c27b83d60cfb905" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>cancel_order</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a006212022286600c4a5ed1491fd11819" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>cancel_order</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a89c462c2ed0224b34cd6b6b06985d046" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>changed_objects</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1ab542e0ead0714964256fc8122fe12a99" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>check_call_orders</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1ac02c8bcfcdbe39cd1486c6654f71264f" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>check_for_blackswan</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1abdcb89e79aaadcdec3b90ebebcd130c5" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>clear_expired_orders</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1ad75c225b144139e71fa68de637b2c548" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>clear_expired_proposals</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1ad4844a036da23d18c0e65f5859f12683" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>clear_expired_transactions</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1af1c4e067598a0318e728b1d28df7a598" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>clear_pending</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1aaef6e311f1eb8ddfea82751b4e2df2d2" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>close</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a614eb98379c3991d972133f6f846593d" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>create_block_summary</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a337f8cd5e02c51ffde53b67cc04e2581" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>current_fee_schedule</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a5314db2d542f49fe5487e144a03c2ee9" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>database</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1ae82d4e2f0f40a9b7a5b13eb23315d637" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>debug_dump</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a69528d69a226d6a75670f5e31187db3f" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>debug_update</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1ada0ca07bcd351e7ee1f95719b8543579" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>deposit_cashback</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1ab505e9971cb4636f2f15278893f4ba9f" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>deposit_lazy_vesting</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a8eba388c99ae3a7c13bb16cbfeb6be10" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>deposit_witness_pay</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1ae517d3ed2a2362a70d120962536e16a0" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>fetch_block_by_id</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a380a803937941dbbf86321373279a218" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>fetch_block_by_number</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a9d07012c1ccb4df5e85999681b287f2d" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>fill_order</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a7ec2981a20e3537f89d246a1c0d67acd" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>fill_order</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a76cf607b3440aa06588491e35afadfdb" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>fill_order</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1ae8f11489883556cf872c893bc90fae53" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>generate_block</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a87c74f1ef2f8840261c3d9789151b305" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>get_applied_operations</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a8f835513204025989f650833b43fb60c" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>get_balance</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a66a6c5d7a70f514b80fff03620656f7d" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>get_balance</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a4294f12b2299bab7684555c986abac76" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>get_block_id_for_num</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1aba653e023b116d6a004ebf27dd184328" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>get_block_ids_on_fork</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a92ccabc0b2ed4232e41f44ad57ef321a" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>get_chain_id</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1ac5519a9a8081356fa490be2db554b2e6" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>get_chain_properties</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1ad467f7f5b2d7cb5a142e1e80186589a6" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>get_checkpoints</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a73b613c345d2411977fb4f1b12b0b837" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>get_core_asset</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a3d8bc74b9cd108aaff1ed60de7fbfeb3" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>get_dynamic_global_properties</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a464a05994e41fdadd6351114eddaa316" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>get_global_properties</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1ad10d0309e4c878cb896b09bcbdb5e3b4" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>get_node_properties</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a19352bf8822d30ed4c71dd65fd62f0ca" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>get_recent_transaction</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a3daf7627fbbad235bc99cecc6464731b" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>get_scheduled_witness</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a9f6a3131085a7411a46db17a818fd1ca" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>get_slot_at_time</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a7a40590812847fac95aaded9dcac020e" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>get_slot_time</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a500db4fc078f64b18d99c19d45fe8b13" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>globally_settle_asset</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a9d10c99200b0fa6dacc17993e7e22985" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>head_block_id</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1aed39a6bd1c0356d6b7016af12509726d" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>head_block_num</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1aa53e34701c0ab1b1c124b9c9e9c50ba1" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>head_block_time</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a021e7b3697719810c2cf76772b55b44e" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>head_block_witness</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a91a45b5f416d80e1abab0affb75ea16a" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>init_genesis</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1af51b59445b07cab91bd70fd4ddec2e4f" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>initialize_budget_record</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1adbdb993dd56503d38044847dc478d19d" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>initialize_evaluators</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1aa771c27abfab94ef6ed5f32348594508" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>initialize_indexes</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a98795dba60947210dd9a0fbb770709a2" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>is_known_block</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a0600c987cf89e038128684da9b8c2829" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>is_known_transaction</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1aee3dea95aed2dc56b5e3243e85c72e15" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>last_non_undoable_block_num</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1ad458cba38d580698095e7c9afcffd3be" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>match</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a58f9a0bc9086e87cc7cb9344a574c5af" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>match</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a022f435c1dd712430b84a2a3921a2acc" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>match</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a11eac7e673b4a9bb4458282b3b01e21f" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>new_objects</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a5a11d2aa7bfc6fbbc33f67f6a6174b10" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>node_properties</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1ae3f480762bbb94cfecf98dd81fe3ed6e" prot="protected" virt="non-virtual"><scope>graphene::chain::database</scope><name>notify_changed_objects</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a0747f461aea199b260777d4b1975013d" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>on_pending_transaction</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a2a2998715e050b0d98af6244000cbed5" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>open</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a5a9971fa9b80be998c1ff8f33726996e" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>pay_market_fees</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a98391f198bc95d206c91da61dc55373d" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>pay_order</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a6fe82633f6c1133154b070c83a05362f" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>pay_workers</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1ab29c477088fadedbe396e4527d313e80" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>perform_account_maintenance</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1ab47b0c08852cb203a4ba77240383b131" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>perform_chain_maintenance</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a03253124ee8714af752c1d68b7cc206c" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>pop_block</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1aea9d1ca437641003a9426718ebe05481" prot="protected" virt="non-virtual"><scope>graphene::chain::database</scope><name>pop_undo</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1aff91fc596f814302f39d4c0233969d37" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>process_budget</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a2fef3858781108d62da007cc155ccec7" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>push_applied_operation</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1aa62eb8144a717f62da5404e8bb482414" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>push_block</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1ab5abeddad5156d1bcad2e97256d54fa0" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>push_proposal</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a9f22e6c9b952fb833a6c34c0388c827a" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>push_transaction</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a116eef07a5b0af2512e1c55c724c6a60" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>register_evaluator</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a2d0d48f857cb39317ebd129a1edbbb06" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>reindex</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a9aa30b505cfa4e5cdc9a0b354d49e89e" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>removed_objects</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a1d85784b1e8dd37a7cecce893e248061" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>set_applied_operation_result</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a6de6add85d012876641f2a50ad707726ab1814f44f09e9aa67dc11f1a82179368" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>skip_assert_evaluation</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a6de6add85d012876641f2a50ad707726a2ccaf9f1796afe8676c20e21571c91dc" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>skip_authority_check</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a6de6add85d012876641f2a50ad707726ad400a74260f27eef16d855f4c325840f" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>skip_block_size_check</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a6de6add85d012876641f2a50ad707726ae7f6a8e92ab5e80351994ee6e7240187" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>skip_fork_db</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a6de6add85d012876641f2a50ad707726a67c110807cc8ac1b8096a8d7888804c4" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>skip_merkle_check</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a6de6add85d012876641f2a50ad707726afbe701c12ae94e417ef9424306aabbdc" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>skip_nothing</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a6de6add85d012876641f2a50ad707726aa9965640871a2f76bacd60c977a183bc" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>skip_tapos_check</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a6de6add85d012876641f2a50ad707726aa4b454d723548a14369e9d54ebff309c" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>skip_transaction_dupe_check</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a6de6add85d012876641f2a50ad707726ada088aa976bc3f5a1813dc7645b591ad" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>skip_transaction_signatures</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a6de6add85d012876641f2a50ad707726a8627024a0226d1f03a963a90a26383b7" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>skip_undo_history_check</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a6de6add85d012876641f2a50ad707726aa6a4b7480b7887f498f60eb33abf5912" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>skip_validate</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a6de6add85d012876641f2a50ad707726a5658faff01cd4c139d313f6888bc7da0" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>skip_witness_schedule_check</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a6de6add85d012876641f2a50ad707726a7cd765f84f450cfdd68e3adcf87c02d2" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>skip_witness_signature</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1aa90507ca970108d15c464c3938bb98df" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>sort_votable_objects</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a5ebd612bd6895e9acf40c71ac69baed8" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>to_pretty_string</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a8c6abb44b82f50b6c07b759bae840064" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>update_active_committee_members</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1af31a9714d1e4a1de0ecd91346e0ae35f" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>update_active_witnesses</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1ae46cba129339864cc6958450b53c27f6" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>update_expired_feeds</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1aaa88beaf4853ba58821667aaa29d5fd6" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>update_global_dynamic_data</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1aa281b08f27f23e83863106e7c5db543b" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>update_last_irreversible_block</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1ae68098fd0de4ab679bfc696a364ebb56" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>update_maintenance_flag</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a0485e7a64376580ca08ada3b83a6de76" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>update_signing_witness</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a5dd219435fad332aa12893b1aefdcbf8" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>update_withdraw_permissions</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1aa10c1d73609828c1594e4054e4399b9a" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>update_witness_schedule</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1af3b2871563286c018ef252daec940f15" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>update_worker_votes</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1abb25d544cb49ea782f43630e0bed084c" prot="private" virt="non-virtual"><scope>graphene::chain::database</scope><name>validate_block_header</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a414ee96a9f64b119cd3849266885d93d" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>validate_transaction</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a6de6add85d012876641f2a50ad707726" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>validation_steps</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a37463bb4fc61d94effff3f5784a2f168" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>wipe</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1afa79d883fabbeab89ec71a47566ef1e6" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>witness_participation_rate</name></member>
+      <member refid="classgraphene_1_1chain_1_1database_1a1733f5bf8a8ea84dcd8f962eb61debe1" prot="public" virt="non-virtual"><scope>graphene::chain::database</scope><name>~database</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

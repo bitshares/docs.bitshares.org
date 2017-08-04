@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1call__order__update__operation" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::call_order_update_operation</compoundname>
+    <basecompoundref refid="structgraphene_1_1chain_1_1base__operation" prot="public" virt="non-virtual">graphene::chain::base_operation</basecompoundref>
+    <includes refid="market_8hpp" local="no">market.hpp</includes>
+    <innerclass refid="structgraphene_1_1chain_1_1call__order__update__operation_1_1fee__parameters__type" prot="public">graphene::chain::call_order_update_operation::fee_parameters_type</innerclass>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1call__order__update__operation_1a17effee3ca604138940b845bd3e88be9" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::call_order_update_operation::fee</definition>
+        <argsstring></argsstring>
+        <name>fee</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/market.hpp" line="116" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/market.hpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1call__order__update__operation_1a322ae95509c31bdf81cd1c2633df061d" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::call_order_update_operation::funding_account</definition>
+        <argsstring></argsstring>
+        <name>funding_account</name>
+        <briefdescription>
+<para>pays fee, collateral, and cover </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/market.hpp" line="117" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/market.hpp" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1call__order__update__operation_1a0f43b88b33a72499273ab3db5eb5040b" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::call_order_update_operation::delta_collateral</definition>
+        <argsstring></argsstring>
+        <name>delta_collateral</name>
+        <briefdescription>
+<para>the amount of collateral to add to the margin position </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/market.hpp" line="118" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/market.hpp" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1call__order__update__operation_1a8913e80d5c736ccd2c5a5accdde440ab" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::call_order_update_operation::delta_debt</definition>
+        <argsstring></argsstring>
+        <name>delta_debt</name>
+        <briefdescription>
+<para>the amount of the debt to be paid off, may be negative to issue new debt </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/market.hpp" line="119" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/market.hpp" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1call__order__update__operation_1a89ac4bd0e4a38f7964cd37877c26177d" prot="public" static="no" mutable="no">
+        <type><ref refid="group__operations_1gae0096750377f6e9d61dba5765284de99" kindref="member">extensions_type</ref></type>
+        <definition>extensions_type graphene::chain::call_order_update_operation::extensions</definition>
+        <argsstring></argsstring>
+        <name>extensions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/market.hpp" line="120" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/market.hpp" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1call__order__update__operation_1a28c1958ba768482942ad5b06dfb68c7d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::call_order_update_operation::fee_payer</definition>
+        <argsstring>() const</argsstring>
+        <name>fee_payer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/market.hpp" line="122" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/market.hpp" bodystart="122" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1call__order__update__operation_1af7e1f6de4b9db3b4f16ffabef0391352" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::call_order_update_operation::validate</definition>
+        <argsstring>() const</argsstring>
+        <name>validate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/market.hpp" line="123" column="1" bodyfile="libraries/chain/protocol/market.cpp" bodystart="41" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This operation can be used to add collateral, cover, and adjust the margin call price for a particular user.</para><para>For prediction markets the collateral and debt must always be equal.</para><para>This operation will fail if it would trigger a margin call that couldn&apos;t be filled. If the margin call hits the call price limit then it will fail if the call price is above the settlement price.</para><para><simplesect kind="note"><para>this operation can be used to force a market order using the collateral without requiring outside funds. </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1355">
+        <label>graphene::chain::call_order_update_operation</label>
+        <link refid="structgraphene_1_1chain_1_1call__order__update__operation"/>
+        <childnode refid="1356" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1356">
+        <label>graphene::chain::base_operation</label>
+        <link refid="structgraphene_1_1chain_1_1base__operation"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1359">
+        <label>flat_set&lt; future_extensions &gt;</label>
+      </node>
+      <node id="1357">
+        <label>graphene::chain::call_order_update_operation</label>
+        <link refid="structgraphene_1_1chain_1_1call__order__update__operation"/>
+        <childnode refid="1358" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1359" relation="usage">
+          <edgelabel>extensions</edgelabel>
+        </childnode>
+        <childnode refid="1360" relation="usage">
+          <edgelabel>fee</edgelabel>
+          <edgelabel>delta_collateral</edgelabel>
+          <edgelabel>delta_debt</edgelabel>
+        </childnode>
+      </node>
+      <node id="1358">
+        <label>graphene::chain::base_operation</label>
+        <link refid="structgraphene_1_1chain_1_1base__operation"/>
+      </node>
+      <node id="1360">
+        <label>graphene::chain::asset</label>
+        <link refid="structgraphene_1_1chain_1_1asset"/>
+        <childnode refid="1361" relation="usage">
+          <edgelabel>amount</edgelabel>
+        </childnode>
+      </node>
+      <node id="1361">
+        <label>safe&lt; int64_t &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/protocol/market.hpp" line="112" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/market.hpp" bodystart="111" bodyend="124"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a8947f5ff3ea0458c7fe981b5bb9e82b7" prot="public" virt="non-virtual"><scope>graphene::chain::call_order_update_operation</scope><name>calculate_data_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a18b678eb05bc5b30d75f10b398c07a91" prot="public" virt="non-virtual"><scope>graphene::chain::call_order_update_operation</scope><name>calculate_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1call__order__update__operation_1a0f43b88b33a72499273ab3db5eb5040b" prot="public" virt="non-virtual"><scope>graphene::chain::call_order_update_operation</scope><name>delta_collateral</name></member>
+      <member refid="structgraphene_1_1chain_1_1call__order__update__operation_1a8913e80d5c736ccd2c5a5accdde440ab" prot="public" virt="non-virtual"><scope>graphene::chain::call_order_update_operation</scope><name>delta_debt</name></member>
+      <member refid="structgraphene_1_1chain_1_1call__order__update__operation_1a89ac4bd0e4a38f7964cd37877c26177d" prot="public" virt="non-virtual"><scope>graphene::chain::call_order_update_operation</scope><name>extensions</name></member>
+      <member refid="structgraphene_1_1chain_1_1call__order__update__operation_1a17effee3ca604138940b845bd3e88be9" prot="public" virt="non-virtual"><scope>graphene::chain::call_order_update_operation</scope><name>fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1call__order__update__operation_1a28c1958ba768482942ad5b06dfb68c7d" prot="public" virt="non-virtual"><scope>graphene::chain::call_order_update_operation</scope><name>fee_payer</name></member>
+      <member refid="structgraphene_1_1chain_1_1call__order__update__operation_1a322ae95509c31bdf81cd1c2633df061d" prot="public" virt="non-virtual"><scope>graphene::chain::call_order_update_operation</scope><name>funding_account</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a1d398b2f68e1dca5f453b86655a64c41" prot="public" virt="non-virtual"><scope>graphene::chain::call_order_update_operation</scope><name>get_required_active_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1ac7e2861a01bbaef8fbe5c5dcf5e73b38" prot="public" virt="non-virtual"><scope>graphene::chain::call_order_update_operation</scope><name>get_required_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1aff6e2d2b66117c8c87f6a6e7e7ddba1f" prot="public" virt="non-virtual"><scope>graphene::chain::call_order_update_operation</scope><name>get_required_owner_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1call__order__update__operation_1af7e1f6de4b9db3b4f16ffabef0391352" prot="public" virt="non-virtual"><scope>graphene::chain::call_order_update_operation</scope><name>validate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

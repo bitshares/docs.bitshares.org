@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1witness__update__operation" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::witness_update_operation</compoundname>
+    <basecompoundref refid="structgraphene_1_1chain_1_1base__operation" prot="public" virt="non-virtual">graphene::chain::base_operation</basecompoundref>
+    <includes refid="witness_8hpp" local="no">witness.hpp</includes>
+    <innerclass refid="structgraphene_1_1chain_1_1witness__update__operation_1_1fee__parameters__type" prot="public">graphene::chain::witness_update_operation::fee_parameters_type</innerclass>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1witness__update__operation_1a5d4c493400c39ffbb9e2917b9dc90293" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::witness_update_operation::fee</definition>
+        <argsstring></argsstring>
+        <name>fee</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/witness.hpp" line="61" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/witness.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1witness__update__operation_1ab0daee0ca319c4fa0cb0e035bf7522fe" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1ab7749ab4e10e21734e81c82e229657c0" kindref="member">witness_id_type</ref></type>
+        <definition>witness_id_type graphene::chain::witness_update_operation::witness</definition>
+        <argsstring></argsstring>
+        <name>witness</name>
+        <briefdescription>
+<para>The witness object to update. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/witness.hpp" line="63" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/witness.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1witness__update__operation_1a6e7be1fca3b51e0244c5dd0d22e7b35f" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::witness_update_operation::witness_account</definition>
+        <argsstring></argsstring>
+        <name>witness_account</name>
+        <briefdescription>
+<para>The account which owns the witness. This account pays the fee for this operation. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/witness.hpp" line="65" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/witness.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1witness__update__operation_1adfaeb8e8c4ad43984ae31639d551ec37" prot="public" static="no" mutable="no">
+        <type>optional&lt; string &gt;</type>
+        <definition>optional&lt; string &gt; graphene::chain::witness_update_operation::new_url</definition>
+        <argsstring></argsstring>
+        <name>new_url</name>
+        <briefdescription>
+<para>The new URL. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/witness.hpp" line="67" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/witness.hpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1witness__update__operation_1aaf2cf03d418f091e4aa7d7ed03e6699f" prot="public" static="no" mutable="no">
+        <type>optional&lt; <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref> &gt;</type>
+        <definition>optional&lt; public_key_type &gt; graphene::chain::witness_update_operation::new_signing_key</definition>
+        <argsstring></argsstring>
+        <name>new_signing_key</name>
+        <briefdescription>
+<para>The new block signing key. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/witness.hpp" line="69" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/witness.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1witness__update__operation_1a8ee1f3a9087d1d4927c234d8eafe81b2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::witness_update_operation::fee_payer</definition>
+        <argsstring>() const</argsstring>
+        <name>fee_payer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/witness.hpp" line="71" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/witness.hpp" bodystart="71" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1witness__update__operation_1a641b4640a11735ea00af62e595278506" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::witness_update_operation::validate</definition>
+        <argsstring>() const</argsstring>
+        <name>validate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/witness.hpp" line="72" column="1" bodyfile="libraries/chain/protocol/witness.cpp" bodystart="34" bodyend="39"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Update a witness object&apos;s URL and block signing key. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3371">
+        <label>graphene::chain::witness_update_operation</label>
+        <link refid="structgraphene_1_1chain_1_1witness__update__operation"/>
+        <childnode refid="3372" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3372">
+        <label>graphene::chain::base_operation</label>
+        <link refid="structgraphene_1_1chain_1_1base__operation"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3376">
+        <label>optional&lt; string &gt;</label>
+      </node>
+      <node id="3373">
+        <label>graphene::chain::witness_update_operation</label>
+        <link refid="structgraphene_1_1chain_1_1witness__update__operation"/>
+        <childnode refid="3374" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3375" relation="usage">
+          <edgelabel>new_signing_key</edgelabel>
+        </childnode>
+        <childnode refid="3376" relation="usage">
+          <edgelabel>new_url</edgelabel>
+        </childnode>
+        <childnode refid="3377" relation="usage">
+          <edgelabel>fee</edgelabel>
+        </childnode>
+      </node>
+      <node id="3374">
+        <label>graphene::chain::base_operation</label>
+        <link refid="structgraphene_1_1chain_1_1base__operation"/>
+      </node>
+      <node id="3377">
+        <label>graphene::chain::asset</label>
+        <link refid="structgraphene_1_1chain_1_1asset"/>
+        <childnode refid="3378" relation="usage">
+          <edgelabel>amount</edgelabel>
+        </childnode>
+      </node>
+      <node id="3378">
+        <label>safe&lt; int64_t &gt;</label>
+      </node>
+      <node id="3375">
+        <label>optional&lt; graphene::chain::public_key_type &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/protocol/witness.hpp" line="55" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/witness.hpp" bodystart="54" bodyend="73"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a8947f5ff3ea0458c7fe981b5bb9e82b7" prot="public" virt="non-virtual"><scope>graphene::chain::witness_update_operation</scope><name>calculate_data_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a18b678eb05bc5b30d75f10b398c07a91" prot="public" virt="non-virtual"><scope>graphene::chain::witness_update_operation</scope><name>calculate_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1witness__update__operation_1a5d4c493400c39ffbb9e2917b9dc90293" prot="public" virt="non-virtual"><scope>graphene::chain::witness_update_operation</scope><name>fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1witness__update__operation_1a8ee1f3a9087d1d4927c234d8eafe81b2" prot="public" virt="non-virtual"><scope>graphene::chain::witness_update_operation</scope><name>fee_payer</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a1d398b2f68e1dca5f453b86655a64c41" prot="public" virt="non-virtual"><scope>graphene::chain::witness_update_operation</scope><name>get_required_active_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1ac7e2861a01bbaef8fbe5c5dcf5e73b38" prot="public" virt="non-virtual"><scope>graphene::chain::witness_update_operation</scope><name>get_required_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1aff6e2d2b66117c8c87f6a6e7e7ddba1f" prot="public" virt="non-virtual"><scope>graphene::chain::witness_update_operation</scope><name>get_required_owner_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1witness__update__operation_1aaf2cf03d418f091e4aa7d7ed03e6699f" prot="public" virt="non-virtual"><scope>graphene::chain::witness_update_operation</scope><name>new_signing_key</name></member>
+      <member refid="structgraphene_1_1chain_1_1witness__update__operation_1adfaeb8e8c4ad43984ae31639d551ec37" prot="public" virt="non-virtual"><scope>graphene::chain::witness_update_operation</scope><name>new_url</name></member>
+      <member refid="structgraphene_1_1chain_1_1witness__update__operation_1a641b4640a11735ea00af62e595278506" prot="public" virt="non-virtual"><scope>graphene::chain::witness_update_operation</scope><name>validate</name></member>
+      <member refid="structgraphene_1_1chain_1_1witness__update__operation_1ab0daee0ca319c4fa0cb0e035bf7522fe" prot="public" virt="non-virtual"><scope>graphene::chain::witness_update_operation</scope><name>witness</name></member>
+      <member refid="structgraphene_1_1chain_1_1witness__update__operation_1a6e7be1fca3b51e0244c5dd0d22e7b35f" prot="public" virt="non-virtual"><scope>graphene::chain::witness_update_operation</scope><name>witness_account</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

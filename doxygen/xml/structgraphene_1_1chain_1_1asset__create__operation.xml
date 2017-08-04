@@ -1,0 +1,283 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1asset__create__operation" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::asset_create_operation</compoundname>
+    <basecompoundref refid="structgraphene_1_1chain_1_1base__operation" prot="public" virt="non-virtual">graphene::chain::base_operation</basecompoundref>
+    <includes refid="asset__ops_8hpp" local="no">asset_ops.hpp</includes>
+    <innerclass refid="structgraphene_1_1chain_1_1asset__create__operation_1_1fee__parameters__type" prot="public">graphene::chain::asset_create_operation::fee_parameters_type</innerclass>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1asset__create__operation_1ae090fb3772fbc75cd0f0bb7bed5320db" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::asset_create_operation::fee</definition>
+        <argsstring></argsstring>
+        <name>fee</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="128" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1asset__create__operation_1a330f289a8c3ec1f2e893552ae17cb5f6" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::asset_create_operation::issuer</definition>
+        <argsstring></argsstring>
+        <name>issuer</name>
+        <briefdescription>
+<para>This account must sign and pay the fee for this operation. Later, this account may update the asset. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="130" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1asset__create__operation_1a0975c46dd1cf552ec7e12b5233bc95db" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string graphene::chain::asset_create_operation::symbol</definition>
+        <argsstring></argsstring>
+        <name>symbol</name>
+        <briefdescription>
+<para>The ticker symbol of this asset. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="132" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1asset__create__operation_1a1e5633b769577af84537465bbd0dd600" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t graphene::chain::asset_create_operation::precision</definition>
+        <argsstring></argsstring>
+        <name>precision</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Number of digits to the right of decimal point, must be less than or equal to 12. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="134" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1asset__create__operation_1a3c532d2a4f213ed1c8c3658f0f4f77fc" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1asset__options" kindref="compound">asset_options</ref></type>
+        <definition>asset_options graphene::chain::asset_create_operation::common_options</definition>
+        <argsstring></argsstring>
+        <name>common_options</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Options common to all assets.</para><para><simplesect kind="note"><para>common_options.core_exchange_rate technically needs to store the asset ID of this new asset. Since this ID is not known at the time this operation is created, create this price as though the new asset has instance ID 1, and the chain will overwrite it with the new asset&apos;s ID. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="141" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1asset__create__operation_1a5224ee685ddde88498108846212422aa" prot="public" static="no" mutable="no">
+        <type>optional&lt; <ref refid="structgraphene_1_1chain_1_1bitasset__options" kindref="compound">bitasset_options</ref> &gt;</type>
+        <definition>optional&lt;bitasset_options&gt; graphene::chain::asset_create_operation::bitasset_opts</definition>
+        <argsstring></argsstring>
+        <name>bitasset_opts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Options only available for BitAssets. MUST be non-null if and only if the market_issued flag is set in common_options.flags </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="144" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1asset__create__operation_1a607b54ecdb86f86cb84d22bba4d6ef64" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool graphene::chain::asset_create_operation::is_prediction_market</definition>
+        <argsstring></argsstring>
+        <name>is_prediction_market</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>For BitAssets, set this to true if the asset implements a <ref refid="group__prediction__market" kindref="compound">Prediction Market</ref>; false otherwise. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="146" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1asset__create__operation_1ad167178813ec132701ebf055174a095e" prot="public" static="no" mutable="no">
+        <type><ref refid="group__operations_1gae0096750377f6e9d61dba5765284de99" kindref="member">extensions_type</ref></type>
+        <definition>extensions_type graphene::chain::asset_create_operation::extensions</definition>
+        <argsstring></argsstring>
+        <name>extensions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="147" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1asset__create__operation_1af06738c7950efa73528225e225c7f3d1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::asset_create_operation::fee_payer</definition>
+        <argsstring>() const</argsstring>
+        <name>fee_payer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="149" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="149" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1asset__create__operation_1a8f09f1554bc1b791a267abf70c2d7547" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::asset_create_operation::validate</definition>
+        <argsstring>() const</argsstring>
+        <name>validate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="150" column="1" bodyfile="libraries/chain/protocol/asset_ops.cpp" bodystart="96" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1asset__create__operation_1a9bd55e41ac3ec855bc9d9fd9a9f9b34a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+        <definition>share_type graphene::chain::asset_create_operation::calculate_fee</definition>
+        <argsstring>(const fee_parameters_type &amp;k) const</argsstring>
+        <name>calculate_fee</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1asset__create__operation_1_1fee__parameters__type" kindref="compound">fee_parameters_type</ref> &amp;</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="151" column="1" bodyfile="libraries/chain/protocol/asset_ops.cpp" bodystart="77" bodyend="94"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="477">
+        <label>graphene::chain::asset_create_operation</label>
+        <link refid="structgraphene_1_1chain_1_1asset__create__operation"/>
+        <childnode refid="478" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="478">
+        <label>graphene::chain::base_operation</label>
+        <link refid="structgraphene_1_1chain_1_1base__operation"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="482">
+        <label>optional&lt; graphene::chain::bitasset_options &gt;</label>
+      </node>
+      <node id="479">
+        <label>graphene::chain::asset_create_operation</label>
+        <link refid="structgraphene_1_1chain_1_1asset__create__operation"/>
+        <childnode refid="480" relation="public-inheritance">
+        </childnode>
+        <childnode refid="481" relation="usage">
+          <edgelabel>extensions</edgelabel>
+        </childnode>
+        <childnode refid="482" relation="usage">
+          <edgelabel>bitasset_opts</edgelabel>
+        </childnode>
+        <childnode refid="483" relation="usage">
+          <edgelabel>common_options</edgelabel>
+        </childnode>
+        <childnode refid="486" relation="usage">
+          <edgelabel>symbol</edgelabel>
+        </childnode>
+        <childnode refid="488" relation="usage">
+          <edgelabel>fee</edgelabel>
+        </childnode>
+      </node>
+      <node id="484">
+        <label>flat_set&lt; asset_id_type &gt;</label>
+      </node>
+      <node id="487">
+        <label>graphene::chain::price</label>
+        <link refid="structgraphene_1_1chain_1_1price"/>
+        <childnode refid="488" relation="usage">
+          <edgelabel>base</edgelabel>
+          <edgelabel>quote</edgelabel>
+        </childnode>
+      </node>
+      <node id="486">
+        <label>string</label>
+      </node>
+      <node id="481">
+        <label>flat_set&lt; future_extensions &gt;</label>
+      </node>
+      <node id="489">
+        <label>flat_set&lt; account_id_type &gt;</label>
+      </node>
+      <node id="480">
+        <label>graphene::chain::base_operation</label>
+        <link refid="structgraphene_1_1chain_1_1base__operation"/>
+      </node>
+      <node id="488">
+        <label>graphene::chain::asset</label>
+        <link refid="structgraphene_1_1chain_1_1asset"/>
+        <childnode refid="485" relation="usage">
+          <edgelabel>amount</edgelabel>
+        </childnode>
+      </node>
+      <node id="485">
+        <label>safe&lt; int64_t &gt;</label>
+      </node>
+      <node id="483">
+        <label>graphene::chain::asset_options</label>
+        <link refid="structgraphene_1_1chain_1_1asset__options"/>
+        <childnode refid="481" relation="usage">
+          <edgelabel>extensions</edgelabel>
+        </childnode>
+        <childnode refid="484" relation="usage">
+          <edgelabel>whitelist_markets</edgelabel>
+          <edgelabel>blacklist_markets</edgelabel>
+        </childnode>
+        <childnode refid="485" relation="usage">
+          <edgelabel>max_market_fee</edgelabel>
+          <edgelabel>max_supply</edgelabel>
+        </childnode>
+        <childnode refid="486" relation="usage">
+          <edgelabel>description</edgelabel>
+        </childnode>
+        <childnode refid="487" relation="usage">
+          <edgelabel>core_exchange_rate</edgelabel>
+        </childnode>
+        <childnode refid="489" relation="usage">
+          <edgelabel>whitelist_authorities</edgelabel>
+          <edgelabel>blacklist_authorities</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" line="120" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/asset_ops.hpp" bodystart="119" bodyend="152"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1asset__create__operation_1a5224ee685ddde88498108846212422aa" prot="public" virt="non-virtual"><scope>graphene::chain::asset_create_operation</scope><name>bitasset_opts</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a8947f5ff3ea0458c7fe981b5bb9e82b7" prot="public" virt="non-virtual"><scope>graphene::chain::asset_create_operation</scope><name>calculate_data_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1asset__create__operation_1a9bd55e41ac3ec855bc9d9fd9a9f9b34a" prot="public" virt="non-virtual"><scope>graphene::chain::asset_create_operation</scope><name>calculate_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a18b678eb05bc5b30d75f10b398c07a91" prot="public" virt="non-virtual" ambiguityscope="graphene::chain::base_operation::"><scope>graphene::chain::asset_create_operation</scope><name>calculate_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1asset__create__operation_1a3c532d2a4f213ed1c8c3658f0f4f77fc" prot="public" virt="non-virtual"><scope>graphene::chain::asset_create_operation</scope><name>common_options</name></member>
+      <member refid="structgraphene_1_1chain_1_1asset__create__operation_1ad167178813ec132701ebf055174a095e" prot="public" virt="non-virtual"><scope>graphene::chain::asset_create_operation</scope><name>extensions</name></member>
+      <member refid="structgraphene_1_1chain_1_1asset__create__operation_1ae090fb3772fbc75cd0f0bb7bed5320db" prot="public" virt="non-virtual"><scope>graphene::chain::asset_create_operation</scope><name>fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1asset__create__operation_1af06738c7950efa73528225e225c7f3d1" prot="public" virt="non-virtual"><scope>graphene::chain::asset_create_operation</scope><name>fee_payer</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a1d398b2f68e1dca5f453b86655a64c41" prot="public" virt="non-virtual"><scope>graphene::chain::asset_create_operation</scope><name>get_required_active_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1ac7e2861a01bbaef8fbe5c5dcf5e73b38" prot="public" virt="non-virtual"><scope>graphene::chain::asset_create_operation</scope><name>get_required_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1aff6e2d2b66117c8c87f6a6e7e7ddba1f" prot="public" virt="non-virtual"><scope>graphene::chain::asset_create_operation</scope><name>get_required_owner_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1asset__create__operation_1a607b54ecdb86f86cb84d22bba4d6ef64" prot="public" virt="non-virtual"><scope>graphene::chain::asset_create_operation</scope><name>is_prediction_market</name></member>
+      <member refid="structgraphene_1_1chain_1_1asset__create__operation_1a330f289a8c3ec1f2e893552ae17cb5f6" prot="public" virt="non-virtual"><scope>graphene::chain::asset_create_operation</scope><name>issuer</name></member>
+      <member refid="structgraphene_1_1chain_1_1asset__create__operation_1a1e5633b769577af84537465bbd0dd600" prot="public" virt="non-virtual"><scope>graphene::chain::asset_create_operation</scope><name>precision</name></member>
+      <member refid="structgraphene_1_1chain_1_1asset__create__operation_1a0975c46dd1cf552ec7e12b5233bc95db" prot="public" virt="non-virtual"><scope>graphene::chain::asset_create_operation</scope><name>symbol</name></member>
+      <member refid="structgraphene_1_1chain_1_1asset__create__operation_1a8f09f1554bc1b791a267abf70c2d7547" prot="public" virt="non-virtual"><scope>graphene::chain::asset_create_operation</scope><name>validate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

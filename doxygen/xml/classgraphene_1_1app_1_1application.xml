@@ -1,0 +1,406 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgraphene_1_1app_1_1application" kind="class" language="C++" prot="public">
+    <compoundname>graphene::app::application</compoundname>
+    <includes refid="application_8hpp" local="no">application.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1app_1_1application_1a695e67b3eafbf752b6350c7313ef10f7" prot="public" static="no" mutable="no">
+        <type>boost::signals2::signal&lt; void()&gt;</type>
+        <definition>boost::signals2::signal&lt;void()&gt; graphene::app::application::syncing_finished</definition>
+        <argsstring></argsstring>
+        <name>syncing_finished</name>
+        <briefdescription>
+<para>Emitted when syncing finishes (is_finished_syncing will return true) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/application.hpp" line="89" column="1" bodyfile="libraries/app/include/graphene/app/application.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1app_1_1application_1a942969c3aa92dc532278d1126f811b70" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classgraphene_1_1app_1_1detail_1_1application__impl" kindref="compound">detail::application_impl</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;detail::application_impl&gt; graphene::app::application::my</definition>
+        <argsstring></argsstring>
+        <name>my</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/application.hpp" line="93" column="1" bodyfile="libraries/app/include/graphene/app/application.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1app_1_1application_1a32ef9ba9a959799937668ad5a5d25cc0" prot="private" static="no" mutable="no">
+        <type>boost::program_options::options_description</type>
+        <definition>boost::program_options::options_description graphene::app::application::_cli_options</definition>
+        <argsstring></argsstring>
+        <name>_cli_options</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/application.hpp" line="95" column="1" bodyfile="libraries/app/include/graphene/app/application.hpp" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1app_1_1application_1a69237dc67886f006a99892de75ed0829" prot="private" static="no" mutable="no">
+        <type>boost::program_options::options_description</type>
+        <definition>boost::program_options::options_description graphene::app::application::_cfg_options</definition>
+        <argsstring></argsstring>
+        <name>_cfg_options</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/application.hpp" line="96" column="1" bodyfile="libraries/app/include/graphene/app/application.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgraphene_1_1app_1_1application_1a26da774787b3b3b7ad711c91f2730984" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>graphene::app::application::application</definition>
+        <argsstring>()</argsstring>
+        <name>application</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/application.hpp" line="41" column="1" bodyfile="libraries/app/application.cpp" bodystart="953" bodyend="955"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1application_1a52c41787f656c18fadf1ab4ad80622f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>graphene::app::application::~application</definition>
+        <argsstring>()</argsstring>
+        <name>~application</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/application.hpp" line="42" column="1" bodyfile="libraries/app/application.cpp" bodystart="957" bodyend="968"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1application_1a29c6faba273632e19155b9d17659bdfb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::application::set_program_options</definition>
+        <argsstring>(boost::program_options::options_description &amp;command_line_options, boost::program_options::options_description &amp;configuration_file_options) const</argsstring>
+        <name>set_program_options</name>
+        <param>
+          <type>boost::program_options::options_description &amp;</type>
+          <declname>command_line_options</declname>
+        </param>
+        <param>
+          <type>boost::program_options::options_description &amp;</type>
+          <declname>configuration_file_options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/application.hpp" line="44" column="1" bodyfile="libraries/app/application.cpp" bodystart="970" bodyend="999"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1application_1a03bacda67229d058034d478751b4da08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::application::initialize</definition>
+        <argsstring>(const fc::path &amp;data_dir, const boost::program_options::variables_map &amp;options)</argsstring>
+        <name>initialize</name>
+        <param>
+          <type>const fc::path &amp;</type>
+          <declname>data_dir</declname>
+        </param>
+        <param>
+          <type>const boost::program_options::variables_map &amp;</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/application.hpp" line="46" column="1" bodyfile="libraries/app/application.cpp" bodystart="1001" bodyend="1030"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1application_1a16a9f54da2720e1690ecf2c02f1b51d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::application::initialize_plugins</definition>
+        <argsstring>(const boost::program_options::variables_map &amp;options)</argsstring>
+        <name>initialize_plugins</name>
+        <param>
+          <type>const boost::program_options::variables_map &amp;</type>
+          <declname>options</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/application.hpp" line="47" column="1" bodyfile="libraries/app/application.cpp" bodystart="1099" bodyend="1104"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1application_1a6b01a275a74bbe1bebdaaa83257897bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::application::startup</definition>
+        <argsstring>()</argsstring>
+        <name>startup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/application.hpp" line="48" column="1" bodyfile="libraries/app/application.cpp" bodystart="1032" bodyend="1043"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1application_1a72455823ffb2df44752ec224ca292414" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::application::shutdown</definition>
+        <argsstring>()</argsstring>
+        <name>shutdown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/application.hpp" line="49" column="1" bodyfile="libraries/app/application.cpp" bodystart="1091" bodyend="1097"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1application_1abc4a8c64f729d58289f8bcbc24737fa8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::application::startup_plugins</definition>
+        <argsstring>()</argsstring>
+        <name>startup_plugins</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/application.hpp" line="50" column="1" bodyfile="libraries/app/application.cpp" bodystart="1106" bodyend="1111"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1application_1a6e5c4ead1d57f9326a58c29fcfdfaeef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::application::shutdown_plugins</definition>
+        <argsstring>()</argsstring>
+        <name>shutdown_plugins</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/application.hpp" line="51" column="1" bodyfile="libraries/app/application.cpp" bodystart="1085" bodyend="1090"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1application_1a5a679b8f7deeb4a53d59557b9ad45ac3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename PluginType</type>
+          </param>
+        </templateparamlist>
+        <type>std::shared_ptr&lt; PluginType &gt;</type>
+        <definition>std::shared_ptr&lt;PluginType&gt; graphene::app::application::register_plugin</definition>
+        <argsstring>()</argsstring>
+        <name>register_plugin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/application.hpp" line="54" column="1" bodyfile="libraries/app/include/graphene/app/application.hpp" bodystart="54" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1application_1a8a9a475ccf5b1c271e757c7c52b8b80f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classgraphene_1_1app_1_1abstract__plugin" kindref="compound">abstract_plugin</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; abstract_plugin &gt; graphene::app::application::get_plugin</definition>
+        <argsstring>(const string &amp;name) const</argsstring>
+        <name>get_plugin</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/application.hpp" line="69" column="1" bodyfile="libraries/app/application.cpp" bodystart="1045" bodyend="1048"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1application_1a4484ef04016fe6d470d694376c3387a4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename PluginType</type>
+          </param>
+        </templateparamlist>
+        <type>std::shared_ptr&lt; PluginType &gt;</type>
+        <definition>std::shared_ptr&lt;PluginType&gt; graphene::app::application::get_plugin</definition>
+        <argsstring>(const string &amp;name) const</argsstring>
+        <name>get_plugin</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/application.hpp" line="72" column="1" bodyfile="libraries/app/include/graphene/app/application.hpp" bodystart="72" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1application_1ac6be3372ebe64a14abe6d5c6a26b0f0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>net::node_ptr</type>
+        <definition>net::node_ptr graphene::app::application::p2p_node</definition>
+        <argsstring>()</argsstring>
+        <name>p2p_node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/application.hpp" line="80" column="1" bodyfile="libraries/app/application.cpp" bodystart="1050" bodyend="1053"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1application_1af856dd23a0f0c0d961022d8c453e47d1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classgraphene_1_1chain_1_1database" kindref="compound">chain::database</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; chain::database &gt; graphene::app::application::chain_database</definition>
+        <argsstring>() const</argsstring>
+        <name>chain_database</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/application.hpp" line="81" column="1" bodyfile="libraries/app/application.cpp" bodystart="1055" bodyend="1058"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1application_1a6901555c199caa9535f30375667df3f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::application::set_block_production</definition>
+        <argsstring>(bool producing_blocks)</argsstring>
+        <name>set_block_production</name>
+        <param>
+          <type>bool</type>
+          <declname>producing_blocks</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/application.hpp" line="83" column="1" bodyfile="libraries/app/application.cpp" bodystart="1060" bodyend="1063"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1application_1a5ec1e91d393732aca493f27265860ffb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>fc::optional&lt; <ref refid="structgraphene_1_1app_1_1api__access__info" kindref="compound">api_access_info</ref> &gt;</type>
+        <definition>optional&lt; api_access_info &gt; graphene::app::application::get_api_access_info</definition>
+        <argsstring>(const string &amp;username) const</argsstring>
+        <name>get_api_access_info</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>username</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/application.hpp" line="84" column="1" bodyfile="libraries/app/application.cpp" bodystart="1065" bodyend="1068"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1application_1a327e69e154b57da1da036166cb61d154" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::application::set_api_access_info</definition>
+        <argsstring>(const string &amp;username, api_access_info &amp;&amp;permissions)</argsstring>
+        <name>set_api_access_info</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>username</declname>
+        </param>
+        <param>
+          <type><ref refid="structgraphene_1_1app_1_1api__access__info" kindref="compound">api_access_info</ref> &amp;&amp;</type>
+          <declname>permissions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/application.hpp" line="85" column="1" bodyfile="libraries/app/application.cpp" bodystart="1070" bodyend="1073"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1application_1a07a1d888d73b01eec7d6c7bfb5b2d79c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::app::application::is_finished_syncing</definition>
+        <argsstring>() const</argsstring>
+        <name>is_finished_syncing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/application.hpp" line="87" column="1" bodyfile="libraries/app/application.cpp" bodystart="1075" bodyend="1078"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgraphene_1_1app_1_1application_1a8fb3e0d556157c401760816b572c7930" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::application::add_plugin</definition>
+        <argsstring>(const string &amp;name, std::shared_ptr&lt; abstract_plugin &gt; p)</argsstring>
+        <name>add_plugin</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classgraphene_1_1app_1_1abstract__plugin" kindref="compound">abstract_plugin</ref> &gt;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/application.hpp" line="92" column="1" bodyfile="libraries/app/application.cpp" bodystart="1080" bodyend="1083"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/app/include/graphene/app/application.hpp" line="39" column="1" bodyfile="libraries/app/include/graphene/app/application.hpp" bodystart="38" bodyend="97"/>
+    <listofallmembers>
+      <member refid="classgraphene_1_1app_1_1application_1a69237dc67886f006a99892de75ed0829" prot="private" virt="non-virtual"><scope>graphene::app::application</scope><name>_cfg_options</name></member>
+      <member refid="classgraphene_1_1app_1_1application_1a32ef9ba9a959799937668ad5a5d25cc0" prot="private" virt="non-virtual"><scope>graphene::app::application</scope><name>_cli_options</name></member>
+      <member refid="classgraphene_1_1app_1_1application_1a8fb3e0d556157c401760816b572c7930" prot="private" virt="non-virtual"><scope>graphene::app::application</scope><name>add_plugin</name></member>
+      <member refid="classgraphene_1_1app_1_1application_1a26da774787b3b3b7ad711c91f2730984" prot="public" virt="non-virtual"><scope>graphene::app::application</scope><name>application</name></member>
+      <member refid="classgraphene_1_1app_1_1application_1af856dd23a0f0c0d961022d8c453e47d1" prot="public" virt="non-virtual"><scope>graphene::app::application</scope><name>chain_database</name></member>
+      <member refid="classgraphene_1_1app_1_1application_1a5ec1e91d393732aca493f27265860ffb" prot="public" virt="non-virtual"><scope>graphene::app::application</scope><name>get_api_access_info</name></member>
+      <member refid="classgraphene_1_1app_1_1application_1a8a9a475ccf5b1c271e757c7c52b8b80f" prot="public" virt="non-virtual"><scope>graphene::app::application</scope><name>get_plugin</name></member>
+      <member refid="classgraphene_1_1app_1_1application_1a4484ef04016fe6d470d694376c3387a4" prot="public" virt="non-virtual"><scope>graphene::app::application</scope><name>get_plugin</name></member>
+      <member refid="classgraphene_1_1app_1_1application_1a03bacda67229d058034d478751b4da08" prot="public" virt="non-virtual"><scope>graphene::app::application</scope><name>initialize</name></member>
+      <member refid="classgraphene_1_1app_1_1application_1a16a9f54da2720e1690ecf2c02f1b51d0" prot="public" virt="non-virtual"><scope>graphene::app::application</scope><name>initialize_plugins</name></member>
+      <member refid="classgraphene_1_1app_1_1application_1a07a1d888d73b01eec7d6c7bfb5b2d79c" prot="public" virt="non-virtual"><scope>graphene::app::application</scope><name>is_finished_syncing</name></member>
+      <member refid="classgraphene_1_1app_1_1application_1a942969c3aa92dc532278d1126f811b70" prot="private" virt="non-virtual"><scope>graphene::app::application</scope><name>my</name></member>
+      <member refid="classgraphene_1_1app_1_1application_1ac6be3372ebe64a14abe6d5c6a26b0f0b" prot="public" virt="non-virtual"><scope>graphene::app::application</scope><name>p2p_node</name></member>
+      <member refid="classgraphene_1_1app_1_1application_1a5a679b8f7deeb4a53d59557b9ad45ac3" prot="public" virt="non-virtual"><scope>graphene::app::application</scope><name>register_plugin</name></member>
+      <member refid="classgraphene_1_1app_1_1application_1a327e69e154b57da1da036166cb61d154" prot="public" virt="non-virtual"><scope>graphene::app::application</scope><name>set_api_access_info</name></member>
+      <member refid="classgraphene_1_1app_1_1application_1a6901555c199caa9535f30375667df3f0" prot="public" virt="non-virtual"><scope>graphene::app::application</scope><name>set_block_production</name></member>
+      <member refid="classgraphene_1_1app_1_1application_1a29c6faba273632e19155b9d17659bdfb" prot="public" virt="non-virtual"><scope>graphene::app::application</scope><name>set_program_options</name></member>
+      <member refid="classgraphene_1_1app_1_1application_1a72455823ffb2df44752ec224ca292414" prot="public" virt="non-virtual"><scope>graphene::app::application</scope><name>shutdown</name></member>
+      <member refid="classgraphene_1_1app_1_1application_1a6e5c4ead1d57f9326a58c29fcfdfaeef" prot="public" virt="non-virtual"><scope>graphene::app::application</scope><name>shutdown_plugins</name></member>
+      <member refid="classgraphene_1_1app_1_1application_1a6b01a275a74bbe1bebdaaa83257897bb" prot="public" virt="non-virtual"><scope>graphene::app::application</scope><name>startup</name></member>
+      <member refid="classgraphene_1_1app_1_1application_1abc4a8c64f729d58289f8bcbc24737fa8" prot="public" virt="non-virtual"><scope>graphene::app::application</scope><name>startup_plugins</name></member>
+      <member refid="classgraphene_1_1app_1_1application_1a695e67b3eafbf752b6350c7313ef10f7" prot="public" virt="non-virtual"><scope>graphene::app::application</scope><name>syncing_finished</name></member>
+      <member refid="classgraphene_1_1app_1_1application_1a52c41787f656c18fadf1ab4ad80622f1" prot="public" virt="non-virtual"><scope>graphene::app::application</scope><name>~application</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

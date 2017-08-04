@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgraphene_1_1chain_1_1chain__property__object" kind="class" language="C++" prot="public">
+    <compoundname>graphene::chain::chain_property_object</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">graphene::db::abstract_object&lt; chain_property_object &gt;</basecompoundref>
+    <includes refid="chain__property__object_8hpp" local="no">chain_property_object.hpp</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1chain__property__object_1adc4b64bb92373054130d2f5afb475fd7" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t graphene::chain::chain_property_object::space_id</definition>
+        <argsstring></argsstring>
+        <name>space_id</name>
+        <initializer>= <ref refid="namespacegraphene_1_1chain_1a92e55d4242187696c5e2c5eaafbd9400a81f35c04f1d3f3109dacaa6f2bef33c7" kindref="member">implementation_ids</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/chain_property_object.hpp" line="38" column="1" bodyfile="libraries/chain/include/graphene/chain/chain_property_object.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1chain__property__object_1a5d644a9a5b08c1c91e9d2e557b087527" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t graphene::chain::chain_property_object::type_id</definition>
+        <argsstring></argsstring>
+        <name>type_id</name>
+        <initializer>= <ref refid="namespacegraphene_1_1chain_1ad3bef2f100b722a6c30fada38f6dcd73a06c5be035f391ce73d06d976c6881027" kindref="member">impl_chain_property_object_type</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/chain_property_object.hpp" line="39" column="1" bodyfile="libraries/chain/include/graphene/chain/chain_property_object.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1chain__property__object_1a102943a78e1f87edfc46c5cefceae18c" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a8182991954496b517776f06844cf2d93" kindref="member">chain_id_type</ref></type>
+        <definition>chain_id_type graphene::chain::chain_property_object::chain_id</definition>
+        <argsstring></argsstring>
+        <name>chain_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/chain_property_object.hpp" line="41" column="1" bodyfile="libraries/chain/include/graphene/chain/chain_property_object.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1chain__property__object_1a730ddd0f1a437d556301309a18075546" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1immutable__chain__parameters" kindref="compound">immutable_chain_parameters</ref></type>
+        <definition>immutable_chain_parameters graphene::chain::chain_property_object::immutable_parameters</definition>
+        <argsstring></argsstring>
+        <name>immutable_parameters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/chain_property_object.hpp" line="42" column="1" bodyfile="libraries/chain/include/graphene/chain/chain_property_object.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Contains invariants which are set at genesis and never changed. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1374">
+        <label>graphene::db::abstract_object&lt; chain_property_object &gt;</label>
+      </node>
+      <node id="1373">
+        <label>graphene::chain::chain_property_object</label>
+        <link refid="classgraphene_1_1chain_1_1chain__property__object"/>
+        <childnode refid="1374" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1376">
+        <label>graphene::db::abstract_object&lt; chain_property_object &gt;</label>
+      </node>
+      <node id="1375">
+        <label>graphene::chain::chain_property_object</label>
+        <link refid="classgraphene_1_1chain_1_1chain__property__object"/>
+        <childnode refid="1376" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1377" relation="usage">
+          <edgelabel>immutable_parameters</edgelabel>
+        </childnode>
+      </node>
+      <node id="1377">
+        <label>graphene::chain::immutable_chain_parameters</label>
+        <link refid="structgraphene_1_1chain_1_1immutable__chain__parameters"/>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/chain_property_object.hpp" line="36" column="1" bodyfile="libraries/chain/include/graphene/chain/chain_property_object.hpp" bodystart="35" bodyend="43"/>
+    <listofallmembers>
+      <member refid="classgraphene_1_1chain_1_1chain__property__object_1a102943a78e1f87edfc46c5cefceae18c" prot="public" virt="non-virtual"><scope>graphene::chain::chain_property_object</scope><name>chain_id</name></member>
+      <member refid="classgraphene_1_1chain_1_1chain__property__object_1a730ddd0f1a437d556301309a18075546" prot="public" virt="non-virtual"><scope>graphene::chain::chain_property_object</scope><name>immutable_parameters</name></member>
+      <member refid="classgraphene_1_1chain_1_1chain__property__object_1adc4b64bb92373054130d2f5afb475fd7" prot="public" virt="non-virtual"><scope>graphene::chain::chain_property_object</scope><name>space_id</name></member>
+      <member refid="classgraphene_1_1chain_1_1chain__property__object_1a5d644a9a5b08c1c91e9d2e557b087527" prot="public" virt="non-virtual"><scope>graphene::chain::chain_property_object</scope><name>type_id</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

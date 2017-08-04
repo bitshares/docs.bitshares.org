@@ -1,0 +1,1644 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgraphene_1_1app_1_1database__api" kind="class" language="C++" prot="public">
+    <compoundname>graphene::app::database_api</compoundname>
+    <includes refid="database__api_8hpp" local="no">database_api.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1app_1_1database__api_1a5b8f07ff78c43a35bbda1afe09ab29c1" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classgraphene_1_1app_1_1database__api__impl" kindref="compound">database_api_impl</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; database_api_impl &gt; graphene::app::database_api::my</definition>
+        <argsstring></argsstring>
+        <name>my</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="576" column="1" bodyfile="libraries/app/include/graphene/app/database_api.hpp" bodystart="576" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a3d3526b112f3d2d86245c494f9d3d006" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>graphene::app::database_api::database_api</definition>
+        <argsstring>(graphene::chain::database &amp;db)</argsstring>
+        <name>database_api</name>
+        <param>
+          <type><ref refid="classgraphene_1_1chain_1_1database" kindref="compound">graphene::chain::database</ref> &amp;</type>
+          <declname>db</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="120" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="226" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a3510335e90925e050398d74bc9d22dd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>graphene::app::database_api::~database_api</definition>
+        <argsstring>()</argsstring>
+        <name>~database_api</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="121" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="229" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a5a8b2fb34a9ef56da9825e15200720d1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>fc::variants</type>
+        <definition>fc::variants graphene::app::database_api::get_objects</definition>
+        <argsstring>(const vector&lt; object_id_type &gt; &amp;ids) const</argsstring>
+        <name>get_objects</name>
+        <param>
+          <type>const vector&lt; object_id_type &gt; &amp;</type>
+          <declname>ids</declname>
+        </param>
+        <briefdescription>
+<para>Get the objects corresponding to the provided IDs. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ids</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>IDs of the objects to retrieve </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The objects retrieved, in the order they are mentioned in ids</para></simplesect>
+If any of the provided IDs does not map to an object, a null variant is returned in its position. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="134" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="261" bodyend="264"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1aa521b1ed85c8cdf22c7b48f05a929115" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::database_api::set_subscribe_callback</definition>
+        <argsstring>(std::function&lt; void(const variant &amp;)&gt; cb, bool clear_filter)</argsstring>
+        <name>set_subscribe_callback</name>
+        <param>
+          <type>std::function&lt; void(const variant &amp;)&gt;</type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>clear_filter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="140" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="297" bodyend="300"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a5d7e7d30fc0063d33fdb14cd827b195f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::database_api::set_pending_transaction_callback</definition>
+        <argsstring>(std::function&lt; void(const variant &amp;)&gt; cb)</argsstring>
+        <name>set_pending_transaction_callback</name>
+        <param>
+          <type>std::function&lt; void(const variant &amp;)&gt;</type>
+          <declname>cb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="141" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="317" bodyend="320"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a5a0bc87af4cb36c11a9a15f5c29d6ea9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::database_api::set_block_applied_callback</definition>
+        <argsstring>(std::function&lt; void(const variant &amp;block_id)&gt; cb)</argsstring>
+        <name>set_block_applied_callback</name>
+        <param>
+          <type>std::function&lt; void(const variant &amp;block_id)&gt;</type>
+          <declname>cb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="142" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="327" bodyend="330"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a0c3f545dec20b073131bbd7466940c6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::database_api::cancel_all_subscriptions</definition>
+        <argsstring>()</argsstring>
+        <name>cancel_all_subscriptions</name>
+        <briefdescription>
+<para>Stop receiving any notifications. </para>        </briefdescription>
+        <detaileddescription>
+<para>This unsubscribes from all subscribed markets and objects. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="148" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="337" bodyend="340"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1aa515d89b74c1667a7d5e70a6632a4760" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>optional&lt; <ref refid="structgraphene_1_1chain_1_1block__header" kindref="compound">block_header</ref> &gt;</type>
+        <definition>optional&lt; block_header &gt; graphene::app::database_api::get_block_header</definition>
+        <argsstring>(uint32_t block_num) const</argsstring>
+        <name>get_block_header</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>block_num</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a block header. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>block_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Height of the block whose header should be returned </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>header of the referenced block, or null if no matching block was found </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="159" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="354" bodyend="357"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1acd3fd30302518d3958013bd6c4bf8c38" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>map&lt; uint32_t, optional&lt; <ref refid="structgraphene_1_1chain_1_1block__header" kindref="compound">block_header</ref> &gt; &gt;</type>
+        <definition>map&lt; uint32_t, optional&lt; block_header &gt; &gt; graphene::app::database_api::get_block_header_batch</definition>
+        <argsstring>(const vector&lt; uint32_t &gt; block_nums) const</argsstring>
+        <name>get_block_header_batch</name>
+        <param>
+          <type>const vector&lt; uint32_t &gt;</type>
+          <declname>block_nums</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve multiple block header by block numbers. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>block_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector containing heights of the block whose header should be returned </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>array of headers of the referenced blocks, or null if no matching block was found </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="166" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="366" bodyend="369"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a865cb0a6e29f07e8854ffe092adb503e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>optional&lt; <ref refid="structgraphene_1_1chain_1_1signed__block" kindref="compound">signed_block</ref> &gt;</type>
+        <definition>optional&lt; signed_block &gt; graphene::app::database_api::get_block</definition>
+        <argsstring>(uint32_t block_num) const</argsstring>
+        <name>get_block</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>block_num</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve a full, signed block. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>block_num</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Height of the block to be returned </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the referenced block, or null if no matching block was found </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="174" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="381" bodyend="384"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1aca15ad75a1150dd83304f419ce54d320" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1processed__transaction" kindref="compound">processed_transaction</ref></type>
+        <definition>processed_transaction graphene::app::database_api::get_transaction</definition>
+        <argsstring>(uint32_t block_num, uint32_t trx_in_block) const</argsstring>
+        <name>get_transaction</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>block_num</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>trx_in_block</declname>
+        </param>
+        <briefdescription>
+<para>used to fetch an individual transaction. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="179" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="391" bodyend="394"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a90a4d796c6f805158f101f603a48cbd4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>optional&lt; <ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref> &gt;</type>
+        <definition>optional&lt; signed_transaction &gt; graphene::app::database_api::get_recent_transaction_by_id</definition>
+        <argsstring>(const transaction_id_type &amp;id) const</argsstring>
+        <name>get_recent_transaction_by_id</name>
+        <param>
+          <type>const <ref refid="namespacegraphene_1_1chain_1adc38ef0a36d8b8dfcef2cbbcacb6d1e8" kindref="member">transaction_id_type</ref> &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>If the transaction has not expired, this method will return the transaction for the given ID or it will return NULL if it is not known. Just because it is not known does not mean it wasn&apos;t included in the blockchain. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="186" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="396" bodyend="403"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a51e318453ce7d459cd24e65fe81b14f1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgraphene_1_1chain_1_1chain__property__object" kindref="compound">chain_property_object</ref></type>
+        <definition>chain_property_object graphene::app::database_api::get_chain_properties</definition>
+        <argsstring>() const</argsstring>
+        <name>get_chain_properties</name>
+        <briefdescription>
+<para>Retrieve the chain_property_object associated with the chain. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="195" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="419" bodyend="422"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a6428c7a87e41ad7c30d59e4bbf45afe7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgraphene_1_1chain_1_1global__property__object" kindref="compound">global_property_object</ref></type>
+        <definition>global_property_object graphene::app::database_api::get_global_properties</definition>
+        <argsstring>() const</argsstring>
+        <name>get_global_properties</name>
+        <briefdescription>
+<para>Retrieve the current global_property_object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="200" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="429" bodyend="432"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1aecbae15b1b183ee2b70d8cf5d25c1afa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>fc::variant_object</type>
+        <definition>fc::variant_object graphene::app::database_api::get_config</definition>
+        <argsstring>() const</argsstring>
+        <name>get_config</name>
+        <briefdescription>
+<para>Retrieve compile-time constants. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="205" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="439" bodyend="442"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a940f705654d1baf52af6601b09b4ad9f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1a8182991954496b517776f06844cf2d93" kindref="member">chain_id_type</ref></type>
+        <definition>chain_id_type graphene::app::database_api::get_chain_id</definition>
+        <argsstring>() const</argsstring>
+        <name>get_chain_id</name>
+        <briefdescription>
+<para>Get the chain ID. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="210" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="449" bodyend="452"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a3398a20589c01aa807a364a02ec4c728" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgraphene_1_1chain_1_1dynamic__global__property__object" kindref="compound">dynamic_global_property_object</ref></type>
+        <definition>dynamic_global_property_object graphene::app::database_api::get_dynamic_global_properties</definition>
+        <argsstring>() const</argsstring>
+        <name>get_dynamic_global_properties</name>
+        <briefdescription>
+<para>Retrieve the current dynamic_global_property_object. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="215" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="459" bodyend="462"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a0266fd5ec4869846461243beb9d7cb59" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; vector&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt; &gt;</type>
+        <definition>vector&lt; vector&lt; account_id_type &gt; &gt; graphene::app::database_api::get_key_references</definition>
+        <argsstring>(vector&lt; public_key_type &gt; key) const</argsstring>
+        <name>get_key_references</name>
+        <param>
+          <type>vector&lt; <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref> &gt;</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="221" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="475" bodyend="478"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a6a8ea15c0976f303ec81fcfe2ebad67a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::app::database_api::is_public_key_registered</definition>
+        <argsstring>(string public_key) const</argsstring>
+        <name>is_public_key_registered</name>
+        <param>
+          <type>string</type>
+          <declname>public_key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Determine whether a textual representation of a public key (in Base-58 format) is <emphasis>currently</emphasis> linked to any <emphasis>registered</emphasis> (i.e. non-stealth) account on the blockchain <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>public_key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Public key </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Whether a public key is known </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="230" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="539" bodyend="542"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a5ab9baf749e763eefcfb4b69555cb8d8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; optional&lt; <ref refid="classgraphene_1_1chain_1_1account__object" kindref="compound">account_object</ref> &gt; &gt;</type>
+        <definition>vector&lt; optional&lt; account_object &gt; &gt; graphene::app::database_api::get_accounts</definition>
+        <argsstring>(const vector&lt; account_id_type &gt; &amp;account_ids) const</argsstring>
+        <name>get_accounts</name>
+        <param>
+          <type>const vector&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt; &amp;</type>
+          <declname>account_ids</declname>
+        </param>
+        <briefdescription>
+<para>Get a list of accounts by ID. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>account_ids</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>IDs of the accounts to retrieve </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The accounts corresponding to the provided IDs</para></simplesect>
+This function has semantics identical to <ref refid="classgraphene_1_1app_1_1database__api_1a5a8b2fb34a9ef56da9825e15200720d1" kindref="member">get_objects</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="243" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="574" bodyend="577"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1ac5d0d7bb2911c2d7ad79e0e7fc92a45d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::map&lt; string, <ref refid="structgraphene_1_1app_1_1full__account" kindref="compound">full_account</ref> &gt;</type>
+        <definition>std::map&lt; string, full_account &gt; graphene::app::database_api::get_full_accounts</definition>
+        <argsstring>(const vector&lt; string &gt; &amp;names_or_ids, bool subscribe)</argsstring>
+        <name>get_full_accounts</name>
+        <param>
+          <type>const vector&lt; string &gt; &amp;</type>
+          <declname>names_or_ids</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>subscribe</declname>
+        </param>
+        <briefdescription>
+<para>Fetch all objects relevant to the specified accounts and subscribe to updates. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Function to call with updates </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>names_or_ids</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Each item must be the name or ID of an account to retrieve </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Map of string from names_or_ids to the corresponding account</para></simplesect>
+This function fetches all relevant objects for the given accounts, and subscribes to updates to the given accounts. If any of the strings in names_or_ids cannot be tied to an account, that input will be ignored. All other accounts will be retrieved and subscribed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="256" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="594" bodyend="597"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a038218b56f3325924dedd39622b9bbb9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>optional&lt; <ref refid="classgraphene_1_1chain_1_1account__object" kindref="compound">account_object</ref> &gt;</type>
+        <definition>optional&lt; account_object &gt; graphene::app::database_api::get_account_by_name</definition>
+        <argsstring>(string name) const</argsstring>
+        <name>get_account_by_name</name>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="258" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="710" bodyend="713"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a341ded4856be24a02764b53d524954c0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt;</type>
+        <definition>vector&lt; account_id_type &gt; graphene::app::database_api::get_account_references</definition>
+        <argsstring>(account_id_type account_id) const</argsstring>
+        <name>get_account_references</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+          <declname>account_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>all accounts that referr to the key or account id in their owner or active authorities. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="263" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="724" bodyend="727"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a2387dfaadd10588b1253e1453640a56d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; optional&lt; <ref refid="classgraphene_1_1chain_1_1account__object" kindref="compound">account_object</ref> &gt; &gt;</type>
+        <definition>vector&lt; optional&lt; account_object &gt; &gt; graphene::app::database_api::lookup_account_names</definition>
+        <argsstring>(const vector&lt; string &gt; &amp;account_names) const</argsstring>
+        <name>lookup_account_names</name>
+        <param>
+          <type>const vector&lt; string &gt; &amp;</type>
+          <declname>account_names</declname>
+        </param>
+        <briefdescription>
+<para>Get a list of accounts by name. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>account_names</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Names of the accounts to retrieve </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The accounts holding the provided names</para></simplesect>
+This function has semantics identical to <ref refid="classgraphene_1_1app_1_1database__api_1a5a8b2fb34a9ef56da9825e15200720d1" kindref="member">get_objects</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="272" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="745" bodyend="748"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a8353abde3284cc58347aaa17b023eada" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>map&lt; string, <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt;</type>
+        <definition>map&lt; string, account_id_type &gt; graphene::app::database_api::lookup_accounts</definition>
+        <argsstring>(const string &amp;lower_bound_name, uint32_t limit) const</argsstring>
+        <name>lookup_accounts</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>lower_bound_name</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>limit</declname>
+        </param>
+        <briefdescription>
+<para>Get names and IDs for registered accounts. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lower_bound_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lower bound of the first name to return </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>limit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum number of results to return <ndash/> must not exceed 1000 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Map of account names to corresponding IDs </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="280" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="763" bodyend="766"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a0ffd0eda0e8714055d4c9f22200401c9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref> &gt;</type>
+        <definition>vector&lt; asset &gt; graphene::app::database_api::get_account_balances</definition>
+        <argsstring>(account_id_type id, const flat_set&lt; asset_id_type &gt; &amp;assets) const</argsstring>
+        <name>get_account_balances</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref> &gt; &amp;</type>
+          <declname>assets</declname>
+        </param>
+        <briefdescription>
+<para>Get an account&apos;s balances in various assets. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of the account to get balances for </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>assets</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>IDs of the assets to get balances of; if empty, get all assets account has a balance in </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Balances of the account </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="292" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="802" bodyend="805"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a52372cd241026042c898239aaf4ab18a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref> &gt;</type>
+        <definition>vector&lt; asset &gt; graphene::app::database_api::get_named_account_balances</definition>
+        <argsstring>(const std::string &amp;name, const flat_set&lt; asset_id_type &gt; &amp;assets) const</argsstring>
+        <name>get_named_account_balances</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref> &gt; &amp;</type>
+          <declname>assets</declname>
+        </param>
+        <briefdescription>
+<para>Semantically equivalent to <ref refid="classgraphene_1_1app_1_1database__api_1a0ffd0eda0e8714055d4c9f22200401c9" kindref="member">get_account_balances</ref>, but takes a name instead of an ID. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="295" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="829" bodyend="832"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1ae95b0587f9735593e1331cfe97b6be41" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="classgraphene_1_1chain_1_1balance__object" kindref="compound">balance_object</ref> &gt;</type>
+        <definition>vector&lt; balance_object &gt; graphene::app::database_api::get_balance_objects</definition>
+        <argsstring>(const vector&lt; address &gt; &amp;addrs) const</argsstring>
+        <name>get_balance_objects</name>
+        <param>
+          <type>const vector&lt; <ref refid="classgraphene_1_1chain_1_1address" kindref="compound">address</ref> &gt; &amp;</type>
+          <declname>addrs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>all unclaimed balance objects for a set of addresses </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="298" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="842" bodyend="845"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1ad544bdda0a336353ba66d304cdced4c0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref> &gt;</type>
+        <definition>vector&lt; asset &gt; graphene::app::database_api::get_vested_balances</definition>
+        <argsstring>(const vector&lt; balance_id_type &gt; &amp;objs) const</argsstring>
+        <name>get_vested_balances</name>
+        <param>
+          <type>const vector&lt; <ref refid="namespacegraphene_1_1chain_1acd20e3f4b4f9cb5d8112cf5d97b3e259" kindref="member">balance_id_type</ref> &gt; &amp;</type>
+          <declname>objs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="300" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="871" bodyend="874"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a1c4d51b3957c58333b6a4e47f897a1dc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="classgraphene_1_1chain_1_1vesting__balance__object" kindref="compound">vesting_balance_object</ref> &gt;</type>
+        <definition>vector&lt; vesting_balance_object &gt; graphene::app::database_api::get_vesting_balances</definition>
+        <argsstring>(account_id_type account_id) const</argsstring>
+        <name>get_vesting_balances</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+          <declname>account_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="302" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="889" bodyend="892"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1aeae61cd2ea6284869e996dce486286d4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t graphene::app::database_api::get_account_count</definition>
+        <argsstring>() const</argsstring>
+        <name>get_account_count</name>
+        <briefdescription>
+<para>Get the total number of accounts registered with the blockchain. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="307" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="786" bodyend="789"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1aca5b69aaff0d706b115076f3cef01c54" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; optional&lt; <ref refid="classgraphene_1_1chain_1_1asset__object" kindref="compound">asset_object</ref> &gt; &gt;</type>
+        <definition>vector&lt; optional&lt; asset_object &gt; &gt; graphene::app::database_api::get_assets</definition>
+        <argsstring>(const vector&lt; asset_id_type &gt; &amp;asset_ids) const</argsstring>
+        <name>get_assets</name>
+        <param>
+          <type>const vector&lt; <ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref> &gt; &amp;</type>
+          <declname>asset_ids</declname>
+        </param>
+        <briefdescription>
+<para>Get a list of assets by ID. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>asset_ids</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>IDs of the assets to retrieve </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The assets corresponding to the provided IDs</para></simplesect>
+This function has semantics identical to <ref refid="classgraphene_1_1app_1_1database__api_1a5a8b2fb34a9ef56da9825e15200720d1" kindref="member">get_objects</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="320" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="915" bodyend="918"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1ad018c7e1bf8cc503b786c80ab90965f3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="classgraphene_1_1chain_1_1asset__object" kindref="compound">asset_object</ref> &gt;</type>
+        <definition>vector&lt; asset_object &gt; graphene::app::database_api::list_assets</definition>
+        <argsstring>(const string &amp;lower_bound_symbol, uint32_t limit) const</argsstring>
+        <name>list_assets</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>lower_bound_symbol</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>limit</declname>
+        </param>
+        <briefdescription>
+<para>Get assets alphabetically by symbol name. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lower_bound_symbol</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lower bound of symbol names to retrieve </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>limit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum number of assets to fetch (must not exceed 100) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The assets found </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="328" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="935" bodyend="938"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a72961c0775c393d0847c12b73ac2d4ec" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; optional&lt; <ref refid="classgraphene_1_1chain_1_1asset__object" kindref="compound">asset_object</ref> &gt; &gt;</type>
+        <definition>vector&lt; optional&lt; asset_object &gt; &gt; graphene::app::database_api::lookup_asset_symbols</definition>
+        <argsstring>(const vector&lt; string &gt; &amp;symbols_or_ids) const</argsstring>
+        <name>lookup_asset_symbols</name>
+        <param>
+          <type>const vector&lt; string &gt; &amp;</type>
+          <declname>symbols_or_ids</declname>
+        </param>
+        <briefdescription>
+<para>Get a list of assets by symbol. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>asset_symbols</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Symbols or stringified IDs of the assets to retrieve </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The assets corresponding to the provided symbols or IDs</para></simplesect>
+This function has semantics identical to <ref refid="classgraphene_1_1app_1_1database__api_1a5a8b2fb34a9ef56da9825e15200720d1" kindref="member">get_objects</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="337" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="958" bodyend="961"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1aaa9e7c8c0582b9a7156ed83d8502bb62" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="classgraphene_1_1chain_1_1limit__order__object" kindref="compound">limit_order_object</ref> &gt;</type>
+        <definition>vector&lt; limit_order_object &gt; graphene::app::database_api::get_limit_orders</definition>
+        <argsstring>(asset_id_type a, asset_id_type b, uint32_t limit) const</argsstring>
+        <name>get_limit_orders</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref></type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>limit</declname>
+        </param>
+        <briefdescription>
+<para>Get limit orders in a given market. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of asset being sold </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of asset being purchased </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>limit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum number of orders to retrieve </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The limit orders, ordered from least price to greatest </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="350" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="987" bodyend="990"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a40826f0f00675fdd56d06f15a6523222" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="classgraphene_1_1chain_1_1call__order__object" kindref="compound">call_order_object</ref> &gt;</type>
+        <definition>vector&lt; call_order_object &gt; graphene::app::database_api::get_call_orders</definition>
+        <argsstring>(asset_id_type a, uint32_t limit) const</argsstring>
+        <name>get_call_orders</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>limit</declname>
+        </param>
+        <briefdescription>
+<para>Get call orders in a given asset. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of asset being called </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>limit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum number of orders to retrieve </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The call orders, ordered from earliest to be called to latest </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="358" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1024" bodyend="1027"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a6e30518207ecb94d7886596fa89b6e68" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="classgraphene_1_1chain_1_1force__settlement__object" kindref="compound">force_settlement_object</ref> &gt;</type>
+        <definition>vector&lt; force_settlement_object &gt; graphene::app::database_api::get_settle_orders</definition>
+        <argsstring>(asset_id_type a, uint32_t limit) const</argsstring>
+        <name>get_settle_orders</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>limit</declname>
+        </param>
+        <briefdescription>
+<para>Get forced settlement orders in a given asset. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID of asset being settled </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>limit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum number of orders to retrieve </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The settle orders, ordered from earliest settlement date to latest </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="366" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1046" bodyend="1049"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a830f65aa9ea2be4ccaf783b81655ff75" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="classgraphene_1_1chain_1_1call__order__object" kindref="compound">call_order_object</ref> &gt;</type>
+        <definition>vector&lt; call_order_object &gt; graphene::app::database_api::get_margin_positions</definition>
+        <argsstring>(const account_id_type &amp;id) const</argsstring>
+        <name>get_margin_positions</name>
+        <param>
+          <type>const <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>all open margin positions for a given account id. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="371" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1067" bodyend="1070"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1aabf9b981bb7a6207751a37320793ef9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::database_api::subscribe_to_market</definition>
+        <argsstring>(std::function&lt; void(const variant &amp;)&gt; callback, asset_id_type a, asset_id_type b)</argsstring>
+        <name>subscribe_to_market</name>
+        <param>
+          <type>std::function&lt; void(const variant &amp;)&gt;</type>
+          <declname>callback</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Request notification when the active orders in the market between two assets changes. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Callback method which is called when the market changes </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First asset ID </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second asset ID</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Callback will be passed a variant containing a vector&lt;pair&lt;operation, operation_result&gt;&gt;. The vector will contain, in order, the operations which changed the market, and their results. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="382" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1090" bodyend="1093"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1ad5f8d5fc78a995588d47b7af4e945def" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::database_api::unsubscribe_from_market</definition>
+        <argsstring>(asset_id_type a, asset_id_type b)</argsstring>
+        <name>unsubscribe_from_market</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+<para>Unsubscribe from updates to a given market. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First asset ID </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second asset ID </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="390" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1102" bodyend="1105"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1ab507c98bcb65b3e5efef6d11a9a0a08c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1app_1_1market__ticker" kindref="compound">market_ticker</ref></type>
+        <definition>market_ticker graphene::app::database_api::get_ticker</definition>
+        <argsstring>(const string &amp;base, const string &amp;quote) const</argsstring>
+        <name>get_ticker</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>quote</declname>
+        </param>
+        <briefdescription>
+<para>Returns the ticker for the market assetA:assetB. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String name of the first asset </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String name of the second asset </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The market ticker for the past 24 hours. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="398" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1114" bodyend="1117"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1ada3034b4ddacffa7106cde1f256d07d3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1app_1_1market__volume" kindref="compound">market_volume</ref></type>
+        <definition>market_volume graphene::app::database_api::get_24_volume</definition>
+        <argsstring>(const string &amp;base, const string &amp;quote) const</argsstring>
+        <name>get_24_volume</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>quote</declname>
+        </param>
+        <briefdescription>
+<para>Returns the 24 hour volume for the market assetA:assetB. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String name of the first asset </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String name of the second asset </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The market volume over the past 24 hours </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="406" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1178" bodyend="1181"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a4865539c5d6e1db1f6ea23681fc59bd1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1app_1_1order__book" kindref="compound">order_book</ref></type>
+        <definition>order_book graphene::app::database_api::get_order_book</definition>
+        <argsstring>(const string &amp;base, const string &amp;quote, unsigned limit=50) const</argsstring>
+        <name>get_order_book</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>quote</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>limit</declname>
+          <defval>50</defval>
+        </param>
+        <briefdescription>
+<para>Returns the order book for the market base:quote. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String name of the first asset </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>quote</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String name of the second asset </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>depth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>of the order book. Up to depth of each asks and bids, capped at 50. Prioritizes most moderate of each </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Order book of the market </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="415" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1196" bodyend="1199"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1ab9f345996512773054dcc2d76bb30770" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="structgraphene_1_1app_1_1market__trade" kindref="compound">market_trade</ref> &gt;</type>
+        <definition>vector&lt; market_trade &gt; graphene::app::database_api::get_trade_history</definition>
+        <argsstring>(const string &amp;base, const string &amp;quote, fc::time_point_sec start, fc::time_point_sec stop, unsigned limit=100) const</argsstring>
+        <name>get_trade_history</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>base</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>quote</declname>
+        </param>
+        <param>
+          <type>fc::time_point_sec</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>fc::time_point_sec</type>
+          <declname>stop</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>limit</declname>
+          <defval>100</defval>
+        </param>
+        <briefdescription>
+<para>Returns recent trades for the market assetA:assetB Note: Currentlt, timezone offsets are not supported. The time must be UTC. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String name of the first asset </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String name of the second asset </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stop</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Stop time as a UNIX timestamp </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>limit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of trasactions to retrieve, capped at 100 </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Start time as a UNIX timestamp </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Recent transactions in the market </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="427" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1251" bodyend="1258"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a74f6a78e1b086b71d76c13c61344373a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; optional&lt; <ref refid="classgraphene_1_1chain_1_1witness__object" kindref="compound">witness_object</ref> &gt; &gt;</type>
+        <definition>vector&lt; optional&lt; witness_object &gt; &gt; graphene::app::database_api::get_witnesses</definition>
+        <argsstring>(const vector&lt; witness_id_type &gt; &amp;witness_ids) const</argsstring>
+        <name>get_witnesses</name>
+        <param>
+          <type>const vector&lt; <ref refid="namespacegraphene_1_1chain_1ab7749ab4e10e21734e81c82e229657c0" kindref="member">witness_id_type</ref> &gt; &amp;</type>
+          <declname>witness_ids</declname>
+        </param>
+        <briefdescription>
+<para>Get a list of witnesses by ID. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>witness_ids</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>IDs of the witnesses to retrieve </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The witnesses corresponding to the provided IDs</para></simplesect>
+This function has semantics identical to <ref refid="classgraphene_1_1app_1_1database__api_1a5a8b2fb34a9ef56da9825e15200720d1" kindref="member">get_objects</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="442" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1329" bodyend="1332"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a009c30496675f2c3be4b2557a8ac42f0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>fc::optional&lt; <ref refid="classgraphene_1_1chain_1_1witness__object" kindref="compound">witness_object</ref> &gt;</type>
+        <definition>fc::optional&lt; witness_object &gt; graphene::app::database_api::get_witness_by_account</definition>
+        <argsstring>(account_id_type account) const</argsstring>
+        <name>get_witness_by_account</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+          <declname>account</declname>
+        </param>
+        <briefdescription>
+<para>Get the witness owned by a given account. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>account</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the account whose witness should be retrieved </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The witness object, or null if the account does not have a witness </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="449" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1362" bodyend="1365"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a5cdf1acf477e9b1e3a439711e39d1e90" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>map&lt; string, <ref refid="namespacegraphene_1_1chain_1ab7749ab4e10e21734e81c82e229657c0" kindref="member">witness_id_type</ref> &gt;</type>
+        <definition>map&lt; string, witness_id_type &gt; graphene::app::database_api::lookup_witness_accounts</definition>
+        <argsstring>(const string &amp;lower_bound_name, uint32_t limit) const</argsstring>
+        <name>lookup_witness_accounts</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>lower_bound_name</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>limit</declname>
+        </param>
+        <briefdescription>
+<para>Get names and IDs for registered witnesses. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lower_bound_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lower bound of the first name to return </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>limit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum number of results to return <ndash/> must not exceed 1000 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Map of witness names to corresponding IDs </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="457" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1376" bodyend="1379"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1af63c5f89b966944940ac7007f83fe051" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t graphene::app::database_api::get_witness_count</definition>
+        <argsstring>() const</argsstring>
+        <name>get_witness_count</name>
+        <briefdescription>
+<para>Get the total number of witnesses registered with the blockchain. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="462" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1404" bodyend="1407"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1aacfac5de7a9265a073b678812e26e729" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; optional&lt; <ref refid="classgraphene_1_1chain_1_1committee__member__object" kindref="compound">committee_member_object</ref> &gt; &gt;</type>
+        <definition>vector&lt; optional&lt; committee_member_object &gt; &gt; graphene::app::database_api::get_committee_members</definition>
+        <argsstring>(const vector&lt; committee_member_id_type &gt; &amp;committee_member_ids) const</argsstring>
+        <name>get_committee_members</name>
+        <param>
+          <type>const vector&lt; <ref refid="namespacegraphene_1_1chain_1ab79292a0eac35523c6e76cae4b6b6fa4" kindref="member">committee_member_id_type</ref> &gt; &amp;</type>
+          <declname>committee_member_ids</declname>
+        </param>
+        <briefdescription>
+<para>Get a list of committee_members by ID. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>committee_member_ids</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>IDs of the committee_members to retrieve </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The committee_members corresponding to the provided IDs</para></simplesect>
+This function has semantics identical to <ref refid="classgraphene_1_1app_1_1database__api_1a5a8b2fb34a9ef56da9825e15200720d1" kindref="member">get_objects</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="475" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1420" bodyend="1423"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a76c375f075b6c1ff20a69b11a8f8a7ab" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>fc::optional&lt; <ref refid="classgraphene_1_1chain_1_1committee__member__object" kindref="compound">committee_member_object</ref> &gt;</type>
+        <definition>fc::optional&lt; committee_member_object &gt; graphene::app::database_api::get_committee_member_by_account</definition>
+        <argsstring>(account_id_type account) const</argsstring>
+        <name>get_committee_member_by_account</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+          <declname>account</declname>
+        </param>
+        <briefdescription>
+<para>Get the committee_member owned by a given account. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>account</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the account whose committee_member should be retrieved </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The committee_member object, or null if the account does not have a committee_member </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="482" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1437" bodyend="1440"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a9ee2072c704a9a71d6823a5485319035" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>map&lt; string, <ref refid="namespacegraphene_1_1chain_1ab79292a0eac35523c6e76cae4b6b6fa4" kindref="member">committee_member_id_type</ref> &gt;</type>
+        <definition>map&lt; string, committee_member_id_type &gt; graphene::app::database_api::lookup_committee_member_accounts</definition>
+        <argsstring>(const string &amp;lower_bound_name, uint32_t limit) const</argsstring>
+        <name>lookup_committee_member_accounts</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>lower_bound_name</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>limit</declname>
+        </param>
+        <briefdescription>
+<para>Get names and IDs for registered committee_members. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lower_bound_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lower bound of the first name to return </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>limit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum number of results to return <ndash/> must not exceed 1000 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Map of committee_member names to corresponding IDs </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="490" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1451" bodyend="1454"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a8d2f0a7a4535a8b8789fe75f6d2d2979" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="classgraphene_1_1chain_1_1worker__object" kindref="compound">worker_object</ref> &gt;</type>
+        <definition>vector&lt; worker_object &gt; graphene::app::database_api::get_workers_by_account</definition>
+        <argsstring>(account_id_type account) const</argsstring>
+        <name>get_workers_by_account</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+          <declname>account</declname>
+        </param>
+        <briefdescription>
+<para>WORKERS. </para>        </briefdescription>
+        <detaileddescription>
+<para>Return the worker objects associated with this account. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="498" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1334" bodyend="1347"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a68b9a93c530b3fa4bb77d5d57b96fab3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; variant &gt;</type>
+        <definition>vector&lt; variant &gt; graphene::app::database_api::lookup_vote_ids</definition>
+        <argsstring>(const vector&lt; vote_id_type &gt; &amp;votes) const</argsstring>
+        <name>lookup_vote_ids</name>
+        <param>
+          <type>const vector&lt; <ref refid="structgraphene_1_1chain_1_1vote__id__type" kindref="compound">vote_id_type</ref> &gt; &amp;</type>
+          <declname>votes</declname>
+        </param>
+        <briefdescription>
+<para>Given a set of votes, return the objects they are voting for. </para>        </briefdescription>
+        <detaileddescription>
+<para>This will be a mixture of committee_member_object, witness_objects, and worker_objects</para><para>The results will be in the same order as the votes. Null will be returned for any vote ids that are not found. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="513" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1485" bodyend="1488"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1ad099ccae08856bd4af70aa6669c6e8f6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string graphene::app::database_api::get_transaction_hex</definition>
+        <argsstring>(const signed_transaction &amp;trx) const</argsstring>
+        <name>get_transaction_hex</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref> &amp;</type>
+          <declname>trx</declname>
+        </param>
+        <briefdescription>
+<para>Get a hexdump of the serialized binary form of a transaction. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="520" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1552" bodyend="1555"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a9ae2eb6a83c27a7b4eec2b00ee8ba371" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>set&lt; <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref> &gt;</type>
+        <definition>set&lt; public_key_type &gt; graphene::app::database_api::get_required_signatures</definition>
+        <argsstring>(const signed_transaction &amp;trx, const flat_set&lt; public_key_type &gt; &amp;available_keys) const</argsstring>
+        <name>get_required_signatures</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref> &amp;</type>
+          <declname>trx</declname>
+        </param>
+        <param>
+          <type>const flat_set&lt; <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref> &gt; &amp;</type>
+          <declname>available_keys</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This API will take a partially signed transaction and a set of public keys that the owner has the ability to sign for and return the minimal subset of public keys that should add signatures to the transaction. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="526" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1562" bodyend="1565"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1ae62878047f99b974282302825086d369" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>set&lt; <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref> &gt;</type>
+        <definition>set&lt; public_key_type &gt; graphene::app::database_api::get_potential_signatures</definition>
+        <argsstring>(const signed_transaction &amp;trx) const</argsstring>
+        <name>get_potential_signatures</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref> &amp;</type>
+          <declname>trx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This method will return the set of all public keys that could possibly sign for a given transaction. This call can be used by wallets to filter their set of public keys to just the relevant subset prior to calling <ref refid="classgraphene_1_1app_1_1database__api_1a9ae2eb6a83c27a7b4eec2b00ee8ba371" kindref="member">get_required_signatures</ref> to get the minimum subset. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="533" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1579" bodyend="1582"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1ae40d3a430ca023b53c09f92351d9e904" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>set&lt; <ref refid="classgraphene_1_1chain_1_1address" kindref="compound">address</ref> &gt;</type>
+        <definition>set&lt; address &gt; graphene::app::database_api::get_potential_address_signatures</definition>
+        <argsstring>(const signed_transaction &amp;trx) const</argsstring>
+        <name>get_potential_address_signatures</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref> &amp;</type>
+          <declname>trx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="534" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1583" bodyend="1586"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1afe62b6a147149b0954cda6c10c858f7d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::app::database_api::verify_authority</definition>
+        <argsstring>(const signed_transaction &amp;trx) const</argsstring>
+        <name>verify_authority</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref> &amp;</type>
+          <declname>trx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true of the trx has all of the required signatures, otherwise throws an exception </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="539" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1641" bodyend="1644"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a66662c546aa0a510a24744981e78b65b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::app::database_api::verify_account_authority</definition>
+        <argsstring>(const string &amp;name_or_id, const flat_set&lt; public_key_type &gt; &amp;signers) const</argsstring>
+        <name>verify_account_authority</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>name_or_id</declname>
+        </param>
+        <param>
+          <type>const flat_set&lt; <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref> &gt; &amp;</type>
+          <declname>signers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if the signers have enough authority to authorize an account </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="544" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1655" bodyend="1658"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a3b704179a813b26c3f910105f7e6a9f6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1processed__transaction" kindref="compound">processed_transaction</ref></type>
+        <definition>processed_transaction graphene::app::database_api::validate_transaction</definition>
+        <argsstring>(const signed_transaction &amp;trx) const</argsstring>
+        <name>validate_transaction</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref> &amp;</type>
+          <declname>trx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Validates a transaction against the current state without broadcasting it on the network. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="549" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1685" bodyend="1688"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1ad35716561e27ec6913b959f230aa2b1c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; fc::variant &gt;</type>
+        <definition>vector&lt; fc::variant &gt; graphene::app::database_api::get_required_fees</definition>
+        <argsstring>(const vector&lt; operation &gt; &amp;ops, asset_id_type id) const</argsstring>
+        <name>get_required_fees</name>
+        <param>
+          <type>const vector&lt; <ref refid="group__operations_1ga8b0400e40715f7fd1608ab2dc3d6d401" kindref="member">operation</ref> &gt; &amp;</type>
+          <declname>ops</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref></type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>For each operation calculate the required fee in the specified asset type. If the asset type does not have a valid core_exchange_rate </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="555" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1695" bodyend="1698"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a89277c7f7eb8143f207b383b739c4c49" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="classgraphene_1_1chain_1_1proposal__object" kindref="compound">proposal_object</ref> &gt;</type>
+        <definition>vector&lt; proposal_object &gt; graphene::app::database_api::get_proposed_transactions</definition>
+        <argsstring>(account_id_type id) const</argsstring>
+        <name>get_proposed_transactions</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the set of proposed transactions relevant to the specified account id. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="564" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1784" bodyend="1787"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1app_1_1database__api_1a42799e089fb62035373538f9ccc973af" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="classgraphene_1_1chain_1_1blinded__balance__object" kindref="compound">blinded_balance_object</ref> &gt;</type>
+        <definition>vector&lt; blinded_balance_object &gt; graphene::app::database_api::get_blinded_balances</definition>
+        <argsstring>(const flat_set&lt; commitment_type &gt; &amp;commitments) const</argsstring>
+        <name>get_blinded_balances</name>
+        <param>
+          <type>const flat_set&lt; commitment_type &gt; &amp;</type>
+          <declname>commitments</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>the set of blinded balance objects by commitment ID </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/include/graphene/app/database_api.hpp" line="573" column="1" bodyfile="libraries/app/database_api.cpp" bodystart="1813" bodyend="1816"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classgraphene_1_1app_1_1database__api" kindref="compound">database_api</ref> class implements the RPC API for the chain database. </para>    </briefdescription>
+    <detaileddescription>
+<para>This API exposes accessors on the database which query state tracked by a blockchain validating node. This API is read-only; all modifications to the database must be performed via transactions. Transactions are broadcast via the <ref refid="classgraphene_1_1app_1_1network__broadcast__api" kindref="compound">network_broadcast_api</ref>. </para>    </detaileddescription>
+    <location file="libraries/app/include/graphene/app/database_api.hpp" line="118" column="1" bodyfile="libraries/app/include/graphene/app/database_api.hpp" bodystart="117" bodyend="577"/>
+    <listofallmembers>
+      <member refid="classgraphene_1_1app_1_1database__api_1a0c3f545dec20b073131bbd7466940c6f" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>cancel_all_subscriptions</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a3d3526b112f3d2d86245c494f9d3d006" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>database_api</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1ada3034b4ddacffa7106cde1f256d07d3" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_24_volume</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a0ffd0eda0e8714055d4c9f22200401c9" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_account_balances</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a038218b56f3325924dedd39622b9bbb9" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_account_by_name</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1aeae61cd2ea6284869e996dce486286d4" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_account_count</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a341ded4856be24a02764b53d524954c0" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_account_references</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a5ab9baf749e763eefcfb4b69555cb8d8" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_accounts</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1aca5b69aaff0d706b115076f3cef01c54" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_assets</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1ae95b0587f9735593e1331cfe97b6be41" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_balance_objects</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a42799e089fb62035373538f9ccc973af" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_blinded_balances</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a865cb0a6e29f07e8854ffe092adb503e" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_block</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1aa515d89b74c1667a7d5e70a6632a4760" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_block_header</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1acd3fd30302518d3958013bd6c4bf8c38" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_block_header_batch</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a40826f0f00675fdd56d06f15a6523222" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_call_orders</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a940f705654d1baf52af6601b09b4ad9f" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_chain_id</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a51e318453ce7d459cd24e65fe81b14f1" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_chain_properties</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a76c375f075b6c1ff20a69b11a8f8a7ab" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_committee_member_by_account</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1aacfac5de7a9265a073b678812e26e729" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_committee_members</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1aecbae15b1b183ee2b70d8cf5d25c1afa" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_config</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a3398a20589c01aa807a364a02ec4c728" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_dynamic_global_properties</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1ac5d0d7bb2911c2d7ad79e0e7fc92a45d" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_full_accounts</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a6428c7a87e41ad7c30d59e4bbf45afe7" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_global_properties</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a0266fd5ec4869846461243beb9d7cb59" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_key_references</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1aaa9e7c8c0582b9a7156ed83d8502bb62" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_limit_orders</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a830f65aa9ea2be4ccaf783b81655ff75" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_margin_positions</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a52372cd241026042c898239aaf4ab18a" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_named_account_balances</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a5a8b2fb34a9ef56da9825e15200720d1" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_objects</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a4865539c5d6e1db1f6ea23681fc59bd1" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_order_book</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1ae40d3a430ca023b53c09f92351d9e904" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_potential_address_signatures</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1ae62878047f99b974282302825086d369" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_potential_signatures</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a89277c7f7eb8143f207b383b739c4c49" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_proposed_transactions</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a90a4d796c6f805158f101f603a48cbd4" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_recent_transaction_by_id</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1ad35716561e27ec6913b959f230aa2b1c" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_required_fees</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a9ae2eb6a83c27a7b4eec2b00ee8ba371" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_required_signatures</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a6e30518207ecb94d7886596fa89b6e68" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_settle_orders</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1ab507c98bcb65b3e5efef6d11a9a0a08c" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_ticker</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1ab9f345996512773054dcc2d76bb30770" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_trade_history</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1aca15ad75a1150dd83304f419ce54d320" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_transaction</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1ad099ccae08856bd4af70aa6669c6e8f6" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_transaction_hex</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1ad544bdda0a336353ba66d304cdced4c0" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_vested_balances</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a1c4d51b3957c58333b6a4e47f897a1dc" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_vesting_balances</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a009c30496675f2c3be4b2557a8ac42f0" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_witness_by_account</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1af63c5f89b966944940ac7007f83fe051" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_witness_count</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a74f6a78e1b086b71d76c13c61344373a" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_witnesses</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a8d2f0a7a4535a8b8789fe75f6d2d2979" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>get_workers_by_account</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a6a8ea15c0976f303ec81fcfe2ebad67a" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>is_public_key_registered</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1ad018c7e1bf8cc503b786c80ab90965f3" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>list_assets</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a2387dfaadd10588b1253e1453640a56d" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>lookup_account_names</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a8353abde3284cc58347aaa17b023eada" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>lookup_accounts</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a72961c0775c393d0847c12b73ac2d4ec" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>lookup_asset_symbols</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a9ee2072c704a9a71d6823a5485319035" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>lookup_committee_member_accounts</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a68b9a93c530b3fa4bb77d5d57b96fab3" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>lookup_vote_ids</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a5cdf1acf477e9b1e3a439711e39d1e90" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>lookup_witness_accounts</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a5b8f07ff78c43a35bbda1afe09ab29c1" prot="private" virt="non-virtual"><scope>graphene::app::database_api</scope><name>my</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a5a0bc87af4cb36c11a9a15f5c29d6ea9" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>set_block_applied_callback</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a5d7e7d30fc0063d33fdb14cd827b195f" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>set_pending_transaction_callback</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1aa521b1ed85c8cdf22c7b48f05a929115" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>set_subscribe_callback</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1aabf9b981bb7a6207751a37320793ef9b" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>subscribe_to_market</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1ad5f8d5fc78a995588d47b7af4e945def" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>unsubscribe_from_market</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a3b704179a813b26c3f910105f7e6a9f6" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>validate_transaction</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a66662c546aa0a510a24744981e78b65b" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>verify_account_authority</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1afe62b6a147149b0954cda6c10c858f7d" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>verify_authority</name></member>
+      <member refid="classgraphene_1_1app_1_1database__api_1a3510335e90925e050398d74bc9d22dd4" prot="public" virt="non-virtual"><scope>graphene::app::database_api</scope><name>~database_api</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

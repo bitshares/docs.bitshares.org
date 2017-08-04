@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgraphene_1_1chain_1_1fba__accumulator__object" kind="class" language="C++" prot="public">
+    <compoundname>graphene::chain::fba_accumulator_object</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">graphene::db::abstract_object&lt; fba_accumulator_object &gt;</basecompoundref>
+    <includes refid="fba__object_8hpp" local="no">fba_object.hpp</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1fba__accumulator__object_1a7a232de1c37b967c9f79b333c49bc083" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t graphene::chain::fba_accumulator_object::space_id</definition>
+        <argsstring></argsstring>
+        <name>space_id</name>
+        <initializer>= <ref refid="namespacegraphene_1_1chain_1a92e55d4242187696c5e2c5eaafbd9400a81f35c04f1d3f3109dacaa6f2bef33c7" kindref="member">implementation_ids</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/fba_object.hpp" line="41" column="1" bodyfile="libraries/chain/include/graphene/chain/fba_object.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1fba__accumulator__object_1a125b19330111a8e38686f09df8b72397" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t graphene::chain::fba_accumulator_object::type_id</definition>
+        <argsstring></argsstring>
+        <name>type_id</name>
+        <initializer>= <ref refid="namespacegraphene_1_1chain_1ad3bef2f100b722a6c30fada38f6dcd73a7734519967f0d47d3613ccfccb4ab0d7" kindref="member">impl_fba_accumulator_object_type</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/fba_object.hpp" line="42" column="1" bodyfile="libraries/chain/include/graphene/chain/fba_object.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1fba__accumulator__object_1a45696b9e94b9c21d01fc2908971fc598" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+        <definition>share_type graphene::chain::fba_accumulator_object::accumulated_fba_fees</definition>
+        <argsstring></argsstring>
+        <name>accumulated_fba_fees</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/fba_object.hpp" line="44" column="1" bodyfile="libraries/chain/include/graphene/chain/fba_object.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1fba__accumulator__object_1a5fc6661fec6010ac2951b18a2a6bfb24" prot="public" static="no" mutable="no">
+        <type>optional&lt; <ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref> &gt;</type>
+        <definition>optional&lt; asset_id_type &gt; graphene::chain::fba_accumulator_object::designated_asset</definition>
+        <argsstring></argsstring>
+        <name>designated_asset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/fba_object.hpp" line="45" column="1" bodyfile="libraries/chain/include/graphene/chain/fba_object.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1fba__accumulator__object_1a3db11e53cca10670dffcb825d104c1ef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::fba_accumulator_object::is_configured</definition>
+        <argsstring>(const database &amp;db) const</argsstring>
+        <name>is_configured</name>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1database" kindref="compound">database</ref> &amp;</type>
+          <declname>db</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/fba_object.hpp" line="47" column="1" bodyfile="libraries/chain/fba_object.cpp" bodystart="31" bodyend="101"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classgraphene_1_1chain_1_1fba__accumulator__object" kindref="compound">fba_accumulator_object</ref> accumulates fees to be paid out via buyback or other FBA mechanism. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1678">
+        <label>graphene::db::abstract_object&lt; fba_accumulator_object &gt;</label>
+      </node>
+      <node id="1677">
+        <label>graphene::chain::fba_accumulator_object</label>
+        <link refid="classgraphene_1_1chain_1_1fba__accumulator__object"/>
+        <childnode refid="1678" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1680">
+        <label>graphene::db::abstract_object&lt; fba_accumulator_object &gt;</label>
+      </node>
+      <node id="1679">
+        <label>graphene::chain::fba_accumulator_object</label>
+        <link refid="classgraphene_1_1chain_1_1fba__accumulator__object"/>
+        <childnode refid="1680" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1681" relation="usage">
+          <edgelabel>designated_asset</edgelabel>
+        </childnode>
+        <childnode refid="1682" relation="usage">
+          <edgelabel>accumulated_fba_fees</edgelabel>
+        </childnode>
+      </node>
+      <node id="1681">
+        <label>optional&lt; asset_id_type &gt;</label>
+      </node>
+      <node id="1682">
+        <label>safe&lt; int64_t &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/fba_object.hpp" line="39" column="1" bodyfile="libraries/chain/include/graphene/chain/fba_object.hpp" bodystart="38" bodyend="48"/>
+    <listofallmembers>
+      <member refid="classgraphene_1_1chain_1_1fba__accumulator__object_1a45696b9e94b9c21d01fc2908971fc598" prot="public" virt="non-virtual"><scope>graphene::chain::fba_accumulator_object</scope><name>accumulated_fba_fees</name></member>
+      <member refid="classgraphene_1_1chain_1_1fba__accumulator__object_1a5fc6661fec6010ac2951b18a2a6bfb24" prot="public" virt="non-virtual"><scope>graphene::chain::fba_accumulator_object</scope><name>designated_asset</name></member>
+      <member refid="classgraphene_1_1chain_1_1fba__accumulator__object_1a3db11e53cca10670dffcb825d104c1ef" prot="public" virt="non-virtual"><scope>graphene::chain::fba_accumulator_object</scope><name>is_configured</name></member>
+      <member refid="classgraphene_1_1chain_1_1fba__accumulator__object_1a7a232de1c37b967c9f79b333c49bc083" prot="public" virt="non-virtual"><scope>graphene::chain::fba_accumulator_object</scope><name>space_id</name></member>
+      <member refid="classgraphene_1_1chain_1_1fba__accumulator__object_1a125b19330111a8e38686f09df8b72397" prot="public" virt="non-virtual"><scope>graphene::chain::fba_accumulator_object</scope><name>type_id</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

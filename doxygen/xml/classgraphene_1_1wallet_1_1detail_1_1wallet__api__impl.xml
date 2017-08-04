@@ -1,0 +1,2619 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl" kind="class" language="C++" prot="public">
+    <compoundname>graphene::wallet::detail::wallet_api_impl</compoundname>
+    <innerclass refid="structgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1_1recently__generated__transaction__record" prot="private">graphene::wallet::detail::wallet_api_impl::recently_generated_transaction_record</innerclass>
+    <innerclass refid="structgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1_1timestamp__index" prot="private">graphene::wallet::detail::wallet_api_impl::timestamp_index</innerclass>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a4e6327a69770aa1553e0c6af060e633f" prot="private" static="no">
+        <type>boost::multi_index_container&lt; recently_generated_transaction_record, boost::multi_index::indexed_by&lt; boost::multi_index::hashed_unique&lt; boost::multi_index::member&lt; recently_generated_transaction_record, <ref refid="namespacegraphene_1_1chain_1adc38ef0a36d8b8dfcef2cbbcacb6d1e8" kindref="member">graphene::chain::transaction_id_type</ref>, &amp;recently_generated_transaction_record::transaction_id &gt;, std::hash&lt; <ref refid="namespacegraphene_1_1chain_1adc38ef0a36d8b8dfcef2cbbcacb6d1e8" kindref="member">graphene::chain::transaction_id_type</ref> &gt; &gt;, boost::multi_index::ordered_non_unique&lt; boost::multi_index::tag&lt; timestamp_index &gt;, boost::multi_index::member&lt; recently_generated_transaction_record, fc::time_point_sec, &amp;recently_generated_transaction_record::generation_time &gt; &gt; &gt; &gt;</type>
+        <definition>typedef boost::multi_index_container&lt;recently_generated_transaction_record, boost::multi_index::indexed_by&lt;boost::multi_index::hashed_unique&lt;boost::multi_index::member&lt;recently_generated_transaction_record, graphene::chain::transaction_id_type, &amp;recently_generated_transaction_record::transaction_id&gt;, std::hash&lt;graphene::chain::transaction_id_type&gt; &gt;, boost::multi_index::ordered_non_unique&lt;boost::multi_index::tag&lt;timestamp_index&gt;, boost::multi_index::member&lt;recently_generated_transaction_record, fc::time_point_sec, &amp;recently_generated_transaction_record::generation_time&gt; &gt; &gt; &gt; graphene::wallet::detail::wallet_api_impl::recently_generated_transaction_set_type</definition>
+        <argsstring></argsstring>
+        <name>recently_generated_transaction_set_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="385" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="385" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a832e03516d209b51d7fc53295235f88b" prot="public" static="no" mutable="no">
+        <type><ref refid="classgraphene_1_1wallet_1_1api__documentation" kindref="compound">api_documentation</ref></type>
+        <definition>api_documentation graphene::wallet::detail::wallet_api_impl::method_documentation</definition>
+        <argsstring></argsstring>
+        <name>method_documentation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="254" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="254" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a420923724cc8c7f5c58ecf6331596faf" prot="public" static="no" mutable="no">
+        <type><ref refid="classgraphene_1_1wallet_1_1wallet__api" kindref="compound">wallet_api</ref> &amp;</type>
+        <definition>wallet_api&amp; graphene::wallet::detail::wallet_api_impl::self</definition>
+        <argsstring></argsstring>
+        <name>self</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="389" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="389" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1aa47d3f711c8faf3e86ba6d081a31e37a" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string graphene::wallet::detail::wallet_api_impl::_wallet_filename</definition>
+        <argsstring></argsstring>
+        <name>_wallet_filename</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="2590" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2590" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1abb168034fba13f535333b7b2d4e22730" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1wallet_1_1wallet__data" kindref="compound">wallet_data</ref></type>
+        <definition>wallet_data graphene::wallet::detail::wallet_api_impl::_wallet</definition>
+        <argsstring></argsstring>
+        <name>_wallet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="2591" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2591" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a05ce7dff825f2ff981eb5b12602834a9" prot="public" static="no" mutable="no">
+        <type>map&lt; <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref>, string &gt;</type>
+        <definition>map&lt;public_key_type,string&gt; graphene::wallet::detail::wallet_api_impl::_keys</definition>
+        <argsstring></argsstring>
+        <name>_keys</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="2593" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2593" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a48e2a3d5a3f02a9dd161c232565bc4a1" prot="public" static="no" mutable="no">
+        <type>fc::sha512</type>
+        <definition>fc::sha512 graphene::wallet::detail::wallet_api_impl::_checksum</definition>
+        <argsstring></argsstring>
+        <name>_checksum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="2594" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2594" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a0f3c8c4427dc5f5643bda65f50bd60f3" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a8182991954496b517776f06844cf2d93" kindref="member">chain_id_type</ref></type>
+        <definition>chain_id_type graphene::wallet::detail::wallet_api_impl::_chain_id</definition>
+        <argsstring></argsstring>
+        <name>_chain_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="2596" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2596" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a4957470684dd0873a9e1cdd5956cc096" prot="public" static="no" mutable="no">
+        <type>fc::api&lt; <ref refid="classgraphene_1_1app_1_1login__api" kindref="compound">login_api</ref> &gt;</type>
+        <definition>fc::api&lt;login_api&gt; graphene::wallet::detail::wallet_api_impl::_remote_api</definition>
+        <argsstring></argsstring>
+        <name>_remote_api</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="2597" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2597" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ad1655d0a1948fb370b2bf72914e9b9e7" prot="public" static="no" mutable="no">
+        <type>fc::api&lt; <ref refid="classgraphene_1_1app_1_1database__api" kindref="compound">database_api</ref> &gt;</type>
+        <definition>fc::api&lt;database_api&gt; graphene::wallet::detail::wallet_api_impl::_remote_db</definition>
+        <argsstring></argsstring>
+        <name>_remote_db</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="2598" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2598" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a2bd9baf9354c7ca82a6dba9aaa94c801" prot="public" static="no" mutable="no">
+        <type>fc::api&lt; <ref refid="classgraphene_1_1app_1_1network__broadcast__api" kindref="compound">network_broadcast_api</ref> &gt;</type>
+        <definition>fc::api&lt;network_broadcast_api&gt; graphene::wallet::detail::wallet_api_impl::_remote_net_broadcast</definition>
+        <argsstring></argsstring>
+        <name>_remote_net_broadcast</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="2599" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2599" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a35c9d37c9d2abdde7307e2b4f8a1deac" prot="public" static="no" mutable="no">
+        <type>fc::api&lt; <ref refid="classgraphene_1_1app_1_1history__api" kindref="compound">history_api</ref> &gt;</type>
+        <definition>fc::api&lt;history_api&gt; graphene::wallet::detail::wallet_api_impl::_remote_hist</definition>
+        <argsstring></argsstring>
+        <name>_remote_hist</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="2600" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2600" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1abfa8b5314825c438b499f730033b7fc4" prot="public" static="no" mutable="no">
+        <type>optional&lt; fc::api&lt; <ref refid="classgraphene_1_1app_1_1network__node__api" kindref="compound">network_node_api</ref> &gt; &gt;</type>
+        <definition>optional&lt; fc::api&lt;network_node_api&gt; &gt; graphene::wallet::detail::wallet_api_impl::_remote_net_node</definition>
+        <argsstring></argsstring>
+        <name>_remote_net_node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="2601" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2601" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a1de9eb4bc4efc580999ac41df0ff038f" prot="public" static="no" mutable="no">
+        <type>optional&lt; fc::api&lt; graphene::debug_witness::debug_api &gt; &gt;</type>
+        <definition>optional&lt; fc::api&lt;graphene::debug_witness::debug_api&gt; &gt; graphene::wallet::detail::wallet_api_impl::_remote_debug</definition>
+        <argsstring></argsstring>
+        <name>_remote_debug</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="2602" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2602" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ac86f210d8b83fa1efa688f8299a29a45" prot="public" static="no" mutable="no">
+        <type>flat_map&lt; string, <ref refid="group__operations_1ga8b0400e40715f7fd1608ab2dc3d6d401" kindref="member">operation</ref> &gt;</type>
+        <definition>flat_map&lt;string, operation&gt; graphene::wallet::detail::wallet_api_impl::_prototype_ops</definition>
+        <argsstring></argsstring>
+        <name>_prototype_ops</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="2604" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2604" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a69236112896022de6cedc29857ddb021" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1wallet_1_1static__variant__map" kindref="compound">static_variant_map</ref></type>
+        <definition>static_variant_map graphene::wallet::detail::wallet_api_impl::_operation_which_map</definition>
+        <argsstring></argsstring>
+        <name>_operation_which_map</name>
+        <initializer>= <ref refid="namespacegraphene_1_1wallet_1a94323616e1c511ee95bfc69f073b397d" kindref="member">create_static_variant_map</ref>&lt; <ref refid="group__operations_1ga8b0400e40715f7fd1608ab2dc3d6d401" kindref="member">operation</ref> &gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="2606" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2606" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a3d34ecb787a5b9775264e72de8f7f24e" prot="public" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string graphene::wallet::detail::wallet_api_impl::_wallet_filename_extension</definition>
+        <argsstring></argsstring>
+        <name>_wallet_filename_extension</name>
+        <initializer>= &quot;.wallet&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="2611" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2611" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a51ce862cdaceb2bac635c428e3f6989e" prot="public" static="no" mutable="yes">
+        <type>map&lt; <ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref>, <ref refid="classgraphene_1_1chain_1_1asset__object" kindref="compound">asset_object</ref> &gt;</type>
+        <definition>map&lt;asset_id_type, asset_object&gt; graphene::wallet::detail::wallet_api_impl::_asset_cache</definition>
+        <argsstring></argsstring>
+        <name>_asset_cache</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="2613" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2613" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1aa32b458c75542b144243b4e183c46616" prot="private" static="no" mutable="no">
+        <type>fc::mutex</type>
+        <definition>fc::mutex graphene::wallet::detail::wallet_api_impl::_resync_mutex</definition>
+        <argsstring></argsstring>
+        <name>_resync_mutex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="294" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="294" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a2c053f405008be43b3a9f147c96f18e1" prot="private" static="no" mutable="no">
+        <type>map&lt; <ref refid="namespacegraphene_1_1wallet_1a385c5434f1c4e271cf812627f9ee759a" kindref="member">transaction_handle_type</ref>, <ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref> &gt;</type>
+        <definition>map&lt;transaction_handle_type, signed_transaction&gt; graphene::wallet::detail::wallet_api_impl::_builder_transactions</definition>
+        <argsstring></argsstring>
+        <name>_builder_transactions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="365" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="365" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a5358c0a0b4ba1f8a775027c125525146" prot="private" static="no" mutable="no">
+        <type>recently_generated_transaction_set_type</type>
+        <definition>recently_generated_transaction_set_type graphene::wallet::detail::wallet_api_impl::_recently_generated_transactions</definition>
+        <argsstring></argsstring>
+        <name>_recently_generated_transactions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="386" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="386" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1aa03063e66de1adbf70effab4338693bf" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::wallet::detail::wallet_api_impl::claim_registered_account</definition>
+        <argsstring>(const account_object &amp;account)</argsstring>
+        <name>claim_registered_account</name>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1account__object" kindref="compound">account_object</ref> &amp;</type>
+          <declname>account</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="256" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="256" bodyend="275"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ac3875698d5f8040f633191d6659890dd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::wallet::detail::wallet_api_impl::claim_registered_witness</definition>
+        <argsstring>(const std::string &amp;witness_name)</argsstring>
+        <name>claim_registered_witness</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>witness_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="279" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="279" bodyend="292"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a90981cfa47e79a5007ec6181443eef30" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::wallet::detail::wallet_api_impl::resync</definition>
+        <argsstring>()</argsstring>
+        <name>resync</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="295" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="295" bodyend="338"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a77382a587689218a206bcfb9935c6a7f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::wallet::detail::wallet_api_impl::enable_umask_protection</definition>
+        <argsstring>()</argsstring>
+        <name>enable_umask_protection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="340" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="340" bodyend="345"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a904bcfbec959c02f1c36695096696d49" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::wallet::detail::wallet_api_impl::disable_umask_protection</definition>
+        <argsstring>()</argsstring>
+        <name>disable_umask_protection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="347" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="347" bodyend="352"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1adbde996c4e8e734e8c719d6e890d1522" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::wallet::detail::wallet_api_impl::init_prototype_ops</definition>
+        <argsstring>()</argsstring>
+        <name>init_prototype_ops</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="354" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="354" bodyend="363"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1aa265449207ba861fc203b6f2c8bc8969" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>graphene::wallet::detail::wallet_api_impl::wallet_api_impl</definition>
+        <argsstring>(wallet_api &amp;s, const wallet_data &amp;initial_data, fc::api&lt; login_api &gt; rapi)</argsstring>
+        <name>wallet_api_impl</name>
+        <param>
+          <type><ref refid="classgraphene_1_1wallet_1_1wallet__api" kindref="compound">wallet_api</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structgraphene_1_1wallet_1_1wallet__data" kindref="compound">wallet_data</ref> &amp;</type>
+          <declname>initial_data</declname>
+        </param>
+        <param>
+          <type>fc::api&lt; <ref refid="classgraphene_1_1app_1_1login__api" kindref="compound">login_api</ref> &gt;</type>
+          <declname>rapi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="390" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="390" bodyend="416"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a9c7abe57237a9a516eb1780f9273ee18" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual graphene::wallet::detail::wallet_api_impl::~wallet_api_impl</definition>
+        <argsstring>()</argsstring>
+        <name>~wallet_api_impl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="417" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="417" bodyend="431"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a730cd01003bd09e6f4d6308b2528a813" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::wallet::detail::wallet_api_impl::encrypt_keys</definition>
+        <argsstring>()</argsstring>
+        <name>encrypt_keys</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="433" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="433" bodyend="443"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a5393053e219946a56bf5e4b83f5c9d1d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::wallet::detail::wallet_api_impl::on_block_applied</definition>
+        <argsstring>(const variant &amp;block_id)</argsstring>
+        <name>on_block_applied</name>
+        <param>
+          <type>const variant &amp;</type>
+          <declname>block_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="445" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="445" bodyend="448"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ae0964b39f0b10a9a34408c1fd026fa09" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::wallet::detail::wallet_api_impl::copy_wallet_file</definition>
+        <argsstring>(string destination_filename)</argsstring>
+        <name>copy_wallet_file</name>
+        <param>
+          <type>string</type>
+          <declname>destination_filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="450" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="450" bodyend="481"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a230d0940176aac4069cb7db61a98ab28" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::wallet::detail::wallet_api_impl::is_locked</definition>
+        <argsstring>() const</argsstring>
+        <name>is_locked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="483" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="483" bodyend="486"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a45e8e9f228cc96428a207e2d45c59ac3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>T</type>
+        <definition>T graphene::wallet::detail::wallet_api_impl::get_object</definition>
+        <argsstring>(object_id&lt; T::space_id, T::type_id, T &gt; id) const</argsstring>
+        <name>get_object</name>
+        <param>
+          <type>object_id&lt; T::space_id, T::type_id, T &gt;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="489" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="489" bodyend="493"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a8d896944e5c5a0f10c44648156389c13" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::wallet::detail::wallet_api_impl::set_operation_fees</definition>
+        <argsstring>(signed_transaction &amp;tx, const fee_schedule &amp;s)</argsstring>
+        <name>set_operation_fees</name>
+        <param>
+          <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref> &amp;</type>
+          <declname>tx</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1fee__schedule" kindref="compound">fee_schedule</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="495" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="495" bodyend="499"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a1cac87d51d693dbb4ba0e4d4b5eee8c5" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>variant</type>
+        <definition>variant graphene::wallet::detail::wallet_api_impl::info</definition>
+        <argsstring>() const</argsstring>
+        <name>info</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="501" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="501" bodyend="518"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ab84487e81093c8820d7aa2d20432e00a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>variant_object</type>
+        <definition>variant_object graphene::wallet::detail::wallet_api_impl::about</definition>
+        <argsstring>() const</argsstring>
+        <name>about</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="520" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="520" bodyend="552"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a1f212ebc4494b924766ee7c051e09190" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classgraphene_1_1chain_1_1chain__property__object" kindref="compound">chain_property_object</ref></type>
+        <definition>chain_property_object graphene::wallet::detail::wallet_api_impl::get_chain_properties</definition>
+        <argsstring>() const</argsstring>
+        <name>get_chain_properties</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="554" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="554" bodyend="557"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1aba92882190358cfd4a7657ac3806a9da" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classgraphene_1_1chain_1_1global__property__object" kindref="compound">global_property_object</ref></type>
+        <definition>global_property_object graphene::wallet::detail::wallet_api_impl::get_global_properties</definition>
+        <argsstring>() const</argsstring>
+        <name>get_global_properties</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="558" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="558" bodyend="561"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a14cf29413ee050b1b80641565dd7e9ac" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classgraphene_1_1chain_1_1dynamic__global__property__object" kindref="compound">dynamic_global_property_object</ref></type>
+        <definition>dynamic_global_property_object graphene::wallet::detail::wallet_api_impl::get_dynamic_global_properties</definition>
+        <argsstring>() const</argsstring>
+        <name>get_dynamic_global_properties</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="562" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="562" bodyend="565"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1adbd558f9ed259c066bb6c17a21052e77" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classgraphene_1_1chain_1_1account__object" kindref="compound">account_object</ref></type>
+        <definition>account_object graphene::wallet::detail::wallet_api_impl::get_account</definition>
+        <argsstring>(account_id_type id) const</argsstring>
+        <name>get_account</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="566" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="566" bodyend="573"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a815bf79bb6e6a574234554d37bea7d82" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classgraphene_1_1chain_1_1account__object" kindref="compound">account_object</ref></type>
+        <definition>account_object graphene::wallet::detail::wallet_api_impl::get_account</definition>
+        <argsstring>(string account_name_or_id) const</argsstring>
+        <name>get_account</name>
+        <param>
+          <type>string</type>
+          <declname>account_name_or_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="574" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="574" bodyend="600"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1abbfeb54a873d9a9be931130d578e6c14" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::wallet::detail::wallet_api_impl::get_account_id</definition>
+        <argsstring>(string account_name_or_id) const</argsstring>
+        <name>get_account_id</name>
+        <param>
+          <type>string</type>
+          <declname>account_name_or_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="601" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="601" bodyend="604"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a145c5060f2f8a351153374679a4b636b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>optional&lt; <ref refid="classgraphene_1_1chain_1_1asset__object" kindref="compound">asset_object</ref> &gt;</type>
+        <definition>optional&lt;asset_object&gt; graphene::wallet::detail::wallet_api_impl::find_asset</definition>
+        <argsstring>(asset_id_type id) const</argsstring>
+        <name>find_asset</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref></type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="605" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="605" bodyend="611"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1af0ec130d29dca14875f9a8dbed1d405c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>optional&lt; <ref refid="classgraphene_1_1chain_1_1asset__object" kindref="compound">asset_object</ref> &gt;</type>
+        <definition>optional&lt;asset_object&gt; graphene::wallet::detail::wallet_api_impl::find_asset</definition>
+        <argsstring>(string asset_symbol_or_id) const</argsstring>
+        <name>find_asset</name>
+        <param>
+          <type>string</type>
+          <declname>asset_symbol_or_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="612" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="612" bodyend="632"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1aacb14ea5e7726a45e773ad65e0e95f88" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classgraphene_1_1chain_1_1asset__object" kindref="compound">asset_object</ref></type>
+        <definition>asset_object graphene::wallet::detail::wallet_api_impl::get_asset</definition>
+        <argsstring>(asset_id_type id) const</argsstring>
+        <name>get_asset</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref></type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="633" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="633" bodyend="638"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a2223dc005d334b9444ae4d30a95b484e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classgraphene_1_1chain_1_1asset__object" kindref="compound">asset_object</ref></type>
+        <definition>asset_object graphene::wallet::detail::wallet_api_impl::get_asset</definition>
+        <argsstring>(string asset_symbol_or_id) const</argsstring>
+        <name>get_asset</name>
+        <param>
+          <type>string</type>
+          <declname>asset_symbol_or_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="639" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="639" bodyend="644"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a77713bfeb962fa84a0aea917893f03d8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref></type>
+        <definition>asset_id_type graphene::wallet::detail::wallet_api_impl::get_asset_id</definition>
+        <argsstring>(string asset_symbol_or_id) const</argsstring>
+        <name>get_asset_id</name>
+        <param>
+          <type>string</type>
+          <declname>asset_symbol_or_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="646" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="646" bodyend="655"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a492a0422b93084e384bbe160027595e6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string graphene::wallet::detail::wallet_api_impl::get_wallet_filename</definition>
+        <argsstring>() const</argsstring>
+        <name>get_wallet_filename</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="657" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="657" bodyend="660"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1af03b3f5acc342f611b07bba39b74f2ea" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>fc::ecc::private_key</type>
+        <definition>fc::ecc::private_key graphene::wallet::detail::wallet_api_impl::get_private_key</definition>
+        <argsstring>(const public_key_type &amp;id) const</argsstring>
+        <name>get_private_key</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref> &amp;</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="662" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="662" bodyend="670"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1afd758e9c804bdf9826fe89fd8ac934ba" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>fc::ecc::private_key</type>
+        <definition>fc::ecc::private_key graphene::wallet::detail::wallet_api_impl::get_private_key_for_account</definition>
+        <argsstring>(const account_object &amp;account) const</argsstring>
+        <name>get_private_key_for_account</name>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1account__object" kindref="compound">account_object</ref> &amp;</type>
+          <declname>account</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="672" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="672" bodyend="678"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ad0f54ef0b0c6d560193ac73310cbb960" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::wallet::detail::wallet_api_impl::import_key</definition>
+        <argsstring>(string account_name_or_id, string wif_key)</argsstring>
+        <name>import_key</name>
+        <param>
+          <type>string</type>
+          <declname>account_name_or_id</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>wif_key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="684" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="684" bodyend="708"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ab704e6571ccbbefe2bd222e6c050f63d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; <ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref> &gt;</type>
+        <definition>vector&lt; signed_transaction &gt; graphene::wallet::detail::wallet_api_impl::import_balance</definition>
+        <argsstring>(string name_or_id, const vector&lt; string &gt; &amp;wif_keys, bool broadcast)</argsstring>
+        <name>import_balance</name>
+        <param>
+          <type>string</type>
+          <declname>name_or_id</declname>
+        </param>
+        <param>
+          <type>const vector&lt; string &gt; &amp;</type>
+          <declname>wif_keys</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>broadcast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="710" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="3646" bodyend="3756"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a014d840a64df24c0b628698545b5e9ad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::wallet::detail::wallet_api_impl::load_wallet_file</definition>
+        <argsstring>(string wallet_filename=&quot;&quot;)</argsstring>
+        <name>load_wallet_file</name>
+        <param>
+          <type>string</type>
+          <declname>wallet_filename</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="712" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="712" bodyend="773"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1af91e375d363fb2d2e7a10d81addc8d17" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::wallet::detail::wallet_api_impl::save_wallet_file</definition>
+        <argsstring>(string wallet_filename=&quot;&quot;)</argsstring>
+        <name>save_wallet_file</name>
+        <param>
+          <type>string</type>
+          <declname>wallet_filename</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="774" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="774" bodyend="811"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1adce35015195130ba4f62b7ba32cf95d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1wallet_1a385c5434f1c4e271cf812627f9ee759a" kindref="member">transaction_handle_type</ref></type>
+        <definition>transaction_handle_type graphene::wallet::detail::wallet_api_impl::begin_builder_transaction</definition>
+        <argsstring>()</argsstring>
+        <name>begin_builder_transaction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="813" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="813" bodyend="819"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a74b7dfa835a2e35bc33a6892d6fa1cfa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::wallet::detail::wallet_api_impl::add_operation_to_builder_transaction</definition>
+        <argsstring>(transaction_handle_type transaction_handle, const operation &amp;op)</argsstring>
+        <name>add_operation_to_builder_transaction</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1wallet_1a385c5434f1c4e271cf812627f9ee759a" kindref="member">transaction_handle_type</ref></type>
+          <declname>transaction_handle</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__operations_1ga8b0400e40715f7fd1608ab2dc3d6d401" kindref="member">operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="820" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="820" bodyend="824"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1aaa1ac3b8fde1b9393e2420c5f32cb152" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::wallet::detail::wallet_api_impl::replace_operation_in_builder_transaction</definition>
+        <argsstring>(transaction_handle_type handle, uint32_t operation_index, const operation &amp;new_op)</argsstring>
+        <name>replace_operation_in_builder_transaction</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1wallet_1a385c5434f1c4e271cf812627f9ee759a" kindref="member">transaction_handle_type</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>operation_index</declname>
+        </param>
+        <param>
+          <type>const <ref refid="group__operations_1ga8b0400e40715f7fd1608ab2dc3d6d401" kindref="member">operation</ref> &amp;</type>
+          <declname>new_op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="825" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="825" bodyend="833"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ad917acecb683afd9f026d6b6247f0064" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::wallet::detail::wallet_api_impl::set_fees_on_builder_transaction</definition>
+        <argsstring>(transaction_handle_type handle, string fee_asset=GRAPHENE_SYMBOL)</argsstring>
+        <name>set_fees_on_builder_transaction</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1wallet_1a385c5434f1c4e271cf812627f9ee759a" kindref="member">transaction_handle_type</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>fee_asset</declname>
+          <defval><ref refid="config_8hpp_1a8c0af75f3a0235a3bc25e19c73fa1f48" kindref="member">GRAPHENE_SYMBOL</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="834" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="834" bodyend="857"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a22826e56c9b929ed6c620e13172059b9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1transaction" kindref="compound">transaction</ref></type>
+        <definition>transaction graphene::wallet::detail::wallet_api_impl::preview_builder_transaction</definition>
+        <argsstring>(transaction_handle_type handle)</argsstring>
+        <name>preview_builder_transaction</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1wallet_1a385c5434f1c4e271cf812627f9ee759a" kindref="member">transaction_handle_type</ref></type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="858" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="858" bodyend="862"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ac4ddc549f9875cfc1141ded04bb17b77" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+        <definition>signed_transaction graphene::wallet::detail::wallet_api_impl::sign_builder_transaction</definition>
+        <argsstring>(transaction_handle_type transaction_handle, bool broadcast=true)</argsstring>
+        <name>sign_builder_transaction</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1wallet_1a385c5434f1c4e271cf812627f9ee759a" kindref="member">transaction_handle_type</ref></type>
+          <declname>transaction_handle</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>broadcast</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="863" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="863" bodyend="868"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a084750c429ac65ba074ee63b1e339f3c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+        <definition>signed_transaction graphene::wallet::detail::wallet_api_impl::propose_builder_transaction</definition>
+        <argsstring>(transaction_handle_type handle, time_point_sec expiration=time_point::now()+fc::minutes(1), uint32_t review_period_seconds=0, bool broadcast=true)</argsstring>
+        <name>propose_builder_transaction</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1wallet_1a385c5434f1c4e271cf812627f9ee759a" kindref="member">transaction_handle_type</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>time_point_sec</type>
+          <declname>expiration</declname>
+          <defval>time_point::now()+fc::minutes(1)</defval>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>review_period_seconds</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>broadcast</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="869" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="869" bodyend="886"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ad63acd32978a8e57da55e0a369084286" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+        <definition>signed_transaction graphene::wallet::detail::wallet_api_impl::propose_builder_transaction2</definition>
+        <argsstring>(transaction_handle_type handle, string account_name_or_id, time_point_sec expiration=time_point::now()+fc::minutes(1), uint32_t review_period_seconds=0, bool broadcast=true)</argsstring>
+        <name>propose_builder_transaction2</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1wallet_1a385c5434f1c4e271cf812627f9ee759a" kindref="member">transaction_handle_type</ref></type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>account_name_or_id</declname>
+        </param>
+        <param>
+          <type>time_point_sec</type>
+          <declname>expiration</declname>
+          <defval>time_point::now()+fc::minutes(1)</defval>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>review_period_seconds</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>broadcast</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="888" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="888" bodyend="907"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ade3f2e4cbc4240542192612b6f9665cb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::wallet::detail::wallet_api_impl::remove_builder_transaction</definition>
+        <argsstring>(transaction_handle_type handle)</argsstring>
+        <name>remove_builder_transaction</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1wallet_1a385c5434f1c4e271cf812627f9ee759a" kindref="member">transaction_handle_type</ref></type>
+          <declname>handle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="909" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="909" bodyend="912"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1af803b3c07f3de1d32bf318236133ebee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+        <definition>signed_transaction graphene::wallet::detail::wallet_api_impl::register_account</definition>
+        <argsstring>(string name, public_key_type owner, public_key_type active, string registrar_account, string referrer_account, uint32_t referrer_percent, bool broadcast=false)</argsstring>
+        <name>register_account</name>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref></type>
+          <declname>owner</declname>
+        </param>
+        <param>
+          <type><ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref></type>
+          <declname>active</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>registrar_account</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>referrer_account</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>referrer_percent</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>broadcast</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="915" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="915" bodyend="981"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a3a998b0aa403a0c4643d7b8ecc6c3296" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+        <definition>signed_transaction graphene::wallet::detail::wallet_api_impl::upgrade_account</definition>
+        <argsstring>(string name, bool broadcast)</argsstring>
+        <name>upgrade_account</name>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>broadcast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="984" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="984" bodyend="999"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ae90d1f7262f7d568668dd8cbe6afabf7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int graphene::wallet::detail::wallet_api_impl::find_first_unused_derived_key_index</definition>
+        <argsstring>(const fc::ecc::private_key &amp;parent_key)</argsstring>
+        <name>find_first_unused_derived_key_index</name>
+        <param>
+          <type>const fc::ecc::private_key &amp;</type>
+          <declname>parent_key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="1006" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="1006" bodyend="1035"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1af8778b031938d2bc69423188b7e85763" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+        <definition>signed_transaction graphene::wallet::detail::wallet_api_impl::create_account_with_private_key</definition>
+        <argsstring>(fc::ecc::private_key owner_privkey, string account_name, string registrar_account, string referrer_account, bool broadcast=false, bool save_wallet=true)</argsstring>
+        <name>create_account_with_private_key</name>
+        <param>
+          <type>fc::ecc::private_key</type>
+          <declname>owner_privkey</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>account_name</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>registrar_account</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>referrer_account</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>broadcast</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>save_wallet</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="1037" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="1037" bodyend="1110"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a70387f10574b627ff6bdfc904d1a86e8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+        <definition>signed_transaction graphene::wallet::detail::wallet_api_impl::create_account_with_brain_key</definition>
+        <argsstring>(string brain_key, string account_name, string registrar_account, string referrer_account, bool broadcast=false, bool save_wallet=true)</argsstring>
+        <name>create_account_with_brain_key</name>
+        <param>
+          <type>string</type>
+          <declname>brain_key</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>account_name</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>registrar_account</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>referrer_account</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>broadcast</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>save_wallet</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="1112" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="1112" bodyend="1124"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1af19c2b3a8a8a5d6b054cef895625281b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+        <definition>signed_transaction graphene::wallet::detail::wallet_api_impl::create_asset</definition>
+        <argsstring>(string issuer, string symbol, uint8_t precision, asset_options common, fc::optional&lt; bitasset_options &gt; bitasset_opts, bool broadcast=false)</argsstring>
+        <name>create_asset</name>
+        <param>
+          <type>string</type>
+          <declname>issuer</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>symbol</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>precision</declname>
+        </param>
+        <param>
+          <type><ref refid="structgraphene_1_1chain_1_1asset__options" kindref="compound">asset_options</ref></type>
+          <declname>common</declname>
+        </param>
+        <param>
+          <type>fc::optional&lt; <ref refid="structgraphene_1_1chain_1_1bitasset__options" kindref="compound">bitasset_options</ref> &gt;</type>
+          <declname>bitasset_opts</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>broadcast</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="1127" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="1127" bodyend="1150"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a6fd558bb8b6a914226d5977bb131d013" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+        <definition>signed_transaction graphene::wallet::detail::wallet_api_impl::update_asset</definition>
+        <argsstring>(string symbol, optional&lt; string &gt; new_issuer, asset_options new_options, bool broadcast)</argsstring>
+        <name>update_asset</name>
+        <param>
+          <type>string</type>
+          <declname>symbol</declname>
+        </param>
+        <param>
+          <type>optional&lt; string &gt;</type>
+          <declname>new_issuer</declname>
+        </param>
+        <param>
+          <type><ref refid="structgraphene_1_1chain_1_1asset__options" kindref="compound">asset_options</ref></type>
+          <declname>new_options</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>broadcast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="1152" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="1152" bodyend="1179"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1afe09084869d8b6883bc84a7ccb7c35a7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+        <definition>signed_transaction graphene::wallet::detail::wallet_api_impl::update_bitasset</definition>
+        <argsstring>(string symbol, bitasset_options new_options, bool broadcast)</argsstring>
+        <name>update_bitasset</name>
+        <param>
+          <type>string</type>
+          <declname>symbol</declname>
+        </param>
+        <param>
+          <type><ref refid="structgraphene_1_1chain_1_1bitasset__options" kindref="compound">bitasset_options</ref></type>
+          <declname>new_options</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>broadcast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="1181" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="1181" bodyend="1200"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1aa1541fe2772815a4759ab0841d9bde4f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+        <definition>signed_transaction graphene::wallet::detail::wallet_api_impl::update_asset_feed_producers</definition>
+        <argsstring>(string symbol, flat_set&lt; string &gt; new_feed_producers, bool broadcast)</argsstring>
+        <name>update_asset_feed_producers</name>
+        <param>
+          <type>string</type>
+          <declname>symbol</declname>
+        </param>
+        <param>
+          <type>flat_set&lt; string &gt;</type>
+          <declname>new_feed_producers</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>broadcast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="1202" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="1202" bodyend="1224"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a3aca3a942c2d8c905eef4b61772b35fc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+        <definition>signed_transaction graphene::wallet::detail::wallet_api_impl::publish_asset_feed</definition>
+        <argsstring>(string publishing_account, string symbol, price_feed feed, bool broadcast)</argsstring>
+        <name>publish_asset_feed</name>
+        <param>
+          <type>string</type>
+          <declname>publishing_account</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>symbol</declname>
+        </param>
+        <param>
+          <type><ref refid="structgraphene_1_1chain_1_1price__feed" kindref="compound">price_feed</ref></type>
+          <declname>feed</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>broadcast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="1226" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="1226" bodyend="1246"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1af535f8b9766f950f81327bf75a481e41" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+        <definition>signed_transaction graphene::wallet::detail::wallet_api_impl::fund_asset_fee_pool</definition>
+        <argsstring>(string from, string symbol, string amount, bool broadcast)</argsstring>
+        <name>fund_asset_fee_pool</name>
+        <param>
+          <type>string</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>symbol</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>amount</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>broadcast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="1248" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="1248" bodyend="1270"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a723ebe673b0d9f1afbc15a167b533445" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+        <definition>signed_transaction graphene::wallet::detail::wallet_api_impl::reserve_asset</definition>
+        <argsstring>(string from, string amount, string symbol, bool broadcast)</argsstring>
+        <name>reserve_asset</name>
+        <param>
+          <type>string</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>amount</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>symbol</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>broadcast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="1272" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="1272" bodyend="1292"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ace32e5c209ed11579608e7b399093064" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+        <definition>signed_transaction graphene::wallet::detail::wallet_api_impl::global_settle_asset</definition>
+        <argsstring>(string symbol, price settle_price, bool broadcast)</argsstring>
+        <name>global_settle_asset</name>
+        <param>
+          <type>string</type>
+          <declname>symbol</declname>
+        </param>
+        <param>
+          <type><ref refid="structgraphene_1_1chain_1_1price" kindref="compound">price</ref></type>
+          <declname>settle_price</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>broadcast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="1294" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="1294" bodyend="1313"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a7f19de057d2d42247e832e90d3694afc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+        <definition>signed_transaction graphene::wallet::detail::wallet_api_impl::settle_asset</definition>
+        <argsstring>(string account_to_settle, string amount_to_settle, string symbol, bool broadcast)</argsstring>
+        <name>settle_asset</name>
+        <param>
+          <type>string</type>
+          <declname>account_to_settle</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>amount_to_settle</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>symbol</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>broadcast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="1315" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="1315" bodyend="1334"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a58e56f162bffd0c01dabcb63cad9dd5c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+        <definition>signed_transaction graphene::wallet::detail::wallet_api_impl::whitelist_account</definition>
+        <argsstring>(string authorizing_account, string account_to_list, account_whitelist_operation::account_listing new_listing_status, bool broadcast)</argsstring>
+        <name>whitelist_account</name>
+        <param>
+          <type>string</type>
+          <declname>authorizing_account</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>account_to_list</declname>
+        </param>
+        <param>
+          <type><ref refid="structgraphene_1_1chain_1_1account__whitelist__operation_1abba3d110e073c52309b894c4342fc660" kindref="member">account_whitelist_operation::account_listing</ref></type>
+          <declname>new_listing_status</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>broadcast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="1336" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="1336" bodyend="1352"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a665798eb5f5a588e966ff4315aa6785a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+        <definition>signed_transaction graphene::wallet::detail::wallet_api_impl::create_committee_member</definition>
+        <argsstring>(string owner_account, string url, bool broadcast)</argsstring>
+        <name>create_committee_member</name>
+        <param>
+          <type>string</type>
+          <declname>owner_account</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>url</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>broadcast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="1354" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="1354" bodyend="1370"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ac7599dbe2dc0063d6d1cee5869301e0f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classgraphene_1_1chain_1_1witness__object" kindref="compound">witness_object</ref></type>
+        <definition>witness_object graphene::wallet::detail::wallet_api_impl::get_witness</definition>
+        <argsstring>(string owner_account)</argsstring>
+        <name>get_witness</name>
+        <param>
+          <type>string</type>
+          <declname>owner_account</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="1372" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="1372" bodyend="1405"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ad9495c1a3bfaf6e656cbded14bc8bdec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classgraphene_1_1chain_1_1committee__member__object" kindref="compound">committee_member_object</ref></type>
+        <definition>committee_member_object graphene::wallet::detail::wallet_api_impl::get_committee_member</definition>
+        <argsstring>(string owner_account)</argsstring>
+        <name>get_committee_member</name>
+        <param>
+          <type>string</type>
+          <declname>owner_account</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="1407" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="1407" bodyend="1440"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1aa6c205d2b1cebdb0ce2b2a50341b0861" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+        <definition>signed_transaction graphene::wallet::detail::wallet_api_impl::create_witness</definition>
+        <argsstring>(string owner_account, string url, bool broadcast)</argsstring>
+        <name>create_witness</name>
+        <param>
+          <type>string</type>
+          <declname>owner_account</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>url</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>broadcast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="1442" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="1442" bodyend="1468"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a4f96e0f9b30a1a6ceacd604571df8ffa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+        <definition>signed_transaction graphene::wallet::detail::wallet_api_impl::update_witness</definition>
+        <argsstring>(string witness_name, string url, string block_signing_key, bool broadcast)</argsstring>
+        <name>update_witness</name>
+        <param>
+          <type>string</type>
+          <declname>witness_name</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>url</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>block_signing_key</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>broadcast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="1470" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="1470" bodyend="1493"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a794e23ef7f8e4777e317a4c6b5aa1dc8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+        <definition>signed_transaction graphene::wallet::detail::wallet_api_impl::create_worker</definition>
+        <argsstring>(string owner_account, time_point_sec work_begin_date, time_point_sec work_end_date, share_type daily_pay, string name, string url, variant worker_settings, bool broadcast)</argsstring>
+        <name>create_worker</name>
+        <param>
+          <type>string</type>
+          <declname>owner_account</declname>
+        </param>
+        <param>
+          <type>time_point_sec</type>
+          <declname>work_begin_date</declname>
+        </param>
+        <param>
+          <type>time_point_sec</type>
+          <declname>work_end_date</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+          <declname>daily_pay</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>url</declname>
+        </param>
+        <param>
+          <type>variant</type>
+          <declname>worker_settings</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>broadcast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="1503" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="1503" bodyend="1544"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a858a14216aac8f920ba838c6d2149ca3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+        <definition>signed_transaction graphene::wallet::detail::wallet_api_impl::update_worker_votes</definition>
+        <argsstring>(string account, worker_vote_delta delta, bool broadcast)</argsstring>
+        <name>update_worker_votes</name>
+        <param>
+          <type>string</type>
+          <declname>account</declname>
+        </param>
+        <param>
+          <type><ref refid="structgraphene_1_1wallet_1_1worker__vote__delta" kindref="compound">worker_vote_delta</ref></type>
+          <declname>delta</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>broadcast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="1546" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="1546" bodyend="1609"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a95e4740b14b17939ac075d94a0f2bdf6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>vector&lt; <ref refid="structgraphene_1_1wallet_1_1vesting__balance__object__with__info" kindref="compound">vesting_balance_object_with_info</ref> &gt;</type>
+        <definition>vector&lt; vesting_balance_object_with_info &gt; graphene::wallet::detail::wallet_api_impl::get_vesting_balances</definition>
+        <argsstring>(string account_name)</argsstring>
+        <name>get_vesting_balances</name>
+        <param>
+          <type>string</type>
+          <declname>account_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="1611" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="1611" bodyend="1637"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a378454a0c1c492849073878453c2d1a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+        <definition>signed_transaction graphene::wallet::detail::wallet_api_impl::withdraw_vesting</definition>
+        <argsstring>(string witness_name, string amount, string asset_symbol, bool broadcast=false)</argsstring>
+        <name>withdraw_vesting</name>
+        <param>
+          <type>string</type>
+          <declname>witness_name</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>amount</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>asset_symbol</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>broadcast</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="1639" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="1639" bodyend="1668"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a66773548a1eff4ea04415ed1ecca13f6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+        <definition>signed_transaction graphene::wallet::detail::wallet_api_impl::vote_for_committee_member</definition>
+        <argsstring>(string voting_account, string committee_member, bool approve, bool broadcast)</argsstring>
+        <name>vote_for_committee_member</name>
+        <param>
+          <type>string</type>
+          <declname>voting_account</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>committee_member</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>approve</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>broadcast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="1670" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="1670" bodyend="1702"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a2f85c2938a3a15591a887788dc167f1b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+        <definition>signed_transaction graphene::wallet::detail::wallet_api_impl::vote_for_witness</definition>
+        <argsstring>(string voting_account, string witness, bool approve, bool broadcast)</argsstring>
+        <name>vote_for_witness</name>
+        <param>
+          <type>string</type>
+          <declname>voting_account</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>witness</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>approve</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>broadcast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="1704" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="1704" bodyend="1736"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a1e14932cd46b96429f80735965a7512f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+        <definition>signed_transaction graphene::wallet::detail::wallet_api_impl::set_voting_proxy</definition>
+        <argsstring>(string account_to_modify, optional&lt; string &gt; voting_account, bool broadcast)</argsstring>
+        <name>set_voting_proxy</name>
+        <param>
+          <type>string</type>
+          <declname>account_to_modify</declname>
+        </param>
+        <param>
+          <type>optional&lt; string &gt;</type>
+          <declname>voting_account</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>broadcast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="1738" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="1738" bodyend="1767"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a71b313bf560330cf76ffd6402f866d7b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+        <definition>signed_transaction graphene::wallet::detail::wallet_api_impl::set_desired_witness_and_committee_member_count</definition>
+        <argsstring>(string account_to_modify, uint16_t desired_number_of_witnesses, uint16_t desired_number_of_committee_members, bool broadcast)</argsstring>
+        <name>set_desired_witness_and_committee_member_count</name>
+        <param>
+          <type>string</type>
+          <declname>account_to_modify</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>desired_number_of_witnesses</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>desired_number_of_committee_members</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>broadcast</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="1769" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="1769" bodyend="1793"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1aca6e575c034edbc7a374f2346e2f4a06" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+        <definition>signed_transaction graphene::wallet::detail::wallet_api_impl::sign_transaction</definition>
+        <argsstring>(signed_transaction tx, bool broadcast=false)</argsstring>
+        <name>sign_transaction</name>
+        <param>
+          <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+          <declname>tx</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>broadcast</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>TODO: fetch the accounts specified via other_auths as well.</para><para>TODO: recursively check one layer deeper in the authority tree for keys</para><para>TODO: if transaction has enough signatures to be &quot;valid&quot; don&apos;t add any more, there are cases where the wallet may have more keys than strictly necessary and the transaction will be rejected if the transaction validates without requiring all signatures provided </para>        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="1795" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="1795" bodyend="1929"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ab8136d37177f8d25c6f425065d12abdc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+        <definition>signed_transaction graphene::wallet::detail::wallet_api_impl::sell_asset</definition>
+        <argsstring>(string seller_account, string amount_to_sell, string symbol_to_sell, string min_to_receive, string symbol_to_receive, uint32_t timeout_sec=0, bool fill_or_kill=false, bool broadcast=false)</argsstring>
+        <name>sell_asset</name>
+        <param>
+          <type>string</type>
+          <declname>seller_account</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>amount_to_sell</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>symbol_to_sell</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>min_to_receive</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>symbol_to_receive</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>timeout_sec</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>fill_or_kill</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>broadcast</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="1931" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="1931" bodyend="1956"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a1b964ec3f62712f7f28a484458be7131" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+        <definition>signed_transaction graphene::wallet::detail::wallet_api_impl::borrow_asset</definition>
+        <argsstring>(string seller_name, string amount_to_borrow, string asset_symbol, string amount_of_collateral, bool broadcast=false)</argsstring>
+        <name>borrow_asset</name>
+        <param>
+          <type>string</type>
+          <declname>seller_name</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>amount_to_borrow</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>asset_symbol</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>amount_of_collateral</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>broadcast</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="1958" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="1958" bodyend="1978"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a2a61c45860bbbebc66a62a4cb0fade70" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+        <definition>signed_transaction graphene::wallet::detail::wallet_api_impl::cancel_order</definition>
+        <argsstring>(object_id_type order_id, bool broadcast=false)</argsstring>
+        <name>cancel_order</name>
+        <param>
+          <type>object_id_type</type>
+          <declname>order_id</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>broadcast</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="1980" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="1980" bodyend="1994"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1af6a4a05a1af2471c2f0d55827c1c1e64" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+        <definition>signed_transaction graphene::wallet::detail::wallet_api_impl::transfer</definition>
+        <argsstring>(string from, string to, string amount, string asset_symbol, string memo, bool broadcast=false)</argsstring>
+        <name>transfer</name>
+        <param>
+          <type>string</type>
+          <declname>from</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>to</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>amount</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>asset_symbol</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>memo</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>broadcast</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="1996" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="1996" bodyend="2029"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1aaf20ad4b3c3c4d51d2a09f4ed3ed8e6a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+        <definition>signed_transaction graphene::wallet::detail::wallet_api_impl::issue_asset</definition>
+        <argsstring>(string to_account, string amount, string symbol, string memo, bool broadcast=false)</argsstring>
+        <name>issue_asset</name>
+        <param>
+          <type>string</type>
+          <declname>to_account</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>amount</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>symbol</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>memo</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>broadcast</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="2031" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2031" bodyend="2059"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a852ad07e5b097fa0ef28e4151890e7d2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::map&lt; string, std::function&lt; string(fc::variant, const fc::variants &amp;)&gt; &gt;</type>
+        <definition>std::map&lt;string,std::function&lt;string(fc::variant,const fc::variants&amp;)&gt; &gt; graphene::wallet::detail::wallet_api_impl::get_result_formatters</definition>
+        <argsstring>() const</argsstring>
+        <name>get_result_formatters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="2061" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2061" bodyend="2273"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ab05cd1249b4e3da5ce4707d78160493e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+        <definition>signed_transaction graphene::wallet::detail::wallet_api_impl::propose_parameter_change</definition>
+        <argsstring>(const string &amp;proposing_account, fc::time_point_sec expiration_time, const variant_object &amp;changed_values, bool broadcast=false)</argsstring>
+        <name>propose_parameter_change</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>proposing_account</declname>
+        </param>
+        <param>
+          <type>fc::time_point_sec</type>
+          <declname>expiration_time</declname>
+        </param>
+        <param>
+          <type>const variant_object &amp;</type>
+          <declname>changed_values</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>broadcast</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="2275" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2275" bodyend="2307"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a463772cd2a9b5cbe7526d9ac5ace630b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+        <definition>signed_transaction graphene::wallet::detail::wallet_api_impl::propose_fee_change</definition>
+        <argsstring>(const string &amp;proposing_account, fc::time_point_sec expiration_time, const variant_object &amp;changed_fees, bool broadcast=false)</argsstring>
+        <name>propose_fee_change</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>proposing_account</declname>
+        </param>
+        <param>
+          <type>fc::time_point_sec</type>
+          <declname>expiration_time</declname>
+        </param>
+        <param>
+          <type>const variant_object &amp;</type>
+          <declname>changed_fees</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>broadcast</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="2309" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2309" bodyend="2389"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ac5c00d5de5f1e93f6d1c636a83bf1605" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1signed__transaction" kindref="compound">signed_transaction</ref></type>
+        <definition>signed_transaction graphene::wallet::detail::wallet_api_impl::approve_proposal</definition>
+        <argsstring>(const string &amp;fee_paying_account, const string &amp;proposal_id, const approval_delta &amp;delta, bool broadcast=false)</argsstring>
+        <name>approve_proposal</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>fee_paying_account</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>proposal_id</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structgraphene_1_1wallet_1_1approval__delta" kindref="compound">approval_delta</ref> &amp;</type>
+          <declname>delta</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>broadcast</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="2391" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2391" bodyend="2422"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ace09876139ef11b893a9e579299089ff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::wallet::detail::wallet_api_impl::dbg_make_uia</definition>
+        <argsstring>(string creator, string symbol)</argsstring>
+        <name>dbg_make_uia</name>
+        <param>
+          <type>string</type>
+          <declname>creator</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>symbol</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="2424" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2424" bodyend="2431"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a258feca7587c96369db9f578cbd8d2b5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::wallet::detail::wallet_api_impl::dbg_make_mia</definition>
+        <argsstring>(string creator, string symbol)</argsstring>
+        <name>dbg_make_mia</name>
+        <param>
+          <type>string</type>
+          <declname>creator</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>symbol</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="2433" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2433" bodyend="2441"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1acec337073809139088a705a5587e17eb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::wallet::detail::wallet_api_impl::dbg_push_blocks</definition>
+        <argsstring>(const std::string &amp;src_filename, uint32_t count)</argsstring>
+        <name>dbg_push_blocks</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>src_filename</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="2443" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2443" bodyend="2448"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a7a76db50150003dc9d6a23a91eca99ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::wallet::detail::wallet_api_impl::dbg_generate_blocks</definition>
+        <argsstring>(const std::string &amp;debug_wif_key, uint32_t count)</argsstring>
+        <name>dbg_generate_blocks</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>debug_wif_key</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="2450" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2450" bodyend="2455"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a1a371de2990a17c2985ea30f06e5a126" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::wallet::detail::wallet_api_impl::dbg_stream_json_objects</definition>
+        <argsstring>(const std::string &amp;filename)</argsstring>
+        <name>dbg_stream_json_objects</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="2457" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2457" bodyend="2462"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ae84ad5824a21723143948b876a252b85" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::wallet::detail::wallet_api_impl::dbg_update_object</definition>
+        <argsstring>(const fc::variant_object &amp;update)</argsstring>
+        <name>dbg_update_object</name>
+        <param>
+          <type>const fc::variant_object &amp;</type>
+          <declname>update</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="2464" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2464" bodyend="2469"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ac0550c9f1f54d8383cccbe5873cc70bd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::wallet::detail::wallet_api_impl::use_network_node_api</definition>
+        <argsstring>()</argsstring>
+        <name>use_network_node_api</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="2471" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2471" bodyend="2487"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a6aff9e87dc4fbc78419cabb67d8a3b31" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::wallet::detail::wallet_api_impl::use_debug_api</definition>
+        <argsstring>()</argsstring>
+        <name>use_debug_api</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="2489" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2489" bodyend="2507"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a833e74c7309891cafedcec8563dcfa98" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::wallet::detail::wallet_api_impl::network_add_nodes</definition>
+        <argsstring>(const vector&lt; string &gt; &amp;nodes)</argsstring>
+        <name>network_add_nodes</name>
+        <param>
+          <type>const vector&lt; string &gt; &amp;</type>
+          <declname>nodes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="2509" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2509" bodyend="2516"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a17b042fbe5e18f3ceb85c889bff679a2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>vector&lt; variant &gt;</type>
+        <definition>vector&lt; variant &gt; graphene::wallet::detail::wallet_api_impl::network_get_connected_peers</definition>
+        <argsstring>()</argsstring>
+        <name>network_get_connected_peers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="2518" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2518" bodyend="2531"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ac2a27e6fb5d8d57eb69b15b4dde6e081" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::wallet::detail::wallet_api_impl::flood_network</definition>
+        <argsstring>(string prefix, uint32_t number_of_transactions)</argsstring>
+        <name>flood_network</name>
+        <param>
+          <type>string</type>
+          <declname>prefix</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>number_of_transactions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="2533" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2533" bodyend="2580"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a465f82f5e3c7834b969f8041520d27b5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="group__operations_1ga8b0400e40715f7fd1608ab2dc3d6d401" kindref="member">operation</ref></type>
+        <definition>operation graphene::wallet::detail::wallet_api_impl::get_prototype_operation</definition>
+        <argsstring>(string operation_name)</argsstring>
+        <name>get_prototype_operation</name>
+        <param>
+          <type>string</type>
+          <declname>operation_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="2582" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="2582" bodyend="2588"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a0a8c44505fea45790a5cfdbaa2fbfa13" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename WorkerInit</type>
+          </param>
+        </templateparamlist>
+        <type>WorkerInit</type>
+        <definition>static WorkerInit graphene::wallet::detail::wallet_api_impl::_create_worker_initializer</definition>
+        <argsstring>(const variant &amp;worker_settings)</argsstring>
+        <name>_create_worker_initializer</name>
+        <param>
+          <type>const variant &amp;</type>
+          <declname>worker_settings</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/wallet.cpp" line="1496" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="1496" bodyend="1501"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3034">
+        <label>optional&lt; fc::api&lt; network_node_api &gt; &gt;</label>
+      </node>
+      <node id="3042">
+        <label>vector&lt; string &gt;</label>
+      </node>
+      <node id="3030">
+        <label>vector&lt; char &gt;</label>
+      </node>
+      <node id="3031">
+        <label>string</label>
+      </node>
+      <node id="3029">
+        <label>map&lt; account_id_type, set&lt; public_key_type &gt; &gt;</label>
+      </node>
+      <node id="3028">
+        <label>multi_index_container</label>
+      </node>
+      <node id="3027">
+        <label>graphene::wallet::wallet_data</label>
+        <link refid="structgraphene_1_1wallet_1_1wallet__data"/>
+        <childnode refid="3028" relation="usage">
+          <edgelabel>my_accounts</edgelabel>
+        </childnode>
+        <childnode refid="3029" relation="usage">
+          <edgelabel>extra_keys</edgelabel>
+        </childnode>
+        <childnode refid="3030" relation="usage">
+          <edgelabel>cipher_keys</edgelabel>
+        </childnode>
+        <childnode refid="3031" relation="usage">
+          <edgelabel>ws_password</edgelabel>
+          <edgelabel>ws_server</edgelabel>
+          <edgelabel>ws_user</edgelabel>
+        </childnode>
+        <childnode refid="3032" relation="usage">
+          <edgelabel>pending_witness_registrations</edgelabel>
+        </childnode>
+        <childnode refid="3033" relation="usage">
+          <edgelabel>pending_account_registrations</edgelabel>
+        </childnode>
+      </node>
+      <node id="3043">
+        <label>flat_map&lt; string, int &gt;</label>
+      </node>
+      <node id="3039">
+        <label>graphene::wallet::wallet_api</label>
+        <link refid="classgraphene_1_1wallet_1_1wallet__api"/>
+      </node>
+      <node id="3026">
+        <label>graphene::wallet::detail::wallet_api_impl</label>
+        <link refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl"/>
+        <childnode refid="3027" relation="usage">
+          <edgelabel>_wallet</edgelabel>
+        </childnode>
+        <childnode refid="3034" relation="usage">
+          <edgelabel>_remote_net_node</edgelabel>
+        </childnode>
+        <childnode refid="3035" relation="usage">
+          <edgelabel>_remote_debug</edgelabel>
+        </childnode>
+        <childnode refid="3036" relation="usage">
+          <edgelabel>_keys</edgelabel>
+        </childnode>
+        <childnode refid="3037" relation="usage">
+          <edgelabel>method_documentation</edgelabel>
+        </childnode>
+        <childnode refid="3038" relation="usage">
+          <edgelabel>_asset_cache</edgelabel>
+        </childnode>
+        <childnode refid="3039" relation="usage">
+          <edgelabel>self</edgelabel>
+        </childnode>
+        <childnode refid="3031" relation="usage">
+          <edgelabel>_wallet_filename_extension</edgelabel>
+          <edgelabel>_wallet_filename</edgelabel>
+        </childnode>
+        <childnode refid="3040" relation="usage">
+          <edgelabel>_prototype_ops</edgelabel>
+        </childnode>
+        <childnode refid="3041" relation="usage">
+          <edgelabel>_operation_which_map</edgelabel>
+        </childnode>
+      </node>
+      <node id="3038">
+        <label>map&lt; asset_id_type, asset_object &gt;</label>
+      </node>
+      <node id="3040">
+        <label>flat_map&lt; string, operation &gt;</label>
+      </node>
+      <node id="3035">
+        <label>optional&lt; fc::api&lt; graphene::debug_witness::debug_api &gt; &gt;</label>
+      </node>
+      <node id="3033">
+        <label>map&lt; string, vector&lt; string &gt; &gt;</label>
+      </node>
+      <node id="3036">
+        <label>map&lt; public_key_type, string &gt;</label>
+      </node>
+      <node id="3032">
+        <label>map&lt; string, string &gt;</label>
+      </node>
+      <node id="3041">
+        <label>graphene::wallet::static_variant_map</label>
+        <link refid="structgraphene_1_1wallet_1_1static__variant__map"/>
+        <childnode refid="3042" relation="usage">
+          <edgelabel>which_to_name</edgelabel>
+        </childnode>
+        <childnode refid="3043" relation="usage">
+          <edgelabel>name_to_which</edgelabel>
+        </childnode>
+      </node>
+      <node id="3037">
+        <label>graphene::wallet::api_documentation</label>
+        <link refid="classgraphene_1_1wallet_1_1api__documentation"/>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/wallet/wallet.cpp" line="252" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="251" bodyend="2614"/>
+    <listofallmembers>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a51ce862cdaceb2bac635c428e3f6989e" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>_asset_cache</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a2c053f405008be43b3a9f147c96f18e1" prot="private" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>_builder_transactions</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a0f3c8c4427dc5f5643bda65f50bd60f3" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>_chain_id</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a48e2a3d5a3f02a9dd161c232565bc4a1" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>_checksum</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a0a8c44505fea45790a5cfdbaa2fbfa13" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>_create_worker_initializer</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a05ce7dff825f2ff981eb5b12602834a9" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>_keys</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a69236112896022de6cedc29857ddb021" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>_operation_which_map</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ac86f210d8b83fa1efa688f8299a29a45" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>_prototype_ops</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a5358c0a0b4ba1f8a775027c125525146" prot="private" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>_recently_generated_transactions</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a4957470684dd0873a9e1cdd5956cc096" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>_remote_api</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ad1655d0a1948fb370b2bf72914e9b9e7" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>_remote_db</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a1de9eb4bc4efc580999ac41df0ff038f" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>_remote_debug</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a35c9d37c9d2abdde7307e2b4f8a1deac" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>_remote_hist</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a2bd9baf9354c7ca82a6dba9aaa94c801" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>_remote_net_broadcast</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1abfa8b5314825c438b499f730033b7fc4" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>_remote_net_node</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1aa32b458c75542b144243b4e183c46616" prot="private" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>_resync_mutex</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1abb168034fba13f535333b7b2d4e22730" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>_wallet</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1aa47d3f711c8faf3e86ba6d081a31e37a" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>_wallet_filename</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a3d34ecb787a5b9775264e72de8f7f24e" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>_wallet_filename_extension</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ab84487e81093c8820d7aa2d20432e00a" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>about</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a74b7dfa835a2e35bc33a6892d6fa1cfa" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>add_operation_to_builder_transaction</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ac5c00d5de5f1e93f6d1c636a83bf1605" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>approve_proposal</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1adce35015195130ba4f62b7ba32cf95d7" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>begin_builder_transaction</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a1b964ec3f62712f7f28a484458be7131" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>borrow_asset</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a2a61c45860bbbebc66a62a4cb0fade70" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>cancel_order</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1aa03063e66de1adbf70effab4338693bf" prot="private" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>claim_registered_account</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ac3875698d5f8040f633191d6659890dd" prot="private" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>claim_registered_witness</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ae0964b39f0b10a9a34408c1fd026fa09" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>copy_wallet_file</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a70387f10574b627ff6bdfc904d1a86e8" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>create_account_with_brain_key</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1af8778b031938d2bc69423188b7e85763" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>create_account_with_private_key</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1af19c2b3a8a8a5d6b054cef895625281b" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>create_asset</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a665798eb5f5a588e966ff4315aa6785a" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>create_committee_member</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1aa6c205d2b1cebdb0ce2b2a50341b0861" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>create_witness</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a794e23ef7f8e4777e317a4c6b5aa1dc8" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>create_worker</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a7a76db50150003dc9d6a23a91eca99ef" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>dbg_generate_blocks</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a258feca7587c96369db9f578cbd8d2b5" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>dbg_make_mia</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ace09876139ef11b893a9e579299089ff" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>dbg_make_uia</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1acec337073809139088a705a5587e17eb" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>dbg_push_blocks</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a1a371de2990a17c2985ea30f06e5a126" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>dbg_stream_json_objects</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ae84ad5824a21723143948b876a252b85" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>dbg_update_object</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a904bcfbec959c02f1c36695096696d49" prot="private" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>disable_umask_protection</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a77382a587689218a206bcfb9935c6a7f" prot="private" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>enable_umask_protection</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a730cd01003bd09e6f4d6308b2528a813" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>encrypt_keys</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a145c5060f2f8a351153374679a4b636b" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>find_asset</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1af0ec130d29dca14875f9a8dbed1d405c" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>find_asset</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ae90d1f7262f7d568668dd8cbe6afabf7" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>find_first_unused_derived_key_index</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ac2a27e6fb5d8d57eb69b15b4dde6e081" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>flood_network</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1af535f8b9766f950f81327bf75a481e41" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>fund_asset_fee_pool</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1adbd558f9ed259c066bb6c17a21052e77" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>get_account</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a815bf79bb6e6a574234554d37bea7d82" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>get_account</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1abbfeb54a873d9a9be931130d578e6c14" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>get_account_id</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1aacb14ea5e7726a45e773ad65e0e95f88" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>get_asset</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a2223dc005d334b9444ae4d30a95b484e" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>get_asset</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a77713bfeb962fa84a0aea917893f03d8" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>get_asset_id</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a1f212ebc4494b924766ee7c051e09190" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>get_chain_properties</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ad9495c1a3bfaf6e656cbded14bc8bdec" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>get_committee_member</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a14cf29413ee050b1b80641565dd7e9ac" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>get_dynamic_global_properties</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1aba92882190358cfd4a7657ac3806a9da" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>get_global_properties</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a45e8e9f228cc96428a207e2d45c59ac3" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>get_object</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1af03b3f5acc342f611b07bba39b74f2ea" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>get_private_key</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1afd758e9c804bdf9826fe89fd8ac934ba" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>get_private_key_for_account</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a465f82f5e3c7834b969f8041520d27b5" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>get_prototype_operation</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a852ad07e5b097fa0ef28e4151890e7d2" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>get_result_formatters</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a95e4740b14b17939ac075d94a0f2bdf6" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>get_vesting_balances</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a492a0422b93084e384bbe160027595e6" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>get_wallet_filename</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ac7599dbe2dc0063d6d1cee5869301e0f" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>get_witness</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ace32e5c209ed11579608e7b399093064" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>global_settle_asset</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ab704e6571ccbbefe2bd222e6c050f63d" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>import_balance</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ad0f54ef0b0c6d560193ac73310cbb960" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>import_key</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a1cac87d51d693dbb4ba0e4d4b5eee8c5" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>info</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1adbde996c4e8e734e8c719d6e890d1522" prot="private" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>init_prototype_ops</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a230d0940176aac4069cb7db61a98ab28" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>is_locked</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1aaf20ad4b3c3c4d51d2a09f4ed3ed8e6a" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>issue_asset</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a014d840a64df24c0b628698545b5e9ad" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>load_wallet_file</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a832e03516d209b51d7fc53295235f88b" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>method_documentation</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a833e74c7309891cafedcec8563dcfa98" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>network_add_nodes</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a17b042fbe5e18f3ceb85c889bff679a2" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>network_get_connected_peers</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a5393053e219946a56bf5e4b83f5c9d1d" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>on_block_applied</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a22826e56c9b929ed6c620e13172059b9" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>preview_builder_transaction</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a084750c429ac65ba074ee63b1e339f3c" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>propose_builder_transaction</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ad63acd32978a8e57da55e0a369084286" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>propose_builder_transaction2</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a463772cd2a9b5cbe7526d9ac5ace630b" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>propose_fee_change</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ab05cd1249b4e3da5ce4707d78160493e" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>propose_parameter_change</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a3aca3a942c2d8c905eef4b61772b35fc" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>publish_asset_feed</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a4e6327a69770aa1553e0c6af060e633f" prot="private" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>recently_generated_transaction_set_type</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1af803b3c07f3de1d32bf318236133ebee" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>register_account</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ade3f2e4cbc4240542192612b6f9665cb" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>remove_builder_transaction</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1aaa1ac3b8fde1b9393e2420c5f32cb152" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>replace_operation_in_builder_transaction</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a723ebe673b0d9f1afbc15a167b533445" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>reserve_asset</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a90981cfa47e79a5007ec6181443eef30" prot="private" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>resync</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1af91e375d363fb2d2e7a10d81addc8d17" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>save_wallet_file</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a420923724cc8c7f5c58ecf6331596faf" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>self</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ab8136d37177f8d25c6f425065d12abdc" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>sell_asset</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a71b313bf560330cf76ffd6402f866d7b" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>set_desired_witness_and_committee_member_count</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ad917acecb683afd9f026d6b6247f0064" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>set_fees_on_builder_transaction</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a8d896944e5c5a0f10c44648156389c13" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>set_operation_fees</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a1e14932cd46b96429f80735965a7512f" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>set_voting_proxy</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a7f19de057d2d42247e832e90d3694afc" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>settle_asset</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ac4ddc549f9875cfc1141ded04bb17b77" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>sign_builder_transaction</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1aca6e575c034edbc7a374f2346e2f4a06" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>sign_transaction</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1af6a4a05a1af2471c2f0d55827c1c1e64" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>transfer</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a6fd558bb8b6a914226d5977bb131d013" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>update_asset</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1aa1541fe2772815a4759ab0841d9bde4f" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>update_asset_feed_producers</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1afe09084869d8b6883bc84a7ccb7c35a7" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>update_bitasset</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a4f96e0f9b30a1a6ceacd604571df8ffa" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>update_witness</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a858a14216aac8f920ba838c6d2149ca3" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>update_worker_votes</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a3a998b0aa403a0c4643d7b8ecc6c3296" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>upgrade_account</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a6aff9e87dc4fbc78419cabb67d8a3b31" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>use_debug_api</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1ac0550c9f1f54d8383cccbe5873cc70bd" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>use_network_node_api</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a66773548a1eff4ea04415ed1ecca13f6" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>vote_for_committee_member</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a2f85c2938a3a15591a887788dc167f1b" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>vote_for_witness</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1aa265449207ba861fc203b6f2c8bc8969" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>wallet_api_impl</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a58e56f162bffd0c01dabcb63cad9dd5c" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>whitelist_account</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a378454a0c1c492849073878453c2d1a1" prot="public" virt="non-virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>withdraw_vesting</name></member>
+      <member refid="classgraphene_1_1wallet_1_1detail_1_1wallet__api__impl_1a9c7abe57237a9a516eb1780f9273ee18" prot="public" virt="virtual"><scope>graphene::wallet::detail::wallet_api_impl</scope><name>~wallet_api_impl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

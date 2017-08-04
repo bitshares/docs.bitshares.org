@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1wallet_1_1vesting__balance__object__with__info" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::wallet::vesting_balance_object_with_info</compoundname>
+    <basecompoundref refid="classgraphene_1_1chain_1_1vesting__balance__object" prot="public" virt="non-virtual">graphene::chain::vesting_balance_object</basecompoundref>
+    <includes refid="wallet_8hpp" local="no">wallet.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1wallet_1_1vesting__balance__object__with__info_1ae173df1cdc0a25fbaf31c371c3c08386" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::wallet::vesting_balance_object_with_info::allowed_withdraw</definition>
+        <argsstring></argsstring>
+        <name>allowed_withdraw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>How much is allowed to be withdrawn. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="247" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="247" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1wallet_1_1vesting__balance__object__with__info_1a857d1f08924a5e942316308bd8e994a5" prot="public" static="no" mutable="no">
+        <type>fc::time_point_sec</type>
+        <definition>fc::time_point_sec graphene::wallet::vesting_balance_object_with_info::allowed_withdraw_time</definition>
+        <argsstring></argsstring>
+        <name>allowed_withdraw_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The time at which allowed_withdrawal was calculated. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="252" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="252" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1wallet_1_1vesting__balance__object__with__info_1adb5486e1321ba03fd61c04838e75a80a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>graphene::wallet::vesting_balance_object_with_info::vesting_balance_object_with_info</definition>
+        <argsstring>(const vesting_balance_object &amp;vbo, fc::time_point_sec now)</argsstring>
+        <name>vesting_balance_object_with_info</name>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1vesting__balance__object" kindref="compound">vesting_balance_object</ref> &amp;</type>
+          <declname>vbo</declname>
+        </param>
+        <param>
+          <type>fc::time_point_sec</type>
+          <declname>now</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="241" column="1" bodyfile="libraries/wallet/wallet.cpp" bodystart="4361" bodyend="4366"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1wallet_1_1vesting__balance__object__with__info_1a44853f6bcd0ba2a1a0943ec8b08c2291" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>graphene::wallet::vesting_balance_object_with_info::vesting_balance_object_with_info</definition>
+        <argsstring>(const vesting_balance_object_with_info &amp;vbo)=default</argsstring>
+        <name>vesting_balance_object_with_info</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1wallet_1_1vesting__balance__object__with__info" kindref="compound">vesting_balance_object_with_info</ref> &amp;</type>
+          <declname>vbo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="242" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2944">
+        <label>graphene::chain::vesting_balance_object</label>
+        <link refid="classgraphene_1_1chain_1_1vesting__balance__object"/>
+        <childnode refid="2945" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2945">
+        <label>graphene::db::abstract_object&lt; vesting_balance_object &gt;</label>
+      </node>
+      <node id="2943">
+        <label>graphene::wallet::vesting_balance_object_with_info</label>
+        <link refid="structgraphene_1_1wallet_1_1vesting__balance__object__with__info"/>
+        <childnode refid="2944" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2951">
+        <label>time_point_sec</label>
+      </node>
+      <node id="2947">
+        <label>graphene::chain::vesting_balance_object</label>
+        <link refid="classgraphene_1_1chain_1_1vesting__balance__object"/>
+        <childnode refid="2948" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2949" relation="usage">
+          <edgelabel>balance</edgelabel>
+        </childnode>
+      </node>
+      <node id="2948">
+        <label>graphene::db::abstract_object&lt; vesting_balance_object &gt;</label>
+      </node>
+      <node id="2946">
+        <label>graphene::wallet::vesting_balance_object_with_info</label>
+        <link refid="structgraphene_1_1wallet_1_1vesting__balance__object__with__info"/>
+        <childnode refid="2947" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2951" relation="usage">
+          <edgelabel>allowed_withdraw_time</edgelabel>
+        </childnode>
+        <childnode refid="2949" relation="usage">
+          <edgelabel>allowed_withdraw</edgelabel>
+        </childnode>
+      </node>
+      <node id="2949">
+        <label>graphene::chain::asset</label>
+        <link refid="structgraphene_1_1chain_1_1asset"/>
+        <childnode refid="2950" relation="usage">
+          <edgelabel>amount</edgelabel>
+        </childnode>
+      </node>
+      <node id="2950">
+        <label>safe&lt; int64_t &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="240" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="239" bodyend="253"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1wallet_1_1vesting__balance__object__with__info_1ae173df1cdc0a25fbaf31c371c3c08386" prot="public" virt="non-virtual"><scope>graphene::wallet::vesting_balance_object_with_info</scope><name>allowed_withdraw</name></member>
+      <member refid="structgraphene_1_1wallet_1_1vesting__balance__object__with__info_1a857d1f08924a5e942316308bd8e994a5" prot="public" virt="non-virtual"><scope>graphene::wallet::vesting_balance_object_with_info</scope><name>allowed_withdraw_time</name></member>
+      <member refid="classgraphene_1_1chain_1_1vesting__balance__object_1ad0a453c90b0555f470fe04692400a770" prot="public" virt="non-virtual"><scope>graphene::wallet::vesting_balance_object_with_info</scope><name>balance</name></member>
+      <member refid="classgraphene_1_1chain_1_1vesting__balance__object_1a178b417cc5b0124693b0137b057be8fb" prot="public" virt="non-virtual"><scope>graphene::wallet::vesting_balance_object_with_info</scope><name>deposit</name></member>
+      <member refid="classgraphene_1_1chain_1_1vesting__balance__object_1a0abf048f7d0c3b1dc5fd20a528862c79" prot="public" virt="non-virtual"><scope>graphene::wallet::vesting_balance_object_with_info</scope><name>deposit_vested</name></member>
+      <member refid="classgraphene_1_1chain_1_1vesting__balance__object_1ac603d34434a36d083c4220f4ee90bb45" prot="public" virt="non-virtual"><scope>graphene::wallet::vesting_balance_object_with_info</scope><name>get_allowed_withdraw</name></member>
+      <member refid="classgraphene_1_1chain_1_1vesting__balance__object_1aa5ee63be625ac79eb18fa545a8e9aa4d" prot="public" virt="non-virtual"><scope>graphene::wallet::vesting_balance_object_with_info</scope><name>is_deposit_allowed</name></member>
+      <member refid="classgraphene_1_1chain_1_1vesting__balance__object_1abe28f237ac1ead090a9d64d10fa30af2" prot="public" virt="non-virtual"><scope>graphene::wallet::vesting_balance_object_with_info</scope><name>is_deposit_vested_allowed</name></member>
+      <member refid="classgraphene_1_1chain_1_1vesting__balance__object_1a77d833f9dc36c18ec756b43b98e01b54" prot="public" virt="non-virtual"><scope>graphene::wallet::vesting_balance_object_with_info</scope><name>is_withdraw_allowed</name></member>
+      <member refid="classgraphene_1_1chain_1_1vesting__balance__object_1a67fcfc288de5c0094d1d97ccf4c67108" prot="public" virt="non-virtual"><scope>graphene::wallet::vesting_balance_object_with_info</scope><name>owner</name></member>
+      <member refid="classgraphene_1_1chain_1_1vesting__balance__object_1a9c40157fb6d2fb86c6f158437aece76d" prot="public" virt="non-virtual"><scope>graphene::wallet::vesting_balance_object_with_info</scope><name>policy</name></member>
+      <member refid="classgraphene_1_1chain_1_1vesting__balance__object_1ab999fcca9be4d932dbb2586b9a7d339d" prot="public" virt="non-virtual"><scope>graphene::wallet::vesting_balance_object_with_info</scope><name>space_id</name></member>
+      <member refid="classgraphene_1_1chain_1_1vesting__balance__object_1a5ed5e43ebf715f6eb711139e035255c7" prot="public" virt="non-virtual"><scope>graphene::wallet::vesting_balance_object_with_info</scope><name>type_id</name></member>
+      <member refid="classgraphene_1_1chain_1_1vesting__balance__object_1a9e14dd77a333cbcf73bcc814a6dfc9dd" prot="public" virt="non-virtual"><scope>graphene::wallet::vesting_balance_object_with_info</scope><name>vesting_balance_object</name></member>
+      <member refid="structgraphene_1_1wallet_1_1vesting__balance__object__with__info_1adb5486e1321ba03fd61c04838e75a80a" prot="public" virt="non-virtual"><scope>graphene::wallet::vesting_balance_object_with_info</scope><name>vesting_balance_object_with_info</name></member>
+      <member refid="structgraphene_1_1wallet_1_1vesting__balance__object__with__info_1a44853f6bcd0ba2a1a0943ec8b08c2291" prot="public" virt="non-virtual"><scope>graphene::wallet::vesting_balance_object_with_info</scope><name>vesting_balance_object_with_info</name></member>
+      <member refid="classgraphene_1_1chain_1_1vesting__balance__object_1a132a8aeae6d15ca91bcd6a78966f4919" prot="public" virt="non-virtual"><scope>graphene::wallet::vesting_balance_object_with_info</scope><name>withdraw</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

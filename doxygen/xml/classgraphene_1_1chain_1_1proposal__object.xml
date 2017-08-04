@@ -1,0 +1,252 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgraphene_1_1chain_1_1proposal__object" kind="class" language="C++" prot="public">
+    <compoundname>graphene::chain::proposal_object</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">graphene::db::abstract_object&lt; proposal_object &gt;</basecompoundref>
+    <includes refid="proposal__object_8hpp" local="no">proposal_object.hpp</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1proposal__object_1a76da455fa1feee65e202055d975bd14e" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t graphene::chain::proposal_object::space_id</definition>
+        <argsstring></argsstring>
+        <name>space_id</name>
+        <initializer>= <ref refid="namespacegraphene_1_1chain_1a92e55d4242187696c5e2c5eaafbd9400a9dadbbe526b5096091138116c13d612d" kindref="member">protocol_ids</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/proposal_object.hpp" line="42" column="1" bodyfile="libraries/chain/include/graphene/chain/proposal_object.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1proposal__object_1ad212fd881a4bf89acc9c394edcbd545f" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t graphene::chain::proposal_object::type_id</definition>
+        <argsstring></argsstring>
+        <name>type_id</name>
+        <initializer>= <ref refid="namespacegraphene_1_1chain_1aa6e32c79e2b22c998deddedcb696633da73d5f9d5fe8289ffcf39020fe2eb60b1" kindref="member">proposal_object_type</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/proposal_object.hpp" line="43" column="1" bodyfile="libraries/chain/include/graphene/chain/proposal_object.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1proposal__object_1aaa68f7f84d178e7141e6a66b2217bc7d" prot="public" static="no" mutable="no">
+        <type>time_point_sec</type>
+        <definition>time_point_sec graphene::chain::proposal_object::expiration_time</definition>
+        <argsstring></argsstring>
+        <name>expiration_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/proposal_object.hpp" line="45" column="1" bodyfile="libraries/chain/include/graphene/chain/proposal_object.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1proposal__object_1a51a2a94347b83a82b042465d2db19949" prot="public" static="no" mutable="no">
+        <type>optional&lt; time_point_sec &gt;</type>
+        <definition>optional&lt;time_point_sec&gt; graphene::chain::proposal_object::review_period_time</definition>
+        <argsstring></argsstring>
+        <name>review_period_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/proposal_object.hpp" line="46" column="1" bodyfile="libraries/chain/include/graphene/chain/proposal_object.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1proposal__object_1a119d1007b9df990295ddf36b3854053e" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1transaction" kindref="compound">transaction</ref></type>
+        <definition>transaction graphene::chain::proposal_object::proposed_transaction</definition>
+        <argsstring></argsstring>
+        <name>proposed_transaction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/proposal_object.hpp" line="47" column="1" bodyfile="libraries/chain/include/graphene/chain/proposal_object.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1proposal__object_1abb764a31f14a6f02d27cbb759b663c42" prot="public" static="no" mutable="no">
+        <type>flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt;</type>
+        <definition>flat_set&lt;account_id_type&gt; graphene::chain::proposal_object::required_active_approvals</definition>
+        <argsstring></argsstring>
+        <name>required_active_approvals</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/proposal_object.hpp" line="48" column="1" bodyfile="libraries/chain/include/graphene/chain/proposal_object.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1proposal__object_1ae109f072dacb60e7fdfebca0e5c560a3" prot="public" static="no" mutable="no">
+        <type>flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt;</type>
+        <definition>flat_set&lt;account_id_type&gt; graphene::chain::proposal_object::available_active_approvals</definition>
+        <argsstring></argsstring>
+        <name>available_active_approvals</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/proposal_object.hpp" line="49" column="1" bodyfile="libraries/chain/include/graphene/chain/proposal_object.hpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1proposal__object_1a720ae65a9704e4813116565c6affc733" prot="public" static="no" mutable="no">
+        <type>flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt;</type>
+        <definition>flat_set&lt;account_id_type&gt; graphene::chain::proposal_object::required_owner_approvals</definition>
+        <argsstring></argsstring>
+        <name>required_owner_approvals</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/proposal_object.hpp" line="50" column="1" bodyfile="libraries/chain/include/graphene/chain/proposal_object.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1proposal__object_1a33710200550c2677447db15ffb66eec4" prot="public" static="no" mutable="no">
+        <type>flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt;</type>
+        <definition>flat_set&lt;account_id_type&gt; graphene::chain::proposal_object::available_owner_approvals</definition>
+        <argsstring></argsstring>
+        <name>available_owner_approvals</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/proposal_object.hpp" line="51" column="1" bodyfile="libraries/chain/include/graphene/chain/proposal_object.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1proposal__object_1ad82cd826ac213f74375932aa485964dd" prot="public" static="no" mutable="no">
+        <type>flat_set&lt; <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref> &gt;</type>
+        <definition>flat_set&lt;public_key_type&gt; graphene::chain::proposal_object::available_key_approvals</definition>
+        <argsstring></argsstring>
+        <name>available_key_approvals</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/proposal_object.hpp" line="52" column="1" bodyfile="libraries/chain/include/graphene/chain/proposal_object.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1proposal__object_1abf831c04e5464e80091559ad4184258f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::proposal_object::is_authorized_to_execute</definition>
+        <argsstring>(database &amp;db) const</argsstring>
+        <name>is_authorized_to_execute</name>
+        <param>
+          <type><ref refid="classgraphene_1_1chain_1_1database" kindref="compound">database</ref> &amp;</type>
+          <declname>db</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/proposal_object.hpp" line="54" column="1" bodyfile="libraries/chain/proposal_object.cpp" bodystart="30" bodyend="51"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>tracks the approval of a partially approved transaction </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2511">
+        <label>graphene::chain::proposal_object</label>
+        <link refid="classgraphene_1_1chain_1_1proposal__object"/>
+        <childnode refid="2512" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2512">
+        <label>graphene::db::abstract_object&lt; proposal_object &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2515">
+        <label>time_point_sec</label>
+      </node>
+      <node id="2518">
+        <label>flat_set&lt; future_extensions &gt;</label>
+      </node>
+      <node id="2513">
+        <label>graphene::chain::proposal_object</label>
+        <link refid="classgraphene_1_1chain_1_1proposal__object"/>
+        <childnode refid="2514" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2515" relation="usage">
+          <edgelabel>expiration_time</edgelabel>
+        </childnode>
+        <childnode refid="2516" relation="usage">
+          <edgelabel>available_key_approvals</edgelabel>
+        </childnode>
+        <childnode refid="2517" relation="usage">
+          <edgelabel>proposed_transaction</edgelabel>
+        </childnode>
+        <childnode refid="2520" relation="usage">
+          <edgelabel>review_period_time</edgelabel>
+        </childnode>
+        <childnode refid="2521" relation="usage">
+          <edgelabel>required_owner_approvals</edgelabel>
+          <edgelabel>available_owner_approvals</edgelabel>
+          <edgelabel>required_active_approvals</edgelabel>
+          <edgelabel>available_active_approvals</edgelabel>
+        </childnode>
+      </node>
+      <node id="2514">
+        <label>graphene::db::abstract_object&lt; proposal_object &gt;</label>
+      </node>
+      <node id="2521">
+        <label>flat_set&lt; account_id_type &gt;</label>
+      </node>
+      <node id="2520">
+        <label>optional&lt; time_point_sec &gt;</label>
+      </node>
+      <node id="2519">
+        <label>vector&lt; operation &gt;</label>
+      </node>
+      <node id="2516">
+        <label>flat_set&lt; graphene::chain::public_key_type &gt;</label>
+      </node>
+      <node id="2517">
+        <label>graphene::chain::transaction</label>
+        <link refid="structgraphene_1_1chain_1_1transaction"/>
+        <childnode refid="2518" relation="usage">
+          <edgelabel>extensions</edgelabel>
+        </childnode>
+        <childnode refid="2515" relation="usage">
+          <edgelabel>expiration</edgelabel>
+        </childnode>
+        <childnode refid="2519" relation="usage">
+          <edgelabel>operations</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/proposal_object.hpp" line="40" column="1" bodyfile="libraries/chain/include/graphene/chain/proposal_object.hpp" bodystart="39" bodyend="55"/>
+    <listofallmembers>
+      <member refid="classgraphene_1_1chain_1_1proposal__object_1ae109f072dacb60e7fdfebca0e5c560a3" prot="public" virt="non-virtual"><scope>graphene::chain::proposal_object</scope><name>available_active_approvals</name></member>
+      <member refid="classgraphene_1_1chain_1_1proposal__object_1ad82cd826ac213f74375932aa485964dd" prot="public" virt="non-virtual"><scope>graphene::chain::proposal_object</scope><name>available_key_approvals</name></member>
+      <member refid="classgraphene_1_1chain_1_1proposal__object_1a33710200550c2677447db15ffb66eec4" prot="public" virt="non-virtual"><scope>graphene::chain::proposal_object</scope><name>available_owner_approvals</name></member>
+      <member refid="classgraphene_1_1chain_1_1proposal__object_1aaa68f7f84d178e7141e6a66b2217bc7d" prot="public" virt="non-virtual"><scope>graphene::chain::proposal_object</scope><name>expiration_time</name></member>
+      <member refid="classgraphene_1_1chain_1_1proposal__object_1abf831c04e5464e80091559ad4184258f" prot="public" virt="non-virtual"><scope>graphene::chain::proposal_object</scope><name>is_authorized_to_execute</name></member>
+      <member refid="classgraphene_1_1chain_1_1proposal__object_1a119d1007b9df990295ddf36b3854053e" prot="public" virt="non-virtual"><scope>graphene::chain::proposal_object</scope><name>proposed_transaction</name></member>
+      <member refid="classgraphene_1_1chain_1_1proposal__object_1abb764a31f14a6f02d27cbb759b663c42" prot="public" virt="non-virtual"><scope>graphene::chain::proposal_object</scope><name>required_active_approvals</name></member>
+      <member refid="classgraphene_1_1chain_1_1proposal__object_1a720ae65a9704e4813116565c6affc733" prot="public" virt="non-virtual"><scope>graphene::chain::proposal_object</scope><name>required_owner_approvals</name></member>
+      <member refid="classgraphene_1_1chain_1_1proposal__object_1a51a2a94347b83a82b042465d2db19949" prot="public" virt="non-virtual"><scope>graphene::chain::proposal_object</scope><name>review_period_time</name></member>
+      <member refid="classgraphene_1_1chain_1_1proposal__object_1a76da455fa1feee65e202055d975bd14e" prot="public" virt="non-virtual"><scope>graphene::chain::proposal_object</scope><name>space_id</name></member>
+      <member refid="classgraphene_1_1chain_1_1proposal__object_1ad212fd881a4bf89acc9c394edcbd545f" prot="public" virt="non-virtual"><scope>graphene::chain::proposal_object</scope><name>type_id</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

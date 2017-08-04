@@ -1,0 +1,281 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1account__update__operation" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::account_update_operation</compoundname>
+    <basecompoundref refid="structgraphene_1_1chain_1_1base__operation" prot="public" virt="non-virtual">graphene::chain::base_operation</basecompoundref>
+    <includes refid="account_8hpp" local="no">account.hpp</includes>
+    <innerclass refid="structgraphene_1_1chain_1_1account__update__operation_1_1ext" prot="public">graphene::chain::account_update_operation::ext</innerclass>
+    <innerclass refid="structgraphene_1_1chain_1_1account__update__operation_1_1fee__parameters__type" prot="public">graphene::chain::account_update_operation::fee_parameters_type</innerclass>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1account__update__operation_1a8bdfe1688253666766f62b2f2c50a002" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::account_update_operation::fee</definition>
+        <argsstring></argsstring>
+        <name>fee</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/account.hpp" line="135" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/account.hpp" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1account__update__operation_1a83dbfc5e1c9b87fd62b2f45708a91cd2" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::account_update_operation::account</definition>
+        <argsstring></argsstring>
+        <name>account</name>
+        <briefdescription>
+<para>The account to update. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/account.hpp" line="137" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/account.hpp" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1account__update__operation_1acc625960e7abec67a4e9f04990f46fdd" prot="public" static="no" mutable="no">
+        <type>optional&lt; <ref refid="structgraphene_1_1chain_1_1authority" kindref="compound">authority</ref> &gt;</type>
+        <definition>optional&lt;authority&gt; graphene::chain::account_update_operation::owner</definition>
+        <argsstring></argsstring>
+        <name>owner</name>
+        <briefdescription>
+<para>New owner authority. If set, this operation requires owner authority to execute. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/account.hpp" line="140" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/account.hpp" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1account__update__operation_1a2cf75cb8bcda11e699ac4a34ff69a992" prot="public" static="no" mutable="no">
+        <type>optional&lt; <ref refid="structgraphene_1_1chain_1_1authority" kindref="compound">authority</ref> &gt;</type>
+        <definition>optional&lt;authority&gt; graphene::chain::account_update_operation::active</definition>
+        <argsstring></argsstring>
+        <name>active</name>
+        <briefdescription>
+<para>New active authority. This can be updated by the current active authority. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/account.hpp" line="142" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/account.hpp" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1account__update__operation_1a8967106f4e0564381b7a13063245937c" prot="public" static="no" mutable="no">
+        <type>optional&lt; <ref refid="structgraphene_1_1chain_1_1account__options" kindref="compound">account_options</ref> &gt;</type>
+        <definition>optional&lt;account_options&gt; graphene::chain::account_update_operation::new_options</definition>
+        <argsstring></argsstring>
+        <name>new_options</name>
+        <briefdescription>
+<para>New account options. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/account.hpp" line="145" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/account.hpp" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1account__update__operation_1abd1ac89fc473b847db7a1a478c211af4" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1extension" kindref="compound">extension</ref>&lt; <ref refid="structgraphene_1_1chain_1_1account__update__operation_1_1ext" kindref="compound">ext</ref> &gt;</type>
+        <definition>extension&lt; ext &gt; graphene::chain::account_update_operation::extensions</definition>
+        <argsstring></argsstring>
+        <name>extensions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/account.hpp" line="146" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/account.hpp" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1account__update__operation_1ad546c13e0ae5d8e62af91f156e2efad1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::account_update_operation::fee_payer</definition>
+        <argsstring>() const</argsstring>
+        <name>fee_payer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/account.hpp" line="148" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/account.hpp" bodystart="148" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1account__update__operation_1a8c4515fcf807f84eea197234be644395" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::account_update_operation::validate</definition>
+        <argsstring>() const</argsstring>
+        <name>validate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/account.hpp" line="149" column="1" bodyfile="libraries/chain/protocol/account.cpp" bodystart="236" bodyend="271"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1account__update__operation_1a8fec5b846eceb1a0d00fc4fb5d6b0e3a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+        <definition>share_type graphene::chain::account_update_operation::calculate_fee</definition>
+        <argsstring>(const fee_parameters_type &amp;k) const</argsstring>
+        <name>calculate_fee</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1account__update__operation_1_1fee__parameters__type" kindref="compound">fee_parameters_type</ref> &amp;</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/account.hpp" line="150" column="1" bodyfile="libraries/chain/protocol/account.cpp" bodystart="228" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1account__update__operation_1a5679ef8aad2db26c7f65c2e8d00a6c82" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::account_update_operation::is_owner_update</definition>
+        <argsstring>() const</argsstring>
+        <name>is_owner_update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/account.hpp" line="152" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/account.hpp" bodystart="152" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1account__update__operation_1a2224a3c52bcbfeee46dcc175bc36e1d6" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::account_update_operation::get_required_owner_authorities</definition>
+        <argsstring>(flat_set&lt; account_id_type &gt; &amp;a) const</argsstring>
+        <name>get_required_owner_authorities</name>
+        <param>
+          <type>flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt; &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/account.hpp" line="155" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/account.hpp" bodystart="155" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1account__update__operation_1a2408e86d5d0d080220fb1062bc637465" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::account_update_operation::get_required_active_authorities</definition>
+        <argsstring>(flat_set&lt; account_id_type &gt; &amp;a) const</argsstring>
+        <name>get_required_active_authorities</name>
+        <param>
+          <type>flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt; &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/account.hpp" line="158" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/account.hpp" bodystart="158" bodyend="159"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Update an existing account. </para>    </briefdescription>
+    <detaileddescription>
+<para>This operation is used to update an existing account. It can be used to update the authorities, or adjust the options on the account. See <ref refid="classgraphene_1_1chain_1_1account__object_1adefb42cc7a11b805b98f8af1d0f8fdb4" kindref="member">account_object::options_type</ref> for the options which may be updated. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="179">
+        <label>graphene::chain::base_operation</label>
+        <link refid="structgraphene_1_1chain_1_1base__operation"/>
+      </node>
+      <node id="178">
+        <label>graphene::chain::account_update_operation</label>
+        <link refid="structgraphene_1_1chain_1_1account__update__operation"/>
+        <childnode refid="179" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="182">
+        <label>graphene::chain::extension&lt; graphene::chain::account_update_operation::ext &gt;</label>
+        <link refid="structgraphene_1_1chain_1_1extension"/>
+        <childnode refid="183" relation="usage">
+          <edgelabel>value</edgelabel>
+        </childnode>
+      </node>
+      <node id="186">
+        <label>optional&lt; graphene::chain::authority &gt;</label>
+      </node>
+      <node id="184">
+        <label>optional&lt; graphene::chain::void_t &gt;</label>
+      </node>
+      <node id="183">
+        <label>graphene::chain::account_update_operation::ext</label>
+        <link refid="structgraphene_1_1chain_1_1account__update__operation_1_1ext"/>
+        <childnode refid="184" relation="usage">
+          <edgelabel>null_ext</edgelabel>
+        </childnode>
+        <childnode refid="185" relation="usage">
+          <edgelabel>owner_special_authority</edgelabel>
+          <edgelabel>active_special_authority</edgelabel>
+        </childnode>
+      </node>
+      <node id="185">
+        <label>optional&lt; special_authority &gt;</label>
+      </node>
+      <node id="189">
+        <label>optional&lt; graphene::chain::account_options &gt;</label>
+      </node>
+      <node id="181">
+        <label>graphene::chain::base_operation</label>
+        <link refid="structgraphene_1_1chain_1_1base__operation"/>
+      </node>
+      <node id="187">
+        <label>graphene::chain::asset</label>
+        <link refid="structgraphene_1_1chain_1_1asset"/>
+        <childnode refid="188" relation="usage">
+          <edgelabel>amount</edgelabel>
+        </childnode>
+      </node>
+      <node id="180">
+        <label>graphene::chain::account_update_operation</label>
+        <link refid="structgraphene_1_1chain_1_1account__update__operation"/>
+        <childnode refid="181" relation="public-inheritance">
+        </childnode>
+        <childnode refid="182" relation="usage">
+          <edgelabel>extensions</edgelabel>
+        </childnode>
+        <childnode refid="186" relation="usage">
+          <edgelabel>active</edgelabel>
+          <edgelabel>owner</edgelabel>
+        </childnode>
+        <childnode refid="187" relation="usage">
+          <edgelabel>fee</edgelabel>
+        </childnode>
+        <childnode refid="189" relation="usage">
+          <edgelabel>new_options</edgelabel>
+        </childnode>
+      </node>
+      <node id="188">
+        <label>safe&lt; int64_t &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/protocol/account.hpp" line="121" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/account.hpp" bodystart="120" bodyend="160"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1account__update__operation_1a83dbfc5e1c9b87fd62b2f45708a91cd2" prot="public" virt="non-virtual"><scope>graphene::chain::account_update_operation</scope><name>account</name></member>
+      <member refid="structgraphene_1_1chain_1_1account__update__operation_1a2cf75cb8bcda11e699ac4a34ff69a992" prot="public" virt="non-virtual"><scope>graphene::chain::account_update_operation</scope><name>active</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a8947f5ff3ea0458c7fe981b5bb9e82b7" prot="public" virt="non-virtual"><scope>graphene::chain::account_update_operation</scope><name>calculate_data_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1account__update__operation_1a8fec5b846eceb1a0d00fc4fb5d6b0e3a" prot="public" virt="non-virtual"><scope>graphene::chain::account_update_operation</scope><name>calculate_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a18b678eb05bc5b30d75f10b398c07a91" prot="public" virt="non-virtual" ambiguityscope="graphene::chain::base_operation::"><scope>graphene::chain::account_update_operation</scope><name>calculate_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1account__update__operation_1abd1ac89fc473b847db7a1a478c211af4" prot="public" virt="non-virtual"><scope>graphene::chain::account_update_operation</scope><name>extensions</name></member>
+      <member refid="structgraphene_1_1chain_1_1account__update__operation_1a8bdfe1688253666766f62b2f2c50a002" prot="public" virt="non-virtual"><scope>graphene::chain::account_update_operation</scope><name>fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1account__update__operation_1ad546c13e0ae5d8e62af91f156e2efad1" prot="public" virt="non-virtual"><scope>graphene::chain::account_update_operation</scope><name>fee_payer</name></member>
+      <member refid="structgraphene_1_1chain_1_1account__update__operation_1a2408e86d5d0d080220fb1062bc637465" prot="public" virt="non-virtual"><scope>graphene::chain::account_update_operation</scope><name>get_required_active_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1ac7e2861a01bbaef8fbe5c5dcf5e73b38" prot="public" virt="non-virtual"><scope>graphene::chain::account_update_operation</scope><name>get_required_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1account__update__operation_1a2224a3c52bcbfeee46dcc175bc36e1d6" prot="public" virt="non-virtual"><scope>graphene::chain::account_update_operation</scope><name>get_required_owner_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1account__update__operation_1a5679ef8aad2db26c7f65c2e8d00a6c82" prot="public" virt="non-virtual"><scope>graphene::chain::account_update_operation</scope><name>is_owner_update</name></member>
+      <member refid="structgraphene_1_1chain_1_1account__update__operation_1a8967106f4e0564381b7a13063245937c" prot="public" virt="non-virtual"><scope>graphene::chain::account_update_operation</scope><name>new_options</name></member>
+      <member refid="structgraphene_1_1chain_1_1account__update__operation_1acc625960e7abec67a4e9f04990f46fdd" prot="public" virt="non-virtual"><scope>graphene::chain::account_update_operation</scope><name>owner</name></member>
+      <member refid="structgraphene_1_1chain_1_1account__update__operation_1a8c4515fcf807f84eea197234be644395" prot="public" virt="non-virtual"><scope>graphene::chain::account_update_operation</scope><name>validate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

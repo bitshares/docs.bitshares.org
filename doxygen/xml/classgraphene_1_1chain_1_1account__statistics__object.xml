@@ -1,0 +1,240 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgraphene_1_1chain_1_1account__statistics__object" kind="class" language="C++" prot="public">
+    <compoundname>graphene::chain::account_statistics_object</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">graphene::db::abstract_object&lt; account_statistics_object &gt;</basecompoundref>
+    <includes refid="account__object_8hpp" local="no">account_object.hpp</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__statistics__object_1a7be7e9ec8e44e415dd2294f05d94674b" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t graphene::chain::account_statistics_object::space_id</definition>
+        <argsstring></argsstring>
+        <name>space_id</name>
+        <initializer>= <ref refid="namespacegraphene_1_1chain_1a92e55d4242187696c5e2c5eaafbd9400a81f35c04f1d3f3109dacaa6f2bef33c7" kindref="member">implementation_ids</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="44" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__statistics__object_1a6dcb7ae9359925cb1408a174cf8b43e0" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t graphene::chain::account_statistics_object::type_id</definition>
+        <argsstring></argsstring>
+        <name>type_id</name>
+        <initializer>= <ref refid="namespacegraphene_1_1chain_1ad3bef2f100b722a6c30fada38f6dcd73aac0cb1b1784f0ee58ae34a1c2b3f3df1" kindref="member">impl_account_statistics_object_type</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="45" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__statistics__object_1a5f945466aa5eab68d95956d8f776e1d8" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::account_statistics_object::owner</definition>
+        <argsstring></argsstring>
+        <name>owner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="47" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__statistics__object_1ac1bef1eef2dc6b82adb57a528aaa14d0" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a55238260801231918a43259ed4e3e29f" kindref="member">account_transaction_history_id_type</ref></type>
+        <definition>account_transaction_history_id_type graphene::chain::account_statistics_object::most_recent_op</definition>
+        <argsstring></argsstring>
+        <name>most_recent_op</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Keep the most recent operation as a root pointer to a linked list of the transaction history. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="52" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__statistics__object_1a0aee33c37964492c59194448fe867f4c" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t graphene::chain::account_statistics_object::total_ops</definition>
+        <argsstring></argsstring>
+        <name>total_ops</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Total operations related to this account. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="54" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__statistics__object_1a67fa01fc15e08e4117e489ec91e377fa" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t graphene::chain::account_statistics_object::removed_ops</definition>
+        <argsstring></argsstring>
+        <name>removed_ops</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Total operations related to this account that has been removed from the database. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="56" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__statistics__object_1a3d24f49bd8bccd624bc91fd55e33e25e" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+        <definition>share_type graphene::chain::account_statistics_object::total_core_in_orders</definition>
+        <argsstring></argsstring>
+        <name>total_core_in_orders</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>When calculating votes it is necessary to know how much is stored in orders (and thus unavailable for transfers). Rather than maintaining an index of [asset,owner,order_id] we will simply maintain the running total here and update it every time an order is created or modified. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="63" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__statistics__object_1adfd506e7176772143a194e1f214feaa2" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+        <definition>share_type graphene::chain::account_statistics_object::lifetime_fees_paid</definition>
+        <argsstring></argsstring>
+        <name>lifetime_fees_paid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tracks the total fees paid by this account for the purpose of calculating bulk discounts. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="68" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__statistics__object_1a6e24bf9caed87ca04ade5361a0b2b818" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+        <definition>share_type graphene::chain::account_statistics_object::pending_fees</definition>
+        <argsstring></argsstring>
+        <name>pending_fees</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tracks the fees paid by this account which have not been disseminated to the various parties that receive them yet (registrar, referrer, lifetime referrer, network, etc). This is used as an optimization to avoid doing massive amounts of uint128 arithmetic on each and every operation.</para><para>These fees will be paid out as vesting cash-back, and this counter will reset during the maintenance interval. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="78" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__statistics__object_1a1bf6b14fa88cc2bfac01861c2d896db8" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+        <definition>share_type graphene::chain::account_statistics_object::pending_vested_fees</definition>
+        <argsstring></argsstring>
+        <name>pending_vested_fees</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Same as <ref refid="classgraphene_1_1chain_1_1account__statistics__object_1a6e24bf9caed87ca04ade5361a0b2b818" kindref="member">pending_fees</ref>, except these fees will be paid out as pre-vested cash-back (immediately available for withdrawal) rather than requiring the normal vesting period. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="83" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1account__statistics__object_1a541251fa37ad3a13a6644365119341e4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::account_statistics_object::process_fees</definition>
+        <argsstring>(const account_object &amp;a, database &amp;d) const</argsstring>
+        <name>process_fees</name>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1account__object" kindref="compound">account_object</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="classgraphene_1_1chain_1_1database" kindref="compound">database</ref> &amp;</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+<para>Split up and pay out <ref refid="classgraphene_1_1chain_1_1account__statistics__object_1a6e24bf9caed87ca04ade5361a0b2b818" kindref="member">pending_fees</ref> and <ref refid="classgraphene_1_1chain_1_1account__statistics__object_1a1bf6b14fa88cc2bfac01861c2d896db8" kindref="member">pending_vested_fees</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="86" column="1" bodyfile="libraries/chain/account_object.cpp" bodystart="51" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1account__statistics__object_1aa09fea72ba6d68dc0b50a823f4fa838b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::account_statistics_object::pay_fee</definition>
+        <argsstring>(share_type core_fee, share_type cashback_vesting_threshold)</argsstring>
+        <name>pay_fee</name>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+          <declname>core_fee</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+          <declname>cashback_vesting_threshold</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Core fees are paid into the <ref refid="classgraphene_1_1chain_1_1account__statistics__object" kindref="compound">account_statistics_object</ref> by this method </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="91" column="1" bodyfile="libraries/chain/account_object.cpp" bodystart="105" bodyend="111"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This object contains regularly updated statistical data about an account. It is provided for the purpose of separating the account data that changes frequently from the account data that is mostly static, which will minimize the amount of data that must be backed up as part of the undo history everytime a transfer is made. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="118">
+        <label>graphene::chain::account_statistics_object</label>
+        <link refid="classgraphene_1_1chain_1_1account__statistics__object"/>
+        <childnode refid="119" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="119">
+        <label>graphene::db::abstract_object&lt; account_statistics_object &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="122">
+        <label>safe&lt; int64_t &gt;</label>
+      </node>
+      <node id="120">
+        <label>graphene::chain::account_statistics_object</label>
+        <link refid="classgraphene_1_1chain_1_1account__statistics__object"/>
+        <childnode refid="121" relation="public-inheritance">
+        </childnode>
+        <childnode refid="122" relation="usage">
+          <edgelabel>pending_fees</edgelabel>
+          <edgelabel>lifetime_fees_paid</edgelabel>
+          <edgelabel>pending_vested_fees</edgelabel>
+          <edgelabel>total_core_in_orders</edgelabel>
+        </childnode>
+      </node>
+      <node id="121">
+        <label>graphene::db::abstract_object&lt; account_statistics_object &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="42" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="41" bodyend="92"/>
+    <listofallmembers>
+      <member refid="classgraphene_1_1chain_1_1account__statistics__object_1adfd506e7176772143a194e1f214feaa2" prot="public" virt="non-virtual"><scope>graphene::chain::account_statistics_object</scope><name>lifetime_fees_paid</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__statistics__object_1ac1bef1eef2dc6b82adb57a528aaa14d0" prot="public" virt="non-virtual"><scope>graphene::chain::account_statistics_object</scope><name>most_recent_op</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__statistics__object_1a5f945466aa5eab68d95956d8f776e1d8" prot="public" virt="non-virtual"><scope>graphene::chain::account_statistics_object</scope><name>owner</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__statistics__object_1aa09fea72ba6d68dc0b50a823f4fa838b" prot="public" virt="non-virtual"><scope>graphene::chain::account_statistics_object</scope><name>pay_fee</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__statistics__object_1a6e24bf9caed87ca04ade5361a0b2b818" prot="public" virt="non-virtual"><scope>graphene::chain::account_statistics_object</scope><name>pending_fees</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__statistics__object_1a1bf6b14fa88cc2bfac01861c2d896db8" prot="public" virt="non-virtual"><scope>graphene::chain::account_statistics_object</scope><name>pending_vested_fees</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__statistics__object_1a541251fa37ad3a13a6644365119341e4" prot="public" virt="non-virtual"><scope>graphene::chain::account_statistics_object</scope><name>process_fees</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__statistics__object_1a67fa01fc15e08e4117e489ec91e377fa" prot="public" virt="non-virtual"><scope>graphene::chain::account_statistics_object</scope><name>removed_ops</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__statistics__object_1a7be7e9ec8e44e415dd2294f05d94674b" prot="public" virt="non-virtual"><scope>graphene::chain::account_statistics_object</scope><name>space_id</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__statistics__object_1a3d24f49bd8bccd624bc91fd55e33e25e" prot="public" virt="non-virtual"><scope>graphene::chain::account_statistics_object</scope><name>total_core_in_orders</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__statistics__object_1a0aee33c37964492c59194448fe867f4c" prot="public" virt="non-virtual"><scope>graphene::chain::account_statistics_object</scope><name>total_ops</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__statistics__object_1a6dcb7ae9359925cb1408a174cf8b43e0" prot="public" virt="non-virtual"><scope>graphene::chain::account_statistics_object</scope><name>type_id</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

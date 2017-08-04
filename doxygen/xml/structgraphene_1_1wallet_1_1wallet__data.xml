@@ -1,0 +1,251 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1wallet_1_1wallet__data" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::wallet::wallet_data</compoundname>
+    <includes refid="wallet_8hpp" local="no">wallet.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1wallet_1_1wallet__data_1a80262d508a2dba26f3229c779cff834a" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a8182991954496b517776f06844cf2d93" kindref="member">chain_id_type</ref></type>
+        <definition>chain_id_type graphene::wallet::wallet_data::chain_id</definition>
+        <argsstring></argsstring>
+        <name>chain_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Chain ID this wallet is used with </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="153" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1wallet_1_1wallet__data_1a2f460c4951ce0ed7f8875499acf6dda5" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a2cb69664c48f3d41eb5ac8b6bc4847cc" kindref="member">account_multi_index_type</ref></type>
+        <definition>account_multi_index_type graphene::wallet::wallet_data::my_accounts</definition>
+        <argsstring></argsstring>
+        <name>my_accounts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="154" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1wallet_1_1wallet__data_1aaf249a86a71ea8834adef4f556755f52" prot="public" static="no" mutable="no">
+        <type>vector&lt; char &gt;</type>
+        <definition>vector&lt;char&gt; graphene::wallet::wallet_data::cipher_keys</definition>
+        <argsstring></argsstring>
+        <name>cipher_keys</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>encrypted keys </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="181" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1wallet_1_1wallet__data_1a5283ce0f34df2e4b30252645eefc9627" prot="public" static="no" mutable="no">
+        <type>map&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref>, set&lt; <ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref> &gt; &gt;</type>
+        <definition>map&lt;account_id_type, set&lt;public_key_type&gt; &gt; graphene::wallet::wallet_data::extra_keys</definition>
+        <argsstring></argsstring>
+        <name>extra_keys</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>map an account to a set of extra keys that have been imported for that account </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="184" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1wallet_1_1wallet__data_1a7be98e067761cd3ea176f226588d7b39" prot="public" static="no" mutable="no">
+        <type>map&lt; string, vector&lt; string &gt; &gt;</type>
+        <definition>map&lt;string, vector&lt;string&gt; &gt; graphene::wallet::wallet_data::pending_account_registrations</definition>
+        <argsstring></argsstring>
+        <name>pending_account_registrations</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="188" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1wallet_1_1wallet__data_1a520c4371f248162f74e8f95c4020bfdb" prot="public" static="no" mutable="no">
+        <type>map&lt; string, string &gt;</type>
+        <definition>map&lt;string, string&gt; graphene::wallet::wallet_data::pending_witness_registrations</definition>
+        <argsstring></argsstring>
+        <name>pending_witness_registrations</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="189" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1wallet_1_1wallet__data_1a3bbf7a9171d333b97057ca598c674e1c" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1wallet_1a00d96f68df9fc0364b97a1fdb077045c" kindref="member">key_label_index_type</ref></type>
+        <definition>key_label_index_type graphene::wallet::wallet_data::labeled_keys</definition>
+        <argsstring></argsstring>
+        <name>labeled_keys</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="191" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1wallet_1_1wallet__data_1a8e7d0cc82a6995d16aacef933bc5ce7a" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1wallet_1ad9716b5e512a47a21832967fc0ced842" kindref="member">blind_receipt_index_type</ref></type>
+        <definition>blind_receipt_index_type graphene::wallet::wallet_data::blind_receipts</definition>
+        <argsstring></argsstring>
+        <name>blind_receipts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="192" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1wallet_1_1wallet__data_1a2f9f1086b02dca55d5cb1db871391ade" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string graphene::wallet::wallet_data::ws_server</definition>
+        <argsstring></argsstring>
+        <name>ws_server</name>
+        <initializer>= &quot;ws://localhost:8090&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="194" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1wallet_1_1wallet__data_1a638db1b1c7b25953c8e8fcd00220038d" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string graphene::wallet::wallet_data::ws_user</definition>
+        <argsstring></argsstring>
+        <name>ws_user</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="195" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1wallet_1_1wallet__data_1a996d40d7789a7904c01f470c16339171" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string graphene::wallet::wallet_data::ws_password</definition>
+        <argsstring></argsstring>
+        <name>ws_password</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="196" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1wallet_1_1wallet__data_1aa0cbf509666baf6dbda3a99a3f85bbb1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>vector&lt; object_id_type &gt;</type>
+        <definition>vector&lt;object_id_type&gt; graphene::wallet::wallet_data::my_account_ids</definition>
+        <argsstring>() const</argsstring>
+        <name>my_account_ids</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>IDs of all accounts in <ref refid="structgraphene_1_1wallet_1_1wallet__data_1a2f460c4951ce0ed7f8875499acf6dda5" kindref="member">my_accounts</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="156" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="156" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1wallet_1_1wallet__data_1a7e45dcef220b45e13f0918b1036cbf41" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::wallet::wallet_data::update_account</definition>
+        <argsstring>(const account_object &amp;acct)</argsstring>
+        <name>update_account</name>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1account__object" kindref="compound">account_object</ref> &amp;</type>
+          <declname>acct</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add acct to <ref refid="structgraphene_1_1wallet_1_1wallet__data_1a2f460c4951ce0ed7f8875499acf6dda5" kindref="member">my_accounts</ref>, or update it if it is already in <ref refid="structgraphene_1_1wallet_1_1wallet__data_1a2f460c4951ce0ed7f8875499acf6dda5" kindref="member">my_accounts</ref> <simplesect kind="return"><para>true if the account was newly inserted; false if it was only updated </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="166" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="166" bodyend="178"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3048">
+        <label>vector&lt; char &gt;</label>
+      </node>
+      <node id="3049">
+        <label>string</label>
+      </node>
+      <node id="3047">
+        <label>map&lt; account_id_type, set&lt; public_key_type &gt; &gt;</label>
+      </node>
+      <node id="3046">
+        <label>multi_index_container</label>
+      </node>
+      <node id="3045">
+        <label>graphene::wallet::wallet_data</label>
+        <link refid="structgraphene_1_1wallet_1_1wallet__data"/>
+        <childnode refid="3046" relation="usage">
+          <edgelabel>my_accounts</edgelabel>
+        </childnode>
+        <childnode refid="3047" relation="usage">
+          <edgelabel>extra_keys</edgelabel>
+        </childnode>
+        <childnode refid="3048" relation="usage">
+          <edgelabel>cipher_keys</edgelabel>
+        </childnode>
+        <childnode refid="3049" relation="usage">
+          <edgelabel>ws_password</edgelabel>
+          <edgelabel>ws_server</edgelabel>
+          <edgelabel>ws_user</edgelabel>
+        </childnode>
+        <childnode refid="3050" relation="usage">
+          <edgelabel>pending_witness_registrations</edgelabel>
+        </childnode>
+        <childnode refid="3051" relation="usage">
+          <edgelabel>pending_account_registrations</edgelabel>
+        </childnode>
+      </node>
+      <node id="3051">
+        <label>map&lt; string, vector&lt; string &gt; &gt;</label>
+      </node>
+      <node id="3050">
+        <label>map&lt; string, string &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/wallet/include/graphene/wallet/wallet.hpp" line="151" column="1" bodyfile="libraries/wallet/include/graphene/wallet/wallet.hpp" bodystart="150" bodyend="197"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1wallet_1_1wallet__data_1a8e7d0cc82a6995d16aacef933bc5ce7a" prot="public" virt="non-virtual"><scope>graphene::wallet::wallet_data</scope><name>blind_receipts</name></member>
+      <member refid="structgraphene_1_1wallet_1_1wallet__data_1a80262d508a2dba26f3229c779cff834a" prot="public" virt="non-virtual"><scope>graphene::wallet::wallet_data</scope><name>chain_id</name></member>
+      <member refid="structgraphene_1_1wallet_1_1wallet__data_1aaf249a86a71ea8834adef4f556755f52" prot="public" virt="non-virtual"><scope>graphene::wallet::wallet_data</scope><name>cipher_keys</name></member>
+      <member refid="structgraphene_1_1wallet_1_1wallet__data_1a5283ce0f34df2e4b30252645eefc9627" prot="public" virt="non-virtual"><scope>graphene::wallet::wallet_data</scope><name>extra_keys</name></member>
+      <member refid="structgraphene_1_1wallet_1_1wallet__data_1a3bbf7a9171d333b97057ca598c674e1c" prot="public" virt="non-virtual"><scope>graphene::wallet::wallet_data</scope><name>labeled_keys</name></member>
+      <member refid="structgraphene_1_1wallet_1_1wallet__data_1aa0cbf509666baf6dbda3a99a3f85bbb1" prot="public" virt="non-virtual"><scope>graphene::wallet::wallet_data</scope><name>my_account_ids</name></member>
+      <member refid="structgraphene_1_1wallet_1_1wallet__data_1a2f460c4951ce0ed7f8875499acf6dda5" prot="public" virt="non-virtual"><scope>graphene::wallet::wallet_data</scope><name>my_accounts</name></member>
+      <member refid="structgraphene_1_1wallet_1_1wallet__data_1a7be98e067761cd3ea176f226588d7b39" prot="public" virt="non-virtual"><scope>graphene::wallet::wallet_data</scope><name>pending_account_registrations</name></member>
+      <member refid="structgraphene_1_1wallet_1_1wallet__data_1a520c4371f248162f74e8f95c4020bfdb" prot="public" virt="non-virtual"><scope>graphene::wallet::wallet_data</scope><name>pending_witness_registrations</name></member>
+      <member refid="structgraphene_1_1wallet_1_1wallet__data_1a7e45dcef220b45e13f0918b1036cbf41" prot="public" virt="non-virtual"><scope>graphene::wallet::wallet_data</scope><name>update_account</name></member>
+      <member refid="structgraphene_1_1wallet_1_1wallet__data_1a996d40d7789a7904c01f470c16339171" prot="public" virt="non-virtual"><scope>graphene::wallet::wallet_data</scope><name>ws_password</name></member>
+      <member refid="structgraphene_1_1wallet_1_1wallet__data_1a2f9f1086b02dca55d5cb1db871391ade" prot="public" virt="non-virtual"><scope>graphene::wallet::wallet_data</scope><name>ws_server</name></member>
+      <member refid="structgraphene_1_1wallet_1_1wallet__data_1a638db1b1c7b25953c8e8fcd00220038d" prot="public" virt="non-virtual"><scope>graphene::wallet::wallet_data</scope><name>ws_user</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

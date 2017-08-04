@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1withdraw__permission__update__operation" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::withdraw_permission_update_operation</compoundname>
+    <basecompoundref refid="structgraphene_1_1chain_1_1base__operation" prot="public" virt="non-virtual">graphene::chain::base_operation</basecompoundref>
+    <includes refid="withdraw__permission_8hpp" local="no">withdraw_permission.hpp</includes>
+    <innerclass refid="structgraphene_1_1chain_1_1withdraw__permission__update__operation_1_1fee__parameters__type" prot="public">graphene::chain::withdraw_permission_update_operation::fee_parameters_type</innerclass>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1withdraw__permission__update__operation_1a4abe0228f11d9f83616314560f4bef9b" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::withdraw_permission_update_operation::fee</definition>
+        <argsstring></argsstring>
+        <name>fee</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" line="86" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1withdraw__permission__update__operation_1a1b6b2af2b8423960f86107703cb3202a" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::withdraw_permission_update_operation::withdraw_from_account</definition>
+        <argsstring></argsstring>
+        <name>withdraw_from_account</name>
+        <briefdescription>
+<para>This account pays the fee. Must match permission_to_update-&gt;withdraw_from_account. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" line="88" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1withdraw__permission__update__operation_1a51f5becfd1577e7ecdd3b37243df50e3" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::withdraw_permission_update_operation::authorized_account</definition>
+        <argsstring></argsstring>
+        <name>authorized_account</name>
+        <briefdescription>
+<para>The account authorized to make withdrawals. Must match permission_to_update-&gt;authorized_account. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" line="90" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1withdraw__permission__update__operation_1a5f81c6125c22e533c2dbaf3e0602a12c" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1ae1e7d73b3ea0bcf44a14b2487911736a" kindref="member">withdraw_permission_id_type</ref></type>
+        <definition>withdraw_permission_id_type graphene::chain::withdraw_permission_update_operation::permission_to_update</definition>
+        <argsstring></argsstring>
+        <name>permission_to_update</name>
+        <briefdescription>
+<para>ID of the permission which is being updated. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" line="92" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1withdraw__permission__update__operation_1a09901c4ab820bdfbcab782083832a44d" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::withdraw_permission_update_operation::withdrawal_limit</definition>
+        <argsstring></argsstring>
+        <name>withdrawal_limit</name>
+        <briefdescription>
+<para>New maximum amount the withdrawer is allowed to charge per withdrawal period. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" line="94" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1withdraw__permission__update__operation_1a817fd0b540d3706ee52800ae6486036c" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t graphene::chain::withdraw_permission_update_operation::withdrawal_period_sec</definition>
+        <argsstring></argsstring>
+        <name>withdrawal_period_sec</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>New length of the period between withdrawals. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" line="96" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1withdraw__permission__update__operation_1add36e0cc3d9e64c83300e638fd23bb26" prot="public" static="no" mutable="no">
+        <type>time_point_sec</type>
+        <definition>time_point_sec graphene::chain::withdraw_permission_update_operation::period_start_time</definition>
+        <argsstring></argsstring>
+        <name>period_start_time</name>
+        <briefdescription>
+<para>New beginning of the next withdrawal period; must be in the future. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" line="98" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1withdraw__permission__update__operation_1a4ca4cfdf8d53644e383417259ae45f24" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t graphene::chain::withdraw_permission_update_operation::periods_until_expiration</definition>
+        <argsstring></argsstring>
+        <name>periods_until_expiration</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>The new number of withdrawal periods for which this permission will be valid. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" line="100" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1withdraw__permission__update__operation_1a90d8728687bec69bd30e8b36ebf0bda4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::withdraw_permission_update_operation::fee_payer</definition>
+        <argsstring>() const</argsstring>
+        <name>fee_payer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" line="102" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" bodystart="102" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1withdraw__permission__update__operation_1a5f106583af3885ba40bcb1b72b97f6ac" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::withdraw_permission_update_operation::validate</definition>
+        <argsstring>() const</argsstring>
+        <name>validate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" line="103" column="1" bodyfile="libraries/chain/protocol/withdraw_permission.cpp" bodystart="28" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Update an existing withdraw permission</para><para>This oeration is used to update the settings for an existing withdrawal permission. The accounts to withdraw to and from may never be updated. The fields which may be updated are the withdrawal limit (both amount and asset type may be updated), the withdrawal period length, the remaining number of periods until expiration, and the starting time of the new period. </para>    </briefdescription>
+    <detaileddescription>
+<para>Fee is paid by withdraw_from_account, which is required to authorize this operation </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="3256">
+        <label>graphene::chain::base_operation</label>
+        <link refid="structgraphene_1_1chain_1_1base__operation"/>
+      </node>
+      <node id="3255">
+        <label>graphene::chain::withdraw_permission_update_operation</label>
+        <link refid="structgraphene_1_1chain_1_1withdraw__permission__update__operation"/>
+        <childnode refid="3256" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3259">
+        <label>time_point_sec</label>
+      </node>
+      <node id="3258">
+        <label>graphene::chain::base_operation</label>
+        <link refid="structgraphene_1_1chain_1_1base__operation"/>
+      </node>
+      <node id="3260">
+        <label>graphene::chain::asset</label>
+        <link refid="structgraphene_1_1chain_1_1asset"/>
+        <childnode refid="3261" relation="usage">
+          <edgelabel>amount</edgelabel>
+        </childnode>
+      </node>
+      <node id="3261">
+        <label>safe&lt; int64_t &gt;</label>
+      </node>
+      <node id="3257">
+        <label>graphene::chain::withdraw_permission_update_operation</label>
+        <link refid="structgraphene_1_1chain_1_1withdraw__permission__update__operation"/>
+        <childnode refid="3258" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3259" relation="usage">
+          <edgelabel>period_start_time</edgelabel>
+        </childnode>
+        <childnode refid="3260" relation="usage">
+          <edgelabel>fee</edgelabel>
+          <edgelabel>withdrawal_limit</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" line="83" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/withdraw_permission.hpp" bodystart="82" bodyend="104"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1withdraw__permission__update__operation_1a51f5becfd1577e7ecdd3b37243df50e3" prot="public" virt="non-virtual"><scope>graphene::chain::withdraw_permission_update_operation</scope><name>authorized_account</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a8947f5ff3ea0458c7fe981b5bb9e82b7" prot="public" virt="non-virtual"><scope>graphene::chain::withdraw_permission_update_operation</scope><name>calculate_data_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a18b678eb05bc5b30d75f10b398c07a91" prot="public" virt="non-virtual"><scope>graphene::chain::withdraw_permission_update_operation</scope><name>calculate_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1withdraw__permission__update__operation_1a4abe0228f11d9f83616314560f4bef9b" prot="public" virt="non-virtual"><scope>graphene::chain::withdraw_permission_update_operation</scope><name>fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1withdraw__permission__update__operation_1a90d8728687bec69bd30e8b36ebf0bda4" prot="public" virt="non-virtual"><scope>graphene::chain::withdraw_permission_update_operation</scope><name>fee_payer</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a1d398b2f68e1dca5f453b86655a64c41" prot="public" virt="non-virtual"><scope>graphene::chain::withdraw_permission_update_operation</scope><name>get_required_active_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1ac7e2861a01bbaef8fbe5c5dcf5e73b38" prot="public" virt="non-virtual"><scope>graphene::chain::withdraw_permission_update_operation</scope><name>get_required_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1aff6e2d2b66117c8c87f6a6e7e7ddba1f" prot="public" virt="non-virtual"><scope>graphene::chain::withdraw_permission_update_operation</scope><name>get_required_owner_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1withdraw__permission__update__operation_1add36e0cc3d9e64c83300e638fd23bb26" prot="public" virt="non-virtual"><scope>graphene::chain::withdraw_permission_update_operation</scope><name>period_start_time</name></member>
+      <member refid="structgraphene_1_1chain_1_1withdraw__permission__update__operation_1a4ca4cfdf8d53644e383417259ae45f24" prot="public" virt="non-virtual"><scope>graphene::chain::withdraw_permission_update_operation</scope><name>periods_until_expiration</name></member>
+      <member refid="structgraphene_1_1chain_1_1withdraw__permission__update__operation_1a5f81c6125c22e533c2dbaf3e0602a12c" prot="public" virt="non-virtual"><scope>graphene::chain::withdraw_permission_update_operation</scope><name>permission_to_update</name></member>
+      <member refid="structgraphene_1_1chain_1_1withdraw__permission__update__operation_1a5f106583af3885ba40bcb1b72b97f6ac" prot="public" virt="non-virtual"><scope>graphene::chain::withdraw_permission_update_operation</scope><name>validate</name></member>
+      <member refid="structgraphene_1_1chain_1_1withdraw__permission__update__operation_1a1b6b2af2b8423960f86107703cb3202a" prot="public" virt="non-virtual"><scope>graphene::chain::withdraw_permission_update_operation</scope><name>withdraw_from_account</name></member>
+      <member refid="structgraphene_1_1chain_1_1withdraw__permission__update__operation_1a09901c4ab820bdfbcab782083832a44d" prot="public" virt="non-virtual"><scope>graphene::chain::withdraw_permission_update_operation</scope><name>withdrawal_limit</name></member>
+      <member refid="structgraphene_1_1chain_1_1withdraw__permission__update__operation_1a817fd0b540d3706ee52800ae6486036c" prot="public" virt="non-virtual"><scope>graphene::chain::withdraw_permission_update_operation</scope><name>withdrawal_period_sec</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

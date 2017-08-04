@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1blind__memo" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::blind_memo</compoundname>
+    <includes refid="confidential_8hpp" local="no">confidential.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1blind__memo_1a3e4202fadff177d3e5edd7c358da4d47" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::blind_memo::from</definition>
+        <argsstring></argsstring>
+        <name>from</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/confidential.hpp" line="70" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/confidential.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1blind__memo_1a1e2398f8c9ee8da54047167b70d2e811" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+        <definition>share_type graphene::chain::blind_memo::amount</definition>
+        <argsstring></argsstring>
+        <name>amount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/confidential.hpp" line="71" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/confidential.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1blind__memo_1a143d0d3c6527b89597f19e8d16c0b991" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string graphene::chain::blind_memo::message</definition>
+        <argsstring></argsstring>
+        <name>message</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/confidential.hpp" line="72" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/confidential.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1blind__memo_1a65418992928cb6e3356be9f9c89eb3a8" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t graphene::chain::blind_memo::check</definition>
+        <argsstring></argsstring>
+        <name>check</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>set to the first 4 bytes of the shared secret used to encrypt the memo. Used to verify that decryption was successful. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/confidential.hpp" line="77" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/confidential.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This data is encrypted and stored in the encrypted memo portion of the blind output. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="1161">
+        <label>string</label>
+      </node>
+      <node id="1159">
+        <label>graphene::chain::blind_memo</label>
+        <link refid="structgraphene_1_1chain_1_1blind__memo"/>
+        <childnode refid="1160" relation="usage">
+          <edgelabel>amount</edgelabel>
+        </childnode>
+        <childnode refid="1161" relation="usage">
+          <edgelabel>message</edgelabel>
+        </childnode>
+      </node>
+      <node id="1160">
+        <label>safe&lt; int64_t &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/protocol/confidential.hpp" line="69" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/confidential.hpp" bodystart="68" bodyend="78"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1blind__memo_1a1e2398f8c9ee8da54047167b70d2e811" prot="public" virt="non-virtual"><scope>graphene::chain::blind_memo</scope><name>amount</name></member>
+      <member refid="structgraphene_1_1chain_1_1blind__memo_1a65418992928cb6e3356be9f9c89eb3a8" prot="public" virt="non-virtual"><scope>graphene::chain::blind_memo</scope><name>check</name></member>
+      <member refid="structgraphene_1_1chain_1_1blind__memo_1a3e4202fadff177d3e5edd7c358da4d47" prot="public" virt="non-virtual"><scope>graphene::chain::blind_memo</scope><name>from</name></member>
+      <member refid="structgraphene_1_1chain_1_1blind__memo_1a143d0d3c6527b89597f19e8d16c0b991" prot="public" virt="non-virtual"><scope>graphene::chain::blind_memo</scope><name>message</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

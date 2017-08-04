@@ -1,0 +1,887 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1app_1_1get__impacted__account__visitor" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::app::get_impacted_account_visitor</compoundname>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1a2083128594bd25fba581aba8ff4cdcfe" prot="public" static="no">
+        <type>void</type>
+        <definition>typedef void graphene::app::get_impacted_account_visitor::result_type</definition>
+        <argsstring></argsstring>
+        <name>result_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="38" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1a50330ff830c2e417bcb58f21c298ca30" prot="public" static="no" mutable="no">
+        <type>flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt; &amp;</type>
+        <definition>flat_set&lt;account_id_type&gt;&amp; graphene::app::get_impacted_account_visitor::_impacted</definition>
+        <argsstring></argsstring>
+        <name>_impacted</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="36" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1abbdd19e4ed475d5763d98559d0c56bc4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>graphene::app::get_impacted_account_visitor::get_impacted_account_visitor</definition>
+        <argsstring>(flat_set&lt; account_id_type &gt; &amp;impact)</argsstring>
+        <name>get_impacted_account_visitor</name>
+        <param>
+          <type>flat_set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt; &amp;</type>
+          <declname>impact</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="37" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1a64f35a07509609d67dfc7821e252b47c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const transfer_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1transfer__operation" kindref="compound">transfer_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="40" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="40" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1af5a8474c720d17348576d795d43df40a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const asset_claim_fees_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1asset__claim__fees__operation" kindref="compound">asset_claim_fees_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="45" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1acedeea5693f7b18ad06d6c4e1061c496" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const limit_order_create_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1limit__order__create__operation" kindref="compound">limit_order_create_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="46" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1a114d638e743023d563b0c1c2924c4822" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const limit_order_cancel_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1limit__order__cancel__operation" kindref="compound">limit_order_cancel_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="47" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="47" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1a0dcc71be5c9b6a8b5b255d4a0a3a1054" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const call_order_update_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1call__order__update__operation" kindref="compound">call_order_update_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="51" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1aab993bd1620102fa5746e52924d2c4af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const fill_order_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1fill__order__operation" kindref="compound">fill_order_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="52" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="52" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1a2b1e441b728302dc5f6dca883e09d613" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const account_create_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1account__create__operation" kindref="compound">account_create_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="57" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="57" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1aa96fa29a4158969cdfbc51281e37f8bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const account_update_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1account__update__operation" kindref="compound">account_update_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="65" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="65" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1aa6922b605efb04d4c45bca6a064aa953" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const account_whitelist_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1account__whitelist__operation" kindref="compound">account_whitelist_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="74" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="74" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1af1bc3cdb557e3a4739efb5a94952bb12" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const account_upgrade_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1account__upgrade__operation" kindref="compound">account_upgrade_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="79" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="79" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1a605905468f518a5a79b5b9fbd6c6ab7b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const account_transfer_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1account__transfer__operation" kindref="compound">account_transfer_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="80" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="80" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1a729208c0140f907b8b6895ee76110115" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const asset_create_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1asset__create__operation" kindref="compound">asset_create_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="85" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="85" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1a4ae88e179004515c3ceb783d4e53047f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const asset_update_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1asset__update__operation" kindref="compound">asset_update_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="86" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="86" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1ac25905da86f0b14765724eb09ec309c2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const asset_update_bitasset_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1asset__update__bitasset__operation" kindref="compound">asset_update_bitasset_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="92" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="92" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1a0d6fcdb1c5413440a04a05641da5710b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const asset_update_feed_producers_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1asset__update__feed__producers__operation" kindref="compound">asset_update_feed_producers_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="93" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="93" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1af6ae8b3ba04b93ccfef0f328ffe3b02e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const asset_issue_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1asset__issue__operation" kindref="compound">asset_issue_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="95" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="95" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1a5e82b85f31fbab2ba9965d18afba5bb6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const asset_reserve_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1asset__reserve__operation" kindref="compound">asset_reserve_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="100" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="100" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1a190c37e559e06ba6f6b52bca766e496e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const asset_fund_fee_pool_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1asset__fund__fee__pool__operation" kindref="compound">asset_fund_fee_pool_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="101" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="101" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1a00416721c15f3a335122ed7d96147762" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const asset_settle_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1asset__settle__operation" kindref="compound">asset_settle_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="102" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="102" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1ace239826e7651b2392c63a4dd064d260" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const asset_global_settle_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1asset__global__settle__operation" kindref="compound">asset_global_settle_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="103" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="103" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1aec74845efcdc8d60360a870f284c0938" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const asset_publish_feed_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1asset__publish__feed__operation" kindref="compound">asset_publish_feed_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="104" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="104" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1a5a69a88b2e2233b826546e127f555206" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const witness_create_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1witness__create__operation" kindref="compound">witness_create_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="105" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="105" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1a9e19b95a9a70057fe52a8a919337c491" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const witness_update_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1witness__update__operation" kindref="compound">witness_update_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="109" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="109" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1a3c0fdccd04ce6b371382f9841eb407ce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const proposal_create_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1proposal__create__operation" kindref="compound">proposal_create_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="114" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="114" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1a5893d9ea1aa2763f0e12b38472533598" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const proposal_update_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1proposal__update__operation" kindref="compound">proposal_update_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="123" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="123" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1a0ec63c894c813e0b057587da0787a15a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const proposal_delete_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1proposal__delete__operation" kindref="compound">proposal_delete_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="124" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="124" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1ac739ae2277a8e865b8a51dd4cfa15019" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const withdraw_permission_create_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1withdraw__permission__create__operation" kindref="compound">withdraw_permission_create_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="126" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="126" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1ad7bd9f86e39a13c2bd009248daaa82bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const withdraw_permission_update_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1withdraw__permission__update__operation" kindref="compound">withdraw_permission_update_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="131" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="131" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1afd63bbf1cf5922165cc1dbfa30be5558" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const withdraw_permission_claim_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1withdraw__permission__claim__operation" kindref="compound">withdraw_permission_claim_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="136" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="136" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1a8b8c61e6f0492637a558f65f06ba71b1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const withdraw_permission_delete_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1withdraw__permission__delete__operation" kindref="compound">withdraw_permission_delete_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="141" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="141" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1ae2adb6042c590aaf9250a9d9f69ea1f5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const committee_member_create_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1committee__member__create__operation" kindref="compound">committee_member_create_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="146" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="146" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1a9fe6c16e4f918ad5778d9f1c48a2faa6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const committee_member_update_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1committee__member__update__operation" kindref="compound">committee_member_update_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="150" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="150" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1a3e493e0349a20a77d4154517d63596fa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const committee_member_update_global_parameters_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1committee__member__update__global__parameters__operation" kindref="compound">committee_member_update_global_parameters_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="154" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="154" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1abd30af3ef6a44cc5ee343757b1bece33" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const vesting_balance_create_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1vesting__balance__create__operation" kindref="compound">vesting_balance_create_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="156" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="156" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1ae9e7db4bbd04ec6c0451db8900382348" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const vesting_balance_withdraw_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1vesting__balance__withdraw__operation" kindref="compound">vesting_balance_withdraw_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="161" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="161" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1aacb5c18acdb72d347b98a60004e27884" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const worker_create_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1worker__create__operation" kindref="compound">worker_create_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="162" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="162" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1aa8fe0b0f77189ead652e88d2d9a536fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const custom_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1custom__operation" kindref="compound">custom_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="163" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="163" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1a6f4b149dd0ab9ce7c2bdc02654a51677" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const assert_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1assert__operation" kindref="compound">assert_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="164" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="164" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1aca0715ab7cd516432a9d32b1422eb873" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const balance_claim_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1balance__claim__operation" kindref="compound">balance_claim_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="165" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="165" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1adcb5cf48849ddca29844948f519e66b9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const override_transfer_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1override__transfer__operation" kindref="compound">override_transfer_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="167" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="167" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1aa71c8290c64ed6156cb9e32c2c42c874" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const transfer_to_blind_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1transfer__to__blind__operation" kindref="compound">transfer_to_blind_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="174" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="174" bodyend="179"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1ad25396bc29148007eb0fc87451e2cec1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const blind_transfer_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1blind__transfer__operation" kindref="compound">blind_transfer_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="181" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="181" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1a0ad86f120bf0bf9ed2ed0c44822078de" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const transfer_from_blind_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1transfer__from__blind__operation" kindref="compound">transfer_from_blind_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="189" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="189" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1a563dbd08eca476d6c8458dd21ba4f0c6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const asset_settle_cancel_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1asset__settle__cancel__operation" kindref="compound">asset_settle_cancel_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="196" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="196" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1app_1_1get__impacted__account__visitor_1a8f5a40cdf82786a228128c3dc9c51476" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::app::get_impacted_account_visitor::operator()</definition>
+        <argsstring>(const fba_distribute_operation &amp;op)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1fba__distribute__operation" kindref="compound">fba_distribute_operation</ref> &amp;</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/app/impacted.cpp" line="201" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="201" bodyend="204"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1991">
+        <label>graphene::app::get_impacted_account_visitor</label>
+        <link refid="structgraphene_1_1app_1_1get__impacted__account__visitor"/>
+        <childnode refid="1992" relation="usage">
+          <edgelabel>_impacted</edgelabel>
+        </childnode>
+      </node>
+      <node id="1992">
+        <label>flat_set&lt; account_id_type &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/app/impacted.cpp" line="35" column="1" bodyfile="libraries/app/impacted.cpp" bodystart="34" bodyend="206"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1a50330ff830c2e417bcb58f21c298ca30" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>_impacted</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1abbdd19e4ed475d5763d98559d0c56bc4" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>get_impacted_account_visitor</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1a64f35a07509609d67dfc7821e252b47c" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1af5a8474c720d17348576d795d43df40a" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1acedeea5693f7b18ad06d6c4e1061c496" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1a114d638e743023d563b0c1c2924c4822" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1a0dcc71be5c9b6a8b5b255d4a0a3a1054" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1aab993bd1620102fa5746e52924d2c4af" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1a2b1e441b728302dc5f6dca883e09d613" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1aa96fa29a4158969cdfbc51281e37f8bb" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1aa6922b605efb04d4c45bca6a064aa953" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1af1bc3cdb557e3a4739efb5a94952bb12" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1a605905468f518a5a79b5b9fbd6c6ab7b" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1a729208c0140f907b8b6895ee76110115" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1a4ae88e179004515c3ceb783d4e53047f" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1ac25905da86f0b14765724eb09ec309c2" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1a0d6fcdb1c5413440a04a05641da5710b" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1af6ae8b3ba04b93ccfef0f328ffe3b02e" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1a5e82b85f31fbab2ba9965d18afba5bb6" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1a190c37e559e06ba6f6b52bca766e496e" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1a00416721c15f3a335122ed7d96147762" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1ace239826e7651b2392c63a4dd064d260" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1aec74845efcdc8d60360a870f284c0938" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1a5a69a88b2e2233b826546e127f555206" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1a9e19b95a9a70057fe52a8a919337c491" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1a3c0fdccd04ce6b371382f9841eb407ce" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1a5893d9ea1aa2763f0e12b38472533598" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1a0ec63c894c813e0b057587da0787a15a" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1ac739ae2277a8e865b8a51dd4cfa15019" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1ad7bd9f86e39a13c2bd009248daaa82bb" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1afd63bbf1cf5922165cc1dbfa30be5558" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1a8b8c61e6f0492637a558f65f06ba71b1" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1ae2adb6042c590aaf9250a9d9f69ea1f5" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1a9fe6c16e4f918ad5778d9f1c48a2faa6" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1a3e493e0349a20a77d4154517d63596fa" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1abd30af3ef6a44cc5ee343757b1bece33" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1ae9e7db4bbd04ec6c0451db8900382348" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1aacb5c18acdb72d347b98a60004e27884" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1aa8fe0b0f77189ead652e88d2d9a536fb" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1a6f4b149dd0ab9ce7c2bdc02654a51677" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1aca0715ab7cd516432a9d32b1422eb873" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1adcb5cf48849ddca29844948f519e66b9" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1aa71c8290c64ed6156cb9e32c2c42c874" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1ad25396bc29148007eb0fc87451e2cec1" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1a0ad86f120bf0bf9ed2ed0c44822078de" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1a563dbd08eca476d6c8458dd21ba4f0c6" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1a8f5a40cdf82786a228128c3dc9c51476" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>operator()</name></member>
+      <member refid="structgraphene_1_1app_1_1get__impacted__account__visitor_1a2083128594bd25fba581aba8ff4cdcfe" prot="public" virt="non-virtual"><scope>graphene::app::get_impacted_account_visitor</scope><name>result_type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

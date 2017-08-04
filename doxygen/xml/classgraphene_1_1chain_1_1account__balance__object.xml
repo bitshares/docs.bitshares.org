@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgraphene_1_1chain_1_1account__balance__object" kind="class" language="C++" prot="public">
+    <compoundname>graphene::chain::account_balance_object</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">graphene::db::abstract_object&lt; account_balance_object &gt;</basecompoundref>
+    <includes refid="account__object_8hpp" local="no">account_object.hpp</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__balance__object_1a1afbff7a0e078ff30120a6f1aa64a0dd" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t graphene::chain::account_balance_object::space_id</definition>
+        <argsstring></argsstring>
+        <name>space_id</name>
+        <initializer>= <ref refid="namespacegraphene_1_1chain_1a92e55d4242187696c5e2c5eaafbd9400a81f35c04f1d3f3109dacaa6f2bef33c7" kindref="member">implementation_ids</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="104" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__balance__object_1ac5d3dbf858f294f1d76090fa66a8df16" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t graphene::chain::account_balance_object::type_id</definition>
+        <argsstring></argsstring>
+        <name>type_id</name>
+        <initializer>= <ref refid="namespacegraphene_1_1chain_1ad3bef2f100b722a6c30fada38f6dcd73a2bc50158441fc95b231f9d1d2f9b6c89" kindref="member">impl_account_balance_object_type</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="105" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__balance__object_1a924cc4b7671eaca7c3318284d3ea2fa0" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::account_balance_object::owner</definition>
+        <argsstring></argsstring>
+        <name>owner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="107" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__balance__object_1a088eddd05089d6e86ffdfbca30618ffa" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a8719a403aa47e9d369890c01d60d0bb2" kindref="member">asset_id_type</ref></type>
+        <definition>asset_id_type graphene::chain::account_balance_object::asset_type</definition>
+        <argsstring></argsstring>
+        <name>asset_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="108" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__balance__object_1aa3541b73c253bcd3d8c85a638846db8f" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+        <definition>share_type graphene::chain::account_balance_object::balance</definition>
+        <argsstring></argsstring>
+        <name>balance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="109" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1account__balance__object_1a0ea12b5224e14a978bb3f5a81161646c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::account_balance_object::get_balance</definition>
+        <argsstring>() const</argsstring>
+        <name>get_balance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="111" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="111" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1account__balance__object_1a6e5861b4393b52bc3cc395042730627c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::account_balance_object::adjust_balance</definition>
+        <argsstring>(const asset &amp;delta)</argsstring>
+        <name>adjust_balance</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref> &amp;</type>
+          <declname>delta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="112" column="1" bodyfile="libraries/chain/account_object.cpp" bodystart="45" bodyend="49"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Tracks the balance of a single account/asset pair</para><para>This object is indexed on owner and asset_type so that black swan events in asset_type can be processed quickly. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="7">
+        <label>graphene::chain::account_balance_object</label>
+        <link refid="classgraphene_1_1chain_1_1account__balance__object"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>graphene::db::abstract_object&lt; account_balance_object &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="9">
+        <label>graphene::chain::account_balance_object</label>
+        <link refid="classgraphene_1_1chain_1_1account__balance__object"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>balance</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>safe&lt; int64_t &gt;</label>
+      </node>
+      <node id="10">
+        <label>graphene::db::abstract_object&lt; account_balance_object &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="102" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="101" bodyend="113"/>
+    <listofallmembers>
+      <member refid="classgraphene_1_1chain_1_1account__balance__object_1a6e5861b4393b52bc3cc395042730627c" prot="public" virt="non-virtual"><scope>graphene::chain::account_balance_object</scope><name>adjust_balance</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__balance__object_1a088eddd05089d6e86ffdfbca30618ffa" prot="public" virt="non-virtual"><scope>graphene::chain::account_balance_object</scope><name>asset_type</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__balance__object_1aa3541b73c253bcd3d8c85a638846db8f" prot="public" virt="non-virtual"><scope>graphene::chain::account_balance_object</scope><name>balance</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__balance__object_1a0ea12b5224e14a978bb3f5a81161646c" prot="public" virt="non-virtual"><scope>graphene::chain::account_balance_object</scope><name>get_balance</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__balance__object_1a924cc4b7671eaca7c3318284d3ea2fa0" prot="public" virt="non-virtual"><scope>graphene::chain::account_balance_object</scope><name>owner</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__balance__object_1a1afbff7a0e078ff30120a6f1aa64a0dd" prot="public" virt="non-virtual"><scope>graphene::chain::account_balance_object</scope><name>space_id</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__balance__object_1ac5d3dbf858f294f1d76090fa66a8df16" prot="public" virt="non-virtual"><scope>graphene::chain::account_balance_object</scope><name>type_id</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

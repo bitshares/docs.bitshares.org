@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1memo__data" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::memo_data</compoundname>
+    <includes refid="memo_8hpp" local="no">memo.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1memo__data_1aac0b2a2bb5c1274c8f4fa5a68ecca274" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref></type>
+        <definition>public_key_type graphene::chain::memo_data::from</definition>
+        <argsstring></argsstring>
+        <name>from</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/memo.hpp" line="42" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/memo.hpp" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1memo__data_1afe8746b214210df8f7700cf1a77f13e7" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1public__key__type" kindref="compound">public_key_type</ref></type>
+        <definition>public_key_type graphene::chain::memo_data::to</definition>
+        <argsstring></argsstring>
+        <name>to</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/memo.hpp" line="43" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/memo.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1memo__data_1a1e40b2e79b9df723ac358b141a19b368" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t graphene::chain::memo_data::nonce</definition>
+        <argsstring></argsstring>
+        <name>nonce</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>64 bit nonce format: [ 8 bits | 56 bits ] [ entropy | timestamp ] Timestamp is number of microseconds since the epoch Entropy is a byte taken from the hash of a new private key</para><para>This format is not mandated or verified; it is chosen to ensure uniqueness of key-IV pairs only. This should be unique with high probability as long as the generating host has a high-resolution clock OR a strong source of entropy for generating private keys. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/memo.hpp" line="55" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/memo.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1memo__data_1aba65cbdcd53042a37286fcf704cbc24b" prot="public" static="no" mutable="no">
+        <type>vector&lt; char &gt;</type>
+        <definition>vector&lt;char&gt; graphene::chain::memo_data::message</definition>
+        <argsstring></argsstring>
+        <name>message</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This field contains the AES encrypted packed <ref refid="structgraphene_1_1chain_1_1memo__message" kindref="compound">memo_message</ref> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/memo.hpp" line="59" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/memo.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1memo__data_1a0565f23102fd1c54f553178dcd6cf64b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::memo_data::set_message</definition>
+        <argsstring>(const fc::ecc::private_key &amp;priv, const fc::ecc::public_key &amp;pub, const string &amp;msg, uint64_t custom_nonce=0)</argsstring>
+        <name>set_message</name>
+        <param>
+          <type>const fc::ecc::private_key &amp;</type>
+          <declname>priv</declname>
+        </param>
+        <param>
+          <type>const fc::ecc::public_key &amp;</type>
+          <declname>pub</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <declname>custom_nonce</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>custom_nonce is for debugging only; do not set to a nonzero value in production </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/memo.hpp" line="62" column="1" bodyfile="libraries/chain/protocol/memo.cpp" bodystart="29" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1memo__data_1a81684d1f3797cc7a25ebf45f71fb9de9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>string graphene::chain::memo_data::get_message</definition>
+        <argsstring>(const fc::ecc::private_key &amp;priv, const fc::ecc::public_key &amp;pub) const</argsstring>
+        <name>get_message</name>
+        <param>
+          <type>const fc::ecc::private_key &amp;</type>
+          <declname>priv</declname>
+        </param>
+        <param>
+          <type>const fc::ecc::public_key &amp;</type>
+          <declname>pub</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/memo.hpp" line="65" column="1" bodyfile="libraries/chain/protocol/memo.cpp" bodystart="56" bodyend="72"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>defines the keys used to derive the shared secret </para>    </briefdescription>
+    <detaileddescription>
+<para>Because account authorities and keys can change at any time, each memo must capture the specific keys used to derive the shared secret. In order to read the cipher message you will need one of the two private keys.</para><para>If <ref refid="structgraphene_1_1chain_1_1memo__data_1aac0b2a2bb5c1274c8f4fa5a68ecca274" kindref="member">from</ref> == <ref refid="structgraphene_1_1chain_1_1memo__data_1afe8746b214210df8f7700cf1a77f13e7" kindref="member">to</ref> and <ref refid="structgraphene_1_1chain_1_1memo__data_1aac0b2a2bb5c1274c8f4fa5a68ecca274" kindref="member">from</ref> == 0 then no encryption is used, the memo is public. If <ref refid="structgraphene_1_1chain_1_1memo__data_1aac0b2a2bb5c1274c8f4fa5a68ecca274" kindref="member">from</ref> == <ref refid="structgraphene_1_1chain_1_1memo__data_1afe8746b214210df8f7700cf1a77f13e7" kindref="member">to</ref> and <ref refid="structgraphene_1_1chain_1_1memo__data_1aac0b2a2bb5c1274c8f4fa5a68ecca274" kindref="member">from</ref> != 0 then invalid memo data </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="2221">
+        <label>vector&lt; char &gt;</label>
+      </node>
+      <node id="2222">
+        <label>graphene::chain::public_key_type</label>
+        <link refid="structgraphene_1_1chain_1_1public__key__type"/>
+      </node>
+      <node id="2220">
+        <label>graphene::chain::memo_data</label>
+        <link refid="structgraphene_1_1chain_1_1memo__data"/>
+        <childnode refid="2221" relation="usage">
+          <edgelabel>message</edgelabel>
+        </childnode>
+        <childnode refid="2222" relation="usage">
+          <edgelabel>from</edgelabel>
+          <edgelabel>to</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/protocol/memo.hpp" line="41" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/memo.hpp" bodystart="40" bodyend="67"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1memo__data_1aac0b2a2bb5c1274c8f4fa5a68ecca274" prot="public" virt="non-virtual"><scope>graphene::chain::memo_data</scope><name>from</name></member>
+      <member refid="structgraphene_1_1chain_1_1memo__data_1a81684d1f3797cc7a25ebf45f71fb9de9" prot="public" virt="non-virtual"><scope>graphene::chain::memo_data</scope><name>get_message</name></member>
+      <member refid="structgraphene_1_1chain_1_1memo__data_1aba65cbdcd53042a37286fcf704cbc24b" prot="public" virt="non-virtual"><scope>graphene::chain::memo_data</scope><name>message</name></member>
+      <member refid="structgraphene_1_1chain_1_1memo__data_1a1e40b2e79b9df723ac358b141a19b368" prot="public" virt="non-virtual"><scope>graphene::chain::memo_data</scope><name>nonce</name></member>
+      <member refid="structgraphene_1_1chain_1_1memo__data_1a0565f23102fd1c54f553178dcd6cf64b" prot="public" virt="non-virtual"><scope>graphene::chain::memo_data</scope><name>set_message</name></member>
+      <member refid="structgraphene_1_1chain_1_1memo__data_1afe8746b214210df8f7700cf1a77f13e7" prot="public" virt="non-virtual"><scope>graphene::chain::memo_data</scope><name>to</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

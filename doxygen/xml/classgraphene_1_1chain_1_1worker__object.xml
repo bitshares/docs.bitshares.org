@@ -1,0 +1,295 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgraphene_1_1chain_1_1worker__object" kind="class" language="C++" prot="public">
+    <compoundname>graphene::chain::worker_object</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">graphene::db::abstract_object&lt; worker_object &gt;</basecompoundref>
+    <includes refid="worker__object_8hpp" local="no">worker_object.hpp</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1worker__object_1a42487999635d7eaaabed8c4ba501dd01" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t graphene::chain::worker_object::space_id</definition>
+        <argsstring></argsstring>
+        <name>space_id</name>
+        <initializer>= <ref refid="namespacegraphene_1_1chain_1a92e55d4242187696c5e2c5eaafbd9400a9dadbbe526b5096091138116c13d612d" kindref="member">protocol_ids</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/worker_object.hpp" line="108" column="1" bodyfile="libraries/chain/include/graphene/chain/worker_object.hpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1worker__object_1a4defb57c4917c3391521a5e5b51fa861" prot="public" static="yes" mutable="no">
+        <type>const uint8_t</type>
+        <definition>const uint8_t graphene::chain::worker_object::type_id</definition>
+        <argsstring></argsstring>
+        <name>type_id</name>
+        <initializer>=  <ref refid="namespacegraphene_1_1chain_1aa6e32c79e2b22c998deddedcb696633da139435e4b7046de50fa6d55bc73676d6" kindref="member">worker_object_type</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/worker_object.hpp" line="109" column="1" bodyfile="libraries/chain/include/graphene/chain/worker_object.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1worker__object_1a8f85a7277840f8966a8f93b634b7d08d" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::worker_object::worker_account</definition>
+        <argsstring></argsstring>
+        <name>worker_account</name>
+        <briefdescription>
+<para>ID of the account which owns this worker. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/worker_object.hpp" line="112" column="1" bodyfile="libraries/chain/include/graphene/chain/worker_object.hpp" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1worker__object_1af9fe70637086fdf01697d083f834d417" prot="public" static="no" mutable="no">
+        <type>time_point_sec</type>
+        <definition>time_point_sec graphene::chain::worker_object::work_begin_date</definition>
+        <argsstring></argsstring>
+        <name>work_begin_date</name>
+        <briefdescription>
+<para>Time at which this worker begins receiving pay, if elected. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/worker_object.hpp" line="114" column="1" bodyfile="libraries/chain/include/graphene/chain/worker_object.hpp" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1worker__object_1a7adef03c9c161025de19148e1a1c2938" prot="public" static="no" mutable="no">
+        <type>time_point_sec</type>
+        <definition>time_point_sec graphene::chain::worker_object::work_end_date</definition>
+        <argsstring></argsstring>
+        <name>work_end_date</name>
+        <briefdescription>
+<para>Time at which this worker will cease to receive pay. Worker will be deleted at this time. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/worker_object.hpp" line="116" column="1" bodyfile="libraries/chain/include/graphene/chain/worker_object.hpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1worker__object_1a6c2d8d4a16fe45f978a591a31aa8f848" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+        <definition>share_type graphene::chain::worker_object::daily_pay</definition>
+        <argsstring></argsstring>
+        <name>daily_pay</name>
+        <briefdescription>
+<para>Amount in CORE this worker will be paid each day. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/worker_object.hpp" line="118" column="1" bodyfile="libraries/chain/include/graphene/chain/worker_object.hpp" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1worker__object_1a815d5e45c913b5cfbfa159603d884aae" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1aff2faab1253f21209aaad5771fdda38c" kindref="member">worker_type</ref></type>
+        <definition>worker_type graphene::chain::worker_object::worker</definition>
+        <argsstring></argsstring>
+        <name>worker</name>
+        <briefdescription>
+<para>ID of this worker&apos;s pay balance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/worker_object.hpp" line="120" column="1" bodyfile="libraries/chain/include/graphene/chain/worker_object.hpp" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1worker__object_1aff3a79340947f2e2e448c3af578efe04" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string graphene::chain::worker_object::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+<para>Human-readable name for the worker. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/worker_object.hpp" line="122" column="1" bodyfile="libraries/chain/include/graphene/chain/worker_object.hpp" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1worker__object_1a6f136834f2437b86bf241f275a7cb47b" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string graphene::chain::worker_object::url</definition>
+        <argsstring></argsstring>
+        <name>url</name>
+        <briefdescription>
+<para>URL to a web page representing this worker. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/worker_object.hpp" line="124" column="1" bodyfile="libraries/chain/include/graphene/chain/worker_object.hpp" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1worker__object_1a59fe30f86eb264a837de20f7060139fe" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1vote__id__type" kindref="compound">vote_id_type</ref></type>
+        <definition>vote_id_type graphene::chain::worker_object::vote_for</definition>
+        <argsstring></argsstring>
+        <name>vote_for</name>
+        <briefdescription>
+<para>Voting ID which represents approval of this worker. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/worker_object.hpp" line="127" column="1" bodyfile="libraries/chain/include/graphene/chain/worker_object.hpp" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1worker__object_1a04502ac21107ce051c9d4eac2417061a" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1vote__id__type" kindref="compound">vote_id_type</ref></type>
+        <definition>vote_id_type graphene::chain::worker_object::vote_against</definition>
+        <argsstring></argsstring>
+        <name>vote_against</name>
+        <briefdescription>
+<para>Voting ID which represents disapproval of this worker. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/worker_object.hpp" line="129" column="1" bodyfile="libraries/chain/include/graphene/chain/worker_object.hpp" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1worker__object_1af50e00a4516cbb8b9e991e2316ffba34" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t graphene::chain::worker_object::total_votes_for</definition>
+        <argsstring></argsstring>
+        <name>total_votes_for</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/worker_object.hpp" line="131" column="1" bodyfile="libraries/chain/include/graphene/chain/worker_object.hpp" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1worker__object_1af2f0ec3093c6cbd178f660304290fb09" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t graphene::chain::worker_object::total_votes_against</definition>
+        <argsstring></argsstring>
+        <name>total_votes_against</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/worker_object.hpp" line="132" column="1" bodyfile="libraries/chain/include/graphene/chain/worker_object.hpp" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1worker__object_1ae8ad74d11c51f78619a015013ce79907" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::worker_object::is_active</definition>
+        <argsstring>(fc::time_point_sec now) const</argsstring>
+        <name>is_active</name>
+        <param>
+          <type>fc::time_point_sec</type>
+          <declname>now</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/worker_object.hpp" line="134" column="1" bodyfile="libraries/chain/include/graphene/chain/worker_object.hpp" bodystart="134" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1worker__object_1a689234470f9ed7dab3b402e1c7e35cbe" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1ab4bea4aef5fe40c66b42537da931bffe" kindref="member">share_type</ref></type>
+        <definition>share_type graphene::chain::worker_object::approving_stake</definition>
+        <argsstring>() const</argsstring>
+        <name>approving_stake</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/worker_object.hpp" line="138" column="1" bodyfile="libraries/chain/include/graphene/chain/worker_object.hpp" bodystart="138" bodyend="140"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Worker object contains the details of a blockchain worker. See <ref refid="group__workers" kindref="compound">The Blockchain Worker System</ref> for details. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3444">
+        <label>graphene::db::abstract_object&lt; worker_object &gt;</label>
+      </node>
+      <node id="3443">
+        <label>graphene::chain::worker_object</label>
+        <link refid="classgraphene_1_1chain_1_1worker__object"/>
+        <childnode refid="3444" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3447">
+        <label>static_variant&lt; refund_worker_type, vesting_balance_worker_type, burn_worker_type &gt;</label>
+      </node>
+      <node id="3449">
+        <label>time_point_sec</label>
+      </node>
+      <node id="3451">
+        <label>string</label>
+      </node>
+      <node id="3448">
+        <label>graphene::chain::vote_id_type</label>
+        <link refid="structgraphene_1_1chain_1_1vote__id__type"/>
+      </node>
+      <node id="3446">
+        <label>graphene::db::abstract_object&lt; worker_object &gt;</label>
+      </node>
+      <node id="3450">
+        <label>safe&lt; int64_t &gt;</label>
+      </node>
+      <node id="3445">
+        <label>graphene::chain::worker_object</label>
+        <link refid="classgraphene_1_1chain_1_1worker__object"/>
+        <childnode refid="3446" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3447" relation="usage">
+          <edgelabel>worker</edgelabel>
+        </childnode>
+        <childnode refid="3448" relation="usage">
+          <edgelabel>vote_for</edgelabel>
+          <edgelabel>vote_against</edgelabel>
+        </childnode>
+        <childnode refid="3449" relation="usage">
+          <edgelabel>work_end_date</edgelabel>
+          <edgelabel>work_begin_date</edgelabel>
+        </childnode>
+        <childnode refid="3450" relation="usage">
+          <edgelabel>daily_pay</edgelabel>
+        </childnode>
+        <childnode refid="3451" relation="usage">
+          <edgelabel>url</edgelabel>
+          <edgelabel>name</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/worker_object.hpp" line="106" column="1" bodyfile="libraries/chain/include/graphene/chain/worker_object.hpp" bodystart="105" bodyend="141"/>
+    <listofallmembers>
+      <member refid="classgraphene_1_1chain_1_1worker__object_1a689234470f9ed7dab3b402e1c7e35cbe" prot="public" virt="non-virtual"><scope>graphene::chain::worker_object</scope><name>approving_stake</name></member>
+      <member refid="classgraphene_1_1chain_1_1worker__object_1a6c2d8d4a16fe45f978a591a31aa8f848" prot="public" virt="non-virtual"><scope>graphene::chain::worker_object</scope><name>daily_pay</name></member>
+      <member refid="classgraphene_1_1chain_1_1worker__object_1ae8ad74d11c51f78619a015013ce79907" prot="public" virt="non-virtual"><scope>graphene::chain::worker_object</scope><name>is_active</name></member>
+      <member refid="classgraphene_1_1chain_1_1worker__object_1aff3a79340947f2e2e448c3af578efe04" prot="public" virt="non-virtual"><scope>graphene::chain::worker_object</scope><name>name</name></member>
+      <member refid="classgraphene_1_1chain_1_1worker__object_1a42487999635d7eaaabed8c4ba501dd01" prot="public" virt="non-virtual"><scope>graphene::chain::worker_object</scope><name>space_id</name></member>
+      <member refid="classgraphene_1_1chain_1_1worker__object_1af2f0ec3093c6cbd178f660304290fb09" prot="public" virt="non-virtual"><scope>graphene::chain::worker_object</scope><name>total_votes_against</name></member>
+      <member refid="classgraphene_1_1chain_1_1worker__object_1af50e00a4516cbb8b9e991e2316ffba34" prot="public" virt="non-virtual"><scope>graphene::chain::worker_object</scope><name>total_votes_for</name></member>
+      <member refid="classgraphene_1_1chain_1_1worker__object_1a4defb57c4917c3391521a5e5b51fa861" prot="public" virt="non-virtual"><scope>graphene::chain::worker_object</scope><name>type_id</name></member>
+      <member refid="classgraphene_1_1chain_1_1worker__object_1a6f136834f2437b86bf241f275a7cb47b" prot="public" virt="non-virtual"><scope>graphene::chain::worker_object</scope><name>url</name></member>
+      <member refid="classgraphene_1_1chain_1_1worker__object_1a04502ac21107ce051c9d4eac2417061a" prot="public" virt="non-virtual"><scope>graphene::chain::worker_object</scope><name>vote_against</name></member>
+      <member refid="classgraphene_1_1chain_1_1worker__object_1a59fe30f86eb264a837de20f7060139fe" prot="public" virt="non-virtual"><scope>graphene::chain::worker_object</scope><name>vote_for</name></member>
+      <member refid="classgraphene_1_1chain_1_1worker__object_1af9fe70637086fdf01697d083f834d417" prot="public" virt="non-virtual"><scope>graphene::chain::worker_object</scope><name>work_begin_date</name></member>
+      <member refid="classgraphene_1_1chain_1_1worker__object_1a7adef03c9c161025de19148e1a1c2938" prot="public" virt="non-virtual"><scope>graphene::chain::worker_object</scope><name>work_end_date</name></member>
+      <member refid="classgraphene_1_1chain_1_1worker__object_1a815d5e45c913b5cfbfa159603d884aae" prot="public" virt="non-virtual"><scope>graphene::chain::worker_object</scope><name>worker</name></member>
+      <member refid="classgraphene_1_1chain_1_1worker__object_1a8f85a7277840f8966a8f93b634b7d08d" prot="public" virt="non-virtual"><scope>graphene::chain::worker_object</scope><name>worker_account</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

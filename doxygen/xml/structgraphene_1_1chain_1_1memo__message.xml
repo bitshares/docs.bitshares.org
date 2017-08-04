@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1memo__message" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::memo_message</compoundname>
+    <includes refid="memo_8hpp" local="no">memo.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1memo__message_1a23e19a3fde1940646c63a8661c48eadb" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t graphene::chain::memo_message::checksum</definition>
+        <argsstring></argsstring>
+        <name>checksum</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/memo.hpp" line="81" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/memo.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1memo__message_1a84296c270f6bc34c99d0fe0d7e3ecca0" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string graphene::chain::memo_message::text</definition>
+        <argsstring></argsstring>
+        <name>text</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/memo.hpp" line="82" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/memo.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1memo__message_1a74c55825dc24d8a5b2a3d3624aef1fff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>graphene::chain::memo_message::memo_message</definition>
+        <argsstring>()</argsstring>
+        <name>memo_message</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/memo.hpp" line="77" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/memo.hpp" bodystart="77" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1memo__message_1ad87f8f582d157802585698a2c16c4587" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>graphene::chain::memo_message::memo_message</definition>
+        <argsstring>(uint32_t checksum, const std::string &amp;text)</argsstring>
+        <name>memo_message</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>checksum</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/memo.hpp" line="78" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/memo.hpp" bodystart="78" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1memo__message_1a709754077dbd6a47fda2b20329ae5400" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string graphene::chain::memo_message::serialize</definition>
+        <argsstring>() const</argsstring>
+        <name>serialize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/memo.hpp" line="84" column="1" bodyfile="libraries/chain/protocol/memo.cpp" bodystart="74" bodyend="79"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1memo__message_1a86c3f7bdcefdd7e06299c9c55675c0f1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1memo__message" kindref="compound">memo_message</ref></type>
+        <definition>memo_message graphene::chain::memo_message::deserialize</definition>
+        <argsstring>(const string &amp;serial)</argsstring>
+        <name>deserialize</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>serial</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/memo.hpp" line="85" column="1" bodyfile="libraries/chain/protocol/memo.cpp" bodystart="81" bodyend="88"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>defines a message and checksum to enable validation of successful decryption </para>    </briefdescription>
+    <detaileddescription>
+<para>When encrypting/decrypting a checksum is required to determine whether or not decryption was successful. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="2225">
+        <label>string</label>
+      </node>
+      <node id="2224">
+        <label>graphene::chain::memo_message</label>
+        <link refid="structgraphene_1_1chain_1_1memo__message"/>
+        <childnode refid="2225" relation="usage">
+          <edgelabel>text</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/protocol/memo.hpp" line="76" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/memo.hpp" bodystart="75" bodyend="86"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1memo__message_1a23e19a3fde1940646c63a8661c48eadb" prot="public" virt="non-virtual"><scope>graphene::chain::memo_message</scope><name>checksum</name></member>
+      <member refid="structgraphene_1_1chain_1_1memo__message_1a86c3f7bdcefdd7e06299c9c55675c0f1" prot="public" virt="non-virtual"><scope>graphene::chain::memo_message</scope><name>deserialize</name></member>
+      <member refid="structgraphene_1_1chain_1_1memo__message_1a74c55825dc24d8a5b2a3d3624aef1fff" prot="public" virt="non-virtual"><scope>graphene::chain::memo_message</scope><name>memo_message</name></member>
+      <member refid="structgraphene_1_1chain_1_1memo__message_1ad87f8f582d157802585698a2c16c4587" prot="public" virt="non-virtual"><scope>graphene::chain::memo_message</scope><name>memo_message</name></member>
+      <member refid="structgraphene_1_1chain_1_1memo__message_1a709754077dbd6a47fda2b20329ae5400" prot="public" virt="non-virtual"><scope>graphene::chain::memo_message</scope><name>serialize</name></member>
+      <member refid="structgraphene_1_1chain_1_1memo__message_1a84296c270f6bc34c99d0fe0d7e3ecca0" prot="public" virt="non-virtual"><scope>graphene::chain::memo_message</scope><name>text</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,216 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1account__whitelist__operation" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::account_whitelist_operation</compoundname>
+    <basecompoundref refid="structgraphene_1_1chain_1_1base__operation" prot="public" virt="non-virtual">graphene::chain::base_operation</basecompoundref>
+    <includes refid="account_8hpp" local="no">account.hpp</includes>
+    <innerclass refid="structgraphene_1_1chain_1_1account__whitelist__operation_1_1fee__parameters__type" prot="public">graphene::chain::account_whitelist_operation::fee_parameters_type</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="structgraphene_1_1chain_1_1account__whitelist__operation_1abba3d110e073c52309b894c4342fc660" prot="public" static="no">
+        <name>account_listing</name>
+        <enumvalue id="structgraphene_1_1chain_1_1account__whitelist__operation_1abba3d110e073c52309b894c4342fc660a5784b62ddb2021fb6f337578f714ef3e" prot="public">
+          <name>no_listing</name>
+          <initializer>= 0x0</initializer>
+          <briefdescription>
+<para>No opinion is specified about this account. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structgraphene_1_1chain_1_1account__whitelist__operation_1abba3d110e073c52309b894c4342fc660a57b41bd3f476a766dd10d0c83accb2fa" prot="public">
+          <name>white_listed</name>
+          <initializer>= 0x1</initializer>
+          <briefdescription>
+<para>This account is whitelisted, but not blacklisted. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structgraphene_1_1chain_1_1account__whitelist__operation_1abba3d110e073c52309b894c4342fc660a52535472688741b32b3e8bc05ec61e73" prot="public">
+          <name>black_listed</name>
+          <initializer>= 0x2</initializer>
+          <briefdescription>
+<para>This account is blacklisted, but not whitelisted. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="structgraphene_1_1chain_1_1account__whitelist__operation_1abba3d110e073c52309b894c4342fc660a8a0156a219f322cde14c69b0f9748515" prot="public">
+          <name>white_and_black_listed</name>
+          <initializer>= white_listed | black_listed</initializer>
+          <briefdescription>
+<para>This account is both whitelisted and blacklisted. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/account.hpp" line="184" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/account.hpp" bodystart="184" bodyend="189"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1account__whitelist__operation_1ae0138f9baaa942b3a37f62ee7908fc55" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::account_whitelist_operation::fee</definition>
+        <argsstring></argsstring>
+        <name>fee</name>
+        <briefdescription>
+<para>Paid by authorizing_account. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/account.hpp" line="192" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/account.hpp" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1account__whitelist__operation_1aa301716fcb544bc3db3844687fc31fcc" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::account_whitelist_operation::authorizing_account</definition>
+        <argsstring></argsstring>
+        <name>authorizing_account</name>
+        <briefdescription>
+<para>The account which is specifying an opinion of another account. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/account.hpp" line="194" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/account.hpp" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1account__whitelist__operation_1aae6285ed828bdb8e78038c53aa0302ca" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::account_whitelist_operation::account_to_list</definition>
+        <argsstring></argsstring>
+        <name>account_to_list</name>
+        <briefdescription>
+<para>The account being opined about. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/account.hpp" line="196" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/account.hpp" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1account__whitelist__operation_1a01ae6af064bd2c1d3e8767fcc0b7b460" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t graphene::chain::account_whitelist_operation::new_listing</definition>
+        <argsstring></argsstring>
+        <name>new_listing</name>
+        <initializer>= <ref refid="structgraphene_1_1chain_1_1account__whitelist__operation_1abba3d110e073c52309b894c4342fc660a5784b62ddb2021fb6f337578f714ef3e" kindref="member">no_listing</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The new white and blacklist status of account_to_list, as determined by authorizing_account This is a bitfield using values defined in the account_listing enum </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/account.hpp" line="199" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/account.hpp" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1account__whitelist__operation_1a7bf993f10107daffadff7d33c0f744f5" prot="public" static="no" mutable="no">
+        <type><ref refid="group__operations_1gae0096750377f6e9d61dba5765284de99" kindref="member">extensions_type</ref></type>
+        <definition>extensions_type graphene::chain::account_whitelist_operation::extensions</definition>
+        <argsstring></argsstring>
+        <name>extensions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/account.hpp" line="200" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/account.hpp" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1account__whitelist__operation_1a30b143e829704544be2e14aae51358de" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref></type>
+        <definition>account_id_type graphene::chain::account_whitelist_operation::fee_payer</definition>
+        <argsstring>() const</argsstring>
+        <name>fee_payer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/account.hpp" line="202" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/account.hpp" bodystart="202" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1account__whitelist__operation_1a44b3441dd83877fe2bbaf801a6b64151" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::account_whitelist_operation::validate</definition>
+        <argsstring>() const</argsstring>
+        <name>validate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/account.hpp" line="203" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/account.hpp" bodystart="203" bodyend="203"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This operation is used to whitelist and blacklist accounts, primarily for transacting in whitelisted assets</para><para>Accounts can freely specify opinions about other accounts, in the form of either whitelisting or blacklisting them. This information is used in chain validation only to determine whether an account is authorized to transact in an asset type which enforces a whitelist, but third parties can use this information for other uses as well, as long as it does not conflict with the use of whitelisted assets. </para>    </briefdescription>
+    <detaileddescription>
+<para>An asset which enforces a whitelist specifies a list of accounts to maintain its whitelist, and a list of accounts to maintain its blacklist. In order for a given account A to hold and transact in a whitelisted asset S, A must be whitelisted by at least one of S&apos;s whitelist_authorities and blacklisted by none of S&apos;s blacklist_authorities. If A receives a balance of S, and is later removed from the whitelist(s) which allowed it to hold S, or added to any blacklist S specifies as authoritative, A&apos;s balance of S will be frozen until A&apos;s authorization is reinstated.</para><para>This operation requires authorizing_account&apos;s signature, but not account_to_list&apos;s. The fee is paid by authorizing_account. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="286">
+        <label>graphene::chain::base_operation</label>
+        <link refid="structgraphene_1_1chain_1_1base__operation"/>
+      </node>
+      <node id="285">
+        <label>graphene::chain::account_whitelist_operation</label>
+        <link refid="structgraphene_1_1chain_1_1account__whitelist__operation"/>
+        <childnode refid="286" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="289">
+        <label>flat_set&lt; future_extensions &gt;</label>
+      </node>
+      <node id="288">
+        <label>graphene::chain::base_operation</label>
+        <link refid="structgraphene_1_1chain_1_1base__operation"/>
+      </node>
+      <node id="290">
+        <label>graphene::chain::asset</label>
+        <link refid="structgraphene_1_1chain_1_1asset"/>
+        <childnode refid="291" relation="usage">
+          <edgelabel>amount</edgelabel>
+        </childnode>
+      </node>
+      <node id="291">
+        <label>safe&lt; int64_t &gt;</label>
+      </node>
+      <node id="287">
+        <label>graphene::chain::account_whitelist_operation</label>
+        <link refid="structgraphene_1_1chain_1_1account__whitelist__operation"/>
+        <childnode refid="288" relation="public-inheritance">
+        </childnode>
+        <childnode refid="289" relation="usage">
+          <edgelabel>extensions</edgelabel>
+        </childnode>
+        <childnode refid="290" relation="usage">
+          <edgelabel>fee</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/protocol/account.hpp" line="182" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/account.hpp" bodystart="181" bodyend="204"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1account__whitelist__operation_1abba3d110e073c52309b894c4342fc660" prot="public" virt="non-virtual"><scope>graphene::chain::account_whitelist_operation</scope><name>account_listing</name></member>
+      <member refid="structgraphene_1_1chain_1_1account__whitelist__operation_1aae6285ed828bdb8e78038c53aa0302ca" prot="public" virt="non-virtual"><scope>graphene::chain::account_whitelist_operation</scope><name>account_to_list</name></member>
+      <member refid="structgraphene_1_1chain_1_1account__whitelist__operation_1aa301716fcb544bc3db3844687fc31fcc" prot="public" virt="non-virtual"><scope>graphene::chain::account_whitelist_operation</scope><name>authorizing_account</name></member>
+      <member refid="structgraphene_1_1chain_1_1account__whitelist__operation_1abba3d110e073c52309b894c4342fc660a52535472688741b32b3e8bc05ec61e73" prot="public" virt="non-virtual"><scope>graphene::chain::account_whitelist_operation</scope><name>black_listed</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a8947f5ff3ea0458c7fe981b5bb9e82b7" prot="public" virt="non-virtual"><scope>graphene::chain::account_whitelist_operation</scope><name>calculate_data_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a18b678eb05bc5b30d75f10b398c07a91" prot="public" virt="non-virtual"><scope>graphene::chain::account_whitelist_operation</scope><name>calculate_fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1account__whitelist__operation_1a7bf993f10107daffadff7d33c0f744f5" prot="public" virt="non-virtual"><scope>graphene::chain::account_whitelist_operation</scope><name>extensions</name></member>
+      <member refid="structgraphene_1_1chain_1_1account__whitelist__operation_1ae0138f9baaa942b3a37f62ee7908fc55" prot="public" virt="non-virtual"><scope>graphene::chain::account_whitelist_operation</scope><name>fee</name></member>
+      <member refid="structgraphene_1_1chain_1_1account__whitelist__operation_1a30b143e829704544be2e14aae51358de" prot="public" virt="non-virtual"><scope>graphene::chain::account_whitelist_operation</scope><name>fee_payer</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1a1d398b2f68e1dca5f453b86655a64c41" prot="public" virt="non-virtual"><scope>graphene::chain::account_whitelist_operation</scope><name>get_required_active_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1ac7e2861a01bbaef8fbe5c5dcf5e73b38" prot="public" virt="non-virtual"><scope>graphene::chain::account_whitelist_operation</scope><name>get_required_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1base__operation_1aff6e2d2b66117c8c87f6a6e7e7ddba1f" prot="public" virt="non-virtual"><scope>graphene::chain::account_whitelist_operation</scope><name>get_required_owner_authorities</name></member>
+      <member refid="structgraphene_1_1chain_1_1account__whitelist__operation_1a01ae6af064bd2c1d3e8767fcc0b7b460" prot="public" virt="non-virtual"><scope>graphene::chain::account_whitelist_operation</scope><name>new_listing</name></member>
+      <member refid="structgraphene_1_1chain_1_1account__whitelist__operation_1abba3d110e073c52309b894c4342fc660a5784b62ddb2021fb6f337578f714ef3e" prot="public" virt="non-virtual"><scope>graphene::chain::account_whitelist_operation</scope><name>no_listing</name></member>
+      <member refid="structgraphene_1_1chain_1_1account__whitelist__operation_1a44b3441dd83877fe2bbaf801a6b64151" prot="public" virt="non-virtual"><scope>graphene::chain::account_whitelist_operation</scope><name>validate</name></member>
+      <member refid="structgraphene_1_1chain_1_1account__whitelist__operation_1abba3d110e073c52309b894c4342fc660a8a0156a219f322cde14c69b0f9748515" prot="public" virt="non-virtual"><scope>graphene::chain::account_whitelist_operation</scope><name>white_and_black_listed</name></member>
+      <member refid="structgraphene_1_1chain_1_1account__whitelist__operation_1abba3d110e073c52309b894c4342fc660a57b41bd3f476a766dd10d0c83accb2fa" prot="public" virt="non-virtual"><scope>graphene::chain::account_whitelist_operation</scope><name>white_listed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

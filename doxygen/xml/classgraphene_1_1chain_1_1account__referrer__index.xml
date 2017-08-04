@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgraphene_1_1chain_1_1account__referrer__index" kind="class" language="C++" prot="public">
+    <compoundname>graphene::chain::account_referrer_index</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">secondary_index</basecompoundref>
+    <includes refid="account__object_8hpp" local="no">account_object.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classgraphene_1_1chain_1_1account__referrer__index_1a6342cf7925f86c27748625017a9d4e63" prot="public" static="no" mutable="no">
+        <type>map&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref>, set&lt; <ref refid="namespacegraphene_1_1chain_1a11927fb343f953514ab6235d6e7233ee" kindref="member">account_id_type</ref> &gt; &gt;</type>
+        <definition>map&lt; account_id_type, set&lt;account_id_type&gt; &gt; graphene::chain::account_referrer_index::referred_by</definition>
+        <argsstring></argsstring>
+        <name>referred_by</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>maps the referrer to the set of accounts that they have referred </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="312" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="312" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1account__referrer__index_1a353949d4ecd8b0456ae383c1f3d0be11" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void graphene::chain::account_referrer_index::object_inserted</definition>
+        <argsstring>(const object &amp;obj) override</argsstring>
+        <name>object_inserted</name>
+        <param>
+          <type>const object &amp;</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="306" column="1" bodyfile="libraries/chain/account_object.cpp" bodystart="257" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1account__referrer__index_1ad5305ac928521e9c969715e59609c30f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void graphene::chain::account_referrer_index::object_removed</definition>
+        <argsstring>(const object &amp;obj) override</argsstring>
+        <name>object_removed</name>
+        <param>
+          <type>const object &amp;</type>
+          <declname>obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="307" column="1" bodyfile="libraries/chain/account_object.cpp" bodystart="260" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1account__referrer__index_1a17ddca3a76e377f6fdf069e9c852f12c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void graphene::chain::account_referrer_index::about_to_modify</definition>
+        <argsstring>(const object &amp;before) override</argsstring>
+        <name>about_to_modify</name>
+        <param>
+          <type>const object &amp;</type>
+          <declname>before</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="308" column="1" bodyfile="libraries/chain/account_object.cpp" bodystart="263" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="classgraphene_1_1chain_1_1account__referrer__index_1a9708eb5c78b3163999d95e4d71353e54" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void graphene::chain::account_referrer_index::object_modified</definition>
+        <argsstring>(const object &amp;after) override</argsstring>
+        <name>object_modified</name>
+        <param>
+          <type>const object &amp;</type>
+          <declname>after</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="309" column="1" bodyfile="libraries/chain/account_object.cpp" bodystart="266" bodyend="268"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This secondary index will allow a reverse lookup of all accounts that have been referred by a particular account. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="114">
+        <label>secondary_index</label>
+      </node>
+      <node id="113">
+        <label>graphene::chain::account_referrer_index</label>
+        <link refid="classgraphene_1_1chain_1_1account__referrer__index"/>
+        <childnode refid="114" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="117">
+        <label>map&lt; account_id_type, set&lt; account_id_type &gt; &gt;</label>
+      </node>
+      <node id="116">
+        <label>secondary_index</label>
+      </node>
+      <node id="115">
+        <label>graphene::chain::account_referrer_index</label>
+        <link refid="classgraphene_1_1chain_1_1account__referrer__index"/>
+        <childnode refid="116" relation="public-inheritance">
+        </childnode>
+        <childnode refid="117" relation="usage">
+          <edgelabel>referred_by</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/account_object.hpp" line="304" column="1" bodyfile="libraries/chain/include/graphene/chain/account_object.hpp" bodystart="303" bodyend="313"/>
+    <listofallmembers>
+      <member refid="classgraphene_1_1chain_1_1account__referrer__index_1a17ddca3a76e377f6fdf069e9c852f12c" prot="public" virt="virtual"><scope>graphene::chain::account_referrer_index</scope><name>about_to_modify</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__referrer__index_1a353949d4ecd8b0456ae383c1f3d0be11" prot="public" virt="virtual"><scope>graphene::chain::account_referrer_index</scope><name>object_inserted</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__referrer__index_1a9708eb5c78b3163999d95e4d71353e54" prot="public" virt="virtual"><scope>graphene::chain::account_referrer_index</scope><name>object_modified</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__referrer__index_1ad5305ac928521e9c969715e59609c30f" prot="public" virt="virtual"><scope>graphene::chain::account_referrer_index</scope><name>object_removed</name></member>
+      <member refid="classgraphene_1_1chain_1_1account__referrer__index_1a6342cf7925f86c27748625017a9d4e63" prot="public" virt="non-virtual"><scope>graphene::chain::account_referrer_index</scope><name>referred_by</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

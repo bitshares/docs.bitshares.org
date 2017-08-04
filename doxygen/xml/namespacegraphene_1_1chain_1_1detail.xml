@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacegraphene_1_1chain_1_1detail" kind="namespace" language="C++">
+    <compoundname>graphene::chain::detail</compoundname>
+    <innerclass refid="structgraphene_1_1chain_1_1detail_1_1gen__seq" prot="public">graphene::chain::detail::gen_seq</innerclass>
+    <innerclass refid="structgraphene_1_1chain_1_1detail_1_1gen__seq_3_010_00_01_is_8_8_8_01_4" prot="public">graphene::chain::detail::gen_seq&lt; 0, Is... &gt;</innerclass>
+    <innerclass refid="structgraphene_1_1chain_1_1detail_1_1pending__transactions__restorer" prot="public">graphene::chain::detail::pending_transactions_restorer</innerclass>
+    <innerclass refid="structgraphene_1_1chain_1_1detail_1_1seq" prot="public">graphene::chain::detail::seq</innerclass>
+    <innerclass refid="structgraphene_1_1chain_1_1detail_1_1skip__flags__restorer" prot="public">graphene::chain::detail::skip_flags_restorer</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacegraphene_1_1chain_1_1detail_1aca4a272b9680f8b5e6fffde26344e1fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+          <param>
+            <type>int...</type>
+            <declname>Is</declname>
+            <defname>Is</defname>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void graphene::chain::detail::for_each</definition>
+        <argsstring>(T &amp;&amp;t, const account_object &amp;a, seq&lt; Is... &gt;)</argsstring>
+        <name>for_each</name>
+        <param>
+          <type>T &amp;&amp;</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1account__object" kindref="compound">account_object</ref> &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="structgraphene_1_1chain_1_1detail_1_1seq" kindref="compound">seq</ref>&lt; Is... &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/database.hpp" line="512" column="1" bodyfile="libraries/chain/include/graphene/chain/database.hpp" bodystart="512" bodyend="516"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacegraphene_1_1chain_1_1detail_1a0726a159449fff20472ad910c3a6ff8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Lambda</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void graphene::chain::detail::with_skip_flags</definition>
+        <argsstring>(database &amp;db, uint32_t skip_flags, Lambda callback)</argsstring>
+        <name>with_skip_flags</name>
+        <param>
+          <type><ref refid="classgraphene_1_1chain_1_1database" kindref="compound">database</ref> &amp;</type>
+          <declname>db</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>skip_flags</declname>
+        </param>
+        <param>
+          <type>Lambda</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Set the skip_flags to the given value, call callback, then reset skip_flags to their previous value after callback is done. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/db_with.hpp" line="121" column="1" bodyfile="libraries/chain/include/graphene/chain/db_with.hpp" bodystart="121" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacegraphene_1_1chain_1_1detail_1a70f0b14f841b7731fbd6e68d4b6f1ed5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Lambda</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void graphene::chain::detail::without_pending_transactions</definition>
+        <argsstring>(database &amp;db, std::vector&lt; processed_transaction &gt; &amp;&amp;pending_transactions, Lambda callback)</argsstring>
+        <name>without_pending_transactions</name>
+        <param>
+          <type><ref refid="classgraphene_1_1chain_1_1database" kindref="compound">database</ref> &amp;</type>
+          <declname>db</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="structgraphene_1_1chain_1_1processed__transaction" kindref="compound">processed_transaction</ref> &gt; &amp;&amp;</type>
+          <declname>pending_transactions</declname>
+        </param>
+        <param>
+          <type>Lambda</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Empty pending_transactions, call callback, then reset pending_transactions after callback is done.</para><para>Pending transactions which no longer validate will be culled. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/db_with.hpp" line="140" column="1" bodyfile="libraries/chain/include/graphene/chain/db_with.hpp" bodystart="140" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacegraphene_1_1chain_1_1detail_1a7528055c48b6e603a8f4e15bc9654d57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::detail::_is_authorized_asset</definition>
+        <argsstring>(const database &amp;d, const account_object &amp;acct, const asset_object &amp;asset_obj)</argsstring>
+        <name>_is_authorized_asset</name>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1database" kindref="compound">database</ref> &amp;</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1account__object" kindref="compound">account_object</ref> &amp;</type>
+          <declname>acct</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classgraphene_1_1chain_1_1asset__object" kindref="compound">asset_object</ref> &amp;</type>
+          <declname>asset_obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/is_authorized_asset.hpp" line="34" column="1" bodyfile="libraries/chain/is_authorized_asset.cpp" bodystart="35" bodyend="66"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="libraries/chain/include/graphene/chain/database.hpp" line="501" column="1"/>
+  </compounddef>
+</doxygen>

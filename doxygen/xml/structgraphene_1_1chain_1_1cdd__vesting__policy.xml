@@ -1,0 +1,250 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1cdd__vesting__policy" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::cdd_vesting_policy</compoundname>
+    <includes refid="vesting__balance__object_8hpp" local="no">vesting_balance_object.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1cdd__vesting__policy_1a85a6454ac34a1a0f49f02da7cc0a3620" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t graphene::chain::cdd_vesting_policy::vesting_seconds</definition>
+        <argsstring></argsstring>
+        <name>vesting_seconds</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="93" column="1" bodyfile="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1cdd__vesting__policy_1afff4c320b2166bf3920745bb8367d900" prot="public" static="no" mutable="no">
+        <type>fc::uint128_t</type>
+        <definition>fc::uint128_t graphene::chain::cdd_vesting_policy::coin_seconds_earned</definition>
+        <argsstring></argsstring>
+        <name>coin_seconds_earned</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="94" column="1" bodyfile="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1cdd__vesting__policy_1ace4c6cc8c381cbc881b86aa07d8055a2" prot="public" static="no" mutable="no">
+        <type>fc::time_point_sec</type>
+        <definition>fc::time_point_sec graphene::chain::cdd_vesting_policy::start_claim</definition>
+        <argsstring></argsstring>
+        <name>start_claim</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>while coindays may accrue over time, none may be claimed before first_claim date </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="96" column="1" bodyfile="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1cdd__vesting__policy_1a6b3016433c6e374f9e20d5a32d9a421e" prot="public" static="no" mutable="no">
+        <type>fc::time_point_sec</type>
+        <definition>fc::time_point_sec graphene::chain::cdd_vesting_policy::coin_seconds_earned_last_update</definition>
+        <argsstring></argsstring>
+        <name>coin_seconds_earned_last_update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="97" column="1" bodyfile="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1cdd__vesting__policy_1a7677e552a7c5da5a0c423ed5ca3c605f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>fc::uint128_t</type>
+        <definition>fc::uint128_t graphene::chain::cdd_vesting_policy::compute_coin_seconds_earned</definition>
+        <argsstring>(const vesting_policy_context &amp;ctx) const</argsstring>
+        <name>compute_coin_seconds_earned</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1vesting__policy__context" kindref="compound">vesting_policy_context</ref> &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compute coin_seconds_earned. Used to non-destructively figure out how many coin seconds are available. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="104" column="1" bodyfile="libraries/chain/vesting_balance_object.cpp" bodystart="90" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1cdd__vesting__policy_1a6114585395e35c3f5b3c3a24c508946c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::cdd_vesting_policy::update_coin_seconds_earned</definition>
+        <argsstring>(const vesting_policy_context &amp;ctx)</argsstring>
+        <name>update_coin_seconds_earned</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1vesting__policy__context" kindref="compound">vesting_policy_context</ref> &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Update coin_seconds_earned and coin_seconds_earned_last_update fields; called by both <ref refid="structgraphene_1_1chain_1_1cdd__vesting__policy_1a3fa0b5e01c624e0e3babb7b9b93f18d2" kindref="member">on_deposit()</ref> and <ref refid="structgraphene_1_1chain_1_1cdd__vesting__policy_1aca39435d8a7837ce5e6320beb6c670f4" kindref="member">on_withdraw()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="111" column="1" bodyfile="libraries/chain/vesting_balance_object.cpp" bodystart="105" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1cdd__vesting__policy_1a6c48aca0e1ae19fe66fc1cf60225f358" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structgraphene_1_1chain_1_1asset" kindref="compound">asset</ref></type>
+        <definition>asset graphene::chain::cdd_vesting_policy::get_allowed_withdraw</definition>
+        <argsstring>(const vesting_policy_context &amp;ctx) const</argsstring>
+        <name>get_allowed_withdraw</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1vesting__policy__context" kindref="compound">vesting_policy_context</ref> &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="113" column="1" bodyfile="libraries/chain/vesting_balance_object.cpp" bodystart="111" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1cdd__vesting__policy_1a86c5bfeef4316a6c1d23759355d8749d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::cdd_vesting_policy::is_deposit_allowed</definition>
+        <argsstring>(const vesting_policy_context &amp;ctx) const</argsstring>
+        <name>is_deposit_allowed</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1vesting__policy__context" kindref="compound">vesting_policy_context</ref> &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="114" column="1" bodyfile="libraries/chain/vesting_balance_object.cpp" bodystart="144" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1cdd__vesting__policy_1afa379f581e4a9d202dc3c69c321cbabc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::cdd_vesting_policy::is_deposit_vested_allowed</definition>
+        <argsstring>(const vesting_policy_context &amp;ctx) const</argsstring>
+        <name>is_deposit_vested_allowed</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1vesting__policy__context" kindref="compound">vesting_policy_context</ref> &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="115" column="1" bodyfile="libraries/chain/vesting_balance_object.cpp" bodystart="150" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1cdd__vesting__policy_1adb5d9d59cdad2fdb17f8a50e4b34e334" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool graphene::chain::cdd_vesting_policy::is_withdraw_allowed</definition>
+        <argsstring>(const vesting_policy_context &amp;ctx) const</argsstring>
+        <name>is_withdraw_allowed</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1vesting__policy__context" kindref="compound">vesting_policy_context</ref> &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="116" column="1" bodyfile="libraries/chain/vesting_balance_object.cpp" bodystart="155" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1cdd__vesting__policy_1a3fa0b5e01c624e0e3babb7b9b93f18d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::cdd_vesting_policy::on_deposit</definition>
+        <argsstring>(const vesting_policy_context &amp;ctx)</argsstring>
+        <name>on_deposit</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1vesting__policy__context" kindref="compound">vesting_policy_context</ref> &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="117" column="1" bodyfile="libraries/chain/vesting_balance_object.cpp" bodystart="121" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1cdd__vesting__policy_1aea73431c3923a4b35fcf0051032542c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::cdd_vesting_policy::on_deposit_vested</definition>
+        <argsstring>(const vesting_policy_context &amp;ctx)</argsstring>
+        <name>on_deposit_vested</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1vesting__policy__context" kindref="compound">vesting_policy_context</ref> &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="118" column="1" bodyfile="libraries/chain/vesting_balance_object.cpp" bodystart="126" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="structgraphene_1_1chain_1_1cdd__vesting__policy_1aca39435d8a7837ce5e6320beb6c670f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void graphene::chain::cdd_vesting_policy::on_withdraw</definition>
+        <argsstring>(const vesting_policy_context &amp;ctx)</argsstring>
+        <name>on_withdraw</name>
+        <param>
+          <type>const <ref refid="structgraphene_1_1chain_1_1vesting__policy__context" kindref="compound">vesting_policy_context</ref> &amp;</type>
+          <declname>ctx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="119" column="1" bodyfile="libraries/chain/vesting_balance_object.cpp" bodystart="132" bodyend="142"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>defines vesting in terms of coin-days accrued which allows for dynamic deposit/withdraw </para>    </briefdescription>
+    <detaileddescription>
+<para>The economic effect of this vesting policy is to require a certain amount of &quot;interest&quot; to accrue before the full balance may be withdrawn. Interest accrues as coindays (balance * length held). If some of the balance is withdrawn, the remaining balance must be held longer. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="1363">
+        <label>graphene::chain::cdd_vesting_policy</label>
+        <link refid="structgraphene_1_1chain_1_1cdd__vesting__policy"/>
+        <childnode refid="1364" relation="usage">
+          <edgelabel>coin_seconds_earned_last_update</edgelabel>
+          <edgelabel>start_claim</edgelabel>
+        </childnode>
+      </node>
+      <node id="1364">
+        <label>time_point_sec</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" line="92" column="1" bodyfile="libraries/chain/include/graphene/chain/vesting_balance_object.hpp" bodystart="91" bodyend="120"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1cdd__vesting__policy_1afff4c320b2166bf3920745bb8367d900" prot="public" virt="non-virtual"><scope>graphene::chain::cdd_vesting_policy</scope><name>coin_seconds_earned</name></member>
+      <member refid="structgraphene_1_1chain_1_1cdd__vesting__policy_1a6b3016433c6e374f9e20d5a32d9a421e" prot="public" virt="non-virtual"><scope>graphene::chain::cdd_vesting_policy</scope><name>coin_seconds_earned_last_update</name></member>
+      <member refid="structgraphene_1_1chain_1_1cdd__vesting__policy_1a7677e552a7c5da5a0c423ed5ca3c605f" prot="public" virt="non-virtual"><scope>graphene::chain::cdd_vesting_policy</scope><name>compute_coin_seconds_earned</name></member>
+      <member refid="structgraphene_1_1chain_1_1cdd__vesting__policy_1a6c48aca0e1ae19fe66fc1cf60225f358" prot="public" virt="non-virtual"><scope>graphene::chain::cdd_vesting_policy</scope><name>get_allowed_withdraw</name></member>
+      <member refid="structgraphene_1_1chain_1_1cdd__vesting__policy_1a86c5bfeef4316a6c1d23759355d8749d" prot="public" virt="non-virtual"><scope>graphene::chain::cdd_vesting_policy</scope><name>is_deposit_allowed</name></member>
+      <member refid="structgraphene_1_1chain_1_1cdd__vesting__policy_1afa379f581e4a9d202dc3c69c321cbabc" prot="public" virt="non-virtual"><scope>graphene::chain::cdd_vesting_policy</scope><name>is_deposit_vested_allowed</name></member>
+      <member refid="structgraphene_1_1chain_1_1cdd__vesting__policy_1adb5d9d59cdad2fdb17f8a50e4b34e334" prot="public" virt="non-virtual"><scope>graphene::chain::cdd_vesting_policy</scope><name>is_withdraw_allowed</name></member>
+      <member refid="structgraphene_1_1chain_1_1cdd__vesting__policy_1a3fa0b5e01c624e0e3babb7b9b93f18d2" prot="public" virt="non-virtual"><scope>graphene::chain::cdd_vesting_policy</scope><name>on_deposit</name></member>
+      <member refid="structgraphene_1_1chain_1_1cdd__vesting__policy_1aea73431c3923a4b35fcf0051032542c9" prot="public" virt="non-virtual"><scope>graphene::chain::cdd_vesting_policy</scope><name>on_deposit_vested</name></member>
+      <member refid="structgraphene_1_1chain_1_1cdd__vesting__policy_1aca39435d8a7837ce5e6320beb6c670f4" prot="public" virt="non-virtual"><scope>graphene::chain::cdd_vesting_policy</scope><name>on_withdraw</name></member>
+      <member refid="structgraphene_1_1chain_1_1cdd__vesting__policy_1ace4c6cc8c381cbc881b86aa07d8055a2" prot="public" virt="non-virtual"><scope>graphene::chain::cdd_vesting_policy</scope><name>start_claim</name></member>
+      <member refid="structgraphene_1_1chain_1_1cdd__vesting__policy_1a6114585395e35c3f5b3c3a24c508946c" prot="public" virt="non-virtual"><scope>graphene::chain::cdd_vesting_policy</scope><name>update_coin_seconds_earned</name></member>
+      <member refid="structgraphene_1_1chain_1_1cdd__vesting__policy_1a85a6454ac34a1a0f49f02da7cc0a3620" prot="public" virt="non-virtual"><scope>graphene::chain::cdd_vesting_policy</scope><name>vesting_seconds</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

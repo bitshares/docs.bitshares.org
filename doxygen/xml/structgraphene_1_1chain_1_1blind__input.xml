@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="structgraphene_1_1chain_1_1blind__input" kind="struct" language="C++" prot="public">
+    <compoundname>graphene::chain::blind_input</compoundname>
+    <includes refid="confidential_8hpp" local="no">confidential.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1blind__input_1a9d422b3532d4da6997c56e243650ad57" prot="public" static="no" mutable="no">
+        <type>fc::ecc::commitment_type</type>
+        <definition>fc::ecc::commitment_type graphene::chain::blind_input::commitment</definition>
+        <argsstring></argsstring>
+        <name>commitment</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/confidential.hpp" line="85" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/confidential.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structgraphene_1_1chain_1_1blind__input_1a4ed0921d825ece6dfe96149ac713ac46" prot="public" static="no" mutable="no">
+        <type><ref refid="structgraphene_1_1chain_1_1authority" kindref="compound">authority</ref></type>
+        <definition>authority graphene::chain::blind_input::owner</definition>
+        <argsstring></argsstring>
+        <name>owner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>provided to maintain the invariant that all authority required by an operation is explicit in the operation. Must match blinded_balance_id-&gt;owner </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="libraries/chain/include/graphene/chain/protocol/confidential.hpp" line="90" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/confidential.hpp" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1152">
+        <label>graphene::chain::blind_input</label>
+        <link refid="structgraphene_1_1chain_1_1blind__input"/>
+        <childnode refid="1153" relation="usage">
+          <edgelabel>owner</edgelabel>
+        </childnode>
+        <childnode refid="1157" relation="usage">
+          <edgelabel>commitment</edgelabel>
+        </childnode>
+      </node>
+      <node id="1156">
+        <label>flat_map&lt; graphene::chain::address, weight_type &gt;</label>
+      </node>
+      <node id="1157">
+        <label>commitment_type</label>
+      </node>
+      <node id="1153">
+        <label>graphene::chain::authority</label>
+        <link refid="structgraphene_1_1chain_1_1authority"/>
+        <childnode refid="1154" relation="usage">
+          <edgelabel>key_auths</edgelabel>
+        </childnode>
+        <childnode refid="1155" relation="usage">
+          <edgelabel>account_auths</edgelabel>
+        </childnode>
+        <childnode refid="1156" relation="usage">
+          <edgelabel>address_auths</edgelabel>
+        </childnode>
+      </node>
+      <node id="1154">
+        <label>flat_map&lt; graphene::chain::public_key_type, weight_type &gt;</label>
+      </node>
+      <node id="1155">
+        <label>flat_map&lt; account_id_type, weight_type &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="libraries/chain/include/graphene/chain/protocol/confidential.hpp" line="84" column="1" bodyfile="libraries/chain/include/graphene/chain/protocol/confidential.hpp" bodystart="83" bodyend="91"/>
+    <listofallmembers>
+      <member refid="structgraphene_1_1chain_1_1blind__input_1a9d422b3532d4da6997c56e243650ad57" prot="public" virt="non-virtual"><scope>graphene::chain::blind_input</scope><name>commitment</name></member>
+      <member refid="structgraphene_1_1chain_1_1blind__input_1a4ed0921d825ece6dfe96149ac713ac46" prot="public" virt="non-virtual"><scope>graphene::chain::blind_input</scope><name>owner</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
