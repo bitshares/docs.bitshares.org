@@ -295,7 +295,7 @@ try :
 
     extensions.append( "breathe" )
     breathe_projects = {
-        "graphene": "/home/xeroc/Graphene/graphene/doxygen/xml/",
+        "graphene": "../doxygen/xml/",
     }
     breathe_default_project = "graphene"
 except :
