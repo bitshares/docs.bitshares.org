@@ -28,21 +28,20 @@ Boost 1.57
 **********
 
 The Boost which ships with Ubuntu 15.04 is too old.  You need to download the
-Boost tarball for Boost 1.57.0 (Note, 1.58.0 requires C++14 and will not build
-on Ubuntu LTS; this requirement was an accident, see `this mailing list post`_).
+Boost tarball for Boost 1.60.0.
 
 .. code-block:: sh
 
-    export BOOST_ROOT=$HOME/opt/boost_1_57_0
+    export BOOST_ROOT=$HOME/opt/boost_1_60_0
     sudo apt-get update
     sudo apt-get install autotools-dev build-essential \
                          g++ libbz2-dev libicu-dev python-dev
-    wget -c 'http://sourceforge.net/projects/boost/files/boost/1.57.0/boost_1_57_0.tar.bz2/download'\
-         -O boost_1_57_0.tar.bz2
-    sha256sum boost_1_57_0.tar.bz2
-    # "910c8c022a33ccec7f088bd65d4f14b466588dda94ba2124e78b8c57db264967"
-    tar xjf boost_1_57_0.tar.bz2
-    cd boost_1_57_0/
+    wget -c 'http://sourceforge.net/projects/boost/files/boost/1.60.0/boost_1_60_0.tar.bz2/download'\
+         -O boost_1_60_0.tar.bz2
+    sha256sum boost_1_60_0.tar.bz2
+    # "686affff989ac2488f79a97b9479efb9f2abae035b5ed4d8226de6857933fd3b"
+    tar xjf boost_1_60_0.tar.bz2
+    cd boost_1_60_0/
     ./bootstrap.sh "--prefix=$BOOST_ROOT"
     ./b2 install
 
