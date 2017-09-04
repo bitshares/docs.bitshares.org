@@ -67,8 +67,11 @@ hold the blockchain, connect to other peers, and will receive new blocks in
 .. note:: Unless the seed nodes are encoded into the binary, you may need to add
    a known seed node with ``-s xxx.xxx.xxx.xxx:yyy`` in order to initially
    connect to the P2P network. (See `Release Page`_)
+   
+.. note:: To start a node with reduced RAM please see `Memory reduction for nodes`_
 
 .. _Release Page: https://github.com/cryptonomex/graphene/releases/
+.. _Memory reduction for nodes: https://github.com/bitshares/bitshares-core/wiki/Memory-reduction-for-nodes
 
 Delayed Node
 *****************
