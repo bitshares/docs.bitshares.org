@@ -70,7 +70,7 @@ hold the blockchain, connect to other peers, and will receive new blocks in
    
 .. note:: To start a node with reduced RAM please see `Memory reduction for nodes`_
 
-.. _Release Page: https://github.com/cryptonomex/graphene/releases/
+.. _Release Page: https://github.com/bitshares/bitshares-core/releases
 .. _Memory reduction for nodes: https://github.com/bitshares/bitshares-core/wiki/Memory-reduction-for-nodes
 
 Delayed Node
