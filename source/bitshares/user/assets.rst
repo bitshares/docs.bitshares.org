@@ -27,7 +27,7 @@ use-cases, such as stock, miles, event tickets or reputation points.
 These *SmartCoins* track the value of an underlaying asset, such as Gold, or
 U.S. Dollar. Smartcoins can be created by anyone contracting with the
 BitShares ecosystem and putting sufficient BTS (at least 175%) into the so
-called contract for difference as *collateral*.
+called collateralized loans as *collateral*.
 
 .. centered:: :doc:`Read more ... <mpa>`
 

@@ -2,7 +2,7 @@
 What has Changed since BitShares 0.9?
 *************************************
 
-* **BitAssets are Contracts-For-Difference**:
+* **BitAssets are Collateralized Loans from a Counterpartyrisk-Free Smart Contract**:
   Our research has identified an improved mechanism to achieve a solid *peg* of
   bitAssets to its underlay. BitAssets like the bitUSD in BitShares 2.0 will
   always trade for *at least* the value of its underlying asset, i.e. $1.

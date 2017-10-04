@@ -8,7 +8,8 @@ is capable of maintaining price parity with a globally adopted currency
 resistant commerce. This can be achieved by BitShares' market pegged
 assets (MPA), a new type of freely traded digital asset whose value is
 meant to track the value of a conventional underlying asset by means of
-contracts for difference (CFD). 
+an over-collateralized, counterpartyrisk-free, smart-contract secured
+blockchain loan.
 
 Instead of creating a UIA where the full control over supply is in the
 hands of the issuer, we can also create a **Market Pegged Asset** (MPA)
@@ -19,7 +20,7 @@ Why would we need *collateral* for? Since the issuer of a MPA has no
 control over the supply, the blockchain protocol deals with increasing
 and decreasing supply. In order for a user to get some of the new coins,
 he will need to put collateral into a **smart contract** (technically,
-this contract is a *contract for difference*).
+this contract is a *collateralized loan*).
 
  |   A simple example would be a MPA that is backed by USD (a stable crypto
      token within BitShares) that requires a collateral ratio of 200%. Then,
