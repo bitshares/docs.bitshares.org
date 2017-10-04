@@ -78,10 +78,10 @@ Collateralized Tokens
 
 A *SmartCoin* (synonym for MPA) is a crypto-currency that *always* has 100% or
 more of its value backed by the BitShares core currency (BTS), to which they can
-be converted at any time, as *collateral* in a CFD.
+be converted at any time, as *collateral* in a collateralized loan.
 
 What makes MPAs unique is that they are free from counterparty risk even though
-they resemble a CFD backed by collateral. This is achievable by letting the
+they resemble a collateralized loan. This is achievable by letting the
 network itself (implemented as a software protocol) be responsible for securing
 the collateral and performing settlements as will be described in more detail
 below.
