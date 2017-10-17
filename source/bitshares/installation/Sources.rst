@@ -7,7 +7,7 @@ with `git`.
 
 .. code-block:: sh
 
-    git clone https://github.com/bitshares/bitshares-2
+    git clone https://github.com/bitshares/bitshares-core
 
 Since the repository makes use of so called *submodules* which are repositories
 on their own, we need to refresh those.
