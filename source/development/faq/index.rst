@@ -98,6 +98,47 @@ Example objects:::
              void  adjust_balance(const asset& delta);
        };
 
+How can I transfer a single account to a cli wallet
+****************************************************
+
+If you have a need to run just the cli wallet, you will likely want to
+transfer an existing account from the Web wallet or your light wallet
+into the cli. This guide assumes that you already have your web wallet
+working and properly connected to a full node. Something like this:
+
+.. code-block:: sh
+
+      ./cli-wallet -s wss://bitshares.openledger.info/ws
+
+You should get a prompt
+
+.. code-block:: sh
+
+      new >>>
+
+Now set a password for the wallet
+
+.. code-block:: sh
+
+      new >>> set_password my_password
+      locked >>> unlock my_password
+      unlocked >>>
+
+Now you need to go to your bitshares 2.0 webwallet or lite client and 
+select the account you wish to bring across. Click on permissions followed
+by the key icon within Active Permissions. This will reveal your private key.
+Copy it to the clipboard.
+
+.. image:: account-active-permissions.png
+
+Now let's import the account into this wallet
+
+.. code-block:: sh
+
+      new >>> import_key <accountname> THISISTHEKEYTHATYOUCOPIED
+
+
+
 What is the format of the block header?
 ****************************************
 
