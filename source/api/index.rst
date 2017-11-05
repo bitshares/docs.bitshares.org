@@ -16,12 +16,12 @@ APIs are separated into two categories, namely
           **light-wallet**, nor the **hosted web wallet** will provide
           you with an API.
 
-In contrast to many existing ecosystems, there is no centralized services that
-let's you access private API calles after successful authentication. Instead,
+In contrast to many existing ecosystems, there is no centralized service that
+lets you access private API calls after successful authentication. Instead,
 your run your wallet (and optionally a full node) **locally** and are with
 **your own API service provider**. This obviously has the advantage that you
 don't need to give access to your funds to any third party but has the slight
-disadvantage that you need to run a local :doc:`wallet appilcation
+disadvantage that you need to run a local :doc:`wallet application
 <../integration/apps/cliwallet>`, that however does not download the
 whole blockchain for verification. If you run a sensitive business, we
 recommend to also run a local full node to download and verify the
