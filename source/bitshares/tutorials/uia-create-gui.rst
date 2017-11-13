@@ -26,7 +26,7 @@ The most important settings are listed in the primary settings.
 The **Symbol** defined here will be reserved in the system for your assets.
 One the asset is created, the symbol cannot be changed again!
 
-.. note:: Smybols with less than **5** characters are very expense.
+.. note:: Symbols with less than **5** characters are very expensive.
           Please consult the Networks fees in the explorer!
 
 The **maximum supply** is also a permanent setting and denotes the maximum
