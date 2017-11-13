@@ -22,7 +22,7 @@ LTS:
     sudo apt-get install gcc-4.9 g++-4.9 cmake make \
                          libbz2-dev libdb++-dev libdb-dev \
                          libssl-dev openssl libreadline-dev \
-                         autoconf libtool git
+                         autoconf libtool git libcurl4-openssl-dev
 
 Boost 1.57
 **********
