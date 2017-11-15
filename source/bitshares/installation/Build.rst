@@ -24,28 +24,27 @@ LTS:
                          libssl-dev openssl libreadline-dev \
                          autoconf libtool git libcurl4-openssl-dev
 
-Boost 1.57
-**********
+Boost (optional)
+****************
 
-The Boost which ships with Ubuntu 15.04 is too old.  You need to download the
-Boost tarball for Boost 1.60.0.
+BitShares-core now supports Boost up to version 1.63.0.
+If you have a newer version installed, this is how you can install boost
+1.63.0 individually:
 
 .. code-block:: sh
 
-    export BOOST_ROOT=$HOME/opt/boost_1_60_0
+    export BOOST_ROOT=$HOME/opt/boost_1_63_0
     sudo apt-get update
     sudo apt-get install autotools-dev build-essential \
                          g++ libbz2-dev libicu-dev python-dev
-    wget -c 'http://sourceforge.net/projects/boost/files/boost/1.60.0/boost_1_60_0.tar.bz2/download'\
-         -O boost_1_60_0.tar.bz2
-    sha256sum boost_1_60_0.tar.bz2
-    # "686affff989ac2488f79a97b9479efb9f2abae035b5ed4d8226de6857933fd3b"
-    tar xjf boost_1_60_0.tar.bz2
-    cd boost_1_60_0/
+    wget -c 'http://sourceforge.net/projects/boost/files/boost/1.63.0/boost_1_63_0.tar.bz2/download'\
+         -O boost_1_63_0.tar.bz2
+    sha256sum boost_1_63_0.tar.bz2
+    # "beae2529f759f6b3bf3f4969a19c2e9d6f0c503edcb2de4a61d1428519fcb3b0"
+    tar xjf boost_1_63_0.tar.bz2
+    cd boost_1_63_0/
     ./bootstrap.sh "--prefix=$BOOST_ROOT"
     ./b2 install
-
-.. _this mailing list post: http://boost.2283326.n4.nabble.com/1-58-1-bugfix-release-necessary-td4674686.html
 
 Building BitShares
 ###########################
@@ -59,8 +58,8 @@ page <./Sources>`, we can run ``cmake`` for configuration and compile with
     cmake -DBOOST_ROOT="$BOOST_ROOT" -DCMAKE_BUILD_TYPE=Release .
     make 
 
-Note that the environmental variable ``$BOOST_ROOT`` should point to your
-install directory of boost if you have installed it manually.
+Note that the environmental variable ``$BOOST_ROOT`` points to your
+local install directory of boost if you have installed it manually.
 
 Updating BitShares
 #######################
