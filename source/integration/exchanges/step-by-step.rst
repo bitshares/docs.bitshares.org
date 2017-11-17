@@ -58,7 +58,7 @@ hold the blockchain, connect to other peers, and will receive new blocks in
 
 .. code-block:: sh
 
-    ./programs/witness_node/witness_node --data-dir=trusted_node/ --rpc-endpoint="127.0.0.1:8090"
+    ./programs/witness_node/witness_node --data-dir=trusted_node/ --rpc-endpoint="127.0.0.1:8090" --history-per-size=0
 
 .. note:: Until the genesis block is integrated into the binary/souces, you may
    additionally need to download the genesis block from github and add the
@@ -87,7 +87,8 @@ delayed node are **irreversible**.
                                          -d delayed_node \
                                          -s "0.0.0.0:0" \
                                          --p2p-endpoint="0.0.0.0:0" \
-                                         --seed-nodes "[]"
+                                         --seed-nodes "[]" \
+                                         --history-per-size=0
 
 We will use this node for notifications of customer deposits.
 
