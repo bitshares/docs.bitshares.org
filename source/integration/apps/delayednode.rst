@@ -20,4 +20,5 @@ intervals), we need:
 
     ./programs/delayed_node/delayed_node --trusted-node="192.168.0.100:8090" \
                                          --delay-block-count=10 \
-                                         --rpc-endpoint="192.168.0.101:8090"
+                                         --rpc-endpoint="192.168.0.101:8090" \
+                                         --seed-nodes "[]"
