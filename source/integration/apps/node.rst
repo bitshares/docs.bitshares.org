@@ -22,7 +22,7 @@ The full node is launched according to:
 
 It takes an optional `--data-dir` parameter to define a working and data
 directory to store the configuration, blockchain and local databases (defaults
-to ``witness_node_data_dir``. Those will be automatically created with default
+to ``witness_node_data_dir``). Those will be automatically created with default
 settings if they don't exist locally set.
 
 Configuration
@@ -98,7 +98,7 @@ For block production, the required parameters to be defined are
 * ``witness-id`` and
 * ``private-key`` as a pair of public key and wif private key.
 
-The witness-id and public key can be obtain via:::
+The witness-id and public key can be obtained via:::
 
     >>> get_witness <accountname>
     {
