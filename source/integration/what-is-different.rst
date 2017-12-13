@@ -12,7 +12,7 @@ Several Tokens
 In contrast to all satoshi-based clients, BitShares 2.0 offers a variety of
 blockchain tokens. There is not just the BTS (core token) but many others.
 Hence, as an exchange you need to distinguish different assets, either by their
-id (1.3.0 (BTS), 1.3.1 (USD), ...) or by there symbol.
+id (1.3.0 (BTS), 1.3.1 (USD), ...) or by their symbol.
 
 Registered Identities
 #####################
@@ -45,8 +45,8 @@ the memo and leave the funds where they are.
 Securing Funds
 ##############
 
-Funds can be secured by *hierarchical cooperate accounts*. In practise, they
-are (Threshold) Multi-Signature accounts from which funds can only be spend if
+Funds can be secured by *hierarchical cooperate accounts*. In practice, they
+are (Threshold) Multi-Signature accounts from which funds can only be spent if
 several signatures are valid. In contrast to mostly every other crypto currency,
 you can propose a transaction on the blockchain and don't need other means of
 communications to add your approval to a certain transactions. You can find more
