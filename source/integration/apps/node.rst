@@ -87,7 +87,7 @@ Restarting the witness node
 ###########################
 
 When restarting the witness node, it may be required to append the
-`--replay-blockchain` parameter to regenerate the local (in-memory) blockchain
+``--replay-blockchain`` parameter to regenerate the local (in-memory) blockchain
 state.
 
 Enabling Block Production
