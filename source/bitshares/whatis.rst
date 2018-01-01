@@ -48,7 +48,7 @@ project but has since left the team. The BitShares X project received a lot of a
 in August 2013 when it was covered by CoinDesk and subsequently announced to the the
 BitcoinTalk forums on August 22nd 2013 as a project announcement. The project generated a
 good amount of buzz around the proposal, though the original scope and timelines have
-since modified.
+since undergone modification.
 
 Consensus Technology
 ####################
