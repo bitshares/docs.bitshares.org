@@ -13,10 +13,10 @@ coordinate the allocation of resources toward their most productive and valuable
 What is BitShares
 #################
 
-We have compile a some articles that give a brief overview over how
+We have compiled some articles that give a brief overview on how
 BitShares started, evolved and why it is where it is today. We recognize
 that BitShares has changed significantly over the last years and now
-feel confident to have a promising and very stable software that will
+feel confident to have promising and very stable software that will
 improve steadily at a pace that partners and customers can follow
 easily.
 
@@ -35,10 +35,10 @@ we recommend that you take a look at the :doc:`Getting Started
 Guides
 ######
 
-Since BitShares is a software with a variety of features and
+Since BitShares is software with a variety of features and
 possibilities, not only for developers but also for end-users and
-merchants, we have collected several guides for each group that should
-help think things through.
+merchants, we have compiled several guides for each group that should
+help in thinking things through.
 
 .. toctree::
    :maxdepth: 1
