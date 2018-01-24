@@ -76,7 +76,7 @@ Remarks
 
 Wallet specific commands, such as ``transfer`` and market orders, are only
 available if connecting to ``cli_wallet`` because only the wallet has the
-private keys and signing capabilities and some calls will only execute of the
+private keys and signing capabilities and some calls will only execute if the
 wallet is unlocked.
 
 The full node offers a set of API(s), of which only the ``database`` calls are
