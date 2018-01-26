@@ -1,6 +1,11 @@
 .. role:: html(raw)
    :format: html
 
+.. caution:: Please note that the content of this web page is out-dated
+     and currently under review by the BitShares Blockchain Foundation. If
+     you need factual information regarding the BitShares Blockchain, or BTS,
+     please contact spokesperson@bitshares.foundation. 
+
 *************************************
 Welcome to the Graphene Documentation
 *************************************
