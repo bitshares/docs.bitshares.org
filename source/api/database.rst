@@ -1,34 +1,35 @@
 ************
-Database API
+API Database
 ************
 
-The database API is available from the full node via websockets.
+La API Database está disponible desde el nodo completo a través de websockets.
 
-If you have not set up your websockets connection, please read :doc:`this
-article <websocket>`.
+Si no ha configurado su conexión de websockets, lea :doc: `este
+artículo <websocket>`.
 
-.. contents:: Table of Contents
+
+.. contents:: Tabla de Contenidos
    :depth: 2
 
-Objects
+Objetos
 #######
 .. doxygenfunction:: graphene::app::database_api::get_objects
 
-Subscriptions
+Subscripciones
 #############
 .. doxygenfunction:: graphene::app::database_api::set_subscribe_callback
 .. doxygenfunction:: graphene::app::database_api::set_pending_transaction_callback
 .. doxygenfunction:: graphene::app::database_api::set_block_applied_callback
 .. doxygenfunction:: graphene::app::database_api::cancel_all_subscriptions
 
-Blocks and transactions
+Bloques y transacciones
 #######################
 .. doxygenfunction:: graphene::app::database_api::get_block_header
 .. doxygenfunction:: graphene::app::database_api::get_block
 .. doxygenfunction:: graphene::app::database_api::get_transaction
 .. doxygenfunction:: graphene::app::database_api::get_recent_transaction_by_id
 
-Globals
+Globales
 #######
 .. doxygenfunction:: graphene::app::database_api::get_chain_properties
 .. doxygenfunction:: graphene::app::database_api::get_global_properties
@@ -36,11 +37,11 @@ Globals
 .. doxygenfunction:: graphene::app::database_api::get_chain_id
 .. doxygenfunction:: graphene::app::database_api::get_dynamic_global_properties
 
-Keys
-####
+Contraseñas
+###########
 .. doxygenfunction:: graphene::app::database_api::get_key_references
 
-Accounts
+Cuentas
 ########
 .. doxygenfunction:: graphene::app::database_api::get_accounts
 .. doxygenfunction:: graphene::app::database_api::get_full_accounts
@@ -50,7 +51,7 @@ Accounts
 .. doxygenfunction:: graphene::app::database_api::lookup_accounts
 .. doxygenfunction:: graphene::app::database_api::get_account_count
 
-Balances
+Saldos
 ########
 .. doxygenfunction:: graphene::app::database_api::get_account_balances
 .. doxygenfunction:: graphene::app::database_api::get_named_account_balances
@@ -58,13 +59,13 @@ Balances
 .. doxygenfunction:: graphene::app::database_api::get_vested_balances
 .. doxygenfunction:: graphene::app::database_api::get_vesting_balances
 
-Assets
+Activos
 ######
 .. doxygenfunction:: graphene::app::database_api::get_assets
 .. doxygenfunction:: graphene::app::database_api::list_assets
 .. doxygenfunction:: graphene::app::database_api::lookup_asset_symbols
 
-Markets / feeds
+Mercados / feeds
 ###############
 .. doxygenfunction:: graphene::app::database_api::get_order_book
 .. doxygenfunction:: graphene::app::database_api::get_limit_orders
@@ -77,28 +78,28 @@ Markets / feeds
 .. doxygenfunction:: graphene::app::database_api::get_24_volume
 .. doxygenfunction:: graphene::app::database_api::get_trade_history
 
-Witnesses
+Testigos
 #########
 .. doxygenfunction:: graphene::app::database_api::get_witnesses
 .. doxygenfunction:: graphene::app::database_api::get_witness_by_account
 .. doxygenfunction:: graphene::app::database_api::lookup_witness_accounts
 .. doxygenfunction:: graphene::app::database_api::get_witness_count
 
-Committee members
-#################
+Miembros de Comité
+###################
 .. doxygenfunction:: graphene::app::database_api::get_committee_members
 .. doxygenfunction:: graphene::app::database_api::get_committee_member_by_account
 .. doxygenfunction:: graphene::app::database_api::lookup_committee_member_accounts
 
-Workers
-#######
+Trabajadores
+############
 .. doxygenfunction:: graphene::app::database_api::get_workers_by_account
 
-Votes
+Votos
 #####
 .. doxygenfunction:: graphene::app::database_api::lookup_vote_ids
 
-Authority / Validation
+Autoridad / Validación
 ######################
 .. doxygenfunction:: graphene::app::database_api::get_transaction_hex
 .. doxygenfunction:: graphene::app::database_api::get_required_signatures
@@ -109,10 +110,10 @@ Authority / Validation
 .. doxygenfunction:: graphene::app::database_api::validate_transaction
 .. doxygenfunction:: graphene::app::database_api::get_required_fees
 
-Proposed Transactions
-#####################
+Transacciones Propuestas
+########################
 .. doxygenfunction:: graphene::app::database_api::get_proposed_transactions
 
-Blinded balances
+Balances Ocultos
 ################
 .. doxygenfunction:: graphene::app::database_api::get_blinded_balances
