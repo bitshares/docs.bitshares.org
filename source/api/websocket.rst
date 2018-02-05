@@ -1,22 +1,24 @@
 *******************************
-Websocket Calls & Notifications
+Llamadas y Notificaciones de Websocket
 *******************************
 
-Prerequisits
+Prerequisitos
 ############
 
-This page assumes that you have a full node running and listening to port
-``8090``, locally.
+Esta página asume que tienes un nodo completo ejecutándose y escuchando el 
+puerto ``8090``, localmente.
 
-.. note:: If you also want to run a wallet, please pick reasonable different
-          ports and make sure you do not try to call methods at the wallet that
-          are only available to the blockchain API.
 
-Call Format
-###########
+.. note:: Si también deseas ejecutar un monedero, elige puertos diferentes y 
+          asegúrate de no intentar llamar a métodos en el monedero que sólo están 
+          disponibles para la API blockchain.
 
-In Graphene, Websocket calls are stateful and accessible via regular JSON formated
-websocket connection. The correct structure of the JSON call is
+Formato de Llamada
+##################
+
+En Graphene, las llamadas de Websocket son estables y accesibles a través de una conexión 
+de websocket con formato JSON. La estructura correcta de la llamada JSON es
+
 
 .. code-block:: js
 
@@ -30,37 +32,40 @@ websocket connection. The correct structure of the JSON call is
                ]
      }
 
-The parameters ``params`` have the following structure:
+Los parámetros ``params`` tienen la siguiente estructura:
 
 .. code-block:: js
 
      [API-identifier, Method-to-Call, Call-Parameters]
 
-In the example above, we query the ``database`` API which carries the
-identifier ``0`` in our example (see more details below).
+En el ejemplo anterior, consultamos la API ``database`` que lleva el 
+identificador ``0`` en nuestro ejemplo (ver más detalles a continuación).
 
-Example Call with `wscat`
+
+Llamada Ejemplo con `wscat`
 -------------------------
 
-The following will show the usage of websocket connections. We make use of the
-``wscat`` application available via ``npm``:
+Lo siguiente mostrará el uso de las conexiones websocket. Hacemos uso de la 
+aplicación ``wscat`` disponible a través de ``npm``:
+
 
 .. code-block:: sh
 
     npm install -g wscat
 
-A non-restricted call against a full-node would take the form:
+Una llamada no-restringida contra un nodo-completo toma la forma:
 
 .. code-block:: sh
     
     wscat -c ws://127.0.0.1:8090
     > {"id":1, "method":"call", "params":[0,"get_accounts",[["1.2.0"]]]}
 
-Successful Calls
-----------------
+Llamadas Completadas
+---------------------
 
-The API will return a properly JSON formated response carrying the same ``id``
-as the request to distinguish subsequent calls.
+La API devolverá una respuesta formateada JSON adecuada con el mismo ``id``
+como la solicitud para distinguir las llamadas siguientes.
+
 
 .. code-block:: js
 
@@ -69,11 +74,11 @@ as the request to distinguish subsequent calls.
      "result":  ..data..
     }
 
-Errors
-------
+Errores
+-------
 
-In case of an error, the resulting answer will carry an ``error`` attribute and
-a detailed description:
+En caso de error, la respuesta resultante tendrá un atributo ``error`` y
+una descripción detallada:
 
 .. code-block:: js
 
@@ -92,18 +97,19 @@ a detailed description:
 
 .. _requestingAPIaccess:
 
-Requesting API access
-#####################
+Solicitar acceso a la API
+#########################
 
-The Graphene full node offers a wide range of APIs that can be accessed via
-websockets. The procedure works as follows:
+El nodo completo de Graphene ofrece una amplia gama de APIs a las que se puede 
+acceder mediante websockets. El procedimiento funciona de la siguiente manera:
 
-1. Login to the Full Node
-2. Request access to an API
-3. Obtain the API identifier
-4. Call methods of a specific API by providing the identifier
 
-Find below a list of available APIs:
+1. Login al Nodo Completo
+2. Solicita acceso a una API
+3. Obtener el identificador API
+4. Métodos de llamada de una API específica proporcionando el identificador
+
+Encuentra a continuación una lista de API disponibles:
 
 .. toctree::
    :maxdepth: 1
@@ -116,79 +122,81 @@ Find below a list of available APIs:
 1. Login
 --------
 
-The first thing we need to do is to *login*::
+Lo primero que debemos hacer es *login*::
 
     > {"id":2,"method":"call","params":[1,"login",["",""]]}
     < {"id":2,"result":true}
 
-If you have :doc:`restricted access <./access>` then you may be required to put
-your ``username`` and ``pasword`` into the quotes, accordingly. Furthermore, you
-should verify, that the ``result`` give positive confirmation about your login.
+Si tienes :doc:`acceso restringido <./access>`se te puede solicitar que pongas 
+un ``username``y``pasword``, según corresponda. Además, deberias verificar que 
+el ``result`` da una confirmación positiva a tu inicio de sesión.
 
-2. Requesting Access to an API
+
+2. Solicitar acceso a una API 
 ------------------------------
 
-Most data can be queried from the :doc:`database`-API to which we *register*
-with the following call:::
+La mayoría de los datos se pueden consultar desde la :doc:`database`-API a 
+la que *registrarse* con la siguiente llamada:::
 
     > {"id":2,"method":"call","params":[1,"database",[]]}
 
-3. Obtain the API identifier
-----------------------------
+3. Obtenga el identificador de API 
+-----------------------------------
 
-After requesting access, the full node will either deny access or return an
-identifier to be used in future calls::
+Después de solicitar el acceso, el nodo completo negará el acceso o devolverá 
+un identificador para ser utilizado en futuras llamadas::
 
     < {"id":2,"result":2}
 
-The ``result`` will be our identifier for the database API, in the following
-called ``DATABASE_API_ID``!
+¡El ``result``será nuestro identificador para la base de datos de la API, en la 
+posterior y llamada`` DATABASE_API_ID``!
 
-4. Call methods of a specific API by providing the identifier
--------------------------------------------------------------
 
-Now we can call any methods available to the ``database`` API via:::
+4. Métodos de llamada de una especifica API, proporcionando el identificador
+-----------------------------------------------------------------------------
+
+Ahora podremos llamar cualquier método disponible en el ``database`` API via:::
 
     > {"id":1, "method":"call", "params":[DATABASE_API_ID,"get_accounts",[["1.2.0"]]]}
 
-Database Notifications
+Notificaciones Database
 ######################
 
-In Graphene, the websocket connection is used for notifications when objects
-in the database change or a particular event (such as filled orders) occur.
+En Graphene, a conexión del websocket es usada para las notificaciones cuando los 
+objetos de la base de datos cambian o se produce algún evento en particular (como pedidos completos).
 
-We have the following subscriptions available:
+
+Tenemos las siguientes suscripciones disponibles:
 
 * ``set_subscribe_callback( int identifier, bool clear_filter )``:
-     To simplify development a global subscription callback can be registered.
-
-     Every notification initiated by the full node will carry a particular
-     ``id`` as defined by the user with the ``identifier`` parameter.
+     Para simplificar el avance, se puede registrar una devolución de la llamada de suscripción global.
+     Cada notificación iniciada por el nodo completo llevará un particular
+     `` id`` como lo define el usuario con el parámetro ``identifier``.
 * ``set_pending_transaction_callback(int identifier)``:
-     Notifications for incoming *unconfirmed* transactions.
+     Notificaciones para transacciones entrantes *no confirmadas*.
 * ``set_block_applied_callback(blockid)``:
-     Gives a notification whenever the block ``blockid`` is applied to the
-     blockchain.
+     Da una notificación cada vez que se aplica el `` blockid`` de bloque es aplicado 
+     a la blockchain
 * ``subscribe_to_market(int identifier, asset_id a, asset_id b))``:
-    Subscribes to market changes in market ``a:b`` and sends notifications with
-    id ``identifier``.
+    Se suscribe a los cambios del mercado en el mercado ``a:b`` y envía notificaciones con
+    id ``identificador``.
 * ``get_full_accounts(array account_ids, bool subscribe)``:
-    Returns the full account object for the accounts in array ``account_ids``
-    and subscribes to changed to that account if ``subscribe`` is set to
-    ``True``.
-
-Let's first get a global scubscription callback to disctinguish our
-notifications from regular RPC calls:::
+    Devuelve el objeto de cuenta completo para las cuentas en la matriz ``account_ids`
+     y se suscribe a cambiado a esa cuenta si ``subscribe`` está configurado para
+     ``True``.
+   
+Primero obtengamos una devolución de llamada de suscripción global para distinguir su
+notificaciones de llamadas RPC regulares:::
 
     > {"id":4,"method":"call","params":[DATABASE_API_ID,"set_subscribe_callback",[SUBSCRIPTION_ID, true]]}
 
-This call above will register ``SUBSCRIPTION_ID`` as id for notifications.
+Esta llamada anterior registrará ``SUBSCRIPTION_ID`` como id para las notificaciones.
 
-Now, whenever you get an object from the witness (e.g. via ``get_objects``) you
-will automatically subscribe to any future changes of that object.
+Ahora, cada vez que obtienes un objeto del testigo (por ejemplo, a través de ``get_objects``)
+se suscribirá automáticamente a cualquier cambio futuro de ese objeto.
 
-After calling ``set_subscribe_callback`` the witness will start to send notices
-every time the object changes:::
+Después de llamar a ``set_subscribe_callback`` el testigo comenzará a enviar avisos
+cada vez que el objeto cambia:::
 
     < {
         "method": "notice"
@@ -203,10 +211,10 @@ every time the object changes:::
         ], 
     }
 
-Example Session
-###############
+Sesión de ejemplo
+#################
 
-Here is an example of a full session:::
+Aquí hay un ejemplo de una sesión completa:::
 
   > {"method": "call", "params": [1, "login", ["", ""]], "id": 2}
   < {"id":2,"result":true}
@@ -217,4 +225,4 @@ Here is an example of a full session:::
   > {"method": "call", "params": [2, "set_subscribe_callback", [5, false]], "id": 6}
   < {"id":6,"result":null}
   > {"method": "call", "params": [2, "get_objects", [["2.1.0"]]], "id": 7}
-  (plenty of data coming in from this point on)
+  (muchos datos vienen a partir de este momento)
