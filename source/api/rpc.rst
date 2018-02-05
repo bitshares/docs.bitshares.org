@@ -1,20 +1,21 @@
-**********************
-Remote Procedure Calls
-**********************
+*********************************
+Llamadas de Procedimiento Remoto
+*********************************
 
-Prerequisits
+Prerequisitos
 ############
 
-This page assumes that you either have a full node or a wallet running and
-listening to port ``8090``, locally.
+Esta página asume que tienes un nodo completo o un monedero ejecutándose y 
+escuchando el puerto``8090``, localmente.
 
-.. note:: The set of available commands depends on application you connect to.
+.. note:: El conjunto de comandos disponibles depende de la aplicación a la que te conectes.
 
-Call Format
-###########
+Formato de Llamada
+##################
 
-In Graphene, RPC calls are state-less and accessible via regular JSON formated
-RPC-HTTP-calls. The correct structure of the JSON call is
+En Graphene, las llamadas RPC son sin estado y accesibles a través de llamadas 
+RPC-HTTP con formato JSON normales. La estructura correcta de la llamada JSON es
+
 
 .. code-block:: js
 
@@ -25,23 +26,24 @@ RPC-HTTP-calls. The correct structure of the JSON call is
      "params": [["1.2.0", "1.2.1"]],
     }
 
-The ``get_accounts`` call is available in the Full Node's ``database`` API and
-takes only one argument which is an array of account ids (here: ``["1.2.0", "1.2.1"]``).
+La llamada ``get_accounts`` está disponible en la API ``database`` de Nodo Completo y 
+toma sólo un argumento que es una matriz de ids de cuenta (aquí ``["1.2.0", "1.2.1"]``).
 
-Example Call with `curl`
-------------------------
 
-Such as call can be submitted via ``curl``:
+Ejemplo de Llamada con `curl`
+----------------------------
+
+Esas llamadas pueden enviarse a través de ``curl``:
 
 .. code-block:: sh
 
     curl --data '{"jsonrpc": "2.0", "method": "get_accounts", "params": [["1.2.0", "1.2.1"]], "id": 1}' http://127.0.0.1:8090/rpc
 
-Successful Calls
-----------------
+Llamadas completadas
+---------------------
 
-The API will return a properly JSON formated response carrying the same ``id``
-as the request to distinguish subsequent calls.
+La API devolverá una respuesta en un formato JSON adecuado con el mismo ``id`` 
+que la solicitud, para distinguir las llamadas siguientes.
 
 .. code-block:: js
 
@@ -50,11 +52,11 @@ as the request to distinguish subsequent calls.
      "result":  ..data..
     }
 
-Errors
-------
+Errores
+--------
 
-In case of an error, the resulting answer will carry an ``error`` attribute and
-a detailed description:
+En caso de error, la respuesta resultante acarreará un atributo de ``error`` y 
+una descripción detallada:
 
 .. code-block:: js
 
@@ -71,16 +73,16 @@ a detailed description:
       },
     }
 
-Remarks
-#######
+Observaciones
+#############
 
-Wallet specific commands, such as ``transfer`` and market orders, are only
-available if connecting to ``cli_wallet`` because only the wallet has the
-private keys and signing capabilities and some calls will only execute of the
-wallet is unlocked.
+Comandos específicos del monedero, como ``transfer`` y realizar órdenes de mercado, 
+sólo están disponibles si te conectas a ``cli_wallet`` porque sólo el monedero tiene 
+las claves privadas y la capacidad de firma. Algunas llamadas sólo se ejecutarán si 
+la cartera está desbloqueada.
 
-The full node offers a set of API(s), of which only the ``database`` calls are
-avaiable via RPC. Calls that are restricted by default (i.e.
-``network_node_api``) or have been restricted by configuration are not
-accessible via RPC because a statefull protocol (websocket) is required for
-login.
+El nodo completo ofrece un conjunto de API(s), de las cuales los las llamadas 
+``database`` están disponibles a través de RPC. Las llamadas que están restringidas 
+por defecto (por ejemplo ``network_node_api``) o que se han restringido por la configuración 
+no son accesibles a través de RCP porque requieren un protocolo de estado completo (websocket) 
+para iniciar sesión.
