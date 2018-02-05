@@ -1,21 +1,22 @@
 *******************
-Account History API
+Cuenta API History 
 *******************
 
-The history API is available from the full node via websockets.
+La API history está disponible desde el nodo completo a través de websockets.
 
-If you have not set up your websockets connection, please read :doc:`this
-article <websocket>`.
+Si no ha configurado su conexión de websockets, lea :doc: `este
+artículo <websocket> `.
 
-.. contents:: Table of Contents
+
+.. contents:: Tabla de Contenidos
    :depth: 2
 
-Account History
-###############
+Historial de Cuenta
+####################
 .. doxygenfunction:: graphene::app::history_api::get_account_history
 
-Market History
-##############
+Historial de Mercado
+####################
 .. doxygenfunction:: graphene::app::history_api::get_fill_order_history
 .. doxygenfunction:: graphene::app::history_api::get_market_history
 .. doxygenfunction:: graphene::app::history_api::get_market_history_buckets
