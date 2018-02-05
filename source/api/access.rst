@@ -1,21 +1,19 @@
-***********************
-API Access Restrictions
-***********************
+**********************************
+Restricciones de acceso a la API 
+**********************************
 
-In order to access the unrestricted API-0, we call make use of usual
-*stateless* RPC-calls. To access the restricted API-1 we are required to use
-the websocket connection with callbacks to access API-1:
+Para acceder al API-0 sin restricciones, llamamos hacer uso de la habitual
+llamadas RPC *sin estado*. Para acceder al API-1 restringido, debemos usar
+la conexión de websocket con devoluciones de llamada para acceder a API-1:
 
-* API-0: *state-less* querying
-* API-1: *authencitated* interaction
+* API-0: consulta *sin estado*
+* API-1: interacción *autenticada*
 
-Authorization Scheme
-####################
+Esquema de Autorización
+#######################
 
-You can restrict API's to particular users by specifying an ``api-access`` file in ``config.ini`` or by using the ``--api-access /full/path/to/api-access.json`` startup node command.  Here is an example ``apiaccess`` file which allows user
-``bytemaster`` with password ``supersecret`` to access four different API's, while
-allowing any other user to access the three public API's necessary to use the
-wallet:::
+Puedes restringir las APIs a usuarios particulares especificando un archivo ``api-access`` en `` config.ini`` o usando ``--api-access/full/path/to/api-access.json` `comando de nodo de inicio. Aquí hay un archivo de ejemplo ``apiaccess`` que permite al usuario ``bytemaster`` con la contraseña ``supersecret`` para acceder a cuatro API diferentes, mientras
+que permite a cualquier otro usuario acceder a las tres API públicas necesarias para usar la billetera:::
 
     {
        "permission_map" :
@@ -39,25 +37,23 @@ wallet:::
        ]
     }
 
-Passwords are stored in ``base64`` as as salted ``sha256`` hashes.  A simple Python
-script, ``saltpass.py`` is avaliable to obtain hash and salt values from a
-password.  A single asterisk ``*`` may be specified as username or password
-hash to accept any value.
+Las contraseñas se almacenan en ``base64`` como 'hashes' con 'salt' ``sha256``. Un simple script de Python, ``saltpass.py`` está disponible para obtener valores 'hash' y valores 'salt' de una contraseña. Un solo asterisco ``*`` se puede especificar como hash de nombre de usuario o de contraseña para aceptar cualquier valor.
 
-With the above configuration, here is an example of how to call ``add_node`` from
-the ``network_node`` API:::
+Con la configuración anterior, aquí hay un ejemplo de como llamar``add_node`` desde la API ``network_node``:::
 
     {"id":1, "method":"call", "params":[1,"login",["bytemaster", "supersecret"]]}
     {"id":2, "method":"call", "params":[1,"network_node",[]]}
     {"id":3, "method":"call", "params":[2,"add_node",["127.0.0.1:9090"]]}
 
-Note, the call to ``network_node`` is necessary to obtain the correct API
-identifier for the network API.  It is not guaranteed that the network API
-identifier will always be ``2``.
+Ten en cuenta que la llamada a ``network_node`` es necesaria para obtener la API correcta
+identificador para la red API. No se garantiza que la red API 
+identificador siempre será ``2``.
 
-Since the ``network_node`` API requires login, it is only accessible over the
-websocket RPC. Our `doxygen`_ documentation contains the most up-to-date
-information about APIs.
+
+Como la API ``network_node`` requiere el inicio de sesión, solo se puede acceder a través del
+websocket RPC. Nuestra documentación `doxygen`_ contiene la más actualizada
+información sobre las APIs.
+
 
 Login In
 #########
