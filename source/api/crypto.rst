@@ -1,28 +1,28 @@
 **********
-Crypto API
+API Crypto
 **********
 
-The crypto API is available from the full node via websockets.
+La API crypto está disponible desde el nodo completo a través de websockets.
 
-If you have not set up your websockets connection, please read :doc:`this
-article <websocket>`.
+Si no ha configurado su conexión de websockets, lea:doc: `este
+artículo <websocket>`.
 
-.. contents:: Table of Contents
+.. contents:: Tabla de Contenidos
    :depth: 2
 
-Blinding and Un-Blinding
+Ocultar y Des-Ocultar
 ########################
 .. doxygenfunction:: graphene::app::crypto_api::blind_sign
 .. doxygenfunction:: graphene::app::crypto_api::unblind_signature
 .. doxygenfunction:: graphene::app::crypto_api::blind
 .. doxygenfunction:: graphene::app::crypto_api::blind_sum
 
-Rage Proofs
+Pruebas Rage
 ###########
 .. doxygenfunction:: graphene::app::crypto_api::range_get_info
 .. doxygenfunction:: graphene::app::crypto_api::range_proof_sign
 
-Verification
+Verificación
 ############
 .. doxygenfunction:: graphene::app::crypto_api::verify_sum
 .. doxygenfunction:: graphene::app::crypto_api::verify_range
