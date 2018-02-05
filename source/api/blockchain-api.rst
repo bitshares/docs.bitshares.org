@@ -2,8 +2,9 @@
 Blockchain API
 **************
 
-The Graphene full node distinguishes several different APIs that can be
-accessed as described :ref:`the websockets documentation<requestingAPIaccess>`.
+El nodo completo Graphene distingue varias APIs diferentes que pueden 
+accederse como se describe :ref:`la documentación de websockets<requestingAPIaccess>`.
+
 
 .. toctree::
    :maxdepth: 1
@@ -14,6 +15,6 @@ accessed as described :ref:`the websockets documentation<requestingAPIaccess>`.
    network_broadcast
    network_node
 
-Access to some APIs may be **restricted** and requires login with username and
-passphrase. More detailed description about this can be found on the
-:doc:`access` page.
+El acceso a algunas APIs puede estar **restringido** y requiere iniciar sesión con nombre de usuario y
+frase-contraseña Se puede encontrar una descripción más detallada sobre esto en
+:doc: página `access`.
