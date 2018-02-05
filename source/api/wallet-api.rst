@@ -1,19 +1,19 @@
-********************
-Wallet API Calls
-********************
+***********************
+Llamadas de API Wallet
+***********************
 
-The wallet (``cli_wallet``) requires a running full node to connect to because
-it does not offer P2P or blockchain capabilities directly.
+El monedero ("cli_wallet") requiere ejecutar un nodo completo para conectarse, 
+porque no ofrece capacidades de P2P o de blockchain directamente.
 
-If you have not set up your wallet yet, you can find more information on the
-:doc:`../integration/apps/cliwallet` and the :doc:`../integration/apps/cli-faq`
-pages.
+Si aún no has configurado tu monedero puede encontrar más información en las páginas
+:doc:`../integration/apps/cliwallet`y :doc:`../integration/apps/cli-faq`.
 
-.. contents:: Table of Contents
+
+.. contents:: Tabla de Contenidos
    :depth: 2
 
-General Calls
-#############
+Llamadas Generales
+###################
 .. doxygenfunction:: graphene::wallet::wallet_api::help
 .. doxygenfunction:: graphene::wallet::wallet_api::gethelp
 .. doxygenfunction:: graphene::wallet::wallet_api::info
@@ -21,8 +21,8 @@ General Calls
 .. doxygenfunction:: graphene::wallet::wallet_api::network_add_nodes
 .. doxygenfunction:: graphene::wallet::wallet_api::network_get_connected_peers
 
-Wallet Calls
-############
+Llamadas de Wallet
+###################
 .. doxygenfunction:: graphene::wallet::wallet_api::is_new
 .. doxygenfunction:: graphene::wallet::wallet_api::is_locked
 .. doxygenfunction:: graphene::wallet::wallet_api::lock
@@ -40,8 +40,8 @@ Wallet Calls
 .. doxygenfunction:: graphene::wallet::wallet_api::normalize_brain_key
 .. doxygenfunction:: graphene::wallet::wallet_api::save_wallet_file
 
-Account Calls
-#############
+Llamadas de Cuenta
+###################
 .. doxygenfunction:: graphene::wallet::wallet_api::list_my_accounts
 .. doxygenfunction:: graphene::wallet::wallet_api::list_accounts
 .. doxygenfunction:: graphene::wallet::wallet_api::list_account_balances
@@ -58,8 +58,8 @@ Account Calls
 .. doxygenfunction:: graphene::wallet::wallet_api::get_account_history
 .. doxygenfunction:: graphene::wallet::wallet_api::approve_proposal
 
-Trading Calls
-#############
+Llamadas de Trading 
+####################
 .. doxygenfunction:: graphene::wallet::wallet_api::sell_asset
 .. doxygenfunction:: graphene::wallet::wallet_api::borrow_asset
 .. doxygenfunction:: graphene::wallet::wallet_api::cancel_order
@@ -69,8 +69,8 @@ Trading Calls
 .. doxygenfunction:: graphene::wallet::wallet_api::get_call_orders
 .. doxygenfunction:: graphene::wallet::wallet_api::get_settle_orders
 
-Asset Calls
-#############
+Llamadas de Activo
+##################
 .. doxygenfunction:: graphene::wallet::wallet_api::list_assets
 .. doxygenfunction:: graphene::wallet::wallet_api::create_asset
 .. doxygenfunction:: graphene::wallet::wallet_api::update_asset
@@ -84,8 +84,8 @@ Asset Calls
 .. doxygenfunction:: graphene::wallet::wallet_api::reserve_asset
 .. doxygenfunction:: graphene::wallet::wallet_api::global_settle_asset
 
-Governance
-##########
+Gestión
+#######
 .. doxygenfunction:: graphene::wallet::wallet_api::create_committee_member
 .. doxygenfunction:: graphene::wallet::wallet_api::get_witness
 .. doxygenfunction:: graphene::wallet::wallet_api::get_committee_member
@@ -102,7 +102,7 @@ Governance
 .. doxygenfunction:: graphene::wallet::wallet_api::propose_parameter_change
 .. doxygenfunction:: graphene::wallet::wallet_api::propose_fee_change
 
-Privacy Mode
+Modo Privado
 ############
 .. doxygenfunction:: graphene::wallet::wallet_api::set_key_label
 .. doxygenfunction:: graphene::wallet::wallet_api::get_key_label
@@ -117,7 +117,7 @@ Privacy Mode
 .. doxygenfunction:: graphene::wallet::wallet_api::blind_history
 .. doxygenfunction:: graphene::wallet::wallet_api::receive_blind_transfer
 
-Blockchain Inspection
+Inspección de Blockchain
 #####################
 .. doxygenfunction:: graphene::wallet::wallet_api::get_block
 .. doxygenfunction:: graphene::wallet::wallet_api::get_account_count
@@ -125,8 +125,8 @@ Blockchain Inspection
 .. doxygenfunction:: graphene::wallet::wallet_api::get_dynamic_global_properties
 .. doxygenfunction:: graphene::wallet::wallet_api::get_object
 
-Transaction Builder
-###################
+Constructor de transacciones
+#############################
 .. doxygenfunction:: graphene::wallet::wallet_api::begin_builder_transaction
 .. doxygenfunction:: graphene::wallet::wallet_api::add_operation_to_builder_transaction
 .. doxygenfunction:: graphene::wallet::wallet_api::replace_operation_in_builder_transaction
