@@ -1,23 +1,24 @@
 *****************
-Network Nodes API
+API Network Nodes 
 *****************
 
-The network node API is available from the full node via websockets.
+La API network node está disponible desde el nodo completo a través de websockets.
 
-If you have not set up your websockets connection, please read :doc:`this
-article <websocket>`.
+Si no has configurado tu conexión de websockets, lee :doc: `este
+artículo <websocket> `.
 
-.. contents:: Table of Contents
+
+.. contents:: Tabla de Contenidos
    :depth: 2
 
-Obtain Network Information
+Obtener Información de Red
 ##########################
 .. doxygenfunction:: graphene::app::network_node_api::get_info
 .. doxygenfunction:: graphene::app::network_node_api::get_connected_peers
 .. doxygenfunction:: graphene::app::network_node_api::get_potential_peers
 .. doxygenfunction:: graphene::app::network_node_api::get_advanced_node_parameters
 
-Change Network Settings
-#######################
+Cambiar las Configuraciones de Red
+###################################
 .. doxygenfunction:: graphene::app::network_node_api::add_node
 .. doxygenfunction:: graphene::app::network_node_api::set_advanced_node_parameters
