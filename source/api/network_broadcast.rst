@@ -1,20 +1,20 @@
 *********************
-Network Broadcast API
+API Network Broadcast
 *********************
 
-The network broadcast API is available from the full node via websockets.
+La API network broadcast está disponible desde el nodo completo a través de websockets.
 
-If you have not set up your websockets connection, please read :doc:`this
-article <websocket>`.
+Si no has configurado tu conexión de websockets, lee :doc: `este
+artículo <websocket> `.
 
-.. contents:: Table of Contents
+.. contents:: Tabla de Contenidos
    :depth: 2
 
-Transactions
-############
+Transacciones
+##############
 .. doxygenfunction:: graphene::app::network_broadcast_api::broadcast_transaction
 .. doxygenfunction:: graphene::app::network_broadcast_api::broadcast_transaction_with_callback
 
-Block
-#####
+Bloque
+######
 .. doxygenfunction:: graphene::app::network_broadcast_api::broadcast_block
