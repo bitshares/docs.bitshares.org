@@ -1,47 +1,52 @@
 *********
-API Guide
+Guia API 
 *********
 
-This page serves as a comprehensive reference for the Graphene API and
-its blockchain, such as :doc:`../bitshares/index` and
+Esta página sirve como una referencia completa para la API de Graphene y 
+su blockchain, como por ejemplo :doc:`../bitshares/index` y 
 :doc:`../muse/index`.
 
-APIs are separated into two categories, namely
 
-* the **Blockchain API** which is used to query blockchain data (account, assets, trading history, etc.) and 
-* the **Wallet API** which has your private keys loaded and is required when interacting with the blockchain with new transactions.
+Las APIs están separadas en dos categorías, que son
 
-.. note:: In order to interface with *the wallet*, you need to run the
-          :doc:`../integration/apps/cliwallet`. Neither the
-          **light-wallet**, nor the **hosted web wallet** will provide
-          you with an API.
+* la **API blockchain** que se utiliza para consultar datos de blockchain (cuenta, activos, historial de trading, etc) y
+* la **API Wallet** que tiene tus claves privadas cargadas y es necesaria cuando se interactúa con la blockchain con nuevas transacciones.
 
-In contrast to many existing ecosystems, there is no centralized service that
-lets you access private API calls after successful authentication. Instead,
-your run your wallet (and optionally a full node) **locally** and are with
-**your own API service provider**. This obviously has the advantage that you
-don't need to give access to your funds to any third party but has the slight
-disadvantage that you need to run a local :doc:`wallet application
-<../integration/apps/cliwallet>`, that however does not download the
-whole blockchain for verification. If you run a sensitive business, we
-recommend to also run a local full node to download and verify the
-blockchain and interface your wallet with your local full node.
+.. note:: Para interactúar con *el monedero* necesitas ejercutar 
+          :doc:`../integration/apps/cliwallet`. Ni el 
+          **light-wallet**, ni el **monedero web** te proporcionarán 
+          una API.
 
-This page will give you a detailed description of both API categories, the
-Remote Procedure Calls and Websockets, and will give an introduction to many
-available calls.
 
-Interfacing with Graphene
-#########################
+A diferencia de muchos ecosistemas existentes, no hay servicios centralizados que 
+te permitan acceder a las llamadas de una API privada después de una autenticación 
+exitosa. En vez de eso ejecuta tu monedero (y opcionalmente un nodo completo) 
+**localmente** y este con **tu propio proveedor de servicios API**. Obviamente, esto 
+tiene la ventaja de que no necesitas dar acceso a tus fondos a ningún tercero, pero 
+tiene la leve desventaja de que necesitas ejecutar una :doc:`aplicación monedero 
+<../integration/apps/cliwallet>`, que sin embargo no descarga toda la blockchain 
+para su verificación. Si gestionas un negocio sensible, te recomendamos que también 
+ejecutes un nodo completo local para descargar y verificar la blockchain e interactúes 
+con tu monedero con tu nodo completo local.
 
-The set of available calls depends on whether you connect to a full node
-(``witness_node``) or the wallet (``cli_wallet``). Both support RPC-JSON. The
-full node also supports the websocket protocol with notifications.
 
-Which blockchain network you connect to (BitShares, MUSE, ..) depends on the
-configuration of the full node and the wallet. If you run a full node, we
-recommend to connect your wallet to your local full node even though it could
-be connected to any other public full node as well.
+Esta página te dará una descripción detallada de ambas categorías de API, 
+Llamadas de Procedimiento Remoto y Websockets, y dará una introducción a muchas 
+llamadas disponibles.
+
+
+Interconectando con Graphene
+############################
+
+El conjunto de llamadas disponibles depende de si se conecta a un nodo completo
+(``witness_node``) o la monedero (``cli_wallet``). Ambos admiten RPC-JSON. El
+nodo completo también es compatible con el protocolo websocket con notificaciones.
+
+A qué red de blockchain te conectas (BitShares, MUSE, ..) depende de la 
+configuración del nodo completo y el monedero. Si ejecutas un nodo completo, 
+te recomendamos conectar tu monedero a tu nodo completo local, aunque también 
+podrías conectarte a cualquier otro nodo completo público.
+
 
 .. graphviz::
 
@@ -66,19 +71,22 @@ be connected to any other public full node as well.
     {rank=same "Withdraw API" "Blockchain API"}
    }
 
-For sensitive businesses that want to ensure that deposits are irreversible, we
-recommend the use of the :ref:`High Security Setup <highsecuritynetworksetup>`.
-That contains a *delayed node* to pass only irreversible transactions to the API.
+Para negocios sensibles que desean garantizar que los depósitos sean irreversibles, 
+recomendamos el uso de :ref:`Configuración de Alta Seguridad <highsecuritynetworksetup>`. 
+Que contiene un *nodo retrasado* para pasar sólo transacciones irreversibles a la API.
 
-.. note:: All API calls are formated in JSON and return JSON only.
 
-Wallet API
+.. note:: Todas las llamadas API tienen formato en JSON y sólo devuelven JSON.
+
+API Wallet 
 ----------
 
-This chapter introduces the calls available via wallet API. If you have not set
-up your wallet yet, you can find more information on the
-:doc:`../integration/apps/cliwallet` and the :doc:`../integration/apps/cli-faq`
-pages.
+Este capítulo presenta las llamadas disponibles a través de wallet API. Si aún no 
+has configurado tu monedero, puedes encontrar más información en las páginas 
+:doc: `../integration/apps/cliwallet` y :doc: `../integration/apps/cli-faq`.
+
+
+
 
 .. toctree::
    :maxdepth: 1
@@ -86,17 +94,18 @@ pages.
    rpc
    wallet-api
 
-Blockchain API(s)
------------------
+API(s) de Blockchain
+--------------------
 
-The blockchain API can be used to obtain any kind of data stored in the
-blockchain. Besides data stores in the blockchain itself (blocks, transactions,
-etc. ..), higher level objects (such as accounts, balances, etc. ...) can be
-retrieved through the full node's database.
+La API de blockchain se puede usar para obtener cualquier clase de datos almacenados 
+en la blockchain. Además de almacenar datos en la propio blockchain (bloques, 
+transacciones, etc.), los objetos de nivel superior (como cuentas, saldos, etc...) 
+se pueden recuperar a través de la base de datos del nodo completo.
 
-It is not required to run a local full node if you want to query a particular
-blockchain or database, but you can also query any existing public node for
-information.
+No es necesario ejecutar un nodo completo local si deseas consultar un determinada
+blockchain o base de datos, pero también puedes consultar cualquier nodo público 
+existente para información.
+
 
 .. toctree::
    :maxdepth: 1
@@ -105,18 +114,22 @@ information.
    websocket
    blockchain-api
 
-Blockchain Objects and their Identifiers
---------------------------------------
 
-In contrast to many other projects, the Graphene technology distinguishes
-different kinds of objects, in the protocol and implementation space.
+Objetos de la Blockchain y sus Identificadores
+----------------------------------------------
 
-In the protocol space, there are raw objects such as, accounts, assets,
-committee members as well as orders, proposals and balances. The implementation
-space is used to gain access to higher abstraction layers for instance content
-of the current database state (these include, current global blockchain
-properties, dynamic asset data, transaction histories as well as account
-statistics and budget records).
+A diferencia de otros proyectos, la tecnología de Graphene distingue 
+diferentes tipos de objetos, tanto en el protocolo como en el espacio de 
+implementación.
+
+
+En el espacio de protocolo, hay objetos en bruto como, cuentas, activos, 
+miembros del comité, así como pedidos, propuestas y saldos. El espacio de implementación 
+se usa para obtener acceso a capas de abstracción más altas, por ejemplo, el contenido 
+del estado actual de la base de datos (esto incluye, propiedades globales y actuales de la blockchain, 
+datos dinámicos de activos, historiales de transacciones, así como estadísticas de cuentas 
+y registros presupuestarios).
+
 
 .. toctree::
    :maxdepth: 1
