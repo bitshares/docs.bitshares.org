@@ -2,9 +2,10 @@
 Closing/Settling a Prediction Market
 ************************************
 
-All the issuer needs to do is publish a valid price feed for the asset.
-The `global_settle` option will be set automatically and borrow
-positions can settle at the price feed.
+All the issuer needs to do is publish a valid `global_settle` price for the
+asset, either `0` or `1`. The `global_settle` option will be set automatically
+and borrow positions will be settled at the price. If the result is `1`,
+asset holders can claim the global settled collateral via force settlement.
 
 Python Script
 #############
@@ -29,7 +30,7 @@ Python Script
         pm_result = True  # or False        <<<<-------- Result goes here
         account = graphene.rpc.get_account(issuer)
         asset = graphene.rpc.get_asset(symbol)
-        # Publish a price
+        # Global settle with a price
         settle_price = {"quote": {"asset_id": "1.3.0",
                                   "amount": 1 if pm_result else 0},
                         "base": {"asset_id": asset["id"],
