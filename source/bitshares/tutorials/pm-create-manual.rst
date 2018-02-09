@@ -44,7 +44,11 @@ and these MPA-options:
 Settlement Authorities
 ######################
 
-The issue can choose between three parties that are allowed to settle
+Note: as of writing (2018-02-09), due to a bug, settlement authorites
+can only settle the prediction market with outcome ``1``,
+while asset issuer/creator can global settle with either ``0`` or ``1``.
+
+The issuer can choose among three parties that are allowed to settle
 the prediction market:
 
 * Committee
@@ -81,11 +85,12 @@ Other Accounts
 **************
 
 Similar to :doc:`../user/privbta`, the feed can be also published by a
-arbitrary set of accounts. It is important to understand that in order
+arbitrary set of accounts. If `minimum_feeds` is set to `1`, then in order
 to settle a prediction market, only **one price feed** is requried.
 Hence, anyone in the list of allowed settlers can settle the market and
 no consensus needs to be reached. Alternatively, if you want to settle a
-market only if several accounts can reach a consensus, a new resulution
+market only if several accounts can reach a consensus, either set
+`minimum_feeds` to a bigger number, or a new resulution
 account can be created that uses :doc:`hierarchical multi-signature
 <../user/account-permissions>` similar to the `committee-account`.
 
