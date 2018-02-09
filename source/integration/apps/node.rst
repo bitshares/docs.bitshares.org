@@ -8,7 +8,7 @@ the corresponding witness voted active by the shareholders.
 
 Both represent nodes in the network that verify all transactions and blocks
 against the current state of the overall network. Hence, we recommend all
-service providers to run an maintain their own **full nodes** for reliability
+service providers to run and maintain their own **full nodes** for reliability
 and security reasons.
 
 Full Nodes
