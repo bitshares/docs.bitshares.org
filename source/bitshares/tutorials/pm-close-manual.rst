@@ -2,10 +2,11 @@
 Closing/Settling a Prediction Market
 ************************************
 
-All the issuer needs to do is publish a valid `global_settle` price for the
-asset, either `0` or `1`. The `global_settle` option will be set automatically
-and borrow positions will be settled at the price. If the result is `1`,
-asset holders can claim the global settled collateral via force settlement.
+All the issuer needs to do is publish a valid ``global_settle`` price for the
+asset, either ``0`` or ``1``. The ``global_settle`` option will be set
+automatically and borrow positions will be settled at the price.
+If the result is ``1``, asset holders can claim the global settled
+collateral via force settlement.
 
 Python Script
 #############
