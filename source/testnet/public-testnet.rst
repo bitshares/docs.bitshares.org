@@ -28,7 +28,7 @@ compile them as described in the `build instructions
 
 ::
 
-  $ programs/witness_node/witness_node --genesis-json genesis.json
+  $ programs/witness_node/witness_node --genesis-json=genesis.json
 
 .. warning:: On this network, **everything** is allowed. As a
              consequence the *outside* price of any token on this
