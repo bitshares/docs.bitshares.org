@@ -48,7 +48,7 @@ this command:
 
 ::
 
-    $ witness_node --create-genesis-json my-genesis.json
+    $ witness_node --create-genesis-json=my-genesis.json
 
 The ``my-genesis.json`` file will be created in the ``[Testnet-Home]``
 folder. Once this task is done, the witness node will terminate on its
@@ -76,8 +76,8 @@ Run this command:
 
 ::
 
-    witness_node --data-dir data   # to use the default genesis, or
-    witness_node --data-dir data --genesis-json my-genesis.json   # your own genesis block
+    witness_node --data-dir=data   # to use the default genesis, or
+    witness_node --data-dir=data --genesis-json=my-genesis.json   # your own genesis block
 
 and when a message like this shows up:
 
@@ -106,7 +106,7 @@ editor, and set the following settings, uncommenting them if necessary:
 
 ::
 
-    rpc-endpoint = 127.0.0.1:11011  
+    rpc-endpoint = 127.0.0.1:8090
     genesis-json = my-genesis.json  
     enable-stale-production = true 
 
@@ -153,7 +153,7 @@ command:
 
 ::
 
-    witness_node --data-dir data 
+    witness_node --data-dir=data 
 
 and your block production should start at this stage. You should see
 this big message:
@@ -197,7 +197,7 @@ run this command:
 
 ::
 
-    cli_wallet --wallet-file=my-wallet.json --chain-id 8b7bd36a146a03d0e5d0a971e286098f41230b209d96f92465cd62bd64294824 --server-rpc-endpoint=ws://127.0.0.1:11011
+    cli_wallet --wallet-file=my-wallet.json --chain-id=8b7bd36a146a03d0e5d0a971e286098f41230b209d96f92465cd62bd64294824 --server-rpc-endpoint=ws://127.0.0.1:8090
 
 .. note:: Make sure to replace the above blockchain id
           ``8b7bd36a...4294824`` with your own blockchain id. The
@@ -294,7 +294,7 @@ command:
 
 ::
 
-    cli_wallet --wallet-file=my-wallet.json --chain-id 8b7bd36a146a03d0e5d0a971e286098f41230b209d96f92465cd62bd64294824 --server-rpc-endpoint=ws://127.0.0.1:11011
+    cli_wallet --wallet-file=my-wallet.json --chain-id=8b7bd36a146a03d0e5d0a971e286098f41230b209d96f92465cd62bd64294824 --server-rpc-endpoint=ws://127.0.0.1:8090
 
 Verify that ``nathan`` has now a LTM status:
 
