@@ -144,6 +144,12 @@ in the ``config.ini`` file:
     # Tuple of [PublicKey, WIF private key] (may specify multiple times)
     private-key = ["BTS6MRyA...T5GDW5CV","5KQwrPb...tP79zkvFD3"]
 
+Create a list of empty seed nodes to avoid connecting to default hardcoded seeds:
+
+::
+
+    seed-nodes = []    
+
 Start block production
 ######################
 
