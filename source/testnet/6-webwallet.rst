@@ -18,13 +18,13 @@ We first install everything we need to compile the web wallet:
 Fetching the web wallet
 #######################
 
-Afterwards, we download the `graphene-ui` repository from Cryptonomex
+Afterwards, we download the `bitshares-ui` repository
 and install the Node dependencies.
 
 .. code-block:: sh
 
-    git clone https://github.com/cryptonomex/graphene-ui
-    cd graphene-ui/
+    git clone https://github.com/bitshares/bitshares-ui
+    cd bitshares-ui/
 
     for I in dl web; do cd $I; npm install; cd ..; done
 
@@ -34,7 +34,7 @@ Configuration
 What we need now is the `chain_id` of the chain we have running. We can
 get it by executing:::
 
-    $ curl --data '{"jsonrpc": "2.0", "method": "get_chain_properties", "params": [], "id": 1}' http://127.0.0.1:11011/rpc && echo
+    $ curl --data '{"jsonrpc": "2.0", "method": "get_chain_properties", "params": [], "id": 1}' http://127.0.0.1:8090/rpc && echo
 
 The chain id is used to let the web wallet know to which network it
 connects and how to deal with it. For this we modify the file
