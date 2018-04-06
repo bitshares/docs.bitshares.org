@@ -2,17 +2,14 @@
 Installation/Confguration of Witness
 ************************************
 
-Fork CNX's code base
+Fork the BitShares-Core code base
 ####################
 
 .. code-block:: sh
 
-   git clone https://github.com/cryptonomex/graphene
-   mv graphene/ graphene-testnet
-   cd graphene-testnet/
-   git branch testnet
-   git remote set-url origin https://github.com/BitSharesEurope/graphene-testnet
-   git push origin testnet
+   git clone https://github.com/bitshares/bitshares-core.git bitshares-core-testnet
+   cd bitshares-core-testnet/
+   git checkout testnet
 
 Installation according to :doc:`../installation/Build`
 
@@ -24,7 +21,7 @@ Blockchain Parameters
 
 The blockchain parameters can be modified in the
 `libraries/chain/include/graphene/chain/config.hpp
-<https://github.com/cryptonomex/graphene/blob/master/libraries/chain/include/graphene/chain/config.hpp>`_
+<https://github.com/bitshares/bitshares-core/blob/master/libraries/chain/include/graphene/chain/config.hpp>`_
 file:
 
 .. code-block:: sh
@@ -36,7 +33,7 @@ Default Seed Node List
 
 We can add a default list of seed nodes that the witness is supposed to
 try to connect to in `libraries/app/application.cpp
-<https://github.com/cryptonomex/graphene/blob/master/libraries/app/application.cpp>`_
+<https://github.com/bitshares/bitshares-core/blob/master/libraries/app/application.cpp>`_
 and will add the IP/Address and port of the machine we are going to
 setup later already:
 
@@ -53,5 +50,5 @@ Initial Compilation
    cmake .
    make
 
-We first need to compile the graphene toolkit so that we can let it
+We first need to compile the project so that we can let it
 generate a plain genesis file in the proper format.
