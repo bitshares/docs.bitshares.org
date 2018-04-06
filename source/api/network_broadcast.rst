@@ -18,3 +18,8 @@ Transactions
 Block
 #####
 .. doxygenfunction:: graphene::app::network_broadcast_api::broadcast_block
+
+|
+|
+|
+|
