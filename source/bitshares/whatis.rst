@@ -5,7 +5,7 @@ What is BitShares
 BitShares is a technology supported by next generation entrepreneurs, investors, and
 developers with a common interest in finding free market solutions by leveraging the power
 of globally decentralized consensus and decision making. Consensus technology has the
-power to do for economics what the internet did for information. It can harness the
+power to do for economics what the internet has done for information. It can harness the
 combined power of all humanity to coordinate the discovery and aggregation of real-time
 knowledge, previously unobtainable. This knowledge can be used to more effectively
 coordinate the allocation of resources toward their most productive and valuable use.
@@ -25,14 +25,14 @@ services at a fraction of the cost incurred by their more traditional, centraliz
 counterparts. The advent of DACs ushers in a new paradigm in organizational structure in
 which companies can run without any human management and under the control of an
 incorruptible set of business rules. These rules are encoded in publicly auditable open
-source software distributed across the computers of the companies' shareholders, who
+source software distributed across the computers of the company's shareholders, that
 effortlessly secure the company from arbitrary control.
 
 BitShares does for business what bitcoin did for money by utilizing distributed consensus
 technology to create companies that are inherently global, transparent, trustworthy,
 efficient and most importantly profitable.
 
-BitShares has went through many changes and has done its best to stay on top of blockchain
+BitShares has undergone many changes and has done its best to stay on top of blockchain
 technology. Towards the end of 2014 some of the DACs were merged and the X was dropped
 from "BitShares X" to become simply BitShares (BTS).
 
@@ -48,7 +48,7 @@ project but has since left the team. The BitShares X project received a lot of a
 in August 2013 when it was covered by CoinDesk and subsequently announced to the the
 BitcoinTalk forums on August 22nd 2013 as a project announcement. The project generated a
 good amount of buzz around the proposal, though the original scope and timelines have
-since modified.
+since undergone modification.
 
 Consensus Technology
 ####################
