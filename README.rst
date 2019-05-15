@@ -1,3 +1,5 @@
+This repository is deprecated. The new repository is https://github.com/bitshares/how.bitshares.works
+
 Requirements
 ############
 
